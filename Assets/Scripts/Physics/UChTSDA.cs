@@ -52,6 +52,8 @@ public class UChTSDA : MonoBehaviour
         // Update line in game view
         lineObject.SetPosition(0, p1);
         lineObject.SetPosition(1, p2);
+
+        transform.position = (p1 + p2) / 2;
     }
 
     // When attaching to a Game Object, hide the transform
@@ -74,4 +76,5 @@ public class UChTSDA : MonoBehaviour
         }
     }
 
+    // TODO: update transform when points are modified (for proper localization in scene editor)
 }
