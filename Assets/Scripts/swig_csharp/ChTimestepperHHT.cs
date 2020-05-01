@@ -120,6 +120,44 @@ public class ChTimestepperHHT : ChTimestepperIIorder {
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public void SetMaxiters(int iters) {
+    ChronoEngine_csharpPINVOKE.ChTimestepperHHT_SetMaxiters(swigCPtr, iters);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void SetRelTolerance(double rel_tol) {
+    ChronoEngine_csharpPINVOKE.ChTimestepperHHT_SetRelTolerance(swigCPtr, rel_tol);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void SetAbsTolerances(double abs_tolS, double abs_tolL) {
+    ChronoEngine_csharpPINVOKE.ChTimestepperHHT_SetAbsTolerances__SWIG_0(swigCPtr, abs_tolS, abs_tolL);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void SetAbsTolerances(double abs_tol) {
+    ChronoEngine_csharpPINVOKE.ChTimestepperHHT_SetAbsTolerances__SWIG_1(swigCPtr, abs_tol);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public int GetNumIterations() {
+    int ret = ChronoEngine_csharpPINVOKE.ChTimestepperHHT_GetNumIterations(swigCPtr);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public int GetNumSetupCalls() {
+    int ret = ChronoEngine_csharpPINVOKE.ChTimestepperHHT_GetNumSetupCalls(swigCPtr);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public int GetNumSolveCalls() {
+    int ret = ChronoEngine_csharpPINVOKE.ChTimestepperHHT_GetNumSolveCalls(swigCPtr);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public enum HHT_Mode {
     ACCELERATION,
     POSITION

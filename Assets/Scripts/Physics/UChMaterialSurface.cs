@@ -3,12 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-public enum ContactMethod
-{
-    NSC = 0,  //< non-smooth, constraint-based (a.k.a. rigid-body) contact
-    SMC = 1   //< smooth, penalty-based (a.k.a. soft-body) contact
-};
-
 [System.Serializable]
 public class MaterialInfo
 {
@@ -26,9 +20,9 @@ public class MaterialInfo
 
     public MaterialInfo() {}
 
-    public ChMaterialSurface CreateMaterial(ContactMethod method)
+    public ChMaterialSurface CreateMaterial(ChContactMethod method)
     {
-        if (method == ContactMethod.NSC)
+        if (method == ChContactMethod.NSC)
         {
             var matNSC = new ChMaterialSurfaceNSC();
             matNSC.SetFriction(mu);
@@ -58,7 +52,7 @@ public class MaterialInfo
 
 public class UChMaterialSurface : MonoBehaviour
 {
-    public ContactMethod contact_method;
+    public ChContactMethod contact_method;
     public MaterialInfo mat_info;
 
     public UChMaterialSurface()
@@ -72,10 +66,10 @@ public class UChMaterialSurface : MonoBehaviour
         Debug.Log("friction: " + mat_info.mu);
         switch (contact_method)
         {
-            case ContactMethod.NSC:
+            case ChContactMethod.NSC:
                 Debug.Log("NSC material\nCohesion: " + mat_info.coh);
                 break;
-            case ContactMethod.SMC:
+            case ChContactMethod.SMC:
                 Debug.Log("SMC material\nYoung: " + mat_info.Y);
                 break;
         }
@@ -90,7 +84,7 @@ public class UChMaterialSurfaceEditor : Editor
         var mat = target as UChMaterialSurface;
         string[] options = new string[] { "NSC", "SCM" };
 
-        mat.contact_method = (ContactMethod)EditorGUILayout.Popup("Field type:", (int)mat.contact_method, options, EditorStyles.popup);
+        mat.contact_method = (ChContactMethod)EditorGUILayout.Popup("Contact Method", (int)mat.contact_method, options, EditorStyles.popup);
 
         mat.mat_info.mu = EditorGUILayout.FloatField("Friction", mat.mat_info.mu);
         mat.mat_info.mu_r = EditorGUILayout.FloatField("Rolling Friction", mat.mat_info.mu_r);

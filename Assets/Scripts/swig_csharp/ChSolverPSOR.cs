@@ -45,7 +45,7 @@ public class ChSolverPSOR : ChIterativeSolverVI {
     return ret;
   }
 
-  public override double Solve(SWIGTYPE_p_ChSystemDescriptor sysd) {
+  public double Solve(SWIGTYPE_p_ChSystemDescriptor sysd) {
     double ret = ChronoEngine_csharpPINVOKE.ChSolverPSOR_Solve(swigCPtr, SWIGTYPE_p_ChSystemDescriptor.getCPtr(sysd));
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
     return ret;

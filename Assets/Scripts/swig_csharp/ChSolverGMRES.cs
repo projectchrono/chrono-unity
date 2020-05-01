@@ -39,7 +39,7 @@ public class ChSolverGMRES : ChIterativeSolverLS {
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public override ChSolver.Type GetType() {
+  public ChSolver.Type GetType() {
     ChSolver.Type ret = (ChSolver.Type)ChronoEngine_csharpPINVOKE.ChSolverGMRES_GetType(swigCPtr);
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
     return ret;

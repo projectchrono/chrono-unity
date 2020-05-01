@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-public class ChIterativeSolverVI : ChSolverVI {
+public class ChIterativeSolverVI : ChIterativeSolver {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 

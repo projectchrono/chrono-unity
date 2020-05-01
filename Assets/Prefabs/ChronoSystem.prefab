@@ -46,3 +46,9 @@ MonoBehaviour:
   contact_method: 0
   gravity: {x: 0, y: -9.8, z: 0}
   step: 0.01
+  contactModel: 0
+  adhesionModel: 0
+  tdisplModel: 0
+  useMatProps: 1
+  solverType: 0
+  integratorType: 0

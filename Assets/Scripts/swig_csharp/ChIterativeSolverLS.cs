@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-public class ChIterativeSolverLS : ChSolverLS {
+public class ChIterativeSolverLS : ChIterativeSolver {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
@@ -35,13 +35,13 @@ public class ChIterativeSolverLS : ChSolverLS {
     }
   }
 
-  public override bool Setup(SWIGTYPE_p_ChSystemDescriptor sysd) {
+  public bool Setup(SWIGTYPE_p_ChSystemDescriptor sysd) {
     bool ret = ChronoEngine_csharpPINVOKE.ChIterativeSolverLS_Setup(swigCPtr, SWIGTYPE_p_ChSystemDescriptor.getCPtr(sysd));
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public override double Solve(SWIGTYPE_p_ChSystemDescriptor sysd) {
+  public double Solve(SWIGTYPE_p_ChSystemDescriptor sysd) {
     double ret = ChronoEngine_csharpPINVOKE.ChIterativeSolverLS_Solve(swigCPtr, SWIGTYPE_p_ChSystemDescriptor.getCPtr(sysd));
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
     return ret;

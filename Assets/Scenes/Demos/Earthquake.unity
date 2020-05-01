@@ -414,6 +414,16 @@ PrefabInstance:
       propertyPath: gravity.y
       value: -9.8
       objectReference: {fileID: 0}
+    - target: {fileID: 7194074963564705906, guid: 434044898e2439248a0db16bad6f0518,
+        type: 3}
+      propertyPath: contact_method
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7194074963564705906, guid: 434044898e2439248a0db16bad6f0518,
+        type: 3}
+      propertyPath: solverType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7194074963564705907, guid: 434044898e2439248a0db16bad6f0518,
         type: 3}
       propertyPath: m_LocalPosition.x

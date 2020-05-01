@@ -45,7 +45,7 @@ public class ChSolverBB : ChIterativeSolverVI {
     return ret;
   }
 
-  public override double Solve(SWIGTYPE_p_ChSystemDescriptor sysd) {
+  public double Solve(SWIGTYPE_p_ChSystemDescriptor sysd) {
     double ret = ChronoEngine_csharpPINVOKE.ChSolverBB_Solve(swigCPtr, SWIGTYPE_p_ChSystemDescriptor.getCPtr(sysd));
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
@@ -79,12 +79,12 @@ public class ChSolverBB : ChIterativeSolverVI {
     return ret;
   }
 
-  public override void ArchiveOUT(SWIGTYPE_p_ChArchiveOut marchive) {
+  public void ArchiveOUT(SWIGTYPE_p_ChArchiveOut marchive) {
     ChronoEngine_csharpPINVOKE.ChSolverBB_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public override void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn marchive) {
+  public void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn marchive) {
     ChronoEngine_csharpPINVOKE.ChSolverBB_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }

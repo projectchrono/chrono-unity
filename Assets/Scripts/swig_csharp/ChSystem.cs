@@ -143,7 +143,7 @@ public class ChSystem : ChIntegrableIIorder {
   }
 
   public virtual void SetSolver(ChSolver newsolver) {
-    ChronoEngine_csharpPINVOKE.ChSystem_SetSolver(swigCPtr, ChSolver.getCPtr(newsolver));
+    ChronoEngine_csharpPINVOKE.ChSystem_SetSolver__SWIG_0(swigCPtr, ChSolver.getCPtr(newsolver));
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -1188,6 +1188,51 @@ public class ChSystem : ChIntegrableIIorder {
     int ret = ChronoEngine_csharpPINVOKE.ChSystem_FileWriteChR(swigCPtr, ChStreamOutBinary.getCPtr(m_file));
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
+  }
+
+  public void SetSolver(ChSolverPSOR solver) {
+    ChronoEngine_csharpPINVOKE.ChSystem_SetSolver__SWIG_1(swigCPtr, ChSolverPSOR.getCPtr(solver));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void SetSolver(ChSolverPJacobi solver) {
+    ChronoEngine_csharpPINVOKE.ChSystem_SetSolver__SWIG_2(swigCPtr, ChSolverPJacobi.getCPtr(solver));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void SetSolver(ChSolverBB solver) {
+    ChronoEngine_csharpPINVOKE.ChSystem_SetSolver__SWIG_3(swigCPtr, ChSolverBB.getCPtr(solver));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void SetSolver(ChSolverAPGD solver) {
+    ChronoEngine_csharpPINVOKE.ChSystem_SetSolver__SWIG_4(swigCPtr, ChSolverAPGD.getCPtr(solver));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void SetSolver(ChSolverSparseLU solver) {
+    ChronoEngine_csharpPINVOKE.ChSystem_SetSolver__SWIG_5(swigCPtr, ChSolverSparseLU.getCPtr(solver));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void SetSolver(ChSolverSparseQR solver) {
+    ChronoEngine_csharpPINVOKE.ChSystem_SetSolver__SWIG_6(swigCPtr, ChSolverSparseQR.getCPtr(solver));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void SetSolver(ChSolverGMRES solver) {
+    ChronoEngine_csharpPINVOKE.ChSystem_SetSolver__SWIG_7(swigCPtr, ChSolverGMRES.getCPtr(solver));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void SetSolver(ChSolverBiCGSTAB solver) {
+    ChronoEngine_csharpPINVOKE.ChSystem_SetSolver__SWIG_8(swigCPtr, ChSolverBiCGSTAB.getCPtr(solver));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void SetSolver(ChSolverMINRES solver) {
+    ChronoEngine_csharpPINVOKE.ChSystem_SetSolver__SWIG_9(swigCPtr, ChSolverMINRES.getCPtr(solver));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void RegisterCustomCollisionCallback(ChCustomCollisionCallbackP mcallb) {

@@ -11802,6 +11802,27 @@ class ChronoEngine_csharpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChTimestepperEulerImplicit_Advance")]
   public static extern void ChTimestepperEulerImplicit_Advance(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChTimestepperEulerImplicit_SetMaxiters")]
+  public static extern void ChTimestepperEulerImplicit_SetMaxiters(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChTimestepperEulerImplicit_SetRelTolerance")]
+  public static extern void ChTimestepperEulerImplicit_SetRelTolerance(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChTimestepperEulerImplicit_SetAbsTolerances__SWIG_0")]
+  public static extern void ChTimestepperEulerImplicit_SetAbsTolerances__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, double jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChTimestepperEulerImplicit_SetAbsTolerances__SWIG_1")]
+  public static extern void ChTimestepperEulerImplicit_SetAbsTolerances__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChTimestepperEulerImplicit_GetNumIterations")]
+  public static extern int ChTimestepperEulerImplicit_GetNumIterations(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChTimestepperEulerImplicit_GetNumSetupCalls")]
+  public static extern int ChTimestepperEulerImplicit_GetNumSetupCalls(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChTimestepperEulerImplicit_GetNumSolveCalls")]
+  public static extern int ChTimestepperEulerImplicit_GetNumSolveCalls(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChTimestepperEulerImplicit")]
   public static extern void delete_ChTimestepperEulerImplicit(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -11957,6 +11978,27 @@ class ChronoEngine_csharpPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChTimestepperHHT_ArchiveIN")]
   public static extern void ChTimestepperHHT_ArchiveIN(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChTimestepperHHT_SetMaxiters")]
+  public static extern void ChTimestepperHHT_SetMaxiters(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChTimestepperHHT_SetRelTolerance")]
+  public static extern void ChTimestepperHHT_SetRelTolerance(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChTimestepperHHT_SetAbsTolerances__SWIG_0")]
+  public static extern void ChTimestepperHHT_SetAbsTolerances__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, double jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChTimestepperHHT_SetAbsTolerances__SWIG_1")]
+  public static extern void ChTimestepperHHT_SetAbsTolerances__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChTimestepperHHT_GetNumIterations")]
+  public static extern int ChTimestepperHHT_GetNumIterations(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChTimestepperHHT_GetNumSetupCalls")]
+  public static extern int ChTimestepperHHT_GetNumSetupCalls(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChTimestepperHHT_GetNumSolveCalls")]
+  public static extern int ChTimestepperHHT_GetNumSolveCalls(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChTimestepperHHT")]
   public static extern void delete_ChTimestepperHHT(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -12456,8 +12498,8 @@ class ChronoEngine_csharpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_GetMaxPenetrationRecoverySpeed")]
   public static extern double ChSystem_GetMaxPenetrationRecoverySpeed(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_SetSolver")]
-  public static extern void ChSystem_SetSolver(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_SetSolver__SWIG_0")]
+  public static extern void ChSystem_SetSolver__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_GetSolver")]
   public static extern global::System.IntPtr ChSystem_GetSolver(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -13025,6 +13067,33 @@ class ChronoEngine_csharpPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_FileWriteChR")]
   public static extern int ChSystem_FileWriteChR(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_SetSolver__SWIG_1")]
+  public static extern void ChSystem_SetSolver__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_SetSolver__SWIG_2")]
+  public static extern void ChSystem_SetSolver__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_SetSolver__SWIG_3")]
+  public static extern void ChSystem_SetSolver__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_SetSolver__SWIG_4")]
+  public static extern void ChSystem_SetSolver__SWIG_4(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_SetSolver__SWIG_5")]
+  public static extern void ChSystem_SetSolver__SWIG_5(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_SetSolver__SWIG_6")]
+  public static extern void ChSystem_SetSolver__SWIG_6(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_SetSolver__SWIG_7")]
+  public static extern void ChSystem_SetSolver__SWIG_7(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_SetSolver__SWIG_8")]
+  public static extern void ChSystem_SetSolver__SWIG_8(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_SetSolver__SWIG_9")]
+  public static extern void ChSystem_SetSolver__SWIG_9(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_RegisterCustomCollisionCallback__SWIG_1")]
   public static extern void ChSystem_RegisterCustomCollisionCallback__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
