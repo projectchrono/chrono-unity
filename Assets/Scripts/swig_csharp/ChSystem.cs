@@ -986,8 +986,8 @@ public class ChSystem : ChIntegrableIIorder {
     return ret;
   }
 
-  public void RegisterCustomCollisionCallback(CustomCollisionCallback mcallb) {
-    ChronoEngine_csharpPINVOKE.ChSystem_RegisterCustomCollisionCallback__SWIG_0(swigCPtr, CustomCollisionCallback.getCPtr(mcallb));
+  public void RegisterCustomCollisionCallback(CustomCollisionCallback callback) {
+    ChronoEngine_csharpPINVOKE.ChSystem_RegisterCustomCollisionCallback__SWIG_0(swigCPtr, CustomCollisionCallback.getCPtr(callback));
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -1235,8 +1235,8 @@ public class ChSystem : ChIntegrableIIorder {
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void RegisterCustomCollisionCallback(ChCustomCollisionCallbackP mcallb) {
-    ChronoEngine_csharpPINVOKE.ChSystem_RegisterCustomCollisionCallback__SWIG_1(swigCPtr, ChCustomCollisionCallbackP.getCPtr(mcallb));
+  public void RegisterCustomCollisionCallback(ChCustomCollisionCallbackP callback) {
+    ChronoEngine_csharpPINVOKE.ChSystem_RegisterCustomCollisionCallback__SWIG_1(swigCPtr, ChCustomCollisionCallbackP.getCPtr(callback));
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 

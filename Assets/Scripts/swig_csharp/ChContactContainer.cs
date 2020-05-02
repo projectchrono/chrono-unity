@@ -66,20 +66,20 @@ public class ChContactContainer : ChPhysicsItem {
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public virtual void RegisterAddContactCallback(AddContactCallback mcallback) {
-    ChronoEngine_csharpPINVOKE.ChContactContainer_RegisterAddContactCallback(swigCPtr, AddContactCallback.getCPtr(mcallback));
+  public virtual void RegisterAddContactCallback(AddContactCallback callback) {
+    ChronoEngine_csharpPINVOKE.ChContactContainer_RegisterAddContactCallback(swigCPtr, AddContactCallback.getCPtr(callback));
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual AddContactCallback GetAddContactCallback() {
     global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChContactContainer_GetAddContactCallback(swigCPtr);
-    AddContactCallback ret = (cPtr == global::System.IntPtr.Zero) ? null : new AddContactCallback(cPtr, false);
+    AddContactCallback ret = (cPtr == global::System.IntPtr.Zero) ? null : new AddContactCallback(cPtr, true);
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public virtual void ReportAllContacts(ReportContactCallback mcallback) {
-    ChronoEngine_csharpPINVOKE.ChContactContainer_ReportAllContacts(swigCPtr, ReportContactCallback.getCPtr(mcallback));
+  public virtual void ReportAllContacts(ReportContactCallback callback) {
+    ChronoEngine_csharpPINVOKE.ChContactContainer_ReportAllContacts(swigCPtr, ReportContactCallback.getCPtr(callback));
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 
