@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class UChBodyBox : UChBody
 {
-    public double density;
+    public float density;
 
     private ChMaterialSurface mat;
 
@@ -23,7 +23,18 @@ public class UChBodyBox : UChBody
 
         // Create the underlying Chrono body and initialize
         var size = transform.localScale;
-        body = new ChBodyEasyBox(size.x, size.y, size.z, density, false, true, mat);
+        double mass = density * (size.x * size.y * size.z);
+
+        body = new ChBodyAuxRef();
+        body.SetDensity(density);
+        body.SetMass(mass);
+        body.SetInertiaXX(new ChVectorD((1.0 / 12.0) * mass * (Math.Pow(size.y, 2) + Math.Pow(size.z, 2)),
+                                        (1.0 / 12.0) * mass * (Math.Pow(size.x, 2) + Math.Pow(size.z, 2)),
+                                        (1.0 / 12.0) * mass * (Math.Pow(size.x, 2) + Math.Pow(size.y, 2))));
+
+        body.GetCollisionModel().ClearModel();
+        body.GetCollisionModel().AddBox(mat, size.x * 0.5, size.y * 0.5, size.z * 0.5);
+        body.GetCollisionModel().BuildModel();
     }
 
     public override void AddToSystem()

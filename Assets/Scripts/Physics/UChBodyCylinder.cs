@@ -6,7 +6,7 @@ using UnityEngine;
 public class UChBodyCylinder : UChBody
 {
     public double radius;
-    public double density;
+    public float density;
 
     private ChMaterialSurface mat;
 
@@ -25,7 +25,18 @@ public class UChBodyCylinder : UChBody
 
         // Create the underlying Chrono body
         var height = 2 * transform.localScale.y;
-        body = new ChBodyEasyCylinder(radius, height, density, false, true, mat);
+        double mass = density * (Math.PI * Math.Pow(radius, 2) * height);
+        
+        body = new ChBodyAuxRef();
+        body.SetDensity(density);
+        body.SetMass(mass);
+        body.SetInertiaXX(new ChVectorD((1.0 / 12.0) * mass * (3 * Math.Pow(radius, 2) + Math.Pow(height, 2)),
+                                        0.5 * mass * Math.Pow(radius, 2),
+                                        (1.0 / 12.0) * mass * (3 * Math.Pow(radius, 2) + Math.Pow(height, 2))));
+
+        body.GetCollisionModel().ClearModel();
+        body.GetCollisionModel().AddCylinder(mat, radius, radius, height * 0.5);
+        body.GetCollisionModel().BuildModel();
     }
 
     public override void AddToSystem()

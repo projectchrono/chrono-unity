@@ -6,7 +6,7 @@ using UnityEngine;
 public class UChBodySphere : UChBody
 {
     public double radius;
-    public double density;
+    public float density;
 
     private ChMaterialSurface mat;
 
@@ -24,7 +24,17 @@ public class UChBodySphere : UChBody
         mat = mat_component.mat_info.CreateMaterial(mat_component.contact_method);
 
         // Create the underlying Chrono body and initialize
-        body = new ChBodyEasySphere(radius, density, false, true, mat);
+        double mass = density * ((4.0 / 3.0) * Math.PI * Math.Pow(radius, 3));
+        double inertia = (2.0 / 5.0) * mass * Math.Pow(radius, 2);
+
+        body = new ChBodyAuxRef();
+        body.SetDensity(density);
+        body.SetMass(mass);
+        body.SetInertiaXX(new ChVectorD(inertia, inertia, inertia));
+
+        body.GetCollisionModel().ClearModel();
+        body.GetCollisionModel().AddSphere(mat, radius);
+        body.GetCollisionModel().BuildModel();
     }
 
     public override void AddToSystem()

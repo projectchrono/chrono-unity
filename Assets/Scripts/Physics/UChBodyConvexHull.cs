@@ -6,7 +6,7 @@ using UnityEngine;
 public class UChBodyConvexHull : UChBody
 {
     public List<Vector3> points;
-    public double density;
+    public float density;
 
     private ChMaterialSurface mat;
 
@@ -34,7 +34,7 @@ public class UChBodyConvexHull : UChBody
             p.Add(Utils.ToChrono(points[i]));
         }
 
-        var bodyCH = new ChBodyEasyConvexHull(p, density, false, true, mat);
+        var bodyCH = new ChBodyEasyConvexHullAuxRef(p, density, false, true, mat);
         body = bodyCH;
 
         // Create visualization mesh from the Chrono-generated mesh.
@@ -42,12 +42,6 @@ public class UChBodyConvexHull : UChBody
         var chrono_mesh = bodyCH.GetMesh();
         int chrono_nv = chrono_mesh.getCoordsVertices().Count;
         int chrono_nt = chrono_mesh.getNumTriangles();
-
-        // First, move the points to new locations (which were shifted to make body COM coincide with convex hull center)
-        for (int i = 0; i < chrono_nv; i++)
-        {
-            points[i] = Utils.FromChrono(chrono_mesh.getCoordsVertices()[i]);
-        }
 
         // The Unity visualization mesh will have 3 distinct vertices per face.
         // For each face, assign the face normal to adjacent vertices.

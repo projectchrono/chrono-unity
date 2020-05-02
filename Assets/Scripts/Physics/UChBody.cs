@@ -14,16 +14,16 @@ public class UChBody : MonoBehaviour
     public Vector3 linearVelocity;
     public Vector3 angularVelocity;
 
-    protected ChBody body;
+    protected ChBodyAuxRef body;
 
-    public ChBody GetChBody()
+    public ChBodyAuxRef GetChBody()
     {
         return body;
     }
 
     public virtual void Create()
     {
-        body = new ChBody();
+        body = new ChBodyAuxRef();
     }
 
     public void Destroy()
@@ -51,8 +51,9 @@ public class UChBody : MonoBehaviour
 
         body.SetBodyFixed(isFixed);
         body.SetCollide(collide);
-        body.SetPos(Utils.ToChrono(transform.position));
-        body.SetRot(Utils.ToChrono(transform.rotation));
+
+        body.SetFrame_REF_to_abs(new ChFrameD(Utils.ToChrono(transform.position), Utils.ToChrono(transform.rotation)));
+
         body.SetPos_dt(Utils.ToChrono(linearVelocity));
         body.SetWvel_loc(Utils.ToChrono(angularVelocity));
     }
@@ -66,11 +67,12 @@ public class UChBody : MonoBehaviour
     {
         ////Debug.Log("body Time = " + body.GetChTime());
 
-        // Update state in inspector
-        transform.position = Utils.FromChrono(body.GetPos());
-        transform.rotation = Utils.FromChrono(body.GetRot());
-        linearVelocity = Utils.FromChrono(body.GetPos_dt());
-        angularVelocity = Utils.FromChrono(body.GetWvel_loc());
+        // Update body state
+        var frame = body.GetFrame_REF_to_abs();
+        transform.position = Utils.FromChrono(frame.GetPos());
+        transform.rotation = Utils.FromChrono(frame.GetRot());
+        linearVelocity = Utils.FromChrono(frame.GetPos_dt());
+        angularVelocity = Utils.FromChrono(frame.GetWvel_loc());
     }
 
     void OnDrawGizmos()

@@ -46,8 +46,8 @@ public class ColumnGenerator : MonoBehaviour
             clone.GetComponent<MeshRenderer>().material = columnMaterial;
         }
 
-        // Set the position of the new clone...
-        clone.transform.position = pos + new Vector3(0, height / 2, 0);
+        // Set the position of the new clone.
+        clone.transform.position = pos;
 
         // Recreate the body...
         // Note: the creation of the clone (Instantiate above) invoked UChBody.Awake which
