@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class UChBody : MonoBehaviour
 {
@@ -8,13 +9,33 @@ public class UChBody : MonoBehaviour
     // Other components (e.g. links, motors, etc) access their ChBody references in their Start function and
     // Unity does not enforce an order of calls to Start.
 
-    public bool isFixed = false;
-    public bool collide = true;
-    public bool showFrameGizmo = false;
+    public bool isFixed;
+    public bool collide;
+    public bool showFrameGizmo;
+
+    public bool automaticMass;
+    public float density;
+    public Vector3 COM;
+    public double mass;
+    public Vector3 inertiaMoments;
+    public Vector3 inertiaProducts;
+
     public Vector3 linearVelocity;
     public Vector3 angularVelocity;
 
     protected ChBodyAuxRef body;
+
+    public UChBody()
+    {
+        isFixed = false;
+        collide = true;
+        showFrameGizmo = false;
+        automaticMass = false;
+        density = 1000;
+        mass = 1;
+        inertiaMoments = Vector3.one;
+        inertiaProducts = Vector3.zero;
+    }
 
     public ChBodyAuxRef GetChBody()
     {
@@ -36,7 +57,18 @@ public class UChBody : MonoBehaviour
         UChSystem.chrono_system.AddBody(body);
     }
 
+    public virtual void CalculateMassProperties() { }
+
     public virtual void OnDrawGizmosExtra() { }
+
+    public void DebugInfo()
+    {
+        Debug.Log("Name:      " + gameObject.name + "\n" +
+                  "Mass:      " + body.GetMass() + "\n" +
+                  "COM:       " + Utils.FromChrono(body.GetFrame_COG_to_REF().GetPos()) + "\n" +
+                  "inertiaXX: " + Utils.FromChrono(body.GetInertiaXX()) + "\n" +
+                  "inertiaXY: " + Utils.FromChrono(body.GetInertiaXY()));
+    }
 
     // ---  UNITY METHODS ---
 
@@ -49,6 +81,14 @@ public class UChBody : MonoBehaviour
         if (body == null)
             return;
 
+        CalculateMassProperties();
+        body.SetDensity(density);
+        body.SetMass(mass);
+        //// TODO: we should really set an entire frame here...
+        body.SetFrame_COG_to_REF(new ChFrameD(Utils.ToChrono(COM)));
+        body.SetInertiaXX(Utils.ToChrono(inertiaMoments));
+        body.SetInertiaXY(Utils.ToChrono(inertiaProducts));
+
         body.SetBodyFixed(isFixed);
         body.SetCollide(collide);
 
@@ -56,6 +96,8 @@ public class UChBody : MonoBehaviour
 
         body.SetPos_dt(Utils.ToChrono(linearVelocity));
         body.SetWvel_loc(Utils.ToChrono(angularVelocity));
+
+        ////DebugInfo();
     }
 
     void Start()
@@ -87,8 +129,50 @@ public class UChBody : MonoBehaviour
             Gizmos.DrawLine(Vector3.zero, new Vector3(0, 2, 0));
             Gizmos.color = Color.blue;
             Gizmos.DrawLine(Vector3.zero, new Vector3(0, 0, 2));
+
+            Gizmos.color = Color.white;
+            Gizmos.DrawSphere(COM, 0.1f);
         }
 
         OnDrawGizmosExtra();
+    }
+}
+
+// ==========================================================================================================
+
+[CustomEditor(typeof(UChBody))]
+public class UChBodyEditor : Editor
+{
+    override public void OnInspectorGUI()
+    {
+        UChBody body = (UChBody)target;
+
+        body.isFixed = EditorGUILayout.Toggle("Fixed", body.isFixed);
+        body.collide = EditorGUILayout.Toggle("Collide", body.collide);
+        body.showFrameGizmo = EditorGUILayout.Toggle("Show Frame Gizmo", body.showFrameGizmo);
+
+        EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);
+
+        body.automaticMass = EditorGUILayout.Toggle("Automatic Mass/Inertia", body.automaticMass);
+
+        EditorGUI.indentLevel++;
+        if (body.automaticMass)
+        {
+            body.density = EditorGUILayout.FloatField("Density", body.density);
+        }
+        else
+        {
+            body.CalculateMassProperties();
+            body.mass = EditorGUILayout.DoubleField("Mass", body.mass);
+            body.COM = EditorGUILayout.Vector3Field("Center of Mass", body.COM);
+            body.inertiaMoments = EditorGUILayout.Vector3Field("Moments of Inertia", body.inertiaMoments);
+            body.inertiaProducts = EditorGUILayout.Vector3Field("Products of Inertia", body.inertiaProducts);
+        }
+        EditorGUI.indentLevel--;
+
+        if (GUI.changed)
+        {
+            EditorUtility.SetDirty(body);
+        }
     }
 }

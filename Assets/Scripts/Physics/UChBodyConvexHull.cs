@@ -2,17 +2,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class UChBodyConvexHull : UChBody
 {
     public List<Vector3> points;
-    public float density;
 
     private ChMaterialSurface mat;
 
     public UChBodyConvexHull()
     {
-        density = 1000;
+        automaticMass = true;
     }
 
     public override void Create()
@@ -25,7 +25,7 @@ public class UChBodyConvexHull : UChBody
 
         // Get a handle to the associated material component and create the Chrono material
         var mat_component = this.GetComponent<UChMaterialSurface>();
-        ////mat_component.DumpInfo();
+        ////mat_component.DebugInfo();
         mat = mat_component.mat_info.CreateMaterial(mat_component.contact_method);
 
         // Create the underlying Chrono body
@@ -34,8 +34,15 @@ public class UChBodyConvexHull : UChBody
             p.Add(Utils.ToChrono(points[i]));
         }
 
+        // Note: the mass properties are automatically set on body construction
         var bodyCH = new ChBodyEasyConvexHullAuxRef(p, density, false, true, mat);
         body = bodyCH;
+
+        // Update UChBody properties
+        mass = bodyCH.GetMass();
+        COM = Utils.FromChrono(bodyCH.GetFrame_COG_to_REF().GetPos());
+        inertiaMoments = Utils.FromChrono(bodyCH.GetInertiaXX());
+        inertiaProducts = Utils.FromChrono(bodyCH.GetInertiaXY());
 
         // Create visualization mesh from the Chrono-generated mesh.
         // For proper rendering, we must create unique vertices for each face (the Chrono connected mesh will not do).
@@ -108,6 +115,35 @@ public class UChBodyConvexHull : UChBody
         {
             Gizmos.color = Color.white;
             Gizmos.DrawSphere(points[i], 0.05f);
+        }
+    }
+}
+
+[CustomEditor(typeof(UChBodyConvexHull))]
+public class UChBodyConvexHullEditor : UChBodyEditor
+{
+    public override void OnInspectorGUI()
+    {
+        UChBodyConvexHull body = (UChBodyConvexHull)target;
+
+        base.OnInspectorGUI();
+        EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);
+
+        int size = 0;
+        size = EditorGUILayout.DelayedIntField("Number of Points", body.points.Count);
+        while (size < body.points.Count)
+            body.points.RemoveAt(body.points.Count - 1);
+        while (size > body.points.Count)
+            body.points.Add(new Vector3());
+
+        for (int i = 0; i < size; i++)
+        {
+            body.points[i] = EditorGUILayout.Vector3Field("Point " + (i + 1), body.points[i]);
+        }
+
+        if (GUI.changed)
+        {
+            EditorUtility.SetDirty(body);
         }
     }
 }

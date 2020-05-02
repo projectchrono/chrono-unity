@@ -276,6 +276,31 @@ PrefabInstance:
       propertyPath: angularVelocity.y
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: automaticMass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: mass
+      value: 523.5987755982989
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.x
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.y
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.z
+      value: 52.35988
+      objectReference: {fileID: 0}
     - target: {fileID: 7107128707121635952, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
         type: 3}
       propertyPath: m_Name
@@ -360,6 +385,31 @@ PrefabInstance:
       propertyPath: angularVelocity.y
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: automaticMass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: mass
+      value: 523.5987755982989
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.x
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.y
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.z
+      value: 52.35988
+      objectReference: {fileID: 0}
     - target: {fileID: 7107128707121635952, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
         type: 3}
       propertyPath: m_Name
@@ -443,6 +493,31 @@ PrefabInstance:
         type: 3}
       propertyPath: angularVelocity.y
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: automaticMass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: mass
+      value: 523.5987755982989
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.x
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.y
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.z
+      value: 52.35988
       objectReference: {fileID: 0}
     - target: {fileID: 7107128707121635952, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
         type: 3}
@@ -537,6 +612,31 @@ PrefabInstance:
         type: 3}
       propertyPath: angularVelocity.z
       value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: automaticMass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: mass
+      value: 523.5987755982989
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.x
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.y
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.z
+      value: 52.35988
       objectReference: {fileID: 0}
     - target: {fileID: 7107128707121635952, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
         type: 3}
@@ -637,6 +737,31 @@ PrefabInstance:
       propertyPath: angularVelocity.z
       value: -10
       objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: automaticMass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: mass
+      value: 523.5987755982989
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.x
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.y
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.z
+      value: 52.35988
+      objectReference: {fileID: 0}
     - target: {fileID: 7107128707121635952, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
         type: 3}
       propertyPath: m_Name
@@ -725,6 +850,31 @@ PrefabInstance:
         type: 3}
       propertyPath: angularVelocity.y
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: automaticMass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: mass
+      value: 523.5987755982989
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.x
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.y
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.z
+      value: 52.35988
       objectReference: {fileID: 0}
     - target: {fileID: 7107128707121635952, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
         type: 3}
@@ -845,6 +995,11 @@ PrefabInstance:
       propertyPath: isFixed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7508321240857850383, guid: bc654b3a71d1e254fbcc9de913be87d6,
+        type: 3}
+      propertyPath: automaticMass
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc654b3a71d1e254fbcc9de913be87d6, type: 3}
 --- !u!1001 &640623041
@@ -918,6 +1073,31 @@ PrefabInstance:
         type: 3}
       propertyPath: angularVelocity.y
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: automaticMass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: mass
+      value: 523.5987755982989
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.x
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.y
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.z
+      value: 52.35988
       objectReference: {fileID: 0}
     - target: {fileID: 7107128707121635952, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
         type: 3}
@@ -1012,6 +1192,31 @@ PrefabInstance:
         type: 3}
       propertyPath: angularVelocity.z
       value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: automaticMass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: mass
+      value: 523.5987755982989
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.x
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.y
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.z
+      value: 52.35988
       objectReference: {fileID: 0}
     - target: {fileID: 7107128707121635952, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
         type: 3}
@@ -1216,6 +1421,11 @@ PrefabInstance:
       propertyPath: isFixed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7508321240857850383, guid: bc654b3a71d1e254fbcc9de913be87d6,
+        type: 3}
+      propertyPath: automaticMass
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc654b3a71d1e254fbcc9de913be87d6, type: 3}
 --- !u!1001 &995570974
@@ -1289,6 +1499,31 @@ PrefabInstance:
         type: 3}
       propertyPath: angularVelocity.y
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: automaticMass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: mass
+      value: 523.5987755982989
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.x
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.y
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.z
+      value: 52.35988
       objectReference: {fileID: 0}
     - target: {fileID: 7107128707121635952, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
         type: 3}
@@ -1383,6 +1618,31 @@ PrefabInstance:
         type: 3}
       propertyPath: angularVelocity.z
       value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: automaticMass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: mass
+      value: 523.5987755982989
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.x
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.y
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.z
+      value: 52.35988
       objectReference: {fileID: 0}
     - target: {fileID: 7107128707121635952, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
         type: 3}
@@ -1483,6 +1743,31 @@ PrefabInstance:
       propertyPath: angularVelocity.z
       value: -10
       objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: automaticMass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: mass
+      value: 523.5987755982989
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.x
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.y
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.z
+      value: 52.35988
+      objectReference: {fileID: 0}
     - target: {fileID: 7107128707121635952, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
         type: 3}
       propertyPath: m_Name
@@ -1572,6 +1857,31 @@ PrefabInstance:
       propertyPath: angularVelocity.y
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: automaticMass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: mass
+      value: 523.5987755982989
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.x
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.y
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.z
+      value: 52.35988
+      objectReference: {fileID: 0}
     - target: {fileID: 7107128707121635952, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
         type: 3}
       propertyPath: m_Name
@@ -1655,6 +1965,31 @@ PrefabInstance:
         type: 3}
       propertyPath: angularVelocity.y
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: automaticMass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: mass
+      value: 523.5987755982989
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.x
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.y
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.z
+      value: 52.35988
       objectReference: {fileID: 0}
     - target: {fileID: 7107128707121635952, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
         type: 3}
@@ -1775,6 +2110,11 @@ PrefabInstance:
       propertyPath: isFixed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7508321240857850383, guid: bc654b3a71d1e254fbcc9de913be87d6,
+        type: 3}
+      propertyPath: automaticMass
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc654b3a71d1e254fbcc9de913be87d6, type: 3}
 --- !u!1001 &1317661665
@@ -1858,6 +2198,31 @@ PrefabInstance:
         type: 3}
       propertyPath: angularVelocity.z
       value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: automaticMass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: mass
+      value: 523.5987755982989
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.x
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.y
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.z
+      value: 52.35988
       objectReference: {fileID: 0}
     - target: {fileID: 7107128707121635952, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
         type: 3}
@@ -2075,6 +2440,11 @@ PrefabInstance:
       propertyPath: isFixed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7508321240857850383, guid: bc654b3a71d1e254fbcc9de913be87d6,
+        type: 3}
+      propertyPath: automaticMass
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc654b3a71d1e254fbcc9de913be87d6, type: 3}
 --- !u!1 &1630184990
@@ -2238,6 +2608,31 @@ PrefabInstance:
       propertyPath: linearVelocity.x
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: automaticMass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: mass
+      value: 523.5987755982989
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.x
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.y
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.z
+      value: 52.35988
+      objectReference: {fileID: 0}
     - target: {fileID: 7107128707121635952, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
         type: 3}
       propertyPath: m_Name
@@ -2326,6 +2721,31 @@ PrefabInstance:
         type: 3}
       propertyPath: angularVelocity.z
       value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: automaticMass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: mass
+      value: 523.5987755982989
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.x
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.y
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.z
+      value: 52.35988
       objectReference: {fileID: 0}
     - target: {fileID: 7107128707121635952, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
         type: 3}
@@ -2683,6 +3103,11 @@ PrefabInstance:
       propertyPath: isFixed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7508321240857850383, guid: bc654b3a71d1e254fbcc9de913be87d6,
+        type: 3}
+      propertyPath: automaticMass
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc654b3a71d1e254fbcc9de913be87d6, type: 3}
 --- !u!1001 &1896826975
@@ -2766,6 +3191,31 @@ PrefabInstance:
         type: 3}
       propertyPath: angularVelocity.z
       value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: automaticMass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: mass
+      value: 523.5987755982989
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.x
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.y
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.z
+      value: 52.35988
       objectReference: {fileID: 0}
     - target: {fileID: 7107128707121635952, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
         type: 3}
@@ -2856,6 +3306,31 @@ PrefabInstance:
       propertyPath: angularVelocity.y
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: automaticMass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: mass
+      value: 523.5987755982989
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.x
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.y
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.z
+      value: 52.35988
+      objectReference: {fileID: 0}
     - target: {fileID: 7107128707121635952, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
         type: 3}
       propertyPath: m_Name
@@ -2945,6 +3420,31 @@ PrefabInstance:
       propertyPath: angularVelocity.z
       value: -10
       objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: automaticMass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: mass
+      value: 523.5987755982989
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.x
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.y
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.z
+      value: 52.35988
+      objectReference: {fileID: 0}
     - target: {fileID: 7107128707121635952, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
         type: 3}
       propertyPath: m_Name
@@ -3033,6 +3533,31 @@ PrefabInstance:
         type: 3}
       propertyPath: angularVelocity.y
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: automaticMass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: mass
+      value: 523.5987755982989
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.x
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.y
+      value: 52.35988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
+        type: 3}
+      propertyPath: inertiaMoments.z
+      value: 52.35988
       objectReference: {fileID: 0}
     - target: {fileID: 7107128707121635952, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
         type: 3}

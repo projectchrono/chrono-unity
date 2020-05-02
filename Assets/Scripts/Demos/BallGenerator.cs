@@ -9,9 +9,9 @@ public class BallGenerator : MonoBehaviour
     public bool drawBallFrames = false;
 
     void CreateBall(Object prefab,
-                              Vector3 pos,
-                              float radius,
-                              float density)
+                    Vector3 pos,
+                    float radius,
+                    float density)
     {
         // Create a new clone of the BodyConvexHull prefab
         GameObject clone = Instantiate(prefab, Vector3.zero, Quaternion.identity) as GameObject;

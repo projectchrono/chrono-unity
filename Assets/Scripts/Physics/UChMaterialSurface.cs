@@ -61,7 +61,7 @@ public class UChMaterialSurface : MonoBehaviour
         mat_info.mu = 0.4f;
     }
 
-    public void DumpInfo()
+    public void DebugInfo()
     {
         Debug.Log("friction: " + mat_info.mu);
         switch (contact_method)
