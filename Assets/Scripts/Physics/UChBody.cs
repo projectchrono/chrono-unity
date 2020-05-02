@@ -170,6 +170,11 @@ public class UChBodyEditor : Editor
         }
         EditorGUI.indentLevel--;
 
+        EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);
+
+        body.linearVelocity = EditorGUILayout.Vector3Field("Linear Velocity", body.linearVelocity);
+        body.angularVelocity = EditorGUILayout.Vector3Field("Angular Velocity", body.angularVelocity);
+
         if (GUI.changed)
         {
             EditorUtility.SetDirty(body);

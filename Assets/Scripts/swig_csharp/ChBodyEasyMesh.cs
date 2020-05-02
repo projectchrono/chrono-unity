@@ -63,4 +63,37 @@ public class ChBodyEasyMesh : ChBodyAuxRef {
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public ChBodyEasyMesh(ChTriangleMeshConnected mesh, double mdensity, bool compute_mass, bool visualize, bool collide, ChMaterialSurface material, double sphere_swept, ChCollisionModel collision_model) : this(ChronoEngine_csharpPINVOKE.new_ChBodyEasyMesh__SWIG_7(ChTriangleMeshConnected.getCPtr(mesh), mdensity, compute_mass, visualize, collide, ChMaterialSurface.getCPtr(material), sphere_swept, ChCollisionModel.getCPtr(collision_model)), true) {
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public ChBodyEasyMesh(ChTriangleMeshConnected mesh, double mdensity, bool compute_mass, bool visualize, bool collide, ChMaterialSurface material, double sphere_swept) : this(ChronoEngine_csharpPINVOKE.new_ChBodyEasyMesh__SWIG_8(ChTriangleMeshConnected.getCPtr(mesh), mdensity, compute_mass, visualize, collide, ChMaterialSurface.getCPtr(material), sphere_swept), true) {
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public ChBodyEasyMesh(ChTriangleMeshConnected mesh, double mdensity, bool compute_mass, bool visualize, bool collide, ChMaterialSurface material) : this(ChronoEngine_csharpPINVOKE.new_ChBodyEasyMesh__SWIG_9(ChTriangleMeshConnected.getCPtr(mesh), mdensity, compute_mass, visualize, collide, ChMaterialSurface.getCPtr(material)), true) {
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public ChBodyEasyMesh(ChTriangleMeshConnected mesh, double mdensity, bool compute_mass, bool visualize, bool collide) : this(ChronoEngine_csharpPINVOKE.new_ChBodyEasyMesh__SWIG_10(ChTriangleMeshConnected.getCPtr(mesh), mdensity, compute_mass, visualize, collide), true) {
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public ChBodyEasyMesh(ChTriangleMeshConnected mesh, double mdensity, bool compute_mass, bool visualize) : this(ChronoEngine_csharpPINVOKE.new_ChBodyEasyMesh__SWIG_11(ChTriangleMeshConnected.getCPtr(mesh), mdensity, compute_mass, visualize), true) {
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public ChBodyEasyMesh(ChTriangleMeshConnected mesh, double mdensity, bool compute_mass) : this(ChronoEngine_csharpPINVOKE.new_ChBodyEasyMesh__SWIG_12(ChTriangleMeshConnected.getCPtr(mesh), mdensity, compute_mass), true) {
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public ChBodyEasyMesh(ChTriangleMeshConnected mesh, double mdensity) : this(ChronoEngine_csharpPINVOKE.new_ChBodyEasyMesh__SWIG_13(ChTriangleMeshConnected.getCPtr(mesh), mdensity), true) {
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void SetupBody(ChTriangleMeshConnected trimesh, string name, double mdensity, bool compute_mass, bool visualize, bool collide, ChMaterialSurface material, double sphere_swept, ChCollisionModel collision_model) {
+    ChronoEngine_csharpPINVOKE.ChBodyEasyMesh_SetupBody(swigCPtr, ChTriangleMeshConnected.getCPtr(trimesh), name, mdensity, compute_mass, visualize, collide, ChMaterialSurface.getCPtr(material), sphere_swept, ChCollisionModel.getCPtr(collision_model));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
 }

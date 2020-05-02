@@ -22,7 +22,7 @@ public class UChBodyCylinder : UChBody
         mass = density * (Math.PI * Math.Pow(radius, 2) * height);
         inertiaMoments.x = (float)((1.0 / 12.0) * mass * (3 * Math.Pow(radius, 2) + Math.Pow(height, 2)));
         inertiaMoments.y = (float)(0.5 * mass * Math.Pow(radius, 2));
-        inertiaMoments.z = (float)(Math.PI * Math.Pow(radius, 2) * height);
+        inertiaMoments.z = (float)((1.0 / 12.0) * mass * (3 * Math.Pow(radius, 2) + Math.Pow(height, 2)));
     }
 
     public override void Create()

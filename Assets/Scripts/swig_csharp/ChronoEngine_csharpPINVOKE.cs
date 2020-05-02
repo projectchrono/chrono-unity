@@ -7980,6 +7980,30 @@ class ChronoEngine_csharpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChBodyEasyMesh__SWIG_6")]
   public static extern global::System.IntPtr new_ChBodyEasyMesh__SWIG_6(string jarg1, double jarg2);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChBodyEasyMesh__SWIG_7")]
+  public static extern global::System.IntPtr new_ChBodyEasyMesh__SWIG_7(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, bool jarg3, bool jarg4, bool jarg5, global::System.Runtime.InteropServices.HandleRef jarg6, double jarg7, global::System.Runtime.InteropServices.HandleRef jarg8);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChBodyEasyMesh__SWIG_8")]
+  public static extern global::System.IntPtr new_ChBodyEasyMesh__SWIG_8(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, bool jarg3, bool jarg4, bool jarg5, global::System.Runtime.InteropServices.HandleRef jarg6, double jarg7);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChBodyEasyMesh__SWIG_9")]
+  public static extern global::System.IntPtr new_ChBodyEasyMesh__SWIG_9(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, bool jarg3, bool jarg4, bool jarg5, global::System.Runtime.InteropServices.HandleRef jarg6);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChBodyEasyMesh__SWIG_10")]
+  public static extern global::System.IntPtr new_ChBodyEasyMesh__SWIG_10(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, bool jarg3, bool jarg4, bool jarg5);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChBodyEasyMesh__SWIG_11")]
+  public static extern global::System.IntPtr new_ChBodyEasyMesh__SWIG_11(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, bool jarg3, bool jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChBodyEasyMesh__SWIG_12")]
+  public static extern global::System.IntPtr new_ChBodyEasyMesh__SWIG_12(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, bool jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChBodyEasyMesh__SWIG_13")]
+  public static extern global::System.IntPtr new_ChBodyEasyMesh__SWIG_13(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChBodyEasyMesh_SetupBody")]
+  public static extern void ChBodyEasyMesh_SetupBody(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, string jarg3, double jarg4, bool jarg5, bool jarg6, bool jarg7, global::System.Runtime.InteropServices.HandleRef jarg8, double jarg9, global::System.Runtime.InteropServices.HandleRef jarg10);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChBodyEasyMesh")]
   public static extern void delete_ChBodyEasyMesh(global::System.Runtime.InteropServices.HandleRef jarg1);
 
