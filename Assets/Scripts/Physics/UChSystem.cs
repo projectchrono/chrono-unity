@@ -119,10 +119,8 @@ public class UChSystem : MonoBehaviour
                 break;
         }
 
-
-        Debug.Log("SOLVER: " + solverType);
-        Debug.Log("INTEGRATOR: " + integratorType);
-
+        ////Debug.Log("SOLVER: " + solverType);
+        ////Debug.Log("INTEGRATOR: " + integratorType);
         
         // Set solver
         switch (solverType)
@@ -197,27 +195,24 @@ public class UChSystem : MonoBehaviour
                 }
         }
 
-        //// TODO:  Something wrong with setting the system's integrator ==> crash
-
-        /*
         // Set integrator
         switch (integratorType)
         {
             case IntegratorType.EULER_IMPLICIT_LINEARIZED:
                 {
-                    var integrator = new ChTimestepperEulerImplicitLinearized();
+                    var integrator = new ChTimestepperEulerImplicitLinearized(chrono_system);
                     chrono_system.SetTimestepper(integrator);
                     break;
                 }
             case IntegratorType.EULER_IMPLICIT_PROJECTED:
                 {
-                    var integrator = new ChTimestepperEulerImplicitProjected();
+                    var integrator = new ChTimestepperEulerImplicitProjected(chrono_system);
                     chrono_system.SetTimestepper(integrator);
                     break;
                 }
             case IntegratorType.EULER_IMPLICIT:
                 {
-                    var integrator = new ChTimestepperEulerImplicit();
+                    var integrator = new ChTimestepperEulerImplicit(chrono_system);
                     integrator.SetMaxiters(integratorMaxIters);
                     integrator.SetRelTolerance(integratorRelTol);
                     integrator.SetAbsTolerances(integratorAbsTolS, integratorAbsTolL);
@@ -226,7 +221,7 @@ public class UChSystem : MonoBehaviour
                 }
             case IntegratorType.HHT:
                 {
-                    var integrator = new ChTimestepperHHT();
+                    var integrator = new ChTimestepperHHT(chrono_system);
                     integrator.SetMode(ChTimestepperHHT.HHT_Mode.ACCELERATION);
                     integrator.SetMaxiters(integratorMaxIters);
                     integrator.SetRelTolerance(integratorRelTol);
@@ -237,8 +232,7 @@ public class UChSystem : MonoBehaviour
                     break;
                 }
         }
-        */
-
+        
         chrono_system.Set_G_acc(new ChVectorD(gravity.x, gravity.y, gravity.z));
         chrono_system.SetStep(step);
     }
