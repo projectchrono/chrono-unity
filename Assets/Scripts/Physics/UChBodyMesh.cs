@@ -4,15 +4,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+//// TODO: take into account object scale!!!
+
 public class UChBodyMesh : UChBody
 {
     private ChMaterialSurface mat;
 
-    private ChTriangleMeshConnected chrono_mesh;
+    public bool collisionMesh;
+    public string collisionMeshOBJFile;
+
+    public double sweptSphereRadius;
 
     public UChBodyMesh()
     {
         automaticMass = true;
+        collisionMesh = false;
+        sweptSphereRadius = 0;
     }
 
     public override void Create()
@@ -22,18 +29,41 @@ public class UChBodyMesh : UChBody
         ////mat_component.DebugInfo();
         mat = mat_component.mat_info.CreateMaterial(mat_component.contact_method);
 
-        // Get a handle to the associated mesh filter
-        var mesh_component = this.GetComponent<MeshFilter>();
-        var mesh = mesh_component.mesh;
-        chrono_mesh = new ChTriangleMeshConnected();
-        chrono_mesh.m_vertices.Capacity = mesh.vertices.Length;
-        chrono_mesh.m_face_v_indices.Capacity = mesh.triangles.Length / 3;
-        for (int i = 0; i < mesh.vertices.Length; i++)
+        // Create Chrono collision mesh
+        var chrono_mesh = new ChTriangleMeshConnected();
+
+        bool use_file = false;
+        if (collisionMesh)
         {
-            chrono_mesh.m_vertices.Add(Utils.ToChrono(mesh.vertices[i]));
+            var ext = System.IO.Path.GetExtension(collisionMeshOBJFile);
+            ////Debug.Log(gameObject.name + "  -- Collision mesh file extension: " + ext);
+            use_file = System.IO.File.Exists(collisionMeshOBJFile) && String.Equals(ext, ".obj");
+            if (!use_file)
+            {
+                Debug.Log(gameObject.name + "  -- Specified OBJ file " + collisionMeshOBJFile + " does not exist or is incorrect type.\nUsing mesh filter!");
+            }
         }
-        for (int i = 0; i < mesh.triangles.Length; i+=3) {
-            chrono_mesh.m_face_v_indices.Add(new ChVectorI(mesh.triangles[i], mesh.triangles[i+1], mesh.triangles[i+2]));
+
+        if (use_file)
+        {
+            ////Debug.Log(gameObject.name + "  -- Loading collision mesh from " + collisionMeshOBJFile);
+            chrono_mesh.LoadWavefrontMesh(collisionMeshOBJFile, false, false);
+        }
+        else
+        {
+            ////Debug.Log(gameObject.name + "  -- Using mesh filter for collision");
+            var mesh_component = this.GetComponent<MeshFilter>();
+            var mesh = mesh_component.mesh;
+            chrono_mesh.m_vertices.Capacity = mesh.vertices.Length;
+            chrono_mesh.m_face_v_indices.Capacity = mesh.triangles.Length / 3;
+            for (int i = 0; i < mesh.vertices.Length; i++)
+            {
+                chrono_mesh.m_vertices.Add(Utils.ToChrono(mesh.vertices[i]));
+            }
+            for (int i = 0; i < mesh.triangles.Length; i += 3)
+            {
+                chrono_mesh.m_face_v_indices.Add(new ChVectorI(mesh.triangles[i], mesh.triangles[i + 1], mesh.triangles[i + 2]));
+            }
         }
 
         // Create the underlying Chrono body and its collision shape
@@ -67,6 +97,13 @@ public class UChBodyMeshEditor : UChBodyEditor
 
         base.OnInspectorGUI();
         EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);
+
+        body.collisionMesh = EditorGUILayout.Toggle("OBJ File", body.collisionMesh);
+
+        if (body.collisionMesh)
+            body.collisionMeshOBJFile = EditorGUILayout.TextField("File Name", body.collisionMeshOBJFile);
+
+        body.sweptSphereRadius = EditorGUILayout.DoubleField("Swept Sphere Radius", body.sweptSphereRadius);
 
         if (GUI.changed)
         {
