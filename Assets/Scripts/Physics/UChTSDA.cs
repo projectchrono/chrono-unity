@@ -37,6 +37,7 @@ public class UChTSDA : MonoBehaviour
 
         lineObject = gameObject.AddComponent<LineRenderer>();
         lineObject.material = new Material(Shader.Find("Sprites/Default"));
+        lineObject.sortingOrder = -1;
         lineObject.startColor = new Color(0, 0.4f, 0);
         lineObject.endColor = new Color(0, 0.4f, 0);
         lineObject.widthMultiplier = lineScale;
