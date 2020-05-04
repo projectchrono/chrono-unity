@@ -12,6 +12,7 @@ public class UChBody : MonoBehaviour
     public bool isFixed;
     public bool collide;
     public bool showFrameGizmo;
+    public float comRadiusGizmo;
 
     public bool automaticMass;
     public float density;
@@ -30,6 +31,7 @@ public class UChBody : MonoBehaviour
         isFixed = false;
         collide = true;
         showFrameGizmo = false;
+        comRadiusGizmo = 0.1f;
         automaticMass = false;
         density = 1000;
         mass = 1;
@@ -130,8 +132,8 @@ public class UChBody : MonoBehaviour
             Gizmos.color = Color.blue;
             Gizmos.DrawLine(Vector3.zero, new Vector3(0, 0, 2));
 
-            Gizmos.color = Color.white;
-            Gizmos.DrawSphere(COM, 0.1f);
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawSphere(COM, comRadiusGizmo);
         }
 
         OnDrawGizmosExtra();
@@ -150,6 +152,7 @@ public class UChBodyEditor : Editor
         body.isFixed = EditorGUILayout.Toggle("Fixed", body.isFixed);
         body.collide = EditorGUILayout.Toggle("Collide", body.collide);
         body.showFrameGizmo = EditorGUILayout.Toggle("Show Frame Gizmo", body.showFrameGizmo);
+        body.comRadiusGizmo = EditorGUILayout.FloatField("COM Radius Gizmo", body.comRadiusGizmo);
 
         EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);
 
