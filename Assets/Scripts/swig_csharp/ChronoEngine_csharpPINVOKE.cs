@@ -3459,6 +3459,444 @@ class ChronoEngine_csharpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunction_Sine_ArchiveIN")]
   public static extern void ChFunction_Sine_ArchiveIN(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChFunctionRotation")]
+  public static extern void delete_ChFunctionRotation(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_Clone")]
+  public static extern global::System.IntPtr ChFunctionRotation_Clone(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_Get_q")]
+  public static extern global::System.IntPtr ChFunctionRotation_Get_q(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_Get_w_loc")]
+  public static extern global::System.IntPtr ChFunctionRotation_Get_w_loc(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_Get_a_loc")]
+  public static extern global::System.IntPtr ChFunctionRotation_Get_a_loc(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_Estimate_s_domain")]
+  public static extern void ChFunctionRotation_Estimate_s_domain(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_Update")]
+  public static extern void ChFunctionRotation_Update(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_ArchiveOUT")]
+  public static extern void ChFunctionRotation_ArchiveOUT(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_ArchiveIN")]
+  public static extern void ChFunctionRotation_ArchiveIN(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFunctionRotation_axis__SWIG_0")]
+  public static extern global::System.IntPtr new_ChFunctionRotation_axis__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFunctionRotation_axis__SWIG_1")]
+  public static extern global::System.IntPtr new_ChFunctionRotation_axis__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChFunctionRotation_axis")]
+  public static extern void delete_ChFunctionRotation_axis(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_axis_Clone")]
+  public static extern global::System.IntPtr ChFunctionRotation_axis_Clone(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_axis_SetFunctionAngle")]
+  public static extern void ChFunctionRotation_axis_SetFunctionAngle(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_axis_GetFunctionAngle")]
+  public static extern global::System.IntPtr ChFunctionRotation_axis_GetFunctionAngle(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_axis_SetAxis")]
+  public static extern void ChFunctionRotation_axis_SetAxis(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_axis_GetAxis")]
+  public static extern global::System.IntPtr ChFunctionRotation_axis_GetAxis(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_axis_Get_q")]
+  public static extern global::System.IntPtr ChFunctionRotation_axis_Get_q(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_axis_Get_w_loc")]
+  public static extern global::System.IntPtr ChFunctionRotation_axis_Get_w_loc(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_axis_Get_a_loc")]
+  public static extern global::System.IntPtr ChFunctionRotation_axis_Get_a_loc(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_axis_ArchiveOUT")]
+  public static extern void ChFunctionRotation_axis_ArchiveOUT(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_axis_ArchiveIN")]
+  public static extern void ChFunctionRotation_axis_ArchiveIN(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFunctionRotation_ABCfunctions__SWIG_0")]
+  public static extern global::System.IntPtr new_ChFunctionRotation_ABCfunctions__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFunctionRotation_ABCfunctions__SWIG_1")]
+  public static extern global::System.IntPtr new_ChFunctionRotation_ABCfunctions__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChFunctionRotation_ABCfunctions")]
+  public static extern void delete_ChFunctionRotation_ABCfunctions(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_ABCfunctions_Clone")]
+  public static extern global::System.IntPtr ChFunctionRotation_ABCfunctions_Clone(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_ABCfunctions_SetFunctionAngleA")]
+  public static extern void ChFunctionRotation_ABCfunctions_SetFunctionAngleA(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_ABCfunctions_GetFunctionAngleA")]
+  public static extern global::System.IntPtr ChFunctionRotation_ABCfunctions_GetFunctionAngleA(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_ABCfunctions_SetFunctionAngleB")]
+  public static extern void ChFunctionRotation_ABCfunctions_SetFunctionAngleB(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_ABCfunctions_GetFunctionAngleB")]
+  public static extern global::System.IntPtr ChFunctionRotation_ABCfunctions_GetFunctionAngleB(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_ABCfunctions_SetFunctionAngleC")]
+  public static extern void ChFunctionRotation_ABCfunctions_SetFunctionAngleC(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_ABCfunctions_GetFunctionAngleC")]
+  public static extern global::System.IntPtr ChFunctionRotation_ABCfunctions_GetFunctionAngleC(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_ABCfunctions_SetAngleset")]
+  public static extern void ChFunctionRotation_ABCfunctions_SetAngleset(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_ABCfunctions_GetAngleset")]
+  public static extern int ChFunctionRotation_ABCfunctions_GetAngleset(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_ABCfunctions_Get_q")]
+  public static extern global::System.IntPtr ChFunctionRotation_ABCfunctions_Get_q(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_ABCfunctions_ArchiveOUT")]
+  public static extern void ChFunctionRotation_ABCfunctions_ArchiveOUT(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_ABCfunctions_ArchiveIN")]
+  public static extern void ChFunctionRotation_ABCfunctions_ArchiveIN(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFunctionRotation_setpoint__SWIG_0")]
+  public static extern global::System.IntPtr new_ChFunctionRotation_setpoint__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFunctionRotation_setpoint__SWIG_1")]
+  public static extern global::System.IntPtr new_ChFunctionRotation_setpoint__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChFunctionRotation_setpoint")]
+  public static extern void delete_ChFunctionRotation_setpoint(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_setpoint_Clone")]
+  public static extern global::System.IntPtr ChFunctionRotation_setpoint_Clone(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_setpoint_SetMode")]
+  public static extern void ChFunctionRotation_setpoint_SetMode(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_setpoint_GetMode")]
+  public static extern int ChFunctionRotation_setpoint_GetMode(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_setpoint_Reset__SWIG_0")]
+  public static extern void ChFunctionRotation_setpoint_Reset__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_setpoint_Reset__SWIG_1")]
+  public static extern void ChFunctionRotation_setpoint_Reset__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_setpoint_SetSetpoint")]
+  public static extern void ChFunctionRotation_setpoint_SetSetpoint(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, double jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_setpoint_SetSetpointAndDerivatives")]
+  public static extern void ChFunctionRotation_setpoint_SetSetpointAndDerivatives(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_setpoint_Get_q")]
+  public static extern global::System.IntPtr ChFunctionRotation_setpoint_Get_q(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_setpoint_Get_w_loc")]
+  public static extern global::System.IntPtr ChFunctionRotation_setpoint_Get_w_loc(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_setpoint_Get_a_loc")]
+  public static extern global::System.IntPtr ChFunctionRotation_setpoint_Get_a_loc(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_setpoint_ArchiveOUT")]
+  public static extern void ChFunctionRotation_setpoint_ArchiveOUT(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_setpoint_ArchiveIN")]
+  public static extern void ChFunctionRotation_setpoint_ArchiveIN(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFunctionRotation_spline__SWIG_0")]
+  public static extern global::System.IntPtr new_ChFunctionRotation_spline__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFunctionRotation_spline__SWIG_1")]
+  public static extern global::System.IntPtr new_ChFunctionRotation_spline__SWIG_1(int jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFunctionRotation_spline__SWIG_2")]
+  public static extern global::System.IntPtr new_ChFunctionRotation_spline__SWIG_2(int jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFunctionRotation_spline__SWIG_3")]
+  public static extern global::System.IntPtr new_ChFunctionRotation_spline__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChFunctionRotation_spline")]
+  public static extern void delete_ChFunctionRotation_spline(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_spline_Clone")]
+  public static extern global::System.IntPtr ChFunctionRotation_spline_Clone(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_spline_ComputeUfromKnotU")]
+  public static extern double ChFunctionRotation_spline_ComputeUfromKnotU(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_spline_ComputeKnotUfromU")]
+  public static extern double ChFunctionRotation_spline_ComputeKnotUfromU(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_spline_Rotations")]
+  public static extern global::System.IntPtr ChFunctionRotation_spline_Rotations(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_spline_Knots")]
+  public static extern global::System.IntPtr ChFunctionRotation_spline_Knots(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_spline_GetOrder")]
+  public static extern int ChFunctionRotation_spline_GetOrder(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_spline_SetupData__SWIG_0")]
+  public static extern void ChFunctionRotation_spline_SetupData__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_spline_SetupData__SWIG_1")]
+  public static extern void ChFunctionRotation_spline_SetupData__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_spline_GetSpaceFunction")]
+  public static extern global::System.IntPtr ChFunctionRotation_spline_GetSpaceFunction(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_spline_SetSpaceFunction")]
+  public static extern void ChFunctionRotation_spline_SetSpaceFunction(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_spline_SetClosed")]
+  public static extern void ChFunctionRotation_spline_SetClosed(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_spline_GetClosed")]
+  public static extern bool ChFunctionRotation_spline_GetClosed(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_spline_Get_q")]
+  public static extern global::System.IntPtr ChFunctionRotation_spline_Get_q(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_spline_ArchiveOUT")]
+  public static extern void ChFunctionRotation_spline_ArchiveOUT(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_spline_ArchiveIN")]
+  public static extern void ChFunctionRotation_spline_ArchiveIN(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFunctionRotation_SQUAD__SWIG_0")]
+  public static extern global::System.IntPtr new_ChFunctionRotation_SQUAD__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFunctionRotation_SQUAD__SWIG_1")]
+  public static extern global::System.IntPtr new_ChFunctionRotation_SQUAD__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFunctionRotation_SQUAD__SWIG_2")]
+  public static extern global::System.IntPtr new_ChFunctionRotation_SQUAD__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFunctionRotation_SQUAD__SWIG_3")]
+  public static extern global::System.IntPtr new_ChFunctionRotation_SQUAD__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChFunctionRotation_SQUAD")]
+  public static extern void delete_ChFunctionRotation_SQUAD(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_SQUAD_Clone")]
+  public static extern global::System.IntPtr ChFunctionRotation_SQUAD_Clone(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_SQUAD_ComputeUfromKnotU")]
+  public static extern double ChFunctionRotation_SQUAD_ComputeUfromKnotU(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_SQUAD_ComputeKnotUfromU")]
+  public static extern double ChFunctionRotation_SQUAD_ComputeKnotUfromU(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_SQUAD_Rotations")]
+  public static extern global::System.IntPtr ChFunctionRotation_SQUAD_Rotations(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_SQUAD_Knots")]
+  public static extern global::System.IntPtr ChFunctionRotation_SQUAD_Knots(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_SQUAD_GetOrder")]
+  public static extern int ChFunctionRotation_SQUAD_GetOrder(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_SQUAD_SetupData__SWIG_0")]
+  public static extern void ChFunctionRotation_SQUAD_SetupData__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_SQUAD_SetupData__SWIG_1")]
+  public static extern void ChFunctionRotation_SQUAD_SetupData__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_SQUAD_GetSpaceFunction")]
+  public static extern global::System.IntPtr ChFunctionRotation_SQUAD_GetSpaceFunction(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_SQUAD_SetSpaceFunction")]
+  public static extern void ChFunctionRotation_SQUAD_SetSpaceFunction(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_SQUAD_SetClosed")]
+  public static extern void ChFunctionRotation_SQUAD_SetClosed(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_SQUAD_GetClosed")]
+  public static extern bool ChFunctionRotation_SQUAD_GetClosed(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_SQUAD_Get_q")]
+  public static extern global::System.IntPtr ChFunctionRotation_SQUAD_Get_q(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_SQUAD_ArchiveOUT")]
+  public static extern void ChFunctionRotation_SQUAD_ArchiveOUT(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_SQUAD_ArchiveIN")]
+  public static extern void ChFunctionRotation_SQUAD_ArchiveIN(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChFunctionPosition")]
+  public static extern void delete_ChFunctionPosition(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_Clone")]
+  public static extern global::System.IntPtr ChFunctionPosition_Clone(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_Get_p")]
+  public static extern global::System.IntPtr ChFunctionPosition_Get_p(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_Get_p_ds")]
+  public static extern global::System.IntPtr ChFunctionPosition_Get_p_ds(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_Get_p_dsds")]
+  public static extern global::System.IntPtr ChFunctionPosition_Get_p_dsds(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_Estimate_s_domain")]
+  public static extern void ChFunctionPosition_Estimate_s_domain(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_Estimate_boundingbox")]
+  public static extern void ChFunctionPosition_Estimate_boundingbox(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_Update")]
+  public static extern void ChFunctionPosition_Update(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_ArchiveOUT")]
+  public static extern void ChFunctionPosition_ArchiveOUT(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_ArchiveIN")]
+  public static extern void ChFunctionPosition_ArchiveIN(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFunctionPosition_line__SWIG_0")]
+  public static extern global::System.IntPtr new_ChFunctionPosition_line__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFunctionPosition_line__SWIG_1")]
+  public static extern global::System.IntPtr new_ChFunctionPosition_line__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChFunctionPosition_line")]
+  public static extern void delete_ChFunctionPosition_line(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_line_Clone")]
+  public static extern global::System.IntPtr ChFunctionPosition_line_Clone(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_line_GetLine")]
+  public static extern global::System.IntPtr ChFunctionPosition_line_GetLine(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_line_SetLine")]
+  public static extern void ChFunctionPosition_line_SetLine(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_line_GetSpaceFunction")]
+  public static extern global::System.IntPtr ChFunctionPosition_line_GetSpaceFunction(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_line_SetSpaceFunction")]
+  public static extern void ChFunctionPosition_line_SetSpaceFunction(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_line_Get_p")]
+  public static extern global::System.IntPtr ChFunctionPosition_line_Get_p(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_line_Get_p_ds")]
+  public static extern global::System.IntPtr ChFunctionPosition_line_Get_p_ds(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_line_Get_p_dsds")]
+  public static extern global::System.IntPtr ChFunctionPosition_line_Get_p_dsds(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_line_ArchiveOUT")]
+  public static extern void ChFunctionPosition_line_ArchiveOUT(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_line_ArchiveIN")]
+  public static extern void ChFunctionPosition_line_ArchiveIN(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFunctionPosition_setpoint__SWIG_0")]
+  public static extern global::System.IntPtr new_ChFunctionPosition_setpoint__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFunctionPosition_setpoint__SWIG_1")]
+  public static extern global::System.IntPtr new_ChFunctionPosition_setpoint__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChFunctionPosition_setpoint")]
+  public static extern void delete_ChFunctionPosition_setpoint(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_setpoint_Clone")]
+  public static extern global::System.IntPtr ChFunctionPosition_setpoint_Clone(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_setpoint_SetMode")]
+  public static extern void ChFunctionPosition_setpoint_SetMode(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_setpoint_GetMode")]
+  public static extern int ChFunctionPosition_setpoint_GetMode(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_setpoint_Reset__SWIG_0")]
+  public static extern void ChFunctionPosition_setpoint_Reset__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_setpoint_Reset__SWIG_1")]
+  public static extern void ChFunctionPosition_setpoint_Reset__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_setpoint_SetSetpoint")]
+  public static extern void ChFunctionPosition_setpoint_SetSetpoint(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, double jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_setpoint_SetSetpointAndDerivatives")]
+  public static extern void ChFunctionPosition_setpoint_SetSetpointAndDerivatives(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_setpoint_Get_p")]
+  public static extern global::System.IntPtr ChFunctionPosition_setpoint_Get_p(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_setpoint_Get_p_ds")]
+  public static extern global::System.IntPtr ChFunctionPosition_setpoint_Get_p_ds(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_setpoint_Get_p_dsds")]
+  public static extern global::System.IntPtr ChFunctionPosition_setpoint_Get_p_dsds(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_setpoint_ArchiveOUT")]
+  public static extern void ChFunctionPosition_setpoint_ArchiveOUT(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_setpoint_ArchiveIN")]
+  public static extern void ChFunctionPosition_setpoint_ArchiveIN(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFunctionPosition_XYZfunctions__SWIG_0")]
+  public static extern global::System.IntPtr new_ChFunctionPosition_XYZfunctions__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFunctionPosition_XYZfunctions__SWIG_1")]
+  public static extern global::System.IntPtr new_ChFunctionPosition_XYZfunctions__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChFunctionPosition_XYZfunctions")]
+  public static extern void delete_ChFunctionPosition_XYZfunctions(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_XYZfunctions_Clone")]
+  public static extern global::System.IntPtr ChFunctionPosition_XYZfunctions_Clone(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_XYZfunctions_SetFunctionX")]
+  public static extern void ChFunctionPosition_XYZfunctions_SetFunctionX(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_XYZfunctions_GetFunctionX")]
+  public static extern global::System.IntPtr ChFunctionPosition_XYZfunctions_GetFunctionX(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_XYZfunctions_SetFunctionY")]
+  public static extern void ChFunctionPosition_XYZfunctions_SetFunctionY(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_XYZfunctions_GetFunctionY")]
+  public static extern global::System.IntPtr ChFunctionPosition_XYZfunctions_GetFunctionY(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_XYZfunctions_SetFunctionZ")]
+  public static extern void ChFunctionPosition_XYZfunctions_SetFunctionZ(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_XYZfunctions_GetFunctionZ")]
+  public static extern global::System.IntPtr ChFunctionPosition_XYZfunctions_GetFunctionZ(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_XYZfunctions_Get_p")]
+  public static extern global::System.IntPtr ChFunctionPosition_XYZfunctions_Get_p(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_XYZfunctions_Get_p_ds")]
+  public static extern global::System.IntPtr ChFunctionPosition_XYZfunctions_Get_p_ds(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_XYZfunctions_Get_p_dsds")]
+  public static extern global::System.IntPtr ChFunctionPosition_XYZfunctions_Get_p_dsds(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_XYZfunctions_Estimate_s_domain")]
+  public static extern void ChFunctionPosition_XYZfunctions_Estimate_s_domain(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_XYZfunctions_ArchiveOUT")]
+  public static extern void ChFunctionPosition_XYZfunctions_ArchiveOUT(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_XYZfunctions_ArchiveIN")]
+  public static extern void ChFunctionPosition_XYZfunctions_ArchiveIN(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChGeometry")]
   public static extern void delete_ChGeometry(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -10815,6 +11253,54 @@ class ChronoEngine_csharpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkPointSpline_ArchiveIN")]
   public static extern void ChLinkPointSpline_ArchiveIN(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChLinkMotionImposed__SWIG_0")]
+  public static extern global::System.IntPtr new_ChLinkMotionImposed__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChLinkMotionImposed__SWIG_1")]
+  public static extern global::System.IntPtr new_ChLinkMotionImposed__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChLinkMotionImposed")]
+  public static extern void delete_ChLinkMotionImposed(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkMotionImposed_Clone")]
+  public static extern global::System.IntPtr ChLinkMotionImposed_Clone(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkMotionImposed_SetPositionFunction")]
+  public static extern void ChLinkMotionImposed_SetPositionFunction(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkMotionImposed_GetPositionFunction")]
+  public static extern global::System.IntPtr ChLinkMotionImposed_GetPositionFunction(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkMotionImposed_SetRotationFunction")]
+  public static extern void ChLinkMotionImposed_SetRotationFunction(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkMotionImposed_GetRotationFunction")]
+  public static extern global::System.IntPtr ChLinkMotionImposed_GetRotationFunction(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkMotionImposed_GetFrameM2")]
+  public static extern global::System.IntPtr ChLinkMotionImposed_GetFrameM2(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkMotionImposed_GetLinkRelativeCoords")]
+  public static extern global::System.IntPtr ChLinkMotionImposed_GetLinkRelativeCoords(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkMotionImposed_Update")]
+  public static extern void ChLinkMotionImposed_Update(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, bool jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkMotionImposed_IntLoadConstraint_Ct")]
+  public static extern void ChLinkMotionImposed_IntLoadConstraint_Ct(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, double jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkMotionImposed_ConstraintsBiLoad_Ct__SWIG_0")]
+  public static extern void ChLinkMotionImposed_ConstraintsBiLoad_Ct__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkMotionImposed_ConstraintsBiLoad_Ct__SWIG_1")]
+  public static extern void ChLinkMotionImposed_ConstraintsBiLoad_Ct__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkMotionImposed_ArchiveOUT")]
+  public static extern void ChLinkMotionImposed_ArchiveOUT(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkMotionImposed_ArchiveIN")]
+  public static extern void ChLinkMotionImposed_ArchiveIN(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChBody_Clear")]
   public static extern void vector_ChBody_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -17283,6 +17769,30 @@ class ChronoEngine_csharpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunction_Sine_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr ChFunction_Sine_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_axis_SWIGSmartPtrUpcast")]
+  public static extern global::System.IntPtr ChFunctionRotation_axis_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_ABCfunctions_SWIGSmartPtrUpcast")]
+  public static extern global::System.IntPtr ChFunctionRotation_ABCfunctions_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_setpoint_SWIGSmartPtrUpcast")]
+  public static extern global::System.IntPtr ChFunctionRotation_setpoint_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_spline_SWIGSmartPtrUpcast")]
+  public static extern global::System.IntPtr ChFunctionRotation_spline_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionRotation_SQUAD_SWIGSmartPtrUpcast")]
+  public static extern global::System.IntPtr ChFunctionRotation_SQUAD_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_line_SWIGSmartPtrUpcast")]
+  public static extern global::System.IntPtr ChFunctionPosition_line_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_setpoint_SWIGSmartPtrUpcast")]
+  public static extern global::System.IntPtr ChFunctionPosition_setpoint_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFunctionPosition_XYZfunctions_SWIGSmartPtrUpcast")]
+  public static extern global::System.IntPtr ChFunctionPosition_XYZfunctions_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLine_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr ChLine_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
@@ -17603,6 +18113,9 @@ class ChronoEngine_csharpPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkPointSpline_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr ChLinkPointSpline_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkMotionImposed_SWIGSmartPtrUpcast")]
+  public static extern global::System.IntPtr ChLinkMotionImposed_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChAssembly_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr ChAssembly_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
