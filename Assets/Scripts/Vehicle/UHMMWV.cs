@@ -91,19 +91,19 @@ public class UHMMWV : MonoBehaviour
         ////listOfChildren[0].enabled = false;
         GetComponentInChildren<Renderer>().enabled = false;
 
-        Object chassis_prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/HMMWV/Chassis.prefab", typeof(GameObject));
+        Object chassis_prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Vehicle/HMMWV/Chassis.prefab", typeof(GameObject));
         chassis = Instantiate(chassis_prefab, transform) as GameObject;
         chassis.transform.parent = gameObject.transform;
         if (chassisMaterial != null)
             chassis.GetComponentInChildren<Renderer>().sharedMaterial = chassisMaterial;
 
-        Object wheelL_prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/HMMWV/WheelLeft.prefab", typeof(GameObject));
+        Object wheelL_prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Vehicle/HMMWV/WheelLeft.prefab", typeof(GameObject));
         wheelFL = Instantiate(wheelL_prefab, transform) as GameObject;
         wheelFL.transform.parent = gameObject.transform;
         wheelRL = Instantiate(wheelL_prefab, transform) as GameObject;
         wheelRL.transform.parent = gameObject.transform;
 
-        Object wheelR_prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/HMMWV/WheelRight.prefab", typeof(GameObject));
+        Object wheelR_prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Vehicle/HMMWV/WheelRight.prefab", typeof(GameObject));
         wheelFR = Instantiate(wheelR_prefab, transform) as GameObject;
         wheelFR.transform.parent = gameObject.transform;
         wheelRR = Instantiate(wheelR_prefab, transform) as GameObject;
