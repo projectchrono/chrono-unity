@@ -4,6 +4,12 @@ using UnityEngine;
 
 public static class Utils
 {
+    static readonly ChQuaternionD xflip;
+    static Utils() {
+        xflip = new ChQuaternionD();
+        xflip.Q_from_AngZ(ChronoEngine_csharp.CH_C_PI);
+    }
+
     public static Vector3 FromChrono(ChVectorD v)
     {
         return new Vector3((float)v.x, (float)v.y, (float)v.z);
@@ -22,5 +28,16 @@ public static class Utils
     public static ChQuaternionD ToChrono(Quaternion q)
     {
         return new ChQuaternionD(q.w, q.x, q.y, q.z);
+    }
+
+    public static ChVectorD ISOtoLHF(ChVectorD v)
+    {
+        return new ChVectorD(v.x, -v.y, v.z);
+    }
+
+    public static ChQuaternionD ISOtoLHF(ChQuaternionD q) {
+        var q_new = new ChQuaternionD();
+        q_new.Cross(q, xflip);
+        return q_new;
     }
 }

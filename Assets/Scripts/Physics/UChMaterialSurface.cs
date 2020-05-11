@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEditor;
 
 [System.Serializable]
-public class MaterialInfo
+public class UChMaterialInfo
 {
     public float mu;   // coefficient of friction
     public float mu_r; // rolling friction
@@ -18,7 +18,7 @@ public class MaterialInfo
     ////public float kt;  // tangential stiffness
     ////public float gt;  // tangential viscous damping
 
-    public MaterialInfo() {}
+    public UChMaterialInfo() {}
 
     public ChMaterialSurface CreateMaterial(ChContactMethod method)
     {
@@ -53,11 +53,11 @@ public class MaterialInfo
 public class UChMaterialSurface : MonoBehaviour
 {
     public ChContactMethod contact_method;
-    public MaterialInfo mat_info;
+    public UChMaterialInfo mat_info;
 
     public UChMaterialSurface()
     {
-        mat_info = new MaterialInfo();
+        mat_info = new UChMaterialInfo();
         mat_info.mu = 0.4f;
     }
 
