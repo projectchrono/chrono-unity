@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class UHMMWV : MonoBehaviour
+public class UHMMWV : UChVehicle
 {
     public HMMWV_Full hmmwv;
 
@@ -24,16 +24,14 @@ public class UHMMWV : MonoBehaviour
     private GameObject wheelRL;
     private GameObject wheelRR;
 
-    private ChTerrain terrain;
-
     public UHMMWV()
     {
         ChWorldFrame.SetYUP();
         //ChWorldFrame.Set(new ChMatrix33D(1));
 
         chassisFixed = false;
-        powertrainModel = PowertrainModelType.SIMPLE;
-        drivelineModel = DrivelineType.RWD;
+        powertrainModel = PowertrainModelType.SHAFTS;
+        drivelineModel = DrivelineType.AWD;
         tireModel = TireModelType.TMEASY;
         tireCollisionType = ChTire.CollisionType.SINGLE_POINT;
 
@@ -74,7 +72,9 @@ public class UHMMWV : MonoBehaviour
         hmmwv.SetDriveType(drivelineModel);
         hmmwv.SetTireType(tireModel);
         hmmwv.SetTireCollisionType(tireCollisionType);
-        
+
+        hmmwv.SetAerodynamicDrag(0.5, 5.0, 1.2);
+
         hmmwv.SetInitPosition(new ChCoordsysD(Utils.ToChrono(transform.position), Utils.ToChrono(transform.rotation)));
         hmmwv.SetInitFwdVel(initForwardVel);
         vector_double omega = new vector_double();
@@ -118,10 +118,6 @@ public class UHMMWV : MonoBehaviour
 
         var spindleFL_pos = hmmwv.GetVehicle().GetSpindlePos(0, VehicleSide.LEFT);
         var spindleFL_rot = hmmwv.GetVehicle().GetSpindleRot(0, VehicleSide.LEFT);
-        //var spindleFL_frame = new ChFrameD(spindleFL_pos, spindleFL_rot);
-        //ConvertToUnityFrame(vehicle_frame, spindleFL_frame);
-        //spindleFL_pos = spindleFL_frame.GetPos();
-        //spindleFL_rot = spindleFL_frame.GetRot();
         ConvertToUnityFrame(vehicle_frame, ref spindleFL_pos, ref spindleFL_rot);
 
         var spindleFR_pos = hmmwv.GetVehicle().GetSpindlePos(0, VehicleSide.RIGHT);
@@ -136,15 +132,9 @@ public class UHMMWV : MonoBehaviour
         var spindleRR_rot = hmmwv.GetVehicle().GetSpindleRot(1, VehicleSide.RIGHT);
         ConvertToUnityFrame(vehicle_frame, ref spindleRR_pos, ref spindleRR_rot);
 
-        float horiz = Input.GetAxis("Horizontal");
-
         //Debug.Log("terrain height = " + UTerrain.chrono_terrain.GetHeight(new ChVectorD(0,0,0)));
 
-        DriverInputs bar = new DriverInputs();
-        bar.m_braking = 0;
-        bar.m_steering = horiz;
-        bar.m_throttle = 0.1;
-        hmmwv.Synchronize(UChSystem.chrono_system.GetChTime(), bar, UTerrain.chrono_terrain);
+        hmmwv.Synchronize(UChSystem.chrono_system.GetChTime(), inputs, UChTerrain.chrono_terrain);
         hmmwv.Advance(0.03);
 
 
@@ -172,5 +162,7 @@ public class UHMMWV : MonoBehaviour
 
         wheelRR.transform.position = Utils.FromChrono(spindleRR_pos);
         wheelRR.transform.rotation = Utils.FromChrono(spindleRR_rot);
+
+        Debug.Log(hmmwv.GetVehicle().GetVehicleSpeed());
     }
 }

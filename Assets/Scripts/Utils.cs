@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -40,4 +41,6 @@ public static class Utils
         q_new.Cross(q, xflip);
         return q_new;
     }
+
+    public static double Clamp(double x, double a, double b) { return Math.Max(a, Math.Min(b, x)); }
 }
