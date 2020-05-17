@@ -127,7 +127,7 @@ public class UChDriver : MonoBehaviour
 
             case SpeedMode.CruiseControl:
 
-                if (vert > 0) { targetSpeed += 0.001; }
+                if (vert > 0) { targetSpeed += 0.002; }
                 else if (vert < 0) { targetSpeed -= 0.01; }
                 if (targetSpeed < 0) { targetSpeed = 0; }
 
@@ -178,6 +178,19 @@ public class UChDriver : MonoBehaviour
     void OnValidate()
     {
         transform.hideFlags = HideFlags.NotEditable | HideFlags.HideInInspector;
+    }
+
+    private void OnGUI()
+    {
+        if (Application.isEditor)
+        {
+            double speedKPH = Math.Round(3.6 * vehicle.GetSpeed());
+            GUI.Label(new Rect(10, 10, 100, 40), "Speed (km/h): " + speedKPH.ToString());
+            double throttle = Math.Round(m_throttle * 100) / 100;
+            GUI.Label(new Rect(10, 40, 100, 40), "Throttle: " + throttle.ToString());
+            double steering = Math.Round(m_steering * 100) / 100;
+            GUI.Label(new Rect(10, 60, 100, 40), "Steering: " + steering.ToString());
+        }
     }
 }
 
