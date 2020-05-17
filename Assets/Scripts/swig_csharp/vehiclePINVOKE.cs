@@ -1530,6 +1530,42 @@ class vehiclePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_UAZBUS_SimpleMapPowertrain")]
   public static extern void delete_UAZBUS_SimpleMapPowertrain(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Gator_SimplePowertrain")]
+  public static extern global::System.IntPtr new_Gator_SimplePowertrain(string jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_Gator_SimplePowertrain")]
+  public static extern void delete_Gator_SimplePowertrain(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SimplePowertrain_GetForwardGearRatio")]
+  public static extern double Gator_SimplePowertrain_GetForwardGearRatio(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SimplePowertrain_GetReverseGearRatio")]
+  public static extern double Gator_SimplePowertrain_GetReverseGearRatio(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SimplePowertrain_GetMaxTorque")]
+  public static extern double Gator_SimplePowertrain_GetMaxTorque(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SimplePowertrain_GetMaxSpeed")]
+  public static extern double Gator_SimplePowertrain_GetMaxSpeed(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Gator_SimpleMapPowertrain")]
+  public static extern global::System.IntPtr new_Gator_SimpleMapPowertrain(string jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SimpleMapPowertrain_GetMaxEngineSpeed")]
+  public static extern double Gator_SimpleMapPowertrain_GetMaxEngineSpeed(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SimpleMapPowertrain_SetEngineTorqueMaps")]
+  public static extern void Gator_SimpleMapPowertrain_SetEngineTorqueMaps(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SimpleMapPowertrain_SetGearRatios")]
+  public static extern void Gator_SimpleMapPowertrain_SetGearRatios(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SimpleMapPowertrain_SetShiftPoints")]
+  public static extern void Gator_SimpleMapPowertrain_SetShiftPoints(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_Gator_SimpleMapPowertrain")]
+  public static extern void delete_Gator_SimpleMapPowertrain(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_ChChassis")]
   public static extern void delete_ChChassis(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -3840,6 +3876,72 @@ class vehiclePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChSolidThreeLinkAxle_LogHardpointLocations__SWIG_1")]
   public static extern void ChSolidThreeLinkAxle_LogHardpointLocations__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_ChSingleWishbone")]
+  public static extern void delete_ChSingleWishbone(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChSingleWishbone_GetTemplateName")]
+  public static extern string ChSingleWishbone_GetTemplateName(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChSingleWishbone_IsSteerable")]
+  public static extern bool ChSingleWishbone_IsSteerable(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChSingleWishbone_IsIndependent")]
+  public static extern bool ChSingleWishbone_IsIndependent(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChSingleWishbone_Initialize__SWIG_0")]
+  public static extern void ChSingleWishbone_Initialize__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, int jarg5, double jarg6, double jarg7);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChSingleWishbone_Initialize__SWIG_1")]
+  public static extern void ChSingleWishbone_Initialize__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, int jarg5, double jarg6);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChSingleWishbone_Initialize__SWIG_2")]
+  public static extern void ChSingleWishbone_Initialize__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, int jarg5);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChSingleWishbone_AddVisualizationAssets")]
+  public static extern void ChSingleWishbone_AddVisualizationAssets(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChSingleWishbone_RemoveVisualizationAssets")]
+  public static extern void ChSingleWishbone_RemoveVisualizationAssets(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChSingleWishbone_GetMass")]
+  public static extern double ChSingleWishbone_GetMass(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChSingleWishbone_GetCOMPos")]
+  public static extern global::System.IntPtr ChSingleWishbone_GetCOMPos(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChSingleWishbone_GetTrack")]
+  public static extern double ChSingleWishbone_GetTrack(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChSingleWishbone_GetShock")]
+  public static extern global::System.IntPtr ChSingleWishbone_GetShock(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChSingleWishbone_ReportSuspensionForce")]
+  public static extern global::System.IntPtr ChSingleWishbone_ReportSuspensionForce(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChSingleWishbone_GetShockForce")]
+  public static extern double ChSingleWishbone_GetShockForce(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChSingleWishbone_GetShockLength")]
+  public static extern double ChSingleWishbone_GetShockLength(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChSingleWishbone_GetShockVelocity")]
+  public static extern double ChSingleWishbone_GetShockVelocity(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChSingleWishbone_LogConstraintViolations")]
+  public static extern void ChSingleWishbone_LogConstraintViolations(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChSingleWishbone_GetLeftBody")]
+  public static extern global::System.IntPtr ChSingleWishbone_GetLeftBody(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChSingleWishbone_GetRightBody")]
+  public static extern global::System.IntPtr ChSingleWishbone_GetRightBody(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChSingleWishbone_LogHardpointLocations__SWIG_0")]
+  public static extern void ChSingleWishbone_LogHardpointLocations__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, bool jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChSingleWishbone_LogHardpointLocations__SWIG_1")]
+  public static extern void ChSingleWishbone_LogHardpointLocations__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_DoubleWishbone__SWIG_0")]
   public static extern global::System.IntPtr new_DoubleWishbone__SWIG_0(string jarg1);
 
@@ -5298,6 +5400,78 @@ class vehiclePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_UAZBUS_LeafspringAxle")]
   public static extern void delete_UAZBUS_LeafspringAxle(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Gator_SingleWishbone")]
+  public static extern global::System.IntPtr new_Gator_SingleWishbone(string jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_Gator_SingleWishbone")]
+  public static extern void delete_Gator_SingleWishbone(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SingleWishbone_getSpindleMass")]
+  public static extern double Gator_SingleWishbone_getSpindleMass(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SingleWishbone_getCAMass")]
+  public static extern double Gator_SingleWishbone_getCAMass(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SingleWishbone_getUprightMass")]
+  public static extern double Gator_SingleWishbone_getUprightMass(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SingleWishbone_getSpindleRadius")]
+  public static extern double Gator_SingleWishbone_getSpindleRadius(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SingleWishbone_getSpindleWidth")]
+  public static extern double Gator_SingleWishbone_getSpindleWidth(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SingleWishbone_getCARadius")]
+  public static extern double Gator_SingleWishbone_getCARadius(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SingleWishbone_getUprightRadius")]
+  public static extern double Gator_SingleWishbone_getUprightRadius(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SingleWishbone_getSpindleInertia")]
+  public static extern global::System.IntPtr Gator_SingleWishbone_getSpindleInertia(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SingleWishbone_getCAInertiaMoments")]
+  public static extern global::System.IntPtr Gator_SingleWishbone_getCAInertiaMoments(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SingleWishbone_getCAInertiaProducts")]
+  public static extern global::System.IntPtr Gator_SingleWishbone_getCAInertiaProducts(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SingleWishbone_getUprightInertiaMoments")]
+  public static extern global::System.IntPtr Gator_SingleWishbone_getUprightInertiaMoments(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SingleWishbone_getUprightInertiaProducts")]
+  public static extern global::System.IntPtr Gator_SingleWishbone_getUprightInertiaProducts(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SingleWishbone_getAxleInertia")]
+  public static extern double Gator_SingleWishbone_getAxleInertia(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SingleWishbone_getSpringRestLength")]
+  public static extern double Gator_SingleWishbone_getSpringRestLength(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SingleWishbone_getShockForceFunctor")]
+  public static extern global::System.IntPtr Gator_SingleWishbone_getShockForceFunctor(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Gator_RigidSuspension")]
+  public static extern global::System.IntPtr new_Gator_RigidSuspension(string jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_Gator_RigidSuspension")]
+  public static extern void delete_Gator_RigidSuspension(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_RigidSuspension_getSpindleMass")]
+  public static extern double Gator_RigidSuspension_getSpindleMass(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_RigidSuspension_getSpindleRadius")]
+  public static extern double Gator_RigidSuspension_getSpindleRadius(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_RigidSuspension_getSpindleWidth")]
+  public static extern double Gator_RigidSuspension_getSpindleWidth(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_RigidSuspension_getSpindleInertia")]
+  public static extern global::System.IntPtr Gator_RigidSuspension_getSpindleInertia(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_RigidSuspension_getAxleInertia")]
+  public static extern double Gator_RigidSuspension_getAxleInertia(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_ChDriveline")]
   public static extern void delete_ChDriveline(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -5787,6 +5961,51 @@ class vehiclePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_UAZBUS_Driveline4WD_GetCentralDifferentialLockingLimit")]
   public static extern double UAZBUS_Driveline4WD_GetCentralDifferentialLockingLimit(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Gator_SimpleDriveline")]
+  public static extern global::System.IntPtr new_Gator_SimpleDriveline(string jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_Gator_SimpleDriveline")]
+  public static extern void delete_Gator_SimpleDriveline(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SimpleDriveline_GetTemplateName")]
+  public static extern string Gator_SimpleDriveline_GetTemplateName(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SimpleDriveline_GetNumDrivenAxles")]
+  public static extern int Gator_SimpleDriveline_GetNumDrivenAxles(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SimpleDriveline_Initialize")]
+  public static extern void Gator_SimpleDriveline_Initialize(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SimpleDriveline_Synchronize")]
+  public static extern void Gator_SimpleDriveline_Synchronize(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SimpleDriveline_GetDriveshaftSpeed")]
+  public static extern double Gator_SimpleDriveline_GetDriveshaftSpeed(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SimpleDriveline_GetSpindleTorque")]
+  public static extern double Gator_SimpleDriveline_GetSpindleTorque(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Gator_Driveline2WD")]
+  public static extern global::System.IntPtr new_Gator_Driveline2WD(string jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_Gator_Driveline2WD")]
+  public static extern void delete_Gator_Driveline2WD(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Driveline2WD_GetDriveshaftInertia")]
+  public static extern double Gator_Driveline2WD_GetDriveshaftInertia(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Driveline2WD_GetDifferentialBoxInertia")]
+  public static extern double Gator_Driveline2WD_GetDifferentialBoxInertia(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Driveline2WD_GetConicalGearRatio")]
+  public static extern double Gator_Driveline2WD_GetConicalGearRatio(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Driveline2WD_GetDifferentialRatio")]
+  public static extern double Gator_Driveline2WD_GetDifferentialRatio(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Driveline2WD_GetAxleDifferentialLockingLimit")]
+  public static extern double Gator_Driveline2WD_GetAxleDifferentialLockingLimit(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_ChSteering")]
   public static extern void delete_ChSteering(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -6123,6 +6342,33 @@ class vehiclePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_UAZBUS_RotaryArm_getMaxAngle")]
   public static extern double UAZBUS_RotaryArm_getMaxAngle(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Gator_RackPinion")]
+  public static extern global::System.IntPtr new_Gator_RackPinion(string jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_Gator_RackPinion")]
+  public static extern void delete_Gator_RackPinion(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_RackPinion_GetSteeringLinkMass")]
+  public static extern double Gator_RackPinion_GetSteeringLinkMass(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_RackPinion_GetSteeringLinkInertia")]
+  public static extern global::System.IntPtr Gator_RackPinion_GetSteeringLinkInertia(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_RackPinion_GetSteeringLinkCOM")]
+  public static extern double Gator_RackPinion_GetSteeringLinkCOM(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_RackPinion_GetSteeringLinkRadius")]
+  public static extern double Gator_RackPinion_GetSteeringLinkRadius(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_RackPinion_GetSteeringLinkLength")]
+  public static extern double Gator_RackPinion_GetSteeringLinkLength(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_RackPinion_GetPinionRadius")]
+  public static extern double Gator_RackPinion_GetPinionRadius(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_RackPinion_GetMaxAngle")]
+  public static extern double Gator_RackPinion_GetMaxAngle(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_ChWheel")]
   public static extern void delete_ChWheel(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -6345,6 +6591,30 @@ class vehiclePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_UAZBUS_Wheel_RemoveVisualizationAssets")]
   public static extern void UAZBUS_Wheel_RemoveVisualizationAssets(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Gator_Wheel")]
+  public static extern global::System.IntPtr new_Gator_Wheel(string jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_Gator_Wheel")]
+  public static extern void delete_Gator_Wheel(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Wheel_GetMass")]
+  public static extern double Gator_Wheel_GetMass(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Wheel_GetInertia")]
+  public static extern global::System.IntPtr Gator_Wheel_GetInertia(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Wheel_GetRadius")]
+  public static extern double Gator_Wheel_GetRadius(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Wheel_GetWidth")]
+  public static extern double Gator_Wheel_GetWidth(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Wheel_AddVisualizationAssets")]
+  public static extern void Gator_Wheel_AddVisualizationAssets(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Wheel_RemoveVisualizationAssets")]
+  public static extern void Gator_Wheel_RemoveVisualizationAssets(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_ChBrake")]
   public static extern void delete_ChBrake(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -6449,6 +6719,15 @@ class vehiclePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_UAZBUS_BrakeSimpleRear_GetMaxBrakingTorque")]
   public static extern double UAZBUS_BrakeSimpleRear_GetMaxBrakingTorque(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Gator_BrakeSimple")]
+  public static extern global::System.IntPtr new_Gator_BrakeSimple(string jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_Gator_BrakeSimple")]
+  public static extern void delete_Gator_BrakeSimple(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_BrakeSimple_GetMaxBrakingTorque")]
+  public static extern double Gator_BrakeSimple_GetMaxBrakingTorque(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_ChTire")]
   public static extern void delete_ChTire(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -9231,6 +9510,81 @@ class vehiclePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_UAZBUS_Pac02Tire_RemoveVisualizationAssets")]
   public static extern void UAZBUS_Pac02Tire_RemoveVisualizationAssets(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Gator_RigidTire__SWIG_0")]
+  public static extern global::System.IntPtr new_Gator_RigidTire__SWIG_0(string jarg1, bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Gator_RigidTire__SWIG_1")]
+  public static extern global::System.IntPtr new_Gator_RigidTire__SWIG_1(string jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_Gator_RigidTire")]
+  public static extern void delete_Gator_RigidTire(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_RigidTire_GetRadius")]
+  public static extern double Gator_RigidTire_GetRadius(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_RigidTire_GetWidth")]
+  public static extern double Gator_RigidTire_GetWidth(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_RigidTire_GetMass")]
+  public static extern double Gator_RigidTire_GetMass(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_RigidTire_GetInertia")]
+  public static extern global::System.IntPtr Gator_RigidTire_GetInertia(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Gator_TMeasyTire_Front")]
+  public static extern global::System.IntPtr new_Gator_TMeasyTire_Front(string jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_Gator_TMeasyTire_Front")]
+  public static extern void delete_Gator_TMeasyTire_Front(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_TMeasyTire_Front_GetVisualizationWidth")]
+  public static extern double Gator_TMeasyTire_Front_GetVisualizationWidth(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_TMeasyTire_Front_SetTMeasyParams")]
+  public static extern void Gator_TMeasyTire_Front_SetTMeasyParams(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_TMeasyTire_Front_GetMass")]
+  public static extern double Gator_TMeasyTire_Front_GetMass(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_TMeasyTire_Front_GetInertia")]
+  public static extern global::System.IntPtr Gator_TMeasyTire_Front_GetInertia(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_TMeasyTire_Front_AddVisualizationAssets")]
+  public static extern void Gator_TMeasyTire_Front_AddVisualizationAssets(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_TMeasyTire_Front_RemoveVisualizationAssets")]
+  public static extern void Gator_TMeasyTire_Front_RemoveVisualizationAssets(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_TMeasyTire_Front_GenerateCharacteristicPlots")]
+  public static extern void Gator_TMeasyTire_Front_GenerateCharacteristicPlots(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Gator_TMeasyTire_Rear")]
+  public static extern global::System.IntPtr new_Gator_TMeasyTire_Rear(string jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_Gator_TMeasyTire_Rear")]
+  public static extern void delete_Gator_TMeasyTire_Rear(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_TMeasyTire_Rear_GetVisualizationWidth")]
+  public static extern double Gator_TMeasyTire_Rear_GetVisualizationWidth(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_TMeasyTire_Rear_SetTMeasyParams")]
+  public static extern void Gator_TMeasyTire_Rear_SetTMeasyParams(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_TMeasyTire_Rear_GetMass")]
+  public static extern double Gator_TMeasyTire_Rear_GetMass(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_TMeasyTire_Rear_GetInertia")]
+  public static extern global::System.IntPtr Gator_TMeasyTire_Rear_GetInertia(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_TMeasyTire_Rear_AddVisualizationAssets")]
+  public static extern void Gator_TMeasyTire_Rear_AddVisualizationAssets(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_TMeasyTire_Rear_RemoveVisualizationAssets")]
+  public static extern void Gator_TMeasyTire_Rear_RemoveVisualizationAssets(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_TMeasyTire_Rear_GenerateCharacteristicPlots")]
+  public static extern void Gator_TMeasyTire_Rear_GenerateCharacteristicPlots(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_ChAxle")]
   public static extern global::System.IntPtr new_ChAxle();
 
@@ -10656,6 +11010,153 @@ class vehiclePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_UAZBUS_Vehicle_DebugLog")]
   public static extern void UAZBUS_Vehicle_DebugLog(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Gator__SWIG_0")]
+  public static extern global::System.IntPtr new_Gator__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Gator__SWIG_1")]
+  public static extern global::System.IntPtr new_Gator__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_Gator")]
+  public static extern void delete_Gator(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SetContactMethod")]
+  public static extern void Gator_SetContactMethod(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SetChassisFixed")]
+  public static extern void Gator_SetChassisFixed(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SetChassisCollisionType")]
+  public static extern void Gator_SetChassisCollisionType(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SetTireType")]
+  public static extern void Gator_SetTireType(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SetInitPosition")]
+  public static extern void Gator_SetInitPosition(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SetInitFwdVel")]
+  public static extern void Gator_SetInitFwdVel(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SetInitWheelAngVel")]
+  public static extern void Gator_SetInitWheelAngVel(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SetTireStepSize")]
+  public static extern void Gator_SetTireStepSize(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_GetSystem")]
+  public static extern global::System.IntPtr Gator_GetSystem(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_GetVehicle")]
+  public static extern global::System.IntPtr Gator_GetVehicle(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_GetChassis")]
+  public static extern global::System.IntPtr Gator_GetChassis(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_GetChassisBody")]
+  public static extern global::System.IntPtr Gator_GetChassisBody(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_GetPowertrain")]
+  public static extern global::System.IntPtr Gator_GetPowertrain(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_GetTotalMass")]
+  public static extern double Gator_GetTotalMass(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Initialize")]
+  public static extern void Gator_Initialize(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_LockAxleDifferential")]
+  public static extern void Gator_LockAxleDifferential(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, bool jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SetAerodynamicDrag")]
+  public static extern void Gator_SetAerodynamicDrag(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, double jarg3, double jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SetChassisVisualizationType")]
+  public static extern void Gator_SetChassisVisualizationType(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SetSuspensionVisualizationType")]
+  public static extern void Gator_SetSuspensionVisualizationType(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SetSteeringVisualizationType")]
+  public static extern void Gator_SetSteeringVisualizationType(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SetWheelVisualizationType")]
+  public static extern void Gator_SetWheelVisualizationType(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SetTireVisualizationType")]
+  public static extern void Gator_SetTireVisualizationType(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Synchronize")]
+  public static extern void Gator_Synchronize(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Advance")]
+  public static extern void Gator_Advance(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_LogHardpointLocations")]
+  public static extern void Gator_LogHardpointLocations(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_DebugLog")]
+  public static extern void Gator_DebugLog(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Gator_Vehicle__SWIG_0")]
+  public static extern global::System.IntPtr new_Gator_Vehicle__SWIG_0(bool jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Gator_Vehicle__SWIG_1")]
+  public static extern global::System.IntPtr new_Gator_Vehicle__SWIG_1(bool jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Gator_Vehicle__SWIG_2")]
+  public static extern global::System.IntPtr new_Gator_Vehicle__SWIG_2(bool jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Gator_Vehicle__SWIG_3")]
+  public static extern global::System.IntPtr new_Gator_Vehicle__SWIG_3();
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Gator_Vehicle__SWIG_4")]
+  public static extern global::System.IntPtr new_Gator_Vehicle__SWIG_4(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Gator_Vehicle__SWIG_5")]
+  public static extern global::System.IntPtr new_Gator_Vehicle__SWIG_5(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Gator_Vehicle__SWIG_6")]
+  public static extern global::System.IntPtr new_Gator_Vehicle__SWIG_6(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_Gator_Vehicle")]
+  public static extern void delete_Gator_Vehicle(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Vehicle_GetNumberAxles")]
+  public static extern int Gator_Vehicle_GetNumberAxles(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Vehicle_GetWheelbase")]
+  public static extern double Gator_Vehicle_GetWheelbase(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Vehicle_GetMinTurningRadius")]
+  public static extern double Gator_Vehicle_GetMinTurningRadius(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Vehicle_GetMaxSteeringAngle")]
+  public static extern double Gator_Vehicle_GetMaxSteeringAngle(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Vehicle_SetInitWheelAngVel")]
+  public static extern void Gator_Vehicle_SetInitWheelAngVel(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Vehicle_GetShockForce")]
+  public static extern double Gator_Vehicle_GetShockForce(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Vehicle_GetShockLength")]
+  public static extern double Gator_Vehicle_GetShockLength(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Vehicle_GetShockVelocity")]
+  public static extern double Gator_Vehicle_GetShockVelocity(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Vehicle_Initialize__SWIG_0")]
+  public static extern void Gator_Vehicle_Initialize__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, double jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Vehicle_Initialize__SWIG_1")]
+  public static extern void Gator_Vehicle_Initialize__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Vehicle_LogHardpointLocations")]
+  public static extern void Gator_Vehicle_LogHardpointLocations(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Vehicle_DebugLog")]
+  public static extern void Gator_Vehicle_DebugLog(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_CastToChDoubleWishbone")]
   public static extern global::System.IntPtr CastToChDoubleWishbone(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -10854,6 +11355,12 @@ class vehiclePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_UAZBUS_SimpleMapPowertrain_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr UAZBUS_SimpleMapPowertrain_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SimplePowertrain_SWIGSmartPtrUpcast")]
+  public static extern global::System.IntPtr Gator_SimplePowertrain_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SimpleMapPowertrain_SWIGSmartPtrUpcast")]
+  public static extern global::System.IntPtr Gator_SimpleMapPowertrain_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChChassis_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr ChChassis_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
@@ -10943,6 +11450,9 @@ class vehiclePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChSolidThreeLinkAxle_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr ChSolidThreeLinkAxle_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChSingleWishbone_SWIGSmartPtrUpcast")]
+  public static extern global::System.IntPtr ChSingleWishbone_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_DoubleWishbone_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr DoubleWishbone_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
@@ -11046,6 +11556,12 @@ class vehiclePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_UAZBUS_LeafspringAxle_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr UAZBUS_LeafspringAxle_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SingleWishbone_SWIGSmartPtrUpcast")]
+  public static extern global::System.IntPtr Gator_SingleWishbone_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_RigidSuspension_SWIGSmartPtrUpcast")]
+  public static extern global::System.IntPtr Gator_RigidSuspension_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChDriveline_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr ChDriveline_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
@@ -11109,6 +11625,12 @@ class vehiclePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_UAZBUS_Driveline4WD_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr UAZBUS_Driveline4WD_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SimpleDriveline_SWIGSmartPtrUpcast")]
+  public static extern global::System.IntPtr Gator_SimpleDriveline_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Driveline2WD_SWIGSmartPtrUpcast")]
+  public static extern global::System.IntPtr Gator_Driveline2WD_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChSteering_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr ChSteering_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
@@ -11148,6 +11670,9 @@ class vehiclePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_UAZBUS_RotaryArm_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr UAZBUS_RotaryArm_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_RackPinion_SWIGSmartPtrUpcast")]
+  public static extern global::System.IntPtr Gator_RackPinion_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChWheel_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr ChWheel_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
@@ -11171,6 +11696,9 @@ class vehiclePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_UAZBUS_Wheel_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr UAZBUS_Wheel_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Wheel_SWIGSmartPtrUpcast")]
+  public static extern global::System.IntPtr Gator_Wheel_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChBrake_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr ChBrake_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
@@ -11201,6 +11729,9 @@ class vehiclePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_UAZBUS_BrakeSimpleRear_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr UAZBUS_BrakeSimpleRear_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_BrakeSimple_SWIGSmartPtrUpcast")]
+  public static extern global::System.IntPtr Gator_BrakeSimple_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChTire_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr ChTire_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
@@ -11292,6 +11823,15 @@ class vehiclePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_UAZBUS_Pac02Tire_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr UAZBUS_Pac02Tire_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_RigidTire_SWIGSmartPtrUpcast")]
+  public static extern global::System.IntPtr Gator_RigidTire_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_TMeasyTire_Front_SWIGSmartPtrUpcast")]
+  public static extern global::System.IntPtr Gator_TMeasyTire_Front_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_TMeasyTire_Rear_SWIGSmartPtrUpcast")]
+  public static extern global::System.IntPtr Gator_TMeasyTire_Rear_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChWheeledVehicle_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr ChWheeledVehicle_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
@@ -11333,4 +11873,7 @@ class vehiclePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_UAZBUS_Vehicle_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr UAZBUS_Vehicle_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Vehicle_SWIGSmartPtrUpcast")]
+  public static extern global::System.IntPtr Gator_Vehicle_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 }
