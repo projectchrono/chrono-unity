@@ -5,10 +5,12 @@ using UnityEngine;
 public class UChVehicle : MonoBehaviour
 {
     protected DriverInputs inputs;
+    protected double speed;
 
     public UChVehicle()
     {
         inputs = new DriverInputs();
+        speed = 0;
     }
 
     public void SetDriverInputs(double steering, double throttle, double braking)
@@ -17,4 +19,6 @@ public class UChVehicle : MonoBehaviour
         inputs.m_throttle = throttle;
         inputs.m_braking = braking;
     }
+
+    public double GetSpeed() { return speed; }
 }

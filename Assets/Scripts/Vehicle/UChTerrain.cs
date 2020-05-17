@@ -34,18 +34,18 @@ public class UUnityTerrain : ChTerrain
 
     public override double GetHeight(ChVectorD loc)
     {
-        return Terrain.activeTerrain.SampleHeight(Utils.FromChrono(loc));
+        return Terrain.activeTerrain.SampleHeight(Utils.FromChronoFlip(loc));
     }
     
     public override ChVectorD GetNormal(ChVectorD loc)
     {
-        var worldPos = Utils.FromChrono(loc);
+        var worldPos = Utils.FromChronoFlip(loc);
         var terrainLocalPos = worldPos - Terrain.activeTerrain.transform.position;
         var normalizedPos = new Vector2(Mathf.InverseLerp(0.0f, Terrain.activeTerrain.terrainData.size.x, terrainLocalPos.x),
                                     Mathf.InverseLerp(0.0f, Terrain.activeTerrain.terrainData.size.z, terrainLocalPos.z));
         var terrainNormal = Terrain.activeTerrain.terrainData.GetInterpolatedNormal(normalizedPos.x, normalizedPos.y);
 
-        return Utils.ToChrono(terrainNormal);
+        return Utils.ToChronoFlip(terrainNormal);
     }
 
     public override float GetCoefficientFriction(ChVectorD loc)

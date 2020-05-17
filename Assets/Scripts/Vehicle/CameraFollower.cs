@@ -15,11 +15,11 @@ public class CameraFollower : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 desiredPosition = target.position + target.right * (-cameraDistance) + target.forward * cameraHeight;
+        Vector3 desiredPosition = target.position + target.right * (-cameraDistance) + target.up * cameraHeight;
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
         transform.position = smoothedPosition;
 
-        Quaternion desiredRotation = target.rotation * Quaternion.Euler(90,0,0) * Quaternion.Euler(0,90,0);
+        Quaternion desiredRotation = target.rotation * Quaternion.Euler(0, 90, 0);
         Quaternion smoothedRotation = Quaternion.Lerp(transform.rotation, desiredRotation, smoothSpeed);
         transform.rotation = smoothedRotation;
     }

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
+using UnityEditor;
 
 public class UHMMWV : UChVehicle
 {
@@ -39,30 +39,6 @@ public class UHMMWV : UChVehicle
         initWheelAngSpeed = 0;
     }
 
-    // Transform the given frame, expressed in the current *right-handed* Chrono World Frame,
-    // into a frame expressed in the *left-handed* Unity World Frame.
-    // 'vehicle_frame' is the frame of the vehicle (chassis) expressed in the Chrono World Frame.
-    private void ConvertToUnityFrame(ChFrameMovingD vehicle_frame, ChFrameD frame)
-    {
-        var frame_local = new ChFrameD();
-        vehicle_frame.TransformParentToLocal(frame, frame_local);
-        frame_local.GetPos().y *= -1;
-        frame_local.SetRot(Utils.ISOtoLHF(frame_local.GetRot()));
-        vehicle_frame.TransformLocalToParent(frame_local, frame);
-    }
-
-    private void ConvertToUnityFrame(ChFrameMovingD vehicle_frame, ref ChVectorD pos, ref ChQuaternionD rot)
-    {
-        var frame = new ChFrameD(pos, rot);
-        var frame_local = new ChFrameD();
-        vehicle_frame.TransformParentToLocal(frame, frame_local);
-        frame_local.GetPos().y *= -1;
-        frame_local.SetRot(Utils.ISOtoLHF(frame_local.GetRot()));
-        vehicle_frame.TransformLocalToParent(frame_local, frame);
-        pos = frame.GetPos();
-        rot = frame.GetRot();
-    }
-
     void Start()
     {
         hmmwv = new HMMWV_Full(UChSystem.chrono_system);
@@ -75,7 +51,12 @@ public class UHMMWV : UChVehicle
 
         hmmwv.SetAerodynamicDrag(0.5, 5.0, 1.2);
 
-        hmmwv.SetInitPosition(new ChCoordsysD(Utils.ToChrono(transform.position), Utils.ToChrono(transform.rotation)));
+        Vector3 pos = transform.position;
+        Quaternion quat = transform.rotation;
+        Debug.Log("quat = " + quat.w + " " + quat.x + " " + quat.y + " " + quat.z);
+        var csys = new ChCoordsysD(Utils.ToChronoFlip(transform.position), Utils.ToChronoFlip(transform.rotation));
+        hmmwv.SetInitPosition(csys);
+
         hmmwv.SetInitFwdVel(initForwardVel);
         vector_double omega = new vector_double();
         omega.Add(initWheelAngSpeed);
@@ -85,6 +66,12 @@ public class UHMMWV : UChVehicle
         hmmwv.SetInitWheelAngVel(omega);
 
         hmmwv.Initialize();
+
+
+        var chassis_pos = hmmwv.GetChassisBody().GetPos();
+        var chassis_rot = hmmwv.GetChassisBody().GetRot();
+       
+
 
         // Hide the editing child object and enable the run-time components
         ////var listOfChildren = GetComponentsInChildren<Renderer>();
@@ -112,36 +99,40 @@ public class UHMMWV : UChVehicle
 
     void FixedUpdate()
     {
-        var vehicle_frame = hmmwv.GetChassisBody().GetFrame_REF_to_abs();
-        var vehicle_pos = vehicle_frame.GetPos();
-        var vehicle_rot = vehicle_frame.GetRot();
+        var vehicle_pos = hmmwv.GetVehicle().GetVehiclePos();
+        var vehicle_rot = hmmwv.GetVehicle().GetVehicleRot();
 
         var spindleFL_pos = hmmwv.GetVehicle().GetSpindlePos(0, VehicleSide.LEFT);
         var spindleFL_rot = hmmwv.GetVehicle().GetSpindleRot(0, VehicleSide.LEFT);
-        ConvertToUnityFrame(vehicle_frame, ref spindleFL_pos, ref spindleFL_rot);
 
         var spindleFR_pos = hmmwv.GetVehicle().GetSpindlePos(0, VehicleSide.RIGHT);
         var spindleFR_rot = hmmwv.GetVehicle().GetSpindleRot(0, VehicleSide.RIGHT);
-        ConvertToUnityFrame(vehicle_frame, ref spindleFR_pos, ref spindleFR_rot);
 
         var spindleRL_pos = hmmwv.GetVehicle().GetSpindlePos(1, VehicleSide.LEFT);
         var spindleRL_rot = hmmwv.GetVehicle().GetSpindleRot(1, VehicleSide.LEFT);
-        ConvertToUnityFrame(vehicle_frame, ref spindleRL_pos, ref spindleRL_rot);
 
         var spindleRR_pos = hmmwv.GetVehicle().GetSpindlePos(1, VehicleSide.RIGHT);
         var spindleRR_rot = hmmwv.GetVehicle().GetSpindleRot(1, VehicleSide.RIGHT);
-        ConvertToUnityFrame(vehicle_frame, ref spindleRR_pos, ref spindleRR_rot);
 
-        //Debug.Log("terrain height = " + UTerrain.chrono_terrain.GetHeight(new ChVectorD(0,0,0)));
 
-        hmmwv.Synchronize(UChSystem.chrono_system.GetChTime(), inputs, UChTerrain.chrono_terrain);
-        hmmwv.Advance(0.03);
+        var spindleFL_chassis_rel_rot = ChronoEngine_csharp.Qcross(ChronoEngine_csharp.Qconjugate(vehicle_rot), spindleFL_rot);
 
+        //Debug.Log(System.Math.Round(vehicle_rot.e0 * 1000) / 1000 + "  " +
+        //          System.Math.Round(vehicle_rot.e1 * 1000) / 1000 + "  " +
+        //          System.Math.Round(vehicle_rot.e2 * 1000) / 1000 + "  " +
+        //          System.Math.Round(vehicle_rot.e3 * 1000) / 1000
+        //);
+
+        //Debug.Log(System.Math.Round(spindleFL_chassis_rel_rot.e0 * 1000) / 1000 + "  " +
+        //          System.Math.Round(spindleFL_chassis_rel_rot.e1 * 1000) / 1000 + "  " +
+        //          System.Math.Round(spindleFL_chassis_rel_rot.e2 * 1000) / 1000 + "  " +
+        //          System.Math.Round(spindleFL_chassis_rel_rot.e3 * 1000) / 1000
+        //    );
 
         // Set position of the vehicle GameObject and of all moving parts
 
-        var veh_pos = Utils.FromChrono(vehicle_pos);
-        var veh_rot = Utils.FromChrono(vehicle_rot);
+        var veh_pos = Utils.FromChronoFlip(vehicle_pos);
+        var veh_rot = Utils.FromChronoFlip(vehicle_rot);
 
         //Debug.Log("vehicle pos:  " + veh_pos.ToString("F5"));
 
@@ -151,18 +142,22 @@ public class UHMMWV : UChVehicle
         chassis.transform.position = veh_pos;
         chassis.transform.rotation = veh_rot;
 
-        wheelFL.transform.position = Utils.FromChrono(spindleFL_pos);
-        wheelFL.transform.rotation = Utils.FromChrono(spindleFL_rot);
+        wheelFL.transform.position = Utils.FromChronoFlip(spindleFL_pos);
+        wheelFL.transform.rotation = Utils.FromChronoFlip(spindleFL_rot);
 
-        wheelFR.transform.position = Utils.FromChrono(spindleFR_pos);
-        wheelFR.transform.rotation = Utils.FromChrono(spindleFR_rot);
+        wheelFR.transform.position = Utils.FromChronoFlip(spindleFR_pos);
+        wheelFR.transform.rotation = Utils.FromChronoFlip(spindleFR_rot);
 
-        wheelRL.transform.position = Utils.FromChrono(spindleRL_pos);
-        wheelRL.transform.rotation = Utils.FromChrono(spindleRL_rot);
+        wheelRL.transform.position = Utils.FromChronoFlip(spindleRL_pos);
+        wheelRL.transform.rotation = Utils.FromChronoFlip(spindleRL_rot);
 
-        wheelRR.transform.position = Utils.FromChrono(spindleRR_pos);
-        wheelRR.transform.rotation = Utils.FromChrono(spindleRR_rot);
+        wheelRR.transform.position = Utils.FromChronoFlip(spindleRR_pos);
+        wheelRR.transform.rotation = Utils.FromChronoFlip(spindleRR_rot);
 
-        Debug.Log(hmmwv.GetVehicle().GetVehicleSpeed());
+        ////Debug.Log(hmmwv.GetVehicle().GetVehicleSpeed());
+
+        speed = hmmwv.GetVehicle().GetVehicleSpeed();
+        hmmwv.Synchronize(UChSystem.chrono_system.GetChTime(), inputs, UChTerrain.chrono_terrain);
+        hmmwv.Advance(Time.fixedDeltaTime);
     }
 }
