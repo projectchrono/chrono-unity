@@ -81,7 +81,7 @@ public class ChSuspension : ChPart {
   }
 
   public ChQuaternionD GetSpindleRot(VehicleSide side) {
-    ChQuaternionD ret = new ChQuaternionD(vehiclePINVOKE.ChSuspension_GetSpindleRot(swigCPtr, (int)side), false);
+    ChQuaternionD ret = new ChQuaternionD(vehiclePINVOKE.ChSuspension_GetSpindleRot(swigCPtr, (int)side), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

@@ -73,7 +73,7 @@ public class ChChassis : ChPart {
   }
 
   public ChQuaternionD GetRot() {
-    ChQuaternionD ret = new ChQuaternionD(vehiclePINVOKE.ChChassis_GetRot(swigCPtr), false);
+    ChQuaternionD ret = new ChQuaternionD(vehiclePINVOKE.ChChassis_GetRot(swigCPtr), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

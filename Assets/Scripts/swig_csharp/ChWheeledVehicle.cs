@@ -134,7 +134,7 @@ public class ChWheeledVehicle : ChVehicle {
   }
 
   public ChQuaternionD GetSpindleRot(int axle, VehicleSide side) {
-    ChQuaternionD ret = new ChQuaternionD(vehiclePINVOKE.ChWheeledVehicle_GetSpindleRot(swigCPtr, axle, (int)side), false);
+    ChQuaternionD ret = new ChQuaternionD(vehiclePINVOKE.ChWheeledVehicle_GetSpindleRot(swigCPtr, axle, (int)side), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

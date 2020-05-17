@@ -113,7 +113,7 @@ public class ChVehicle : global::System.IDisposable {
   }
 
   public ChQuaternionD GetVehicleRot() {
-    ChQuaternionD ret = new ChQuaternionD(vehiclePINVOKE.ChVehicle_GetVehicleRot(swigCPtr), false);
+    ChQuaternionD ret = new ChQuaternionD(vehiclePINVOKE.ChVehicle_GetVehicleRot(swigCPtr), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
