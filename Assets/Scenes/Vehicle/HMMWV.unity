@@ -495,6 +495,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1004148468872665937, guid: b5c2a1bb8816a3a4bbb434064c26f03f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: 442324137fd93db4e80125d57d248a01, type: 2}
     - target: {fileID: 1649388638958760010, guid: b5c2a1bb8816a3a4bbb434064c26f03f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -560,6 +565,11 @@ PrefabInstance:
       propertyPath: chassisFixed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6023981168982214613, guid: b5c2a1bb8816a3a4bbb434064c26f03f,
+        type: 3}
+      propertyPath: chassisMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 442324137fd93db4e80125d57d248a01, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5c2a1bb8816a3a4bbb434064c26f03f, type: 3}
 --- !u!1001 &1132636841
@@ -651,12 +661,12 @@ PrefabInstance:
     - target: {fileID: 4675249412613692360, guid: ee3e6db3bf57734439662c1ecc464407,
         type: 3}
       propertyPath: cameraHeight
-      value: 0
+      value: 1.05
       objectReference: {fileID: 0}
     - target: {fileID: 4675249412613692360, guid: ee3e6db3bf57734439662c1ecc464407,
         type: 3}
       propertyPath: cameraDistance
-      value: -0.13
+      value: -0.05
       objectReference: {fileID: 0}
     - target: {fileID: 4675249412613692363, guid: ee3e6db3bf57734439662c1ecc464407,
         type: 3}

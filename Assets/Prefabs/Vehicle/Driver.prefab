@@ -43,4 +43,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bf569f0424953b44b5ea51685ae6524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedMode: 1
+  steeringGain: 4
+  throttleGain: 4
+  brakingGain: 4
+  targetSpeed: 0
+  Kp: 0.6
+  Kd: 0.4
+  Ki: 0.2
   vehicle: {fileID: 0}

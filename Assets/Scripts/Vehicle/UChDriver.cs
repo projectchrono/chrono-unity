@@ -42,7 +42,7 @@ public class UChDriver : MonoBehaviour
     private double m_erri;  // current I error
 
 
-    public UChVehicle vehicle; // associated vehicel
+    public UChVehicle vehicle; // associated vehicle
     private double step;       // integration step size (from underlying ChSystem)
 
     public UChDriver()
@@ -52,6 +52,11 @@ public class UChDriver : MonoBehaviour
         m_braking = 0;
 
         speedMode = SpeedMode.CruiseControl;
+    }
+
+    void Start()
+    {
+        step = UChSystem.chrono_system.GetStep();
 
         // Direct user control mode
         steering_desired = 0;
@@ -60,30 +65,20 @@ public class UChDriver : MonoBehaviour
         steeringGain = 4;
         throttleGain = 4;
         brakingGain = 4;
-
-
-
-        // Speed cruise controller mode
-        targetSpeed = 0;
-
-        Kp = 0.4;
-        Kd = 0;
-        Ki = 0;
-
-        m_err = 0;
-        m_errd = 0;
-        m_erri = 0;
-    }
-
-    void Start()
-    {
-        step = UChSystem.chrono_system.GetStep();
-
-        // Direct user control mode
         steering_delta = step / 1;
         throttle_delta = step / 8;
         braking_delta = step / 4;
 
+        // Speed cruise controller mode
+        targetSpeed = 0;
+
+        Kp = 0.6;
+        Kd = 0.2;
+        Ki = 0.1;
+
+        m_err = 0;
+        m_errd = 0;
+        m_erri = 0;
     }
 
     void FixedUpdate()
@@ -163,6 +158,11 @@ public class UChDriver : MonoBehaviour
                     m_throttle = 0;
                 }
 
+
+                ////Debug.Log("target: " + Math.Round(3.6 * targetSpeed * 100) / 100 +
+                ////          "   crt: " + Math.Round(3.6 * crt_speed * 100) / 100  +
+                ////          "   PID out: " + output + "   Kp = " + Kp);
+
                 break;
         }
 
@@ -200,10 +200,22 @@ public class UChDriverEditor : Editor
 
         if (driver.speedMode == UChDriver.SpeedMode.CruiseControl)
         {
+            EditorGUI.indentLevel++;
+
             double KPH = Math.Round(3.6 * driver.targetSpeed * 100) / 100;
             KPH = EditorGUILayout.DoubleField("Target Speed", KPH);
             driver.targetSpeed = KPH / 3.6;
+
+            driver.Kp = EditorGUILayout.DoubleField("Kp", driver.Kp);
+            driver.Kd = EditorGUILayout.DoubleField("Kd", driver.Kd);
+            driver.Ki = EditorGUILayout.DoubleField("Ki", driver.Ki);
+
+            EditorGUI.indentLevel--;
         }
 
+        if (GUI.changed)
+        {
+            EditorUtility.SetDirty(driver);
+        }
     }
 }

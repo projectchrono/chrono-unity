@@ -619,6 +619,26 @@ PrefabInstance:
       propertyPath: speedMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 897854277713753097, guid: 7da09cd00fcfec04694dc687c510ff4e,
+        type: 3}
+      propertyPath: Kp
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 897854277713753097, guid: 7da09cd00fcfec04694dc687c510ff4e,
+        type: 3}
+      propertyPath: Ki
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 897854277713753097, guid: 7da09cd00fcfec04694dc687c510ff4e,
+        type: 3}
+      propertyPath: Kd
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 897854277713753097, guid: 7da09cd00fcfec04694dc687c510ff4e,
+        type: 3}
+      propertyPath: targetSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 897854277713753102, guid: 7da09cd00fcfec04694dc687c510ff4e,
         type: 3}
       propertyPath: m_LocalPosition.x
