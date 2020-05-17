@@ -16,9 +16,15 @@ public class UFlatTerrain : ChTerrain
         m_mu = mu;
     }
 
-    public override double GetHeight(ChVectorD loc) { return m_height; }
-    public override ChVectorD GetNormal(ChVectorD loc) { return m_normal; }
-    public override float GetCoefficientFriction(ChVectorD loc) { return m_mu; }
+    public override double GetHeight(ChVectorD loc) { 
+        return m_height; 
+    }
+    public override ChVectorD GetNormal(ChVectorD loc) { 
+        return m_normal; 
+    }
+    public override float GetCoefficientFriction(ChVectorD loc) { 
+        return m_mu; 
+    }
 }
 
 public class UUnityTerrain : ChTerrain

@@ -115,7 +115,7 @@ public class UHMMWV : UChVehicle
         var spindleRR_rot = hmmwv.GetVehicle().GetSpindleRot(1, VehicleSide.RIGHT);
 
 
-        var spindleFL_chassis_rel_rot = ChronoEngine_csharp.Qcross(ChronoEngine_csharp.Qconjugate(vehicle_rot), spindleFL_rot);
+        //var spindleFL_chassis_rel_rot = ChronoEngine_csharp.Qcross(ChronoEngine_csharp.Qconjugate(vehicle_rot), spindleFL_rot);
 
         //Debug.Log(System.Math.Round(vehicle_rot.e0 * 1000) / 1000 + "  " +
         //          System.Math.Round(vehicle_rot.e1 * 1000) / 1000 + "  " +
