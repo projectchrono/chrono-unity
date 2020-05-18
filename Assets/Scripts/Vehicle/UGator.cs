@@ -47,9 +47,9 @@ public class UGator : UChVehicle
 
         gator.SetAerodynamicDrag(0.5, 5.0, 1.2);
 
-        Vector3 pos = transform.position;
-        Quaternion quat = transform.rotation;
-        Debug.Log("quat = " + quat.w + " " + quat.x + " " + quat.y + " " + quat.z);
+        ////Vector3 pos = transform.position;
+        ////Quaternion quat = transform.rotation;
+        ////Debug.Log("quat = " + quat.w + " " + quat.x + " " + quat.y + " " + quat.z);
         var csys = new ChCoordsysD(Utils.ToChronoFlip(transform.position), Utils.ToChronoFlip(transform.rotation));
         gator.SetInitPosition(csys);
 
@@ -62,6 +62,8 @@ public class UGator : UChVehicle
         gator.SetInitWheelAngVel(omega);
 
         gator.Initialize();
+
+        Debug.Log("Gator total mass: " + gator.GetTotalMass());
 
         // Hide the editing child object and enable the run-time components
         ////var listOfChildren = GetComponentsInChildren<Renderer>();
@@ -145,4 +147,13 @@ public class UGator : UChVehicle
         gator.Advance(Time.fixedDeltaTime);
     }
 
+    public override double GetMaxSpeed()
+    {
+        return 8.3;  // 30 km/h
+    }
+
+    public override ChPowertrain GetPowertrain()
+    {
+        return gator.GetPowertrain();
+    }
 }

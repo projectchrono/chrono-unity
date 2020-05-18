@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-public class Gator_SimplePowertrain : ChSimplePowertrain {
+public class Gator_SimplePowertrain : ChPowertrain {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
@@ -39,28 +39,57 @@ public class Gator_SimplePowertrain : ChSimplePowertrain {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public virtual double GetForwardGearRatio() {
-    double ret = vehiclePINVOKE.Gator_SimplePowertrain_GetForwardGearRatio(swigCPtr);
+  public override string GetTemplateName() {
+    string ret = vehiclePINVOKE.Gator_SimplePowertrain_GetTemplateName(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public virtual double GetReverseGearRatio() {
-    double ret = vehiclePINVOKE.Gator_SimplePowertrain_GetReverseGearRatio(swigCPtr);
+  public override double GetMotorSpeed() {
+    double ret = vehiclePINVOKE.Gator_SimplePowertrain_GetMotorSpeed(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public virtual double GetMaxTorque() {
-    double ret = vehiclePINVOKE.Gator_SimplePowertrain_GetMaxTorque(swigCPtr);
+  public override double GetMotorTorque() {
+    double ret = vehiclePINVOKE.Gator_SimplePowertrain_GetMotorTorque(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public virtual double GetMaxSpeed() {
-    double ret = vehiclePINVOKE.Gator_SimplePowertrain_GetMaxSpeed(swigCPtr);
+  public override double GetTorqueConverterSlippage() {
+    double ret = vehiclePINVOKE.Gator_SimplePowertrain_GetTorqueConverterSlippage(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
+  }
+
+  public override double GetTorqueConverterInputTorque() {
+    double ret = vehiclePINVOKE.Gator_SimplePowertrain_GetTorqueConverterInputTorque(swigCPtr);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public override double GetTorqueConverterOutputTorque() {
+    double ret = vehiclePINVOKE.Gator_SimplePowertrain_GetTorqueConverterOutputTorque(swigCPtr);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public override int GetCurrentTransmissionGear() {
+    int ret = vehiclePINVOKE.Gator_SimplePowertrain_GetCurrentTransmissionGear(swigCPtr);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public override double GetOutputTorque() {
+    double ret = vehiclePINVOKE.Gator_SimplePowertrain_GetOutputTorque(swigCPtr);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public override void SetDriveMode(ChPowertrain.DriveMode mmode) {
+    vehiclePINVOKE.Gator_SimplePowertrain_SetDriveMode(swigCPtr, (int)mmode);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

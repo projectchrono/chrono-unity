@@ -51,9 +51,9 @@ public class UHMMWV : UChVehicle
 
         hmmwv.SetAerodynamicDrag(0.5, 5.0, 1.2);
 
-        Vector3 pos = transform.position;
-        Quaternion quat = transform.rotation;
-        Debug.Log("quat = " + quat.w + " " + quat.x + " " + quat.y + " " + quat.z);
+        ////Vector3 pos = transform.position;
+        ////Quaternion quat = transform.rotation;
+        ////Debug.Log("quat = " + quat.w + " " + quat.x + " " + quat.y + " " + quat.z);
         var csys = new ChCoordsysD(Utils.ToChronoFlip(transform.position), Utils.ToChronoFlip(transform.rotation));
         hmmwv.SetInitPosition(csys);
 
@@ -66,12 +66,6 @@ public class UHMMWV : UChVehicle
         hmmwv.SetInitWheelAngVel(omega);
 
         hmmwv.Initialize();
-
-
-        var chassis_pos = hmmwv.GetChassisBody().GetPos();
-        var chassis_rot = hmmwv.GetChassisBody().GetRot();
-       
-
 
         // Hide the editing child object and enable the run-time components
         ////var listOfChildren = GetComponentsInChildren<Renderer>();
@@ -159,5 +153,15 @@ public class UHMMWV : UChVehicle
         speed = hmmwv.GetVehicle().GetVehicleSpeed();
         hmmwv.Synchronize(UChSystem.chrono_system.GetChTime(), inputs, UChTerrain.chrono_terrain);
         hmmwv.Advance(Time.fixedDeltaTime);
+    }
+
+    public override double GetMaxSpeed()
+    {
+        return 25.0; // 90 km/h
+    }
+
+    public override ChPowertrain GetPowertrain()
+    {
+        return hmmwv.GetPowertrain();
     }
 }

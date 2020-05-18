@@ -1536,17 +1536,32 @@ class vehiclePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_Gator_SimplePowertrain")]
   public static extern void delete_Gator_SimplePowertrain(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SimplePowertrain_GetForwardGearRatio")]
-  public static extern double Gator_SimplePowertrain_GetForwardGearRatio(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SimplePowertrain_GetTemplateName")]
+  public static extern string Gator_SimplePowertrain_GetTemplateName(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SimplePowertrain_GetReverseGearRatio")]
-  public static extern double Gator_SimplePowertrain_GetReverseGearRatio(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SimplePowertrain_GetMotorSpeed")]
+  public static extern double Gator_SimplePowertrain_GetMotorSpeed(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SimplePowertrain_GetMaxTorque")]
-  public static extern double Gator_SimplePowertrain_GetMaxTorque(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SimplePowertrain_GetMotorTorque")]
+  public static extern double Gator_SimplePowertrain_GetMotorTorque(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SimplePowertrain_GetMaxSpeed")]
-  public static extern double Gator_SimplePowertrain_GetMaxSpeed(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SimplePowertrain_GetTorqueConverterSlippage")]
+  public static extern double Gator_SimplePowertrain_GetTorqueConverterSlippage(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SimplePowertrain_GetTorqueConverterInputTorque")]
+  public static extern double Gator_SimplePowertrain_GetTorqueConverterInputTorque(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SimplePowertrain_GetTorqueConverterOutputTorque")]
+  public static extern double Gator_SimplePowertrain_GetTorqueConverterOutputTorque(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SimplePowertrain_GetCurrentTransmissionGear")]
+  public static extern int Gator_SimplePowertrain_GetCurrentTransmissionGear(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SimplePowertrain_GetOutputTorque")]
+  public static extern double Gator_SimplePowertrain_GetOutputTorque(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SimplePowertrain_SetDriveMode")]
+  public static extern void Gator_SimplePowertrain_SetDriveMode(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Gator_SimpleMapPowertrain")]
   public static extern global::System.IntPtr new_Gator_SimpleMapPowertrain(string jarg1);

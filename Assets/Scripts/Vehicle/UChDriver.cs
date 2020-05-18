@@ -41,15 +41,24 @@ public class UChDriver : MonoBehaviour
     private double m_errd;  // current D error
     private double m_erri;  // current I error
 
-
     public UChVehicle vehicle; // associated vehicle
     private double step;       // integration step size (from underlying ChSystem)
+
+    private GUIStyle guiStyle;
 
     public UChDriver()
     {
         m_steering = 0;
         m_throttle = 0;
         m_braking = 0;
+
+        steeringGain = 4;
+        throttleGain = 4;
+        brakingGain = 4;
+
+        Kp = 0.6;
+        Kd = 0.2;
+        Ki = 0.1;
 
         speedMode = SpeedMode.CruiseControl;
     }
@@ -62,23 +71,19 @@ public class UChDriver : MonoBehaviour
         steering_desired = 0;
         throttle_desired = 0;
         braking_desired = 0;
-        steeringGain = 4;
-        throttleGain = 4;
-        brakingGain = 4;
         steering_delta = step / 1;
         throttle_delta = step / 8;
         braking_delta = step / 4;
 
         // Speed cruise controller mode
         targetSpeed = 0;
-
-        Kp = 0.6;
-        Kd = 0.2;
-        Ki = 0.1;
-
         m_err = 0;
         m_errd = 0;
         m_erri = 0;
+
+        guiStyle = new GUIStyle();
+        guiStyle.normal.textColor = Color.black;
+        guiStyle.fontStyle = FontStyle.Bold;
     }
 
     void FixedUpdate()
@@ -130,6 +135,7 @@ public class UChDriver : MonoBehaviour
                 if (vert > 0) { targetSpeed += 0.002; }
                 else if (vert < 0) { targetSpeed -= 0.01; }
                 if (targetSpeed < 0) { targetSpeed = 0; }
+                if (targetSpeed > vehicle.GetMaxSpeed()) { targetSpeed = vehicle.GetMaxSpeed(); }
 
                 double throttle_threshold = 0.2;
                 double crt_speed = vehicle.GetSpeed();
@@ -185,11 +191,15 @@ public class UChDriver : MonoBehaviour
         if (Application.isEditor)
         {
             double speedKPH = Math.Round(3.6 * vehicle.GetSpeed());
-            GUI.Label(new Rect(10, 10, 100, 40), "Speed (km/h): " + speedKPH.ToString());
+            GUI.Label(new Rect(10, 10, 200, 40), "Speed (km/h): " + speedKPH.ToString(), guiStyle);
             double throttle = Math.Round(m_throttle * 100) / 100;
-            GUI.Label(new Rect(10, 40, 100, 40), "Throttle: " + throttle.ToString());
+            GUI.Label(new Rect(10, 40, 200, 40), "Throttle: " + throttle.ToString(), guiStyle);
             double steering = Math.Round(m_steering * 100) / 100;
-            GUI.Label(new Rect(10, 60, 100, 40), "Steering: " + steering.ToString());
+            GUI.Label(new Rect(10, 60, 200, 40), "Steering: " + steering.ToString(), guiStyle);
+            double motorTorque = Math.Round(vehicle.GetPowertrain().GetMotorTorque());
+            GUI.Label(new Rect(10, 90, 200, 40), "Motor Torque (Nm): " + motorTorque.ToString(), guiStyle);
+            double motorSpeed = Math.Round(vehicle.GetPowertrain().GetMotorSpeed() * 60 / (2 * Math.PI));
+            GUI.Label(new Rect(10, 110, 200, 40), "Motor Speed (RPM): " + motorSpeed.ToString(), guiStyle);
         }
     }
 }
@@ -215,8 +225,8 @@ public class UChDriverEditor : Editor
         {
             EditorGUI.indentLevel++;
 
-            double KPH = Math.Round(3.6 * driver.targetSpeed * 100) / 100;
-            KPH = EditorGUILayout.DoubleField("Target Speed", KPH);
+            double KPH = Math.Round(3.6 * driver.targetSpeed * 10) / 10;
+            KPH = EditorGUILayout.DoubleField("Target Speed (km/h)", KPH);
             driver.targetSpeed = KPH / 3.6;
 
             driver.Kp = EditorGUILayout.DoubleField("Kp", driver.Kp);

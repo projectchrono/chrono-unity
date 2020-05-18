@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UChVehicle : MonoBehaviour
+public abstract class UChVehicle : MonoBehaviour
 {
     protected DriverInputs inputs;
     protected double speed;
@@ -23,4 +23,8 @@ public class UChVehicle : MonoBehaviour
     }
 
     public double GetSpeed() { return speed; }
+
+    public abstract double GetMaxSpeed();
+
+    public abstract ChPowertrain GetPowertrain();
 }
