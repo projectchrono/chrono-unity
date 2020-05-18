@@ -44,7 +44,8 @@ public class UChDriver : MonoBehaviour
     public UChVehicle vehicle; // associated vehicle
     private double step;       // integration step size (from underlying ChSystem)
 
-    private GUIStyle guiStyle;
+    public GUIStyle guiStyle;
+    public Color guiTextColor;
 
     public UChDriver()
     {
@@ -81,8 +82,6 @@ public class UChDriver : MonoBehaviour
         m_errd = 0;
         m_erri = 0;
 
-        guiStyle = new GUIStyle();
-        guiStyle.normal.textColor = Color.black;
         guiStyle.fontStyle = FontStyle.Bold;
     }
 
@@ -235,6 +234,14 @@ public class UChDriverEditor : Editor
 
             EditorGUI.indentLevel--;
         }
+
+        EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);
+
+        Color textColor = driver.guiStyle.normal.textColor;
+        textColor = EditorGUILayout.ColorField("GUI Text Color", textColor);
+        driver.guiStyle.normal.textColor = textColor;
+
+        //driver.guiTextColor = EditorGUILayout.ColorField("GUI Text Color", driver.guiTextColor);
 
         if (GUI.changed)
         {
