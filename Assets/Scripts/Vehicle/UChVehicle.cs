@@ -25,6 +25,6 @@ public abstract class UChVehicle : MonoBehaviour
     public double GetSpeed() { return speed; }
 
     public abstract double GetMaxSpeed();
-
+    public abstract ChVehicle GetChVehicle();
     public abstract ChPowertrain GetPowertrain();
 }

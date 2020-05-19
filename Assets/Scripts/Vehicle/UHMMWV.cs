@@ -160,6 +160,11 @@ public class UHMMWV : UChVehicle
         return 25.0; // 90 km/h
     }
 
+    public override ChVehicle GetChVehicle()
+    {
+        return hmmwv.GetVehicle();
+    }
+
     public override ChPowertrain GetPowertrain()
     {
         return hmmwv.GetPowertrain();

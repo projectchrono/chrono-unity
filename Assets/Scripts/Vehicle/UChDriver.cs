@@ -4,8 +4,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+//// TODO: ChPathSteeringController NOT working...
+////       Currently disabled.
+
 public class UChDriver : MonoBehaviour
 {
+    public enum SteeringMode
+    {
+        Default,     // user left/right control
+        PathFollower // PID lateral controller
+    }
+    public SteeringMode steeringMode;
+
     public enum SpeedMode { 
         Default,       // user throttle/brake control
         CruiseControl  // PID speed controller
@@ -17,7 +27,7 @@ public class UChDriver : MonoBehaviour
     private double m_throttle;  // [ 0, +1]
     private double m_braking;   // [ 0, +1]
 
-    // Direct user control of throttle and braking
+    // Direct user control of steering, throttle, and braking
     public double steeringGain;
     public double throttleGain;
     public double brakingGain;
@@ -30,19 +40,29 @@ public class UChDriver : MonoBehaviour
     private double throttle_delta;
     private double braking_delta;
 
+    // Path-follower lateral controller
+    public UChVehiclePath path;                   // associated path
+    ChPathSteeringController steeringController;  // lateral steering controller
+    private bool steeringControllerInitialized;
+
+    public double steering_Kp;  // proportional gain
+    public double steering_Kd;  // differential gain
+    public double steering_Ki;  // integral gain
+
     // Speed cruise controller
     public double targetSpeed;  // set target speed
 
-    public double Kp;  // proportional gain
-    public double Kd;  // differential gain
-    public double Ki;  // integral gain
+    public double lookAhead;  // look ahead distance
+    public double speed_Kp;   // proportional gain
+    public double speed_Kd;   // differential gain
+    public double speed_Ki;   // integral gain
 
     private double m_err;   // current P error
     private double m_errd;  // current D error
     private double m_erri;  // current I error
 
-    public UChVehicle vehicle; // associated vehicle
-    private double step;       // integration step size (from underlying ChSystem)
+    public UChVehicle vehicle;  // associated vehicle
+    private double step;        // integration step size (from underlying ChSystem)
 
     public GUIStyle guiStyle;
     public Color guiTextColor;
@@ -57,10 +77,16 @@ public class UChDriver : MonoBehaviour
         throttleGain = 4;
         brakingGain = 4;
 
-        Kp = 0.6;
-        Kd = 0.2;
-        Ki = 0.1;
+        lookAhead = 5.0;
+        steering_Kp = 0.8;
+        steering_Kd = 0.0;
+        steering_Ki = 0.0;
 
+        speed_Kp = 0.6;
+        speed_Kd = 0.2;
+        speed_Ki = 0.1;
+
+        steeringMode = SteeringMode.Default;
         speedMode = SpeedMode.CruiseControl;
     }
 
@@ -76,6 +102,9 @@ public class UChDriver : MonoBehaviour
         throttle_delta = step / 8;
         braking_delta = step / 4;
 
+        // Path-follower
+        steeringControllerInitialized = false;
+
         // Speed cruise controller mode
         targetSpeed = 0;
         m_err = 0;
@@ -90,18 +119,42 @@ public class UChDriver : MonoBehaviour
         float horiz = Input.GetAxis("Horizontal");
         float vert = Input.GetAxis("Vertical");
 
-        // Set desired steering, throttle, and braking targets
-        if (horiz > 0)
+        // Set current steering, depending on selected lateral control mode
+        switch (steeringMode)
         {
-            steering_desired = Utils.Clamp(steering_desired - steering_delta, -1, 1);
-        } else if (horiz < 0)
-        {
-            steering_desired = Utils.Clamp(steering_desired + steering_delta, -1, 1);
+            case SteeringMode.Default:
+
+                if (horiz > 0) { steering_desired = Utils.Clamp(steering_desired - steering_delta, -1, 1); }
+                else if (horiz < 0) { steering_desired = Utils.Clamp(steering_desired + steering_delta, -1, 1); }
+
+                m_steering += step * steeringGain * (steering_desired - m_steering);
+
+                break;
+
+            case SteeringMode.PathFollower:
+
+                if (path)
+                {
+                    // HACK to ensure that the ChVehicle was created (in some vehicle assembly's Start())!!
+                    if (!steeringControllerInitialized)
+                    {
+                        steeringController = new ChPathSteeringController(path.GetChVehiclePath());
+                        steeringController.SetLookAheadDistance(lookAhead);
+                        steeringController.SetGains(steering_Kp, steering_Ki, steering_Kd);
+                        ////steeringController.Reset(vehicle.GetChVehicle());
+                        steeringControllerInitialized = true;
+                    }
+
+                    //////var output = steeringController.Advance(vehicle.GetChVehicle(), step);
+                    //////m_steering = Utils.Clamp(output, -1.0, +1.0);
+                    m_steering = 0.0;
+                }
+
+                break;
         }
 
-        m_steering += step * steeringGain * (steering_desired - m_steering);
 
-
+        // Set current throttle and braking, depending on selected longitudinal control mode
         switch (speedMode)
         {
             case SpeedMode.Default:
@@ -142,7 +195,7 @@ public class UChDriver : MonoBehaviour
                 m_errd = (err - m_err) / step;          // Estimate error derivative (backward FD approximation)
                 m_erri += (err + m_err) * step / 2;     // Calculate current error integral (trapezoidal rule).
                 m_err = err;                            // Cache new error
-                double output = Kp * m_err + Ki * m_erri + Kd * m_errd; // PID output
+                double output = speed_Kp * m_err + speed_Ki * m_erri + speed_Kd * m_errd; // PID output
                 output = Utils.Clamp(output, -1.0, +1.0);
                 if (output > 0)
                 {
@@ -166,7 +219,7 @@ public class UChDriver : MonoBehaviour
 
                 ////Debug.Log("target: " + Math.Round(3.6 * targetSpeed * 100) / 100 +
                 ////          "   crt: " + Math.Round(3.6 * crt_speed * 100) / 100  +
-                ////          "   PID out: " + output + "   Kp = " + Kp);
+                ////          "   Speed PID out: " + output + "   Kp = " + speed_Kp);
 
                 break;
         }
@@ -216,9 +269,29 @@ public class UChDriverEditor : Editor
 
         driver.vehicle = (UChVehicle)EditorGUILayout.ObjectField("Vehicle", driver.vehicle, typeof(UChVehicle), true);
 
+        /*
+        // Steering control mode
+        string[] steering_options = new string[] { "Wheel Control", "Path Follower" };
+        driver.steeringMode = (UChDriver.SteeringMode)EditorGUILayout.Popup("Sterring Control Mode", (int)driver.steeringMode, steering_options, EditorStyles.popup);
+
+        if (driver.steeringMode == UChDriver.SteeringMode.PathFollower)
+        {
+            EditorGUI.indentLevel++;
+            driver.path = (UChVehiclePath)EditorGUILayout.ObjectField("Path", driver.path, typeof(UChVehiclePath), true);
+
+            driver.lookAhead = EditorGUILayout.DoubleField("Look-ahead Distance", driver.lookAhead);
+
+            driver.steering_Kp = EditorGUILayout.DoubleField("Kp", driver.steering_Kp);
+            driver.steering_Kd = EditorGUILayout.DoubleField("Kd", driver.steering_Kd);
+            driver.steering_Ki = EditorGUILayout.DoubleField("Ki", driver.steering_Ki);
+
+            EditorGUI.indentLevel--;
+        }
+        */
+
         // Speed control mode
-        string[] options = new string[] { "Pedal Control", "Cruise Control" };
-        driver.speedMode = (UChDriver.SpeedMode)EditorGUILayout.Popup("Speed Control Mode", (int)driver.speedMode, options, EditorStyles.popup);
+        string[] speed_options = new string[] { "Pedal Control", "Cruise Control" };
+        driver.speedMode = (UChDriver.SpeedMode)EditorGUILayout.Popup("Speed Control Mode", (int)driver.speedMode, speed_options, EditorStyles.popup);
 
         if (driver.speedMode == UChDriver.SpeedMode.CruiseControl)
         {
@@ -228,9 +301,9 @@ public class UChDriverEditor : Editor
             KPH = EditorGUILayout.DoubleField("Target Speed (km/h)", KPH);
             driver.targetSpeed = KPH / 3.6;
 
-            driver.Kp = EditorGUILayout.DoubleField("Kp", driver.Kp);
-            driver.Kd = EditorGUILayout.DoubleField("Kd", driver.Kd);
-            driver.Ki = EditorGUILayout.DoubleField("Ki", driver.Ki);
+            driver.speed_Kp = EditorGUILayout.DoubleField("Kp", driver.speed_Kp);
+            driver.speed_Kd = EditorGUILayout.DoubleField("Kd", driver.speed_Kd);
+            driver.speed_Ki = EditorGUILayout.DoubleField("Ki", driver.speed_Ki);
 
             EditorGUI.indentLevel--;
         }

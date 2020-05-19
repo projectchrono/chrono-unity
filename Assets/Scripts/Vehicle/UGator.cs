@@ -152,6 +152,11 @@ public class UGator : UChVehicle
         return 8.3;  // 30 km/h
     }
 
+    public override ChVehicle GetChVehicle()
+    {
+        return gator.GetVehicle();
+    }
+
     public override ChPowertrain GetPowertrain()
     {
         return gator.GetPowertrain();
