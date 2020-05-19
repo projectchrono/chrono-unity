@@ -11,6 +11,9 @@ public abstract class UChVehicle : MonoBehaviour
 
     public UChVehicle()
     {
+        ChWorldFrame.SetYUP();
+        //ChWorldFrame.Set(new ChMatrix33D(1));
+
         inputs = new DriverInputs();
         speed = 0;
     }

@@ -26,9 +26,6 @@ public class UHMMWV : UChVehicle
 
     public UHMMWV()
     {
-        ChWorldFrame.SetYUP();
-        //ChWorldFrame.Set(new ChMatrix33D(1));
-
         chassisFixed = false;
         powertrainModel = PowertrainModelType.SHAFTS;
         drivelineModel = DrivelineType.AWD;

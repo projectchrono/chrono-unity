@@ -26,9 +26,6 @@ public class UGator : UChVehicle
 
     public UGator()
     {
-        ChWorldFrame.SetYUP();
-        //ChWorldFrame.Set(new ChMatrix33D(1));
-
         chassisFixed = false;
         tireModel = TireModelType.TMEASY;
         tireCollisionType = ChTire.CollisionType.SINGLE_POINT;
