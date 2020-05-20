@@ -166,7 +166,7 @@ PrefabInstance:
     - target: {fileID: 897854277713753097, guid: 7da09cd00fcfec04694dc687c510ff4e,
         type: 3}
       propertyPath: steeringMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 897854277713753097, guid: 7da09cd00fcfec04694dc687c510ff4e,
         type: 3}
@@ -176,7 +176,12 @@ PrefabInstance:
     - target: {fileID: 897854277713753097, guid: 7da09cd00fcfec04694dc687c510ff4e,
         type: 3}
       propertyPath: lookAhead
-      value: 5
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 897854277713753097, guid: 7da09cd00fcfec04694dc687c510ff4e,
+        type: 3}
+      propertyPath: steering_Kp
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 897854277713753102, guid: 7da09cd00fcfec04694dc687c510ff4e,
         type: 3}
@@ -809,8 +814,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  lineStart: {x: 0, y: 0, z: 0.4}
-  lineEnd: {x: 10, y: 10, z: 0.4}
+  lineStart: {x: 0, y: 0.5, z: 0}
+  lineEnd: {x: 40, y: 0.5, z: 20}
   lineNumPoints: 0
   circleStart: {x: 0, y: 0.4, z: 0}
   circleRadius: 9
@@ -823,6 +828,7 @@ MonoBehaviour:
   dlcLength: 20
   dlcRun: 10
   dlcLeftTurn: 0
+  points: []
   numRenderPoints: 100
 --- !u!114 &1232716023 stripped
 MonoBehaviour:

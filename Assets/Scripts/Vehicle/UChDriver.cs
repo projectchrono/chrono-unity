@@ -4,9 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-//// TODO: ChPathSteeringController NOT working...
-////       Currently disabled.
-
 public class UChDriver : MonoBehaviour
 {
     public enum SteeringMode
@@ -141,13 +138,12 @@ public class UChDriver : MonoBehaviour
                         steeringController = new ChPathSteeringController(path.GetChVehiclePath());
                         steeringController.SetLookAheadDistance(lookAhead);
                         steeringController.SetGains(steering_Kp, steering_Ki, steering_Kd);
-                        ////steeringController.Reset(vehicle.GetChVehicle());
+                        steeringController.Reset(vehicle.GetChVehicle());
                         steeringControllerInitialized = true;
                     }
 
-                    //////var output = steeringController.Advance(vehicle.GetChVehicle(), step);
-                    //////m_steering = Utils.Clamp(output, -1.0, +1.0);
-                    m_steering = 0.0;
+                    var output = steeringController.Advance(vehicle.GetChVehicle(), step);
+                    m_steering = Utils.Clamp(output, -1.0, +1.0);
                 }
 
                 break;
@@ -264,12 +260,11 @@ public class UChDriverEditor : Editor
     override public void OnInspectorGUI()
     {
         //// TODO: expose more parameters?
-        
+
         UChDriver driver = (UChDriver)target;
 
         driver.vehicle = (UChVehicle)EditorGUILayout.ObjectField("Vehicle", driver.vehicle, typeof(UChVehicle), true);
 
-        /*
         // Steering control mode
         string[] steering_options = new string[] { "Wheel Control", "Path Follower" };
         driver.steeringMode = (UChDriver.SteeringMode)EditorGUILayout.Popup("Sterring Control Mode", (int)driver.steeringMode, steering_options, EditorStyles.popup);
@@ -287,7 +282,6 @@ public class UChDriverEditor : Editor
 
             EditorGUI.indentLevel--;
         }
-        */
 
         // Speed control mode
         string[] speed_options = new string[] { "Pedal Control", "Cruise Control" };
@@ -313,8 +307,6 @@ public class UChDriverEditor : Editor
         Color textColor = driver.guiStyle.normal.textColor;
         textColor = EditorGUILayout.ColorField("GUI Text Color", textColor);
         driver.guiStyle.normal.textColor = textColor;
-
-        //driver.guiTextColor = EditorGUILayout.ColorField("GUI Text Color", driver.guiTextColor);
 
         if (GUI.changed)
         {

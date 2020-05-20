@@ -6,7 +6,7 @@ using UnityEditor;
 
 public class UChVehiclePath : MonoBehaviour
 {
-    public enum Type { StraightLine, Circle, DoubleLaneChange }
+    public enum Type { StraightLine, Circle, DoubleLaneChange, Custom }
     public Type type;
 
     // Straight line
@@ -29,12 +29,17 @@ public class UChVehiclePath : MonoBehaviour
     public double dlcRun;
     public bool dlcLeftTurn;
 
+    // Custom path
+    public List<Vector3> points;
+
     private ChBezierCurve curve;
     public int numRenderPoints;
 
     public UChVehiclePath()
     {
         type = Type.StraightLine;
+        lineStart = Vector3.zero;
+        lineEnd = Vector3.one;
         circleNumTurns = 1;
         numRenderPoints = 100;
     }
@@ -43,11 +48,7 @@ public class UChVehiclePath : MonoBehaviour
 
     private void Awake()
     {
-        UpdateCurve();
-    }
-
-    private void Start()
-    {
+        curve = ConstructCurve();
     }
 
     private ChBezierCurve ConstructCurve()
@@ -61,6 +62,13 @@ public class UChVehiclePath : MonoBehaviour
                 return vehicle.CirclePath(Utils.ToChrono(circleStart), circleRadius, circleRun, circleLeftTurn, circleNumTurns);
             case Type.DoubleLaneChange:
                 return vehicle.DoubleLaneChangePath(Utils.ToChrono(dlcStart), dlcRamp, dlcWidth, dlcLength, dlcRun, dlcLeftTurn);
+            case Type.Custom:
+                {
+                    vector_ChVectorD p = new vector_ChVectorD();
+                    for (int i = 0; i < points.Count; i++)
+                        p.Add(Utils.ToChronoFlip(points[i]));
+                    return new ChBezierCurve(p);
+                }
         }
     }
 
@@ -92,7 +100,7 @@ public class UChVehiclePathEditor : Editor
     {
         UChVehiclePath path = (UChVehiclePath)target;
 
-        string[] options = new string[] { "Straight Line", "Circle", "Double Lane Change" };
+        string[] options = new string[] { "Straight Line", "Circle", "Double Lane Change", "Custom" };
         path.type = (UChVehiclePath.Type)EditorGUILayout.Popup("Type", (int)path.type, options, EditorStyles.popup);
 
         EditorGUI.indentLevel++;
@@ -117,6 +125,18 @@ public class UChVehiclePathEditor : Editor
                 path.dlcLength = EditorGUILayout.DoubleField("Length", path.dlcLength);
                 path.dlcRun = EditorGUILayout.DoubleField("Run", path.dlcRun);
                 path.dlcLeftTurn = EditorGUILayout.Toggle("Left Turn", path.dlcLeftTurn);
+                break;
+            case UChVehiclePath.Type.Custom:
+                int size = EditorGUILayout.DelayedIntField("Number of Points", path.points.Count);
+                while (size < path.points.Count)
+                    path.points.RemoveAt(path.points.Count - 1);
+                while (size > path.points.Count)
+                    path.points.Add(new Vector3());
+
+                for (int i = 0; i < size; i++)
+                {
+                    path.points[i] = EditorGUILayout.Vector3Field("Point " + (i + 1), path.points[i]);
+                }
                 break;
         }
         EditorGUI.indentLevel--;
