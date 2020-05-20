@@ -248,6 +248,11 @@ public class UChDriver : MonoBehaviour
             GUI.Label(new Rect(10, 90, 200, 40), "Motor Torque (Nm): " + motorTorque.ToString(), guiStyle);
             double motorSpeed = Math.Round(vehicle.GetPowertrain().GetMotorSpeed() * 60 / (2 * Math.PI));
             GUI.Label(new Rect(10, 110, 200, 40), "Motor Speed (RPM): " + motorSpeed.ToString(), guiStyle);
+
+            float wallTime = Time.realtimeSinceStartup;
+            float gameTime = Time.unscaledTime;
+            float ratio = gameTime / wallTime;
+            GUI.Label(new Rect(10, 150, 200, 40), "Time factor: " + Mathf.Round(ratio * 100) / 100, guiStyle);
         }
     }
 }
