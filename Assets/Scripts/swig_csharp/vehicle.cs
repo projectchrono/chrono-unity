@@ -27,6 +27,18 @@ public class vehicle {
     return ret;
   }
 
+  public static SWIGTYPE_p_std__vectorT_std__string_t splitStr(string s, char delim, SWIGTYPE_p_std__vectorT_std__string_t elems) {
+    SWIGTYPE_p_std__vectorT_std__string_t ret = new SWIGTYPE_p_std__vectorT_std__string_t(vehiclePINVOKE.splitStr__SWIG_0(s, delim, SWIGTYPE_p_std__vectorT_std__string_t.getCPtr(elems)), false);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static SWIGTYPE_p_std__vectorT_std__string_t splitStr(string s, char delim) {
+    SWIGTYPE_p_std__vectorT_std__string_t ret = new SWIGTYPE_p_std__vectorT_std__string_t(vehiclePINVOKE.splitStr__SWIG_1(s, delim), true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public static ChBezierCurve StraightLinePath(ChVectorD start, ChVectorD end, uint num_intermediate) {
     global::System.IntPtr cPtr = vehiclePINVOKE.StraightLinePath__SWIG_0(ChVectorD.getCPtr(start), ChVectorD.getCPtr(end), num_intermediate);
     ChBezierCurve ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBezierCurve(cPtr, true);
@@ -72,18 +84,6 @@ public class vehicle {
   public static ChBezierCurve DoubleLaneChangePath(ChVectorD start, double ramp, double width, double length, double run) {
     global::System.IntPtr cPtr = vehiclePINVOKE.DoubleLaneChangePath__SWIG_1(ChVectorD.getCPtr(start), ramp, width, length, run);
     ChBezierCurve ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBezierCurve(cPtr, true);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public static SWIGTYPE_p_std__vectorT_std__string_t splitStr(string s, char delim, SWIGTYPE_p_std__vectorT_std__string_t elems) {
-    SWIGTYPE_p_std__vectorT_std__string_t ret = new SWIGTYPE_p_std__vectorT_std__string_t(vehiclePINVOKE.splitStr__SWIG_0(s, delim, SWIGTYPE_p_std__vectorT_std__string_t.getCPtr(elems)), false);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public static SWIGTYPE_p_std__vectorT_std__string_t splitStr(string s, char delim) {
-    SWIGTYPE_p_std__vectorT_std__string_t ret = new SWIGTYPE_p_std__vectorT_std__string_t(vehiclePINVOKE.splitStr__SWIG_1(s, delim), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

@@ -63,6 +63,7 @@ public class UChDriver : MonoBehaviour
 
     public GUIStyle guiStyle;
     public Color guiTextColor;
+    public float gizmoRadius;
 
     public UChDriver()
     {
@@ -85,6 +86,8 @@ public class UChDriver : MonoBehaviour
 
         steeringMode = SteeringMode.Default;
         speedMode = SpeedMode.CruiseControl;
+
+        gizmoRadius = 0.1f;
     }
 
     void Start()
@@ -255,6 +258,17 @@ public class UChDriver : MonoBehaviour
             GUI.Label(new Rect(10, 150, 200, 40), "Time factor: " + Mathf.Round(ratio * 100) / 100, guiStyle);
         }
     }
+
+    private void OnDrawGizmos()
+    {
+        if (steeringControllerInitialized)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawSphere(Utils.FromChronoFlip(steeringController.GetSentinelLocation()), gizmoRadius);
+            Gizmos.color = Color.green;
+            Gizmos.DrawSphere(Utils.FromChronoFlip(steeringController.GetTargetLocation()), gizmoRadius);
+        }
+    }
 }
 
 // ==========================================================================================================
@@ -312,6 +326,8 @@ public class UChDriverEditor : Editor
         Color textColor = driver.guiStyle.normal.textColor;
         textColor = EditorGUILayout.ColorField("GUI Text Color", textColor);
         driver.guiStyle.normal.textColor = textColor;
+
+        driver.gizmoRadius = EditorGUILayout.FloatField("Gizmo Radius", driver.gizmoRadius);
 
         if (GUI.changed)
         {

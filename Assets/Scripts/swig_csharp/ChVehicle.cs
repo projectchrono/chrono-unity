@@ -88,7 +88,7 @@ public class ChVehicle : global::System.IDisposable {
   }
 
   public virtual ChPowertrain GetPowertrain() {
-    global::System.IntPtr cPtr = (SwigDerivedClassHasMethod("GetPowertrain", swigMethodTypes1) ? vehiclePINVOKE.ChVehicle_GetPowertrainSwigExplicitChVehicle(swigCPtr) : vehiclePINVOKE.ChVehicle_GetPowertrain(swigCPtr));
+    global::System.IntPtr cPtr = vehiclePINVOKE.ChVehicle_GetPowertrain(swigCPtr);
     ChPowertrain ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChPowertrain(cPtr, true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
@@ -193,7 +193,7 @@ public class ChVehicle : global::System.IDisposable {
   }
 
   public virtual void SetChassisVehicleCollide(bool state) {
-    if (SwigDerivedClassHasMethod("SetChassisVehicleCollide", swigMethodTypes8)) vehiclePINVOKE.ChVehicle_SetChassisVehicleCollideSwigExplicitChVehicle(swigCPtr, state); else vehiclePINVOKE.ChVehicle_SetChassisVehicleCollide(swigCPtr, state);
+    vehiclePINVOKE.ChVehicle_SetChassisVehicleCollide(swigCPtr, state);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -203,7 +203,7 @@ public class ChVehicle : global::System.IDisposable {
   }
 
   public virtual void Advance(double step) {
-    if (SwigDerivedClassHasMethod("Advance", swigMethodTypes9)) vehiclePINVOKE.ChVehicle_AdvanceSwigExplicitChVehicle(swigCPtr, step); else vehiclePINVOKE.ChVehicle_Advance(swigCPtr, step);
+    vehiclePINVOKE.ChVehicle_Advance(swigCPtr, step);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -228,157 +228,4 @@ public class ChVehicle : global::System.IDisposable {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  protected ChVehicle(string name, ChContactMethod contact_method) : this(vehiclePINVOKE.new_ChVehicle__SWIG_0(name, (int)contact_method), true) {
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    SwigDirectorConnect();
-  }
-
-  protected ChVehicle(string name) : this(vehiclePINVOKE.new_ChVehicle__SWIG_1(name), true) {
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    SwigDirectorConnect();
-  }
-
-  protected ChVehicle(string name, ChSystem system) : this(vehiclePINVOKE.new_ChVehicle__SWIG_2(name, ChSystem.getCPtr(system)), true) {
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    SwigDirectorConnect();
-  }
-
-  private void SwigDirectorConnect() {
-    if (SwigDerivedClassHasMethod("GetTemplateName", swigMethodTypes0))
-      swigDelegate0 = new SwigDelegateChVehicle_0(SwigDirectorMethodGetTemplateName);
-    if (SwigDerivedClassHasMethod("GetPowertrain", swigMethodTypes1))
-      swigDelegate1 = new SwigDelegateChVehicle_1(SwigDirectorMethodGetPowertrain);
-    if (SwigDerivedClassHasMethod("GetVehicleMass", swigMethodTypes2))
-      swigDelegate2 = new SwigDelegateChVehicle_2(SwigDirectorMethodGetVehicleMass);
-    if (SwigDerivedClassHasMethod("GetVehicleCOMPos", swigMethodTypes3))
-      swigDelegate3 = new SwigDelegateChVehicle_3(SwigDirectorMethodGetVehicleCOMPos);
-    if (SwigDerivedClassHasMethod("GetDriveshaft", swigMethodTypes4))
-      swigDelegate4 = new SwigDelegateChVehicle_4(SwigDirectorMethodGetDriveshaft);
-    if (SwigDerivedClassHasMethod("GetDriveshaftSpeed", swigMethodTypes5))
-      swigDelegate5 = new SwigDelegateChVehicle_5(SwigDirectorMethodGetDriveshaftSpeed);
-    if (SwigDerivedClassHasMethod("Initialize", swigMethodTypes6))
-      swigDelegate6 = new SwigDelegateChVehicle_6(SwigDirectorMethodInitialize__SWIG_0);
-    if (SwigDerivedClassHasMethod("Initialize", swigMethodTypes7))
-      swigDelegate7 = new SwigDelegateChVehicle_7(SwigDirectorMethodInitialize__SWIG_1);
-    if (SwigDerivedClassHasMethod("SetChassisVehicleCollide", swigMethodTypes8))
-      swigDelegate8 = new SwigDelegateChVehicle_8(SwigDirectorMethodSetChassisVehicleCollide);
-    if (SwigDerivedClassHasMethod("Advance", swigMethodTypes9))
-      swigDelegate9 = new SwigDelegateChVehicle_9(SwigDirectorMethodAdvance);
-    if (SwigDerivedClassHasMethod("LogConstraintViolations", swigMethodTypes10))
-      swigDelegate10 = new SwigDelegateChVehicle_10(SwigDirectorMethodLogConstraintViolations);
-    if (SwigDerivedClassHasMethod("ExportComponentList", swigMethodTypes11))
-      swigDelegate11 = new SwigDelegateChVehicle_11(SwigDirectorMethodExportComponentList__SWIG_0);
-    if (SwigDerivedClassHasMethod("ExportComponentList", swigMethodTypes12))
-      swigDelegate12 = new SwigDelegateChVehicle_12(SwigDirectorMethodExportComponentList__SWIG_1);
-    if (SwigDerivedClassHasMethod("Output", swigMethodTypes13))
-      swigDelegate13 = new SwigDelegateChVehicle_13(SwigDirectorMethodOutput);
-    vehiclePINVOKE.ChVehicle_director_connect(swigCPtr, swigDelegate0, swigDelegate1, swigDelegate2, swigDelegate3, swigDelegate4, swigDelegate5, swigDelegate6, swigDelegate7, swigDelegate8, swigDelegate9, swigDelegate10, swigDelegate11, swigDelegate12, swigDelegate13);
-  }
-
-  private bool SwigDerivedClassHasMethod(string methodName, global::System.Type[] methodTypes) {
-    global::System.Reflection.MethodInfo methodInfo = this.GetType().GetMethod(methodName, global::System.Reflection.BindingFlags.Public | global::System.Reflection.BindingFlags.NonPublic | global::System.Reflection.BindingFlags.Instance, null, methodTypes, null);
-    bool hasDerivedMethod = methodInfo.DeclaringType.IsSubclassOf(typeof(ChVehicle));
-    return hasDerivedMethod;
-  }
-
-  private string SwigDirectorMethodGetTemplateName() {
-    return GetTemplateName();
-  }
-
-  private global::System.IntPtr SwigDirectorMethodGetPowertrain() {
-    return ChPowertrain.getCPtr(GetPowertrain()).Handle;
-  }
-
-  private double SwigDirectorMethodGetVehicleMass() {
-    return GetVehicleMass();
-  }
-
-  private global::System.IntPtr SwigDirectorMethodGetVehicleCOMPos() {
-    return ChVectorD.getCPtr(GetVehicleCOMPos()).Handle;
-  }
-
-  private global::System.IntPtr SwigDirectorMethodGetDriveshaft() {
-    return ChShaft.getCPtr(GetDriveshaft()).Handle;
-  }
-
-  private double SwigDirectorMethodGetDriveshaftSpeed() {
-    return GetDriveshaftSpeed();
-  }
-
-  private void SwigDirectorMethodInitialize__SWIG_0(global::System.IntPtr chassisPos, double chassisFwdVel) {
-    Initialize(new ChCoordsysD(chassisPos, false), chassisFwdVel);
-  }
-
-  private void SwigDirectorMethodInitialize__SWIG_1(global::System.IntPtr chassisPos) {
-    Initialize(new ChCoordsysD(chassisPos, false));
-  }
-
-  private void SwigDirectorMethodSetChassisVehicleCollide(bool state) {
-    SetChassisVehicleCollide(state);
-  }
-
-  private void SwigDirectorMethodAdvance(double step) {
-    Advance(step);
-  }
-
-  private void SwigDirectorMethodLogConstraintViolations() {
-    LogConstraintViolations();
-  }
-
-  private string SwigDirectorMethodExportComponentList__SWIG_0() {
-    return ExportComponentList();
-  }
-
-  private void SwigDirectorMethodExportComponentList__SWIG_1(string filename) {
-    ExportComponentList(filename);
-  }
-
-  private void SwigDirectorMethodOutput(int frame, global::System.IntPtr database) {
-    Output(frame, new ChVehicleOutput(database, false));
-  }
-
-  public delegate string SwigDelegateChVehicle_0();
-  public delegate global::System.IntPtr SwigDelegateChVehicle_1();
-  public delegate double SwigDelegateChVehicle_2();
-  public delegate global::System.IntPtr SwigDelegateChVehicle_3();
-  public delegate global::System.IntPtr SwigDelegateChVehicle_4();
-  public delegate double SwigDelegateChVehicle_5();
-  public delegate void SwigDelegateChVehicle_6(global::System.IntPtr chassisPos, double chassisFwdVel);
-  public delegate void SwigDelegateChVehicle_7(global::System.IntPtr chassisPos);
-  public delegate void SwigDelegateChVehicle_8(bool state);
-  public delegate void SwigDelegateChVehicle_9(double step);
-  public delegate void SwigDelegateChVehicle_10();
-  public delegate string SwigDelegateChVehicle_11();
-  public delegate void SwigDelegateChVehicle_12(string filename);
-  public delegate void SwigDelegateChVehicle_13(int frame, global::System.IntPtr database);
-
-  private SwigDelegateChVehicle_0 swigDelegate0;
-  private SwigDelegateChVehicle_1 swigDelegate1;
-  private SwigDelegateChVehicle_2 swigDelegate2;
-  private SwigDelegateChVehicle_3 swigDelegate3;
-  private SwigDelegateChVehicle_4 swigDelegate4;
-  private SwigDelegateChVehicle_5 swigDelegate5;
-  private SwigDelegateChVehicle_6 swigDelegate6;
-  private SwigDelegateChVehicle_7 swigDelegate7;
-  private SwigDelegateChVehicle_8 swigDelegate8;
-  private SwigDelegateChVehicle_9 swigDelegate9;
-  private SwigDelegateChVehicle_10 swigDelegate10;
-  private SwigDelegateChVehicle_11 swigDelegate11;
-  private SwigDelegateChVehicle_12 swigDelegate12;
-  private SwigDelegateChVehicle_13 swigDelegate13;
-
-  private static global::System.Type[] swigMethodTypes0 = new global::System.Type[] {  };
-  private static global::System.Type[] swigMethodTypes1 = new global::System.Type[] {  };
-  private static global::System.Type[] swigMethodTypes2 = new global::System.Type[] {  };
-  private static global::System.Type[] swigMethodTypes3 = new global::System.Type[] {  };
-  private static global::System.Type[] swigMethodTypes4 = new global::System.Type[] {  };
-  private static global::System.Type[] swigMethodTypes5 = new global::System.Type[] {  };
-  private static global::System.Type[] swigMethodTypes6 = new global::System.Type[] { typeof(ChCoordsysD), typeof(double) };
-  private static global::System.Type[] swigMethodTypes7 = new global::System.Type[] { typeof(ChCoordsysD) };
-  private static global::System.Type[] swigMethodTypes8 = new global::System.Type[] { typeof(bool) };
-  private static global::System.Type[] swigMethodTypes9 = new global::System.Type[] { typeof(double) };
-  private static global::System.Type[] swigMethodTypes10 = new global::System.Type[] {  };
-  private static global::System.Type[] swigMethodTypes11 = new global::System.Type[] {  };
-  private static global::System.Type[] swigMethodTypes12 = new global::System.Type[] { typeof(string) };
-  private static global::System.Type[] swigMethodTypes13 = new global::System.Type[] { typeof(int), typeof(ChVehicleOutput) };
 }
