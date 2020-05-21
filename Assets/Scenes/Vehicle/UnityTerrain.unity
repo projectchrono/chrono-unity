@@ -322,12 +322,12 @@ PrefabInstance:
     - target: {fileID: 4675249412613692360, guid: ee3e6db3bf57734439662c1ecc464407,
         type: 3}
       propertyPath: cameraDistance
-      value: 5.38
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4675249412613692360, guid: ee3e6db3bf57734439662c1ecc464407,
         type: 3}
       propertyPath: cameraHeight
-      value: 3.17
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4675249412613692360, guid: ee3e6db3bf57734439662c1ecc464407,
         type: 3}
@@ -508,8 +508,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 2
   height: 0
-  coefficientFriction: 0.9
   unityTerrain: {fileID: 428798954}
+  coefficientFriction: 0.9
+  patches: []
 --- !u!4 &542616150
 Transform:
   m_ObjectHideFlags: 10

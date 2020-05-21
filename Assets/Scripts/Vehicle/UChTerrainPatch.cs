@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class UChTerrainPatch : MonoBehaviour
 {
-    public float mu; 
+    public float coefficientFriction; 
     private Vector3 normal;  // normal to patch top surface
     private Vector3 center;  // center of patch top surface
     private float radius;    // radius of bounding sphere
+
+    public UChTerrainPatch()
+    {
+        coefficientFriction = 0.9f;
+    }
 
     void Awake()
     {
@@ -22,9 +27,17 @@ public class UChTerrainPatch : MonoBehaviour
         radius = rend.bounds.extents.magnitude;
     }
 
-    public Vector3 GetNormal() { return normal; }
+    public ChVectorD GetNormal() { return Utils.ToChronoFlip(normal); }
 
-    public float GetCoefficientFriction() { return mu; }
+    public float GetCoefficientFriction() { return coefficientFriction; }
+
+    public bool Project(ChVectorD loc, out double height)
+    {
+        float fheight;
+        bool hit = Project(Utils.FromChronoFlip(loc), out fheight);
+        height = fheight;
+        return hit;
+    }
 
     public bool Project(Vector3 loc, out float height) { return Project(loc, out height, out _); }
 

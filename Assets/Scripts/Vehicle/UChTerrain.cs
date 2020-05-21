@@ -28,6 +28,62 @@ public class UFlatTerrain : ChTerrain
     }
 }
 
+public class UPatchTerrain : ChTerrain
+{
+    private int m_np;
+    public List<UChTerrainPatch> m_patches;
+
+    public UPatchTerrain(List<UChTerrainPatch> patches)
+    {
+        m_patches = patches;
+    }
+
+    public override double GetHeight(ChVectorD loc)
+    {
+        double height;
+        bool hit = FindPoint(loc, out height, out _, out _);
+        return hit ? height : 0.0;
+    }
+
+    public override ChVectorD GetNormal(ChVectorD loc)
+    {
+        ChVectorD normal;
+        bool hit = FindPoint(loc, out _, out normal, out _);
+        return hit ? normal : new ChVectorD(0, 1, 0);
+    }
+
+    public override float GetCoefficientFriction(ChVectorD loc)
+    {
+        float mu;
+        bool hit = FindPoint(loc, out _, out _, out mu);
+        return hit ? mu : 0.9f;
+    }
+
+    private bool FindPoint(ChVectorD loc, out double height, out ChVectorD normal, out float mu)
+    {
+        // Loop through all patches.  Keep track of highest ray intersection point.
+        bool hit = false;
+        height = double.MinValue;
+        normal = new ChVectorD(0, 1, 0);
+        mu = 0.9f;
+
+        foreach (var patch in m_patches)
+        {
+            double pheight;
+            bool phit = patch.Project(loc, out pheight);
+            if (phit && pheight > height)
+            {
+                hit = true;
+                height = pheight;
+                normal = patch.GetNormal();
+                mu = patch.GetCoefficientFriction();
+            }
+        }
+
+        return hit;
+    }
+}
+
 public class UUnityTerrain : ChTerrain
 {
     private float m_mu;
@@ -74,8 +130,10 @@ public class UChTerrain : MonoBehaviour
     public static ChTerrain chrono_terrain;
 
     public double height;
-    public float coefficientFriction;
     public Terrain unityTerrain;
+    public float coefficientFriction;
+
+    public List<UChTerrainPatch> patches;
 
     public UChTerrain()
     {
@@ -91,7 +149,7 @@ public class UChTerrain : MonoBehaviour
                 chrono_terrain = new UFlatTerrain(height, coefficientFriction);
                 break;
             case Type.Patch:
-
+                chrono_terrain = new UPatchTerrain(patches);
                 break;
             case Type.Unity:
                 Debug.Log("Attached to a terrain!");
@@ -114,7 +172,7 @@ public class UChTerrainEditor : Editor
     {
         UChTerrain terrain = (UChTerrain)target;
 
-        string[] options = new string[] { "Flat", "Path", "Unity" };
+        string[] options = new string[] { "Flat", "Patch", "Unity" };
         terrain.type = (UChTerrain.Type)EditorGUILayout.Popup("Type", (int)terrain.type, options, EditorStyles.popup);
 
         EditorGUI.indentLevel++;
@@ -125,7 +183,13 @@ public class UChTerrainEditor : Editor
                 terrain.height = EditorGUILayout.DoubleField("Height", terrain.height);
                 break;
             case UChTerrain.Type.Patch:
-
+                int size = EditorGUILayout.DelayedIntField("Number of Patches", terrain.patches.Count);
+                while (size < terrain.patches.Count)
+                    terrain.patches.RemoveAt(terrain.patches.Count - 1);
+                while (size > terrain.patches.Count)
+                    terrain.patches.Add(null);
+                for (int i = 0; i < size; i++)
+                    terrain.patches[i] = (UChTerrainPatch)EditorGUILayout.ObjectField("Patch " + (i + 1), terrain.patches[i], typeof(UChTerrainPatch), true);
                 break;
             case UChTerrain.Type.Unity:
                 terrain.unityTerrain = (Terrain)EditorGUILayout.ObjectField("Unity Terrain", terrain.unityTerrain, typeof(Terrain), true);
@@ -134,6 +198,12 @@ public class UChTerrainEditor : Editor
 
         EditorGUI.indentLevel--;
 
-        terrain.coefficientFriction = EditorGUILayout.FloatField("Coefficient Friction", terrain.coefficientFriction);
+        if (terrain.type != UChTerrain.Type.Patch)
+            terrain.coefficientFriction = EditorGUILayout.FloatField("Coefficient Friction", terrain.coefficientFriction);
+
+        if (GUI.changed)
+        {
+            EditorUtility.SetDirty(terrain);
+        }
     }
 }
