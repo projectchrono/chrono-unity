@@ -263,7 +263,7 @@ PrefabInstance:
     - target: {fileID: 1649388638958760010, guid: b5c2a1bb8816a3a4bbb434064c26f03f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1649388638958760010, guid: b5c2a1bb8816a3a4bbb434064c26f03f,
         type: 3}
@@ -334,6 +334,11 @@ PrefabInstance:
       propertyPath: smoothSpeed
       value: 0.04
       objectReference: {fileID: 0}
+    - target: {fileID: 4675249412613692362, guid: ee3e6db3bf57734439662c1ecc464407,
+        type: 3}
+      propertyPath: m_FOVAxisMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4675249412613692363, guid: ee3e6db3bf57734439662c1ecc464407,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -372,7 +377,7 @@ PrefabInstance:
     - target: {fileID: 4675249412613692363, guid: ee3e6db3bf57734439662c1ecc464407,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4675249412613692363, guid: ee3e6db3bf57734439662c1ecc464407,
         type: 3}
@@ -407,7 +412,6 @@ GameObject:
   - component: {fileID: 428798955}
   - component: {fileID: 428798954}
   - component: {fileID: 428798953}
-  - component: {fileID: 428798956}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -473,20 +477,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &428798956
+--- !u!1 &542616148
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 542616150}
+  - component: {fileID: 542616149}
+  m_Layer: 0
+  m_Name: ChronoTerrain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &542616149
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 428798952}
+  m_GameObject: {fileID: 542616148}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5376a75c7d111c4db60513eb8812ab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 2
   height: 0
   coefficientFriction: 0.9
+  unityTerrain: {fileID: 428798954}
+--- !u!4 &542616150
+Transform:
+  m_ObjectHideFlags: 10
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542616148}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &586672439 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2952408524682064706, guid: 43adf02a662e8d1408a1631459eb3b8d,
@@ -682,7 +719,7 @@ PrefabInstance:
     - target: {fileID: 897854277713753102, guid: 7da09cd00fcfec04694dc687c510ff4e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 897854277713753102, guid: 7da09cd00fcfec04694dc687c510ff4e,
         type: 3}
@@ -835,7 +872,7 @@ PrefabInstance:
     - target: {fileID: 2952408524682064706, guid: 43adf02a662e8d1408a1631459eb3b8d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2952408524682064706, guid: 43adf02a662e8d1408a1631459eb3b8d,
         type: 3}

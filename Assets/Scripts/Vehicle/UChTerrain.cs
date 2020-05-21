@@ -30,27 +30,27 @@ public class UFlatTerrain : ChTerrain
 
 public class UUnityTerrain : ChTerrain
 {
-    private ChVectorD m_normal;
     private float m_mu;
+    private Terrain m_terrain;
 
-    public UUnityTerrain(float mu)
+    public UUnityTerrain(Terrain terrain, float mu)
     {
-        m_normal = new ChVectorD(0, 1, 0);
+        m_terrain = terrain;
         m_mu = mu;
     }
 
     public override double GetHeight(ChVectorD loc)
     {
-        return Terrain.activeTerrain.SampleHeight(Utils.FromChronoFlip(loc));
+        return m_terrain.SampleHeight(Utils.FromChronoFlip(loc));
     }
     
     public override ChVectorD GetNormal(ChVectorD loc)
     {
         var worldPos = Utils.FromChronoFlip(loc);
-        var terrainLocalPos = worldPos - Terrain.activeTerrain.transform.position;
-        var normalizedPos = new Vector2(Mathf.InverseLerp(0.0f, Terrain.activeTerrain.terrainData.size.x, terrainLocalPos.x),
-                                    Mathf.InverseLerp(0.0f, Terrain.activeTerrain.terrainData.size.z, terrainLocalPos.z));
-        var terrainNormal = Terrain.activeTerrain.terrainData.GetInterpolatedNormal(normalizedPos.x, normalizedPos.y);
+        var terrainLocalPos = worldPos - m_terrain.transform.position;
+        var normalizedPos = new Vector2(Mathf.InverseLerp(0.0f, m_terrain.terrainData.size.x, terrainLocalPos.x),
+                                    Mathf.InverseLerp(0.0f, m_terrain.terrainData.size.z, terrainLocalPos.z));
+        var terrainNormal = m_terrain.terrainData.GetInterpolatedNormal(normalizedPos.x, normalizedPos.y);
 
         return Utils.ToChronoFlip(terrainNormal);
     }
@@ -63,10 +63,19 @@ public class UUnityTerrain : ChTerrain
 
 public class UChTerrain : MonoBehaviour
 {
+    public enum Type
+    {
+        Flat,   // flat horizontal 
+        Patch,  // collection of rectangular patches
+        Unity   // Unity terrain object
+    }
+    public Type type;
+
     public static ChTerrain chrono_terrain;
 
     public double height;
     public float coefficientFriction;
+    public Terrain unityTerrain;
 
     public UChTerrain()
     {
@@ -76,15 +85,25 @@ public class UChTerrain : MonoBehaviour
 
     void Awake()
     {
-        if (gameObject.GetComponent<Terrain>())
+        switch (type)
         {
-            Debug.Log("Attached to a terrain!");
-            chrono_terrain = new UUnityTerrain(coefficientFriction);
+            case Type.Flat:
+                chrono_terrain = new UFlatTerrain(height, coefficientFriction);
+                break;
+            case Type.Patch:
+
+                break;
+            case Type.Unity:
+                Debug.Log("Attached to a terrain!");
+                chrono_terrain = new UUnityTerrain(unityTerrain, coefficientFriction);
+                break;
         }
-        else
-        {
-            chrono_terrain = new UFlatTerrain(height, coefficientFriction);
-        }
+    }
+
+    // When attaching to a Game Object, hide the transform
+    void OnValidate()
+    {
+        transform.hideFlags = HideFlags.NotEditable | HideFlags.HideInInspector;
     }
 }
 
@@ -95,11 +114,25 @@ public class UChTerrainEditor : Editor
     {
         UChTerrain terrain = (UChTerrain)target;
 
-        if (!terrain.gameObject.GetComponent<Terrain>())
+        string[] options = new string[] { "Flat", "Path", "Unity" };
+        terrain.type = (UChTerrain.Type)EditorGUILayout.Popup("Type", (int)terrain.type, options, EditorStyles.popup);
+
+        EditorGUI.indentLevel++;
+
+        switch (terrain.type)
         {
-            // Only if not attached to a Unity Terrain object
-            terrain.height = EditorGUILayout.DoubleField("Height", terrain.height);
+            case UChTerrain.Type.Flat:
+                terrain.height = EditorGUILayout.DoubleField("Height", terrain.height);
+                break;
+            case UChTerrain.Type.Patch:
+
+                break;
+            case UChTerrain.Type.Unity:
+                terrain.unityTerrain = (Terrain)EditorGUILayout.ObjectField("Unity Terrain", terrain.unityTerrain, typeof(Terrain), true);
+                break;
         }
+
+        EditorGUI.indentLevel--;
 
         terrain.coefficientFriction = EditorGUILayout.FloatField("Coefficient Friction", terrain.coefficientFriction);
     }
