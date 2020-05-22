@@ -33,19 +33,14 @@ public class UChTerrainPatch : MonoBehaviour
 
     public bool Project(ChVectorD loc, out double height)
     {
-        float fheight;
-        bool hit = Project(Utils.FromChronoFlip(loc), out fheight);
-        height = fheight;
-        return hit;
+        return Project(Utils.FromChronoFlip(loc), out height, out _);
     }
 
-    public bool Project(Vector3 loc, out float height) { return Project(loc, out height, out _); }
-
-    public bool Project(Vector3 loc, out float height, out Vector3 C)
+    public bool Project(Vector3 loc, out double height, out Vector3 C)
     {
         // Ray definition in global 
-        Vector3 v = new Vector3(0, -1, 0);      // direction: down global vertical
-        Vector3 A = loc - (radius + 100) * v;   // start: above bounding sphere
+        Vector3 v = new Vector3(0, -1, 0);     // direction: down global vertical
+        Vector3 A = loc - (radius + 100) * v;  // start: above bounding sphere
 
         // Intersect ray with top plane
         float t = Vector3.Dot(center - A, normal) / Vector3.Dot(v, normal);

@@ -11,7 +11,7 @@ public class PatchTester : MonoBehaviour
     private void Start()
     {
         // Find the height and normal at the global origin
-        float height;
+        double height;
         bool hit = patch.Project(Vector3.zero, out height, out C);
         Debug.Log("Hit: " + hit + "      height: " + height);
     }
