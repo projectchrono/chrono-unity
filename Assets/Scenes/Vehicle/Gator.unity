@@ -560,7 +560,7 @@ PrefabInstance:
         type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1232716024}
+      objectReference: {fileID: 1232716023}
     - target: {fileID: 4675249412613692360, guid: ee3e6db3bf57734439662c1ecc464407,
         type: 3}
       propertyPath: cameraHeight
@@ -883,6 +883,7 @@ MonoBehaviour:
   dlcRun: 10
   dlcLeftTurn: 0
   points: []
+  bezierCurveFile: 
   numRenderPoints: 100
 --- !u!114 &1232716023 stripped
 MonoBehaviour:
@@ -896,12 +897,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbe330ada8c313b4db51056397759f5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1232716024 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2952408524682064706, guid: 43adf02a662e8d1408a1631459eb3b8d,
-    type: 3}
-  m_PrefabInstance: {fileID: 597633299}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1538064207
 GameObject:
   m_ObjectHideFlags: 0

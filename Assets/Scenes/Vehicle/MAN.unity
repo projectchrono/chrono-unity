@@ -383,12 +383,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc4d1e77c9125f545b557e961b5fd7fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &580221873 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1363933427300060939, guid: 3fac0f6d7409e1746b74a789d7080e92,
-    type: 3}
-  m_PrefabInstance: {fileID: 580221871}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &628659081
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,7 +634,7 @@ PrefabInstance:
         type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 580221873}
+      objectReference: {fileID: 580221872}
     - target: {fileID: 4675249412613692360, guid: ee3e6db3bf57734439662c1ecc464407,
         type: 3}
       propertyPath: cameraHeight

@@ -318,7 +318,7 @@ PrefabInstance:
         type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 586672439}
+      objectReference: {fileID: 586672440}
     - target: {fileID: 4675249412613692360, guid: ee3e6db3bf57734439662c1ecc464407,
         type: 3}
       propertyPath: cameraDistance
@@ -525,12 +525,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &586672439 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2952408524682064706, guid: 43adf02a662e8d1408a1631459eb3b8d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1750602765}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &586672440 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8650646542623470723, guid: 43adf02a662e8d1408a1631459eb3b8d,

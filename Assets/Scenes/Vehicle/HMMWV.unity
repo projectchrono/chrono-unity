@@ -711,7 +711,7 @@ PrefabInstance:
         type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1865928867}
+      objectReference: {fileID: 1865928866}
     - target: {fileID: 4675249412613692360, guid: ee3e6db3bf57734439662c1ecc464407,
         type: 3}
       propertyPath: cameraHeight
@@ -796,12 +796,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ac1a8f5220b40478e760fd8e51af83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1865928867 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1649388638958760010, guid: b5c2a1bb8816a3a4bbb434064c26f03f,
-    type: 3}
-  m_PrefabInstance: {fileID: 1132636841}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &897854278105653954
 PrefabInstance:
   m_ObjectHideFlags: 0
