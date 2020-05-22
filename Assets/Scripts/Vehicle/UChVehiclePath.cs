@@ -3,10 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using System.IO;
 
 public class UChVehiclePath : MonoBehaviour
 {
-    public enum Type { StraightLine, Circle, DoubleLaneChange, Custom }
+    public enum Type { StraightLine, Circle, DoubleLaneChange, Custom, File }
     public Type type;
 
     // Straight line
@@ -32,6 +33,9 @@ public class UChVehiclePath : MonoBehaviour
     // Custom path
     public List<Vector3> points;
 
+    // Path from file
+    public string bezierCurveFile;
+
     private ChBezierCurve curve;
     public int numRenderPoints;
 
@@ -48,10 +52,10 @@ public class UChVehiclePath : MonoBehaviour
 
     private void Awake()
     {
-        curve = ConstructCurve();
+        curve = ConstructBezierCurve();
     }
 
-    private ChBezierCurve ConstructCurve()
+    private ChBezierCurve ConstructBezierCurve()
     {
         switch (type)
         {
@@ -64,18 +68,90 @@ public class UChVehiclePath : MonoBehaviour
                 return vehicle.DoubleLaneChangePath(Utils.ToChrono(dlcStart), dlcRamp, dlcWidth, dlcLength, dlcRun, dlcLeftTurn);
             case Type.Custom:
                 {
+                    List<Vector3> points_in = new List<Vector3>();
+                    List<Vector3> points_out = new List<Vector3>();
+                    ConstructControlPoints(points, points_in, points_out);
+
                     vector_ChVectorD p = new vector_ChVectorD();
+                    vector_ChVectorD p_in = new vector_ChVectorD();
+                    vector_ChVectorD p_out = new vector_ChVectorD();
                     for (int i = 0; i < points.Count; i++)
+                    {
                         p.Add(Utils.ToChronoFlip(points[i]));
-                    return new ChBezierCurve(p);
+                        p_in.Add(Utils.ToChronoFlip(points_in[i]));
+                        p_out.Add(Utils.ToChronoFlip(points_out[i]));
+                    }
+                    return new ChBezierCurve(p, p_in, p_out);
+                }
+            case Type.File:
+                {
+                    List<Vector3> pU = new List<Vector3>();
+                    List<Vector3> pU_in = new List<Vector3>();
+                    List<Vector3> pU_out = new List<Vector3>();
+
+                    vector_ChVectorD p = new vector_ChVectorD();
+                    vector_ChVectorD p_in = new vector_ChVectorD();
+                    vector_ChVectorD p_out = new vector_ChVectorD();
+
+                    string bezierCurveFile_full = Application.dataPath + "/" + bezierCurveFile;
+                    if (File.Exists(bezierCurveFile_full))
+                    {
+                        using (TextReader reader = File.OpenText(bezierCurveFile_full))
+                        {
+                            string line;
+                            float x;
+                            float y;
+                            float z;
+                            while ((line = reader.ReadLine()) != null)
+                            {
+                                string[] entries = line.Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries);
+                                float.TryParse(entries[0], out x);
+                                float.TryParse(entries[1], out y);
+                                float.TryParse(entries[2], out z);
+                                pU.Add(new Vector3(x, y, z));
+                            }
+                            reader.Close();
+                        }
+                    }
+                    else
+                    {
+                        // No file specified (yet?)
+                        pU.Add(new Vector3(0, 0, 0));
+                        pU.Add(new Vector3(1, 0, 0));
+                    }
+
+                    ConstructControlPoints(pU, pU_in, pU_out);
+
+                    for (int i = 0; i < pU.Count; i++)
+                    {
+                        p.Add(Utils.ToChronoFlip(pU[i]));
+                        p_in.Add(Utils.ToChronoFlip(pU_in[i]));
+                        p_out.Add(Utils.ToChronoFlip(pU_out[i]));
+                    }
+                    
+                    return new ChBezierCurve(p, p_in, p_out);
                 }
         }
     }
 
-    public void UpdateCurve()
+    private void ConstructControlPoints(List<Vector3> pU, List<Vector3> pU_in, List<Vector3> pU_out)
+    {
+        float alpha = 0.1f;
+        pU_in.Add(pU[0]);
+        for (int i = 0; i < pU.Count - 1; i++)
+        {
+            var d = pU[i+1] - pU[i];
+            pU_out.Add(pU[i] + alpha * d);
+            pU_in.Add(pU[i + 1] - alpha * d);
+        }
+        pU_out.Add(pU[pU.Count - 1]);
+
+    }
+
+    public void UpdateLine()
     {
         var lineRenderer = this.GetComponent<LineRenderer>();
-        ChBezierCurve c = ConstructCurve();
+        ChBezierCurve c = ConstructBezierCurve();
 
         double delta = 1.0 / numRenderPoints;
         var points = new Vector3[numRenderPoints];
@@ -100,7 +176,7 @@ public class UChVehiclePathEditor : Editor
     {
         UChVehiclePath path = (UChVehiclePath)target;
 
-        string[] options = new string[] { "Straight Line", "Circle", "Double Lane Change", "Custom" };
+        string[] options = new string[] { "Straight Line", "Circle", "Double Lane Change", "Custom", "File" };
         path.type = (UChVehiclePath.Type)EditorGUILayout.Popup("Type", (int)path.type, options, EditorStyles.popup);
 
         EditorGUI.indentLevel++;
@@ -138,7 +214,11 @@ public class UChVehiclePathEditor : Editor
                     path.points[i] = EditorGUILayout.Vector3Field("Point " + (i + 1), path.points[i]);
                 }
                 break;
+            case UChVehiclePath.Type.File:
+                path.bezierCurveFile = EditorGUILayout.TextField("File Name", path.bezierCurveFile);
+                break;
         }
+
         EditorGUI.indentLevel--;
 
         path.numRenderPoints = EditorGUILayout.IntField("Num. Render Points", path.numRenderPoints);
@@ -146,7 +226,7 @@ public class UChVehiclePathEditor : Editor
         if (GUI.changed)
         {
             EditorUtility.SetDirty(path);
-            path.UpdateCurve();
+            path.UpdateLine();
         }
     }
 }

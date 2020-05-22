@@ -152,7 +152,6 @@ public class UChTerrain : MonoBehaviour
                 chrono_terrain = new UPatchTerrain(patches);
                 break;
             case Type.Unity:
-                Debug.Log("Attached to a terrain!");
                 chrono_terrain = new UUnityTerrain(unityTerrain, coefficientFriction);
                 break;
         }
