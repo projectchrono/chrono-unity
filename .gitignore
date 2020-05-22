@@ -9,7 +9,7 @@
 # [Aa]ssets/AssetStoreTools*
 
 [Aa]ssets/Plugins/GitHub/
-[Aa]ssets/Plugins/
+#[Aa]ssets/Plugins/
 [Aa]ssets/Samples/
 [Aa]ssets/Samples.meta
 
