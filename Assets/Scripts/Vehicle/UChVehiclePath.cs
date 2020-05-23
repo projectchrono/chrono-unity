@@ -136,7 +136,7 @@ public class UChVehiclePath : MonoBehaviour
 
     private void ConstructControlPoints(List<Vector3> pU, List<Vector3> pU_in, List<Vector3> pU_out)
     {
-        float alpha = 0.1f;
+        float alpha = 0.5f;
         pU_in.Add(pU[0]);
         for (int i = 0; i < pU.Count - 1; i++)
         {

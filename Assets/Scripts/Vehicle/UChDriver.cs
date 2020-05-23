@@ -188,6 +188,13 @@ public class UChDriver : MonoBehaviour
                 if (targetSpeed < 0) { targetSpeed = 0; }
                 if (targetSpeed > vehicle.GetMaxSpeed()) { targetSpeed = vehicle.GetMaxSpeed(); }
 
+                if (targetSpeed == 0)
+                {
+                    m_throttle = 0;
+                    m_braking = 1;
+                    break;
+                }
+
                 double throttle_threshold = 0.2;
                 double crt_speed = vehicle.GetSpeed();
                 double err = targetSpeed - crt_speed;   // Calculate current error
@@ -245,12 +252,14 @@ public class UChDriver : MonoBehaviour
             GUI.Label(new Rect(10, 10, 200, 40), "Speed (km/h): " + speedKPH.ToString(), guiStyle);
             double throttle = Math.Round(m_throttle * 100) / 100;
             GUI.Label(new Rect(10, 40, 200, 40), "Throttle: " + throttle.ToString(), guiStyle);
+            double braking = Math.Round(m_braking * 100) / 100;
+            GUI.Label(new Rect(10, 60, 200, 40), "Braking: " + braking.ToString(), guiStyle);
             double steering = Math.Round(m_steering * 100) / 100;
-            GUI.Label(new Rect(10, 60, 200, 40), "Steering: " + steering.ToString(), guiStyle);
+            GUI.Label(new Rect(10, 80, 200, 40), "Steering: " + steering.ToString(), guiStyle);
             double motorTorque = Math.Round(vehicle.GetPowertrain().GetMotorTorque());
-            GUI.Label(new Rect(10, 90, 200, 40), "Motor Torque (Nm): " + motorTorque.ToString(), guiStyle);
+            GUI.Label(new Rect(10, 110, 200, 40), "Motor Torque (Nm): " + motorTorque.ToString(), guiStyle);
             double motorSpeed = Math.Round(vehicle.GetPowertrain().GetMotorSpeed() * 60 / (2 * Math.PI));
-            GUI.Label(new Rect(10, 110, 200, 40), "Motor Speed (RPM): " + motorSpeed.ToString(), guiStyle);
+            GUI.Label(new Rect(10, 130, 200, 40), "Motor Speed (RPM): " + motorSpeed.ToString(), guiStyle);
 
             float wallTime = Time.realtimeSinceStartup;
             float gameTime = Time.unscaledTime;
