@@ -298,4 +298,39 @@ public class vehicle {
     return ret;
   }
 
+  public static ChDrivelineWV CastToChDrivelineWV(ChDriveline in_obj) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.CastToChDrivelineWV(ChDriveline.getCPtr(in_obj));
+    ChDrivelineWV ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChDrivelineWV(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChShaftsDriveline2WD CastToChShaftsDriveline2WD(ChDriveline in_obj) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.CastToChShaftsDriveline2WD(ChDriveline.getCPtr(in_obj));
+    ChShaftsDriveline2WD ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChShaftsDriveline2WD(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChShaftsDriveline4WD CastToChShaftsDriveline4WD(ChDriveline in_obj) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.CastToChShaftsDriveline4WD(ChDriveline.getCPtr(in_obj));
+    ChShaftsDriveline4WD ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChShaftsDriveline4WD(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChSimpleDriveline CastToChSimpleDriveline(ChDriveline in_obj) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.CastToChSimpleDriveline(ChDriveline.getCPtr(in_obj));
+    ChSimpleDriveline ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChSimpleDriveline(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChSimpleDrivelineXWD CastToChSimpleDrivelineXWD(ChDriveline in_obj) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.CastToChSimpleDrivelineXWD(ChDriveline.getCPtr(in_obj));
+    ChSimpleDrivelineXWD ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChSimpleDrivelineXWD(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
 }

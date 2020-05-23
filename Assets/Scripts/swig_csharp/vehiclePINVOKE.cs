@@ -1710,6 +1710,222 @@ class vehiclePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_RigidChassis_GetLocalDriverCoordsys")]
   public static extern global::System.IntPtr RigidChassis_GetLocalDriverCoordsys(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Generic_Chassis__SWIG_0")]
+  public static extern global::System.IntPtr new_Generic_Chassis__SWIG_0(string jarg1, bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Generic_Chassis__SWIG_1")]
+  public static extern global::System.IntPtr new_Generic_Chassis__SWIG_1(string jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_Generic_Chassis")]
+  public static extern void delete_Generic_Chassis(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Generic_Chassis_GetMass")]
+  public static extern double Generic_Chassis_GetMass(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Generic_Chassis_GetInertia")]
+  public static extern global::System.IntPtr Generic_Chassis_GetInertia(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Generic_Chassis_GetLocalPosCOM")]
+  public static extern global::System.IntPtr Generic_Chassis_GetLocalPosCOM(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Generic_Chassis_GetLocalDriverCoordsys")]
+  public static extern global::System.IntPtr Generic_Chassis_GetLocalDriverCoordsys(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Generic_Chassis_AddVisualizationAssets")]
+  public static extern void Generic_Chassis_AddVisualizationAssets(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_HMMWV_Chassis__SWIG_0")]
+  public static extern global::System.IntPtr new_HMMWV_Chassis__SWIG_0(string jarg1, bool jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_HMMWV_Chassis__SWIG_1")]
+  public static extern global::System.IntPtr new_HMMWV_Chassis__SWIG_1(string jarg1, bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_HMMWV_Chassis__SWIG_2")]
+  public static extern global::System.IntPtr new_HMMWV_Chassis__SWIG_2(string jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_HMMWV_Chassis")]
+  public static extern void delete_HMMWV_Chassis(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_HMMWV_Chassis_GetMass")]
+  public static extern double HMMWV_Chassis_GetMass(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_HMMWV_Chassis_GetInertia")]
+  public static extern global::System.IntPtr HMMWV_Chassis_GetInertia(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_HMMWV_Chassis_GetLocalPosCOM")]
+  public static extern global::System.IntPtr HMMWV_Chassis_GetLocalPosCOM(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_HMMWV_Chassis_GetLocalDriverCoordsys")]
+  public static extern global::System.IntPtr HMMWV_Chassis_GetLocalDriverCoordsys(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Sedan_Chassis__SWIG_0")]
+  public static extern global::System.IntPtr new_Sedan_Chassis__SWIG_0(string jarg1, bool jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Sedan_Chassis__SWIG_1")]
+  public static extern global::System.IntPtr new_Sedan_Chassis__SWIG_1(string jarg1, bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Sedan_Chassis__SWIG_2")]
+  public static extern global::System.IntPtr new_Sedan_Chassis__SWIG_2(string jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_Sedan_Chassis")]
+  public static extern void delete_Sedan_Chassis(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Sedan_Chassis_GetMass")]
+  public static extern double Sedan_Chassis_GetMass(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Sedan_Chassis_GetInertia")]
+  public static extern global::System.IntPtr Sedan_Chassis_GetInertia(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Sedan_Chassis_GetLocalPosCOM")]
+  public static extern global::System.IntPtr Sedan_Chassis_GetLocalPosCOM(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Sedan_Chassis_GetLocalDriverCoordsys")]
+  public static extern global::System.IntPtr Sedan_Chassis_GetLocalDriverCoordsys(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_CityBus_Chassis__SWIG_0")]
+  public static extern global::System.IntPtr new_CityBus_Chassis__SWIG_0(string jarg1, bool jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_CityBus_Chassis__SWIG_1")]
+  public static extern global::System.IntPtr new_CityBus_Chassis__SWIG_1(string jarg1, bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_CityBus_Chassis__SWIG_2")]
+  public static extern global::System.IntPtr new_CityBus_Chassis__SWIG_2(string jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_CityBus_Chassis")]
+  public static extern void delete_CityBus_Chassis(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_CityBus_Chassis_GetMass")]
+  public static extern double CityBus_Chassis_GetMass(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_CityBus_Chassis_GetInertia")]
+  public static extern global::System.IntPtr CityBus_Chassis_GetInertia(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_CityBus_Chassis_GetLocalPosCOM")]
+  public static extern global::System.IntPtr CityBus_Chassis_GetLocalPosCOM(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_CityBus_Chassis_GetLocalDriverCoordsys")]
+  public static extern global::System.IntPtr CityBus_Chassis_GetLocalDriverCoordsys(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_MAN_5t_Chassis__SWIG_0")]
+  public static extern global::System.IntPtr new_MAN_5t_Chassis__SWIG_0(string jarg1, bool jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_MAN_5t_Chassis__SWIG_1")]
+  public static extern global::System.IntPtr new_MAN_5t_Chassis__SWIG_1(string jarg1, bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_MAN_5t_Chassis__SWIG_2")]
+  public static extern global::System.IntPtr new_MAN_5t_Chassis__SWIG_2(string jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_MAN_5t_Chassis")]
+  public static extern void delete_MAN_5t_Chassis(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_MAN_5t_Chassis_GetMass")]
+  public static extern double MAN_5t_Chassis_GetMass(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_MAN_5t_Chassis_GetInertia")]
+  public static extern global::System.IntPtr MAN_5t_Chassis_GetInertia(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_MAN_5t_Chassis_GetLocalPosCOM")]
+  public static extern global::System.IntPtr MAN_5t_Chassis_GetLocalPosCOM(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_MAN_5t_Chassis_GetLocalDriverCoordsys")]
+  public static extern global::System.IntPtr MAN_5t_Chassis_GetLocalDriverCoordsys(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_MAN_7t_Chassis__SWIG_0")]
+  public static extern global::System.IntPtr new_MAN_7t_Chassis__SWIG_0(string jarg1, bool jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_MAN_7t_Chassis__SWIG_1")]
+  public static extern global::System.IntPtr new_MAN_7t_Chassis__SWIG_1(string jarg1, bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_MAN_7t_Chassis__SWIG_2")]
+  public static extern global::System.IntPtr new_MAN_7t_Chassis__SWIG_2(string jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_MAN_7t_Chassis")]
+  public static extern void delete_MAN_7t_Chassis(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_MAN_7t_Chassis_GetMass")]
+  public static extern double MAN_7t_Chassis_GetMass(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_MAN_7t_Chassis_GetInertia")]
+  public static extern global::System.IntPtr MAN_7t_Chassis_GetInertia(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_MAN_7t_Chassis_GetLocalPosCOM")]
+  public static extern global::System.IntPtr MAN_7t_Chassis_GetLocalPosCOM(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_MAN_7t_Chassis_GetLocalDriverCoordsys")]
+  public static extern global::System.IntPtr MAN_7t_Chassis_GetLocalDriverCoordsys(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_MAN_10t_Chassis__SWIG_0")]
+  public static extern global::System.IntPtr new_MAN_10t_Chassis__SWIG_0(string jarg1, bool jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_MAN_10t_Chassis__SWIG_1")]
+  public static extern global::System.IntPtr new_MAN_10t_Chassis__SWIG_1(string jarg1, bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_MAN_10t_Chassis__SWIG_2")]
+  public static extern global::System.IntPtr new_MAN_10t_Chassis__SWIG_2(string jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_MAN_10t_Chassis")]
+  public static extern void delete_MAN_10t_Chassis(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_MAN_10t_Chassis_GetMass")]
+  public static extern double MAN_10t_Chassis_GetMass(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_MAN_10t_Chassis_GetInertia")]
+  public static extern global::System.IntPtr MAN_10t_Chassis_GetInertia(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_MAN_10t_Chassis_GetLocalPosCOM")]
+  public static extern global::System.IntPtr MAN_10t_Chassis_GetLocalPosCOM(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_MAN_10t_Chassis_GetLocalDriverCoordsys")]
+  public static extern global::System.IntPtr MAN_10t_Chassis_GetLocalDriverCoordsys(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_UAZBUS_Chassis__SWIG_0")]
+  public static extern global::System.IntPtr new_UAZBUS_Chassis__SWIG_0(string jarg1, bool jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_UAZBUS_Chassis__SWIG_1")]
+  public static extern global::System.IntPtr new_UAZBUS_Chassis__SWIG_1(string jarg1, bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_UAZBUS_Chassis__SWIG_2")]
+  public static extern global::System.IntPtr new_UAZBUS_Chassis__SWIG_2(string jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_UAZBUS_Chassis")]
+  public static extern void delete_UAZBUS_Chassis(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_UAZBUS_Chassis_GetMass")]
+  public static extern double UAZBUS_Chassis_GetMass(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_UAZBUS_Chassis_GetInertia")]
+  public static extern global::System.IntPtr UAZBUS_Chassis_GetInertia(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_UAZBUS_Chassis_GetLocalPosCOM")]
+  public static extern global::System.IntPtr UAZBUS_Chassis_GetLocalPosCOM(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_UAZBUS_Chassis_GetLocalDriverCoordsys")]
+  public static extern global::System.IntPtr UAZBUS_Chassis_GetLocalDriverCoordsys(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Gator_Chassis__SWIG_0")]
+  public static extern global::System.IntPtr new_Gator_Chassis__SWIG_0(string jarg1, bool jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Gator_Chassis__SWIG_1")]
+  public static extern global::System.IntPtr new_Gator_Chassis__SWIG_1(string jarg1, bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Gator_Chassis__SWIG_2")]
+  public static extern global::System.IntPtr new_Gator_Chassis__SWIG_2(string jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_Gator_Chassis")]
+  public static extern void delete_Gator_Chassis(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Chassis_GetMass")]
+  public static extern double Gator_Chassis_GetMass(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Chassis_GetInertia")]
+  public static extern global::System.IntPtr Gator_Chassis_GetInertia(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Chassis_GetLocalPosCOM")]
+  public static extern global::System.IntPtr Gator_Chassis_GetLocalPosCOM(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Chassis_GetLocalDriverCoordsys")]
+  public static extern global::System.IntPtr Gator_Chassis_GetLocalDriverCoordsys(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_ChVehicle")]
   public static extern void delete_ChVehicle(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -11283,6 +11499,21 @@ class vehiclePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_CastToShaftsPowertrain")]
   public static extern global::System.IntPtr CastToShaftsPowertrain(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_CastToChDrivelineWV")]
+  public static extern global::System.IntPtr CastToChDrivelineWV(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_CastToChShaftsDriveline2WD")]
+  public static extern global::System.IntPtr CastToChShaftsDriveline2WD(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_CastToChShaftsDriveline4WD")]
+  public static extern global::System.IntPtr CastToChShaftsDriveline4WD(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_CastToChSimpleDriveline")]
+  public static extern global::System.IntPtr CastToChSimpleDriveline(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_CastToChSimpleDrivelineXWD")]
+  public static extern global::System.IntPtr CastToChSimpleDrivelineXWD(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_LinearSpringForce_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr LinearSpringForce_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
@@ -11405,6 +11636,33 @@ class vehiclePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_RigidChassis_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr RigidChassis_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Generic_Chassis_SWIGSmartPtrUpcast")]
+  public static extern global::System.IntPtr Generic_Chassis_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_HMMWV_Chassis_SWIGSmartPtrUpcast")]
+  public static extern global::System.IntPtr HMMWV_Chassis_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Sedan_Chassis_SWIGSmartPtrUpcast")]
+  public static extern global::System.IntPtr Sedan_Chassis_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_CityBus_Chassis_SWIGSmartPtrUpcast")]
+  public static extern global::System.IntPtr CityBus_Chassis_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_MAN_5t_Chassis_SWIGSmartPtrUpcast")]
+  public static extern global::System.IntPtr MAN_5t_Chassis_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_MAN_7t_Chassis_SWIGSmartPtrUpcast")]
+  public static extern global::System.IntPtr MAN_7t_Chassis_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_MAN_10t_Chassis_SWIGSmartPtrUpcast")]
+  public static extern global::System.IntPtr MAN_10t_Chassis_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_UAZBUS_Chassis_SWIGSmartPtrUpcast")]
+  public static extern global::System.IntPtr UAZBUS_Chassis_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Chassis_SWIGSmartPtrUpcast")]
+  public static extern global::System.IntPtr Gator_Chassis_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChDataDriver_SWIGUpcast")]
   public static extern global::System.IntPtr ChDataDriver_SWIGUpcast(global::System.IntPtr jarg1);
