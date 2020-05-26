@@ -542,24 +542,6 @@ public class ChBody : ChPhysicsItem {
     return ret;
   }
 
-  public ChVectorD Get_gyro() {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChBody_Get_gyro(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public ChVectorD Get_Xforce() {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChBody_Get_Xforce(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public ChVectorD Get_Xtorque() {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChBody_Get_Xtorque(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
   public void UpdateMarkers(double mytime) {
     ChronoEngine_csharpPINVOKE.ChBody_UpdateMarkers(swigCPtr, mytime);
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
@@ -593,6 +575,18 @@ public class ChBody : ChPhysicsItem {
   public override void Update() {
     ChronoEngine_csharpPINVOKE.ChBody_Update__SWIG_3(swigCPtr);
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public ChVectorD GetAppliedForce() {
+    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChBody_GetAppliedForce(swigCPtr), true);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public ChVectorD GetAppliedTorque() {
+    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChBody_GetAppliedTorque(swigCPtr), true);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
   }
 
   public ChVectorD GetContactForce() {
