@@ -38,6 +38,7 @@ public class UChVehiclePath : MonoBehaviour
 
     private ChBezierCurve curve;
     public int numRenderPoints;
+    public bool hidePath;
 
     public UChVehiclePath()
     {
@@ -46,6 +47,7 @@ public class UChVehiclePath : MonoBehaviour
         lineEnd = Vector3.one;
         circleNumTurns = 1;
         numRenderPoints = 100;
+        hidePath = false;
     }
 
     public ChBezierCurve GetChVehiclePath() { return curve; }
@@ -53,6 +55,8 @@ public class UChVehiclePath : MonoBehaviour
     private void Awake()
     {
         curve = ConstructBezierCurve();
+
+        this.GetComponent<LineRenderer>().enabled = !hidePath;
     }
 
     private ChBezierCurve ConstructBezierCurve()
@@ -222,6 +226,8 @@ public class UChVehiclePathEditor : Editor
         EditorGUI.indentLevel--;
 
         path.numRenderPoints = EditorGUILayout.IntField("Num. Render Points", path.numRenderPoints);
+
+        path.hidePath = EditorGUILayout.Toggle("Hide Path", path.hidePath);
 
         if (GUI.changed)
         {
