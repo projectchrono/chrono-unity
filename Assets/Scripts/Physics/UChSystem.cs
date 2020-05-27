@@ -1,14 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEditor;
 
+// ==========================================================================================================
+
+/// <summary>
+/// Interface for Chrono subsystems that require FixedUpdate.
+/// For any object that implements IAdvance, its Advance() function will be called at each FixedUpdate.
+/// </summary>
+public interface IAdvance
+{
+    void Advance(double step);
+}
+
+// ==========================================================================================================
+
+/// <summary>
+/// Wrapper around a Chrono system. Allows setting the integration step size, solver and integrator type, etc.
+/// Controls advancing the dynamics of the system at each call to FixedUpdate.
+/// 
+/// ATTENTION: The global Chrono system is set in UChSystem.Awake.
+/// Since Unity does not enforce an order of calls to Awake, this global variable can be safely used by other
+/// components only in their Start function.
+/// </summary>
 public class UChSystem : MonoBehaviour
 {
-    // ATTENTION: The global Chrono system is set in UChSystem.Awake.
-    // Since Unity does not enforce an order of calls to Awake,
-    // this can be safely used by other components only in their Start function.
-
     public static ChSystem chrono_system;
 
     public Vector3 gravity;
@@ -75,6 +93,9 @@ public class UChSystem : MonoBehaviour
     public double hhtAlpha;
     public bool hhtScaling;
 
+    // -----------------------------
+    // Subsystems that require FixedUpdate
+    private IEnumerable<IAdvance> subsystems;
 
     // -----------------------------
     public UChSystem()
@@ -104,6 +125,8 @@ public class UChSystem : MonoBehaviour
         hhtAlpha = -0.2;
 
         integratorType = IntegratorType.EULER_IMPLICIT_LINEARIZED;
+
+        subsystems = new List<IAdvance>();
     }
 
     // -----------------------------
@@ -235,6 +258,9 @@ public class UChSystem : MonoBehaviour
         
         chrono_system.Set_G_acc(new ChVectorD(gravity.x, gravity.y, gravity.z));
         chrono_system.SetStep(step);
+
+        // Find all objects that implement IAdvance
+        subsystems = FindObjectsOfType<MonoBehaviour>().OfType<IAdvance>();
     }
 
     // -----------------------------
@@ -243,6 +269,10 @@ public class UChSystem : MonoBehaviour
         Time.fixedDeltaTime = (float)step;
 
         ////Debug.Log("sys Time = " + chrono_system.GetChTime() + "     num bodies: " + chrono_system.GetNbodies());
+        foreach (var subsys in subsystems)
+        {
+            subsys.Advance(step);
+        }
         chrono_system.DoStepDynamics(step);
     }
 

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-public class UChDriver : MonoBehaviour
+public class UChDriver : MonoBehaviour, IAdvance
 {
     public enum SteeringMode
     {
@@ -114,8 +114,10 @@ public class UChDriver : MonoBehaviour
         guiStyle.fontStyle = FontStyle.Bold;
     }
 
-    void FixedUpdate()
+    public void Advance(double step)
     {
+        ////Debug.Log("advance Driver. step = " + step);
+
         float horiz = Input.GetAxis("Horizontal");
         float vert = Input.GetAxis("Vertical");
 

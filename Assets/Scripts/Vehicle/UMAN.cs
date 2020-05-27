@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-public class UMAN : UChVehicle
+public class UMAN : UChVehicle, IAdvance
 {
     public MAN_10t man;
 
@@ -87,8 +87,10 @@ public class UMAN : UChVehicle
         Time.maximumDeltaTime = 0.02f;
     }
 
-    void FixedUpdate()
+    public void Advance(double step)
     {
+        ////Debug.Log("advance MAN. step = " + step);
+
         var vehicle_pos = man.GetVehicle().GetVehiclePos();
         var vehicle_rot = man.GetVehicle().GetVehicleRot();
 
@@ -155,7 +157,7 @@ public class UMAN : UChVehicle
         ////Debug.Log(speed);
 
         man.Synchronize(UChSystem.chrono_system.GetChTime(), inputs, UChTerrain.chrono_terrain);
-        man.Advance(Time.fixedDeltaTime);
+        man.Advance(step);
     }
 
     public override double GetMaxSpeed()

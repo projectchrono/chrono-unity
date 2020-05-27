@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-public class UHMMWV : UChVehicle
+public class UHMMWV : UChVehicle, IAdvance
 {
     public HMMWV_Full hmmwv;
 
@@ -88,8 +88,10 @@ public class UHMMWV : UChVehicle
         wheelRR.transform.parent = gameObject.transform;
     }
 
-    void FixedUpdate()
+    public void Advance(double step)
     {
+        ////Debug.Log("advance HMMWV. step = " + step);
+
         var vehicle_pos = hmmwv.GetVehicle().GetVehiclePos();
         var vehicle_rot = hmmwv.GetVehicle().GetVehicleRot();
 
@@ -149,7 +151,7 @@ public class UHMMWV : UChVehicle
         ////Debug.Log(speed);
 
         hmmwv.Synchronize(UChSystem.chrono_system.GetChTime(), inputs, UChTerrain.chrono_terrain);
-        hmmwv.Advance(Time.fixedDeltaTime);
+        hmmwv.Advance(step);
     }
 
     public override double GetMaxSpeed()

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraFollower : MonoBehaviour
+public class CameraFollower : MonoBehaviour, IAdvance
 {
     public UChVehicle target;
 
@@ -17,10 +17,12 @@ public class CameraFollower : MonoBehaviour
     [Range(0.0f, 10.0f)]
     public float cameraHeight = 3;
 
-    void FixedUpdate()
+    public void Advance(double step)
     {
+        ////Debug.Log("advance ChaseCam. step = " + step);
+
         //// TODO: worldUp option requires more work...
-        
+
         var target_xform = target.transform;
 
         if (worldUp)  // Camera vertical == World vertical

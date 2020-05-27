@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-public class UGator : UChVehicle
+public class UGator : UChVehicle, IAdvance
 {
     public Gator gator;
 
@@ -95,8 +95,10 @@ public class UGator : UChVehicle
         wheelRR.transform.parent = gameObject.transform;
     }
 
-    void FixedUpdate()
+    public void Advance(double step)
     {
+        ////Debug.Log("advance Gator. step = " + step);
+
         var vehicle_pos = gator.GetVehicle().GetVehiclePos();
         var vehicle_rot = gator.GetVehicle().GetVehicleRot();
 
@@ -141,7 +143,7 @@ public class UGator : UChVehicle
         ////Debug.Log(speed);
 
         gator.Synchronize(UChSystem.chrono_system.GetChTime(), inputs, UChTerrain.chrono_terrain);
-        gator.Advance(Time.fixedDeltaTime);
+        gator.Advance(step);
     }
 
     public override double GetMaxSpeed()
