@@ -10,8 +10,8 @@ public class UGator : UChVehicle, IAdvance
     public bool chassisFixed;
     //public PowertrainModelType powertrainModel;
     //public DrivelineType drivelineModel;
-    public TireModelType tireModel;
-    public ChTire.CollisionType tireCollisionType;
+    private TireModelType tireModel;
+    ////public ChTire.CollisionType tireCollisionType;
 
     public double initForwardVel;
     public double initWheelAngSpeed;
@@ -28,7 +28,7 @@ public class UGator : UChVehicle, IAdvance
     {
         chassisFixed = false;
         tireModel = TireModelType.TMEASY;
-        tireCollisionType = ChTire.CollisionType.SINGLE_POINT;
+        ////tireCollisionType = ChTire.CollisionType.SINGLE_POINT;
 
         initForwardVel = 0;
         initWheelAngSpeed = 0;

@@ -8,7 +8,7 @@ public class UMAN : UChVehicle, IAdvance
     public MAN_10t man;
 
     public bool chassisFixed;
-    public TireModelType tireModel;
+    private TireModelType tireModel;
     ////public ChTire.CollisionType tireCollisionType;
 
     public double initForwardVel;
