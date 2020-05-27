@@ -145,9 +145,9 @@ public class UHMMWV : UChVehicle
         wheelRR.transform.position = Utils.FromChronoFlip(spindleRR_pos);
         wheelRR.transform.rotation = Utils.FromChronoFlip(spindleRR_rot);
 
-        ////Debug.Log(hmmwv.GetVehicle().GetVehicleSpeed());
-
         speed = hmmwv.GetVehicle().GetVehicleSpeed();
+        ////Debug.Log(speed);
+
         hmmwv.Synchronize(UChSystem.chrono_system.GetChTime(), inputs, UChTerrain.chrono_terrain);
         hmmwv.Advance(Time.fixedDeltaTime);
     }

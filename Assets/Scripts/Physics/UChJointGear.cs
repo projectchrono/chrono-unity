@@ -53,7 +53,7 @@ public class UChJointGear : MonoBehaviour
         UChSystem.chrono_system.AddLink(gear);
     }
 
-    void FixedUpdate()
+    void Update()
     {
         ChVectorD pos = gear.GetMarker2().GetAbsCoord().pos;
         transform.position = Utils.FromChrono(pos);

@@ -36,7 +36,7 @@ public class UChMotorRotational : UChMotor
         UChSystem.chrono_system.AddLink(motor);
     }
 
-    void FixedUpdate()
+    void Update()
     {
         var csys = motor.GetLinkAbsoluteCoords();
         transform.position = Utils.FromChrono(csys.pos);

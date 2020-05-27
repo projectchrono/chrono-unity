@@ -94,7 +94,7 @@ public class UChFunction : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    void Update()
     {
         value = fun.Get_y(UChSystem.chrono_system.GetChTime());
         ////Debug.Log("  t = " + UChSystem.chrono_system.GetChTime() + " val = " + value);

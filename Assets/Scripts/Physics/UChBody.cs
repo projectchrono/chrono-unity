@@ -107,7 +107,7 @@ public class UChBody : MonoBehaviour
         AddToSystem();
     }
 
-    void FixedUpdate()
+    void Update()
     {
         ////Debug.Log("body Time = " + body.GetChTime());
 

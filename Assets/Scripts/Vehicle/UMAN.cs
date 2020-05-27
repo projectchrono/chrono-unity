@@ -151,8 +151,9 @@ public class UMAN : UChVehicle
         wheelR2R.transform.position = Utils.FromChronoFlip(spindleR2R_pos);
         wheelR2R.transform.rotation = Utils.FromChronoFlip(spindleR2R_rot);
 
-        // Advance state of vehicle
         speed = man.GetVehicle().GetVehicleSpeed();
+        ////Debug.Log(speed);
+
         man.Synchronize(UChSystem.chrono_system.GetChTime(), inputs, UChTerrain.chrono_terrain);
         man.Advance(Time.fixedDeltaTime);
     }

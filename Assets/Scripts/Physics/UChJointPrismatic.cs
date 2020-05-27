@@ -37,7 +37,7 @@ public class UChJointPrismatic : MonoBehaviour
         UChSystem.chrono_system.AddLink(joint);
     }
 
-    void FixedUpdate()
+    void Update()
     {
         var csys = joint.GetMarker1().GetAbsCoord();
         transform.position = Utils.FromChrono(csys.pos);

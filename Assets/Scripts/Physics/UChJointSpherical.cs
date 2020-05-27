@@ -11,8 +11,6 @@ public class UChJointSpherical : MonoBehaviour
 
     void Start()
     {
-        ////Debug.Log("Revolute Start()");
-
         joint = new ChLinkLockSpherical();
         ChCoordsysD csys = new ChCoordsysD(Utils.ToChrono(transform.position), Utils.ToChrono(transform.rotation));
         joint.Initialize(body1.GetChBody(), body2.GetChBody(), csys);
@@ -20,7 +18,6 @@ public class UChJointSpherical : MonoBehaviour
         UChSystem.chrono_system.AddLink(joint);
     }
 
-    // Update is called once per frame
     void Update()
     {
         var csys = joint.GetMarker1().GetAbsCoord();

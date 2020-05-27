@@ -45,7 +45,7 @@ public class UChTSDA : MonoBehaviour
         lineObject.alignment = LineAlignment.View;
     }
 
-    void FixedUpdate()
+    void Update()
     {
         var p1 = Utils.FromChrono(spring.GetPoint1Abs());
         var p2 = Utils.FromChrono(spring.GetPoint2Abs());

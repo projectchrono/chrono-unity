@@ -18,8 +18,7 @@ public class UChJointCylindrical : MonoBehaviour
         UChSystem.chrono_system.AddLink(joint);
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         var csys = joint.GetMarker1().GetAbsCoord();
         transform.position = Utils.FromChrono(csys.pos);

@@ -137,9 +137,9 @@ public class UGator : UChVehicle
         wheelRR.transform.position = Utils.FromChronoFlip(spindleRR_pos);
         wheelRR.transform.rotation = Utils.FromChronoFlip(spindleRR_rot);
 
-        ////Debug.Log(hmmwv.GetVehicle().GetVehicleSpeed());
-
         speed = gator.GetVehicle().GetVehicleSpeed();
+        ////Debug.Log(speed);
+
         gator.Synchronize(UChSystem.chrono_system.GetChTime(), inputs, UChTerrain.chrono_terrain);
         gator.Advance(Time.fixedDeltaTime);
     }

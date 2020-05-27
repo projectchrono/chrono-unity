@@ -18,7 +18,7 @@ public class UChJointUniversal : MonoBehaviour
         UChSystem.chrono_system.AddLink(joint);
     }
 
-    void FixedUpdate()
+    void Update()
     {
         var frame1 = joint.GetFrame1Abs();
         var frame2 = joint.GetFrame2Abs();

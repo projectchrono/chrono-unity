@@ -33,7 +33,7 @@ public class UChJointDistance : MonoBehaviour
         lineObject.alignment = LineAlignment.View;
     }
 
-    void FixedUpdate()
+    void Update()
     {
         var p1 = Utils.FromChrono(joint.GetEndPoint1Abs());
         var p2 = Utils.FromChrono(joint.GetEndPoint2Abs());

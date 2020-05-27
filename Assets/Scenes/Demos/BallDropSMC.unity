@@ -629,27 +629,27 @@ PrefabInstance:
     - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
         type: 3}
       propertyPath: automaticMass
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
         type: 3}
       propertyPath: mass
-      value: 52.35987755982988
+      value: 418.87902047863906
       objectReference: {fileID: 0}
     - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
         type: 3}
       propertyPath: inertiaMoments.x
-      value: 5.2359877
+      value: 167.5516
       objectReference: {fileID: 0}
     - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
         type: 3}
       propertyPath: inertiaMoments.y
-      value: 5.2359877
+      value: 167.5516
       objectReference: {fileID: 0}
     - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
         type: 3}
       propertyPath: inertiaMoments.z
-      value: 5.2359877
+      value: 167.5516
       objectReference: {fileID: 0}
     - target: {fileID: 5770917826277765642, guid: 0a9f08aa9b97c5746b9cec4e00b206c1,
         type: 3}
