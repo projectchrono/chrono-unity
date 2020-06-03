@@ -121,6 +121,16 @@ public class UChDriver : MonoBehaviour, IAdvance
         float horiz = Input.GetAxis("Horizontal");
         float vert = Input.GetAxis("Vertical");
 
+        // Forward/reverse
+        if (Input.GetButton("Fire1"))
+        {
+            vehicle.GetChVehicle().GetPowertrain().SetDriveMode(ChPowertrain.DriveMode.FORWARD);
+        }
+        if (Input.GetButton("Fire2"))
+        {
+            vehicle.GetChVehicle().GetPowertrain().SetDriveMode(ChPowertrain.DriveMode.REVERSE);
+        }
+
         // Set current steering, depending on selected lateral control mode
         switch (steeringMode)
         {
@@ -258,15 +268,26 @@ public class UChDriver : MonoBehaviour, IAdvance
             GUI.Label(new Rect(10, 60, 200, 40), "Braking: " + braking.ToString(), guiStyle);
             double steering = Math.Round(m_steering * 100) / 100;
             GUI.Label(new Rect(10, 80, 200, 40), "Steering: " + steering.ToString(), guiStyle);
+
+            switch (vehicle.GetChVehicle().GetPowertrain().GetDriveMode())
+            {
+                case ChPowertrain.DriveMode.FORWARD:
+                    GUI.Label(new Rect(10, 100, 200, 40), "Gear: Forward", guiStyle);
+                    break;
+                case ChPowertrain.DriveMode.REVERSE:
+                    GUI.Label(new Rect(10, 100, 200, 40), "Gear: Reverse", guiStyle);
+                    break;
+            }
+
             double motorTorque = Math.Round(vehicle.GetPowertrain().GetMotorTorque());
-            GUI.Label(new Rect(10, 110, 200, 40), "Motor Torque (Nm): " + motorTorque.ToString(), guiStyle);
+            GUI.Label(new Rect(10, 130, 200, 40), "Motor Torque (Nm): " + motorTorque.ToString(), guiStyle);
             double motorSpeed = Math.Round(vehicle.GetPowertrain().GetMotorSpeed() * 60 / (2 * Math.PI));
-            GUI.Label(new Rect(10, 130, 200, 40), "Motor Speed (RPM): " + motorSpeed.ToString(), guiStyle);
+            GUI.Label(new Rect(10, 150, 200, 40), "Motor Speed (RPM): " + motorSpeed.ToString(), guiStyle);
 
             float wallTime = Time.realtimeSinceStartup;
             float gameTime = Time.unscaledTime;
             float ratio = gameTime / wallTime;
-            GUI.Label(new Rect(10, 150, 200, 40), "Time factor: " + Mathf.Round(ratio * 100) / 100, guiStyle);
+            GUI.Label(new Rect(10, 170, 200, 40), "Time factor: " + Mathf.Round(ratio * 100) / 100, guiStyle);
         }
     }
 
@@ -291,9 +312,20 @@ public class UChDriverEditor : Editor
     {
         //// TODO: expose more parameters?
 
+        ////EditorGUILayout.HelpBox("Test help", MessageType.Info);
+
+        ////GUIStyle myStyle = GUI.skin.GetStyle("HelpBox");
+        ////myStyle.richText = true;
+        ////EditorGUILayout.TextArea("This is my text <b>AND IT IS BOLD</b>", myStyle);
+
         UChDriver driver = (UChDriver)target;
 
         driver.vehicle = (UChVehicle)EditorGUILayout.ObjectField("Vehicle", driver.vehicle, typeof(UChVehicle), true);
+
+        EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);
+
+        // Forward/reverse
+
 
         // Steering control mode
         string[] steering_options = new string[] { "Wheel Control", "Path Follower" };
@@ -306,9 +338,9 @@ public class UChDriverEditor : Editor
 
             driver.lookAhead = EditorGUILayout.DoubleField("Look-ahead Distance", driver.lookAhead);
 
-            driver.steering_Kp = EditorGUILayout.DoubleField("Kp", driver.steering_Kp);
-            driver.steering_Kd = EditorGUILayout.DoubleField("Kd", driver.steering_Kd);
-            driver.steering_Ki = EditorGUILayout.DoubleField("Ki", driver.steering_Ki);
+            driver.steering_Kp = EditorGUILayout.DoubleField(new GUIContent("Kp", "Gain for PID proportional term"), driver.steering_Kp);
+            driver.steering_Kd = EditorGUILayout.DoubleField(new GUIContent("Kd", "Gain for PID derivative term"), driver.steering_Kd);
+            driver.steering_Ki = EditorGUILayout.DoubleField(new GUIContent("Ki", "Gain for PID integral term"), driver.steering_Ki);
 
             EditorGUI.indentLevel--;
         }
@@ -325,9 +357,9 @@ public class UChDriverEditor : Editor
             KPH = EditorGUILayout.DoubleField("Target Speed (km/h)", KPH);
             driver.targetSpeed = KPH / 3.6;
 
-            driver.speed_Kp = EditorGUILayout.DoubleField("Kp", driver.speed_Kp);
-            driver.speed_Kd = EditorGUILayout.DoubleField("Kd", driver.speed_Kd);
-            driver.speed_Ki = EditorGUILayout.DoubleField("Ki", driver.speed_Ki);
+            driver.speed_Kp = EditorGUILayout.DoubleField(new GUIContent("Kp", "Gain for PID proportional term"), driver.speed_Kp);
+            driver.speed_Kd = EditorGUILayout.DoubleField(new GUIContent("Kd", "Gain for PID derivative term"), driver.speed_Kd);
+            driver.speed_Ki = EditorGUILayout.DoubleField(new GUIContent("Ki", "Gain for PID integral term"), driver.speed_Ki);
 
             EditorGUI.indentLevel--;
         }
