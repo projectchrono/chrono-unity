@@ -58,6 +58,8 @@ public class UGator : UChVehicle, IAdvance
         omega.Add(initWheelAngSpeed);
         gator.SetInitWheelAngVel(omega);
 
+        gator.EnableBrakeLocking(true);
+
         gator.Initialize();
 
         Debug.Log("Gator total mass: " + gator.GetTotalMass());
