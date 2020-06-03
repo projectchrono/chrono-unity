@@ -96,6 +96,11 @@ public class MAN_5t : global::System.IDisposable {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public void EnableBrakeLocking(bool lock_) {
+    vehiclePINVOKE.MAN_5t_EnableBrakeLocking(swigCPtr, lock_);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
   public ChSystem GetSystem() {
     global::System.IntPtr cPtr = vehiclePINVOKE.MAN_5t_GetSystem(swigCPtr);
     ChSystem ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChSystem(cPtr, true);

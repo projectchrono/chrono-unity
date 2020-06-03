@@ -261,6 +261,22 @@ public class ChWheeledVehicle : ChVehicle {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public void EnableBrakeLocking(bool lock_) {
+    vehiclePINVOKE.ChWheeledVehicle_EnableBrakeLocking(swigCPtr, lock_);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void ApplyParkingBrake(bool lock_) {
+    vehiclePINVOKE.ChWheeledVehicle_ApplyParkingBrake(swigCPtr, lock_);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public bool ParkingBrake() {
+    bool ret = vehiclePINVOKE.ChWheeledVehicle_ParkingBrake(swigCPtr);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public override void LogConstraintViolations() {
     vehiclePINVOKE.ChWheeledVehicle_LogConstraintViolations(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();

@@ -45,6 +45,11 @@ public class ChBrake : ChPart {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public void EnableLocking(bool val) {
+    vehiclePINVOKE.ChBrake_EnableLocking(swigCPtr, val);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
   public virtual double GetBrakeTorque() {
     double ret = vehiclePINVOKE.ChBrake_GetBrakeTorque(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();

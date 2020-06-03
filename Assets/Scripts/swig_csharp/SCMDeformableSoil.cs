@@ -35,7 +35,7 @@ public class SCMDeformableSoil : ChLoadContainer {
     }
   }
 
-  public SCMDeformableSoil(ChSystem system) : this(vehiclePINVOKE.new_SCMDeformableSoil(ChSystem.getCPtr(system)), true) {
+  public SCMDeformableSoil(ChSystem system, bool visualization_mesh) : this(vehiclePINVOKE.new_SCMDeformableSoil(ChSystem.getCPtr(system), visualization_mesh), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

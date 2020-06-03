@@ -91,6 +91,11 @@ public class UAZBUS : global::System.IDisposable {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public void EnableBrakeLocking(bool lock_) {
+    vehiclePINVOKE.UAZBUS_EnableBrakeLocking(swigCPtr, lock_);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
   public ChSystem GetSystem() {
     global::System.IntPtr cPtr = vehiclePINVOKE.UAZBUS_GetSystem(swigCPtr);
     ChSystem ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChSystem(cPtr, true);

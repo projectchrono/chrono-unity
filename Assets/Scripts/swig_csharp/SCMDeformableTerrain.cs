@@ -35,7 +35,11 @@ public class SCMDeformableTerrain : ChTerrain {
     }
   }
 
-  public SCMDeformableTerrain(ChSystem system) : this(vehiclePINVOKE.new_SCMDeformableTerrain(ChSystem.getCPtr(system)), true) {
+  public SCMDeformableTerrain(ChSystem system, bool visualization_mesh) : this(vehiclePINVOKE.new_SCMDeformableTerrain__SWIG_0(ChSystem.getCPtr(system), visualization_mesh), true) {
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public SCMDeformableTerrain(ChSystem system) : this(vehiclePINVOKE.new_SCMDeformableTerrain__SWIG_1(ChSystem.getCPtr(system)), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

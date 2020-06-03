@@ -46,4 +46,9 @@ public class ChLinkLockPerpend : ChLinkLock {
     return ret;
   }
 
+  public void Lock(bool lock_) {
+    ChronoEngine_csharpPINVOKE.ChLinkLockPerpend_Lock(swigCPtr, lock_);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
 }

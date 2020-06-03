@@ -200,4 +200,9 @@ public class ChSuspension : ChPart {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public void ApplyParkingBrake(bool brake) {
+    vehiclePINVOKE.ChSuspension_ApplyParkingBrake(swigCPtr, brake);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
 }

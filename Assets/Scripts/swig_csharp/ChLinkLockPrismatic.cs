@@ -46,4 +46,9 @@ public class ChLinkLockPrismatic : ChLinkLock {
     return ret;
   }
 
+  public void Lock(bool lock_) {
+    ChronoEngine_csharpPINVOKE.ChLinkLockPrismatic_Lock(swigCPtr, lock_);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
 }

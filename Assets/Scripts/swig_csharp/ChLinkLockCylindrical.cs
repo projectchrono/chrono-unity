@@ -46,4 +46,9 @@ public class ChLinkLockCylindrical : ChLinkLock {
     return ret;
   }
 
+  public void Lock(bool lock_) {
+    ChronoEngine_csharpPINVOKE.ChLinkLockCylindrical_Lock(swigCPtr, lock_);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
 }

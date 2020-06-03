@@ -2844,8 +2844,11 @@ class vehiclePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_Patch")]
   public static extern void delete_Patch(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_SCMDeformableTerrain")]
-  public static extern global::System.IntPtr new_SCMDeformableTerrain(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_SCMDeformableTerrain__SWIG_0")]
+  public static extern global::System.IntPtr new_SCMDeformableTerrain__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_SCMDeformableTerrain__SWIG_1")]
+  public static extern global::System.IntPtr new_SCMDeformableTerrain__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_SCMDeformableTerrain")]
   public static extern void delete_SCMDeformableTerrain(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -3004,7 +3007,7 @@ class vehiclePINVOKE {
   public static extern void SoilParametersCallback_director_connect(global::System.Runtime.InteropServices.HandleRef jarg1, SoilParametersCallback.SwigDelegateSoilParametersCallback_0 delegate0);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_SCMDeformableSoil")]
-  public static extern global::System.IntPtr new_SCMDeformableSoil(global::System.Runtime.InteropServices.HandleRef jarg1);
+  public static extern global::System.IntPtr new_SCMDeformableSoil(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_SCMDeformableSoil")]
   public static extern void delete_SCMDeformableSoil(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -3104,6 +3107,9 @@ class vehiclePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChSuspension_LogConstraintViolations")]
   public static extern void ChSuspension_LogConstraintViolations(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChSuspension_ApplyParkingBrake")]
+  public static extern void ChSuspension_ApplyParkingBrake(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Force_spring_force_set")]
   public static extern void Force_spring_force_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
@@ -6855,6 +6861,9 @@ class vehiclePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChBrake_Synchronize")]
   public static extern void ChBrake_Synchronize(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChBrake_EnableLocking")]
+  public static extern void ChBrake_EnableLocking(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChBrake_GetBrakeTorque")]
   public static extern double ChBrake_GetBrakeTorque(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -10002,6 +10011,15 @@ class vehiclePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChWheeledVehicle_LockCentralDifferential")]
   public static extern void ChWheeledVehicle_LockCentralDifferential(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, bool jarg3);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChWheeledVehicle_EnableBrakeLocking")]
+  public static extern void ChWheeledVehicle_EnableBrakeLocking(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChWheeledVehicle_ApplyParkingBrake")]
+  public static extern void ChWheeledVehicle_ApplyParkingBrake(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChWheeledVehicle_ParkingBrake")]
+  public static extern bool ChWheeledVehicle_ParkingBrake(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChWheeledVehicle_LogConstraintViolations")]
   public static extern void ChWheeledVehicle_LogConstraintViolations(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -10127,6 +10145,9 @@ class vehiclePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_HMMWV_SetTireStepSize")]
   public static extern void HMMWV_SetTireStepSize(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_HMMWV_EnableBrakeLocking")]
+  public static extern void HMMWV_EnableBrakeLocking(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_HMMWV_GetSystem")]
   public static extern global::System.IntPtr HMMWV_GetSystem(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -10314,6 +10335,9 @@ class vehiclePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Sedan_SetTireStepSize")]
   public static extern void Sedan_SetTireStepSize(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Sedan_EnableBrakeLocking")]
+  public static extern void Sedan_EnableBrakeLocking(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Sedan_GetSystem")]
   public static extern global::System.IntPtr Sedan_GetSystem(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -10469,6 +10493,9 @@ class vehiclePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_CityBus_SetTireStepSize")]
   public static extern void CityBus_SetTireStepSize(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_CityBus_EnableBrakeLocking")]
+  public static extern void CityBus_EnableBrakeLocking(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_CityBus_GetSystem")]
   public static extern global::System.IntPtr CityBus_GetSystem(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -10626,6 +10653,9 @@ class vehiclePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_MAN_5t_SetTireStepSize")]
   public static extern void MAN_5t_SetTireStepSize(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_MAN_5t_EnableBrakeLocking")]
+  public static extern void MAN_5t_EnableBrakeLocking(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_MAN_5t_GetSystem")]
   public static extern global::System.IntPtr MAN_5t_GetSystem(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -10713,6 +10743,9 @@ class vehiclePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_MAN_7t_SetTireStepSize")]
   public static extern void MAN_7t_SetTireStepSize(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_MAN_7t_EnableBrakeLocking")]
+  public static extern void MAN_7t_EnableBrakeLocking(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_MAN_7t_GetSystem")]
   public static extern global::System.IntPtr MAN_7t_GetSystem(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -10799,6 +10832,9 @@ class vehiclePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_MAN_10t_SetTireStepSize")]
   public static extern void MAN_10t_SetTireStepSize(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_MAN_10t_EnableBrakeLocking")]
+  public static extern void MAN_10t_EnableBrakeLocking(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_MAN_10t_GetSystem")]
   public static extern global::System.IntPtr MAN_10t_GetSystem(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -11109,6 +11145,9 @@ class vehiclePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_UAZBUS_SetTireStepSize")]
   public static extern void UAZBUS_SetTireStepSize(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_UAZBUS_EnableBrakeLocking")]
+  public static extern void UAZBUS_EnableBrakeLocking(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_UAZBUS_GetSystem")]
   public static extern global::System.IntPtr UAZBUS_GetSystem(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -11273,6 +11312,9 @@ class vehiclePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_SetTireStepSize")]
   public static extern void Gator_SetTireStepSize(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_EnableBrakeLocking")]
+  public static extern void Gator_EnableBrakeLocking(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_GetSystem")]
   public static extern global::System.IntPtr Gator_GetSystem(global::System.Runtime.InteropServices.HandleRef jarg1);

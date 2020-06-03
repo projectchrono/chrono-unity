@@ -9690,6 +9690,9 @@ class ChronoEngine_csharpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkLockRevolute_Clone")]
   public static extern global::System.IntPtr ChLinkLockRevolute_Clone(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkLockRevolute_Lock")]
+  public static extern void ChLinkLockRevolute_Lock(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChLinkLockRevolute")]
   public static extern void delete_ChLinkLockRevolute(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -9698,6 +9701,9 @@ class ChronoEngine_csharpPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkLockSpherical_Clone")]
   public static extern global::System.IntPtr ChLinkLockSpherical_Clone(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkLockSpherical_Lock")]
+  public static extern void ChLinkLockSpherical_Lock(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChLinkLockSpherical")]
   public static extern void delete_ChLinkLockSpherical(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -9708,6 +9714,9 @@ class ChronoEngine_csharpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkLockCylindrical_Clone")]
   public static extern global::System.IntPtr ChLinkLockCylindrical_Clone(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkLockCylindrical_Lock")]
+  public static extern void ChLinkLockCylindrical_Lock(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChLinkLockCylindrical")]
   public static extern void delete_ChLinkLockCylindrical(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -9716,6 +9725,9 @@ class ChronoEngine_csharpPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkLockPrismatic_Clone")]
   public static extern global::System.IntPtr ChLinkLockPrismatic_Clone(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkLockPrismatic_Lock")]
+  public static extern void ChLinkLockPrismatic_Lock(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChLinkLockPrismatic")]
   public static extern void delete_ChLinkLockPrismatic(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -9726,6 +9738,9 @@ class ChronoEngine_csharpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkLockPointPlane_Clone")]
   public static extern global::System.IntPtr ChLinkLockPointPlane_Clone(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkLockPointPlane_Lock")]
+  public static extern void ChLinkLockPointPlane_Lock(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChLinkLockPointPlane")]
   public static extern void delete_ChLinkLockPointPlane(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -9734,6 +9749,9 @@ class ChronoEngine_csharpPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkLockPointLine_Clone")]
   public static extern global::System.IntPtr ChLinkLockPointLine_Clone(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkLockPointLine_Lock")]
+  public static extern void ChLinkLockPointLine_Lock(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChLinkLockPointLine")]
   public static extern void delete_ChLinkLockPointLine(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -9744,6 +9762,9 @@ class ChronoEngine_csharpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkLockPlanePlane_Clone")]
   public static extern global::System.IntPtr ChLinkLockPlanePlane_Clone(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkLockPlanePlane_Lock")]
+  public static extern void ChLinkLockPlanePlane_Lock(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChLinkLockPlanePlane")]
   public static extern void delete_ChLinkLockPlanePlane(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -9752,6 +9773,9 @@ class ChronoEngine_csharpPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkLockOldham_Clone")]
   public static extern global::System.IntPtr ChLinkLockOldham_Clone(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkLockOldham_Lock")]
+  public static extern void ChLinkLockOldham_Lock(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChLinkLockOldham")]
   public static extern void delete_ChLinkLockOldham(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -9762,6 +9786,9 @@ class ChronoEngine_csharpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkLockFree_Clone")]
   public static extern global::System.IntPtr ChLinkLockFree_Clone(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkLockFree_Lock")]
+  public static extern void ChLinkLockFree_Lock(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChLinkLockFree")]
   public static extern void delete_ChLinkLockFree(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -9770,6 +9797,9 @@ class ChronoEngine_csharpPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkLockAlign_Clone")]
   public static extern global::System.IntPtr ChLinkLockAlign_Clone(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkLockAlign_Lock")]
+  public static extern void ChLinkLockAlign_Lock(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChLinkLockAlign")]
   public static extern void delete_ChLinkLockAlign(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -9780,6 +9810,9 @@ class ChronoEngine_csharpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkLockParallel_Clone")]
   public static extern global::System.IntPtr ChLinkLockParallel_Clone(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkLockParallel_Lock")]
+  public static extern void ChLinkLockParallel_Lock(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChLinkLockParallel")]
   public static extern void delete_ChLinkLockParallel(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -9789,6 +9822,9 @@ class ChronoEngine_csharpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkLockPerpend_Clone")]
   public static extern global::System.IntPtr ChLinkLockPerpend_Clone(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkLockPerpend_Lock")]
+  public static extern void ChLinkLockPerpend_Lock(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChLinkLockPerpend")]
   public static extern void delete_ChLinkLockPerpend(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -9797,6 +9833,9 @@ class ChronoEngine_csharpPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkLockRevolutePrismatic_Clone")]
   public static extern global::System.IntPtr ChLinkLockRevolutePrismatic_Clone(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkLockRevolutePrismatic_Lock")]
+  public static extern void ChLinkLockRevolutePrismatic_Lock(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChLinkLockRevolutePrismatic")]
   public static extern void delete_ChLinkLockRevolutePrismatic(global::System.Runtime.InteropServices.HandleRef jarg1);
