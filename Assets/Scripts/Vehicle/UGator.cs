@@ -73,7 +73,7 @@ public class UGator : UChVehicle, IAdvance
         ////listOfChildren[0].enabled = false;
         GetComponentInChildren<Renderer>().enabled = false;
 
-        Object chassis_prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Vehicle/Gator/Chassis.prefab", typeof(GameObject));
+        Object chassis_prefab = Resources.Load("Gator/Chassis", typeof(GameObject));
         chassis = Instantiate(chassis_prefab, transform) as GameObject;
         chassis.transform.parent = gameObject.transform;
         if (chassisMaterial != null)
@@ -84,19 +84,19 @@ public class UGator : UChVehicle, IAdvance
             chassis.GetComponentInChildren<Renderer>().materials = mats;
         }
 
-        Object wheelFL_prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Vehicle/Gator/WheelFrontLeft.prefab", typeof(GameObject));
+        Object wheelFL_prefab = Resources.Load("Gator/WheelFrontLeft", typeof(GameObject));
         wheelFL = Instantiate(wheelFL_prefab, transform) as GameObject;
         wheelFL.transform.parent = gameObject.transform;
 
-        Object wheelRL_prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Vehicle/Gator/WheelRearLeft.prefab", typeof(GameObject));
+        Object wheelRL_prefab = Resources.Load("Gator/WheelRearLeft", typeof(GameObject));
         wheelRL = Instantiate(wheelRL_prefab, transform) as GameObject;
         wheelRL.transform.parent = gameObject.transform;
 
-        Object wheelFR_prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Vehicle/Gator/WheelFrontRight.prefab", typeof(GameObject));
+        Object wheelFR_prefab = Resources.Load("Gator/WheelFrontRight", typeof(GameObject));
         wheelFR = Instantiate(wheelFR_prefab, transform) as GameObject;
         wheelFR.transform.parent = gameObject.transform;
 
-        Object wheelRR_prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Vehicle/Gator/WheelRearRight.prefab", typeof(GameObject));
+        Object wheelRR_prefab = Resources.Load("Gator/WheelRearRight", typeof(GameObject));
         wheelRR = Instantiate(wheelRR_prefab, transform) as GameObject;
         wheelRR.transform.parent = gameObject.transform;
     }

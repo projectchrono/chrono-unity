@@ -59,11 +59,11 @@ public class UMAN : UChVehicle, IAdvance
             r.enabled = false;
         ////GetComponentInChildren<Renderer>().enabled = false;
 
-        Object chassis_prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Vehicle/MAN/Chassis10t.prefab", typeof(GameObject));
+        Object chassis_prefab = Resources.Load("MAN/Chassis10t", typeof(GameObject));
         chassis = Instantiate(chassis_prefab, transform) as GameObject;
         chassis.transform.parent = gameObject.transform;
 
-        Object wheelL_prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Vehicle/MAN/WheelLeft.prefab", typeof(GameObject));
+        Object wheelL_prefab = Resources.Load("MAN/WheelLeft", typeof(GameObject));
         wheelF1L = Instantiate(wheelL_prefab, transform) as GameObject;
         wheelF1L.transform.parent = gameObject.transform;
         wheelF2L = Instantiate(wheelL_prefab, transform) as GameObject;
@@ -73,7 +73,7 @@ public class UMAN : UChVehicle, IAdvance
         wheelR2L = Instantiate(wheelL_prefab, transform) as GameObject;
         wheelR2L.transform.parent = gameObject.transform;
 
-        Object wheelR_prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Vehicle/MAN/WheelRight.prefab", typeof(GameObject));
+        Object wheelR_prefab = Resources.Load("MAN/WheelRight", typeof(GameObject));
         wheelF1R = Instantiate(wheelR_prefab, transform) as GameObject;
         wheelF1R.transform.parent = gameObject.transform;
         wheelF2R = Instantiate(wheelR_prefab, transform) as GameObject;

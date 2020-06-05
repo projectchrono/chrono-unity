@@ -71,7 +71,7 @@ public class UUAZ : UChVehicle, IAdvance
         ////listOfChildren[0].enabled = false;
         GetComponentInChildren<Renderer>().enabled = false;
 
-        Object chassis_prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Vehicle/UAZ/Chassis.prefab", typeof(GameObject));
+        Object chassis_prefab = Resources.Load("UAZ/Chassis", typeof(GameObject));
         chassis = Instantiate(chassis_prefab, transform) as GameObject;
         chassis.transform.parent = gameObject.transform;
         if (chassisMaterial != null)
@@ -82,13 +82,13 @@ public class UUAZ : UChVehicle, IAdvance
             chassis.GetComponentInChildren<Renderer>().materials = mats;
         }
 
-        Object wheelL_prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Vehicle/UAZ/WheelLeft.prefab", typeof(GameObject));
+        Object wheelL_prefab = Resources.Load("UAZ/WheelLeft", typeof(GameObject));
         wheelFL = Instantiate(wheelL_prefab, transform) as GameObject;
         wheelFL.transform.parent = gameObject.transform;
         wheelRL = Instantiate(wheelL_prefab, transform) as GameObject;
         wheelRL.transform.parent = gameObject.transform;
 
-        Object wheelR_prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Vehicle/UAZ/WheelRight.prefab", typeof(GameObject));
+        Object wheelR_prefab = Resources.Load("UAZ/WheelRight", typeof(GameObject));
         wheelFR = Instantiate(wheelR_prefab, transform) as GameObject;
         wheelFR.transform.parent = gameObject.transform;
         wheelRR = Instantiate(wheelR_prefab, transform) as GameObject;
