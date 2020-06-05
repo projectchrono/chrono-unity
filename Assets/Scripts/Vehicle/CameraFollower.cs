@@ -17,6 +17,13 @@ public class CameraFollower : MonoBehaviour, IAdvance
     [Range(0.0f, 10.0f)]
     public float cameraHeight = 3;
 
+    public void Start()
+    {
+        // Register with the Chrono system (for Advance).
+        UChSystem system = (UChSystem)FindObjectOfType(typeof(UChSystem));
+        system.Register(gameObject.name, this);
+    }
+
     public void Advance(double step)
     {
         ////Debug.Log("advance ChaseCam. step = " + step);

@@ -36,6 +36,10 @@ public class UUAZ : UChVehicle, IAdvance
 
     void Start()
     {
+        // Register with the Chrono system (for Advance).
+        UChSystem system = (UChSystem)FindObjectOfType(typeof(UChSystem));
+        system.Register(gameObject.name, this);
+
         uaz = new UAZBUS(UChSystem.chrono_system);
 
         uaz.SetChassisFixed(chassisFixed);

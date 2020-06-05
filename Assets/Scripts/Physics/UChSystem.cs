@@ -9,6 +9,7 @@ using UnityEditor;
 /// <summary>
 /// Interface for Chrono subsystems that require FixedUpdate.
 /// For any object that implements IAdvance, its Advance() function will be called at each FixedUpdate.
+/// An object that implements IAdvance must register itself with the Chrono system.
 /// </summary>
 public interface IAdvance
 {
@@ -95,7 +96,7 @@ public class UChSystem : MonoBehaviour
 
     // -----------------------------
     // Subsystems that require FixedUpdate
-    private IEnumerable<IAdvance> subsystems;
+    private Dictionary<string, IAdvance> subsystems = new Dictionary<string, IAdvance>();
 
     // -----------------------------
     public UChSystem()
@@ -125,8 +126,6 @@ public class UChSystem : MonoBehaviour
         hhtAlpha = -0.2;
 
         integratorType = IntegratorType.EULER_IMPLICIT_LINEARIZED;
-
-        subsystems = new List<IAdvance>();
     }
 
     // -----------------------------
@@ -258,9 +257,6 @@ public class UChSystem : MonoBehaviour
         
         chrono_system.Set_G_acc(new ChVectorD(gravity.x, gravity.y, gravity.z));
         chrono_system.SetStep(step);
-
-        // Find all objects that implement IAdvance
-        subsystems = FindObjectsOfType<MonoBehaviour>().OfType<IAdvance>();
     }
 
     // -----------------------------
@@ -269,11 +265,17 @@ public class UChSystem : MonoBehaviour
         Time.fixedDeltaTime = (float)step;
 
         ////Debug.Log("sys Time = " + chrono_system.GetChTime() + "     num bodies: " + chrono_system.GetNbodies());
-        foreach (var subsys in subsystems)
+        foreach (var subsys in subsystems.Values)
         {
             subsys.Advance(step);
         }
         chrono_system.DoStepDynamics(step);
+    }
+
+    // -----------------------------
+    public void Register(string name, IAdvance subsystem)
+    {
+        subsystems.Add(name, subsystem);
     }
 
     // -----------------------------

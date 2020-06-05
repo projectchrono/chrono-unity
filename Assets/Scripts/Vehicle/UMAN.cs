@@ -34,6 +34,10 @@ public class UMAN : UChVehicle, IAdvance
 
     void Start()
     {
+        // Register with the Chrono system (for Advance).
+        UChSystem system = (UChSystem)FindObjectOfType(typeof(UChSystem));
+        system.Register(gameObject.name, this);
+
         man = new MAN_10t(UChSystem.chrono_system);
 
         man.SetChassisFixed(chassisFixed);

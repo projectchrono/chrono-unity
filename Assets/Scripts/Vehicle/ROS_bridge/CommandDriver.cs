@@ -53,6 +53,10 @@ public class CommandDriver : ICommandable, IAdvance
         m_erri = 0;
 
         guiStyle.fontStyle = FontStyle.Bold;
+
+        // Register with the Chrono system (for Advance).
+        UChSystem system = (UChSystem)FindObjectOfType(typeof(UChSystem));
+        system.Register(gameObject.name, this);
     }
 
     public override bool OnCommand(string[] command)

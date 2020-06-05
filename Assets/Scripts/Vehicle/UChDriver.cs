@@ -59,7 +59,6 @@ public class UChDriver : MonoBehaviour, IAdvance
     private double m_erri;  // current I error
 
     public UChVehicle vehicle;  // associated vehicle
-    private double step;        // integration step size (from underlying ChSystem)
 
     public GUIStyle guiStyle;
     public Color guiTextColor;
@@ -92,7 +91,11 @@ public class UChDriver : MonoBehaviour, IAdvance
 
     void Start()
     {
-        step = UChSystem.chrono_system.GetStep();
+        // Register with the Chrono system (for Advance).
+        UChSystem system = (UChSystem)FindObjectOfType(typeof(UChSystem));
+        system.Register(gameObject.name, this);
+
+        double step = UChSystem.chrono_system.GetStep();
 
         // Direct user control mode
         steering_desired = 0;

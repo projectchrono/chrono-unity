@@ -38,6 +38,10 @@ public class UHMMWV : UChVehicle, IAdvance
 
     void Start()
     {
+        // Register with the Chrono system (for Advance).
+        UChSystem system = (UChSystem)FindObjectOfType(typeof(UChSystem));
+        system.Register(gameObject.name, this);
+
         hmmwv = new HMMWV_Full(UChSystem.chrono_system);
 
         hmmwv.SetChassisFixed(chassisFixed);
