@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-public class UChDriver : MonoBehaviour, IAdvance
+public class Driver : MonoBehaviour, IAdvance
 {
     public enum SteeringMode
     {
@@ -64,7 +64,7 @@ public class UChDriver : MonoBehaviour, IAdvance
     public Color guiTextColor;
     public float gizmoRadius;
 
-    public UChDriver()
+    public Driver()
     {
         m_steering = 0;
         m_throttle = 0;
@@ -93,9 +93,11 @@ public class UChDriver : MonoBehaviour, IAdvance
     {
         // Register with the Chrono system (for Advance).
         UChSystem system = (UChSystem)FindObjectOfType(typeof(UChSystem));
-        system.Register(gameObject.name, this);
+        system.Register(gameObject.name + "_driver", this);
 
         double step = UChSystem.chrono_system.GetStep();
+
+        vehicle = GetComponent<UChVehicle>();
 
         // Direct user control mode
         steering_desired = 0;
@@ -237,6 +239,9 @@ public class UChDriver : MonoBehaviour, IAdvance
                     m_throttle = 0;
                 }
 
+                // Prevent brake locking if target speed is positive
+                if (targetSpeed > 0 && m_braking > 0.98)
+                    m_braking = 0.98;
 
                 ////Debug.Log("target: " + Math.Round(3.6 * targetSpeed * 100) / 100 +
                 ////          "   crt: " + Math.Round(3.6 * crt_speed * 100) / 100  +
@@ -308,8 +313,8 @@ public class UChDriver : MonoBehaviour, IAdvance
 
 // ==========================================================================================================
 
-[CustomEditor(typeof(UChDriver))]
-public class UChDriverEditor : Editor
+[CustomEditor(typeof(Driver))]
+public class DriverEditor : Editor
 {
     override public void OnInspectorGUI()
     {
@@ -321,17 +326,13 @@ public class UChDriverEditor : Editor
         ////myStyle.richText = true;
         ////EditorGUILayout.TextArea("This is my text <b>AND IT IS BOLD</b>", myStyle);
 
-        UChDriver driver = (UChDriver)target;
-
-        driver.vehicle = (UChVehicle)EditorGUILayout.ObjectField("Vehicle", driver.vehicle, typeof(UChVehicle), true);
-
-        EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);
+        Driver driver = (Driver)target;
 
         // Steering control mode
         string[] steering_options = new string[] { "Wheel Control", "Path Follower" };
-        driver.steeringMode = (UChDriver.SteeringMode)EditorGUILayout.Popup("Sterring Control Mode", (int)driver.steeringMode, steering_options, EditorStyles.popup);
+        driver.steeringMode = (Driver.SteeringMode)EditorGUILayout.Popup("Sterring Control Mode", (int)driver.steeringMode, steering_options, EditorStyles.popup);
 
-        if (driver.steeringMode == UChDriver.SteeringMode.PathFollower)
+        if (driver.steeringMode == Driver.SteeringMode.PathFollower)
         {
             EditorGUI.indentLevel++;
             driver.path = (UChVehiclePath)EditorGUILayout.ObjectField("Path", driver.path, typeof(UChVehiclePath), true);
@@ -347,9 +348,9 @@ public class UChDriverEditor : Editor
 
         // Speed control mode
         string[] speed_options = new string[] { "Pedal Control", "Cruise Control" };
-        driver.speedMode = (UChDriver.SpeedMode)EditorGUILayout.Popup("Speed Control Mode", (int)driver.speedMode, speed_options, EditorStyles.popup);
+        driver.speedMode = (Driver.SpeedMode)EditorGUILayout.Popup("Speed Control Mode", (int)driver.speedMode, speed_options, EditorStyles.popup);
 
-        if (driver.speedMode == UChDriver.SpeedMode.CruiseControl)
+        if (driver.speedMode == Driver.SpeedMode.CruiseControl)
         {
             EditorGUI.indentLevel++;
 

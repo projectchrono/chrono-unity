@@ -121,125 +121,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &524305651
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 897854277713753096, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: m_Name
-      value: Driver
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753097, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: vehicle
-      value: 
-      objectReference: {fileID: 1232716023}
-    - target: {fileID: 897854277713753097, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: targetSpeed
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753097, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: maxSpeed
-      value: 6.944444444444445
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753097, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: speedMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753097, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: Ki
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753097, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: Kd
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753097, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: steeringMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753097, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: path
-      value: 
-      objectReference: {fileID: 979412472}
-    - target: {fileID: 897854277713753097, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: lookAhead
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753097, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: steering_Kp
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753102, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753102, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753102, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753102, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753102, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753102, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753102, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753102, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753102, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753102, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753102, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7da09cd00fcfec04694dc687c510ff4e, type: 3}
 --- !u!1 &594548274
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,7 +258,7 @@ PrefabInstance:
     - target: {fileID: 2952408524682064706, guid: 43adf02a662e8d1408a1631459eb3b8d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2952408524682064706, guid: 43adf02a662e8d1408a1631459eb3b8d,
         type: 3}
@@ -398,6 +279,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gator
+      objectReference: {fileID: 0}
+    - target: {fileID: 5974644424548252047, guid: 43adf02a662e8d1408a1631459eb3b8d,
+        type: 3}
+      propertyPath: steeringMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5974644424548252047, guid: 43adf02a662e8d1408a1631459eb3b8d,
+        type: 3}
+      propertyPath: path
+      value: 
+      objectReference: {fileID: 979412472}
+    - target: {fileID: 5974644424548252047, guid: 43adf02a662e8d1408a1631459eb3b8d,
+        type: 3}
+      propertyPath: lookAhead
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43adf02a662e8d1408a1631459eb3b8d, type: 3}
@@ -604,7 +500,7 @@ PrefabInstance:
     - target: {fileID: 4675249412613692363, guid: ee3e6db3bf57734439662c1ecc464407,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4675249412613692363, guid: ee3e6db3bf57734439662c1ecc464407,
         type: 3}
@@ -853,7 +749,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &979412472
 MonoBehaviour:
@@ -885,6 +781,7 @@ MonoBehaviour:
   points: []
   bezierCurveFile: 
   numRenderPoints: 100
+  hidePath: 0
 --- !u!114 &1232716023 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8650646542623470723, guid: 43adf02a662e8d1408a1631459eb3b8d,

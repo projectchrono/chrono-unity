@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5369221047283868313}
   - component: {fileID: 8802705877466911110}
+  - component: {fileID: 1292443200853777129}
   m_Layer: 0
   m_Name: UAZ
   m_TagString: Untagged
@@ -19,7 +20,7 @@ GameObject:
   m_IsActive: 1
 --- !u!4 &5369221047283868313
 Transform:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 10
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -48,6 +49,102 @@ MonoBehaviour:
   initForwardVel: 0
   initWheelAngSpeed: 0
   chassisMaterial: {fileID: 0}
+--- !u!114 &1292443200853777129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7757811851827452891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bf569f0424953b44b5ea51685ae6524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  steeringMode: 0
+  speedMode: 1
+  steeringGain: 4
+  throttleGain: 4
+  brakingGain: 4
+  path: {fileID: 0}
+  lookAhead: 5
+  steering_Kp: 0.8
+  steering_Kd: 0
+  steering_Ki: 0
+  targetSpeed: 0
+  speed_Kp: 0.6
+  speed_Kd: 0.2
+  speed_Ki: 0.1
+  vehicle: {fileID: 0}
+  guiStyle:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 0
+    m_FontStyle: 0
+    m_Alignment: 0
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
+  guiTextColor: {r: 0, g: 0, b: 0, a: 0}
+  gizmoRadius: 0.1
 --- !u!1001 &6614633615037941905
 PrefabInstance:
   m_ObjectHideFlags: 0

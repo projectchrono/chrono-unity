@@ -555,6 +555,11 @@ PrefabInstance:
       propertyPath: chassisMaterial
       value: 
       objectReference: {fileID: 2100000, guid: 442324137fd93db4e80125d57d248a01, type: 2}
+    - target: {fileID: 7236152343886077500, guid: b5c2a1bb8816a3a4bbb434064c26f03f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5c2a1bb8816a3a4bbb434064c26f03f, type: 3}
 --- !u!1001 &1132636841
@@ -628,6 +633,21 @@ PrefabInstance:
         type: 3}
       propertyPath: chassisFixed
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236152343886077500, guid: b5c2a1bb8816a3a4bbb434064c26f03f,
+        type: 3}
+      propertyPath: guiStyle.m_Normal.m_TextColor.r
+      value: 0.92310274
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236152343886077500, guid: b5c2a1bb8816a3a4bbb434064c26f03f,
+        type: 3}
+      propertyPath: guiStyle.m_Normal.m_TextColor.g
+      value: 0.9245283
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236152343886077500, guid: b5c2a1bb8816a3a4bbb434064c26f03f,
+        type: 3}
+      propertyPath: guiStyle.m_Normal.m_TextColor.b
+      value: 0.07849771
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5c2a1bb8816a3a4bbb434064c26f03f, type: 3}
@@ -796,117 +816,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ac1a8f5220b40478e760fd8e51af83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &897854278105653954
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 897854277713753096, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: m_Name
-      value: Driver
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753097, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: vehicle
-      value: 
-      objectReference: {fileID: 1865928866}
-    - target: {fileID: 897854277713753097, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: Kd
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753097, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: Ki
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753097, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: guiTextColor.r
-      value: 0.9254902
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753097, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: guiTextColor.g
-      value: 0.09411762
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753097, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: guiTextColor.b
-      value: 0.19708855
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753097, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: guiStyle.m_Normal.m_TextColor.r
-      value: 0.8584906
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753097, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: guiStyle.m_Normal.m_TextColor.g
-      value: 0.83238083
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753097, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: guiStyle.m_Normal.m_TextColor.b
-      value: 0.17007832
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753102, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753102, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753102, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753102, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753102, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753102, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753102, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753102, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753102, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753102, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 897854277713753102, guid: 7da09cd00fcfec04694dc687c510ff4e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7da09cd00fcfec04694dc687c510ff4e, type: 3}
