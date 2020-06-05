@@ -42,6 +42,7 @@ public class UChDriver : MonoBehaviour, IAdvance
     ChPathSteeringController steeringController;  // lateral steering controller
     private bool steeringControllerInitialized;
 
+    public double lookAhead;  // look ahead distance
     public double steering_Kp;  // proportional gain
     public double steering_Kd;  // differential gain
     public double steering_Ki;  // integral gain
@@ -49,7 +50,6 @@ public class UChDriver : MonoBehaviour, IAdvance
     // Speed cruise controller
     public double targetSpeed;  // set target speed
 
-    public double lookAhead;  // look ahead distance
     public double speed_Kp;   // proportional gain
     public double speed_Kd;   // differential gain
     public double speed_Ki;   // integral gain
@@ -323,9 +323,6 @@ public class UChDriverEditor : Editor
         driver.vehicle = (UChVehicle)EditorGUILayout.ObjectField("Vehicle", driver.vehicle, typeof(UChVehicle), true);
 
         EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);
-
-        // Forward/reverse
-
 
         // Steering control mode
         string[] steering_options = new string[] { "Wheel Control", "Path Follower" };
