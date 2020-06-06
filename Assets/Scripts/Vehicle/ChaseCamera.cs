@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-public class CameraFollower : MonoBehaviour, IAdvance
+public class ChaseCamera : MonoBehaviour, IAdvance
 {
     private UChVehicle[] vehicles;
     private UChVehicle vehicle;

@@ -14,7 +14,7 @@ public class SceneInitialization : MonoBehaviour
         cameraHomeRot = transform.rotation;
 
         // Pass this information to the chase camera (as its home position)
-        CameraFollower chaseCam = FindObjectOfType<CameraFollower>();
+        ChaseCamera chaseCam = FindObjectOfType<ChaseCamera>();
         chaseCam.SetHomePosition(cameraHomePos, cameraHomeRot);
 
         // Deactivate the containing camera object
