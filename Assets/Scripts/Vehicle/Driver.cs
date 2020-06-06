@@ -8,12 +8,13 @@ public class Driver : MonoBehaviour, IAdvance
 {
     public enum SteeringMode
     {
-        Default,     // user left/right control
-        PathFollower // PID lateral controller
+        Default,      // user left/right control
+        PathFollower  // PID lateral controller
     }
     public SteeringMode steeringMode;
 
-    public enum SpeedMode { 
+    public enum SpeedMode
+    {
         Default,       // user throttle/brake control
         CruiseControl  // PID speed controller
     }
@@ -29,13 +30,13 @@ public class Driver : MonoBehaviour, IAdvance
     public double throttleGain;
     public double brakingGain;
 
-    private double steering_desired;
-    private double throttle_desired;
-    private double braking_desired;
+    private double steeringDesired;
+    private double throttleDesired;
+    private double brakingDesired;
 
-    private double steering_delta;
-    private double throttle_delta;
-    private double braking_delta;
+    private double steeringDelta;
+    private double throttleDelta;
+    private double brakingDelta;
 
     // Path-follower lateral controller
     public UChVehiclePath path;                   // associated path
@@ -43,16 +44,16 @@ public class Driver : MonoBehaviour, IAdvance
     private bool steeringControllerInitialized;
 
     public double lookAhead;  // look ahead distance
-    public double steering_Kp;  // proportional gain
-    public double steering_Kd;  // differential gain
-    public double steering_Ki;  // integral gain
+    public double steeringKp;  // proportional gain
+    public double steeringKd;  // differential gain
+    public double steeringKi;  // integral gain
 
     // Speed cruise controller
     public double targetSpeed;  // set target speed
 
-    public double speed_Kp;   // proportional gain
-    public double speed_Kd;   // differential gain
-    public double speed_Ki;   // integral gain
+    public double speedKp;   // proportional gain
+    public double speedKd;   // differential gain
+    public double speedKi;   // integral gain
 
     private double m_err;   // current P error
     private double m_errd;  // current D error
@@ -75,13 +76,13 @@ public class Driver : MonoBehaviour, IAdvance
         brakingGain = 4;
 
         lookAhead = 5.0;
-        steering_Kp = 0.8;
-        steering_Kd = 0.0;
-        steering_Ki = 0.0;
+        steeringKp = 0.8;
+        steeringKd = 0.0;
+        steeringKi = 0.0;
 
-        speed_Kp = 0.6;
-        speed_Kd = 0.2;
-        speed_Ki = 0.1;
+        speedKp = 0.6;
+        speedKd = 0.2;
+        speedKi = 0.1;
 
         steeringMode = SteeringMode.Default;
         speedMode = SpeedMode.CruiseControl;
@@ -97,15 +98,16 @@ public class Driver : MonoBehaviour, IAdvance
 
         double step = UChSystem.chrono_system.GetStep();
 
+        // Set associated vehicle
         vehicle = GetComponent<UChVehicle>();
 
         // Direct user control mode
-        steering_desired = 0;
-        throttle_desired = 0;
-        braking_desired = 0;
-        steering_delta = step / 1;
-        throttle_delta = step / 8;
-        braking_delta = step / 4;
+        steeringDesired = 0;
+        throttleDesired = 0;
+        brakingDesired = 0;
+        steeringDelta = step / 1;
+        throttleDelta = step / 8;
+        brakingDelta = step / 4;
 
         // Path-follower
         steeringControllerInitialized = false;
@@ -141,10 +143,10 @@ public class Driver : MonoBehaviour, IAdvance
         {
             case SteeringMode.Default:
 
-                if (horiz > 0) { steering_desired = Utils.Clamp(steering_desired - steering_delta, -1, 1); }
-                else if (horiz < 0) { steering_desired = Utils.Clamp(steering_desired + steering_delta, -1, 1); }
+                if (horiz > 0) { steeringDesired = Utils.Clamp(steeringDesired - steeringDelta, -1, 1); }
+                else if (horiz < 0) { steeringDesired = Utils.Clamp(steeringDesired + steeringDelta, -1, 1); }
 
-                m_steering += step * steeringGain * (steering_desired - m_steering);
+                m_steering += step * steeringGain * (steeringDesired - m_steering);
 
                 break;
 
@@ -157,7 +159,7 @@ public class Driver : MonoBehaviour, IAdvance
                     {
                         steeringController = new ChPathSteeringController(path.GetChVehiclePath());
                         steeringController.SetLookAheadDistance(lookAhead);
-                        steeringController.SetGains(steering_Kp, steering_Ki, steering_Kd);
+                        steeringController.SetGains(steeringKp, steeringKi, steeringKd);
                         steeringController.Reset(vehicle.GetChVehicle());
                         steeringControllerInitialized = true;
                     }
@@ -177,24 +179,24 @@ public class Driver : MonoBehaviour, IAdvance
 
                 if (vert > 0)
                 {
-                    throttle_desired = Utils.Clamp(throttle_desired + throttle_delta, 0, 1);
-                    if (throttle_desired > 0)
+                    throttleDesired = Utils.Clamp(throttleDesired + throttleDelta, 0, 1);
+                    if (throttleDesired > 0)
                     {
-                        braking_desired = Utils.Clamp(braking_desired - 3 * braking_delta, 0, 1);
+                        brakingDesired = Utils.Clamp(brakingDesired - 3 * brakingDelta, 0, 1);
                     }
                 }
                 else if (vert < 0)
                 {
-                    throttle_desired = Utils.Clamp(throttle_desired - 3 * throttle_delta, 0, 1);
-                    if (throttle_desired == 0)
+                    throttleDesired = Utils.Clamp(throttleDesired - 3 * throttleDelta, 0, 1);
+                    if (throttleDesired == 0)
                     {
-                        braking_desired = Utils.Clamp(braking_desired + braking_delta, 0, 1);
+                        brakingDesired = Utils.Clamp(brakingDesired + brakingDelta, 0, 1);
                     }
                 }
 
                 // Integrate dynamics
-                m_throttle += step * throttleGain * (throttle_desired - m_throttle);
-                m_braking += step * brakingGain * (braking_desired - m_braking);
+                m_throttle += step * throttleGain * (throttleDesired - m_throttle);
+                m_braking += step * brakingGain * (brakingDesired - m_braking);
 
                 break;
 
@@ -214,11 +216,11 @@ public class Driver : MonoBehaviour, IAdvance
 
                 double throttle_threshold = 0.2;
                 double crt_speed = vehicle.GetSpeed();
-                double err = targetSpeed - crt_speed;   // Calculate current error
-                m_errd = (err - m_err) / step;          // Estimate error derivative (backward FD approximation)
-                m_erri += (err + m_err) * step / 2;     // Calculate current error integral (trapezoidal rule).
-                m_err = err;                            // Cache new error
-                double output = speed_Kp * m_err + speed_Ki * m_erri + speed_Kd * m_errd; // PID output
+                double err = Math.Abs(targetSpeed) - crt_speed;  // Calculate current error
+                m_errd = (err - m_err) / step;                   // Estimate error derivative (backward FD approximation)
+                m_erri += (err + m_err) * step / 2;              // Calculate current error integral (trapezoidal rule)
+                m_err = err;                                     // Cache new error
+                double output = speedKp * m_err + speedKi * m_erri + speedKd * m_errd; // PID output
                 output = Utils.Clamp(output, -1.0, +1.0);
                 if (output > 0)
                 {
@@ -339,9 +341,9 @@ public class DriverEditor : Editor
 
             driver.lookAhead = EditorGUILayout.DoubleField("Look-ahead Distance", driver.lookAhead);
 
-            driver.steering_Kp = EditorGUILayout.DoubleField(new GUIContent("Kp", "Gain for PID proportional term"), driver.steering_Kp);
-            driver.steering_Kd = EditorGUILayout.DoubleField(new GUIContent("Kd", "Gain for PID derivative term"), driver.steering_Kd);
-            driver.steering_Ki = EditorGUILayout.DoubleField(new GUIContent("Ki", "Gain for PID integral term"), driver.steering_Ki);
+            driver.steeringKp = EditorGUILayout.DoubleField(new GUIContent("Kp", "Gain for PID proportional term"), driver.steeringKp);
+            driver.steeringKd = EditorGUILayout.DoubleField(new GUIContent("Kd", "Gain for PID derivative term"), driver.steeringKd);
+            driver.steeringKi = EditorGUILayout.DoubleField(new GUIContent("Ki", "Gain for PID integral term"), driver.steeringKi);
 
             EditorGUI.indentLevel--;
         }
@@ -358,9 +360,9 @@ public class DriverEditor : Editor
             KPH = EditorGUILayout.DoubleField("Target Speed (km/h)", KPH);
             driver.targetSpeed = KPH / 3.6;
 
-            driver.speed_Kp = EditorGUILayout.DoubleField(new GUIContent("Kp", "Gain for PID proportional term"), driver.speed_Kp);
-            driver.speed_Kd = EditorGUILayout.DoubleField(new GUIContent("Kd", "Gain for PID derivative term"), driver.speed_Kd);
-            driver.speed_Ki = EditorGUILayout.DoubleField(new GUIContent("Ki", "Gain for PID integral term"), driver.speed_Ki);
+            driver.speedKp = EditorGUILayout.DoubleField(new GUIContent("Kp", "Gain for PID proportional term"), driver.speedKp);
+            driver.speedKd = EditorGUILayout.DoubleField(new GUIContent("Kd", "Gain for PID derivative term"), driver.speedKd);
+            driver.speedKi = EditorGUILayout.DoubleField(new GUIContent("Ki", "Gain for PID integral term"), driver.speedKi);
 
             EditorGUI.indentLevel--;
         }

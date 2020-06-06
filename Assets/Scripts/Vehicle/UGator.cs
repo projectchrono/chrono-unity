@@ -36,9 +36,22 @@ public class UGator : UChVehicle, IAdvance
 
     void Start()
     {
+        // HACK!!!!
+        // If we can find a TCPServer, assume the Gator will be controlled through ROS commands.
+        // Disable the existing Driver component and attach a CommandDriver.
+        if ((TCPServer)FindObjectOfType(typeof(TCPServer)))
+        {
+            gameObject.GetComponent<Driver>().enabled = false;
+            CommandDriver drv = gameObject.AddComponent<CommandDriver>() as CommandDriver;
+            drv.speedKp = 0.8;
+            drv.speedKi = 0.2;
+            drv.speedKd = 0.1;
+            drv.guiStyle.normal.textColor = Color.yellow;
+        }
+        
         // Register with the Chrono system (for Advance).
         UChSystem system = (UChSystem)FindObjectOfType(typeof(UChSystem));
-        system.Register(gameObject.name, this);
+        system.Register(gameObject.name + "_driver", this);
 
         gator = new Gator(UChSystem.chrono_system);
 
