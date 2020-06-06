@@ -54,7 +54,7 @@ public class CommandDriver : ICommandable, IAdvance
 
         // Register with the Chrono system (for Advance).
         UChSystem system = (UChSystem)FindObjectOfType(typeof(UChSystem));
-        system.Register(gameObject.name, this);
+        system.Register(gameObject.name + "_command_driver", this);
 
         // Set associated vehicle
         vehicle = GetComponent<UChVehicle>();

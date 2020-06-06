@@ -51,7 +51,7 @@ public class UGator : UChVehicle, IAdvance
         
         // Register with the Chrono system (for Advance).
         UChSystem system = (UChSystem)FindObjectOfType(typeof(UChSystem));
-        system.Register(gameObject.name + "_driver", this);
+        system.Register(gameObject.name, this);
 
         gator = new Gator(UChSystem.chrono_system);
 
