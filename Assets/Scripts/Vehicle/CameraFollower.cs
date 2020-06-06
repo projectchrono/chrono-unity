@@ -28,6 +28,15 @@ public class CameraFollower : MonoBehaviour, IAdvance
     private Quaternion homeRot;
     bool attached = false;
 
+    public void SetHomePosition(Vector3 pos, Quaternion rot)
+    {
+        homePos = pos;
+        homeRot = rot;
+        transform.position = homePos;
+        transform.rotation = homeRot;
+        attached = false;
+    }
+
     public void Awake()
     {
         guiStyle.fontStyle = FontStyle.Bold;
