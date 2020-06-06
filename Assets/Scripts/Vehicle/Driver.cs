@@ -257,12 +257,6 @@ public class Driver : MonoBehaviour, IAdvance
         vehicle.SetDriverInputs(m_steering, m_throttle, m_braking);
     }
 
-    // When attaching to a Game Object, hide the transform
-    void OnValidate()
-    {
-        transform.hideFlags = HideFlags.NotEditable | HideFlags.HideInInspector;
-    }
-
     private void OnDrawGizmos()
     {
         if (steeringControllerInitialized)

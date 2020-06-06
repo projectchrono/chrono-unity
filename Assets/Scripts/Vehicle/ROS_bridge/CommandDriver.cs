@@ -132,10 +132,4 @@ public class CommandDriver : ICommandable, IAdvance
 
         vehicle.SetDriverInputs(m_steering, m_throttle, m_braking);
     }
-
-    // When attaching to a Game Object, hide the transform
-    void OnValidate()
-    {
-        transform.hideFlags = HideFlags.NotEditable | HideFlags.HideInInspector;
-    }
 }
