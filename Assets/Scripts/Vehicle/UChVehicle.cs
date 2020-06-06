@@ -26,6 +26,9 @@ public abstract class UChVehicle : MonoBehaviour
     }
 
     public double GetSpeed() { return speed; }
+    public double GetSteeringInput() { return inputs.m_steering; }
+    public double GetThrottleInput() { return inputs.m_throttle; }
+    public double GetBrakingInput() { return inputs.m_braking; }
 
     public abstract double GetMaxSpeed();
     public abstract ChVehicle GetChVehicle();

@@ -26,8 +26,6 @@ public class CommandDriver : ICommandable, IAdvance
 
     public UChVehicle vehicle;  // associated vehicle
 
-    public GUIStyle guiStyle = new GUIStyle();
-
     public CommandDriver()
     {
         targetSpeed = 0;
@@ -49,8 +47,6 @@ public class CommandDriver : ICommandable, IAdvance
         m_err = 0;
         m_errd = 0;
         m_erri = 0;
-
-        guiStyle.fontStyle = FontStyle.Bold;
 
         // Register with the Chrono system (for Advance).
         UChSystem system = (UChSystem)FindObjectOfType(typeof(UChSystem));
@@ -141,40 +137,5 @@ public class CommandDriver : ICommandable, IAdvance
     void OnValidate()
     {
         transform.hideFlags = HideFlags.NotEditable | HideFlags.HideInInspector;
-    }
-
-    private void OnGUI()
-    {
-        if (Application.isEditor)
-        {
-            double speedKPH = Math.Round(3.6 * vehicle.GetSpeed());
-            GUI.Label(new Rect(Screen.width - 250, 10, 200, 40), "Speed (km/h): " + speedKPH.ToString(), guiStyle);
-            double throttle = Math.Round(m_throttle * 100) / 100;
-            GUI.Label(new Rect(Screen.width - 250, 40, 200, 40), "Throttle: " + throttle.ToString(), guiStyle);
-            double braking = Math.Round(m_braking * 100) / 100;
-            GUI.Label(new Rect(Screen.width - 250, 60, 200, 40), "Braking: " + braking.ToString(), guiStyle);
-            double steering = Math.Round(m_steering * 100) / 100;
-            GUI.Label(new Rect(Screen.width - 250, 80, 200, 40), "Steering: " + steering.ToString(), guiStyle);
-
-            switch (vehicle.GetChVehicle().GetPowertrain().GetDriveMode())
-            {
-                case ChPowertrain.DriveMode.FORWARD:
-                    GUI.Label(new Rect(Screen.width - 250, 100, 200, 40), "Gear: Forward", guiStyle);
-                    break;
-                case ChPowertrain.DriveMode.REVERSE:
-                    GUI.Label(new Rect(Screen.width - 250, 100, 200, 40), "Gear: Reverse", guiStyle);
-                    break;
-            }
-
-            double motorTorque = Math.Round(vehicle.GetPowertrain().GetMotorTorque());
-            GUI.Label(new Rect(Screen.width - 250, 130, 200, 40), "Motor Torque (Nm): " + motorTorque.ToString(), guiStyle);
-            double motorSpeed = Math.Round(vehicle.GetPowertrain().GetMotorSpeed() * 60 / (2 * Math.PI));
-            GUI.Label(new Rect(Screen.width - 250, 150, 200, 40), "Motor Speed (RPM): " + motorSpeed.ToString(), guiStyle);
-
-            float wallTime = Time.realtimeSinceStartup;
-            float gameTime = Time.unscaledTime;
-            float ratio = gameTime / wallTime;
-            GUI.Label(new Rect(Screen.width - 250, 170, 200, 40), "Time factor: " + Mathf.Round(ratio * 100) / 100, guiStyle);
-        }
     }
 }

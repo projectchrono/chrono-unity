@@ -139,7 +139,7 @@ public class TCPServer : MonoBehaviour
             {
 
                 string message = messageQueue.Dequeue();
-                Debug.Log("Got command: " + message);
+                ////Debug.Log("Got command: " + message);
                 string[] message_words = message.Split(' ');
 
                 if (message_words.Length > 1)

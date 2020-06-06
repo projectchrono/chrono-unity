@@ -46,7 +46,6 @@ public class UGator : UChVehicle, IAdvance
             drv.speedKp = 0.8;
             drv.speedKi = 0.2;
             drv.speedKd = 0.1;
-            drv.guiStyle.normal.textColor = Color.yellow;
         }
         
         // Register with the Chrono system (for Advance).

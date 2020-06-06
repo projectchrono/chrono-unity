@@ -43,17 +43,19 @@ public class Driver : MonoBehaviour, IAdvance
     ChPathSteeringController steeringController;  // lateral steering controller
     private bool steeringControllerInitialized;
 
-    public double lookAhead;  // look ahead distance
+    public double lookAhead;   // look ahead distance
     public double steeringKp;  // proportional gain
     public double steeringKd;  // differential gain
     public double steeringKi;  // integral gain
 
-    // Speed cruise controller
-    public double targetSpeed;  // set target speed
+    public float gizmoRadius;  // radius of tracking spheres
 
-    public double speedKp;   // proportional gain
-    public double speedKd;   // differential gain
-    public double speedKi;   // integral gain
+    // Speed cruise controller
+    public double targetSpeed; // set target speed
+
+    public double speedKp;  // proportional gain
+    public double speedKd;  // differential gain
+    public double speedKi;  // integral gain
 
     private double m_err;   // current P error
     private double m_errd;  // current D error
@@ -61,9 +63,6 @@ public class Driver : MonoBehaviour, IAdvance
 
     public UChVehicle vehicle;  // associated vehicle
 
-    public GUIStyle guiStyle;
-    public Color guiTextColor;
-    public float gizmoRadius;
 
     public Driver()
     {
@@ -117,8 +116,6 @@ public class Driver : MonoBehaviour, IAdvance
         m_err = 0;
         m_errd = 0;
         m_erri = 0;
-
-        guiStyle.fontStyle = FontStyle.Bold;
     }
 
     public void Advance(double step)
@@ -266,41 +263,6 @@ public class Driver : MonoBehaviour, IAdvance
         transform.hideFlags = HideFlags.NotEditable | HideFlags.HideInInspector;
     }
 
-    private void OnGUI()
-    {
-        if (Application.isEditor)
-        {
-            double speedKPH = Math.Round(3.6 * vehicle.GetSpeed());
-            GUI.Label(new Rect(10, 10, 200, 40), "Speed (km/h): " + speedKPH.ToString(), guiStyle);
-            double throttle = Math.Round(m_throttle * 100) / 100;
-            GUI.Label(new Rect(10, 40, 200, 40), "Throttle: " + throttle.ToString(), guiStyle);
-            double braking = Math.Round(m_braking * 100) / 100;
-            GUI.Label(new Rect(10, 60, 200, 40), "Braking: " + braking.ToString(), guiStyle);
-            double steering = Math.Round(m_steering * 100) / 100;
-            GUI.Label(new Rect(10, 80, 200, 40), "Steering: " + steering.ToString(), guiStyle);
-
-            switch (vehicle.GetChVehicle().GetPowertrain().GetDriveMode())
-            {
-                case ChPowertrain.DriveMode.FORWARD:
-                    GUI.Label(new Rect(10, 100, 200, 40), "Gear: Forward", guiStyle);
-                    break;
-                case ChPowertrain.DriveMode.REVERSE:
-                    GUI.Label(new Rect(10, 100, 200, 40), "Gear: Reverse", guiStyle);
-                    break;
-            }
-
-            double motorTorque = Math.Round(vehicle.GetPowertrain().GetMotorTorque());
-            GUI.Label(new Rect(10, 130, 200, 40), "Motor Torque (Nm): " + motorTorque.ToString(), guiStyle);
-            double motorSpeed = Math.Round(vehicle.GetPowertrain().GetMotorSpeed() * 60 / (2 * Math.PI));
-            GUI.Label(new Rect(10, 150, 200, 40), "Motor Speed (RPM): " + motorSpeed.ToString(), guiStyle);
-
-            float wallTime = Time.realtimeSinceStartup;
-            float gameTime = Time.unscaledTime;
-            float ratio = gameTime / wallTime;
-            GUI.Label(new Rect(10, 170, 200, 40), "Time factor: " + Mathf.Round(ratio * 100) / 100, guiStyle);
-        }
-    }
-
     private void OnDrawGizmos()
     {
         if (steeringControllerInitialized)
@@ -345,8 +307,12 @@ public class DriverEditor : Editor
             driver.steeringKd = EditorGUILayout.DoubleField(new GUIContent("Kd", "Gain for PID derivative term"), driver.steeringKd);
             driver.steeringKi = EditorGUILayout.DoubleField(new GUIContent("Ki", "Gain for PID integral term"), driver.steeringKi);
 
+            driver.gizmoRadius = EditorGUILayout.FloatField("Gizmo Radius", driver.gizmoRadius);
+
             EditorGUI.indentLevel--;
         }
+
+        EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);
 
         // Speed control mode
         string[] speed_options = new string[] { "Pedal Control", "Cruise Control" };
@@ -366,14 +332,6 @@ public class DriverEditor : Editor
 
             EditorGUI.indentLevel--;
         }
-
-        EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);
-
-        Color textColor = driver.guiStyle.normal.textColor;
-        textColor = EditorGUILayout.ColorField("GUI Text Color", textColor);
-        driver.guiStyle.normal.textColor = textColor;
-
-        driver.gizmoRadius = EditorGUILayout.FloatField("Gizmo Radius", driver.gizmoRadius);
 
         if (GUI.changed)
         {
