@@ -306,7 +306,7 @@ PrefabInstance:
     - target: {fileID: 4675249412613692364, guid: ee3e6db3bf57734439662c1ecc464407,
         type: 3}
       propertyPath: m_Name
-      value: ChaseCam
+      value: ChaseCamera
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee3e6db3bf57734439662c1ecc464407, type: 3}
