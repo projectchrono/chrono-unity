@@ -232,17 +232,27 @@ PrefabInstance:
     - target: {fileID: 4675249412613692360, guid: ee3e6db3bf57734439662c1ecc464407,
         type: 3}
       propertyPath: textColor.r
-      value: 0.9496191
+      value: 0.3529412
       objectReference: {fileID: 0}
     - target: {fileID: 4675249412613692360, guid: ee3e6db3bf57734439662c1ecc464407,
         type: 3}
       propertyPath: textColor.g
-      value: 0.9716981
+      value: 0.3529412
       objectReference: {fileID: 0}
     - target: {fileID: 4675249412613692360, guid: ee3e6db3bf57734439662c1ecc464407,
         type: 3}
       propertyPath: textColor.b
-      value: 0.018333912
+      value: 0.3529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 4675249412613692360, guid: ee3e6db3bf57734439662c1ecc464407,
+        type: 3}
+      propertyPath: worldUp
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4675249412613692360, guid: ee3e6db3bf57734439662c1ecc464407,
+        type: 3}
+      propertyPath: textColor.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4675249412613692363, guid: ee3e6db3bf57734439662c1ecc464407,
         type: 3}
