@@ -142,8 +142,8 @@ public class ChVehicle : global::System.IDisposable {
     return ret;
   }
 
-  public ChVectorD GetVehicleAcceleration(ChVectorD locpos) {
-    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChVehicle_GetVehicleAcceleration(swigCPtr, ChVectorD.getCPtr(locpos)), true);
+  public ChVectorD GetVehiclePointAcceleration(ChVectorD locpos) {
+    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChVehicle_GetVehiclePointAcceleration(swigCPtr, ChVectorD.getCPtr(locpos)), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

@@ -17226,6 +17226,447 @@ class ChronoEngine_csharpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_WriteCurvePovray__SWIG_2")]
   public static extern void WriteCurvePovray__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2, string jarg3);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChRunningAverage")]
+  public static extern global::System.IntPtr new_ChRunningAverage(int jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChRunningAverage")]
+  public static extern void delete_ChRunningAverage(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChRunningAverage_Add")]
+  public static extern double ChRunningAverage_Add(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChRunningAverage_GetStdDev")]
+  public static extern double ChRunningAverage_GetStdDev(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChRunningAverage_Reset")]
+  public static extern void ChRunningAverage_Reset(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChMovingAverage")]
+  public static extern global::System.IntPtr new_ChMovingAverage(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChMovingAverage")]
+  public static extern void delete_ChMovingAverage(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChMovingAverage_Get__SWIG_0")]
+  public static extern global::System.IntPtr ChMovingAverage_Get__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChMovingAverage_Get__SWIG_1")]
+  public static extern double ChMovingAverage_Get__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChAnalogueFilter")]
+  public static extern void delete_ChAnalogueFilter(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChAnalogueFilter_Reset")]
+  public static extern void ChAnalogueFilter_Reset(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChAnalogueFilter_Filter")]
+  public static extern double ChAnalogueFilter_Filter(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFilterI__SWIG_0")]
+  public static extern global::System.IntPtr new_ChFilterI__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFilterI__SWIG_1")]
+  public static extern global::System.IntPtr new_ChFilterI__SWIG_1(double jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFilterI__SWIG_2")]
+  public static extern global::System.IntPtr new_ChFilterI__SWIG_2(double jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChFilterI")]
+  public static extern void delete_ChFilterI(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFilterI_Reset")]
+  public static extern void ChFilterI_Reset(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFilterI_Config__SWIG_0")]
+  public static extern void ChFilterI_Config__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, double jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFilterI_Config__SWIG_1")]
+  public static extern void ChFilterI_Config__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFilterI_Filter")]
+  public static extern double ChFilterI_Filter(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFilterD__SWIG_0")]
+  public static extern global::System.IntPtr new_ChFilterD__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFilterD__SWIG_1")]
+  public static extern global::System.IntPtr new_ChFilterD__SWIG_1(double jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFilterD__SWIG_2")]
+  public static extern global::System.IntPtr new_ChFilterD__SWIG_2(double jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChFilterD")]
+  public static extern void delete_ChFilterD(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFilterD_Reset")]
+  public static extern void ChFilterD_Reset(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFilterD_Config__SWIG_0")]
+  public static extern void ChFilterD_Config__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, double jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFilterD_Config__SWIG_1")]
+  public static extern void ChFilterD_Config__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFilterD_Filter")]
+  public static extern double ChFilterD_Filter(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFilterPT1__SWIG_0")]
+  public static extern global::System.IntPtr new_ChFilterPT1__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFilterPT1__SWIG_1")]
+  public static extern global::System.IntPtr new_ChFilterPT1__SWIG_1(double jarg1, double jarg2, double jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFilterPT1__SWIG_2")]
+  public static extern global::System.IntPtr new_ChFilterPT1__SWIG_2(double jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFilterPT1__SWIG_3")]
+  public static extern global::System.IntPtr new_ChFilterPT1__SWIG_3(double jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChFilterPT1")]
+  public static extern void delete_ChFilterPT1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFilterPT1_Reset")]
+  public static extern void ChFilterPT1_Reset(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFilterPT1_Config__SWIG_0")]
+  public static extern void ChFilterPT1_Config__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, double jarg3, double jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFilterPT1_Config__SWIG_1")]
+  public static extern void ChFilterPT1_Config__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, double jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFilterPT1_Config__SWIG_2")]
+  public static extern void ChFilterPT1_Config__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFilterPT1_Filter")]
+  public static extern double ChFilterPT1_Filter(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFilterPD1__SWIG_0")]
+  public static extern global::System.IntPtr new_ChFilterPD1__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFilterPD1__SWIG_1")]
+  public static extern global::System.IntPtr new_ChFilterPD1__SWIG_1(double jarg1, double jarg2, double jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFilterPD1__SWIG_2")]
+  public static extern global::System.IntPtr new_ChFilterPD1__SWIG_2(double jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFilterPD1__SWIG_3")]
+  public static extern global::System.IntPtr new_ChFilterPD1__SWIG_3(double jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChFilterPD1")]
+  public static extern void delete_ChFilterPD1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFilterPD1_Reset")]
+  public static extern void ChFilterPD1_Reset(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFilterPD1_Config__SWIG_0")]
+  public static extern void ChFilterPD1_Config__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, double jarg3, double jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFilterPD1_Config__SWIG_1")]
+  public static extern void ChFilterPD1_Config__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, double jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFilterPD1_Config__SWIG_2")]
+  public static extern void ChFilterPD1_Config__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFilterPD1_Filter")]
+  public static extern double ChFilterPD1_Filter(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFilterPDT1__SWIG_0")]
+  public static extern global::System.IntPtr new_ChFilterPDT1__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFilterPDT1__SWIG_1")]
+  public static extern global::System.IntPtr new_ChFilterPDT1__SWIG_1(double jarg1, double jarg2, double jarg3, double jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFilterPDT1__SWIG_2")]
+  public static extern global::System.IntPtr new_ChFilterPDT1__SWIG_2(double jarg1, double jarg2, double jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFilterPDT1__SWIG_3")]
+  public static extern global::System.IntPtr new_ChFilterPDT1__SWIG_3(double jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChFilterPDT1__SWIG_4")]
+  public static extern global::System.IntPtr new_ChFilterPDT1__SWIG_4(double jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChFilterPDT1")]
+  public static extern void delete_ChFilterPDT1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFilterPDT1_Reset")]
+  public static extern void ChFilterPDT1_Reset(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFilterPDT1_Config__SWIG_0")]
+  public static extern void ChFilterPDT1_Config__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, double jarg3, double jarg4, double jarg5);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFilterPDT1_Config__SWIG_1")]
+  public static extern void ChFilterPDT1_Config__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, double jarg3, double jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFilterPDT1_Config__SWIG_2")]
+  public static extern void ChFilterPDT1_Config__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, double jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFilterPDT1_Config__SWIG_3")]
+  public static extern void ChFilterPDT1_Config__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFilterPDT1_Filter")]
+  public static extern double ChFilterPDT1_Filter(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChButterworth_Lowpass__SWIG_0")]
+  public static extern global::System.IntPtr new_ChButterworth_Lowpass__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChButterworth_Lowpass__SWIG_1")]
+  public static extern global::System.IntPtr new_ChButterworth_Lowpass__SWIG_1(uint jarg1, double jarg2, double jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChButterworth_Lowpass_Reset")]
+  public static extern void ChButterworth_Lowpass_Reset(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChButterworth_Lowpass_Config")]
+  public static extern void ChButterworth_Lowpass_Config(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, double jarg3, double jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChButterworth_Lowpass_Filter")]
+  public static extern double ChButterworth_Lowpass_Filter(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChButterworth_Lowpass")]
+  public static extern void delete_ChButterworth_Lowpass(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChButterworth_Highpass__SWIG_0")]
+  public static extern global::System.IntPtr new_ChButterworth_Highpass__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChButterworth_Highpass__SWIG_1")]
+  public static extern global::System.IntPtr new_ChButterworth_Highpass__SWIG_1(uint jarg1, double jarg2, double jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChButterworth_Highpass_Reset")]
+  public static extern void ChButterworth_Highpass_Reset(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChButterworth_Highpass_Config")]
+  public static extern void ChButterworth_Highpass_Config(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, double jarg3, double jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChButterworth_Highpass_Filter")]
+  public static extern double ChButterworth_Highpass_Filter(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChButterworth_Highpass")]
+  public static extern void delete_ChButterworth_Highpass(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChAbsorbed_Power_Vertical__SWIG_0")]
+  public static extern global::System.IntPtr new_ChAbsorbed_Power_Vertical__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChAbsorbed_Power_Vertical__SWIG_1")]
+  public static extern global::System.IntPtr new_ChAbsorbed_Power_Vertical__SWIG_1(double jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChAbsorbed_Power_Vertical_Reset")]
+  public static extern void ChAbsorbed_Power_Vertical_Reset(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChAbsorbed_Power_Vertical_Config")]
+  public static extern void ChAbsorbed_Power_Vertical_Config(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChAbsorbed_Power_Vertical_Filter")]
+  public static extern double ChAbsorbed_Power_Vertical_Filter(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChAbsorbed_Power_Vertical")]
+  public static extern void delete_ChAbsorbed_Power_Vertical(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChISO2631_1_AVTransition__SWIG_0")]
+  public static extern global::System.IntPtr new_ChISO2631_1_AVTransition__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChISO2631_1_AVTransition__SWIG_1")]
+  public static extern global::System.IntPtr new_ChISO2631_1_AVTransition__SWIG_1(double jarg1, double jarg2, double jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChISO2631_1_AVTransition__SWIG_2")]
+  public static extern global::System.IntPtr new_ChISO2631_1_AVTransition__SWIG_2(double jarg1, double jarg2, double jarg3, double jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_1_AVTransition_Config__SWIG_0")]
+  public static extern void ChISO2631_1_AVTransition_Config__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, double jarg3, double jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_1_AVTransition_Config__SWIG_1")]
+  public static extern void ChISO2631_1_AVTransition_Config__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, double jarg3, double jarg4, double jarg5);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_1_AVTransition_Reset")]
+  public static extern void ChISO2631_1_AVTransition_Reset(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_1_AVTransition_Filter")]
+  public static extern double ChISO2631_1_AVTransition_Filter(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChISO2631_1_AVTransition")]
+  public static extern void delete_ChISO2631_1_AVTransition(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChISO2631_1_UpwardStep__SWIG_0")]
+  public static extern global::System.IntPtr new_ChISO2631_1_UpwardStep__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChISO2631_1_UpwardStep__SWIG_1")]
+  public static extern global::System.IntPtr new_ChISO2631_1_UpwardStep__SWIG_1(double jarg1, double jarg2, double jarg3, double jarg4, double jarg5);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_1_UpwardStep_Config")]
+  public static extern void ChISO2631_1_UpwardStep_Config(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, double jarg3, double jarg4, double jarg5, double jarg6);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_1_UpwardStep_Reset")]
+  public static extern void ChISO2631_1_UpwardStep_Reset(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_1_UpwardStep_Filter")]
+  public static extern double ChISO2631_1_UpwardStep_Filter(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChISO2631_1_UpwardStep")]
+  public static extern void delete_ChISO2631_1_UpwardStep(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChISO2631_1_Wk__SWIG_0")]
+  public static extern global::System.IntPtr new_ChISO2631_1_Wk__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChISO2631_1_Wk__SWIG_1")]
+  public static extern global::System.IntPtr new_ChISO2631_1_Wk__SWIG_1(double jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_1_Wk_Config")]
+  public static extern void ChISO2631_1_Wk_Config(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_1_Wk_Reset")]
+  public static extern void ChISO2631_1_Wk_Reset(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_1_Wk_Filter")]
+  public static extern double ChISO2631_1_Wk_Filter(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChISO2631_1_Wk")]
+  public static extern void delete_ChISO2631_1_Wk(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChISO2631_1_Wd__SWIG_0")]
+  public static extern global::System.IntPtr new_ChISO2631_1_Wd__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChISO2631_1_Wd__SWIG_1")]
+  public static extern global::System.IntPtr new_ChISO2631_1_Wd__SWIG_1(double jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_1_Wd_Config")]
+  public static extern void ChISO2631_1_Wd_Config(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_1_Wd_Reset")]
+  public static extern void ChISO2631_1_Wd_Reset(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_1_Wd_Filter")]
+  public static extern double ChISO2631_1_Wd_Filter(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChISO2631_1_Wd")]
+  public static extern void delete_ChISO2631_1_Wd(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChISO2631_1_Wf__SWIG_0")]
+  public static extern global::System.IntPtr new_ChISO2631_1_Wf__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChISO2631_1_Wf__SWIG_1")]
+  public static extern global::System.IntPtr new_ChISO2631_1_Wf__SWIG_1(double jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_1_Wf_Config")]
+  public static extern void ChISO2631_1_Wf_Config(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_1_Wf_Reset")]
+  public static extern void ChISO2631_1_Wf_Reset(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_1_Wf_Filter")]
+  public static extern double ChISO2631_1_Wf_Filter(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChISO2631_1_Wf")]
+  public static extern void delete_ChISO2631_1_Wf(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChISO2631_5_Wxy")]
+  public static extern global::System.IntPtr new_ChISO2631_5_Wxy();
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_5_Wxy_Reset")]
+  public static extern void ChISO2631_5_Wxy_Reset(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_5_Wxy_Filter")]
+  public static extern double ChISO2631_5_Wxy_Filter(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChISO2631_5_Wxy")]
+  public static extern void delete_ChISO2631_5_Wxy(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChISO2631_5_Wz")]
+  public static extern global::System.IntPtr new_ChISO2631_5_Wz();
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_5_Wz_Filter")]
+  public static extern void ChISO2631_5_Wz_Filter(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChISO2631_5_Wz")]
+  public static extern void delete_ChISO2631_5_Wz(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChISO2631_Vibration_SeatCushionLogger__SWIG_0")]
+  public static extern global::System.IntPtr new_ChISO2631_Vibration_SeatCushionLogger__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChISO2631_Vibration_SeatCushionLogger__SWIG_1")]
+  public static extern global::System.IntPtr new_ChISO2631_Vibration_SeatCushionLogger__SWIG_1(double jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_Vibration_SeatCushionLogger_Config")]
+  public static extern void ChISO2631_Vibration_SeatCushionLogger_Config(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_Vibration_SeatCushionLogger_AddData__SWIG_0")]
+  public static extern void ChISO2631_Vibration_SeatCushionLogger_AddData__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, double jarg3, double jarg4, double jarg5);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_Vibration_SeatCushionLogger_AddData__SWIG_1")]
+  public static extern void ChISO2631_Vibration_SeatCushionLogger_AddData__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_Vibration_SeatCushionLogger_Reset")]
+  public static extern void ChISO2631_Vibration_SeatCushionLogger_Reset(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_Vibration_SeatCushionLogger_GetExposureTime")]
+  public static extern double ChISO2631_Vibration_SeatCushionLogger_GetExposureTime(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_Vibration_SeatCushionLogger_GetInputRMS_X")]
+  public static extern double ChISO2631_Vibration_SeatCushionLogger_GetInputRMS_X(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_Vibration_SeatCushionLogger_GetInputRMS_Y")]
+  public static extern double ChISO2631_Vibration_SeatCushionLogger_GetInputRMS_Y(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_Vibration_SeatCushionLogger_GetInputRMS_Z")]
+  public static extern double ChISO2631_Vibration_SeatCushionLogger_GetInputRMS_Z(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_Vibration_SeatCushionLogger_GetAW_X")]
+  public static extern double ChISO2631_Vibration_SeatCushionLogger_GetAW_X(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_Vibration_SeatCushionLogger_GetAW_Y")]
+  public static extern double ChISO2631_Vibration_SeatCushionLogger_GetAW_Y(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_Vibration_SeatCushionLogger_GetAW_Z")]
+  public static extern double ChISO2631_Vibration_SeatCushionLogger_GetAW_Z(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_Vibration_SeatCushionLogger_GetAW_V")]
+  public static extern double ChISO2631_Vibration_SeatCushionLogger_GetAW_V(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_Vibration_SeatCushionLogger_GetCrestFactor")]
+  public static extern double ChISO2631_Vibration_SeatCushionLogger_GetCrestFactor(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_Vibration_SeatCushionLogger_GetVDV")]
+  public static extern double ChISO2631_Vibration_SeatCushionLogger_GetVDV(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_Vibration_SeatCushionLogger_GetAVGSpeed")]
+  public static extern double ChISO2631_Vibration_SeatCushionLogger_GetAVGSpeed(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_Vibration_SeatCushionLogger_GetSeverityVDV")]
+  public static extern double ChISO2631_Vibration_SeatCushionLogger_GetSeverityVDV(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_Vibration_SeatCushionLogger_GetAbsorbedPowerVertical")]
+  public static extern double ChISO2631_Vibration_SeatCushionLogger_GetAbsorbedPowerVertical(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_Vibration_SeatCushionLogger_GeneratePlotFile")]
+  public static extern void ChISO2631_Vibration_SeatCushionLogger_GeneratePlotFile(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2, string jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChISO2631_Vibration_SeatCushionLogger")]
+  public static extern void delete_ChISO2631_Vibration_SeatCushionLogger(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChISO2631_Shock_SeatCushionLogger__SWIG_0")]
+  public static extern global::System.IntPtr new_ChISO2631_Shock_SeatCushionLogger__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChISO2631_Shock_SeatCushionLogger__SWIG_1")]
+  public static extern global::System.IntPtr new_ChISO2631_Shock_SeatCushionLogger__SWIG_1(double jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_Shock_SeatCushionLogger_Config")]
+  public static extern void ChISO2631_Shock_SeatCushionLogger_Config(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_Shock_SeatCushionLogger_AddData__SWIG_0")]
+  public static extern void ChISO2631_Shock_SeatCushionLogger_AddData__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, double jarg3, double jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_Shock_SeatCushionLogger_AddData__SWIG_1")]
+  public static extern void ChISO2631_Shock_SeatCushionLogger_AddData__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_Shock_SeatCushionLogger_Reset")]
+  public static extern void ChISO2631_Shock_SeatCushionLogger_Reset(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_Shock_SeatCushionLogger_GetSe")]
+  public static extern double ChISO2631_Shock_SeatCushionLogger_GetSe(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChISO2631_Shock_SeatCushionLogger_GetLegacyAz")]
+  public static extern double ChISO2631_Shock_SeatCushionLogger_GetLegacyAz(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChISO2631_Shock_SeatCushionLogger")]
+  public static extern void delete_ChISO2631_Shock_SeatCushionLogger(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_CastToChVisualization")]
   public static extern global::System.IntPtr CastToChVisualization(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -18437,4 +18878,19 @@ class ChronoEngine_csharpPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkMotorRotationTorque_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr ChLinkMotorRotationTorque_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFilterI_SWIGUpcast")]
+  public static extern global::System.IntPtr ChFilterI_SWIGUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFilterD_SWIGUpcast")]
+  public static extern global::System.IntPtr ChFilterD_SWIGUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFilterPT1_SWIGUpcast")]
+  public static extern global::System.IntPtr ChFilterPT1_SWIGUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFilterPD1_SWIGUpcast")]
+  public static extern global::System.IntPtr ChFilterPD1_SWIGUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChFilterPDT1_SWIGUpcast")]
+  public static extern global::System.IntPtr ChFilterPDT1_SWIGUpcast(global::System.IntPtr jarg1);
 }

@@ -1977,8 +1977,8 @@ class vehiclePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChVehicle_GetVehiclePointVelocity")]
   public static extern global::System.IntPtr ChVehicle_GetVehiclePointVelocity(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChVehicle_GetVehicleAcceleration")]
-  public static extern global::System.IntPtr ChVehicle_GetVehicleAcceleration(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChVehicle_GetVehiclePointAcceleration")]
+  public static extern global::System.IntPtr ChVehicle_GetVehiclePointAcceleration(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChVehicle_GetDriveshaft")]
   public static extern global::System.IntPtr ChVehicle_GetDriveshaft(global::System.Runtime.InteropServices.HandleRef jarg1);
