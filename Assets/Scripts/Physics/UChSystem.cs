@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEditor;
+using System;
 
 // ==========================================================================================================
 
@@ -262,19 +263,35 @@ public class UChSystem : MonoBehaviour
     // -----------------------------
     void FixedUpdate()
     {
-        Time.fixedDeltaTime = (float)step;
+        float unity_step = Time.fixedDeltaTime;
+        ////Debug.Log("Fixed step:  " + unity_step);
 
-        ////Debug.Log("sys Time = " + chrono_system.GetChTime() + "     num bodies: " + chrono_system.GetNbodies());
-        foreach (var subsys in subsystems.Values)
+        // Take as many steps as necessary to cover the base FixedUpdate step
+        double t = 0;
+        while (t < unity_step)
         {
-            subsys.Advance(step);
+            double h = Math.Min(step, unity_step - t);
+            foreach (var subsys in subsystems.Values)
+            {
+                subsys.Advance(h);
+            }
+            chrono_system.DoStepDynamics(h);
+            t += h;
         }
-        chrono_system.DoStepDynamics(step);
+
+        ////Time.fixedDeltaTime = (float)step;
+        ////foreach (var subsys in subsystems.Values)
+        ////{
+        ////    subsys.Advance(step);
+        ////}
+        ////chrono_system.DoStepDynamics(step);
+
     }
 
     // -----------------------------
     public void Register(string name, IAdvance subsystem)
     {
+        Debug.Log("[ChSystem] registered subsystem " + name);
         subsystems.Add(name, subsystem);
     }
 
