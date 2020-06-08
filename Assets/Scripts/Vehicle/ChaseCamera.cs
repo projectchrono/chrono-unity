@@ -160,7 +160,7 @@ public class ChaseCamera : MonoBehaviour, IAdvance
         double steering = Math.Round(vehicle.GetSteeringInput() * 100) / 100;
         GUI.Label(new Rect(10, 150, 200, 40), "Steering: " + steering.ToString(), guiStyle);
 
-        switch (vehicle.GetChVehicle().GetPowertrain().GetDriveMode())
+        switch (vehicle.GetChPowertrain().GetDriveMode())
         {
             case ChPowertrain.DriveMode.FORWARD:
                 GUI.Label(new Rect(10, 170, 200, 40), "Gear: Forward", guiStyle);
@@ -170,9 +170,9 @@ public class ChaseCamera : MonoBehaviour, IAdvance
                 break;
         }
 
-        double motorTorque = Math.Round(vehicle.GetPowertrain().GetMotorTorque());
+        double motorTorque = Math.Round(vehicle.GetChPowertrain().GetMotorTorque());
         GUI.Label(new Rect(10, 200, 200, 40), "Motor Torque (Nm): " + motorTorque.ToString(), guiStyle);
-        double motorSpeed = Math.Round(vehicle.GetPowertrain().GetMotorSpeed() * 60 / (2 * Math.PI));
+        double motorSpeed = Math.Round(vehicle.GetChPowertrain().GetMotorSpeed() * 60 / (2 * Math.PI));
         GUI.Label(new Rect(10, 220, 200, 40), "Motor Speed (RPM): " + motorSpeed.ToString(), guiStyle);
     }
 }

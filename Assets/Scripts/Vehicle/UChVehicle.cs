@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public abstract class UChVehicle : MonoBehaviour
+public abstract class UChVehicle : MonoBehaviour, IAdvance
 {
     protected DriverInputs inputs;
     protected double speed;
@@ -16,6 +16,21 @@ public abstract class UChVehicle : MonoBehaviour
 
         inputs = new DriverInputs();
         speed = 0;
+    }
+
+    void Start()
+    {
+        // Register with the Chrono system (for Advance).
+        UChSystem system = (UChSystem)FindObjectOfType(typeof(UChSystem));
+        system.Register(gameObject.name, this);
+
+        OnStart();
+    }
+
+    public void Advance(double step)
+    {
+        speed = GetChVehicle().GetVehicleSpeed();
+        OnAdvance(step);
     }
 
     public void SetDriverInputs(double steering, double throttle, double braking)
@@ -32,5 +47,8 @@ public abstract class UChVehicle : MonoBehaviour
 
     public abstract double GetMaxSpeed();
     public abstract ChVehicle GetChVehicle();
-    public abstract ChPowertrain GetPowertrain();
+    public abstract ChPowertrain GetChPowertrain();
+
+    protected abstract void OnStart();
+    protected abstract void OnAdvance(double step);
 }

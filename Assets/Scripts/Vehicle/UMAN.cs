@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-public class UMAN : UChVehicle, IAdvance
+public class UMAN : UChVehicle
 {
     public MAN_10t man;
 
@@ -32,12 +32,8 @@ public class UMAN : UChVehicle, IAdvance
         initForwardVel = 0;
     }
 
-    void Start()
+    protected override void OnStart()
     {
-        // Register with the Chrono system (for Advance).
-        UChSystem system = (UChSystem)FindObjectOfType(typeof(UChSystem));
-        system.Register(gameObject.name, this);
-
         man = new MAN_10t(UChSystem.chrono_system);
 
         man.SetChassisFixed(chassisFixed);
@@ -82,19 +78,15 @@ public class UMAN : UChVehicle, IAdvance
         wheelR1R.transform.parent = gameObject.transform;
         wheelR2R = Instantiate(wheelR_prefab, transform) as GameObject;
         wheelR2R.transform.parent = gameObject.transform;
-    }
 
-    private void Update()
-    {
         //// HACK to deal with stuttering due to slow physics.
         //// Note that the MAN vehicle model requires smaller timestep (1 ms).
+        //Debug.Log("MAX step: " + Time.maximumDeltaTime);
         Time.maximumDeltaTime = 0.02f;
     }
 
-    public void Advance(double step)
+    protected override void OnAdvance(double step)
     {
-        ////Debug.Log("advance MAN. step = " + step);
-
         var vehicle_pos = man.GetVehicle().GetVehiclePos();
         var vehicle_rot = man.GetVehicle().GetVehicleRot();
 
@@ -157,9 +149,6 @@ public class UMAN : UChVehicle, IAdvance
         wheelR2R.transform.position = Utils.FromChronoFlip(spindleR2R_pos);
         wheelR2R.transform.rotation = Utils.FromChronoFlip(spindleR2R_rot);
 
-        speed = man.GetVehicle().GetVehicleSpeed();
-        ////Debug.Log(speed);
-
         man.Synchronize(UChSystem.chrono_system.GetChTime(), inputs, UChTerrain.chrono_terrain);
         man.Advance(step);
     }
@@ -174,7 +163,7 @@ public class UMAN : UChVehicle, IAdvance
         return man.GetVehicle();
     }
 
-    public override ChPowertrain GetPowertrain()
+    public override ChPowertrain GetChPowertrain()
     {
         return man.GetPowertrain();
     }

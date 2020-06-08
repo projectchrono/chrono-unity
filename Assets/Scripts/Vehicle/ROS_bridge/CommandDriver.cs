@@ -79,10 +79,10 @@ public class CommandDriver : ICommandable, IAdvance
 
         // Throttle and braking input (cruise-control)
 
-        if (targetSpeed < 0 && vehicle.GetChVehicle().GetPowertrain().GetDriveMode() == ChPowertrain.DriveMode.FORWARD)
-            vehicle.GetChVehicle().GetPowertrain().SetDriveMode(ChPowertrain.DriveMode.REVERSE);
-        if (targetSpeed > 0 && vehicle.GetChVehicle().GetPowertrain().GetDriveMode() == ChPowertrain.DriveMode.REVERSE)
-            vehicle.GetChVehicle().GetPowertrain().SetDriveMode(ChPowertrain.DriveMode.FORWARD);
+        if (targetSpeed < 0 && vehicle.GetChPowertrain().GetDriveMode() == ChPowertrain.DriveMode.FORWARD)
+            vehicle.GetChPowertrain().SetDriveMode(ChPowertrain.DriveMode.REVERSE);
+        if (targetSpeed > 0 && vehicle.GetChPowertrain().GetDriveMode() == ChPowertrain.DriveMode.REVERSE)
+            vehicle.GetChPowertrain().SetDriveMode(ChPowertrain.DriveMode.FORWARD);
 
         if (Math.Abs(targetSpeed) < 0.1)
         {

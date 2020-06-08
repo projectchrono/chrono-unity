@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-public class UUAZ : UChVehicle, IAdvance
+public class UUAZ : UChVehicle
 {
     public UAZBUS uaz;
 
@@ -34,12 +34,8 @@ public class UUAZ : UChVehicle, IAdvance
         initWheelAngSpeed = 0;
     }
 
-    void Start()
+    protected override void OnStart()
     {
-        // Register with the Chrono system (for Advance).
-        UChSystem system = (UChSystem)FindObjectOfType(typeof(UChSystem));
-        system.Register(gameObject.name, this);
-
         uaz = new UAZBUS(UChSystem.chrono_system);
 
         uaz.SetChassisFixed(chassisFixed);
@@ -95,10 +91,8 @@ public class UUAZ : UChVehicle, IAdvance
         wheelRR.transform.parent = gameObject.transform;
     }
 
-    public void Advance(double step)
+    protected override void OnAdvance(double step)
     {
-        ////Debug.Log("advance UAZ. step = " + step);
-
         var vehicle_pos = uaz.GetVehicle().GetVehiclePos();
         var vehicle_rot = uaz.GetVehicle().GetVehicleRot();
 
@@ -139,9 +133,6 @@ public class UUAZ : UChVehicle, IAdvance
         wheelRR.transform.position = Utils.FromChronoFlip(spindleRR_pos);
         wheelRR.transform.rotation = Utils.FromChronoFlip(spindleRR_rot);
 
-        speed = uaz.GetVehicle().GetVehicleSpeed();
-        ////Debug.Log(speed);
-
         uaz.Synchronize(UChSystem.chrono_system.GetChTime(), inputs, UChTerrain.chrono_terrain);
         uaz.Advance(step);
     }
@@ -156,7 +147,7 @@ public class UUAZ : UChVehicle, IAdvance
         return uaz.GetVehicle();
     }
 
-    public override ChPowertrain GetPowertrain()
+    public override ChPowertrain GetChPowertrain()
     {
         return uaz.GetPowertrain();
     }

@@ -128,11 +128,11 @@ public class Driver : MonoBehaviour, IAdvance
         // Forward/reverse
         if (Input.GetButton("Fire1"))
         {
-            vehicle.GetChVehicle().GetPowertrain().SetDriveMode(ChPowertrain.DriveMode.FORWARD);
+            vehicle.GetChPowertrain().SetDriveMode(ChPowertrain.DriveMode.FORWARD);
         }
         if (Input.GetButton("Fire2"))
         {
-            vehicle.GetChVehicle().GetPowertrain().SetDriveMode(ChPowertrain.DriveMode.REVERSE);
+            vehicle.GetChPowertrain().SetDriveMode(ChPowertrain.DriveMode.REVERSE);
         }
 
         // Set current steering, depending on selected lateral control mode

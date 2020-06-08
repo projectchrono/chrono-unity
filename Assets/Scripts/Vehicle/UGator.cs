@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-public class UGator : UChVehicle, IAdvance
+public class UGator : UChVehicle
 {
     public Gator gator;
 
@@ -34,7 +34,7 @@ public class UGator : UChVehicle, IAdvance
         initWheelAngSpeed = 0;
     }
 
-    void Start()
+    protected override void OnStart()
     {
         // HACK!!!!
         // If we can find a TCPServer, assume the Gator will be controlled through ROS commands.
@@ -48,10 +48,6 @@ public class UGator : UChVehicle, IAdvance
             drv.speedKd = 0.1;
         }
         
-        // Register with the Chrono system (for Advance).
-        UChSystem system = (UChSystem)FindObjectOfType(typeof(UChSystem));
-        system.Register(gameObject.name, this);
-
         gator = new Gator(UChSystem.chrono_system);
 
         gator.SetChassisFixed(chassisFixed);
@@ -113,10 +109,8 @@ public class UGator : UChVehicle, IAdvance
         wheelRR.transform.parent = gameObject.transform;
     }
 
-    public void Advance(double step)
+    protected override void OnAdvance(double step)
     {
-        ////Debug.Log("advance Gator. step = " + step);
-
         var vehicle_pos = gator.GetVehicle().GetVehiclePos();
         var vehicle_rot = gator.GetVehicle().GetVehicleRot();
 
@@ -157,9 +151,6 @@ public class UGator : UChVehicle, IAdvance
         wheelRR.transform.position = Utils.FromChronoFlip(spindleRR_pos);
         wheelRR.transform.rotation = Utils.FromChronoFlip(spindleRR_rot);
 
-        speed = gator.GetVehicle().GetVehicleSpeed();
-        ////Debug.Log(speed);
-
         gator.Synchronize(UChSystem.chrono_system.GetChTime(), inputs, UChTerrain.chrono_terrain);
         gator.Advance(step);
     }
@@ -174,7 +165,7 @@ public class UGator : UChVehicle, IAdvance
         return gator.GetVehicle();
     }
 
-    public override ChPowertrain GetPowertrain()
+    public override ChPowertrain GetChPowertrain()
     {
         return gator.GetPowertrain();
     }
