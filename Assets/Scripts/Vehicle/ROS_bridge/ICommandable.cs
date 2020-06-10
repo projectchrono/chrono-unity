@@ -12,7 +12,6 @@ public class ICommandable : MonoBehaviour {
 
     protected string full_name;
 
-
     public void SendHeader(uint type, string name, long ticks) {
         SendData(BitConverter.GetBytes(0xDEADC0DE));
         SendData(BitConverter.GetBytes(type));
@@ -65,9 +64,7 @@ public class ICommandable : MonoBehaviour {
         OnStart();
     }
 
-    public virtual void OnStart() {
-
-    }
+    public virtual void OnStart() { }
 
     void RegisterWithServer() {
         server = (TCPServer)GameObject.FindObjectOfType(typeof(TCPServer));
@@ -112,8 +109,6 @@ public class ICommandable : MonoBehaviour {
         return true;
     }
 
-    public virtual void OnConfigure() {
-
-    }
+    public virtual void OnConfigure() { }
 }
 
