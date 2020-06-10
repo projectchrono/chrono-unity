@@ -71,12 +71,7 @@ public class UUAZ : UChVehicle
         chassis = Instantiate(chassis_prefab, transform) as GameObject;
         chassis.transform.parent = gameObject.transform;
         if (chassisMaterial != null)
-        {
-            Material[] mats = chassis.GetComponentInChildren<Renderer>().materials;
-            mats[4] = chassisMaterial;
-            mats[6] = chassisMaterial;
-            chassis.GetComponentInChildren<Renderer>().materials = mats;
-        }
+            chassis.GetComponentInChildren<Renderer>().sharedMaterial = chassisMaterial;
 
         Object wheelL_prefab = Resources.Load("UAZ/WheelLeft", typeof(GameObject));
         wheelFL = Instantiate(wheelL_prefab, transform) as GameObject;

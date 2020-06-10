@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public abstract class UChVehicle : MonoBehaviour, IAdvance
 {
@@ -23,6 +22,31 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
         // Register with the Chrono system (for Advance).
         UChSystem system = (UChSystem)FindObjectOfType(typeof(UChSystem));
         system.Register(gameObject.name, this);
+
+        // HACK!!!!
+        // If this vehicle has the tag "Player", it is assumed that it was created from a spwan message
+        // and that it will be controlled through ROS commands.
+        // - Disable the existing Driver component and attach a CommandDriver
+        // - Instantiate an IMU sensor and attach to this vehicle
+        if (gameObject.tag == "Player")
+        {
+            Debug.Log("Set up vehicle " + gameObject.name + " for ROS commands");
+            gameObject.GetComponent<Driver>().enabled = false;
+            CommandDriver drv = gameObject.AddComponent<CommandDriver>();
+            drv.speedKp = 0.8;
+            drv.speedKi = 0.2;
+            drv.speedKd = 0.1;
+
+            UnityEngine.Object IMU_prefab = Resources.Load("IMU", typeof(GameObject));
+            GameObject imu = Instantiate(IMU_prefab, transform) as GameObject;
+            imu.GetComponent<IMU>().vehicle = this;
+
+            //// TODO: Interogate the concrete vehicle to set parameters such as:
+            //// - drive speed controller gains
+            //// - location of sensors
+            //// - sensor-specific paramters
+            //// - etc.
+        }
 
         OnStart();
     }

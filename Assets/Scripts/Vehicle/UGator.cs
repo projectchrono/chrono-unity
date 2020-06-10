@@ -36,18 +36,6 @@ public class UGator : UChVehicle
 
     protected override void OnStart()
     {
-        // HACK!!!!
-        // If we can find a TCPServer, assume the Gator will be controlled through ROS commands.
-        // Disable the existing Driver component and attach a CommandDriver.
-        if ((TCPServer)FindObjectOfType(typeof(TCPServer)))
-        {
-            gameObject.GetComponent<Driver>().enabled = false;
-            CommandDriver drv = gameObject.AddComponent<CommandDriver>() as CommandDriver;
-            drv.speedKp = 0.8;
-            drv.speedKi = 0.2;
-            drv.speedKd = 0.1;
-        }
-        
         gator = new Gator(UChSystem.chrono_system);
 
         gator.SetChassisFixed(chassisFixed);
