@@ -46,9 +46,9 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
         inputs.m_braking = braking;
     }
 
-    // NOTE: Chrono::Vehicle functions currently return vector quantities in the ISO frame (z-up RHF).
-    //       Convert the return vectors to Unity y-up LHF (flip y & z).
-
+    /*
+    // Return the vehicle linear acceleration, expressed in the global frame.
+    // This needs some massaging related to what frame things are expressed in.
     public Vector3 GetAccelerationGlobal(Vector3 loc)
     {
         ChVectorD loc_chrono = new ChVectorD(loc.x, -loc.z, loc.y);
@@ -56,25 +56,35 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
         ChVectorD accG_chrono = GetChVehicle().GetChassisBody().Dir_Body2World(accL_chrono);
         return new Vector3((float)accG_chrono.x, (float)accG_chrono.z, (float)accG_chrono.y);
     }
+    */
 
+    // Return the vehicle linear acceleration, expressed in a local ISO frame (x fwd, y left, z up).
+    // Note that this is what Chrono::Vehicle currently returns from GetVehiclePointAcceleration,
+    // regardless of the world frame orientation.
     public Vector3 GetAccelerationLocal(Vector3 loc)
     {
         ChVectorD loc_chrono = new ChVectorD(loc.x, -loc.z, loc.y);
         ChVectorD accL_chrono = GetChVehicle().GetVehiclePointAcceleration(loc_chrono);
-        return new Vector3((float)accL_chrono.x, (float)accL_chrono.z, (float)accL_chrono.y);
+        return Utils.FromChrono(accL_chrono);
     }
 
+    /*
+    // Return the vehicle angular velocity, expressed in the global frame.
+    // This needs some massaging related to what frame things are expressed in.
     public Vector3 GetWvelGlobal()
     {
         ChVectorD wvelG_chrono = GetChVehicle().GetChassisBody().GetWvel_par();
         return new Vector3((float)wvelG_chrono.x, (float)wvelG_chrono.z, (float)wvelG_chrono.y);
     }
+    */
 
+    // Return the vehicle angular velocity, expressed in a local ISO frame (x fwd, y left, z up).
     public Vector3 GetWvelLocal()
     {
         ChVectorD wvelL_chrono = GetChVehicle().GetChassisBody().GetWvel_loc();
-        return new Vector3((float)wvelL_chrono.x, (float)wvelL_chrono.z, (float)wvelL_chrono.y);
+        return Utils.FromChrono(wvelL_chrono);
     }
+
 
     public double GetSpeed() { return speed; }
     public double GetSteeringInput() { return inputs.m_steering; }
