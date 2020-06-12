@@ -3,7 +3,12 @@ guid: c9e631f2b0b925646b19c4a1a3f3bcd4
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gator_BodySG4.004
+    second: {fileID: 2100000, guid: 68368af4e6038fc46990da7f37c83f21, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

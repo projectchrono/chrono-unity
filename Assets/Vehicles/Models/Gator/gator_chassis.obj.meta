@@ -3,7 +3,42 @@ guid: 893239439065d1c4e8c26fd72351d5df
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gator_BodySG4
+    second: {fileID: 2100000, guid: 46891f3e26059b44d9e065e36f08764d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gator_BodySG5
+    second: {fileID: 2100000, guid: 310d33e3fcc8ed843b62307feedce45c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gator_BodySG6
+    second: {fileID: 2100000, guid: 8e12ac3b226958a48b2bd7add0140956, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gator_BodySG7
+    second: {fileID: 2100000, guid: 739dfd9394d3d7641b3ff9cbe9b17574, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gator_BodySG8
+    second: {fileID: 2100000, guid: 4841f52024bdc27409d6f75eb1825ba8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gator_BodySG9
+    second: {fileID: 2100000, guid: 6e66e13a4d88f334ebcf0310d1b79071, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: S_WheelSG
+    second: {fileID: 2100000, guid: 0b7a6294b7ed7c44caf73834f7c5e8be, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
