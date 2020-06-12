@@ -73,7 +73,7 @@ public class TCPServer : MonoBehaviour
     void Start()
     {
         StartCommandThread();
-        ////Connect();
+        Connect();
     }
 
     public void SendData(byte[] data, int length = -1)
@@ -166,10 +166,10 @@ public class TCPServer : MonoBehaviour
     
     void Update()
     {
-        ////if (!client.Connected)
-        ////{
-        ////    Connect();
-        ////} 
+        if (!client.Connected)
+        {
+            Connect();
+        }
         ProcessMessages();
     }
 }
