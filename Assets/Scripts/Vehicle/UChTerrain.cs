@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
-using System;
 
 public class UFlatTerrain : ChTerrain
 {
