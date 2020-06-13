@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 public class BallGenerator : MonoBehaviour
@@ -42,7 +41,7 @@ public class BallGenerator : MonoBehaviour
 
     void Start()
     {
-        Object prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/BodySphere.prefab", typeof(GameObject));
+        Object prefab = Resources.Load("BodySphere", typeof(GameObject));
 
         float radius = 0.8f;
         float density = 1000.0f;

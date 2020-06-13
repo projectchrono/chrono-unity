@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 public class ColumnGenerator : MonoBehaviour
@@ -69,8 +68,7 @@ public class ColumnGenerator : MonoBehaviour
 
     void Start()
     {
-        Object prefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/BodyConvexHull.prefab", typeof(GameObject));
-
+        Object prefab = Resources.Load("BodyConvexHull", typeof(GameObject));
         float spacing = 1.6f;
         float density = 3000.0f;
 
