@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-public class vector_Entry : global::System.IDisposable, global::System.Collections.IEnumerable, global::System.Collections.Generic.IEnumerable<Entry>
+public class vector_Entry : global::System.IDisposable, global::System.Collections.IEnumerable, global::System.Collections.Generic.IEnumerable<DataDriverEntry>
  {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   protected bool swigCMemOwn;
@@ -47,15 +47,15 @@ public class vector_Entry : global::System.IDisposable, global::System.Collectio
   public vector_Entry(global::System.Collections.IEnumerable c) : this() {
     if (c == null)
       throw new global::System.ArgumentNullException("c");
-    foreach (Entry element in c) {
+    foreach (DataDriverEntry element in c) {
       this.Add(element);
     }
   }
 
-  public vector_Entry(global::System.Collections.Generic.IEnumerable<Entry> c) : this() {
+  public vector_Entry(global::System.Collections.Generic.IEnumerable<DataDriverEntry> c) : this() {
     if (c == null)
       throw new global::System.ArgumentNullException("c");
-    foreach (Entry element in c) {
+    foreach (DataDriverEntry element in c) {
       this.Add(element);
     }
   }
@@ -72,7 +72,7 @@ public class vector_Entry : global::System.IDisposable, global::System.Collectio
     }
   }
 
-  public Entry this[int index]  {
+  public DataDriverEntry this[int index]  {
     get {
       return getitem(index);
     }
@@ -104,17 +104,17 @@ public class vector_Entry : global::System.IDisposable, global::System.Collectio
     }
   }
 
-  public void CopyTo(Entry[] array)
+  public void CopyTo(DataDriverEntry[] array)
   {
     CopyTo(0, array, 0, this.Count);
   }
 
-  public void CopyTo(Entry[] array, int arrayIndex)
+  public void CopyTo(DataDriverEntry[] array, int arrayIndex)
   {
     CopyTo(0, array, arrayIndex, this.Count);
   }
 
-  public void CopyTo(int index, Entry[] array, int arrayIndex, int count)
+  public void CopyTo(int index, DataDriverEntry[] array, int arrayIndex, int count)
   {
     if (array == null)
       throw new global::System.ArgumentNullException("array");
@@ -132,13 +132,13 @@ public class vector_Entry : global::System.IDisposable, global::System.Collectio
       array.SetValue(getitemcopy(index+i), arrayIndex+i);
   }
 
-  public Entry[] ToArray() {
-    Entry[] array = new Entry[this.Count];
+  public DataDriverEntry[] ToArray() {
+    DataDriverEntry[] array = new DataDriverEntry[this.Count];
     this.CopyTo(array);
     return array;
   }
 
-  global::System.Collections.Generic.IEnumerator<Entry> global::System.Collections.Generic.IEnumerable<Entry>.GetEnumerator() {
+  global::System.Collections.Generic.IEnumerator<DataDriverEntry> global::System.Collections.Generic.IEnumerable<DataDriverEntry>.GetEnumerator() {
     return new vector_EntryEnumerator(this);
   }
 
@@ -156,7 +156,7 @@ public class vector_Entry : global::System.IDisposable, global::System.Collectio
   /// collection but not when one of the elements of the collection is modified as it is a bit
   /// tricky to detect unmanaged code that modifies the collection under our feet.
   public sealed class vector_EntryEnumerator : global::System.Collections.IEnumerator
-    , global::System.Collections.Generic.IEnumerator<Entry>
+    , global::System.Collections.Generic.IEnumerator<DataDriverEntry>
   {
     private vector_Entry collectionRef;
     private int currentIndex;
@@ -171,7 +171,7 @@ public class vector_Entry : global::System.IDisposable, global::System.Collectio
     }
 
     // Type-safe iterator Current
-    public Entry Current {
+    public DataDriverEntry Current {
       get {
         if (currentIndex == -1)
           throw new global::System.InvalidOperationException("Enumeration not started.");
@@ -179,7 +179,7 @@ public class vector_Entry : global::System.IDisposable, global::System.Collectio
           throw new global::System.InvalidOperationException("Enumeration finished.");
         if (currentObject == null)
           throw new global::System.InvalidOperationException("Collection modified.");
-        return (Entry)currentObject;
+        return (DataDriverEntry)currentObject;
       }
     }
 
@@ -221,8 +221,8 @@ public class vector_Entry : global::System.IDisposable, global::System.Collectio
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void Add(Entry x) {
-    vehiclePINVOKE.vector_Entry_Add(swigCPtr, Entry.getCPtr(x));
+  public void Add(DataDriverEntry x) {
+    vehiclePINVOKE.vector_Entry_Add(swigCPtr, DataDriverEntry.getCPtr(x));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -255,20 +255,20 @@ public class vector_Entry : global::System.IDisposable, global::System.Collectio
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  private Entry getitemcopy(int index) {
-    Entry ret = new Entry(vehiclePINVOKE.vector_Entry_getitemcopy(swigCPtr, index), true);
+  private DataDriverEntry getitemcopy(int index) {
+    DataDriverEntry ret = new DataDriverEntry(vehiclePINVOKE.vector_Entry_getitemcopy(swigCPtr, index), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  private Entry getitem(int index) {
-    Entry ret = new Entry(vehiclePINVOKE.vector_Entry_getitem(swigCPtr, index), false);
+  private DataDriverEntry getitem(int index) {
+    DataDriverEntry ret = new DataDriverEntry(vehiclePINVOKE.vector_Entry_getitem(swigCPtr, index), false);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  private void setitem(int index, Entry val) {
-    vehiclePINVOKE.vector_Entry_setitem(swigCPtr, index, Entry.getCPtr(val));
+  private void setitem(int index, DataDriverEntry val) {
+    vehiclePINVOKE.vector_Entry_setitem(swigCPtr, index, DataDriverEntry.getCPtr(val));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -284,8 +284,8 @@ public class vector_Entry : global::System.IDisposable, global::System.Collectio
     return ret;
   }
 
-  public void Insert(int index, Entry x) {
-    vehiclePINVOKE.vector_Entry_Insert(swigCPtr, index, Entry.getCPtr(x));
+  public void Insert(int index, DataDriverEntry x) {
+    vehiclePINVOKE.vector_Entry_Insert(swigCPtr, index, DataDriverEntry.getCPtr(x));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -304,8 +304,8 @@ public class vector_Entry : global::System.IDisposable, global::System.Collectio
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public static vector_Entry Repeat(Entry value, int count) {
-    global::System.IntPtr cPtr = vehiclePINVOKE.vector_Entry_Repeat(Entry.getCPtr(value), count);
+  public static vector_Entry Repeat(DataDriverEntry value, int count) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.vector_Entry_Repeat(DataDriverEntry.getCPtr(value), count);
     vector_Entry ret = (cPtr == global::System.IntPtr.Zero) ? null : new vector_Entry(cPtr, true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
