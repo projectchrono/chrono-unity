@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEditor;
+﻿using UnityEngine;
 
 public class UChFunction : MonoBehaviour
 {
@@ -97,47 +94,5 @@ public class UChFunction : MonoBehaviour
     {
         value = fun.Get_y(UChSystem.chrono_system.GetChTime());
         ////Debug.Log("  t = " + UChSystem.chrono_system.GetChTime() + " val = " + value);
-    }
-}
-
-[CustomEditor(typeof(UChFunction))]
-public class UChFunctionEditor : Editor
-{
-    override public void OnInspectorGUI()
-    {
-        UChFunction fun = (UChFunction)target;
-
-        string[] options = new string[] { "Constant", "Ramp", "Sigma", "Sine"};
-        fun.type = (UChFunction.Type)EditorGUILayout.Popup("Type", (int)fun.type, options, EditorStyles.popup);
-
-        EditorGUI.indentLevel++;
-        switch (fun.type)
-        {
-            case UChFunction.Type.Constant:
-                fun.constant_val = EditorGUILayout.DoubleField("Constant value", fun.constant_val);
-                break;
-            case UChFunction.Type.Ramp:
-                fun.ramp_y0 = EditorGUILayout.DoubleField("Start", fun.ramp_y0);
-                fun.ramp_ang = EditorGUILayout.DoubleField("Slope", fun.ramp_ang);
-                break;
-            case UChFunction.Type.Sigma:
-                fun.sigma_start = EditorGUILayout.DoubleField("Start", fun.sigma_start);
-                fun.sigma_end = EditorGUILayout.DoubleField("End", fun.sigma_end);
-                fun.sigma_amp = EditorGUILayout.DoubleField("Amplitude", fun.sigma_amp);
-                break;
-            case UChFunction.Type.Sine:
-                fun.sine_phase = EditorGUILayout.DoubleField("Phase", fun.sine_phase);
-                fun.sine_freq = EditorGUILayout.DoubleField("Frequency", fun.sine_freq);
-                fun.sine_amp = EditorGUILayout.DoubleField("Amplitude", fun.sine_amp);
-                break;
-        }
-        EditorGUI.indentLevel--;
-
-        EditorGUILayout.LabelField("Value", fun.value.ToString());
-
-        if (GUI.changed)
-        {
-            EditorUtility.SetDirty(fun);
-        }
     }
 }

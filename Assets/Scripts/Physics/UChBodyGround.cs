@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEditor;
+﻿using UnityEngine;
 
 public class UChBodyGround : UChBody
 {
@@ -17,21 +14,5 @@ public class UChBodyGround : UChBody
     void OnValidate()
     {
         transform.hideFlags = HideFlags.NotEditable | HideFlags.HideInInspector;
-    }
-}
-
-[CustomEditor(typeof(UChBodyGround))]
-public class UChBodyGroundEditor : Editor
-{
-    override public void OnInspectorGUI()
-    {
-        UChBodyGround ground = (UChBodyGround)target;
-
-        ground.showFrameGizmo = EditorGUILayout.Toggle("Show Frame Gizmo", ground.showFrameGizmo);
-
-        if (GUI.changed)
-        {
-            EditorUtility.SetDirty(ground);
-        }
     }
 }

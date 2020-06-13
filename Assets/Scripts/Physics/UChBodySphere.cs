@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEditor;
 
 public class UChBodySphere : UChBody
 {
@@ -45,23 +41,5 @@ public class UChBodySphere : UChBody
 
         if (mat.GetContactMethod() != UChSystem.chrono_system.GetContactMethod())
             throw new Exception("Incompatible contact method (" + gameObject.name + ")");
-    }
-}
-
-[CustomEditor(typeof(UChBodySphere))]
-public class UChBodySphereEditor : UChBodyEditor
-{
-    public override void OnInspectorGUI()
-    {
-        UChBodySphere body = (UChBodySphere)target;
-
-        base.OnInspectorGUI();
-        EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);
-        body.radius = EditorGUILayout.DoubleField("Radius", body.radius);
-
-        if (GUI.changed)
-        {
-            EditorUtility.SetDirty(body);
-        }
     }
 }

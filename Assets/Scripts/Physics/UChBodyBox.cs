@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEditor;
 
 public class UChBodyBox : UChBody
 {
@@ -43,21 +39,5 @@ public class UChBodyBox : UChBody
 
         if (mat.GetContactMethod() != UChSystem.chrono_system.GetContactMethod())
             throw new Exception("Incompatible contact method (" + gameObject.name + ")");
-    }
-}
-
-[CustomEditor(typeof(UChBodyBox))]
-public class UChBodyBoxEditor : UChBodyEditor
-{
-    public override void OnInspectorGUI()
-    {
-        UChBodyBox body = (UChBodyBox)target;
-
-        base.OnInspectorGUI();
-
-        if (GUI.changed)
-        {
-            EditorUtility.SetDirty(body);
-        }
     }
 }
