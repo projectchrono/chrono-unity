@@ -8,7 +8,7 @@ public class Clock : ICommandable {
 	
 	void FixedUpdate () {
        long timestamp = time_server.GetPhysicsTicks(); 
-       ////SendHeader(type, full_name, timestamp);
+       SendHeader(type, full_name, timestamp);
 	}
 
 

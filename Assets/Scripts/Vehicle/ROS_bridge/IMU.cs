@@ -82,10 +82,10 @@ public class IMU : ICommandable
         Vector3 omega = vehicle.GetWvelLocal();
         Vector3 noisy_omega = omega + RandomVec(omegaNoiseMean, omegaNoiseStdDev);
 
-        ////SendHeader(type, full_name, timestamp);
-        ////SendData(noisy_accel);
-        ////SendData(noisy_omega);
-        ////SendData(transform.rotation);
+        SendHeader(type, full_name, timestamp);
+        SendData(noisy_accel);
+        SendData(noisy_omega);
+        SendData(transform.rotation);
 
         if (output)
         {
