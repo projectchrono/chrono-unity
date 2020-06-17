@@ -6,7 +6,6 @@ using UnityEngine;
 public abstract class UChVehicle : MonoBehaviour, IAdvance
 {
     protected DriverInputs inputs;
-    protected double speed;
 
     public UChVehicle()
     {
@@ -14,7 +13,6 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
         ChWorldFrame.SetYUP();
 
         inputs = new DriverInputs();
-        speed = 0;
     }
 
     void Start()
@@ -41,6 +39,10 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
             GameObject imu = Instantiate(IMU_prefab, transform) as GameObject;
             imu.GetComponent<IMU>().vehicle = this;
 
+            UnityEngine.Object WE_prefab = Resources.Load("WheelEncoder", typeof(GameObject));
+            GameObject we = Instantiate(WE_prefab, transform) as GameObject;
+            we.GetComponent<WheelEncoder>().vehicle = this;
+
             //// TODO: Interogate the concrete vehicle to set parameters such as:
             //// - drive speed controller gains
             //// - location of sensors
@@ -53,7 +55,6 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
 
     public void Advance(double step)
     {
-        speed = GetChVehicle().GetVehicleSpeed();
 
         ////Vector3 accel = GetAccelerationLocal(Vector3.zero);
         ////Debug.Log(inputs.m_steering + "     " + accel.x + "  " + accel.y + "  " + accel.z);
@@ -68,6 +69,16 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
         inputs.m_steering = steering;
         inputs.m_throttle = throttle;
         inputs.m_braking = braking;
+    }
+
+    public double GetSpeed()
+    {
+        ChVectorD velG_chrono = GetChVehicle().GetVehiclePointVelocity(new ChVectorD(0, 0, 0));
+        ChVectorD velL_chrono = GetChVehicle().GetChassisBody().Dir_World2Body(velG_chrono);
+        ////Debug.Log(velL_chrono.x + " " + velL_chrono.y + " " + velL_chrono.z);
+
+        return velL_chrono.x;
+        ////return GetChVehicle().GetVehicleSpeed();
     }
 
     /*
@@ -109,8 +120,6 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
         return Utils.FromChrono(wvelL_chrono);
     }
 
-
-    public double GetSpeed() { return speed; }
     public double GetSteeringInput() { return inputs.m_steering; }
     public double GetThrottleInput() { return inputs.m_throttle; }
     public double GetBrakingInput() { return inputs.m_braking; }
