@@ -22,7 +22,7 @@ public class IMU : ICommandable
     private ChRunningAverage accFilterY;
     private ChRunningAverage accFilterZ;
 
-    public bool output = true;        // output data to file?
+    public bool output = false;       // output data to file?
     private StreamWriter outputFile;  // output file
 
     private System.Random rand = new System.Random();
