@@ -129,6 +129,11 @@ public class UChSystem : MonoBehaviour
     // -----------------------------
     void Awake()
     {
+        ////  TODO -- EXPERIMENTAL
+        QualitySettings.vSyncCount = 0;  // VSync must be disabled
+        Application.targetFrameRate = 60;
+
+
         switch (contact_method)
         {
             case ChContactMethod.NSC:

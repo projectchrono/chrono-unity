@@ -64,9 +64,12 @@ public class UGator : UChVehicle
         Debug.Log("Gator total mass: " + gator.GetTotalMass());
 
         // Hide the editing child object and enable the run-time components
-        ////var listOfChildren = GetComponentsInChildren<Renderer>();
-        ////listOfChildren[0].enabled = false;
-        GetComponentInChildren<Renderer>().enabled = false;
+        var listOfChildren = GetComponentsInChildren<Renderer>();
+        foreach (var child in listOfChildren)
+        {
+            child.enabled = false;
+        }
+        ////GetComponentInChildren<Renderer>().enabled = false;
 
         Object chassis_prefab = Resources.Load("Gator/Chassis", typeof(GameObject));
         chassis = Instantiate(chassis_prefab, transform) as GameObject;
