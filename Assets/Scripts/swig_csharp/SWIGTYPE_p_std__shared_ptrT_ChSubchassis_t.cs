@@ -9,18 +9,18 @@
 //------------------------------------------------------------------------------
 
 
-public class SWIGTYPE_p_std__vectorT_chrono__ChVectorT_float_t_t {
+public class SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
 
-  internal SWIGTYPE_p_std__vectorT_chrono__ChVectorT_float_t_t(global::System.IntPtr cPtr, bool futureUse) {
+  internal SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t(global::System.IntPtr cPtr, bool futureUse) {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
-  protected SWIGTYPE_p_std__vectorT_chrono__ChVectorT_float_t_t() {
+  protected SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t() {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(SWIGTYPE_p_std__vectorT_chrono__ChVectorT_float_t_t obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t obj) {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 }

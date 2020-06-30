@@ -164,6 +164,11 @@ public class RigidTerrain : ChTerrain {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public void ExportMeshWavefront(string out_dir) {
+    vehiclePINVOKE.RigidTerrain_ExportMeshWavefront(swigCPtr, out_dir);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
   public bool FindPoint(ChVectorD loc, SWIGTYPE_p_double height, ChVectorD normal, SWIGTYPE_p_float friction) {
     bool ret = vehiclePINVOKE.RigidTerrain_FindPoint(swigCPtr, ChVectorD.getCPtr(loc), SWIGTYPE_p_double.getCPtr(height), ChVectorD.getCPtr(normal), SWIGTYPE_p_float.getCPtr(friction));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();

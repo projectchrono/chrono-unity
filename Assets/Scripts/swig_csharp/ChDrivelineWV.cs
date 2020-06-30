@@ -41,8 +41,8 @@ public class ChDrivelineWV : ChDriveline {
     return ret;
   }
 
-  public virtual void Initialize(ChBody chassis, SWIGTYPE_p_ChAxleList axles, vector_int driven_axles) {
-    vehiclePINVOKE.ChDrivelineWV_Initialize(swigCPtr, ChBody.getCPtr(chassis), SWIGTYPE_p_ChAxleList.getCPtr(axles), vector_int.getCPtr(driven_axles));
+  public virtual void Initialize(ChChassis chassis, SWIGTYPE_p_ChAxleList axles, vector_int driven_axles) {
+    vehiclePINVOKE.ChDrivelineWV_Initialize(swigCPtr, ChChassis.getCPtr(chassis), SWIGTYPE_p_ChAxleList.getCPtr(axles), vector_int.getCPtr(driven_axles));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

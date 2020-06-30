@@ -80,8 +80,29 @@ public class ChVehicle : global::System.IDisposable {
     return ret;
   }
 
+  public ChChassisRear GetChassisRear(int id) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.ChVehicle_GetChassisRear(swigCPtr, id);
+    ChChassisRear ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChChassisRear(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public ChChassisConnector GetChassisConnector(int id) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.ChVehicle_GetChassisConnector(swigCPtr, id);
+    ChChassisConnector ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChChassisConnector(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public ChBodyAuxRef GetChassisBody() {
     global::System.IntPtr cPtr = vehiclePINVOKE.ChVehicle_GetChassisBody(swigCPtr);
+    ChBodyAuxRef ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBodyAuxRef(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public ChBodyAuxRef GetChassisRearBody(int id) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.ChVehicle_GetChassisRearBody(swigCPtr, id);
     ChBodyAuxRef ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBodyAuxRef(cPtr, true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
@@ -184,6 +205,11 @@ public class ChVehicle : global::System.IDisposable {
 
   public void SetChassisVisualizationType(VisualizationType vis) {
     vehiclePINVOKE.ChVehicle_SetChassisVisualizationType(swigCPtr, (int)vis);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void SetChassisRearVisualizationType(VisualizationType vis) {
+    vehiclePINVOKE.ChVehicle_SetChassisRearVisualizationType(swigCPtr, (int)vis);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

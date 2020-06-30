@@ -48,8 +48,8 @@ public class ChSteering : ChPart {
     return ret;
   }
 
-  public virtual void Initialize(ChBodyAuxRef chassis, ChVectorD location, ChQuaternionD rotation) {
-    vehiclePINVOKE.ChSteering_Initialize(swigCPtr, ChBodyAuxRef.getCPtr(chassis), ChVectorD.getCPtr(location), ChQuaternionD.getCPtr(rotation));
+  public virtual void Initialize(ChChassis chassis, ChVectorD location, ChQuaternionD rotation) {
+    vehiclePINVOKE.ChSteering_Initialize(swigCPtr, ChChassis.getCPtr(chassis), ChVectorD.getCPtr(location), ChQuaternionD.getCPtr(rotation));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

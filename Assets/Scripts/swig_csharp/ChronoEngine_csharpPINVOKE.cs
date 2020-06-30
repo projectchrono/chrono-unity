@@ -786,6 +786,72 @@ class ChronoEngine_csharpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_vector_ChVectorD")]
   public static extern void delete_vector_ChVectorD(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChVectorF_Clear")]
+  public static extern void vector_ChVectorF_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChVectorF_Add")]
+  public static extern void vector_ChVectorF_Add(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChVectorF_size")]
+  public static extern uint vector_ChVectorF_size(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChVectorF_capacity")]
+  public static extern uint vector_ChVectorF_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChVectorF_reserve")]
+  public static extern void vector_ChVectorF_reserve(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_vector_ChVectorF__SWIG_0")]
+  public static extern global::System.IntPtr new_vector_ChVectorF__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_vector_ChVectorF__SWIG_1")]
+  public static extern global::System.IntPtr new_vector_ChVectorF__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_vector_ChVectorF__SWIG_2")]
+  public static extern global::System.IntPtr new_vector_ChVectorF__SWIG_2(int jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChVectorF_getitemcopy")]
+  public static extern global::System.IntPtr vector_ChVectorF_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChVectorF_getitem")]
+  public static extern global::System.IntPtr vector_ChVectorF_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChVectorF_setitem")]
+  public static extern void vector_ChVectorF_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChVectorF_AddRange")]
+  public static extern void vector_ChVectorF_AddRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChVectorF_GetRange")]
+  public static extern global::System.IntPtr vector_ChVectorF_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChVectorF_Insert")]
+  public static extern void vector_ChVectorF_Insert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChVectorF_InsertRange")]
+  public static extern void vector_ChVectorF_InsertRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChVectorF_RemoveAt")]
+  public static extern void vector_ChVectorF_RemoveAt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChVectorF_RemoveRange")]
+  public static extern void vector_ChVectorF_RemoveRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChVectorF_Repeat")]
+  public static extern global::System.IntPtr vector_ChVectorF_Repeat(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChVectorF_Reverse__SWIG_0")]
+  public static extern void vector_ChVectorF_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChVectorF_Reverse__SWIG_1")]
+  public static extern void vector_ChVectorF_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChVectorF_SetRange")]
+  public static extern void vector_ChVectorF_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_vector_ChVectorF")]
+  public static extern void delete_vector_ChVectorF(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChVectorI_Clear")]
   public static extern void vector_ChVectorI_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -5147,6 +5213,9 @@ class ChronoEngine_csharpPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChTriangleMeshSoup_Clone")]
   public static extern global::System.IntPtr ChTriangleMeshSoup_Clone(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChTriangleMeshSoup_LoadWavefrontMesh")]
+  public static extern void ChTriangleMeshSoup_LoadWavefrontMesh(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChTriangleMeshSoup_Triangle")]
   public static extern global::System.IntPtr ChTriangleMeshSoup_Triangle(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
@@ -11469,6 +11538,72 @@ class ChronoEngine_csharpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_vector_ChLink")]
   public static extern void delete_vector_ChLink(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChLinkBase_Clear")]
+  public static extern void vector_ChLinkBase_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChLinkBase_Add")]
+  public static extern void vector_ChLinkBase_Add(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChLinkBase_size")]
+  public static extern uint vector_ChLinkBase_size(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChLinkBase_capacity")]
+  public static extern uint vector_ChLinkBase_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChLinkBase_reserve")]
+  public static extern void vector_ChLinkBase_reserve(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_vector_ChLinkBase__SWIG_0")]
+  public static extern global::System.IntPtr new_vector_ChLinkBase__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_vector_ChLinkBase__SWIG_1")]
+  public static extern global::System.IntPtr new_vector_ChLinkBase__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_vector_ChLinkBase__SWIG_2")]
+  public static extern global::System.IntPtr new_vector_ChLinkBase__SWIG_2(int jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChLinkBase_getitemcopy")]
+  public static extern global::System.IntPtr vector_ChLinkBase_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChLinkBase_getitem")]
+  public static extern global::System.IntPtr vector_ChLinkBase_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChLinkBase_setitem")]
+  public static extern void vector_ChLinkBase_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChLinkBase_AddRange")]
+  public static extern void vector_ChLinkBase_AddRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChLinkBase_GetRange")]
+  public static extern global::System.IntPtr vector_ChLinkBase_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChLinkBase_Insert")]
+  public static extern void vector_ChLinkBase_Insert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChLinkBase_InsertRange")]
+  public static extern void vector_ChLinkBase_InsertRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChLinkBase_RemoveAt")]
+  public static extern void vector_ChLinkBase_RemoveAt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChLinkBase_RemoveRange")]
+  public static extern void vector_ChLinkBase_RemoveRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChLinkBase_Repeat")]
+  public static extern global::System.IntPtr vector_ChLinkBase_Repeat(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChLinkBase_Reverse__SWIG_0")]
+  public static extern void vector_ChLinkBase_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChLinkBase_Reverse__SWIG_1")]
+  public static extern void vector_ChLinkBase_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChLinkBase_SetRange")]
+  public static extern void vector_ChLinkBase_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_vector_ChLinkBase")]
+  public static extern void delete_vector_ChLinkBase(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_vector_ChMesh_Clear")]
   public static extern void vector_ChMesh_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -12966,21 +13101,6 @@ class ChronoEngine_csharpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ReportContactCallback_director_connect")]
   public static extern void ReportContactCallback_director_connect(global::System.Runtime.InteropServices.HandleRef jarg1, ReportContactCallback.SwigDelegateReportContactCallback_0 delegate0);
 
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChCustomCollisionCallbackP")]
-  public static extern void delete_ChCustomCollisionCallbackP(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChCustomCollisionCallbackP_OnCustomCollision")]
-  public static extern void ChCustomCollisionCallbackP_OnCustomCollision(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChCustomCollisionCallbackP_OnCustomCollisionSwigExplicitChCustomCollisionCallbackP")]
-  public static extern void ChCustomCollisionCallbackP_OnCustomCollisionSwigExplicitChCustomCollisionCallbackP(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChCustomCollisionCallbackP")]
-  public static extern global::System.IntPtr new_ChCustomCollisionCallbackP();
-
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChCustomCollisionCallbackP_director_connect")]
-  public static extern void ChCustomCollisionCallbackP_director_connect(global::System.Runtime.InteropServices.HandleRef jarg1, ChCustomCollisionCallbackP.SwigDelegateChCustomCollisionCallbackP_0 delegate0);
-
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChSystem")]
   public static extern void delete_ChSystem(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -13467,8 +13587,8 @@ class ChronoEngine_csharpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_ComputeCollisions")]
   public static extern double ChSystem_ComputeCollisions(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_RegisterCustomCollisionCallback__SWIG_0")]
-  public static extern void ChSystem_RegisterCustomCollisionCallback__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_RegisterCustomCollisionCallback")]
+  public static extern void ChSystem_RegisterCustomCollisionCallback(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_SetCollisionSystem")]
   public static extern void ChSystem_SetCollisionSystem(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -13602,17 +13722,20 @@ class ChronoEngine_csharpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_SetSolver__SWIG_9")]
   public static extern void ChSystem_SetSolver__SWIG_9(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_RegisterCustomCollisionCallback__SWIG_1")]
-  public static extern void ChSystem_RegisterCustomCollisionCallback__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_CustomCollisionCallback")]
   public static extern void delete_CustomCollisionCallback(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_CustomCollisionCallback_OnCustomCollision")]
   public static extern void CustomCollisionCallback_OnCustomCollision(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_CustomCollisionCallback_OnCustomCollisionSwigExplicitCustomCollisionCallback")]
+  public static extern void CustomCollisionCallback_OnCustomCollisionSwigExplicitCustomCollisionCallback(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_CustomCollisionCallback")]
   public static extern global::System.IntPtr new_CustomCollisionCallback();
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_CustomCollisionCallback_director_connect")]
+  public static extern void CustomCollisionCallback_director_connect(global::System.Runtime.InteropServices.HandleRef jarg1, CustomCollisionCallback.SwigDelegateCustomCollisionCallback_0 delegate0);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_new_ChSystemNSC__SWIG_0")]
   public static extern global::System.IntPtr new_ChSystemNSC__SWIG_0(uint jarg1, double jarg2, bool jarg3);

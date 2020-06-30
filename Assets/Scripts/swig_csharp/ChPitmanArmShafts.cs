@@ -41,8 +41,8 @@ public class ChPitmanArmShafts : ChSteering {
     return ret;
   }
 
-  public override void Initialize(ChBodyAuxRef chassis, ChVectorD location, ChQuaternionD rotation) {
-    vehiclePINVOKE.ChPitmanArmShafts_Initialize(swigCPtr, ChBodyAuxRef.getCPtr(chassis), ChVectorD.getCPtr(location), ChQuaternionD.getCPtr(rotation));
+  public override void Initialize(ChChassis chassis, ChVectorD location, ChQuaternionD rotation) {
+    vehiclePINVOKE.ChPitmanArmShafts_Initialize(swigCPtr, ChChassis.getCPtr(chassis), ChVectorD.getCPtr(location), ChQuaternionD.getCPtr(rotation));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

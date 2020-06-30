@@ -74,14 +74,14 @@ public class ChTriangleMeshConnected : ChTriangleMesh {
     } 
   }
 
-  public SWIGTYPE_p_std__vectorT_chrono__ChVectorT_float_t_t m_colors {
+  public vector_ChVectorF m_colors {
     set {
-      ChronoEngine_csharpPINVOKE.ChTriangleMeshConnected_m_colors_set(swigCPtr, SWIGTYPE_p_std__vectorT_chrono__ChVectorT_float_t_t.getCPtr(value));
+      ChronoEngine_csharpPINVOKE.ChTriangleMeshConnected_m_colors_set(swigCPtr, vector_ChVectorF.getCPtr(value));
       if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
       global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChTriangleMeshConnected_m_colors_get(swigCPtr);
-      SWIGTYPE_p_std__vectorT_chrono__ChVectorT_float_t_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_chrono__ChVectorT_float_t_t(cPtr, false);
+      vector_ChVectorF ret = (cPtr == global::System.IntPtr.Zero) ? null : new vector_ChVectorF(cPtr, false);
       if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
@@ -184,8 +184,8 @@ public class ChTriangleMeshConnected : ChTriangleMesh {
     return ret;
   }
 
-  public SWIGTYPE_p_std__vectorT_chrono__ChVectorT_float_t_t getCoordsColors() {
-    SWIGTYPE_p_std__vectorT_chrono__ChVectorT_float_t_t ret = new SWIGTYPE_p_std__vectorT_chrono__ChVectorT_float_t_t(ChronoEngine_csharpPINVOKE.ChTriangleMeshConnected_getCoordsColors(swigCPtr), false);
+  public vector_ChVectorF getCoordsColors() {
+    vector_ChVectorF ret = new vector_ChVectorF(ChronoEngine_csharpPINVOKE.ChTriangleMeshConnected_getCoordsColors(swigCPtr), false);
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

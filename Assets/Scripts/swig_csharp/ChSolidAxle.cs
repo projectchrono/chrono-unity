@@ -53,18 +53,18 @@ public class ChSolidAxle : ChSuspension {
     return ret;
   }
 
-  public override void Initialize(ChBodyAuxRef chassis, ChVectorD location, ChBody tierod_body, int steering_index, double left_ang_vel, double right_ang_vel) {
-    vehiclePINVOKE.ChSolidAxle_Initialize__SWIG_0(swigCPtr, ChBodyAuxRef.getCPtr(chassis), ChVectorD.getCPtr(location), ChBody.getCPtr(tierod_body), steering_index, left_ang_vel, right_ang_vel);
+  public override void Initialize(ChChassis chassis, SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t subchassis, SWIGTYPE_p_std__shared_ptrT_ChSteering_t steering, ChVectorD location, double left_ang_vel, double right_ang_vel) {
+    vehiclePINVOKE.ChSolidAxle_Initialize__SWIG_0(swigCPtr, ChChassis.getCPtr(chassis), SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t.getCPtr(subchassis), SWIGTYPE_p_std__shared_ptrT_ChSteering_t.getCPtr(steering), ChVectorD.getCPtr(location), left_ang_vel, right_ang_vel);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public override void Initialize(ChBodyAuxRef chassis, ChVectorD location, ChBody tierod_body, int steering_index, double left_ang_vel) {
-    vehiclePINVOKE.ChSolidAxle_Initialize__SWIG_1(swigCPtr, ChBodyAuxRef.getCPtr(chassis), ChVectorD.getCPtr(location), ChBody.getCPtr(tierod_body), steering_index, left_ang_vel);
+  public override void Initialize(ChChassis chassis, SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t subchassis, SWIGTYPE_p_std__shared_ptrT_ChSteering_t steering, ChVectorD location, double left_ang_vel) {
+    vehiclePINVOKE.ChSolidAxle_Initialize__SWIG_1(swigCPtr, ChChassis.getCPtr(chassis), SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t.getCPtr(subchassis), SWIGTYPE_p_std__shared_ptrT_ChSteering_t.getCPtr(steering), ChVectorD.getCPtr(location), left_ang_vel);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public override void Initialize(ChBodyAuxRef chassis, ChVectorD location, ChBody tierod_body, int steering_index) {
-    vehiclePINVOKE.ChSolidAxle_Initialize__SWIG_2(swigCPtr, ChBodyAuxRef.getCPtr(chassis), ChVectorD.getCPtr(location), ChBody.getCPtr(tierod_body), steering_index);
+  public override void Initialize(ChChassis chassis, SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t subchassis, SWIGTYPE_p_std__shared_ptrT_ChSteering_t steering, ChVectorD location) {
+    vehiclePINVOKE.ChSolidAxle_Initialize__SWIG_2(swigCPtr, ChChassis.getCPtr(chassis), SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t.getCPtr(subchassis), SWIGTYPE_p_std__shared_ptrT_ChSteering_t.getCPtr(steering), ChVectorD.getCPtr(location));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

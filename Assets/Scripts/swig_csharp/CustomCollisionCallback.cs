@@ -44,12 +44,34 @@ public class CustomCollisionCallback : global::System.IDisposable {
   }
 
   public virtual void OnCustomCollision(ChSystem msys) {
-    ChronoEngine_csharpPINVOKE.CustomCollisionCallback_OnCustomCollision(swigCPtr, ChSystem.getCPtr(msys));
+    if (SwigDerivedClassHasMethod("OnCustomCollision", swigMethodTypes0)) ChronoEngine_csharpPINVOKE.CustomCollisionCallback_OnCustomCollisionSwigExplicitCustomCollisionCallback(swigCPtr, ChSystem.getCPtr(msys)); else ChronoEngine_csharpPINVOKE.CustomCollisionCallback_OnCustomCollision(swigCPtr, ChSystem.getCPtr(msys));
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public CustomCollisionCallback() : this(ChronoEngine_csharpPINVOKE.new_CustomCollisionCallback(), true) {
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    SwigDirectorConnect();
   }
 
+  private void SwigDirectorConnect() {
+    if (SwigDerivedClassHasMethod("OnCustomCollision", swigMethodTypes0))
+      swigDelegate0 = new SwigDelegateCustomCollisionCallback_0(SwigDirectorMethodOnCustomCollision);
+    ChronoEngine_csharpPINVOKE.CustomCollisionCallback_director_connect(swigCPtr, swigDelegate0);
+  }
+
+  private bool SwigDerivedClassHasMethod(string methodName, global::System.Type[] methodTypes) {
+    global::System.Reflection.MethodInfo methodInfo = this.GetType().GetMethod(methodName, global::System.Reflection.BindingFlags.Public | global::System.Reflection.BindingFlags.NonPublic | global::System.Reflection.BindingFlags.Instance, null, methodTypes, null);
+    bool hasDerivedMethod = methodInfo.DeclaringType.IsSubclassOf(typeof(CustomCollisionCallback));
+    return hasDerivedMethod;
+  }
+
+  private void SwigDirectorMethodOnCustomCollision(global::System.IntPtr msys) {
+    OnCustomCollision((msys == global::System.IntPtr.Zero) ? null : new ChSystem(msys, true));
+  }
+
+  public delegate void SwigDelegateCustomCollisionCallback_0(global::System.IntPtr msys);
+
+  private SwigDelegateCustomCollisionCallback_0 swigDelegate0;
+
+  private static global::System.Type[] swigMethodTypes0 = new global::System.Type[] { typeof(ChSystem) };
 }

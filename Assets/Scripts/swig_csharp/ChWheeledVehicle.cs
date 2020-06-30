@@ -96,6 +96,12 @@ public class ChWheeledVehicle : ChVehicle {
     return ret;
   }
 
+  public SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t GetSubchassis(int id) {
+    SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t ret = new SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t(vehiclePINVOKE.ChWheeledVehicle_GetSubchassis(swigCPtr, id), true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public override double GetVehicleMass() {
     double ret = vehiclePINVOKE.ChWheeledVehicle_GetVehicleMass(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
@@ -181,23 +187,8 @@ public class ChWheeledVehicle : ChVehicle {
     return ret;
   }
 
-  public void InitializeTire(ChTire tire, ChWheel wheel, VisualizationType tire_vis, ChTire.CollisionType tire_coll) {
-    vehiclePINVOKE.ChWheeledVehicle_InitializeTire__SWIG_0(swigCPtr, ChTire.getCPtr(tire), ChWheel.getCPtr(wheel), (int)tire_vis, (int)tire_coll);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public void InitializeTire(ChTire tire, ChWheel wheel, VisualizationType tire_vis) {
-    vehiclePINVOKE.ChWheeledVehicle_InitializeTire__SWIG_1(swigCPtr, ChTire.getCPtr(tire), ChWheel.getCPtr(wheel), (int)tire_vis);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public void InitializeTire(ChTire tire, ChWheel wheel) {
-    vehiclePINVOKE.ChWheeledVehicle_InitializeTire__SWIG_2(swigCPtr, ChTire.getCPtr(tire), ChWheel.getCPtr(wheel));
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public void InitializePowertrain(ChPowertrain powertrain) {
-    vehiclePINVOKE.ChWheeledVehicle_InitializePowertrain(swigCPtr, ChPowertrain.getCPtr(powertrain));
+  public void SetSubchassisVisualizationType(VisualizationType vis) {
+    vehiclePINVOKE.ChWheeledVehicle_SetSubchassisVisualizationType(swigCPtr, (int)vis);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -238,6 +229,36 @@ public class ChWheeledVehicle : ChVehicle {
 
   public void SetDrivelineOutput(bool state) {
     vehiclePINVOKE.ChWheeledVehicle_SetDrivelineOutput(swigCPtr, state);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public override void Initialize(ChCoordsysD chassisPos, double chassisFwdVel) {
+    vehiclePINVOKE.ChWheeledVehicle_Initialize__SWIG_0(swigCPtr, ChCoordsysD.getCPtr(chassisPos), chassisFwdVel);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public override void Initialize(ChCoordsysD chassisPos) {
+    vehiclePINVOKE.ChWheeledVehicle_Initialize__SWIG_1(swigCPtr, ChCoordsysD.getCPtr(chassisPos));
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void InitializeTire(ChTire tire, ChWheel wheel, VisualizationType tire_vis, ChTire.CollisionType tire_coll) {
+    vehiclePINVOKE.ChWheeledVehicle_InitializeTire__SWIG_0(swigCPtr, ChTire.getCPtr(tire), ChWheel.getCPtr(wheel), (int)tire_vis, (int)tire_coll);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void InitializeTire(ChTire tire, ChWheel wheel, VisualizationType tire_vis) {
+    vehiclePINVOKE.ChWheeledVehicle_InitializeTire__SWIG_1(swigCPtr, ChTire.getCPtr(tire), ChWheel.getCPtr(wheel), (int)tire_vis);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void InitializeTire(ChTire tire, ChWheel wheel) {
+    vehiclePINVOKE.ChWheeledVehicle_InitializeTire__SWIG_2(swigCPtr, ChTire.getCPtr(tire), ChWheel.getCPtr(wheel));
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void InitializePowertrain(ChPowertrain powertrain) {
+    vehiclePINVOKE.ChWheeledVehicle_InitializePowertrain(swigCPtr, ChPowertrain.getCPtr(powertrain));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

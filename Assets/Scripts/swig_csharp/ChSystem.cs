@@ -323,8 +323,8 @@ public class ChSystem : ChIntegrableIIorder {
     return ret;
   }
 
-  public SWIGTYPE_p_std__vectorT_std__shared_ptrT_chrono__ChLinkBase_t_t Get_linklist() {
-    SWIGTYPE_p_std__vectorT_std__shared_ptrT_chrono__ChLinkBase_t_t ret = new SWIGTYPE_p_std__vectorT_std__shared_ptrT_chrono__ChLinkBase_t_t(ChronoEngine_csharpPINVOKE.ChSystem_Get_linklist(swigCPtr), false);
+  public vector_ChLinkBase Get_linklist() {
+    vector_ChLinkBase ret = new vector_ChLinkBase(ChronoEngine_csharpPINVOKE.ChSystem_Get_linklist(swigCPtr), false);
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -927,7 +927,7 @@ public class ChSystem : ChIntegrableIIorder {
   }
 
   public void RegisterCustomCollisionCallback(CustomCollisionCallback callback) {
-    ChronoEngine_csharpPINVOKE.ChSystem_RegisterCustomCollisionCallback__SWIG_0(swigCPtr, CustomCollisionCallback.getCPtr(callback));
+    ChronoEngine_csharpPINVOKE.ChSystem_RegisterCustomCollisionCallback(swigCPtr, CustomCollisionCallback.getCPtr(callback));
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -1172,11 +1172,6 @@ public class ChSystem : ChIntegrableIIorder {
 
   public void SetSolver(ChSolverMINRES solver) {
     ChronoEngine_csharpPINVOKE.ChSystem_SetSolver__SWIG_9(swigCPtr, ChSolverMINRES.getCPtr(solver));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public void RegisterCustomCollisionCallback(ChCustomCollisionCallbackP callback) {
-    ChronoEngine_csharpPINVOKE.ChSystem_RegisterCustomCollisionCallback__SWIG_1(swigCPtr, ChCustomCollisionCallbackP.getCPtr(callback));
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 

@@ -50,6 +50,11 @@ public class ChTriangleMeshSoup : ChTriangleMesh {
     return ret;
   }
 
+  public void LoadWavefrontMesh(string filename) {
+    ChronoEngine_csharpPINVOKE.ChTriangleMeshSoup_LoadWavefrontMesh(swigCPtr, filename);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
   public virtual ChTriangle Triangle(int index) {
     ChTriangle ret = new ChTriangle(ChronoEngine_csharpPINVOKE.ChTriangleMeshSoup_Triangle(swigCPtr, index), true);
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
