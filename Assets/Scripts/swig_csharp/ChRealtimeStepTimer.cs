@@ -42,4 +42,16 @@ public class ChRealtimeStepTimer : ChTimerD {
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public double RTF {
+    set {
+      ChronoEngine_csharpPINVOKE.ChRealtimeStepTimer_RTF_set(swigCPtr, value);
+      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    } 
+    get {
+      double ret = ChronoEngine_csharpPINVOKE.ChRealtimeStepTimer_RTF_get(swigCPtr);
+      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      return ret;
+    } 
+  }
+
 }

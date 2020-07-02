@@ -104,63 +104,83 @@ public class ChTMeasyTire : ChTire {
     return ret;
   }
 
+  public void GuessTruck80Par(uint li, double tireWidth, double ratio, double rimDia, double pinfl_li, double pinfl_use, double damping_ratio) {
+    vehiclePINVOKE.ChTMeasyTire_GuessTruck80Par__SWIG_0(swigCPtr, li, tireWidth, ratio, rimDia, pinfl_li, pinfl_use, damping_ratio);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
   public void GuessTruck80Par(uint li, double tireWidth, double ratio, double rimDia, double pinfl_li, double pinfl_use) {
-    vehiclePINVOKE.ChTMeasyTire_GuessTruck80Par__SWIG_0(swigCPtr, li, tireWidth, ratio, rimDia, pinfl_li, pinfl_use);
+    vehiclePINVOKE.ChTMeasyTire_GuessTruck80Par__SWIG_1(swigCPtr, li, tireWidth, ratio, rimDia, pinfl_li, pinfl_use);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void GuessTruck80Par(uint li, double tireWidth, double ratio, double rimDia, double pinfl_li) {
-    vehiclePINVOKE.ChTMeasyTire_GuessTruck80Par__SWIG_1(swigCPtr, li, tireWidth, ratio, rimDia, pinfl_li);
+    vehiclePINVOKE.ChTMeasyTire_GuessTruck80Par__SWIG_2(swigCPtr, li, tireWidth, ratio, rimDia, pinfl_li);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void GuessTruck80Par(uint li, double tireWidth, double ratio, double rimDia) {
-    vehiclePINVOKE.ChTMeasyTire_GuessTruck80Par__SWIG_2(swigCPtr, li, tireWidth, ratio, rimDia);
+    vehiclePINVOKE.ChTMeasyTire_GuessTruck80Par__SWIG_3(swigCPtr, li, tireWidth, ratio, rimDia);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void GuessTruck80Par(double loadForce, double tireWidth, double ratio, double rimDia, double pinfl_li, double pinfl_use, double damping_ratio) {
+    vehiclePINVOKE.ChTMeasyTire_GuessTruck80Par__SWIG_4(swigCPtr, loadForce, tireWidth, ratio, rimDia, pinfl_li, pinfl_use, damping_ratio);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void GuessTruck80Par(double loadForce, double tireWidth, double ratio, double rimDia, double pinfl_li, double pinfl_use) {
-    vehiclePINVOKE.ChTMeasyTire_GuessTruck80Par__SWIG_3(swigCPtr, loadForce, tireWidth, ratio, rimDia, pinfl_li, pinfl_use);
+    vehiclePINVOKE.ChTMeasyTire_GuessTruck80Par__SWIG_5(swigCPtr, loadForce, tireWidth, ratio, rimDia, pinfl_li, pinfl_use);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void GuessTruck80Par(double loadForce, double tireWidth, double ratio, double rimDia, double pinfl_li) {
-    vehiclePINVOKE.ChTMeasyTire_GuessTruck80Par__SWIG_4(swigCPtr, loadForce, tireWidth, ratio, rimDia, pinfl_li);
+    vehiclePINVOKE.ChTMeasyTire_GuessTruck80Par__SWIG_6(swigCPtr, loadForce, tireWidth, ratio, rimDia, pinfl_li);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void GuessTruck80Par(double loadForce, double tireWidth, double ratio, double rimDia) {
-    vehiclePINVOKE.ChTMeasyTire_GuessTruck80Par__SWIG_5(swigCPtr, loadForce, tireWidth, ratio, rimDia);
+    vehiclePINVOKE.ChTMeasyTire_GuessTruck80Par__SWIG_7(swigCPtr, loadForce, tireWidth, ratio, rimDia);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void GuessPassCar70Par(uint li, double tireWidth, double ratio, double rimDia, double pinfl_li, double pinfl_use, double damping_ratio) {
+    vehiclePINVOKE.ChTMeasyTire_GuessPassCar70Par__SWIG_0(swigCPtr, li, tireWidth, ratio, rimDia, pinfl_li, pinfl_use, damping_ratio);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void GuessPassCar70Par(uint li, double tireWidth, double ratio, double rimDia, double pinfl_li, double pinfl_use) {
-    vehiclePINVOKE.ChTMeasyTire_GuessPassCar70Par__SWIG_0(swigCPtr, li, tireWidth, ratio, rimDia, pinfl_li, pinfl_use);
+    vehiclePINVOKE.ChTMeasyTire_GuessPassCar70Par__SWIG_1(swigCPtr, li, tireWidth, ratio, rimDia, pinfl_li, pinfl_use);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void GuessPassCar70Par(uint li, double tireWidth, double ratio, double rimDia, double pinfl_li) {
-    vehiclePINVOKE.ChTMeasyTire_GuessPassCar70Par__SWIG_1(swigCPtr, li, tireWidth, ratio, rimDia, pinfl_li);
+    vehiclePINVOKE.ChTMeasyTire_GuessPassCar70Par__SWIG_2(swigCPtr, li, tireWidth, ratio, rimDia, pinfl_li);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void GuessPassCar70Par(uint li, double tireWidth, double ratio, double rimDia) {
-    vehiclePINVOKE.ChTMeasyTire_GuessPassCar70Par__SWIG_2(swigCPtr, li, tireWidth, ratio, rimDia);
+    vehiclePINVOKE.ChTMeasyTire_GuessPassCar70Par__SWIG_3(swigCPtr, li, tireWidth, ratio, rimDia);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void GuessPassCar70Par(double loadForce, double tireWidth, double ratio, double rimDia, double pinfl_li, double pinfl_use, double damping_ratio) {
+    vehiclePINVOKE.ChTMeasyTire_GuessPassCar70Par__SWIG_4(swigCPtr, loadForce, tireWidth, ratio, rimDia, pinfl_li, pinfl_use, damping_ratio);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void GuessPassCar70Par(double loadForce, double tireWidth, double ratio, double rimDia, double pinfl_li, double pinfl_use) {
-    vehiclePINVOKE.ChTMeasyTire_GuessPassCar70Par__SWIG_3(swigCPtr, loadForce, tireWidth, ratio, rimDia, pinfl_li, pinfl_use);
+    vehiclePINVOKE.ChTMeasyTire_GuessPassCar70Par__SWIG_5(swigCPtr, loadForce, tireWidth, ratio, rimDia, pinfl_li, pinfl_use);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void GuessPassCar70Par(double loadForce, double tireWidth, double ratio, double rimDia, double pinfl_li) {
-    vehiclePINVOKE.ChTMeasyTire_GuessPassCar70Par__SWIG_4(swigCPtr, loadForce, tireWidth, ratio, rimDia, pinfl_li);
+    vehiclePINVOKE.ChTMeasyTire_GuessPassCar70Par__SWIG_6(swigCPtr, loadForce, tireWidth, ratio, rimDia, pinfl_li);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void GuessPassCar70Par(double loadForce, double tireWidth, double ratio, double rimDia) {
-    vehiclePINVOKE.ChTMeasyTire_GuessPassCar70Par__SWIG_5(swigCPtr, loadForce, tireWidth, ratio, rimDia);
+    vehiclePINVOKE.ChTMeasyTire_GuessPassCar70Par__SWIG_7(swigCPtr, loadForce, tireWidth, ratio, rimDia);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

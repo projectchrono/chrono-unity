@@ -2283,6 +2283,12 @@ class ChronoEngine_csharpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChRealtimeStepTimer_Spin")]
   public static extern void ChRealtimeStepTimer_Spin(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChRealtimeStepTimer_RTF_set")]
+  public static extern void ChRealtimeStepTimer_RTF_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChRealtimeStepTimer_RTF_get")]
+  public static extern double ChRealtimeStepTimer_RTF_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChRealtimeStepTimer")]
   public static extern void delete_ChRealtimeStepTimer(global::System.Runtime.InteropServices.HandleRef jarg1);
 
