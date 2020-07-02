@@ -28,6 +28,11 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
         // - Instantiate an IMU sensor and attach to this vehicle
         if (gameObject.tag == "Player")
         {
+            // Convention is that 0 yaw corresponds to the vehicle facing +Z. 
+            // Since the vehicle is constructed in an ISO frame, this requires a 90 rotation about the vertical.
+            transform.rotation = transform.rotation * Quaternion.AngleAxis(-90, Vector3.up);
+
+            // Disable the current vehicle driver component and create a commandable driver
             Debug.Log("Set up vehicle " + gameObject.name + " for ROS commands");
             gameObject.GetComponent<Driver>().enabled = false;
             CommandDriver drv = gameObject.AddComponent<CommandDriver>();
@@ -35,19 +40,22 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
             drv.speedKi = 0.2;
             drv.speedKd = 0.1;
 
+            // Create an IMU sensor and associate it with the vehicle
             UnityEngine.Object IMU_prefab = Resources.Load("IMU", typeof(GameObject));
             GameObject imu = Instantiate(IMU_prefab, transform) as GameObject;
             imu.GetComponent<IMU>().vehicle = this;
 
+            // Create a WheelEncoder sensor and associate it with the vehicle
             UnityEngine.Object WE_prefab = Resources.Load("WheelEncoder", typeof(GameObject));
             GameObject we = Instantiate(WE_prefab, transform) as GameObject;
             we.GetComponent<WheelEncoder>().vehicle = this;
 
             //// TODO: Interogate the concrete vehicle to set parameters such as:
-            //// - drive speed controller gains
             //// - location of sensors
             //// - sensor-specific paramters
+            //// - drive speed controller gains
             //// - etc.
+            imu.GetComponent<IMU>().sensorLocation = GetIMULocation();
         }
 
         OnStart();
@@ -64,6 +72,7 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
         OnAdvance(step);
     }
 
+    // Set the current values of the driver inputs for this vehicle (invoked by driver subsystems).
     public void SetDriverInputs(double steering, double throttle, double braking)
     {
         inputs.m_steering = steering;
@@ -71,6 +80,7 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
         inputs.m_braking = braking;
     }
 
+    // Get the current vehicle speed (forward component of vehicle velocity expressed in local frame).
     public double GetSpeed()
     {
         ChVectorD velG_chrono = GetChVehicle().GetVehiclePointVelocity(new ChVectorD(0, 0, 0));
@@ -78,28 +88,27 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
         ////Debug.Log(velL_chrono.x + " " + velL_chrono.y + " " + velL_chrono.z);
 
         return velL_chrono.x;
-        ////return GetChVehicle().GetVehicleSpeed();
     }
 
     /*
     // Return the vehicle linear acceleration, expressed in the global frame.
+    // The location is assumed to be provided in the local vehicle ISO frame. 
     // This needs some massaging related to what frame things are expressed in.
     public Vector3 GetAccelerationGlobal(Vector3 loc)
     {
-        ChVectorD loc_chrono = new ChVectorD(loc.x, -loc.z, loc.y);
-        ChVectorD accL_chrono = GetChVehicle().GetVehiclePointAcceleration(loc_chrono);
+        ChVectorD accL_chrono = GetChVehicle().GetVehiclePointAcceleration(Utils.ToChrono(loc));
         ChVectorD accG_chrono = GetChVehicle().GetChassisBody().Dir_Body2World(accL_chrono);
         return new Vector3((float)accG_chrono.x, (float)accG_chrono.z, (float)accG_chrono.y);
     }
     */
 
     // Return the vehicle linear acceleration, expressed in a local ISO frame (x fwd, y left, z up).
+    // The location is assumed to be provided in the local vehicle ISO frame. 
     // Note that this is what Chrono::Vehicle currently returns from GetVehiclePointAcceleration,
     // regardless of the world frame orientation.
     public Vector3 GetAccelerationLocal(Vector3 loc)
     {
-        ChVectorD loc_chrono = new ChVectorD(loc.x, -loc.z, loc.y);
-        ChVectorD accL_chrono = GetChVehicle().GetVehiclePointAcceleration(loc_chrono);
+        ChVectorD accL_chrono = GetChVehicle().GetVehiclePointAcceleration(Utils.ToChrono(loc));
         return Utils.FromChrono(accL_chrono);
     }
 
@@ -130,4 +139,10 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
 
     protected abstract void OnStart();
     protected abstract void OnAdvance(double step);
+
+    // Return the IMU sensor location, relative to the vehicle reference frame (ISO frame)
+    protected virtual Vector3 GetIMULocation() { return Vector3.zero; }
+
+    // Return Lidar sensor location, relative to the vehicle reference frame (ISO frame)
+    protected virtual Vector3 GetLidarLocation() { return Vector3.zero; }
 }

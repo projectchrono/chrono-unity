@@ -159,4 +159,14 @@ public class UGator : UChVehicle
     {
         return gator.GetPowertrain();
     }
+
+    protected override Vector3 GetIMULocation()
+    {
+        return new Vector3(-0.267f, -0.016f, 1.539f);
+    }
+
+    protected override Vector3 GetLidarLocation()
+    {
+        return new Vector3(-0.216f, 0.0f, 1.780f);
+    }
 }

@@ -7,7 +7,7 @@ using UnityEngine;
 public class IMU : ICommandable
 {
     public UChVehicle vehicle;                     // associated vehicle
-    public Vector3 sensorLocation = Vector3.zero;  // relative to vehicle chassis reference frame
+    public Vector3 sensorLocation = Vector3.zero;  // relative to vehicle ISO reference frame
 
     public double accelNoiseMean = 0.0;
     public double accelNoiseStdDev = 0.001;
@@ -82,10 +82,15 @@ public class IMU : ICommandable
         Vector3 omega = vehicle.GetWvelLocal();
         Vector3 noisy_omega = omega + RandomVec(omegaNoiseMean, omegaNoiseStdDev);
 
+        // Orientation of vehicle chassis.
+        // Convention is that 0 yaw corresponds to the vehicle facing +Z. 
+        // Since the vehicle is constructed in an ISO frame, this requires a 90 rotation about the vertical.
+        Quaternion rot = transform.rotation * Quaternion.AngleAxis(90, Vector3.up);
+
         SendHeader(type, full_name, timestamp);
         SendData(noisy_accel);
         SendData(noisy_omega);
-        SendData(transform.rotation);
+        SendData(rot);
 
         if (output)
         {
