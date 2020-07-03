@@ -63,28 +63,23 @@ public class UHMMWV : UChVehicle
 
         hmmwv.Initialize();
 
-        // Hide the editing child object and enable the run-time components
-        ////var listOfChildren = GetComponentsInChildren<Renderer>();
-        ////listOfChildren[0].enabled = false;
-        GetComponentInChildren<Renderer>().enabled = false;
+        // Get the vehicle components 
+        foreach (Transform child in transform)
+        {
+            if (child.name == "Chassis")
+                chassis = child.gameObject;
+            else if (child.name == "WheelFrontLeft")
+                wheelFL = child.gameObject;
+            else if (child.name == "WheelFrontRight")
+                wheelFR = child.gameObject;
+            else if (child.name == "WheelRearLeft")
+                wheelRL = child.gameObject;
+            else if (child.name == "WheelRearRight")
+                wheelRR = child.gameObject;
+        }
 
-        Object chassis_prefab = Resources.Load("HMMWV/Chassis", typeof(GameObject));
-        chassis = Instantiate(chassis_prefab, transform) as GameObject;
-        chassis.transform.parent = gameObject.transform;
         if (chassisMaterial != null)
             chassis.GetComponentInChildren<Renderer>().sharedMaterial = chassisMaterial;
-
-        Object wheelL_prefab = Resources.Load("HMMWV/WheelLeft", typeof(GameObject));
-        wheelFL = Instantiate(wheelL_prefab, transform) as GameObject;
-        wheelFL.transform.parent = gameObject.transform;
-        wheelRL = Instantiate(wheelL_prefab, transform) as GameObject;
-        wheelRL.transform.parent = gameObject.transform;
-
-        Object wheelR_prefab = Resources.Load("HMMWV/WheelRight", typeof(GameObject));
-        wheelFR = Instantiate(wheelR_prefab, transform) as GameObject;
-        wheelFR.transform.parent = gameObject.transform;
-        wheelRR = Instantiate(wheelR_prefab, transform) as GameObject;
-        wheelRR.transform.parent = gameObject.transform;
     }
 
     protected override void OnAdvance(double step)

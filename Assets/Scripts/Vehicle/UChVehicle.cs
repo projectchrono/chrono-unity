@@ -44,11 +44,13 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
             UnityEngine.Object IMU_prefab = Resources.Load("IMU", typeof(GameObject));
             GameObject imu = Instantiate(IMU_prefab, transform) as GameObject;
             imu.GetComponent<IMU>().vehicle = this;
+            imu.name = "imu";
 
             // Create a WheelEncoder sensor and associate it with the vehicle
             UnityEngine.Object WE_prefab = Resources.Load("WheelEncoder", typeof(GameObject));
             GameObject we = Instantiate(WE_prefab, transform) as GameObject;
             we.GetComponent<WheelEncoder>().vehicle = this;
+            we.name = "wheel_encoders";
 
             //// TODO: Interogate the concrete vehicle to set parameters such as:
             //// - location of sensors

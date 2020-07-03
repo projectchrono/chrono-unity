@@ -48,35 +48,29 @@ public class UMAN : UChVehicle
 
         man.Initialize();
 
-        // Hide the editing child object and enable the run-time components
-        var listOfChildren = GetComponentsInChildren<Renderer>();
-        foreach (Renderer r in listOfChildren)
-            r.enabled = false;
-        ////GetComponentInChildren<Renderer>().enabled = false;
 
-        Object chassis_prefab = Resources.Load("MAN/Chassis10t", typeof(GameObject));
-        chassis = Instantiate(chassis_prefab, transform) as GameObject;
-        chassis.transform.parent = gameObject.transform;
-
-        Object wheelL_prefab = Resources.Load("MAN/WheelLeft", typeof(GameObject));
-        wheelF1L = Instantiate(wheelL_prefab, transform) as GameObject;
-        wheelF1L.transform.parent = gameObject.transform;
-        wheelF2L = Instantiate(wheelL_prefab, transform) as GameObject;
-        wheelF2L.transform.parent = gameObject.transform;
-        wheelR1L = Instantiate(wheelL_prefab, transform) as GameObject;
-        wheelR1L.transform.parent = gameObject.transform;
-        wheelR2L = Instantiate(wheelL_prefab, transform) as GameObject;
-        wheelR2L.transform.parent = gameObject.transform;
-
-        Object wheelR_prefab = Resources.Load("MAN/WheelRight", typeof(GameObject));
-        wheelF1R = Instantiate(wheelR_prefab, transform) as GameObject;
-        wheelF1R.transform.parent = gameObject.transform;
-        wheelF2R = Instantiate(wheelR_prefab, transform) as GameObject;
-        wheelF2R.transform.parent = gameObject.transform;
-        wheelR1R = Instantiate(wheelR_prefab, transform) as GameObject;
-        wheelR1R.transform.parent = gameObject.transform;
-        wheelR2R = Instantiate(wheelR_prefab, transform) as GameObject;
-        wheelR2R.transform.parent = gameObject.transform;
+        // Get the vehicle components 
+        foreach (Transform child in transform)
+        {
+            if (child.name == "Chassis10t")
+                chassis = child.gameObject;
+            else if (child.name == "WheelFront1Left")
+                wheelF1L = child.gameObject;
+            else if (child.name == "WheelFront1Right")
+                wheelF1R = child.gameObject;
+            else if (child.name == "WheelFront2Left")
+                wheelF2L = child.gameObject;
+            else if (child.name == "WheelFront2Right")
+                wheelF2R = child.gameObject;
+            else if (child.name == "WheelRear1Left")
+                wheelR1L = child.gameObject;
+            else if (child.name == "WheelRear1Right")
+                wheelR1R = child.gameObject;
+            else if (child.name == "WheelRear2Left")
+                wheelR2L = child.gameObject;
+            else if (child.name == "WheelRear2Right")
+                wheelR2R = child.gameObject;
+        }
 
         //// HACK to deal with stuttering due to slow physics.
         //// Note that the MAN vehicle model requires smaller timestep (1 ms).

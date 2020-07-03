@@ -63,40 +63,20 @@ public class UGator : UChVehicle
 
         Debug.Log("Gator total mass: " + gator.GetTotalMass());
 
-        // Hide the editing child object and enable the run-time components
-        var listOfChildren = GetComponentsInChildren<Renderer>();
-        foreach (var child in listOfChildren)
+        // Get the vehicle components 
+        foreach (Transform child in transform)
         {
-            child.enabled = false;
+            if (child.name == "Chassis")
+                chassis = child.gameObject;
+            else if (child.name == "WheelFrontLeft")
+                wheelFL = child.gameObject;
+            else if (child.name == "WheelFrontRight")
+                wheelFR = child.gameObject;
+            else if (child.name == "WheelRearLeft")
+                wheelRL = child.gameObject;
+            else if (child.name == "WheelRearRight")
+                wheelRR = child.gameObject;
         }
-        ////GetComponentInChildren<Renderer>().enabled = false;
-
-        Object chassis_prefab = Resources.Load("Gator/Chassis", typeof(GameObject));
-        chassis = Instantiate(chassis_prefab, transform) as GameObject;
-        chassis.transform.parent = gameObject.transform;
-        if (chassisMaterial != null)
-        {
-            Material[] mats = chassis.GetComponentInChildren<Renderer>().materials;
-            mats[4] = chassisMaterial;
-            mats[6] = chassisMaterial;
-            chassis.GetComponentInChildren<Renderer>().materials = mats;
-        }
-
-        Object wheelFL_prefab = Resources.Load("Gator/WheelFrontLeft", typeof(GameObject));
-        wheelFL = Instantiate(wheelFL_prefab, transform) as GameObject;
-        wheelFL.transform.parent = gameObject.transform;
-
-        Object wheelRL_prefab = Resources.Load("Gator/WheelRearLeft", typeof(GameObject));
-        wheelRL = Instantiate(wheelRL_prefab, transform) as GameObject;
-        wheelRL.transform.parent = gameObject.transform;
-
-        Object wheelFR_prefab = Resources.Load("Gator/WheelFrontRight", typeof(GameObject));
-        wheelFR = Instantiate(wheelFR_prefab, transform) as GameObject;
-        wheelFR.transform.parent = gameObject.transform;
-
-        Object wheelRR_prefab = Resources.Load("Gator/WheelRearRight", typeof(GameObject));
-        wheelRR = Instantiate(wheelRR_prefab, transform) as GameObject;
-        wheelRR.transform.parent = gameObject.transform;
     }
 
     protected override void OnAdvance(double step)
