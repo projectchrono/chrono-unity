@@ -17,7 +17,7 @@ public class CommandDriver : ICommandable, IAdvance
 
     // External commands
     private double targetSpeed;
-    private double wheelAngle;
+    private double wheelInput;
 
     // PID controller errors
     private double m_err;   // current P error
@@ -29,7 +29,7 @@ public class CommandDriver : ICommandable, IAdvance
     public CommandDriver()
     {
         targetSpeed = 0;
-        wheelAngle = 0;
+        wheelInput = 0;
 
         m_steering = 0;
         m_throttle = 0;
@@ -62,7 +62,7 @@ public class CommandDriver : ICommandable, IAdvance
         if (command_name == "set_speed")
         {
             targetSpeed = float.Parse(command[2]);
-            wheelAngle = float.Parse(command[3]);
+            wheelInput = float.Parse(command[3]);
             return true;
         }
 
@@ -71,11 +71,10 @@ public class CommandDriver : ICommandable, IAdvance
 
     public void Advance(double step)
     {
-        // Steering vehicle input
-
-        //// HACK!!!!!   Normalize the steering input based on a maximum wheel angle for the Gator
-        double maxWheelAngle = 0.765;
-        m_steering = -wheelAngle / maxWheelAngle;
+        // Steering vehicle input.
+        // We assume wheelInput contains a steering value already scaled in [-1,1].
+        // Change sign to convert from a left handed frame to a right handed frame.
+        m_steering = -wheelInput;
 
         // Throttle and braking input (cruise-control)
 
