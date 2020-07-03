@@ -82,15 +82,10 @@ public class IMU : ICommandable
         Vector3 omega = vehicle.GetWvelLocal();
         Vector3 noisy_omega = omega + RandomVec(omegaNoiseMean, omegaNoiseStdDev);
 
-        // Orientation of vehicle chassis.
-        // Convention is that 0 yaw corresponds to the vehicle facing +Z. 
-        // Since the vehicle is constructed in an ISO frame, this requires a 90 rotation about the vertical.
-        Quaternion rot = transform.rotation * Quaternion.AngleAxis(90, Vector3.up);
-
         SendHeader(type, full_name, timestamp);
         SendData(noisy_accel);
         SendData(noisy_omega);
-        SendData(rot);
+        SendData(transform.rotation);
 
         if (output)
         {
