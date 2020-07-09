@@ -193,8 +193,18 @@ public class SCMDeformableTerrain : ChTerrain {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public void Initialize(string heightmap_file, string mesh_name, double sizeX, double sizeY, double hMin, double hMax, int divX, int divY) {
+    vehiclePINVOKE.SCMDeformableTerrain_Initialize__SWIG_2(swigCPtr, heightmap_file, mesh_name, sizeX, sizeY, hMin, hMax, divX, divY);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void Initialize(string heightmap_file, string mesh_name, double sizeX, double sizeY, double hMin, double hMax, int divX) {
+    vehiclePINVOKE.SCMDeformableTerrain_Initialize__SWIG_3(swigCPtr, heightmap_file, mesh_name, sizeX, sizeY, hMin, hMax, divX);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
   public void Initialize(string heightmap_file, string mesh_name, double sizeX, double sizeY, double hMin, double hMax) {
-    vehiclePINVOKE.SCMDeformableTerrain_Initialize__SWIG_2(swigCPtr, heightmap_file, mesh_name, sizeX, sizeY, hMin, hMax);
+    vehiclePINVOKE.SCMDeformableTerrain_Initialize__SWIG_4(swigCPtr, heightmap_file, mesh_name, sizeX, sizeY, hMin, hMax);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

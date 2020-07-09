@@ -9297,18 +9297,6 @@ class ChronoEngine_csharpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkMarkers_GetDist_dt")]
   public static extern double ChLinkMarkers_GetDist_dt(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkMarkers_Get_Scr_force")]
-  public static extern global::System.IntPtr ChLinkMarkers_Get_Scr_force(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkMarkers_Get_Scr_torque")]
-  public static extern global::System.IntPtr ChLinkMarkers_Get_Scr_torque(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkMarkers_Set_Scr_force")]
-  public static extern void ChLinkMarkers_Set_Scr_force(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkMarkers_Set_Scr_torque")]
-  public static extern void ChLinkMarkers_Set_Scr_torque(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkMarkers_GetC_force")]
   public static extern global::System.IntPtr ChLinkMarkers_GetC_force(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -10857,6 +10845,9 @@ class ChronoEngine_csharpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkRotSpringCB_GetRotSpringAngle")]
   public static extern double ChLinkRotSpringCB_GetRotSpringAngle(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkRotSpringCB_GetRotSpringAxis")]
+  public static extern global::System.IntPtr ChLinkRotSpringCB_GetRotSpringAxis(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkRotSpringCB_GetRotSpringSpeed")]
   public static extern double ChLinkRotSpringCB_GetRotSpringSpeed(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -10865,9 +10856,6 @@ class ChronoEngine_csharpPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkRotSpringCB_RegisterTorqueFunctor")]
   public static extern void ChLinkRotSpringCB_RegisterTorqueFunctor(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkRotSpringCB_UpdateForces")]
-  public static extern void ChLinkRotSpringCB_UpdateForces(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkRotSpringCB_ArchiveOUT")]
   public static extern void ChLinkRotSpringCB_ArchiveOUT(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);

@@ -56,6 +56,12 @@ public class ChLinkRotSpringCB : ChLinkMarkers {
     return ret;
   }
 
+  public ChVectorD GetRotSpringAxis() {
+    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChLinkRotSpringCB_GetRotSpringAxis(swigCPtr), false);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public double GetRotSpringSpeed() {
     double ret = ChronoEngine_csharpPINVOKE.ChLinkRotSpringCB_GetRotSpringSpeed(swigCPtr);
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
@@ -70,11 +76,6 @@ public class ChLinkRotSpringCB : ChLinkMarkers {
 
   public void RegisterTorqueFunctor(TorqueFunctor functor) {
     ChronoEngine_csharpPINVOKE.ChLinkRotSpringCB_RegisterTorqueFunctor(swigCPtr, TorqueFunctor.getCPtr(functor));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public override void UpdateForces(double time) {
-    ChronoEngine_csharpPINVOKE.ChLinkRotSpringCB_UpdateForces(swigCPtr, time);
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 

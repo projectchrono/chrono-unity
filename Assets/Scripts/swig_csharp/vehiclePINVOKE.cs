@@ -3256,7 +3256,13 @@ class vehiclePINVOKE {
   public static extern void SCMDeformableTerrain_Initialize__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_SCMDeformableTerrain_Initialize__SWIG_2")]
-  public static extern void SCMDeformableTerrain_Initialize__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2, string jarg3, double jarg4, double jarg5, double jarg6, double jarg7);
+  public static extern void SCMDeformableTerrain_Initialize__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2, string jarg3, double jarg4, double jarg5, double jarg6, double jarg7, int jarg8, int jarg9);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_SCMDeformableTerrain_Initialize__SWIG_3")]
+  public static extern void SCMDeformableTerrain_Initialize__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2, string jarg3, double jarg4, double jarg5, double jarg6, double jarg7, int jarg8);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_SCMDeformableTerrain_Initialize__SWIG_4")]
+  public static extern void SCMDeformableTerrain_Initialize__SWIG_4(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2, string jarg3, double jarg4, double jarg5, double jarg6, double jarg7);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_SCMDeformableTerrain_GetContactForce")]
   public static extern global::System.IntPtr SCMDeformableTerrain_GetContactForce(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -3337,7 +3343,13 @@ class vehiclePINVOKE {
   public static extern void SCMDeformableSoil_Initialize__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_SCMDeformableSoil_Initialize__SWIG_2")]
-  public static extern void SCMDeformableSoil_Initialize__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2, string jarg3, double jarg4, double jarg5, double jarg6, double jarg7);
+  public static extern void SCMDeformableSoil_Initialize__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2, string jarg3, double jarg4, double jarg5, double jarg6, double jarg7, int jarg8, int jarg9);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_SCMDeformableSoil_Initialize__SWIG_3")]
+  public static extern void SCMDeformableSoil_Initialize__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2, string jarg3, double jarg4, double jarg5, double jarg6, double jarg7, int jarg8);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_SCMDeformableSoil_Initialize__SWIG_4")]
+  public static extern void SCMDeformableSoil_Initialize__SWIG_4(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2, string jarg3, double jarg4, double jarg5, double jarg6, double jarg7);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_ChSuspension")]
   public static extern void delete_ChSuspension(global::System.Runtime.InteropServices.HandleRef jarg1);

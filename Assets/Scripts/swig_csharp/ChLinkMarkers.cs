@@ -217,28 +217,6 @@ public class ChLinkMarkers : ChLink {
     return ret;
   }
 
-  public ChVectorD Get_Scr_force() {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChLinkMarkers_Get_Scr_force(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public ChVectorD Get_Scr_torque() {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChLinkMarkers_Get_Scr_torque(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public void Set_Scr_force(ChVectorD mf) {
-    ChronoEngine_csharpPINVOKE.ChLinkMarkers_Set_Scr_force(swigCPtr, ChVectorD.getCPtr(mf));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public void Set_Scr_torque(ChVectorD mf) {
-    ChronoEngine_csharpPINVOKE.ChLinkMarkers_Set_Scr_torque(swigCPtr, ChVectorD.getCPtr(mf));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
   public ChVectorD GetC_force() {
     ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChLinkMarkers_GetC_force(swigCPtr), false);
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
