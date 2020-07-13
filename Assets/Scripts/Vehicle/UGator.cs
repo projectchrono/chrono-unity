@@ -6,10 +6,17 @@ public class UGator : UChVehicle
 {
     public Gator gator;
 
+    public enum UTireModelType
+    {
+        TMEASY = TireModelType.TMEASY,
+        RIGID = TireModelType.RIGID,
+        RIGID_MESH = TireModelType.RIGID_MESH
+    }
+
     public bool chassisFixed;
     //public PowertrainModelType powertrainModel;
     //public DrivelineType drivelineModel;
-    private TireModelType tireModel;
+    public UTireModelType tireModel;
     ////public ChTire.CollisionType tireCollisionType;
 
     public double initForwardVel;
@@ -26,7 +33,7 @@ public class UGator : UChVehicle
     public UGator()
     {
         chassisFixed = false;
-        tireModel = TireModelType.TMEASY;
+        tireModel = UTireModelType.TMEASY;
         ////tireCollisionType = ChTire.CollisionType.SINGLE_POINT;
 
         initForwardVel = 0;
@@ -38,7 +45,7 @@ public class UGator : UChVehicle
         gator = new Gator(UChSystem.chrono_system);
 
         gator.SetChassisFixed(chassisFixed);
-        gator.SetTireType(tireModel);
+        gator.SetTireType((TireModelType)tireModel);
         ////gator.SetTireCollisionType(tireCollisionType);
 
         gator.SetAerodynamicDrag(0.5, 5.0, 1.2);

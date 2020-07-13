@@ -6,10 +6,20 @@ public class UHMMWV : UChVehicle
 {
     public HMMWV_Full hmmwv;
 
+    public enum UTireModelType
+    {
+        TMEASY = TireModelType.TMEASY,
+        FIALA = TireModelType.FIALA,
+        PAC89 = TireModelType.PAC89,
+        PAC02 = TireModelType.PAC02,
+        RIGID = TireModelType.RIGID,
+        RIGID_MESH = TireModelType.RIGID_MESH
+    }
+
     public bool chassisFixed;
     public PowertrainModelType powertrainModel;
     public DrivelineType drivelineModel;
-    public TireModelType tireModel;
+    public UTireModelType tireModel;
     public ChTire.CollisionType tireCollisionType;
 
     public double initForwardVel;
@@ -28,7 +38,7 @@ public class UHMMWV : UChVehicle
         chassisFixed = false;
         powertrainModel = PowertrainModelType.SHAFTS;
         drivelineModel = DrivelineType.AWD;
-        tireModel = TireModelType.TMEASY;
+        tireModel = UTireModelType.TMEASY;
         tireCollisionType = ChTire.CollisionType.SINGLE_POINT;
 
         initForwardVel = 0;
@@ -42,7 +52,7 @@ public class UHMMWV : UChVehicle
         hmmwv.SetChassisFixed(chassisFixed);
         hmmwv.SetPowertrainType(powertrainModel);
         hmmwv.SetDriveType(drivelineModel);
-        hmmwv.SetTireType(tireModel);
+        hmmwv.SetTireType((TireModelType)tireModel);
         hmmwv.SetTireCollisionType(tireCollisionType);
 
         hmmwv.SetAerodynamicDrag(0.5, 5.0, 1.2);

@@ -6,10 +6,18 @@ public class UUAZ : UChVehicle
 {
     public UAZBUS uaz;
 
+    public enum UTireModelType
+    {
+        TMEASY = TireModelType.TMEASY,
+        PAC02 = TireModelType.PAC02,
+        RIGID = TireModelType.RIGID,
+        RIGID_MESH = TireModelType.RIGID_MESH
+    }
+
     public bool chassisFixed;
     //public PowertrainModelType powertrainModel;
     //public DrivelineType drivelineModel;
-    private TireModelType tireModel;
+    public UTireModelType tireModel;
     ////public ChTire.CollisionType tireCollisionType;
 
     public double initForwardVel;
@@ -26,7 +34,7 @@ public class UUAZ : UChVehicle
     public UUAZ()
     {
         chassisFixed = false;
-        tireModel = TireModelType.TMEASY;
+        tireModel = UTireModelType.TMEASY;
         ////tireCollisionType = ChTire.CollisionType.SINGLE_POINT;
 
         initForwardVel = 0;
@@ -38,7 +46,7 @@ public class UUAZ : UChVehicle
         uaz = new UAZBUS(UChSystem.chrono_system);
 
         uaz.SetChassisFixed(chassisFixed);
-        uaz.SetTireType(tireModel);
+        uaz.SetTireType((TireModelType)tireModel);
         ////uaz.SetTireCollisionType(tireCollisionType);
 
         uaz.SetAerodynamicDrag(0.5, 5.0, 1.2);

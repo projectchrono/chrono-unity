@@ -13,6 +13,15 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
         ChWorldFrame.SetYUP();
 
         inputs = new DriverInputs();
+        inputs.m_steering = 0;
+        inputs.m_braking = 0;
+        inputs.m_throttle = 0;
+    }
+
+    void Awake()
+    {
+        vehicle.SetDataPath(Application.dataPath + "/Data/");
+        ////Debug.Log("vehicle path" + vehicle.GetDataPath());
     }
 
     void Start()
