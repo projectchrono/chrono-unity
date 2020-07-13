@@ -10275,6 +10275,12 @@ class vehiclePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChWheeledVehicle_GetWheel__SWIG_1")]
   public static extern global::System.IntPtr ChWheeledVehicle_GetWheel__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChWheeledVehicle_GetTire__SWIG_0")]
+  public static extern global::System.IntPtr ChWheeledVehicle_GetTire__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChWheeledVehicle_GetTire__SWIG_1")]
+  public static extern global::System.IntPtr ChWheeledVehicle_GetTire__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChWheeledVehicle_GetDriveline")]
   public static extern global::System.IntPtr ChWheeledVehicle_GetDriveline(global::System.Runtime.InteropServices.HandleRef jarg1);
 

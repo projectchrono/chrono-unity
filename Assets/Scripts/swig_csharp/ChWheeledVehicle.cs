@@ -89,6 +89,20 @@ public class ChWheeledVehicle : ChVehicle {
     return ret;
   }
 
+  public ChTire GetTire(int axle, VehicleSide side, WheelLocation location) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.ChWheeledVehicle_GetTire__SWIG_0(swigCPtr, axle, (int)side, (int)location);
+    ChTire ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChTire(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public ChTire GetTire(int axle, VehicleSide side) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.ChWheeledVehicle_GetTire__SWIG_1(swigCPtr, axle, (int)side);
+    ChTire ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChTire(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public ChDrivelineWV GetDriveline() {
     global::System.IntPtr cPtr = vehiclePINVOKE.ChWheeledVehicle_GetDriveline(swigCPtr);
     ChDrivelineWV ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChDrivelineWV(cPtr, true);
