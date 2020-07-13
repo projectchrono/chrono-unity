@@ -15,6 +15,7 @@
 [Aa]ssets/Samples.meta
 
 # Build directories
+LinuxBuild/
 WindowsBuild/
 
 # Visual Studio cache directory
