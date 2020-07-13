@@ -304,7 +304,7 @@ PrefabInstance:
     - target: {fileID: 2180247172399404133, guid: a6d9979d0f119144ab76ed0ad4391acf,
         type: 3}
       propertyPath: collisionMeshOBJFile
-      value: Assets/Models/suzanne_coarse.obj
+      value: Assets/Chrono/Models/suzanne_coarse.obj
       objectReference: {fileID: 0}
     - target: {fileID: 2180247172399404133, guid: a6d9979d0f119144ab76ed0ad4391acf,
         type: 3}
