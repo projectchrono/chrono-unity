@@ -15,6 +15,7 @@ public class UFlatTerrain : ChTerrain
     }
 
     public override double GetHeight(ChVectorD loc) {
+        ////Debug.Log("Flat terrain height at " + Utils.FromChrono(loc));
         return m_height; 
     }
     public override ChVectorD GetNormal(ChVectorD loc) {

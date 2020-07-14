@@ -129,7 +129,7 @@ public class UHMMWV : UChVehicle
         var veh_pos = Utils.FromChronoFlip(vehicle_pos);
         var veh_rot = Utils.FromChronoFlip(vehicle_rot);
 
-        //Debug.Log("vehicle pos:  " + veh_pos.ToString("F5"));
+        ////Debug.Log("vehicle pos:  " + veh_pos.ToString("F5"));
 
         transform.position = veh_pos;
         transform.rotation = veh_rot;
@@ -148,6 +148,11 @@ public class UHMMWV : UChVehicle
 
         wheelRR.transform.position = Utils.FromChronoFlip(spindleRR_pos);
         wheelRR.transform.rotation = Utils.FromChronoFlip(spindleRR_rot);
+
+        ////Debug.Log("wheelFL pos: " + Utils.FromChrono(spindleFL_pos));
+        ////Debug.Log("wheelFR pos: " + Utils.FromChrono(spindleFR_pos));
+        ////Debug.Log("wheelRL pos: " + Utils.FromChrono(spindleRL_pos));
+        ////Debug.Log("wheelRR pos: " + Utils.FromChrono(spindleRR_pos));
 
         hmmwv.Synchronize(UChSystem.chrono_system.GetChTime(), inputs, UChTerrain.chrono_terrain);
         hmmwv.Advance(step);

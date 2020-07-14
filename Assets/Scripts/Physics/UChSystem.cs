@@ -266,13 +266,15 @@ public class UChSystem : MonoBehaviour
     void FixedUpdate()
     {
         float unity_step = Time.fixedDeltaTime;
-        ////Debug.Log("Fixed step:  " + unity_step);
+        ////Debug.Log("Fixed step:  " + unity_step + " =====================================");
 
         // Take as many steps as necessary to cover the base FixedUpdate step
         double t = 0;
         while (t < unity_step)
         {
             double h = Math.Min(step, unity_step - t);
+            ////Debug.Log("Substep: " + h + " -------------------------------------");
+
             foreach (var subsys in subsystems.Values)
             {
                 subsys.Advance(h);

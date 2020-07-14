@@ -108,7 +108,7 @@ public class UGator : UChVehicle
         var veh_pos = Utils.FromChronoFlip(vehicle_pos);
         var veh_rot = Utils.FromChronoFlip(vehicle_rot);
 
-        //Debug.Log("vehicle pos:  " + veh_pos.ToString("F5"));
+        ////Debug.Log("vehicle pos:  " + veh_pos.ToString("F5"));
 
         transform.position = veh_pos;
         transform.rotation = veh_rot;
@@ -128,8 +128,28 @@ public class UGator : UChVehicle
         wheelRR.transform.position = Utils.FromChronoFlip(spindleRR_pos);
         wheelRR.transform.rotation = Utils.FromChronoFlip(spindleRR_rot);
 
+        ////Debug.Log("wheelFL pos: " + Utils.FromChrono(spindleFL_pos));
+        ////Debug.Log("wheelFR pos: " + Utils.FromChrono(spindleFR_pos));
+        ////Debug.Log("wheelRL pos: " + Utils.FromChrono(spindleRL_pos));
+        ////Debug.Log("wheelRR pos: " + Utils.FromChrono(spindleRR_pos));
+
+        ////Debug.Log("0. inputs: " + inputs.m_steering + " " + inputs.m_throttle + " " + inputs.m_braking);
+        ////Debug.Log("0. powertrain speed and torque: " + gator.GetPowertrain().GetMotorSpeed() + "    " + gator.GetPowertrain().GetMotorTorque());
+
         gator.Synchronize(UChSystem.chrono_system.GetChTime(), inputs, UChTerrain.chrono_terrain);
+
+        ////Debug.Log("1. powertrain speed and torque: " + gator.GetPowertrain().GetMotorSpeed() + "    " + gator.GetPowertrain().GetMotorTorque());
+        ////Debug.Log("1. spindle torque (left / right): " 
+        ////    + gator.GetVehicle().GetDriveline().GetSpindleTorque(1, VehicleSide.LEFT) + "   " 
+        ////    + gator.GetVehicle().GetDriveline().GetSpindleTorque(1, VehicleSide.RIGHT));
+        ////Debug.Log("1. driveshaft speed: " + gator.GetVehicle().GetDriveline().GetDriveshaftSpeed());
+
         gator.Advance(step);
+
+        ////var tFL_force = gator.GetVehicle().GetTire(0, VehicleSide.LEFT).ReportTireForce(UChTerrain.chrono_terrain);
+        ////var tRL_force = gator.GetVehicle().GetTire(1, VehicleSide.LEFT).ReportTireForce(UChTerrain.chrono_terrain);
+        ////Debug.Log("2. tire FL: " + Utils.FromChrono(tFL_force.force));
+        ////Debug.Log("2. tire RL: " + Utils.FromChrono(tRL_force.force));
     }
 
     public override double GetMaxSpeed()
