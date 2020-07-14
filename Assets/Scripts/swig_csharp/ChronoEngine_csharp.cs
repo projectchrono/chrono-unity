@@ -754,24 +754,28 @@ public class ChronoEngine_csharp {
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public static void WriteMeshPovray(string obj_filename, string mesh_name, string out_dir, ChColor color, ChVectorD pos, ChQuaternionD rot) {
-    ChronoEngine_csharpPINVOKE.WriteMeshPovray__SWIG_5(obj_filename, mesh_name, out_dir, ChColor.getCPtr(color), ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot));
+  public static bool WriteMeshPovray(string obj_filename, string mesh_name, string out_dir, ChColor color, ChVectorD pos, ChQuaternionD rot) {
+    bool ret = ChronoEngine_csharpPINVOKE.WriteMeshPovray__SWIG_5(obj_filename, mesh_name, out_dir, ChColor.getCPtr(color), ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot));
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
   }
 
-  public static void WriteMeshPovray(string obj_filename, string mesh_name, string out_dir, ChColor color, ChVectorD pos) {
-    ChronoEngine_csharpPINVOKE.WriteMeshPovray__SWIG_6(obj_filename, mesh_name, out_dir, ChColor.getCPtr(color), ChVectorD.getCPtr(pos));
+  public static bool WriteMeshPovray(string obj_filename, string mesh_name, string out_dir, ChColor color, ChVectorD pos) {
+    bool ret = ChronoEngine_csharpPINVOKE.WriteMeshPovray__SWIG_6(obj_filename, mesh_name, out_dir, ChColor.getCPtr(color), ChVectorD.getCPtr(pos));
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
   }
 
-  public static void WriteMeshPovray(string obj_filename, string mesh_name, string out_dir, ChColor color) {
-    ChronoEngine_csharpPINVOKE.WriteMeshPovray__SWIG_7(obj_filename, mesh_name, out_dir, ChColor.getCPtr(color));
+  public static bool WriteMeshPovray(string obj_filename, string mesh_name, string out_dir, ChColor color) {
+    bool ret = ChronoEngine_csharpPINVOKE.WriteMeshPovray__SWIG_7(obj_filename, mesh_name, out_dir, ChColor.getCPtr(color));
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
   }
 
-  public static void WriteMeshPovray(string obj_filename, string mesh_name, string out_dir) {
-    ChronoEngine_csharpPINVOKE.WriteMeshPovray__SWIG_8(obj_filename, mesh_name, out_dir);
+  public static bool WriteMeshPovray(string obj_filename, string mesh_name, string out_dir) {
+    bool ret = ChronoEngine_csharpPINVOKE.WriteMeshPovray__SWIG_8(obj_filename, mesh_name, out_dir);
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
   }
 
   public static void WriteCurvePovray(ChBezierCurve curve, string curve_name, string out_dir, double radius, ChColor col) {

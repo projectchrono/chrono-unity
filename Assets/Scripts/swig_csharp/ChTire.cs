@@ -117,6 +117,12 @@ public class ChTire : ChPart {
     return ret;
   }
 
+  public string GetMeshFilename() {
+    string ret = vehiclePINVOKE.ChTire_GetMeshFilename(swigCPtr);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public virtual void Initialize(ChWheel wheel) {
     vehiclePINVOKE.ChTire_Initialize(swigCPtr, ChWheel.getCPtr(wheel));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();

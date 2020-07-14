@@ -5221,7 +5221,7 @@ class ChronoEngine_csharpPINVOKE {
   public static extern global::System.IntPtr ChTriangleMeshSoup_Clone(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChTriangleMeshSoup_LoadWavefrontMesh")]
-  public static extern void ChTriangleMeshSoup_LoadWavefrontMesh(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+  public static extern bool ChTriangleMeshSoup_LoadWavefrontMesh(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChTriangleMeshSoup_Triangle")]
   public static extern global::System.IntPtr ChTriangleMeshSoup_Triangle(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
@@ -5347,13 +5347,13 @@ class ChronoEngine_csharpPINVOKE {
   public static extern global::System.IntPtr ChTriangleMeshConnected_getIndicesColors(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChTriangleMeshConnected_LoadWavefrontMesh__SWIG_0")]
-  public static extern void ChTriangleMeshConnected_LoadWavefrontMesh__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2, bool jarg3, bool jarg4);
+  public static extern bool ChTriangleMeshConnected_LoadWavefrontMesh__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2, bool jarg3, bool jarg4);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChTriangleMeshConnected_LoadWavefrontMesh__SWIG_1")]
-  public static extern void ChTriangleMeshConnected_LoadWavefrontMesh__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2, bool jarg3);
+  public static extern bool ChTriangleMeshConnected_LoadWavefrontMesh__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2, bool jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChTriangleMeshConnected_LoadWavefrontMesh__SWIG_2")]
-  public static extern void ChTriangleMeshConnected_LoadWavefrontMesh__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+  public static extern bool ChTriangleMeshConnected_LoadWavefrontMesh__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChTriangleMeshConnected_WriteWavefront")]
   public static extern void ChTriangleMeshConnected_WriteWavefront(string jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -17323,16 +17323,16 @@ class ChronoEngine_csharpPINVOKE {
   public static extern void WriteMeshPovray__SWIG_4(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2, string jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_WriteMeshPovray__SWIG_5")]
-  public static extern void WriteMeshPovray__SWIG_5(string jarg1, string jarg2, string jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, global::System.Runtime.InteropServices.HandleRef jarg6);
+  public static extern bool WriteMeshPovray__SWIG_5(string jarg1, string jarg2, string jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, global::System.Runtime.InteropServices.HandleRef jarg6);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_WriteMeshPovray__SWIG_6")]
-  public static extern void WriteMeshPovray__SWIG_6(string jarg1, string jarg2, string jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5);
+  public static extern bool WriteMeshPovray__SWIG_6(string jarg1, string jarg2, string jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_WriteMeshPovray__SWIG_7")]
-  public static extern void WriteMeshPovray__SWIG_7(string jarg1, string jarg2, string jarg3, global::System.Runtime.InteropServices.HandleRef jarg4);
+  public static extern bool WriteMeshPovray__SWIG_7(string jarg1, string jarg2, string jarg3, global::System.Runtime.InteropServices.HandleRef jarg4);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_WriteMeshPovray__SWIG_8")]
-  public static extern void WriteMeshPovray__SWIG_8(string jarg1, string jarg2, string jarg3);
+  public static extern bool WriteMeshPovray__SWIG_8(string jarg1, string jarg2, string jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_WriteCurvePovray__SWIG_0")]
   public static extern void WriteCurvePovray__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2, string jarg3, double jarg4, global::System.Runtime.InteropServices.HandleRef jarg5);

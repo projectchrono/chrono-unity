@@ -63,14 +63,4 @@ public class HMMWV_Wheel : ChWheel {
     return ret;
   }
 
-  public override void AddVisualizationAssets(VisualizationType vis) {
-    vehiclePINVOKE.HMMWV_Wheel_AddVisualizationAssets(swigCPtr, (int)vis);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public override void RemoveVisualizationAssets() {
-    vehiclePINVOKE.HMMWV_Wheel_RemoveVisualizationAssets(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-  }
-
 }

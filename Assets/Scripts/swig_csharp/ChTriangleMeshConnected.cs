@@ -214,19 +214,22 @@ public class ChTriangleMeshConnected : ChTriangleMesh {
     return ret;
   }
 
-  public void LoadWavefrontMesh(string filename, bool load_normals, bool load_uv) {
-    ChronoEngine_csharpPINVOKE.ChTriangleMeshConnected_LoadWavefrontMesh__SWIG_0(swigCPtr, filename, load_normals, load_uv);
+  public bool LoadWavefrontMesh(string filename, bool load_normals, bool load_uv) {
+    bool ret = ChronoEngine_csharpPINVOKE.ChTriangleMeshConnected_LoadWavefrontMesh__SWIG_0(swigCPtr, filename, load_normals, load_uv);
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
   }
 
-  public void LoadWavefrontMesh(string filename, bool load_normals) {
-    ChronoEngine_csharpPINVOKE.ChTriangleMeshConnected_LoadWavefrontMesh__SWIG_1(swigCPtr, filename, load_normals);
+  public bool LoadWavefrontMesh(string filename, bool load_normals) {
+    bool ret = ChronoEngine_csharpPINVOKE.ChTriangleMeshConnected_LoadWavefrontMesh__SWIG_1(swigCPtr, filename, load_normals);
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
   }
 
-  public void LoadWavefrontMesh(string filename) {
-    ChronoEngine_csharpPINVOKE.ChTriangleMeshConnected_LoadWavefrontMesh__SWIG_2(swigCPtr, filename);
+  public bool LoadWavefrontMesh(string filename) {
+    bool ret = ChronoEngine_csharpPINVOKE.ChTriangleMeshConnected_LoadWavefrontMesh__SWIG_2(swigCPtr, filename);
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
   }
 
   public static void WriteWavefront(string filename, SWIGTYPE_p_std__vectorT_chrono__geometry__ChTriangleMeshConnected_t meshes) {

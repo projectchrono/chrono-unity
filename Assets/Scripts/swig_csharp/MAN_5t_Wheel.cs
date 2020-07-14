@@ -63,14 +63,4 @@ public class MAN_5t_Wheel : ChWheel {
     return ret;
   }
 
-  public override void AddVisualizationAssets(VisualizationType vis) {
-    vehiclePINVOKE.MAN_5t_Wheel_AddVisualizationAssets(swigCPtr, (int)vis);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public override void RemoveVisualizationAssets() {
-    vehiclePINVOKE.MAN_5t_Wheel_RemoveVisualizationAssets(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-  }
-
 }

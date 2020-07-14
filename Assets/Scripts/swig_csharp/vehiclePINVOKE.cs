@@ -6984,6 +6984,9 @@ class vehiclePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChWheel_RemoveVisualizationAssets")]
   public static extern void ChWheel_RemoveVisualizationAssets(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChWheel_GetMeshFilename")]
+  public static extern string ChWheel_GetMeshFilename(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Wheel__SWIG_0")]
   public static extern global::System.IntPtr new_Wheel__SWIG_0(string jarg1);
 
@@ -7010,12 +7013,6 @@ class vehiclePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Wheel_SetWidth")]
   public static extern void Wheel_SetWidth(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Wheel_AddVisualizationAssets")]
-  public static extern void Wheel_AddVisualizationAssets(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Wheel_RemoveVisualizationAssets")]
-  public static extern void Wheel_RemoveVisualizationAssets(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Generic_Wheel")]
   public static extern global::System.IntPtr new_Generic_Wheel(string jarg1);
@@ -7053,12 +7050,6 @@ class vehiclePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_HMMWV_Wheel_GetWidth")]
   public static extern double HMMWV_Wheel_GetWidth(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_HMMWV_Wheel_AddVisualizationAssets")]
-  public static extern void HMMWV_Wheel_AddVisualizationAssets(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_HMMWV_Wheel_RemoveVisualizationAssets")]
-  public static extern void HMMWV_Wheel_RemoveVisualizationAssets(global::System.Runtime.InteropServices.HandleRef jarg1);
-
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Sedan_Wheel")]
   public static extern global::System.IntPtr new_Sedan_Wheel(string jarg1);
 
@@ -7076,12 +7067,6 @@ class vehiclePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Sedan_Wheel_GetWidth")]
   public static extern double Sedan_Wheel_GetWidth(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Sedan_Wheel_AddVisualizationAssets")]
-  public static extern void Sedan_Wheel_AddVisualizationAssets(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Sedan_Wheel_RemoveVisualizationAssets")]
-  public static extern void Sedan_Wheel_RemoveVisualizationAssets(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_CityBus_Wheel")]
   public static extern global::System.IntPtr new_CityBus_Wheel(string jarg1);
@@ -7101,12 +7086,6 @@ class vehiclePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_CityBus_Wheel_GetWidth")]
   public static extern double CityBus_Wheel_GetWidth(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_CityBus_Wheel_AddVisualizationAssets")]
-  public static extern void CityBus_Wheel_AddVisualizationAssets(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_CityBus_Wheel_RemoveVisualizationAssets")]
-  public static extern void CityBus_Wheel_RemoveVisualizationAssets(global::System.Runtime.InteropServices.HandleRef jarg1);
-
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_MAN_5t_Wheel")]
   public static extern global::System.IntPtr new_MAN_5t_Wheel(string jarg1);
 
@@ -7124,12 +7103,6 @@ class vehiclePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_MAN_5t_Wheel_GetWidth")]
   public static extern double MAN_5t_Wheel_GetWidth(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_MAN_5t_Wheel_AddVisualizationAssets")]
-  public static extern void MAN_5t_Wheel_AddVisualizationAssets(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_MAN_5t_Wheel_RemoveVisualizationAssets")]
-  public static extern void MAN_5t_Wheel_RemoveVisualizationAssets(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_UAZBUS_Wheel")]
   public static extern global::System.IntPtr new_UAZBUS_Wheel(string jarg1);
@@ -7149,12 +7122,6 @@ class vehiclePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_UAZBUS_Wheel_GetWidth")]
   public static extern double UAZBUS_Wheel_GetWidth(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_UAZBUS_Wheel_AddVisualizationAssets")]
-  public static extern void UAZBUS_Wheel_AddVisualizationAssets(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_UAZBUS_Wheel_RemoveVisualizationAssets")]
-  public static extern void UAZBUS_Wheel_RemoveVisualizationAssets(global::System.Runtime.InteropServices.HandleRef jarg1);
-
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_new_Gator_Wheel")]
   public static extern global::System.IntPtr new_Gator_Wheel(string jarg1);
 
@@ -7172,12 +7139,6 @@ class vehiclePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Wheel_GetWidth")]
   public static extern double Gator_Wheel_GetWidth(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Wheel_AddVisualizationAssets")]
-  public static extern void Gator_Wheel_AddVisualizationAssets(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_Gator_Wheel_RemoveVisualizationAssets")]
-  public static extern void Gator_Wheel_RemoveVisualizationAssets(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_delete_ChBrake")]
   public static extern void delete_ChBrake(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -7340,6 +7301,9 @@ class vehiclePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChTire_GetDeflection")]
   public static extern double ChTire_GetDeflection(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChTire_GetMeshFilename")]
+  public static extern string ChTire_GetMeshFilename(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_ChTire_Initialize")]
   public static extern void ChTire_Initialize(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -11867,6 +11831,9 @@ class vehiclePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_CastToChSolidThreeLinkAxle")]
   public static extern global::System.IntPtr CastToChSolidThreeLinkAxle(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_CastToChSingleWishbone")]
+  public static extern global::System.IntPtr CastToChSingleWishbone(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_vehicle", EntryPoint="CSharp_CastToChPitmanArm")]
   public static extern global::System.IntPtr CastToChPitmanArm(global::System.Runtime.InteropServices.HandleRef jarg1);

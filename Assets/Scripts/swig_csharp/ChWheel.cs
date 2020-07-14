@@ -126,4 +126,10 @@ public class ChWheel : ChPart {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public string GetMeshFilename() {
+    string ret = vehiclePINVOKE.ChWheel_GetMeshFilename(swigCPtr);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
 }

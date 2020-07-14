@@ -186,6 +186,13 @@ public class vehicle {
     return ret;
   }
 
+  public static ChSingleWishbone CastToChSingleWishbone(ChSuspension in_obj) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.CastToChSingleWishbone(ChSuspension.getCPtr(in_obj));
+    ChSingleWishbone ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChSingleWishbone(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public static ChPitmanArm CastToChPitmanArm(ChSteering in_obj) {
     global::System.IntPtr cPtr = vehiclePINVOKE.CastToChPitmanArm(ChSteering.getCPtr(in_obj));
     ChPitmanArm ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChPitmanArm(cPtr, true);
