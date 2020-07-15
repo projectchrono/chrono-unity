@@ -22,8 +22,6 @@ public class UGator : UChVehicle
     public double initForwardVel;
     public double initWheelAngSpeed;
 
-    public Material chassisMaterial;
-
     private GameObject chassis;
     private GameObject wheelFL;
     private GameObject wheelFR;
