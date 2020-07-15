@@ -20,6 +20,8 @@ public class UUAZ : UChVehicle
     public UTireModelType tireModel;
     ////public ChTire.CollisionType tireCollisionType;
 
+    public bool brakeLocking;
+
     public double initForwardVel;
     public double initWheelAngSpeed;
 
@@ -36,6 +38,7 @@ public class UUAZ : UChVehicle
         chassisFixed = false;
         tireModel = UTireModelType.TMEASY;
         ////tireCollisionType = ChTire.CollisionType.SINGLE_POINT;
+        brakeLocking = true;
 
         initForwardVel = 0;
         initWheelAngSpeed = 0;
@@ -48,8 +51,8 @@ public class UUAZ : UChVehicle
         uaz.SetChassisFixed(chassisFixed);
         uaz.SetTireType((TireModelType)tireModel);
         ////uaz.SetTireCollisionType(tireCollisionType);
-
         uaz.SetAerodynamicDrag(0.5, 5.0, 1.2);
+        uaz.EnableBrakeLocking(brakeLocking);
 
         ////Vector3 pos = transform.position;
         ////Quaternion quat = transform.rotation;

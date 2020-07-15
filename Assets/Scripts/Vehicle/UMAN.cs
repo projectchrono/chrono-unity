@@ -10,6 +10,8 @@ public class UMAN : UChVehicle
     private TireModelType tireModel;
     ////public ChTire.CollisionType tireCollisionType;
 
+    public bool brakeLocking;
+
     public double initForwardVel;
 
     private GameObject chassis;
@@ -27,6 +29,7 @@ public class UMAN : UChVehicle
         chassisFixed = false;
         tireModel = TireModelType.TMEASY;
         ////tireCollisionType = ChTire.CollisionType.SINGLE_POINT;
+        brakeLocking = true;
 
         initForwardVel = 0;
     }
@@ -38,8 +41,8 @@ public class UMAN : UChVehicle
         man.SetChassisFixed(chassisFixed);
         man.SetShaftBasedDrivetrain(true);
         man.SetTireType(tireModel);
-
-        //man.SetAerodynamicDrag(0.5, 5.0, 1.2);
+        ////man.SetAerodynamicDrag(0.5, 5.0, 1.2);
+        man.EnableBrakeLocking(brakeLocking);
 
         var csys = new ChCoordsysD(Utils.ToChronoFlip(transform.position), Utils.ToChronoFlip(transform.rotation));
         man.SetInitPosition(csys);
@@ -47,7 +50,6 @@ public class UMAN : UChVehicle
         man.SetInitFwdVel(initForwardVel);
 
         man.Initialize();
-
 
         // Get the vehicle components 
         foreach (Transform child in transform)

@@ -14,10 +14,10 @@ public class UGator : UChVehicle
     }
 
     public bool chassisFixed;
-    //public PowertrainModelType powertrainModel;
-    //public DrivelineType drivelineModel;
     public UTireModelType tireModel;
     ////public ChTire.CollisionType tireCollisionType;
+
+    public bool brakeLocking;
 
     public double initForwardVel;
     public double initWheelAngSpeed;
@@ -33,6 +33,7 @@ public class UGator : UChVehicle
         chassisFixed = false;
         tireModel = UTireModelType.TMEASY;
         ////tireCollisionType = ChTire.CollisionType.SINGLE_POINT;
+        brakeLocking = true;
 
         initForwardVel = 0;
         initWheelAngSpeed = 0;
@@ -45,8 +46,8 @@ public class UGator : UChVehicle
         gator.SetChassisFixed(chassisFixed);
         gator.SetTireType((TireModelType)tireModel);
         ////gator.SetTireCollisionType(tireCollisionType);
-
         gator.SetAerodynamicDrag(0.5, 5.0, 1.2);
+        gator.EnableBrakeLocking(brakeLocking);
 
         ////Vector3 pos = transform.position;
         ////Quaternion quat = transform.rotation;
@@ -61,8 +62,6 @@ public class UGator : UChVehicle
         omega.Add(initWheelAngSpeed);
         omega.Add(initWheelAngSpeed);
         gator.SetInitWheelAngVel(omega);
-
-        gator.EnableBrakeLocking(true);
 
         gator.Initialize();
 

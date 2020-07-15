@@ -25,6 +25,8 @@ public class UHMMWV : UChVehicle
     public double initForwardVel;
     public double initWheelAngSpeed;
 
+    public bool brakeLocking;
+
     public Material chassisMaterial;
 
     private GameObject chassis;
@@ -40,6 +42,7 @@ public class UHMMWV : UChVehicle
         drivelineModel = DrivelineType.AWD;
         tireModel = UTireModelType.TMEASY;
         tireCollisionType = ChTire.CollisionType.SINGLE_POINT;
+        brakeLocking = true;
 
         initForwardVel = 0;
         initWheelAngSpeed = 0;
@@ -54,8 +57,8 @@ public class UHMMWV : UChVehicle
         hmmwv.SetDriveType(drivelineModel);
         hmmwv.SetTireType((TireModelType)tireModel);
         hmmwv.SetTireCollisionType(tireCollisionType);
-
         hmmwv.SetAerodynamicDrag(0.5, 5.0, 1.2);
+        hmmwv.EnableBrakeLocking(brakeLocking);
 
         ////Vector3 pos = transform.position;
         ////Quaternion quat = transform.rotation;
