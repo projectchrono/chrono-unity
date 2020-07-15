@@ -17,6 +17,7 @@ public class UChTerrainEditor : Editor
         {
             case UChTerrain.Type.Flat:
                 terrain.height = EditorGUILayout.DoubleField("Height", terrain.height);
+                terrain.coefficientFriction = EditorGUILayout.FloatField("Coefficient Friction", terrain.coefficientFriction);
                 break;
             case UChTerrain.Type.Patch:
                 int size = EditorGUILayout.DelayedIntField("Number of Patches", terrain.patches.Count);
@@ -29,13 +30,11 @@ public class UChTerrainEditor : Editor
                 break;
             case UChTerrain.Type.Unity:
                 terrain.unityTerrain = (Terrain)EditorGUILayout.ObjectField("Unity Terrain", terrain.unityTerrain, typeof(Terrain), true);
+                terrain.coefficientFriction = EditorGUILayout.FloatField("Coefficient Friction", terrain.coefficientFriction);
                 break;
         }
 
         EditorGUI.indentLevel--;
-
-        if (terrain.type != UChTerrain.Type.Patch)
-            terrain.coefficientFriction = EditorGUILayout.FloatField("Coefficient Friction", terrain.coefficientFriction);
 
         if (GUI.changed)
         {
