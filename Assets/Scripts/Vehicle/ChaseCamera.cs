@@ -43,7 +43,7 @@ public class ChaseCamera : MonoBehaviour, IAdvance
     public void Awake()
     {
         guiStyle.fontStyle = FontStyle.Bold;
-        guiStyle.fontSize = 16;
+        guiStyle.fontSize = 24;
         guiStyle.normal.textColor = textColor;
 
         homePos = transform.position;
@@ -144,35 +144,35 @@ public class ChaseCamera : MonoBehaviour, IAdvance
         GUI.Label(new Rect(10, 10, 200, 40), "RTF: " + Mathf.Round(ratio * 100) / 100, guiStyle);
 
         float FPS = 1 / deltaTime;
-        GUI.Label(new Rect(10, 30, 200, 40), "FPS: " + Mathf.Round(FPS * 100) / 100, guiStyle);
+        GUI.Label(new Rect(10, 40, 200, 40), "FPS: " + Mathf.Round(FPS * 100) / 100, guiStyle);
 
         if (!attached)
             return;
 
-        GUI.Label(new Rect(10, 60, 200, 40), vehicle.name, guiStyle);
+        GUI.Label(new Rect(10, 80, 200, 40), vehicle.name, guiStyle);
 
         double speedKPH = Math.Round(3.6 * vehicle.GetSpeed());
-        GUI.Label(new Rect(10, 90, 200, 40), "Speed (km/h): " + speedKPH.ToString(), guiStyle);
+        GUI.Label(new Rect(10, 120, 200, 40), "Speed (km/h): " + speedKPH.ToString(), guiStyle);
         double throttle = Math.Round(vehicle.GetThrottleInput() * 100) / 100;
-        GUI.Label(new Rect(10, 110, 200, 40), "Throttle: " + throttle.ToString(), guiStyle);
+        GUI.Label(new Rect(10, 150, 200, 40), "Throttle: " + throttle.ToString(), guiStyle);
         double braking = Math.Round(vehicle.GetBrakingInput() * 100) / 100;
-        GUI.Label(new Rect(10, 130, 200, 40), "Braking: " + braking.ToString(), guiStyle);
+        GUI.Label(new Rect(10, 180, 200, 40), "Braking: " + braking.ToString(), guiStyle);
         double steering = Math.Round(vehicle.GetSteeringInput() * 100) / 100;
-        GUI.Label(new Rect(10, 150, 200, 40), "Steering: " + steering.ToString(), guiStyle);
+        GUI.Label(new Rect(10, 210, 200, 40), "Steering: " + steering.ToString(), guiStyle);
 
         switch (vehicle.GetChPowertrain().GetDriveMode())
         {
             case ChPowertrain.DriveMode.FORWARD:
-                GUI.Label(new Rect(10, 170, 200, 40), "Gear: Forward", guiStyle);
+                GUI.Label(new Rect(10, 240, 200, 40), "Gear: Forward", guiStyle);
                 break;
             case ChPowertrain.DriveMode.REVERSE:
-                GUI.Label(new Rect(10, 170, 200, 40), "Gear: Reverse", guiStyle);
+                GUI.Label(new Rect(10, 240, 200, 40), "Gear: Reverse", guiStyle);
                 break;
         }
 
         double motorTorque = Math.Round(vehicle.GetChPowertrain().GetMotorTorque());
-        GUI.Label(new Rect(10, 200, 200, 40), "Motor Torque (Nm): " + motorTorque.ToString(), guiStyle);
+        GUI.Label(new Rect(10, 280, 200, 40), "Motor Torque (Nm): " + motorTorque.ToString(), guiStyle);
         double motorSpeed = Math.Round(vehicle.GetChPowertrain().GetMotorSpeed() * 60 / (2 * Math.PI));
-        GUI.Label(new Rect(10, 220, 200, 40), "Motor Speed (RPM): " + motorSpeed.ToString(), guiStyle);
+        GUI.Label(new Rect(10, 320, 200, 40), "Motor Speed (RPM): " + motorSpeed.ToString(), guiStyle);
     }
 }
