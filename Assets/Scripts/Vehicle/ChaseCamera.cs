@@ -146,6 +146,10 @@ public class ChaseCamera : MonoBehaviour, IAdvance
         float FPS = 1 / deltaTime;
         GUI.Label(new Rect(10, 40, 200, 40), "FPS: " + Mathf.Round(FPS * 100) / 100, guiStyle);
 
+        ////double time = vehicle.GetChVehicle().GetChTime();
+        double time = UChSystem.chrono_system.GetChTime();
+        GUI.Label(new Rect(Screen.width- 210, 10, 200, 40), "Time: " + Math.Round(time * 100) / 100, guiStyle);
+
         if (!attached)
             return;
 
