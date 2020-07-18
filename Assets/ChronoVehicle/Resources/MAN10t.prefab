@@ -54,6 +54,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chassisFixed: 0
+  brakeLocking: 0
   initForwardVel: 0
 --- !u!114 &2698670446862779505
 MonoBehaviour:

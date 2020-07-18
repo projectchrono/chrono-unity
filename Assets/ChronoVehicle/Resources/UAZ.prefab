@@ -50,6 +50,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chassisFixed: 0
+  tireModel: 9
+  brakeLocking: 0
   initForwardVel: 0
   initWheelAngSpeed: 0
   chassisMaterial: {fileID: 0}
