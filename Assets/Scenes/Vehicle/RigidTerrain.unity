@@ -609,6 +609,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 345340252295104456, guid: 19e318937e9294a49b7c04b026b297ca,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 442324137fd93db4e80125d57d248a01, type: 2}
     - target: {fileID: 1020630170656191179, guid: 19e318937e9294a49b7c04b026b297ca,
         type: 3}
       propertyPath: m_Name
@@ -674,6 +679,11 @@ PrefabInstance:
       propertyPath: tireModel
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5446894316087693956, guid: 19e318937e9294a49b7c04b026b297ca,
+        type: 3}
+      propertyPath: chassisMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 442324137fd93db4e80125d57d248a01, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19e318937e9294a49b7c04b026b297ca, type: 3}
 --- !u!1001 &1378942015

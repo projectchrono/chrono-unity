@@ -92,7 +92,12 @@ public class UHMMWV : UChVehicle
         }
 
         if (chassisMaterial != null)
-            chassis.GetComponentInChildren<Renderer>().sharedMaterial = chassisMaterial;
+        {
+            var r = chassis.GetComponentInChildren<Renderer>();
+            Material[] sharedMaterialsCopy = r.sharedMaterials;
+            sharedMaterialsCopy[0] = chassisMaterial;
+            r.sharedMaterials = sharedMaterialsCopy;
+        }
     }
 
     protected override void OnAdvance(double step)
