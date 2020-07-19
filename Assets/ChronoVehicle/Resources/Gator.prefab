@@ -51,7 +51,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chassisFixed: 0
   tireModel: 9
-  brakeLocking: 1
+  brakeType: 0
+  brakeLocking: 0
   initForwardVel: 0
   initWheelAngSpeed: 0
 --- !u!114 &5042784572642090740

@@ -6,10 +6,17 @@ public class UMAN : UChVehicle
 {
     public MAN_10t man;
 
+    public enum UBrakeType
+    {
+        SIMPLE = BrakeType.SIMPLE,
+        SHAFTS = BrakeType.SHAFTS
+    }
+
     public bool chassisFixed;
     private TireModelType tireModel;
     ////public ChTire.CollisionType tireCollisionType;
 
+    public UBrakeType brakeType;
     public bool brakeLocking;
 
     public double initForwardVel;
@@ -27,8 +34,11 @@ public class UMAN : UChVehicle
     public UMAN()
     {
         chassisFixed = false;
+        
         tireModel = TireModelType.TMEASY;
         ////tireCollisionType = ChTire.CollisionType.SINGLE_POINT;
+
+        brakeType = UBrakeType.SHAFTS;
         brakeLocking = true;
 
         initForwardVel = 0;
@@ -42,6 +52,7 @@ public class UMAN : UChVehicle
         man.SetShaftBasedDrivetrain(true);
         man.SetTireType(tireModel);
         ////man.SetAerodynamicDrag(0.5, 5.0, 1.2);
+        man.SetBrakeType((BrakeType)brakeType);
         man.EnableBrakeLocking(brakeLocking);
 
         var csys = new ChCoordsysD(Utils.ToChronoFlip(transform.position), Utils.ToChronoFlip(transform.rotation));

@@ -16,16 +16,23 @@ public class UHMMWV : UChVehicle
         RIGID_MESH = TireModelType.RIGID_MESH
     }
 
+    public enum UBrakeType
+    {
+        SIMPLE = BrakeType.SIMPLE,
+        SHAFTS = BrakeType.SHAFTS
+    }
+
     public bool chassisFixed;
     public PowertrainModelType powertrainModel;
     public DrivelineType drivelineModel;
     public UTireModelType tireModel;
     public ChTire.CollisionType tireCollisionType;
 
+    public UBrakeType brakeType;
+    public bool brakeLocking;
+
     public double initForwardVel;
     public double initWheelAngSpeed;
-
-    public bool brakeLocking;
 
     public Material chassisMaterial;
 
@@ -38,11 +45,15 @@ public class UHMMWV : UChVehicle
     public UHMMWV()
     {
         chassisFixed = false;
+        
         powertrainModel = PowertrainModelType.SHAFTS;
         drivelineModel = DrivelineType.AWD;
+
         tireModel = UTireModelType.TMEASY;
         tireCollisionType = ChTire.CollisionType.SINGLE_POINT;
-        brakeLocking = true;
+
+        brakeType = UBrakeType.SHAFTS;
+        brakeLocking = false;
 
         initForwardVel = 0;
         initWheelAngSpeed = 0;
@@ -58,6 +69,7 @@ public class UHMMWV : UChVehicle
         hmmwv.SetTireType((TireModelType)tireModel);
         hmmwv.SetTireCollisionType(tireCollisionType);
         hmmwv.SetAerodynamicDrag(0.5, 5.0, 1.2);
+        hmmwv.SetBrakeType((BrakeType)brakeType);
         hmmwv.EnableBrakeLocking(brakeLocking);
 
         ////Vector3 pos = transform.position;

@@ -13,10 +13,17 @@ public class UGator : UChVehicle
         RIGID_MESH = TireModelType.RIGID_MESH
     }
 
+    public enum UBrakeType
+    {
+        SIMPLE = BrakeType.SIMPLE,
+        SHAFTS = BrakeType.SHAFTS
+    }
+
     public bool chassisFixed;
     public UTireModelType tireModel;
     ////public ChTire.CollisionType tireCollisionType;
 
+    public UBrakeType brakeType;
     public bool brakeLocking;
 
     public double initForwardVel;
@@ -31,9 +38,12 @@ public class UGator : UChVehicle
     public UGator()
     {
         chassisFixed = false;
+
         tireModel = UTireModelType.TMEASY;
         ////tireCollisionType = ChTire.CollisionType.SINGLE_POINT;
-        brakeLocking = true;
+
+        brakeType = UBrakeType.SHAFTS;
+        brakeLocking = false;
 
         initForwardVel = 0;
         initWheelAngSpeed = 0;
@@ -47,6 +57,7 @@ public class UGator : UChVehicle
         gator.SetTireType((TireModelType)tireModel);
         ////gator.SetTireCollisionType(tireCollisionType);
         gator.SetAerodynamicDrag(0.5, 5.0, 1.2);
+        gator.SetBrakeType((BrakeType)brakeType);
         gator.EnableBrakeLocking(brakeLocking);
 
         ////Vector3 pos = transform.position;

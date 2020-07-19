@@ -14,12 +14,19 @@ public class UUAZ : UChVehicle
         RIGID_MESH = TireModelType.RIGID_MESH
     }
 
+    public enum UBrakeType
+    {
+        SIMPLE = BrakeType.SIMPLE,
+        SHAFTS = BrakeType.SHAFTS
+    }
+
     public bool chassisFixed;
     //public PowertrainModelType powertrainModel;
     //public DrivelineType drivelineModel;
     public UTireModelType tireModel;
     ////public ChTire.CollisionType tireCollisionType;
 
+    public UBrakeType brakeType;
     public bool brakeLocking;
 
     public double initForwardVel;
@@ -36,8 +43,11 @@ public class UUAZ : UChVehicle
     public UUAZ()
     {
         chassisFixed = false;
+
         tireModel = UTireModelType.TMEASY;
         ////tireCollisionType = ChTire.CollisionType.SINGLE_POINT;
+
+        brakeType = UBrakeType.SHAFTS;
         brakeLocking = true;
 
         initForwardVel = 0;
@@ -52,6 +62,7 @@ public class UUAZ : UChVehicle
         uaz.SetTireType((TireModelType)tireModel);
         ////uaz.SetTireCollisionType(tireCollisionType);
         uaz.SetAerodynamicDrag(0.5, 5.0, 1.2);
+        uaz.SetBrakeType((BrakeType)brakeType);
         uaz.EnableBrakeLocking(brakeLocking);
 
         ////Vector3 pos = transform.position;
