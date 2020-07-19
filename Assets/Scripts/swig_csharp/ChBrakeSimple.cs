@@ -41,8 +41,8 @@ public class ChBrakeSimple : ChBrake {
     return ret;
   }
 
-  public override void Initialize(ChSuspension suspension, VehicleSide side) {
-    vehiclePINVOKE.ChBrakeSimple_Initialize(swigCPtr, ChSuspension.getCPtr(suspension), (int)side);
+  public override void Initialize(ChChassis chassis, ChSuspension suspension, VehicleSide side) {
+    vehiclePINVOKE.ChBrakeSimple_Initialize(swigCPtr, ChChassis.getCPtr(chassis), ChSuspension.getCPtr(suspension), (int)side);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

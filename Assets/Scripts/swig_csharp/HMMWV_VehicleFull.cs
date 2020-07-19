@@ -35,11 +35,11 @@ public class HMMWV_VehicleFull : HMMWV_Vehicle {
     }
   }
 
-  public HMMWV_VehicleFull(bool fixed_, DrivelineType drive_type, SteeringType steering_type, bool rigid_steering_column, ChContactMethod contact_method, ChassisCollisionType chassis_collision_type) : this(vehiclePINVOKE.new_HMMWV_VehicleFull__SWIG_0(fixed_, (int)drive_type, (int)steering_type, rigid_steering_column, (int)contact_method, (int)chassis_collision_type), true) {
+  public HMMWV_VehicleFull(bool fixed_, DrivelineType drive_type, BrakeType brake_type, SteeringType steering_type, bool rigid_steering_column, ChContactMethod contact_method, ChassisCollisionType chassis_collision_type) : this(vehiclePINVOKE.new_HMMWV_VehicleFull__SWIG_0(fixed_, (int)drive_type, (int)brake_type, (int)steering_type, rigid_steering_column, (int)contact_method, (int)chassis_collision_type), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public HMMWV_VehicleFull(ChSystem system, bool fixed_, DrivelineType drive_type, SteeringType steering_type, bool rigid_steering_column, ChassisCollisionType chassis_collision_type) : this(vehiclePINVOKE.new_HMMWV_VehicleFull__SWIG_1(ChSystem.getCPtr(system), fixed_, (int)drive_type, (int)steering_type, rigid_steering_column, (int)chassis_collision_type), true) {
+  public HMMWV_VehicleFull(ChSystem system, bool fixed_, DrivelineType drive_type, BrakeType brake_type, SteeringType steering_type, bool rigid_steering_column, ChassisCollisionType chassis_collision_type) : this(vehiclePINVOKE.new_HMMWV_VehicleFull__SWIG_1(ChSystem.getCPtr(system), fixed_, (int)drive_type, (int)brake_type, (int)steering_type, rigid_steering_column, (int)chassis_collision_type), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

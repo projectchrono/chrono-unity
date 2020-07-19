@@ -66,6 +66,11 @@ public class CityBus : global::System.IDisposable {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public void SetBrakeType(BrakeType brake_type) {
+    vehiclePINVOKE.CityBus_SetBrakeType(swigCPtr, (int)brake_type);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
   public void SetTireType(TireModelType val) {
     vehiclePINVOKE.CityBus_SetTireType(swigCPtr, (int)val);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();

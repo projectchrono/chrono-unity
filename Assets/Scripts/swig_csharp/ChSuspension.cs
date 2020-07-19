@@ -151,15 +151,15 @@ public class ChSuspension : ChPart {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public virtual ChBody GetLeftBody() {
-    global::System.IntPtr cPtr = vehiclePINVOKE.ChSuspension_GetLeftBody(swigCPtr);
+  public virtual ChBody GetAntirollBody(VehicleSide side) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.ChSuspension_GetAntirollBody(swigCPtr, (int)side);
     ChBody ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBody(cPtr, true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public virtual ChBody GetRightBody() {
-    global::System.IntPtr cPtr = vehiclePINVOKE.ChSuspension_GetRightBody(swigCPtr);
+  public virtual ChBody GetBrakeBody(VehicleSide side) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.ChSuspension_GetBrakeBody(swigCPtr, (int)side);
     ChBody ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBody(cPtr, true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;

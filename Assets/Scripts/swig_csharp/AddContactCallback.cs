@@ -48,4 +48,30 @@ public class AddContactCallback : global::System.IDisposable {
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public AddContactCallback() : this(ChronoEngine_csharpPINVOKE.new_AddContactCallback(), true) {
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    SwigDirectorConnect();
+  }
+
+  private void SwigDirectorConnect() {
+    if (SwigDerivedClassHasMethod("OnAddContact", swigMethodTypes0))
+      swigDelegate0 = new SwigDelegateAddContactCallback_0(SwigDirectorMethodOnAddContact);
+    ChronoEngine_csharpPINVOKE.AddContactCallback_director_connect(swigCPtr, swigDelegate0);
+  }
+
+  private bool SwigDerivedClassHasMethod(string methodName, global::System.Type[] methodTypes) {
+    global::System.Reflection.MethodInfo methodInfo = this.GetType().GetMethod(methodName, global::System.Reflection.BindingFlags.Public | global::System.Reflection.BindingFlags.NonPublic | global::System.Reflection.BindingFlags.Instance, null, methodTypes, null);
+    bool hasDerivedMethod = methodInfo.DeclaringType.IsSubclassOf(typeof(AddContactCallback));
+    return hasDerivedMethod;
+  }
+
+  private void SwigDirectorMethodOnAddContact(global::System.IntPtr contactinfo, global::System.IntPtr material) {
+    OnAddContact(new ChCollisionInfo(contactinfo, false), (material == global::System.IntPtr.Zero) ? null : new ChMaterialComposite(material, true));
+  }
+
+  public delegate void SwigDelegateAddContactCallback_0(global::System.IntPtr contactinfo, global::System.IntPtr material);
+
+  private SwigDelegateAddContactCallback_0 swigDelegate0;
+
+  private static global::System.Type[] swigMethodTypes0 = new global::System.Type[] { typeof(ChCollisionInfo), typeof(ChMaterialComposite) };
 }

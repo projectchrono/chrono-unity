@@ -11,8 +11,10 @@
 
 public class ChMaterialCompositeSMC : ChMaterialComposite {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
+  private bool swigCMemOwnDerived;
 
-  internal ChMaterialCompositeSMC(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChMaterialCompositeSMC_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal ChMaterialCompositeSMC(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChMaterialCompositeSMC_SWIGSmartPtrUpcast(cPtr), true) {
+    swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
@@ -23,8 +25,8 @@ public class ChMaterialCompositeSMC : ChMaterialComposite {
   protected override void Dispose(bool disposing) {
     lock(this) {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
-        if (swigCMemOwn) {
-          swigCMemOwn = false;
+        if (swigCMemOwnDerived) {
+          swigCMemOwnDerived = false;
           ChronoEngine_csharpPINVOKE.delete_ChMaterialCompositeSMC(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);

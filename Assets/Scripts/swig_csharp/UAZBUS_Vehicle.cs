@@ -35,39 +35,23 @@ public class UAZBUS_Vehicle : ChWheeledVehicle {
     }
   }
 
-  public UAZBUS_Vehicle(bool fixed_, SteeringType steering_model, ChContactMethod contact_method, ChassisCollisionType chassis_collision_type) : this(vehiclePINVOKE.new_UAZBUS_Vehicle__SWIG_0(fixed_, (int)steering_model, (int)contact_method, (int)chassis_collision_type), true) {
+  public UAZBUS_Vehicle(bool fixed_, BrakeType brake_type, SteeringType steering_model, ChContactMethod contact_method, ChassisCollisionType chassis_collision_type) : this(vehiclePINVOKE.new_UAZBUS_Vehicle__SWIG_0(fixed_, (int)brake_type, (int)steering_model, (int)contact_method, (int)chassis_collision_type), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public UAZBUS_Vehicle(bool fixed_, SteeringType steering_model, ChContactMethod contact_method) : this(vehiclePINVOKE.new_UAZBUS_Vehicle__SWIG_1(fixed_, (int)steering_model, (int)contact_method), true) {
+  public UAZBUS_Vehicle(bool fixed_, BrakeType brake_type, SteeringType steering_model, ChContactMethod contact_method) : this(vehiclePINVOKE.new_UAZBUS_Vehicle__SWIG_1(fixed_, (int)brake_type, (int)steering_model, (int)contact_method), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public UAZBUS_Vehicle(bool fixed_, SteeringType steering_model) : this(vehiclePINVOKE.new_UAZBUS_Vehicle__SWIG_2(fixed_, (int)steering_model), true) {
+  public UAZBUS_Vehicle(bool fixed_, BrakeType brake_type, SteeringType steering_model) : this(vehiclePINVOKE.new_UAZBUS_Vehicle__SWIG_2(fixed_, (int)brake_type, (int)steering_model), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public UAZBUS_Vehicle(bool fixed_) : this(vehiclePINVOKE.new_UAZBUS_Vehicle__SWIG_3(fixed_), true) {
+  public UAZBUS_Vehicle(ChSystem system, bool fixed_, BrakeType brake_type, SteeringType steering_model, ChassisCollisionType chassis_collision_type) : this(vehiclePINVOKE.new_UAZBUS_Vehicle__SWIG_3(ChSystem.getCPtr(system), fixed_, (int)brake_type, (int)steering_model, (int)chassis_collision_type), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public UAZBUS_Vehicle() : this(vehiclePINVOKE.new_UAZBUS_Vehicle__SWIG_4(), true) {
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public UAZBUS_Vehicle(ChSystem system, bool fixed_, SteeringType steering_model, ChassisCollisionType chassis_collision_type) : this(vehiclePINVOKE.new_UAZBUS_Vehicle__SWIG_5(ChSystem.getCPtr(system), fixed_, (int)steering_model, (int)chassis_collision_type), true) {
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public UAZBUS_Vehicle(ChSystem system, bool fixed_, SteeringType steering_model) : this(vehiclePINVOKE.new_UAZBUS_Vehicle__SWIG_6(ChSystem.getCPtr(system), fixed_, (int)steering_model), true) {
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public UAZBUS_Vehicle(ChSystem system, bool fixed_) : this(vehiclePINVOKE.new_UAZBUS_Vehicle__SWIG_7(ChSystem.getCPtr(system), fixed_), true) {
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public UAZBUS_Vehicle(ChSystem system) : this(vehiclePINVOKE.new_UAZBUS_Vehicle__SWIG_8(ChSystem.getCPtr(system)), true) {
+  public UAZBUS_Vehicle(ChSystem system, bool fixed_, BrakeType brake_type, SteeringType steering_model) : this(vehiclePINVOKE.new_UAZBUS_Vehicle__SWIG_4(ChSystem.getCPtr(system), fixed_, (int)brake_type, (int)steering_model), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

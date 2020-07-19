@@ -51,8 +51,8 @@ public class Gator : global::System.IDisposable {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void SetContactMethod(ChContactMethod val) {
-    vehiclePINVOKE.Gator_SetContactMethod(swigCPtr, (int)val);
+  public void SetContactMethod(ChContactMethod contact_method) {
+    vehiclePINVOKE.Gator_SetContactMethod(swigCPtr, (int)contact_method);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -61,13 +61,28 @@ public class Gator : global::System.IDisposable {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void SetChassisCollisionType(ChassisCollisionType val) {
-    vehiclePINVOKE.Gator_SetChassisCollisionType(swigCPtr, (int)val);
+  public void SetChassisCollisionType(ChassisCollisionType chassis_collision_type) {
+    vehiclePINVOKE.Gator_SetChassisCollisionType(swigCPtr, (int)chassis_collision_type);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void SetTireType(TireModelType val) {
-    vehiclePINVOKE.Gator_SetTireType(swigCPtr, (int)val);
+  public void SetBrakeType(BrakeType brake_type) {
+    vehiclePINVOKE.Gator_SetBrakeType(swigCPtr, (int)brake_type);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void SetDrivelineType(DrivelineType driveline_type) {
+    vehiclePINVOKE.Gator_SetDrivelineType(swigCPtr, (int)driveline_type);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void SetTireType(TireModelType tire_type) {
+    vehiclePINVOKE.Gator_SetTireType(swigCPtr, (int)tire_type);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void SetTireCollisionType(ChTire.CollisionType collision_type) {
+    vehiclePINVOKE.Gator_SetTireCollisionType(swigCPtr, (int)collision_type);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

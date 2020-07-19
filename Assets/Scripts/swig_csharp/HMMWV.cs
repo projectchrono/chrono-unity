@@ -63,6 +63,11 @@ public class HMMWV : global::System.IDisposable {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public void SetBrakeType(BrakeType brake_type) {
+    vehiclePINVOKE.HMMWV_SetBrakeType(swigCPtr, (int)brake_type);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
   public void SetPowertrainType(PowertrainModelType val) {
     vehiclePINVOKE.HMMWV_SetPowertrainType(swigCPtr, (int)val);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();

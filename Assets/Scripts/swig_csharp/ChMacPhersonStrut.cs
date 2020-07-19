@@ -163,15 +163,8 @@ public class ChMacPhersonStrut : ChSuspension {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public override ChBody GetLeftBody() {
-    global::System.IntPtr cPtr = vehiclePINVOKE.ChMacPhersonStrut_GetLeftBody(swigCPtr);
-    ChBody ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBody(cPtr, true);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public override ChBody GetRightBody() {
-    global::System.IntPtr cPtr = vehiclePINVOKE.ChMacPhersonStrut_GetRightBody(swigCPtr);
+  public override ChBody GetAntirollBody(VehicleSide side) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.ChMacPhersonStrut_GetAntirollBody(swigCPtr, (int)side);
     ChBody ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBody(cPtr, true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;

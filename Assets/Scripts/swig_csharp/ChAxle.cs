@@ -97,6 +97,13 @@ public class ChAxle : global::System.IDisposable {
     return ret;
   }
 
+  public ChBrake GetBrake(VehicleSide side) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.ChAxle_GetBrake(swigCPtr, (int)side);
+    ChBrake ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBrake(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public ChSuspension m_suspension {
     set {
       vehiclePINVOKE.ChAxle_m_suspension_set(swigCPtr, ChSuspension.getCPtr(value));

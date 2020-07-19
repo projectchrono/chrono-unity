@@ -67,7 +67,7 @@ public class ReportContactCallback : global::System.IDisposable {
   }
 
   private bool SwigDirectorMethodOnReportContact(global::System.IntPtr pA, global::System.IntPtr pB, global::System.IntPtr plane_coord, double distance, double eff_radius, global::System.IntPtr react_forces, global::System.IntPtr react_torques, global::System.IntPtr contactobjA, global::System.IntPtr contactobjB) {
-    return OnReportContact(new ChVectorD(pA, false), new ChVectorD(pB, false), new ChMatrix33D(plane_coord, false), distance, eff_radius, new ChVectorD(react_forces, false), new ChVectorD(react_torques, false), (contactobjA == global::System.IntPtr.Zero) ? null : new ChContactable(contactobjA, false), (contactobjB == global::System.IntPtr.Zero) ? null : new ChContactable(contactobjB, false));
+    return OnReportContact(new ChVectorD(pA, false), new ChVectorD(pB, false), new ChMatrix33D(plane_coord, false), distance, eff_radius, new ChVectorD(react_forces, false), new ChVectorD(react_torques, false), (contactobjA == global::System.IntPtr.Zero) ? null : new ChContactable(contactobjA, true), (contactobjB == global::System.IntPtr.Zero) ? null : new ChContactable(contactobjB, true));
   }
 
   public delegate bool SwigDelegateReportContactCallback_0(global::System.IntPtr pA, global::System.IntPtr pB, global::System.IntPtr plane_coord, double distance, double eff_radius, global::System.IntPtr react_forces, global::System.IntPtr react_torques, global::System.IntPtr contactobjA, global::System.IntPtr contactobjB);

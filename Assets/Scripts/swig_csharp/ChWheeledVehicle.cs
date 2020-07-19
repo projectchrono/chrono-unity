@@ -103,6 +103,13 @@ public class ChWheeledVehicle : ChVehicle {
     return ret;
   }
 
+  public ChBrake GetBrake(int axle, VehicleSide side) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.ChWheeledVehicle_GetBrake(swigCPtr, axle, (int)side);
+    ChBrake ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBrake(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public ChDrivelineWV GetDriveline() {
     global::System.IntPtr cPtr = vehiclePINVOKE.ChWheeledVehicle_GetDriveline(swigCPtr);
     ChDrivelineWV ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChDrivelineWV(cPtr, true);
@@ -314,6 +321,11 @@ public class ChWheeledVehicle : ChVehicle {
 
   public override void LogConstraintViolations() {
     vehiclePINVOKE.ChWheeledVehicle_LogConstraintViolations(swigCPtr);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void LogSubsystemTypes() {
+    vehiclePINVOKE.ChWheeledVehicle_LogSubsystemTypes(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

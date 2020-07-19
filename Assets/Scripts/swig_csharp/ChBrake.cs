@@ -35,8 +35,8 @@ public class ChBrake : ChPart {
     }
   }
 
-  public virtual void Initialize(ChSuspension suspension, VehicleSide side) {
-    vehiclePINVOKE.ChBrake_Initialize(swigCPtr, ChSuspension.getCPtr(suspension), (int)side);
+  public virtual void Initialize(ChChassis chassis, ChSuspension suspension, VehicleSide side) {
+    vehiclePINVOKE.ChBrake_Initialize(swigCPtr, ChChassis.getCPtr(chassis), ChSuspension.getCPtr(suspension), (int)side);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

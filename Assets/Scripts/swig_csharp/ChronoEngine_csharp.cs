@@ -652,6 +652,20 @@ public class ChronoEngine_csharp {
     return ret;
   }
 
+  public static ChMaterialCompositeSMC CastToChMaterialCompositeSMC(ChMaterialComposite in_obj) {
+    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.CastToChMaterialCompositeSMC(ChMaterialComposite.getCPtr(in_obj));
+    ChMaterialCompositeSMC ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChMaterialCompositeSMC(cPtr, true);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChMaterialCompositeNSC CastToChMaterialCompositeNSC(ChMaterialComposite in_obj) {
+    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.CastToChMaterialCompositeNSC(ChMaterialComposite.getCPtr(in_obj));
+    ChMaterialCompositeNSC ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChMaterialCompositeNSC(cPtr, true);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public static int BODY_DOF {
     get {
       int ret = ChronoEngine_csharpPINVOKE.BODY_DOF_get();
@@ -793,6 +807,527 @@ public class ChronoEngine_csharp {
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public static void AddSphereGeometry(ChBody body, ChMaterialSurface material, double radius, ChVectorD pos, ChQuaternionD rot, bool visualization) {
+    ChronoEngine_csharpPINVOKE.AddSphereGeometry__SWIG_0(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), radius, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot), visualization);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddSphereGeometry(ChBody body, ChMaterialSurface material, double radius, ChVectorD pos, ChQuaternionD rot) {
+    ChronoEngine_csharpPINVOKE.AddSphereGeometry__SWIG_1(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), radius, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddSphereGeometry(ChBody body, ChMaterialSurface material, double radius, ChVectorD pos) {
+    ChronoEngine_csharpPINVOKE.AddSphereGeometry__SWIG_2(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), radius, ChVectorD.getCPtr(pos));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddSphereGeometry(ChBody body, ChMaterialSurface material, double radius) {
+    ChronoEngine_csharpPINVOKE.AddSphereGeometry__SWIG_3(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), radius);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddEllipsoidGeometry(ChBody body, ChMaterialSurface material, ChVectorD size, ChVectorD pos, ChQuaternionD rot, bool visualization) {
+    ChronoEngine_csharpPINVOKE.AddEllipsoidGeometry__SWIG_0(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), ChVectorD.getCPtr(size), ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot), visualization);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddEllipsoidGeometry(ChBody body, ChMaterialSurface material, ChVectorD size, ChVectorD pos, ChQuaternionD rot) {
+    ChronoEngine_csharpPINVOKE.AddEllipsoidGeometry__SWIG_1(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), ChVectorD.getCPtr(size), ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddEllipsoidGeometry(ChBody body, ChMaterialSurface material, ChVectorD size, ChVectorD pos) {
+    ChronoEngine_csharpPINVOKE.AddEllipsoidGeometry__SWIG_2(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), ChVectorD.getCPtr(size), ChVectorD.getCPtr(pos));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddEllipsoidGeometry(ChBody body, ChMaterialSurface material, ChVectorD size) {
+    ChronoEngine_csharpPINVOKE.AddEllipsoidGeometry__SWIG_3(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), ChVectorD.getCPtr(size));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddBoxGeometry(ChBody body, ChMaterialSurface material, ChVectorD size, ChVectorD pos, ChQuaternionD rot, bool visualization) {
+    ChronoEngine_csharpPINVOKE.AddBoxGeometry__SWIG_0(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), ChVectorD.getCPtr(size), ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot), visualization);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddBoxGeometry(ChBody body, ChMaterialSurface material, ChVectorD size, ChVectorD pos, ChQuaternionD rot) {
+    ChronoEngine_csharpPINVOKE.AddBoxGeometry__SWIG_1(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), ChVectorD.getCPtr(size), ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddBoxGeometry(ChBody body, ChMaterialSurface material, ChVectorD size, ChVectorD pos) {
+    ChronoEngine_csharpPINVOKE.AddBoxGeometry__SWIG_2(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), ChVectorD.getCPtr(size), ChVectorD.getCPtr(pos));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddBoxGeometry(ChBody body, ChMaterialSurface material, ChVectorD size) {
+    ChronoEngine_csharpPINVOKE.AddBoxGeometry__SWIG_3(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), ChVectorD.getCPtr(size));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddBiSphereGeometry(ChBody body, ChMaterialSurface material, double radius, double cDist, ChVectorD pos, ChQuaternionD rot, bool visualization) {
+    ChronoEngine_csharpPINVOKE.AddBiSphereGeometry__SWIG_0(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), radius, cDist, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot), visualization);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddBiSphereGeometry(ChBody body, ChMaterialSurface material, double radius, double cDist, ChVectorD pos, ChQuaternionD rot) {
+    ChronoEngine_csharpPINVOKE.AddBiSphereGeometry__SWIG_1(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), radius, cDist, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddBiSphereGeometry(ChBody body, ChMaterialSurface material, double radius, double cDist, ChVectorD pos) {
+    ChronoEngine_csharpPINVOKE.AddBiSphereGeometry__SWIG_2(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), radius, cDist, ChVectorD.getCPtr(pos));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddBiSphereGeometry(ChBody body, ChMaterialSurface material, double radius, double cDist) {
+    ChronoEngine_csharpPINVOKE.AddBiSphereGeometry__SWIG_3(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), radius, cDist);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddCapsuleGeometry(ChBody body, ChMaterialSurface material, double radius, double hlen, ChVectorD pos, ChQuaternionD rot, bool visualization) {
+    ChronoEngine_csharpPINVOKE.AddCapsuleGeometry__SWIG_0(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), radius, hlen, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot), visualization);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddCapsuleGeometry(ChBody body, ChMaterialSurface material, double radius, double hlen, ChVectorD pos, ChQuaternionD rot) {
+    ChronoEngine_csharpPINVOKE.AddCapsuleGeometry__SWIG_1(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), radius, hlen, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddCapsuleGeometry(ChBody body, ChMaterialSurface material, double radius, double hlen, ChVectorD pos) {
+    ChronoEngine_csharpPINVOKE.AddCapsuleGeometry__SWIG_2(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), radius, hlen, ChVectorD.getCPtr(pos));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddCapsuleGeometry(ChBody body, ChMaterialSurface material, double radius, double hlen) {
+    ChronoEngine_csharpPINVOKE.AddCapsuleGeometry__SWIG_3(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), radius, hlen);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddCylinderGeometry(ChBody body, ChMaterialSurface material, double radius, double hlen, ChVectorD pos, ChQuaternionD rot, bool visualization) {
+    ChronoEngine_csharpPINVOKE.AddCylinderGeometry__SWIG_0(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), radius, hlen, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot), visualization);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddCylinderGeometry(ChBody body, ChMaterialSurface material, double radius, double hlen, ChVectorD pos, ChQuaternionD rot) {
+    ChronoEngine_csharpPINVOKE.AddCylinderGeometry__SWIG_1(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), radius, hlen, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddCylinderGeometry(ChBody body, ChMaterialSurface material, double radius, double hlen, ChVectorD pos) {
+    ChronoEngine_csharpPINVOKE.AddCylinderGeometry__SWIG_2(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), radius, hlen, ChVectorD.getCPtr(pos));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddCylinderGeometry(ChBody body, ChMaterialSurface material, double radius, double hlen) {
+    ChronoEngine_csharpPINVOKE.AddCylinderGeometry__SWIG_3(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), radius, hlen);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddConeGeometry(ChBody body, ChMaterialSurface material, double radius, double height, ChVectorD pos, ChQuaternionD rot, bool visualization) {
+    ChronoEngine_csharpPINVOKE.AddConeGeometry__SWIG_0(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), radius, height, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot), visualization);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddConeGeometry(ChBody body, ChMaterialSurface material, double radius, double height, ChVectorD pos, ChQuaternionD rot) {
+    ChronoEngine_csharpPINVOKE.AddConeGeometry__SWIG_1(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), radius, height, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddConeGeometry(ChBody body, ChMaterialSurface material, double radius, double height, ChVectorD pos) {
+    ChronoEngine_csharpPINVOKE.AddConeGeometry__SWIG_2(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), radius, height, ChVectorD.getCPtr(pos));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddConeGeometry(ChBody body, ChMaterialSurface material, double radius, double height) {
+    ChronoEngine_csharpPINVOKE.AddConeGeometry__SWIG_3(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), radius, height);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static bool AddTriangleMeshGeometry(ChBody body, ChMaterialSurface material, string obj_filename, string name, ChVectorD pos, ChQuaternionD rot, bool visualization) {
+    bool ret = ChronoEngine_csharpPINVOKE.AddTriangleMeshGeometry__SWIG_0(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), obj_filename, name, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot), visualization);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static bool AddTriangleMeshGeometry(ChBody body, ChMaterialSurface material, string obj_filename, string name, ChVectorD pos, ChQuaternionD rot) {
+    bool ret = ChronoEngine_csharpPINVOKE.AddTriangleMeshGeometry__SWIG_1(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), obj_filename, name, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static bool AddTriangleMeshGeometry(ChBody body, ChMaterialSurface material, string obj_filename, string name, ChVectorD pos) {
+    bool ret = ChronoEngine_csharpPINVOKE.AddTriangleMeshGeometry__SWIG_2(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), obj_filename, name, ChVectorD.getCPtr(pos));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static bool AddTriangleMeshGeometry(ChBody body, ChMaterialSurface material, string obj_filename, string name) {
+    bool ret = ChronoEngine_csharpPINVOKE.AddTriangleMeshGeometry__SWIG_3(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), obj_filename, name);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static bool AddTriangleMeshConvexDecomposition(ChBody body, ChMaterialSurface material, string obj_filename, string name, ChVectorD pos, ChQuaternionD rot, float skin_thickness, bool use_original_asset) {
+    bool ret = ChronoEngine_csharpPINVOKE.AddTriangleMeshConvexDecomposition__SWIG_0(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), obj_filename, name, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot), skin_thickness, use_original_asset);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static bool AddTriangleMeshConvexDecomposition(ChBody body, ChMaterialSurface material, string obj_filename, string name, ChVectorD pos, ChQuaternionD rot, float skin_thickness) {
+    bool ret = ChronoEngine_csharpPINVOKE.AddTriangleMeshConvexDecomposition__SWIG_1(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), obj_filename, name, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot), skin_thickness);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static bool AddTriangleMeshConvexDecomposition(ChBody body, ChMaterialSurface material, string obj_filename, string name, ChVectorD pos, ChQuaternionD rot) {
+    bool ret = ChronoEngine_csharpPINVOKE.AddTriangleMeshConvexDecomposition__SWIG_2(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), obj_filename, name, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static bool AddTriangleMeshConvexDecomposition(ChBody body, ChMaterialSurface material, string obj_filename, string name, ChVectorD pos) {
+    bool ret = ChronoEngine_csharpPINVOKE.AddTriangleMeshConvexDecomposition__SWIG_3(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), obj_filename, name, ChVectorD.getCPtr(pos));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static bool AddTriangleMeshConvexDecomposition(ChBody body, ChMaterialSurface material, string obj_filename, string name) {
+    bool ret = ChronoEngine_csharpPINVOKE.AddTriangleMeshConvexDecomposition__SWIG_4(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), obj_filename, name);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static bool AddTriangleMeshConvexDecompositionV2(ChBody body, ChMaterialSurface material, string obj_filename, string name, ChVectorD pos, ChQuaternionD rot, bool use_original_asset) {
+    bool ret = ChronoEngine_csharpPINVOKE.AddTriangleMeshConvexDecompositionV2__SWIG_0(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), obj_filename, name, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot), use_original_asset);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static bool AddTriangleMeshConvexDecompositionV2(ChBody body, ChMaterialSurface material, string obj_filename, string name, ChVectorD pos, ChQuaternionD rot) {
+    bool ret = ChronoEngine_csharpPINVOKE.AddTriangleMeshConvexDecompositionV2__SWIG_1(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), obj_filename, name, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static bool AddTriangleMeshConvexDecompositionV2(ChBody body, ChMaterialSurface material, string obj_filename, string name, ChVectorD pos) {
+    bool ret = ChronoEngine_csharpPINVOKE.AddTriangleMeshConvexDecompositionV2__SWIG_2(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), obj_filename, name, ChVectorD.getCPtr(pos));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static bool AddTriangleMeshConvexDecompositionV2(ChBody body, ChMaterialSurface material, string obj_filename, string name) {
+    bool ret = ChronoEngine_csharpPINVOKE.AddTriangleMeshConvexDecompositionV2__SWIG_3(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), obj_filename, name);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static bool AddTriangleMeshConvexDecompositionSplit(ChSystem system, ChMaterialSurface material, string obj_filename, string name, ChVectorD pos, ChQuaternionD rot, double total_mass) {
+    bool ret = ChronoEngine_csharpPINVOKE.AddTriangleMeshConvexDecompositionSplit(ChSystem.getCPtr(system), ChMaterialSurface.getCPtr(material), obj_filename, name, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot), total_mass);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static void AddTriangleGeometry(ChBody body, ChMaterialSurface material, ChVectorD vertA, ChVectorD vertB, ChVectorD vertC, string name, ChVectorD pos, ChQuaternionD rot, bool visualization) {
+    ChronoEngine_csharpPINVOKE.AddTriangleGeometry__SWIG_0(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), ChVectorD.getCPtr(vertA), ChVectorD.getCPtr(vertB), ChVectorD.getCPtr(vertC), name, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot), visualization);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddTriangleGeometry(ChBody body, ChMaterialSurface material, ChVectorD vertA, ChVectorD vertB, ChVectorD vertC, string name, ChVectorD pos, ChQuaternionD rot) {
+    ChronoEngine_csharpPINVOKE.AddTriangleGeometry__SWIG_1(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), ChVectorD.getCPtr(vertA), ChVectorD.getCPtr(vertB), ChVectorD.getCPtr(vertC), name, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddTriangleGeometry(ChBody body, ChMaterialSurface material, ChVectorD vertA, ChVectorD vertB, ChVectorD vertC, string name, ChVectorD pos) {
+    ChronoEngine_csharpPINVOKE.AddTriangleGeometry__SWIG_2(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), ChVectorD.getCPtr(vertA), ChVectorD.getCPtr(vertB), ChVectorD.getCPtr(vertC), name, ChVectorD.getCPtr(pos));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddTriangleGeometry(ChBody body, ChMaterialSurface material, ChVectorD vertA, ChVectorD vertB, ChVectorD vertC, string name) {
+    ChronoEngine_csharpPINVOKE.AddTriangleGeometry__SWIG_3(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), ChVectorD.getCPtr(vertA), ChVectorD.getCPtr(vertB), ChVectorD.getCPtr(vertC), name);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddRoundedBoxGeometry(ChBody body, ChMaterialSurface material, ChVectorD size, double srad, ChVectorD pos, ChQuaternionD rot, bool visualization) {
+    ChronoEngine_csharpPINVOKE.AddRoundedBoxGeometry__SWIG_0(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), ChVectorD.getCPtr(size), srad, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot), visualization);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddRoundedBoxGeometry(ChBody body, ChMaterialSurface material, ChVectorD size, double srad, ChVectorD pos, ChQuaternionD rot) {
+    ChronoEngine_csharpPINVOKE.AddRoundedBoxGeometry__SWIG_1(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), ChVectorD.getCPtr(size), srad, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddRoundedBoxGeometry(ChBody body, ChMaterialSurface material, ChVectorD size, double srad, ChVectorD pos) {
+    ChronoEngine_csharpPINVOKE.AddRoundedBoxGeometry__SWIG_2(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), ChVectorD.getCPtr(size), srad, ChVectorD.getCPtr(pos));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddRoundedBoxGeometry(ChBody body, ChMaterialSurface material, ChVectorD size, double srad) {
+    ChronoEngine_csharpPINVOKE.AddRoundedBoxGeometry__SWIG_3(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), ChVectorD.getCPtr(size), srad);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddRoundedCylinderGeometry(ChBody body, ChMaterialSurface material, double radius, double hlen, double srad, ChVectorD pos, ChQuaternionD rot, bool visualization) {
+    ChronoEngine_csharpPINVOKE.AddRoundedCylinderGeometry__SWIG_0(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), radius, hlen, srad, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot), visualization);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddRoundedCylinderGeometry(ChBody body, ChMaterialSurface material, double radius, double hlen, double srad, ChVectorD pos, ChQuaternionD rot) {
+    ChronoEngine_csharpPINVOKE.AddRoundedCylinderGeometry__SWIG_1(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), radius, hlen, srad, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddRoundedCylinderGeometry(ChBody body, ChMaterialSurface material, double radius, double hlen, double srad, ChVectorD pos) {
+    ChronoEngine_csharpPINVOKE.AddRoundedCylinderGeometry__SWIG_2(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), radius, hlen, srad, ChVectorD.getCPtr(pos));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddRoundedCylinderGeometry(ChBody body, ChMaterialSurface material, double radius, double hlen, double srad) {
+    ChronoEngine_csharpPINVOKE.AddRoundedCylinderGeometry__SWIG_3(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), radius, hlen, srad);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddTorusGeometry(ChBody body, ChMaterialSurface material, double radius, double thickness, int segments, int angle, ChVectorD pos, ChQuaternionD rot, bool visualization) {
+    ChronoEngine_csharpPINVOKE.AddTorusGeometry__SWIG_0(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), radius, thickness, segments, angle, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot), visualization);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddTorusGeometry(ChBody body, ChMaterialSurface material, double radius, double thickness, int segments, int angle, ChVectorD pos, ChQuaternionD rot) {
+    ChronoEngine_csharpPINVOKE.AddTorusGeometry__SWIG_1(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), radius, thickness, segments, angle, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddTorusGeometry(ChBody body, ChMaterialSurface material, double radius, double thickness, int segments, int angle, ChVectorD pos) {
+    ChronoEngine_csharpPINVOKE.AddTorusGeometry__SWIG_2(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), radius, thickness, segments, angle, ChVectorD.getCPtr(pos));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddTorusGeometry(ChBody body, ChMaterialSurface material, double radius, double thickness, int segments, int angle) {
+    ChronoEngine_csharpPINVOKE.AddTorusGeometry__SWIG_3(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), radius, thickness, segments, angle);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddTorusGeometry(ChBody body, ChMaterialSurface material, double radius, double thickness, int segments) {
+    ChronoEngine_csharpPINVOKE.AddTorusGeometry__SWIG_4(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), radius, thickness, segments);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddTorusGeometry(ChBody body, ChMaterialSurface material, double radius, double thickness) {
+    ChronoEngine_csharpPINVOKE.AddTorusGeometry__SWIG_5(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), radius, thickness);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static ChBody CreateBoxContainer(ChSystem system, int id, ChMaterialSurface mat, ChVectorD hdim, double hthick, ChVectorD pos, ChQuaternionD rot, bool collide, bool y_up, bool overlap, bool closed) {
+    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.CreateBoxContainer__SWIG_0(ChSystem.getCPtr(system), id, ChMaterialSurface.getCPtr(mat), ChVectorD.getCPtr(hdim), hthick, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot), collide, y_up, overlap, closed);
+    ChBody ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBody(cPtr, true);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChBody CreateBoxContainer(ChSystem system, int id, ChMaterialSurface mat, ChVectorD hdim, double hthick, ChVectorD pos, ChQuaternionD rot, bool collide, bool y_up, bool overlap) {
+    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.CreateBoxContainer__SWIG_1(ChSystem.getCPtr(system), id, ChMaterialSurface.getCPtr(mat), ChVectorD.getCPtr(hdim), hthick, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot), collide, y_up, overlap);
+    ChBody ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBody(cPtr, true);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChBody CreateBoxContainer(ChSystem system, int id, ChMaterialSurface mat, ChVectorD hdim, double hthick, ChVectorD pos, ChQuaternionD rot, bool collide, bool y_up) {
+    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.CreateBoxContainer__SWIG_2(ChSystem.getCPtr(system), id, ChMaterialSurface.getCPtr(mat), ChVectorD.getCPtr(hdim), hthick, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot), collide, y_up);
+    ChBody ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBody(cPtr, true);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChBody CreateBoxContainer(ChSystem system, int id, ChMaterialSurface mat, ChVectorD hdim, double hthick, ChVectorD pos, ChQuaternionD rot, bool collide) {
+    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.CreateBoxContainer__SWIG_3(ChSystem.getCPtr(system), id, ChMaterialSurface.getCPtr(mat), ChVectorD.getCPtr(hdim), hthick, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot), collide);
+    ChBody ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBody(cPtr, true);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChBody CreateBoxContainer(ChSystem system, int id, ChMaterialSurface mat, ChVectorD hdim, double hthick, ChVectorD pos, ChQuaternionD rot) {
+    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.CreateBoxContainer__SWIG_4(ChSystem.getCPtr(system), id, ChMaterialSurface.getCPtr(mat), ChVectorD.getCPtr(hdim), hthick, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot));
+    ChBody ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBody(cPtr, true);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChBody CreateBoxContainer(ChSystem system, int id, ChMaterialSurface mat, ChVectorD hdim, double hthick, ChVectorD pos) {
+    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.CreateBoxContainer__SWIG_5(ChSystem.getCPtr(system), id, ChMaterialSurface.getCPtr(mat), ChVectorD.getCPtr(hdim), hthick, ChVectorD.getCPtr(pos));
+    ChBody ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBody(cPtr, true);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChBody CreateBoxContainer(ChSystem system, int id, ChMaterialSurface mat, ChVectorD hdim, double hthick) {
+    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.CreateBoxContainer__SWIG_6(ChSystem.getCPtr(system), id, ChMaterialSurface.getCPtr(mat), ChVectorD.getCPtr(hdim), hthick);
+    ChBody ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBody(cPtr, true);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChBody CreateCylindricalContainerFromBoxes(ChSystem system, int id, ChMaterialSurface mat, ChVectorD hdim, double hthick, int numBoxes, ChVectorD pos, ChQuaternionD rot, bool collide, bool overlap, bool closed, bool isBoxBase, bool partialVisualization) {
+    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.CreateCylindricalContainerFromBoxes__SWIG_0(ChSystem.getCPtr(system), id, ChMaterialSurface.getCPtr(mat), ChVectorD.getCPtr(hdim), hthick, numBoxes, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot), collide, overlap, closed, isBoxBase, partialVisualization);
+    ChBody ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBody(cPtr, true);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChBody CreateCylindricalContainerFromBoxes(ChSystem system, int id, ChMaterialSurface mat, ChVectorD hdim, double hthick, int numBoxes, ChVectorD pos, ChQuaternionD rot, bool collide, bool overlap, bool closed, bool isBoxBase) {
+    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.CreateCylindricalContainerFromBoxes__SWIG_1(ChSystem.getCPtr(system), id, ChMaterialSurface.getCPtr(mat), ChVectorD.getCPtr(hdim), hthick, numBoxes, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot), collide, overlap, closed, isBoxBase);
+    ChBody ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBody(cPtr, true);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChBody CreateCylindricalContainerFromBoxes(ChSystem system, int id, ChMaterialSurface mat, ChVectorD hdim, double hthick, int numBoxes, ChVectorD pos, ChQuaternionD rot, bool collide, bool overlap, bool closed) {
+    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.CreateCylindricalContainerFromBoxes__SWIG_2(ChSystem.getCPtr(system), id, ChMaterialSurface.getCPtr(mat), ChVectorD.getCPtr(hdim), hthick, numBoxes, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot), collide, overlap, closed);
+    ChBody ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBody(cPtr, true);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChBody CreateCylindricalContainerFromBoxes(ChSystem system, int id, ChMaterialSurface mat, ChVectorD hdim, double hthick, int numBoxes, ChVectorD pos, ChQuaternionD rot, bool collide, bool overlap) {
+    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.CreateCylindricalContainerFromBoxes__SWIG_3(ChSystem.getCPtr(system), id, ChMaterialSurface.getCPtr(mat), ChVectorD.getCPtr(hdim), hthick, numBoxes, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot), collide, overlap);
+    ChBody ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBody(cPtr, true);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChBody CreateCylindricalContainerFromBoxes(ChSystem system, int id, ChMaterialSurface mat, ChVectorD hdim, double hthick, int numBoxes, ChVectorD pos, ChQuaternionD rot, bool collide) {
+    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.CreateCylindricalContainerFromBoxes__SWIG_4(ChSystem.getCPtr(system), id, ChMaterialSurface.getCPtr(mat), ChVectorD.getCPtr(hdim), hthick, numBoxes, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot), collide);
+    ChBody ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBody(cPtr, true);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChBody CreateCylindricalContainerFromBoxes(ChSystem system, int id, ChMaterialSurface mat, ChVectorD hdim, double hthick, int numBoxes, ChVectorD pos, ChQuaternionD rot) {
+    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.CreateCylindricalContainerFromBoxes__SWIG_5(ChSystem.getCPtr(system), id, ChMaterialSurface.getCPtr(mat), ChVectorD.getCPtr(hdim), hthick, numBoxes, ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot));
+    ChBody ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBody(cPtr, true);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChBody CreateCylindricalContainerFromBoxes(ChSystem system, int id, ChMaterialSurface mat, ChVectorD hdim, double hthick, int numBoxes, ChVectorD pos) {
+    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.CreateCylindricalContainerFromBoxes__SWIG_6(ChSystem.getCPtr(system), id, ChMaterialSurface.getCPtr(mat), ChVectorD.getCPtr(hdim), hthick, numBoxes, ChVectorD.getCPtr(pos));
+    ChBody ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBody(cPtr, true);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChBody CreateCylindricalContainerFromBoxes(ChSystem system, int id, ChMaterialSurface mat, ChVectorD hdim, double hthick, int numBoxes) {
+    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.CreateCylindricalContainerFromBoxes__SWIG_7(ChSystem.getCPtr(system), id, ChMaterialSurface.getCPtr(mat), ChVectorD.getCPtr(hdim), hthick, numBoxes);
+    ChBody ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBody(cPtr, true);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static bool LoadConvexMesh(string file_name, ChTriangleMeshConnected convex_mesh, SWIGTYPE_p_chrono__collision__ChConvexDecompositionHACDv2 convex_shape, ChVectorD pos, ChQuaternionD rot, int hacd_maxhullcount, int hacd_maxhullmerge, int hacd_maxhullvertexes, float hacd_concavity, float hacd_smallclusterthreshold, float hacd_fusetolerance) {
+    bool ret = ChronoEngine_csharpPINVOKE.LoadConvexMesh__SWIG_0(file_name, ChTriangleMeshConnected.getCPtr(convex_mesh), SWIGTYPE_p_chrono__collision__ChConvexDecompositionHACDv2.getCPtr(convex_shape), ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot), hacd_maxhullcount, hacd_maxhullmerge, hacd_maxhullvertexes, hacd_concavity, hacd_smallclusterthreshold, hacd_fusetolerance);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static bool LoadConvexMesh(string file_name, ChTriangleMeshConnected convex_mesh, SWIGTYPE_p_chrono__collision__ChConvexDecompositionHACDv2 convex_shape, ChVectorD pos, ChQuaternionD rot, int hacd_maxhullcount, int hacd_maxhullmerge, int hacd_maxhullvertexes, float hacd_concavity, float hacd_smallclusterthreshold) {
+    bool ret = ChronoEngine_csharpPINVOKE.LoadConvexMesh__SWIG_1(file_name, ChTriangleMeshConnected.getCPtr(convex_mesh), SWIGTYPE_p_chrono__collision__ChConvexDecompositionHACDv2.getCPtr(convex_shape), ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot), hacd_maxhullcount, hacd_maxhullmerge, hacd_maxhullvertexes, hacd_concavity, hacd_smallclusterthreshold);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static bool LoadConvexMesh(string file_name, ChTriangleMeshConnected convex_mesh, SWIGTYPE_p_chrono__collision__ChConvexDecompositionHACDv2 convex_shape, ChVectorD pos, ChQuaternionD rot, int hacd_maxhullcount, int hacd_maxhullmerge, int hacd_maxhullvertexes, float hacd_concavity) {
+    bool ret = ChronoEngine_csharpPINVOKE.LoadConvexMesh__SWIG_2(file_name, ChTriangleMeshConnected.getCPtr(convex_mesh), SWIGTYPE_p_chrono__collision__ChConvexDecompositionHACDv2.getCPtr(convex_shape), ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot), hacd_maxhullcount, hacd_maxhullmerge, hacd_maxhullvertexes, hacd_concavity);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static bool LoadConvexMesh(string file_name, ChTriangleMeshConnected convex_mesh, SWIGTYPE_p_chrono__collision__ChConvexDecompositionHACDv2 convex_shape, ChVectorD pos, ChQuaternionD rot, int hacd_maxhullcount, int hacd_maxhullmerge, int hacd_maxhullvertexes) {
+    bool ret = ChronoEngine_csharpPINVOKE.LoadConvexMesh__SWIG_3(file_name, ChTriangleMeshConnected.getCPtr(convex_mesh), SWIGTYPE_p_chrono__collision__ChConvexDecompositionHACDv2.getCPtr(convex_shape), ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot), hacd_maxhullcount, hacd_maxhullmerge, hacd_maxhullvertexes);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static bool LoadConvexMesh(string file_name, ChTriangleMeshConnected convex_mesh, SWIGTYPE_p_chrono__collision__ChConvexDecompositionHACDv2 convex_shape, ChVectorD pos, ChQuaternionD rot, int hacd_maxhullcount, int hacd_maxhullmerge) {
+    bool ret = ChronoEngine_csharpPINVOKE.LoadConvexMesh__SWIG_4(file_name, ChTriangleMeshConnected.getCPtr(convex_mesh), SWIGTYPE_p_chrono__collision__ChConvexDecompositionHACDv2.getCPtr(convex_shape), ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot), hacd_maxhullcount, hacd_maxhullmerge);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static bool LoadConvexMesh(string file_name, ChTriangleMeshConnected convex_mesh, SWIGTYPE_p_chrono__collision__ChConvexDecompositionHACDv2 convex_shape, ChVectorD pos, ChQuaternionD rot, int hacd_maxhullcount) {
+    bool ret = ChronoEngine_csharpPINVOKE.LoadConvexMesh__SWIG_5(file_name, ChTriangleMeshConnected.getCPtr(convex_mesh), SWIGTYPE_p_chrono__collision__ChConvexDecompositionHACDv2.getCPtr(convex_shape), ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot), hacd_maxhullcount);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static bool LoadConvexMesh(string file_name, ChTriangleMeshConnected convex_mesh, SWIGTYPE_p_chrono__collision__ChConvexDecompositionHACDv2 convex_shape, ChVectorD pos, ChQuaternionD rot) {
+    bool ret = ChronoEngine_csharpPINVOKE.LoadConvexMesh__SWIG_6(file_name, ChTriangleMeshConnected.getCPtr(convex_mesh), SWIGTYPE_p_chrono__collision__ChConvexDecompositionHACDv2.getCPtr(convex_shape), ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static bool LoadConvexMesh(string file_name, ChTriangleMeshConnected convex_mesh, SWIGTYPE_p_chrono__collision__ChConvexDecompositionHACDv2 convex_shape, ChVectorD pos) {
+    bool ret = ChronoEngine_csharpPINVOKE.LoadConvexMesh__SWIG_7(file_name, ChTriangleMeshConnected.getCPtr(convex_mesh), SWIGTYPE_p_chrono__collision__ChConvexDecompositionHACDv2.getCPtr(convex_shape), ChVectorD.getCPtr(pos));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static bool LoadConvexMesh(string file_name, ChTriangleMeshConnected convex_mesh, SWIGTYPE_p_chrono__collision__ChConvexDecompositionHACDv2 convex_shape) {
+    bool ret = ChronoEngine_csharpPINVOKE.LoadConvexMesh__SWIG_8(file_name, ChTriangleMeshConnected.getCPtr(convex_mesh), SWIGTYPE_p_chrono__collision__ChConvexDecompositionHACDv2.getCPtr(convex_shape));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static bool LoadConvexHulls(string file_name, ChTriangleMeshConnected convex_mesh, SWIGTYPE_p_std__vectorT_std__vectorT_chrono__ChVectorT_double_t_t_t convex_hulls) {
+    bool ret = ChronoEngine_csharpPINVOKE.LoadConvexHulls(file_name, ChTriangleMeshConnected.getCPtr(convex_mesh), SWIGTYPE_p_std__vectorT_std__vectorT_chrono__ChVectorT_double_t_t_t.getCPtr(convex_hulls));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static void AddConvexCollisionModel(ChBody body, ChMaterialSurface material, ChTriangleMeshConnected convex_mesh, SWIGTYPE_p_chrono__collision__ChConvexDecompositionHACDv2 convex_shape, ChVectorD pos, ChQuaternionD rot, bool use_original_asset) {
+    ChronoEngine_csharpPINVOKE.AddConvexCollisionModel__SWIG_0(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), ChTriangleMeshConnected.getCPtr(convex_mesh), SWIGTYPE_p_chrono__collision__ChConvexDecompositionHACDv2.getCPtr(convex_shape), ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot), use_original_asset);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddConvexCollisionModel(ChBody body, ChMaterialSurface material, ChTriangleMeshConnected convex_mesh, SWIGTYPE_p_chrono__collision__ChConvexDecompositionHACDv2 convex_shape, ChVectorD pos, ChQuaternionD rot) {
+    ChronoEngine_csharpPINVOKE.AddConvexCollisionModel__SWIG_1(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), ChTriangleMeshConnected.getCPtr(convex_mesh), SWIGTYPE_p_chrono__collision__ChConvexDecompositionHACDv2.getCPtr(convex_shape), ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddConvexCollisionModel(ChBody body, ChMaterialSurface material, ChTriangleMeshConnected convex_mesh, SWIGTYPE_p_chrono__collision__ChConvexDecompositionHACDv2 convex_shape, ChVectorD pos) {
+    ChronoEngine_csharpPINVOKE.AddConvexCollisionModel__SWIG_2(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), ChTriangleMeshConnected.getCPtr(convex_mesh), SWIGTYPE_p_chrono__collision__ChConvexDecompositionHACDv2.getCPtr(convex_shape), ChVectorD.getCPtr(pos));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddConvexCollisionModel(ChBody body, ChMaterialSurface material, ChTriangleMeshConnected convex_mesh, SWIGTYPE_p_chrono__collision__ChConvexDecompositionHACDv2 convex_shape) {
+    ChronoEngine_csharpPINVOKE.AddConvexCollisionModel__SWIG_3(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), ChTriangleMeshConnected.getCPtr(convex_mesh), SWIGTYPE_p_chrono__collision__ChConvexDecompositionHACDv2.getCPtr(convex_shape));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddConvexCollisionModel(ChBody body, ChMaterialSurface material, ChTriangleMeshConnected convex_mesh, SWIGTYPE_p_std__vectorT_std__vectorT_chrono__ChVectorT_double_t_t_t convex_hulls, ChVectorD pos, ChQuaternionD rot) {
+    ChronoEngine_csharpPINVOKE.AddConvexCollisionModel__SWIG_4(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), ChTriangleMeshConnected.getCPtr(convex_mesh), SWIGTYPE_p_std__vectorT_std__vectorT_chrono__ChVectorT_double_t_t_t.getCPtr(convex_hulls), ChVectorD.getCPtr(pos), ChQuaternionD.getCPtr(rot));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddConvexCollisionModel(ChBody body, ChMaterialSurface material, ChTriangleMeshConnected convex_mesh, SWIGTYPE_p_std__vectorT_std__vectorT_chrono__ChVectorT_double_t_t_t convex_hulls, ChVectorD pos) {
+    ChronoEngine_csharpPINVOKE.AddConvexCollisionModel__SWIG_5(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), ChTriangleMeshConnected.getCPtr(convex_mesh), SWIGTYPE_p_std__vectorT_std__vectorT_chrono__ChVectorT_double_t_t_t.getCPtr(convex_hulls), ChVectorD.getCPtr(pos));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void AddConvexCollisionModel(ChBody body, ChMaterialSurface material, ChTriangleMeshConnected convex_mesh, SWIGTYPE_p_std__vectorT_std__vectorT_chrono__ChVectorT_double_t_t_t convex_hulls) {
+    ChronoEngine_csharpPINVOKE.AddConvexCollisionModel__SWIG_6(ChBody.getCPtr(body), ChMaterialSurface.getCPtr(material), ChTriangleMeshConnected.getCPtr(convex_mesh), SWIGTYPE_p_std__vectorT_std__vectorT_chrono__ChVectorT_double_t_t_t.getCPtr(convex_hulls));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static ChBody CastToChBody(ChContactable in_obj) {
+    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.CastToChBody__SWIG_0(ChContactable.getCPtr(in_obj));
+    ChBody ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBody(cPtr, true);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public static ChVisualization CastToChVisualization(ChAsset in_obj) {
     global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.CastToChVisualization(ChAsset.getCPtr(in_obj));
     ChVisualization ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChVisualization(cPtr, true);
@@ -906,7 +1441,7 @@ public class ChronoEngine_csharp {
   }
 
   public static ChBody CastToChBody(ChBodyFrame in_obj) {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.CastToChBody__SWIG_0(ChBodyFrame.getCPtr(in_obj));
+    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.CastToChBody__SWIG_1(ChBodyFrame.getCPtr(in_obj));
     ChBody ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBody(cPtr, true);
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
@@ -941,7 +1476,7 @@ public class ChronoEngine_csharp {
   }
 
   public static ChBody CastToChBody(ChPhysicsItem in_obj) {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.CastToChBody__SWIG_1(ChPhysicsItem.getCPtr(in_obj));
+    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.CastToChBody__SWIG_2(ChPhysicsItem.getCPtr(in_obj));
     ChBody ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBody(cPtr, true);
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
     return ret;

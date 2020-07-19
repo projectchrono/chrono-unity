@@ -66,6 +66,11 @@ public class Sedan : global::System.IDisposable {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public void SetBrakeType(BrakeType brake_type) {
+    vehiclePINVOKE.Sedan_SetBrakeType(swigCPtr, (int)brake_type);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
   public void SetTireType(TireModelType val) {
     vehiclePINVOKE.Sedan_SetTireType(swigCPtr, (int)val);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
