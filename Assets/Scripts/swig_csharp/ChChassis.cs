@@ -157,8 +157,8 @@ public class ChChassis : ChPart {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public SWIGTYPE_p_std__vectorT_std__shared_ptrT_ChMarker_t_t GetMarkers() {
-    SWIGTYPE_p_std__vectorT_std__shared_ptrT_ChMarker_t_t ret = new SWIGTYPE_p_std__vectorT_std__shared_ptrT_ChMarker_t_t(vehiclePINVOKE.ChChassis_GetMarkers(swigCPtr), false);
+  public SWIGTYPE_p_std__vectorT_std__shared_ptrT_chrono__ChMarker_t_t GetMarkers() {
+    SWIGTYPE_p_std__vectorT_std__shared_ptrT_chrono__ChMarker_t_t ret = new SWIGTYPE_p_std__vectorT_std__shared_ptrT_chrono__ChMarker_t_t(vehiclePINVOKE.ChChassis_GetMarkers(swigCPtr), false);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

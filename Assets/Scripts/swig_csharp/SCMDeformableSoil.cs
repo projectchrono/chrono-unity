@@ -39,28 +39,13 @@ public class SCMDeformableSoil : ChLoadContainer {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void Initialize(double height, double sizeX, double sizeY, int divX, int divY) {
-    vehiclePINVOKE.SCMDeformableSoil_Initialize__SWIG_0(swigCPtr, height, sizeX, sizeY, divX, divY);
+  public void Initialize(double hsizeX, double hsizeY, double delta) {
+    vehiclePINVOKE.SCMDeformableSoil_Initialize__SWIG_0(swigCPtr, hsizeX, hsizeY, delta);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void Initialize(string mesh_file) {
-    vehiclePINVOKE.SCMDeformableSoil_Initialize__SWIG_1(swigCPtr, mesh_file);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public void Initialize(string heightmap_file, string mesh_name, double sizeX, double sizeY, double hMin, double hMax, int divX, int divY) {
-    vehiclePINVOKE.SCMDeformableSoil_Initialize__SWIG_2(swigCPtr, heightmap_file, mesh_name, sizeX, sizeY, hMin, hMax, divX, divY);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public void Initialize(string heightmap_file, string mesh_name, double sizeX, double sizeY, double hMin, double hMax, int divX) {
-    vehiclePINVOKE.SCMDeformableSoil_Initialize__SWIG_3(swigCPtr, heightmap_file, mesh_name, sizeX, sizeY, hMin, hMax, divX);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public void Initialize(string heightmap_file, string mesh_name, double sizeX, double sizeY, double hMin, double hMax) {
-    vehiclePINVOKE.SCMDeformableSoil_Initialize__SWIG_4(swigCPtr, heightmap_file, mesh_name, sizeX, sizeY, hMin, hMax);
+  public void Initialize(string heightmap_file, double sizeX, double sizeY, double hMin, double hMax, double delta) {
+    vehiclePINVOKE.SCMDeformableSoil_Initialize__SWIG_1(swigCPtr, heightmap_file, sizeX, sizeY, hMin, hMax, delta);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

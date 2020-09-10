@@ -95,6 +95,28 @@ public class ChTriangleMeshShape : ChVisualization {
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public void SetFixedConnectivity() {
+    ChronoEngine_csharpPINVOKE.ChTriangleMeshShape_SetFixedConnectivity(swigCPtr);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public bool FixedConnectivity() {
+    bool ret = ChronoEngine_csharpPINVOKE.ChTriangleMeshShape_FixedConnectivity(swigCPtr);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public void SetModifiedVertices(SWIGTYPE_p_std__vectorT_int_t vertices) {
+    ChronoEngine_csharpPINVOKE.ChTriangleMeshShape_SetModifiedVertices(swigCPtr, SWIGTYPE_p_std__vectorT_int_t.getCPtr(vertices));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public SWIGTYPE_p_std__vectorT_int_t GetModifiedVertices() {
+    SWIGTYPE_p_std__vectorT_int_t ret = new SWIGTYPE_p_std__vectorT_int_t(ChronoEngine_csharpPINVOKE.ChTriangleMeshShape_GetModifiedVertices(swigCPtr), false);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public override void ArchiveOUT(SWIGTYPE_p_ChArchiveOut marchive) {
     ChronoEngine_csharpPINVOKE.ChTriangleMeshShape_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();

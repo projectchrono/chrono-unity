@@ -6426,6 +6426,9 @@ class ChronoEngine_csharpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChCollisionSystem_Run")]
   public static extern void ChCollisionSystem_Run(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChCollisionSystem_GetBoundingBox")]
+  public static extern void ChCollisionSystem_GetBoundingBox(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChCollisionSystem_GetTimerCollisionBroad")]
   public static extern double ChCollisionSystem_GetTimerCollisionBroad(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -7071,6 +7074,18 @@ class ChronoEngine_csharpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChTriangleMeshShape_SetScale")]
   public static extern void ChTriangleMeshShape_SetScale(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChTriangleMeshShape_SetFixedConnectivity")]
+  public static extern void ChTriangleMeshShape_SetFixedConnectivity(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChTriangleMeshShape_FixedConnectivity")]
+  public static extern bool ChTriangleMeshShape_FixedConnectivity(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChTriangleMeshShape_SetModifiedVertices")]
+  public static extern void ChTriangleMeshShape_SetModifiedVertices(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChTriangleMeshShape_GetModifiedVertices")]
+  public static extern global::System.IntPtr ChTriangleMeshShape_GetModifiedVertices(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChTriangleMeshShape_ArchiveOUT")]
   public static extern void ChTriangleMeshShape_ArchiveOUT(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
@@ -7504,7 +7519,7 @@ class ChronoEngine_csharpPINVOKE {
   public static extern void ChPhysicsItem_IntStateGather(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, uint jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, global::System.Runtime.InteropServices.HandleRef jarg6);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChPhysicsItem_IntStateScatter")]
-  public static extern void ChPhysicsItem_IntStateScatter(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, uint jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6);
+  public static extern void ChPhysicsItem_IntStateScatter(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, uint jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6, bool jarg7);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChPhysicsItem_IntStateGatherAcceleration")]
   public static extern void ChPhysicsItem_IntStateGatherAcceleration(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
@@ -8620,7 +8635,7 @@ class ChronoEngine_csharpPINVOKE {
   public static extern void ChConveyor_IntStateGather(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, uint jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, global::System.Runtime.InteropServices.HandleRef jarg6);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChConveyor_IntStateScatter")]
-  public static extern void ChConveyor_IntStateScatter(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, uint jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6);
+  public static extern void ChConveyor_IntStateScatter(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, uint jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6, bool jarg7);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChConveyor_IntStateGatherAcceleration")]
   public static extern void ChConveyor_IntStateGatherAcceleration(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
@@ -8950,7 +8965,7 @@ class ChronoEngine_csharpPINVOKE {
   public static extern void ChParticlesClones_IntStateGather(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, uint jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, global::System.Runtime.InteropServices.HandleRef jarg6);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChParticlesClones_IntStateScatter")]
-  public static extern void ChParticlesClones_IntStateScatter(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, uint jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6);
+  public static extern void ChParticlesClones_IntStateScatter(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, uint jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6, bool jarg7);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChParticlesClones_IntStateGatherAcceleration")]
   public static extern void ChParticlesClones_IntStateGatherAcceleration(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
@@ -11926,7 +11941,7 @@ class ChronoEngine_csharpPINVOKE {
   public static extern void ChAssembly_IntStateGather(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, uint jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, global::System.Runtime.InteropServices.HandleRef jarg6);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChAssembly_IntStateScatter")]
-  public static extern void ChAssembly_IntStateScatter(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, uint jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6);
+  public static extern void ChAssembly_IntStateScatter(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, uint jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6, bool jarg7);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChAssembly_IntStateGatherAcceleration")]
   public static extern void ChAssembly_IntStateGatherAcceleration(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
@@ -12118,7 +12133,7 @@ class ChronoEngine_csharpPINVOKE {
   public static extern void ChIntegrable_StateGather(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChIntegrable_StateScatter")]
-  public static extern void ChIntegrable_StateScatter(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, double jarg3);
+  public static extern void ChIntegrable_StateScatter(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, double jarg3, bool jarg4);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChIntegrable_StateGatherDerivative")]
   public static extern void ChIntegrable_StateGatherDerivative(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -12132,23 +12147,14 @@ class ChronoEngine_csharpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChIntegrable_StateScatterReactions")]
   public static extern void ChIntegrable_StateScatterReactions(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChIntegrable_StateSolve__SWIG_0")]
-  public static extern bool ChIntegrable_StateSolve__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, double jarg5, double jarg6, bool jarg7);
-
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChIntegrable_StateSolve__SWIG_1")]
-  public static extern bool ChIntegrable_StateSolve__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, double jarg5, double jarg6);
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChIntegrable_StateSolve")]
+  public static extern bool ChIntegrable_StateSolve(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, double jarg5, double jarg6, bool jarg7, bool jarg8);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChIntegrable_StateIncrement")]
   public static extern void ChIntegrable_StateIncrement(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChIntegrable_StateSolveCorrection__SWIG_0")]
-  public static extern bool ChIntegrable_StateSolveCorrection__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6, double jarg7, global::System.Runtime.InteropServices.HandleRef jarg8, double jarg9, double jarg10, bool jarg11, bool jarg12);
-
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChIntegrable_StateSolveCorrection__SWIG_1")]
-  public static extern bool ChIntegrable_StateSolveCorrection__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6, double jarg7, global::System.Runtime.InteropServices.HandleRef jarg8, double jarg9, double jarg10, bool jarg11);
-
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChIntegrable_StateSolveCorrection__SWIG_2")]
-  public static extern bool ChIntegrable_StateSolveCorrection__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6, double jarg7, global::System.Runtime.InteropServices.HandleRef jarg8, double jarg9, double jarg10);
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChIntegrable_StateSolveCorrection")]
+  public static extern bool ChIntegrable_StateSolveCorrection(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6, double jarg7, global::System.Runtime.InteropServices.HandleRef jarg8, double jarg9, double jarg10, bool jarg11, bool jarg12, bool jarg13);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChIntegrable_LoadResidual_Hv")]
   public static extern void ChIntegrable_LoadResidual_Hv(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, double jarg4);
@@ -12190,7 +12196,7 @@ class ChronoEngine_csharpPINVOKE {
   public static extern void ChIntegrableIIorder_StateGather__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChIntegrableIIorder_StateScatter__SWIG_0")]
-  public static extern void ChIntegrableIIorder_StateScatter__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, double jarg4);
+  public static extern void ChIntegrableIIorder_StateScatter__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, double jarg4, bool jarg5);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChIntegrableIIorder_StateGatherAcceleration")]
   public static extern void ChIntegrableIIorder_StateGatherAcceleration(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -12198,23 +12204,14 @@ class ChronoEngine_csharpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChIntegrableIIorder_StateScatterAcceleration")]
   public static extern void ChIntegrableIIorder_StateScatterAcceleration(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChIntegrableIIorder_StateSolveA__SWIG_0")]
-  public static extern bool ChIntegrableIIorder_StateSolveA__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6, double jarg7, bool jarg8);
-
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChIntegrableIIorder_StateSolveA__SWIG_1")]
-  public static extern bool ChIntegrableIIorder_StateSolveA__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6, double jarg7);
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChIntegrableIIorder_StateSolveA")]
+  public static extern bool ChIntegrableIIorder_StateSolveA(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6, double jarg7, bool jarg8, bool jarg9);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChIntegrableIIorder_StateIncrementX")]
   public static extern void ChIntegrableIIorder_StateIncrementX(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChIntegrableIIorder_StateSolveCorrection__SWIG_0")]
-  public static extern bool ChIntegrableIIorder_StateSolveCorrection__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6, double jarg7, double jarg8, global::System.Runtime.InteropServices.HandleRef jarg9, global::System.Runtime.InteropServices.HandleRef jarg10, double jarg11, bool jarg12, bool jarg13);
-
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChIntegrableIIorder_StateSolveCorrection__SWIG_1")]
-  public static extern bool ChIntegrableIIorder_StateSolveCorrection__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6, double jarg7, double jarg8, global::System.Runtime.InteropServices.HandleRef jarg9, global::System.Runtime.InteropServices.HandleRef jarg10, double jarg11, bool jarg12);
-
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChIntegrableIIorder_StateSolveCorrection__SWIG_2")]
-  public static extern bool ChIntegrableIIorder_StateSolveCorrection__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6, double jarg7, double jarg8, global::System.Runtime.InteropServices.HandleRef jarg9, global::System.Runtime.InteropServices.HandleRef jarg10, double jarg11);
+  public static extern bool ChIntegrableIIorder_StateSolveCorrection__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6, double jarg7, double jarg8, global::System.Runtime.InteropServices.HandleRef jarg9, global::System.Runtime.InteropServices.HandleRef jarg10, double jarg11, bool jarg12, bool jarg13, bool jarg14);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChIntegrableIIorder_LoadResidual_F")]
   public static extern void ChIntegrableIIorder_LoadResidual_F(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, double jarg3);
@@ -12247,7 +12244,7 @@ class ChronoEngine_csharpPINVOKE {
   public static extern void ChIntegrableIIorder_StateGather__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChIntegrableIIorder_StateScatter__SWIG_1")]
-  public static extern void ChIntegrableIIorder_StateScatter__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, double jarg3);
+  public static extern void ChIntegrableIIorder_StateScatter__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, double jarg3, bool jarg4);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChIntegrableIIorder_StateGatherDerivative")]
   public static extern void ChIntegrableIIorder_StateGatherDerivative(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -12258,20 +12255,11 @@ class ChronoEngine_csharpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChIntegrableIIorder_StateIncrement")]
   public static extern void ChIntegrableIIorder_StateIncrement(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChIntegrableIIorder_StateSolve__SWIG_0")]
-  public static extern bool ChIntegrableIIorder_StateSolve__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, double jarg5, double jarg6, bool jarg7);
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChIntegrableIIorder_StateSolve")]
+  public static extern bool ChIntegrableIIorder_StateSolve(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, double jarg5, double jarg6, bool jarg7, bool jarg8);
 
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChIntegrableIIorder_StateSolve__SWIG_1")]
-  public static extern bool ChIntegrableIIorder_StateSolve__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, double jarg5, double jarg6);
-
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChIntegrableIIorder_StateSolveCorrection__SWIG_3")]
-  public static extern bool ChIntegrableIIorder_StateSolveCorrection__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6, double jarg7, global::System.Runtime.InteropServices.HandleRef jarg8, double jarg9, double jarg10, bool jarg11, bool jarg12);
-
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChIntegrableIIorder_StateSolveCorrection__SWIG_4")]
-  public static extern bool ChIntegrableIIorder_StateSolveCorrection__SWIG_4(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6, double jarg7, global::System.Runtime.InteropServices.HandleRef jarg8, double jarg9, double jarg10, bool jarg11);
-
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChIntegrableIIorder_StateSolveCorrection__SWIG_5")]
-  public static extern bool ChIntegrableIIorder_StateSolveCorrection__SWIG_5(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6, double jarg7, global::System.Runtime.InteropServices.HandleRef jarg8, double jarg9, double jarg10);
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChIntegrableIIorder_StateSolveCorrection__SWIG_1")]
+  public static extern bool ChIntegrableIIorder_StateSolveCorrection__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6, double jarg7, global::System.Runtime.InteropServices.HandleRef jarg8, double jarg9, double jarg10, bool jarg11, bool jarg12, bool jarg13);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_delete_ChIntegrableIIorder")]
   public static extern void delete_ChIntegrableIIorder(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -13401,17 +13389,20 @@ class ChronoEngine_csharpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_GetTimerAdvance")]
   public static extern double ChSystem_GetTimerAdvance(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_GetTimerSolver")]
-  public static extern double ChSystem_GetTimerSolver(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_GetTimerLSsolve")]
+  public static extern double ChSystem_GetTimerLSsolve(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_GetTimerSetup")]
-  public static extern double ChSystem_GetTimerSetup(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_GetTimerLSsetup")]
+  public static extern double ChSystem_GetTimerLSsetup(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_GetTimerJacobian")]
   public static extern double ChSystem_GetTimerJacobian(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_GetTimerCollision")]
   public static extern double ChSystem_GetTimerCollision(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_GetTimerSetup")]
+  public static extern double ChSystem_GetTimerSetup(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_GetTimerUpdate")]
   public static extern double ChSystem_GetTimerUpdate(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -13540,7 +13531,7 @@ class ChronoEngine_csharpPINVOKE {
   public static extern void ChSystem_StateGather(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_StateScatter")]
-  public static extern void ChSystem_StateScatter(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, double jarg4);
+  public static extern void ChSystem_StateScatter(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, double jarg4, bool jarg5);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_StateGatherAcceleration")]
   public static extern void ChSystem_StateGatherAcceleration(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -13557,14 +13548,8 @@ class ChronoEngine_csharpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_StateIncrementX")]
   public static extern void ChSystem_StateIncrementX(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_StateSolveCorrection__SWIG_0")]
-  public static extern bool ChSystem_StateSolveCorrection__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6, double jarg7, double jarg8, global::System.Runtime.InteropServices.HandleRef jarg9, global::System.Runtime.InteropServices.HandleRef jarg10, double jarg11, bool jarg12, bool jarg13);
-
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_StateSolveCorrection__SWIG_1")]
-  public static extern bool ChSystem_StateSolveCorrection__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6, double jarg7, double jarg8, global::System.Runtime.InteropServices.HandleRef jarg9, global::System.Runtime.InteropServices.HandleRef jarg10, double jarg11, bool jarg12);
-
-  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_StateSolveCorrection__SWIG_2")]
-  public static extern bool ChSystem_StateSolveCorrection__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6, double jarg7, double jarg8, global::System.Runtime.InteropServices.HandleRef jarg9, global::System.Runtime.InteropServices.HandleRef jarg10, double jarg11);
+  [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_StateSolveCorrection")]
+  public static extern bool ChSystem_StateSolveCorrection(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6, double jarg7, double jarg8, global::System.Runtime.InteropServices.HandleRef jarg9, global::System.Runtime.InteropServices.HandleRef jarg10, double jarg11, bool jarg12, bool jarg13, bool jarg14);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChSystem_LoadResidual_F")]
   public static extern void ChSystem_LoadResidual_F(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, double jarg3);
@@ -15040,7 +15025,7 @@ class ChronoEngine_csharpPINVOKE {
   public static extern void ChShaft_IntStateGather(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, uint jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, global::System.Runtime.InteropServices.HandleRef jarg6);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChShaft_IntStateScatter")]
-  public static extern void ChShaft_IntStateScatter(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, uint jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6);
+  public static extern void ChShaft_IntStateScatter(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, uint jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6, bool jarg7);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChShaft_IntStateGatherAcceleration")]
   public static extern void ChShaft_IntStateGatherAcceleration(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
@@ -16309,7 +16294,7 @@ class ChronoEngine_csharpPINVOKE {
   public static extern void ChShaftsMotorSpeed_IntStateGather(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, uint jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, global::System.Runtime.InteropServices.HandleRef jarg6);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChShaftsMotorSpeed_IntStateScatter")]
-  public static extern void ChShaftsMotorSpeed_IntStateScatter(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, uint jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6);
+  public static extern void ChShaftsMotorSpeed_IntStateScatter(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, uint jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6, bool jarg7);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChShaftsMotorSpeed_IntStateGatherReactions")]
   public static extern void ChShaftsMotorSpeed_IntStateGatherReactions(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
@@ -16579,7 +16564,7 @@ class ChronoEngine_csharpPINVOKE {
   public static extern void ChLinkMotorLinearDriveline_IntStateGather(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, uint jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, global::System.Runtime.InteropServices.HandleRef jarg6);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkMotorLinearDriveline_IntStateScatter")]
-  public static extern void ChLinkMotorLinearDriveline_IntStateScatter(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, uint jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6);
+  public static extern void ChLinkMotorLinearDriveline_IntStateScatter(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, uint jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6, bool jarg7);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkMotorLinearDriveline_IntStateGatherAcceleration")]
   public static extern void ChLinkMotorLinearDriveline_IntStateGatherAcceleration(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
@@ -16816,7 +16801,7 @@ class ChronoEngine_csharpPINVOKE {
   public static extern void ChLinkMotorLinearSpeed_IntStateGather(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, uint jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, global::System.Runtime.InteropServices.HandleRef jarg6);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkMotorLinearSpeed_IntStateScatter")]
-  public static extern void ChLinkMotorLinearSpeed_IntStateScatter(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, uint jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6);
+  public static extern void ChLinkMotorLinearSpeed_IntStateScatter(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, uint jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6, bool jarg7);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkMotorLinearSpeed_IntStateGatherAcceleration")]
   public static extern void ChLinkMotorLinearSpeed_IntStateGatherAcceleration(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
@@ -17017,7 +17002,7 @@ class ChronoEngine_csharpPINVOKE {
   public static extern void ChLinkMotorRotationDriveline_IntStateGather(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, uint jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, global::System.Runtime.InteropServices.HandleRef jarg6);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkMotorRotationDriveline_IntStateScatter")]
-  public static extern void ChLinkMotorRotationDriveline_IntStateScatter(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, uint jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6);
+  public static extern void ChLinkMotorRotationDriveline_IntStateScatter(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, uint jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6, bool jarg7);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkMotorRotationDriveline_IntStateGatherAcceleration")]
   public static extern void ChLinkMotorRotationDriveline_IntStateGatherAcceleration(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
@@ -17170,7 +17155,7 @@ class ChronoEngine_csharpPINVOKE {
   public static extern void ChLinkMotorRotationSpeed_IntStateGather(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, uint jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, global::System.Runtime.InteropServices.HandleRef jarg6);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkMotorRotationSpeed_IntStateScatter")]
-  public static extern void ChLinkMotorRotationSpeed_IntStateScatter(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, uint jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6);
+  public static extern void ChLinkMotorRotationSpeed_IntStateScatter(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, uint jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, double jarg6, bool jarg7);
 
   [global::System.Runtime.InteropServices.DllImport("ChronoEngine_csharp_core", EntryPoint="CSharp_ChLinkMotorRotationSpeed_IntStateGatherAcceleration")]
   public static extern void ChLinkMotorRotationSpeed_IntStateGatherAcceleration(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);

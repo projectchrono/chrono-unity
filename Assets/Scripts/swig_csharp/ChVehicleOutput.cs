@@ -63,8 +63,8 @@ public class ChVehicleOutput : global::System.IDisposable {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public virtual void WriteMarkers(SWIGTYPE_p_std__vectorT_std__shared_ptrT_ChMarker_t_t markers) {
-    vehiclePINVOKE.ChVehicleOutput_WriteMarkers(swigCPtr, SWIGTYPE_p_std__vectorT_std__shared_ptrT_ChMarker_t_t.getCPtr(markers));
+  public virtual void WriteMarkers(SWIGTYPE_p_std__vectorT_std__shared_ptrT_chrono__ChMarker_t_t markers) {
+    vehiclePINVOKE.ChVehicleOutput_WriteMarkers(swigCPtr, SWIGTYPE_p_std__vectorT_std__shared_ptrT_chrono__ChMarker_t_t.getCPtr(markers));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

@@ -43,9 +43,15 @@ public class SCMDeformableTerrain : ChTerrain {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void SetPlane(ChCoordsysD mplane) {
-    vehiclePINVOKE.SCMDeformableTerrain_SetPlane(swigCPtr, ChCoordsysD.getCPtr(mplane));
+  public void SetPlane(ChCoordsysD plane) {
+    vehiclePINVOKE.SCMDeformableTerrain_SetPlane(swigCPtr, ChCoordsysD.getCPtr(plane));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public ChCoordsysD GetPlane() {
+    ChCoordsysD ret = new ChCoordsysD(vehiclePINVOKE.SCMDeformableTerrain_GetPlane(swigCPtr), false);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
   }
 
   public void SetSoilParameters(double Bekker_Kphi, double Bekker_Kc, double Bekker_n, double Mohr_cohesion, double Mohr_friction, double Janosi_shear, double elastic_K, double damping_R) {
@@ -53,72 +59,44 @@ public class SCMDeformableTerrain : ChTerrain {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void SetBulldozingFlow(bool mb) {
-    vehiclePINVOKE.SCMDeformableTerrain_SetBulldozingFlow(swigCPtr, mb);
+  public void EnableBulldozing(bool mb) {
+    vehiclePINVOKE.SCMDeformableTerrain_EnableBulldozing(swigCPtr, mb);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public bool GetBulldozingFlow() {
-    bool ret = vehiclePINVOKE.SCMDeformableTerrain_GetBulldozingFlow(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public void SetBulldozingParameters(double mbulldozing_erosion_angle, double mbulldozing_flow_factor, int mbulldozing_erosion_n_iterations, int mbulldozing_erosion_n_propagations) {
-    vehiclePINVOKE.SCMDeformableTerrain_SetBulldozingParameters__SWIG_0(swigCPtr, mbulldozing_erosion_angle, mbulldozing_flow_factor, mbulldozing_erosion_n_iterations, mbulldozing_erosion_n_propagations);
+  public void SetBulldozingParameters(double erosion_angle, double flow_factor, int erosion_iterations, int erosion_propagations) {
+    vehiclePINVOKE.SCMDeformableTerrain_SetBulldozingParameters__SWIG_0(swigCPtr, erosion_angle, flow_factor, erosion_iterations, erosion_propagations);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void SetBulldozingParameters(double mbulldozing_erosion_angle, double mbulldozing_flow_factor, int mbulldozing_erosion_n_iterations) {
-    vehiclePINVOKE.SCMDeformableTerrain_SetBulldozingParameters__SWIG_1(swigCPtr, mbulldozing_erosion_angle, mbulldozing_flow_factor, mbulldozing_erosion_n_iterations);
+  public void SetBulldozingParameters(double erosion_angle, double flow_factor, int erosion_iterations) {
+    vehiclePINVOKE.SCMDeformableTerrain_SetBulldozingParameters__SWIG_1(swigCPtr, erosion_angle, flow_factor, erosion_iterations);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void SetBulldozingParameters(double mbulldozing_erosion_angle, double mbulldozing_flow_factor) {
-    vehiclePINVOKE.SCMDeformableTerrain_SetBulldozingParameters__SWIG_2(swigCPtr, mbulldozing_erosion_angle, mbulldozing_flow_factor);
+  public void SetBulldozingParameters(double erosion_angle, double flow_factor) {
+    vehiclePINVOKE.SCMDeformableTerrain_SetBulldozingParameters__SWIG_2(swigCPtr, erosion_angle, flow_factor);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void SetBulldozingParameters(double mbulldozing_erosion_angle) {
-    vehiclePINVOKE.SCMDeformableTerrain_SetBulldozingParameters__SWIG_3(swigCPtr, mbulldozing_erosion_angle);
+  public void SetBulldozingParameters(double erosion_angle) {
+    vehiclePINVOKE.SCMDeformableTerrain_SetBulldozingParameters__SWIG_3(swigCPtr, erosion_angle);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void SetAutomaticRefinement(bool mr) {
-    vehiclePINVOKE.SCMDeformableTerrain_SetAutomaticRefinement(swigCPtr, mr);
+  public void SetTestHeight(double offset) {
+    vehiclePINVOKE.SCMDeformableTerrain_SetTestHeight(swigCPtr, offset);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public bool GetAutomaticRefinement() {
-    bool ret = vehiclePINVOKE.SCMDeformableTerrain_GetAutomaticRefinement(swigCPtr);
+  public double GetTestHeight() {
+    double ret = vehiclePINVOKE.SCMDeformableTerrain_GetTestHeight(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public void SetAutomaticRefinementResolution(double mr) {
-    vehiclePINVOKE.SCMDeformableTerrain_SetAutomaticRefinementResolution(swigCPtr, mr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public double GetAutomaticRefinementResolution() {
-    double ret = vehiclePINVOKE.SCMDeformableTerrain_GetAutomaticRefinementResolution(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public void SetTestHighOffset(double moff) {
-    vehiclePINVOKE.SCMDeformableTerrain_SetTestHighOffset(swigCPtr, moff);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public double GetTestHighOffset() {
-    double ret = vehiclePINVOKE.SCMDeformableTerrain_GetTestHighOffset(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public void SetPlotType(SCMDeformableTerrain.DataPlotType mplot, double mmin, double mmax) {
-    vehiclePINVOKE.SCMDeformableTerrain_SetPlotType(swigCPtr, (int)mplot, mmin, mmax);
+  public void SetPlotType(SCMDeformableTerrain.DataPlotType plot_type, double min_val, double max_val) {
+    vehiclePINVOKE.SCMDeformableTerrain_SetPlotType(swigCPtr, (int)plot_type, min_val, max_val);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -142,8 +120,8 @@ public class SCMDeformableTerrain : ChTerrain {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void AddMovingPatch(ChBody body, ChVectorD point_on_body, double dimX, double dimY) {
-    vehiclePINVOKE.SCMDeformableTerrain_AddMovingPatch(swigCPtr, ChBody.getCPtr(body), ChVectorD.getCPtr(point_on_body), dimX, dimY);
+  public void AddMovingPatch(ChBody body, ChVectorD OOBB_center, ChVectorD OOBB_dims) {
+    vehiclePINVOKE.SCMDeformableTerrain_AddMovingPatch(swigCPtr, ChBody.getCPtr(body), ChVectorD.getCPtr(OOBB_center), ChVectorD.getCPtr(OOBB_dims));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -158,7 +136,7 @@ public class SCMDeformableTerrain : ChTerrain {
     return ret;
   }
 
-  public virtual ChVectorD GetNormal(ChVectorD loc) {
+  public override ChVectorD GetNormal(ChVectorD loc) {
     ChVectorD ret = new ChVectorD(vehiclePINVOKE.SCMDeformableTerrain_GetNormal(swigCPtr, ChVectorD.getCPtr(loc)), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
@@ -170,12 +148,6 @@ public class SCMDeformableTerrain : ChTerrain {
     return ret;
   }
 
-  public ChCoordsysD GetPlane() {
-    ChCoordsysD ret = new ChCoordsysD(vehiclePINVOKE.SCMDeformableTerrain_GetPlane(swigCPtr), false);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
   public ChTriangleMeshShape GetMesh() {
     global::System.IntPtr cPtr = vehiclePINVOKE.SCMDeformableTerrain_GetMesh(swigCPtr);
     ChTriangleMeshShape ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChTriangleMeshShape(cPtr, true);
@@ -183,33 +155,94 @@ public class SCMDeformableTerrain : ChTerrain {
     return ret;
   }
 
-  public void Initialize(double height, double sizeX, double sizeY, int divX, int divY) {
-    vehiclePINVOKE.SCMDeformableTerrain_Initialize__SWIG_0(swigCPtr, height, sizeX, sizeY, divX, divY);
+  public void WriteMesh(string filename) {
+    vehiclePINVOKE.SCMDeformableTerrain_WriteMesh(swigCPtr, filename);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void Initialize(string mesh_file) {
-    vehiclePINVOKE.SCMDeformableTerrain_Initialize__SWIG_1(swigCPtr, mesh_file);
+  public void Initialize(double sizeX, double sizeY, double delta) {
+    vehiclePINVOKE.SCMDeformableTerrain_Initialize__SWIG_0(swigCPtr, sizeX, sizeY, delta);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void Initialize(string heightmap_file, string mesh_name, double sizeX, double sizeY, double hMin, double hMax, int divX, int divY) {
-    vehiclePINVOKE.SCMDeformableTerrain_Initialize__SWIG_2(swigCPtr, heightmap_file, mesh_name, sizeX, sizeY, hMin, hMax, divX, divY);
+  public void Initialize(string heightmap_file, double sizeX, double sizeY, double hMin, double hMax, double delta) {
+    vehiclePINVOKE.SCMDeformableTerrain_Initialize__SWIG_1(swigCPtr, heightmap_file, sizeX, sizeY, hMin, hMax, delta);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void Initialize(string heightmap_file, string mesh_name, double sizeX, double sizeY, double hMin, double hMax, int divX) {
-    vehiclePINVOKE.SCMDeformableTerrain_Initialize__SWIG_3(swigCPtr, heightmap_file, mesh_name, sizeX, sizeY, hMin, hMax, divX);
+  public SWIGTYPE_p_std__vectorT_std__pairT_ChVector2T_int_t_double_t_t GetModifiedNodes() {
+    SWIGTYPE_p_std__vectorT_std__pairT_ChVector2T_int_t_double_t_t ret = new SWIGTYPE_p_std__vectorT_std__pairT_ChVector2T_int_t_double_t_t(vehiclePINVOKE.SCMDeformableTerrain_GetModifiedNodes(swigCPtr), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
   }
 
-  public void Initialize(string heightmap_file, string mesh_name, double sizeX, double sizeY, double hMin, double hMax) {
-    vehiclePINVOKE.SCMDeformableTerrain_Initialize__SWIG_4(swigCPtr, heightmap_file, mesh_name, sizeX, sizeY, hMin, hMax);
+  public void SetModifiedNodes(SWIGTYPE_p_std__vectorT_std__pairT_ChVector2T_int_t_double_t_t nodes) {
+    vehiclePINVOKE.SCMDeformableTerrain_SetModifiedNodes(swigCPtr, SWIGTYPE_p_std__vectorT_std__pairT_ChVector2T_int_t_double_t_t.getCPtr(nodes));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public TerrainForce GetContactForce(ChBody body) {
     TerrainForce ret = new TerrainForce(vehiclePINVOKE.SCMDeformableTerrain_GetContactForce(swigCPtr, ChBody.getCPtr(body)), true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public int GetNumRayCasts() {
+    int ret = vehiclePINVOKE.SCMDeformableTerrain_GetNumRayCasts(swigCPtr);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public int GetNumRayHits() {
+    int ret = vehiclePINVOKE.SCMDeformableTerrain_GetNumRayHits(swigCPtr);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public int GetNumContactPatches() {
+    int ret = vehiclePINVOKE.SCMDeformableTerrain_GetNumContactPatches(swigCPtr);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public int GetNumErosionNodes() {
+    int ret = vehiclePINVOKE.SCMDeformableTerrain_GetNumErosionNodes(swigCPtr);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public double GetTimerMovingPatches() {
+    double ret = vehiclePINVOKE.SCMDeformableTerrain_GetTimerMovingPatches(swigCPtr);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public double GetTimerRayCasting() {
+    double ret = vehiclePINVOKE.SCMDeformableTerrain_GetTimerRayCasting(swigCPtr);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public double GetTimerContactPatches() {
+    double ret = vehiclePINVOKE.SCMDeformableTerrain_GetTimerContactPatches(swigCPtr);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public double GetTimerContactForces() {
+    double ret = vehiclePINVOKE.SCMDeformableTerrain_GetTimerContactForces(swigCPtr);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public double GetTimerBulldozing() {
+    double ret = vehiclePINVOKE.SCMDeformableTerrain_GetTimerBulldozing(swigCPtr);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public double GetTimerVisUpdate() {
+    double ret = vehiclePINVOKE.SCMDeformableTerrain_GetTimerVisUpdate(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

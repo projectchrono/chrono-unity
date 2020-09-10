@@ -71,8 +71,8 @@ public class ChIntegrable : global::System.IDisposable {
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public virtual void StateScatter(ChState y, double T) {
-    ChronoEngine_csharpPINVOKE.ChIntegrable_StateScatter(swigCPtr, ChState.getCPtr(y), T);
+  public virtual void StateScatter(ChState y, double T, bool full_update) {
+    ChronoEngine_csharpPINVOKE.ChIntegrable_StateScatter(swigCPtr, ChState.getCPtr(y), T, full_update);
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -96,14 +96,8 @@ public class ChIntegrable : global::System.IDisposable {
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public virtual bool StateSolve(ChStateDelta Dydt, ChVectorDynamicD L, ChState y, double T, double dt, bool force_state_scatter) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChIntegrable_StateSolve__SWIG_0(swigCPtr, ChStateDelta.getCPtr(Dydt), ChVectorDynamicD.getCPtr(L), ChState.getCPtr(y), T, dt, force_state_scatter);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public virtual bool StateSolve(ChStateDelta Dydt, ChVectorDynamicD L, ChState y, double T, double dt) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChIntegrable_StateSolve__SWIG_1(swigCPtr, ChStateDelta.getCPtr(Dydt), ChVectorDynamicD.getCPtr(L), ChState.getCPtr(y), T, dt);
+  public virtual bool StateSolve(ChStateDelta Dydt, ChVectorDynamicD L, ChState y, double T, double dt, bool force_state_scatter, bool full_update) {
+    bool ret = ChronoEngine_csharpPINVOKE.ChIntegrable_StateSolve(swigCPtr, ChStateDelta.getCPtr(Dydt), ChVectorDynamicD.getCPtr(L), ChState.getCPtr(y), T, dt, force_state_scatter, full_update);
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -113,20 +107,8 @@ public class ChIntegrable : global::System.IDisposable {
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public virtual bool StateSolveCorrection(ChStateDelta Dy, ChVectorDynamicD L, ChVectorDynamicD R, ChVectorDynamicD Qc, double a, double b, ChState y, double T, double dt, bool force_state_scatter, bool force_setup) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChIntegrable_StateSolveCorrection__SWIG_0(swigCPtr, ChStateDelta.getCPtr(Dy), ChVectorDynamicD.getCPtr(L), ChVectorDynamicD.getCPtr(R), ChVectorDynamicD.getCPtr(Qc), a, b, ChState.getCPtr(y), T, dt, force_state_scatter, force_setup);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public virtual bool StateSolveCorrection(ChStateDelta Dy, ChVectorDynamicD L, ChVectorDynamicD R, ChVectorDynamicD Qc, double a, double b, ChState y, double T, double dt, bool force_state_scatter) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChIntegrable_StateSolveCorrection__SWIG_1(swigCPtr, ChStateDelta.getCPtr(Dy), ChVectorDynamicD.getCPtr(L), ChVectorDynamicD.getCPtr(R), ChVectorDynamicD.getCPtr(Qc), a, b, ChState.getCPtr(y), T, dt, force_state_scatter);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public virtual bool StateSolveCorrection(ChStateDelta Dy, ChVectorDynamicD L, ChVectorDynamicD R, ChVectorDynamicD Qc, double a, double b, ChState y, double T, double dt) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChIntegrable_StateSolveCorrection__SWIG_2(swigCPtr, ChStateDelta.getCPtr(Dy), ChVectorDynamicD.getCPtr(L), ChVectorDynamicD.getCPtr(R), ChVectorDynamicD.getCPtr(Qc), a, b, ChState.getCPtr(y), T, dt);
+  public virtual bool StateSolveCorrection(ChStateDelta Dy, ChVectorDynamicD L, ChVectorDynamicD R, ChVectorDynamicD Qc, double a, double b, ChState y, double T, double dt, bool force_state_scatter, bool full_update, bool force_setup) {
+    bool ret = ChronoEngine_csharpPINVOKE.ChIntegrable_StateSolveCorrection(swigCPtr, ChStateDelta.getCPtr(Dy), ChVectorDynamicD.getCPtr(L), ChVectorDynamicD.getCPtr(R), ChVectorDynamicD.getCPtr(Qc), a, b, ChState.getCPtr(y), T, dt, force_state_scatter, full_update, force_setup);
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

@@ -36,7 +36,7 @@ public class ChRayhitResult : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChRayhitResult(swigCPtr);
+          vehiclePINVOKE.delete_ChRayhitResult(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -45,69 +45,69 @@ public class ChRayhitResult : global::System.IDisposable {
 
   public bool hit {
     set {
-      ChronoEngine_csharpPINVOKE.ChRayhitResult_hit_set(swigCPtr, value);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      vehiclePINVOKE.ChRayhitResult_hit_set(swigCPtr, value);
+      if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      bool ret = ChronoEngine_csharpPINVOKE.ChRayhitResult_hit_get(swigCPtr);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      bool ret = vehiclePINVOKE.ChRayhitResult_hit_get(swigCPtr);
+      if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public ChVectorD abs_hitPoint {
     set {
-      ChronoEngine_csharpPINVOKE.ChRayhitResult_abs_hitPoint_set(swigCPtr, ChVectorD.getCPtr(value));
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      vehiclePINVOKE.ChRayhitResult_abs_hitPoint_set(swigCPtr, ChVectorD.getCPtr(value));
+      if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChRayhitResult_abs_hitPoint_get(swigCPtr);
+      global::System.IntPtr cPtr = vehiclePINVOKE.ChRayhitResult_abs_hitPoint_get(swigCPtr);
       ChVectorD ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChVectorD(cPtr, false);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public ChVectorD abs_hitNormal {
     set {
-      ChronoEngine_csharpPINVOKE.ChRayhitResult_abs_hitNormal_set(swigCPtr, ChVectorD.getCPtr(value));
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      vehiclePINVOKE.ChRayhitResult_abs_hitNormal_set(swigCPtr, ChVectorD.getCPtr(value));
+      if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChRayhitResult_abs_hitNormal_get(swigCPtr);
+      global::System.IntPtr cPtr = vehiclePINVOKE.ChRayhitResult_abs_hitNormal_get(swigCPtr);
       ChVectorD ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChVectorD(cPtr, false);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public double dist_factor {
     set {
-      ChronoEngine_csharpPINVOKE.ChRayhitResult_dist_factor_set(swigCPtr, value);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      vehiclePINVOKE.ChRayhitResult_dist_factor_set(swigCPtr, value);
+      if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      double ret = ChronoEngine_csharpPINVOKE.ChRayhitResult_dist_factor_get(swigCPtr);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      double ret = vehiclePINVOKE.ChRayhitResult_dist_factor_get(swigCPtr);
+      if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public ChCollisionModel hitModel {
     set {
-      ChronoEngine_csharpPINVOKE.ChRayhitResult_hitModel_set(swigCPtr, ChCollisionModel.getCPtr(value));
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      vehiclePINVOKE.ChRayhitResult_hitModel_set(swigCPtr, ChCollisionModel.getCPtr(value));
+      if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChRayhitResult_hitModel_get(swigCPtr);
+      global::System.IntPtr cPtr = vehiclePINVOKE.ChRayhitResult_hitModel_get(swigCPtr);
       ChCollisionModel ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChCollisionModel(cPtr, true);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public ChRayhitResult() : this(ChronoEngine_csharpPINVOKE.new_ChRayhitResult(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChRayhitResult() : this(vehiclePINVOKE.new_ChRayhitResult(), true) {
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

@@ -117,8 +117,8 @@ public class ChLinkMotorLinearSpeed : ChLinkMotorLinear {
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public override void IntStateScatter(uint off_x, ChState x, uint off_v, ChStateDelta v, double T) {
-    ChronoEngine_csharpPINVOKE.ChLinkMotorLinearSpeed_IntStateScatter(swigCPtr, off_x, ChState.getCPtr(x), off_v, ChStateDelta.getCPtr(v), T);
+  public override void IntStateScatter(uint off_x, ChState x, uint off_v, ChStateDelta v, double T, bool full_update) {
+    ChronoEngine_csharpPINVOKE.ChLinkMotorLinearSpeed_IntStateScatter(swigCPtr, off_x, ChState.getCPtr(x), off_v, ChStateDelta.getCPtr(v), T, full_update);
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 
