@@ -170,8 +170,14 @@ public class SCMDeformableTerrain : ChTerrain {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public SWIGTYPE_p_std__vectorT_std__pairT_ChVector2T_int_t_double_t_t GetModifiedNodes(bool all_nodes) {
+    SWIGTYPE_p_std__vectorT_std__pairT_ChVector2T_int_t_double_t_t ret = new SWIGTYPE_p_std__vectorT_std__pairT_ChVector2T_int_t_double_t_t(vehiclePINVOKE.SCMDeformableTerrain_GetModifiedNodes__SWIG_0(swigCPtr, all_nodes), true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public SWIGTYPE_p_std__vectorT_std__pairT_ChVector2T_int_t_double_t_t GetModifiedNodes() {
-    SWIGTYPE_p_std__vectorT_std__pairT_ChVector2T_int_t_double_t_t ret = new SWIGTYPE_p_std__vectorT_std__pairT_ChVector2T_int_t_double_t_t(vehiclePINVOKE.SCMDeformableTerrain_GetModifiedNodes(swigCPtr), true);
+    SWIGTYPE_p_std__vectorT_std__pairT_ChVector2T_int_t_double_t_t ret = new SWIGTYPE_p_std__vectorT_std__pairT_ChVector2T_int_t_double_t_t(vehiclePINVOKE.SCMDeformableTerrain_GetModifiedNodes__SWIG_1(swigCPtr), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

@@ -35,7 +35,7 @@ public class CityBus_Vehicle : ChWheeledVehicle {
     }
   }
 
-  public CityBus_Vehicle(bool fixed_, BrakeType brake_type, ChContactMethod contact_method, ChassisCollisionType chassis_collision_type) : this(vehiclePINVOKE.new_CityBus_Vehicle__SWIG_0(fixed_, (int)brake_type, (int)contact_method, (int)chassis_collision_type), true) {
+  public CityBus_Vehicle(bool fixed_, BrakeType brake_type, ChContactMethod contact_method, CollisionType chassis_collision_type) : this(vehiclePINVOKE.new_CityBus_Vehicle__SWIG_0(fixed_, (int)brake_type, (int)contact_method, (int)chassis_collision_type), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -47,7 +47,7 @@ public class CityBus_Vehicle : ChWheeledVehicle {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public CityBus_Vehicle(ChSystem system, bool fixed_, BrakeType brake_type, ChassisCollisionType chassis_collision_type) : this(vehiclePINVOKE.new_CityBus_Vehicle__SWIG_3(ChSystem.getCPtr(system), fixed_, (int)brake_type, (int)chassis_collision_type), true) {
+  public CityBus_Vehicle(ChSystem system, bool fixed_, BrakeType brake_type, CollisionType chassis_collision_type) : this(vehiclePINVOKE.new_CityBus_Vehicle__SWIG_3(ChSystem.getCPtr(system), fixed_, (int)brake_type, (int)chassis_collision_type), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

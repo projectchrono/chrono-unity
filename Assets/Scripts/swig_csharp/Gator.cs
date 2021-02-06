@@ -61,7 +61,7 @@ public class Gator : global::System.IDisposable {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void SetChassisCollisionType(ChassisCollisionType chassis_collision_type) {
+  public void SetChassisCollisionType(CollisionType chassis_collision_type) {
     vehiclePINVOKE.Gator_SetChassisCollisionType(swigCPtr, (int)chassis_collision_type);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
@@ -71,7 +71,7 @@ public class Gator : global::System.IDisposable {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void SetDrivelineType(DrivelineType driveline_type) {
+  public void SetDrivelineType(DrivelineTypeWV driveline_type) {
     vehiclePINVOKE.Gator_SetDrivelineType(swigCPtr, (int)driveline_type);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }

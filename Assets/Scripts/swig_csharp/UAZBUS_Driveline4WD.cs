@@ -75,24 +75,6 @@ public class UAZBUS_Driveline4WD : ChShaftsDriveline4WD {
     return ret;
   }
 
-  public virtual double GetCentralDifferentialRatio() {
-    double ret = vehiclePINVOKE.UAZBUS_Driveline4WD_GetCentralDifferentialRatio(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public virtual double GetFrontDifferentialRatio() {
-    double ret = vehiclePINVOKE.UAZBUS_Driveline4WD_GetFrontDifferentialRatio(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public virtual double GetRearDifferentialRatio() {
-    double ret = vehiclePINVOKE.UAZBUS_Driveline4WD_GetRearDifferentialRatio(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
   public virtual double GetFrontConicalGearRatio() {
     double ret = vehiclePINVOKE.UAZBUS_Driveline4WD_GetFrontConicalGearRatio(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();

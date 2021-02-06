@@ -46,11 +46,6 @@ public class ChTrackShoeBandANCF : ChTrackShoeBand {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public override void Connect(ChTrackShoe next, bool ccw) {
-    vehiclePINVOKE.ChTrackShoeBandANCF_Connect(swigCPtr, ChTrackShoe.getCPtr(next), ccw);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-  }
-
   public override void AddVisualizationAssets(VisualizationType vis) {
     vehiclePINVOKE.ChTrackShoeBandANCF_AddVisualizationAssets(swigCPtr, (int)vis);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();

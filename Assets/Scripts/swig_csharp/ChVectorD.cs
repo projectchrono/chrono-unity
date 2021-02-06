@@ -59,6 +59,13 @@ public class ChVectorD : global::System.IDisposable {
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public SWIGTYPE_p_double data() {
+    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChVectorD_data(swigCPtr);
+    SWIGTYPE_p_double ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_double(cPtr, false);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public void Set(double x, double y, double z) {
     ChronoEngine_csharpPINVOKE.ChVectorD_Set__SWIG_0(swigCPtr, x, y, z);
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();

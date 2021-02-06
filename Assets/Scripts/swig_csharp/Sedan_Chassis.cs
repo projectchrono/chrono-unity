@@ -35,7 +35,7 @@ public class Sedan_Chassis : ChRigidChassis {
     }
   }
 
-  public Sedan_Chassis(string name, bool fixed_, ChassisCollisionType chassis_collision_type) : this(vehiclePINVOKE.new_Sedan_Chassis__SWIG_0(name, fixed_, (int)chassis_collision_type), true) {
+  public Sedan_Chassis(string name, bool fixed_, CollisionType chassis_collision_type) : this(vehiclePINVOKE.new_Sedan_Chassis__SWIG_0(name, fixed_, (int)chassis_collision_type), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -61,6 +61,12 @@ public class Sedan_Chassis : ChRigidChassis {
 
   public override ChVectorD GetLocalPosCOM() {
     ChVectorD ret = new ChVectorD(vehiclePINVOKE.Sedan_Chassis_GetLocalPosCOM(swigCPtr), false);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public override ChVectorD GetLocalPosRearConnector() {
+    ChVectorD ret = new ChVectorD(vehiclePINVOKE.Sedan_Chassis_GetLocalPosRearConnector(swigCPtr), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

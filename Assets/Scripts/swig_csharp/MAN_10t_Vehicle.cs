@@ -35,11 +35,11 @@ public class MAN_10t_Vehicle : ChWheeledVehicle {
     }
   }
 
-  public MAN_10t_Vehicle(bool fixed_, BrakeType brake_type, ChContactMethod contact_method, ChassisCollisionType chassis_collision_type, bool useShaftDrivetrain) : this(vehiclePINVOKE.new_MAN_10t_Vehicle__SWIG_0(fixed_, (int)brake_type, (int)contact_method, (int)chassis_collision_type, useShaftDrivetrain), true) {
+  public MAN_10t_Vehicle(bool fixed_, BrakeType brake_type, ChContactMethod contact_method, CollisionType chassis_collision_type, bool useShaftDrivetrain) : this(vehiclePINVOKE.new_MAN_10t_Vehicle__SWIG_0(fixed_, (int)brake_type, (int)contact_method, (int)chassis_collision_type, useShaftDrivetrain), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public MAN_10t_Vehicle(bool fixed_, BrakeType brake_type, ChContactMethod contact_method, ChassisCollisionType chassis_collision_type) : this(vehiclePINVOKE.new_MAN_10t_Vehicle__SWIG_1(fixed_, (int)brake_type, (int)contact_method, (int)chassis_collision_type), true) {
+  public MAN_10t_Vehicle(bool fixed_, BrakeType brake_type, ChContactMethod contact_method, CollisionType chassis_collision_type) : this(vehiclePINVOKE.new_MAN_10t_Vehicle__SWIG_1(fixed_, (int)brake_type, (int)contact_method, (int)chassis_collision_type), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -51,11 +51,11 @@ public class MAN_10t_Vehicle : ChWheeledVehicle {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public MAN_10t_Vehicle(ChSystem system, bool fixed_, BrakeType brake_type, ChassisCollisionType chassis_collision_type, bool useShaftDrivetrain) : this(vehiclePINVOKE.new_MAN_10t_Vehicle__SWIG_4(ChSystem.getCPtr(system), fixed_, (int)brake_type, (int)chassis_collision_type, useShaftDrivetrain), true) {
+  public MAN_10t_Vehicle(ChSystem system, bool fixed_, BrakeType brake_type, CollisionType chassis_collision_type, bool useShaftDrivetrain) : this(vehiclePINVOKE.new_MAN_10t_Vehicle__SWIG_4(ChSystem.getCPtr(system), fixed_, (int)brake_type, (int)chassis_collision_type, useShaftDrivetrain), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public MAN_10t_Vehicle(ChSystem system, bool fixed_, BrakeType brake_type, ChassisCollisionType chassis_collision_type) : this(vehiclePINVOKE.new_MAN_10t_Vehicle__SWIG_5(ChSystem.getCPtr(system), fixed_, (int)brake_type, (int)chassis_collision_type), true) {
+  public MAN_10t_Vehicle(ChSystem system, bool fixed_, BrakeType brake_type, CollisionType chassis_collision_type) : this(vehiclePINVOKE.new_MAN_10t_Vehicle__SWIG_5(ChSystem.getCPtr(system), fixed_, (int)brake_type, (int)chassis_collision_type), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

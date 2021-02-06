@@ -53,12 +53,12 @@ public class HMMWV : global::System.IDisposable {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void SetChassisCollisionType(ChassisCollisionType val) {
+  public void SetChassisCollisionType(CollisionType val) {
     vehiclePINVOKE.HMMWV_SetChassisCollisionType(swigCPtr, (int)val);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void SetDriveType(DrivelineType val) {
+  public void SetDriveType(DrivelineTypeWV val) {
     vehiclePINVOKE.HMMWV_SetDriveType(swigCPtr, (int)val);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }

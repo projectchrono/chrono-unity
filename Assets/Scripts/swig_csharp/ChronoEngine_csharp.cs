@@ -49,6 +49,38 @@ public class ChronoEngine_csharp {
     return ret;
   }
 
+  public static bool should_raise_an_assert {
+    get {
+      bool ret = ChronoEngine_csharpPINVOKE.should_raise_an_assert_get();
+      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      return ret;
+    } 
+  }
+
+  public static bool no_more_assert {
+    set {
+      ChronoEngine_csharpPINVOKE.no_more_assert_set(value);
+      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    } 
+    get {
+      bool ret = ChronoEngine_csharpPINVOKE.no_more_assert_get();
+      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      return ret;
+    } 
+  }
+
+  public static bool report_on_cerr_on_assert_failure {
+    set {
+      ChronoEngine_csharpPINVOKE.report_on_cerr_on_assert_failure_set(value);
+      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    } 
+    get {
+      bool ret = ChronoEngine_csharpPINVOKE.report_on_cerr_on_assert_failure_get();
+      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      return ret;
+    } 
+  }
+
   public static void StreamOUTdenseMatlabFormat(SWIGTYPE_p_Eigen__RefT_Eigen__MatrixT_double_Eigen__Dynamic_Eigen__Dynamic_Eigen__RowMajor_t_const_t A, SWIGTYPE_p_ChStreamOutAscii stream) {
     ChronoEngine_csharpPINVOKE.StreamOUTdenseMatlabFormat(SWIGTYPE_p_Eigen__RefT_Eigen__MatrixT_double_Eigen__Dynamic_Eigen__Dynamic_Eigen__RowMajor_t_const_t.getCPtr(A), SWIGTYPE_p_ChStreamOutAscii.getCPtr(stream));
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
@@ -1436,6 +1468,13 @@ public class ChronoEngine_csharp {
   public static ChEllipsoidShape CastToChEllipsoidShape(ChAsset in_obj) {
     global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.CastToChEllipsoidShape(ChAsset.getCPtr(in_obj));
     ChEllipsoidShape ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChEllipsoidShape(cPtr, true);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChVisualMaterial CastToChVisualMaterial(ChAsset in_obj) {
+    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.CastToChVisualMaterial(ChAsset.getCPtr(in_obj));
+    ChVisualMaterial ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChVisualMaterial(cPtr, true);
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

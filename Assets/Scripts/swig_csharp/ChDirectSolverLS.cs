@@ -127,6 +127,24 @@ public class ChDirectSolverLS : ChSolverLS {
     return ret;
   }
 
+  public SWIGTYPE_p_Eigen__SparseMatrixT_double_Eigen__RowMajor_int_t A() {
+    SWIGTYPE_p_Eigen__SparseMatrixT_double_Eigen__RowMajor_int_t ret = new SWIGTYPE_p_Eigen__SparseMatrixT_double_Eigen__RowMajor_int_t(ChronoEngine_csharpPINVOKE.ChDirectSolverLS_A(swigCPtr), false);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public ChVectorDynamicD x() {
+    ChVectorDynamicD ret = new ChVectorDynamicD(ChronoEngine_csharpPINVOKE.ChDirectSolverLS_x(swigCPtr), false);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public ChVectorDynamicD b() {
+    ChVectorDynamicD ret = new ChVectorDynamicD(ChronoEngine_csharpPINVOKE.ChDirectSolverLS_b(swigCPtr), false);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public override bool Setup(SWIGTYPE_p_ChSystemDescriptor sysd) {
     bool ret = ChronoEngine_csharpPINVOKE.ChDirectSolverLS_Setup(swigCPtr, SWIGTYPE_p_ChSystemDescriptor.getCPtr(sysd));
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
@@ -135,6 +153,18 @@ public class ChDirectSolverLS : ChSolverLS {
 
   public override double Solve(SWIGTYPE_p_ChSystemDescriptor sysd) {
     double ret = ChronoEngine_csharpPINVOKE.ChDirectSolverLS_Solve(swigCPtr, SWIGTYPE_p_ChSystemDescriptor.getCPtr(sysd));
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public virtual bool SetupCurrent() {
+    bool ret = ChronoEngine_csharpPINVOKE.ChDirectSolverLS_SetupCurrent(swigCPtr);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public virtual double SolveCurrent() {
+    double ret = ChronoEngine_csharpPINVOKE.ChDirectSolverLS_SolveCurrent(swigCPtr);
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

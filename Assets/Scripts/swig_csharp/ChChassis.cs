@@ -59,6 +59,12 @@ public class ChChassis : ChPart {
     return ret;
   }
 
+  public virtual ChVectorD GetLocalPosRearConnector() {
+    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChChassis_GetLocalPosRearConnector(swigCPtr), true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public ChBodyAuxRef GetBody() {
     global::System.IntPtr cPtr = vehiclePINVOKE.ChChassis_GetBody(swigCPtr);
     ChBodyAuxRef ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBodyAuxRef(cPtr, true);

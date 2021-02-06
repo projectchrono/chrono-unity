@@ -228,6 +228,34 @@ public class vehicle {
     return ret;
   }
 
+  public static ChRigidChassisRear CastToChRigidChassisRear(ChChassisRear in_obj) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.CastToChRigidChassisRear(ChChassisRear.getCPtr(in_obj));
+    ChRigidChassisRear ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChRigidChassisRear(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChChassisConnectorArticulated CastToChChassisConnectorArticulated(ChChassisConnector in_obj) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.CastToChChassisConnectorArticulated(ChChassisConnector.getCPtr(in_obj));
+    ChChassisConnectorArticulated ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChChassisConnectorArticulated(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChChassisConnectorHitch CastToChChassisConnectorHitch(ChChassisConnector in_obj) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.CastToChChassisConnectorHitch(ChChassisConnector.getCPtr(in_obj));
+    ChChassisConnectorHitch ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChChassisConnectorHitch(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChChassisConnectorTorsion CastToChChassisConnectorTorsion(ChChassisConnector in_obj) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.CastToChChassisConnectorTorsion(ChChassisConnector.getCPtr(in_obj));
+    ChChassisConnectorTorsion ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChChassisConnectorTorsion(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public static ChTMeasyTire CastToChTMeasyTire(ChTire in_obj) {
     global::System.IntPtr cPtr = vehiclePINVOKE.CastToChTMeasyTire(ChTire.getCPtr(in_obj));
     ChTMeasyTire ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChTMeasyTire(cPtr, true);

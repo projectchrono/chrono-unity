@@ -24,7 +24,7 @@ public class UHMMWV : UChVehicle
 
     public bool chassisFixed;
     public PowertrainModelType powertrainModel;
-    public DrivelineType drivelineModel;
+    public DrivelineTypeWV drivelineModel;
     public UTireModelType tireModel;
     public ChTire.CollisionType tireCollisionType;
 
@@ -47,7 +47,7 @@ public class UHMMWV : UChVehicle
         chassisFixed = false;
         
         powertrainModel = PowertrainModelType.SHAFTS;
-        drivelineModel = DrivelineType.AWD;
+        drivelineModel = DrivelineTypeWV.AWD;
 
         tireModel = UTireModelType.TMEASY;
         tireCollisionType = ChTire.CollisionType.SINGLE_POINT;

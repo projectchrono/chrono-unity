@@ -85,6 +85,11 @@ public class ChCollisionSystem : global::System.IDisposable {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public virtual void SetNumThreads(int nthreads) {
+    vehiclePINVOKE.ChCollisionSystem_SetNumThreads(swigCPtr, nthreads);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
   public virtual void ReportContacts(ChContactContainer mcontactcontainer) {
     vehiclePINVOKE.ChCollisionSystem_ReportContacts(swigCPtr, ChContactContainer.getCPtr(mcontactcontainer));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();

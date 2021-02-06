@@ -61,12 +61,6 @@ public class ShaftsDriveline2WD : ChShaftsDriveline2WD {
     return ret;
   }
 
-  public virtual double GetDifferentialRatio() {
-    double ret = vehiclePINVOKE.ShaftsDriveline2WD_GetDifferentialRatio(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
   public virtual double GetAxleDifferentialLockingLimit() {
     double ret = vehiclePINVOKE.ShaftsDriveline2WD_GetAxleDifferentialLockingLimit(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();

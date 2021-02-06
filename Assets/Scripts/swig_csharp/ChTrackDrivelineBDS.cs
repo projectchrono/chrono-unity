@@ -51,8 +51,13 @@ public class ChTrackDrivelineBDS : ChDrivelineTV {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public override void Initialize(ChChassis chassis, SWIGTYPE_p_std__shared_ptrT_ChTrackAssembly_t track_left, SWIGTYPE_p_std__shared_ptrT_ChTrackAssembly_t track_right) {
-    vehiclePINVOKE.ChTrackDrivelineBDS_Initialize(swigCPtr, ChChassis.getCPtr(chassis), SWIGTYPE_p_std__shared_ptrT_ChTrackAssembly_t.getCPtr(track_left), SWIGTYPE_p_std__shared_ptrT_ChTrackAssembly_t.getCPtr(track_right));
+  public override void Initialize(ChChassis chassis, ChTrackAssembly track_left, ChTrackAssembly track_right) {
+    vehiclePINVOKE.ChTrackDrivelineBDS_Initialize(swigCPtr, ChChassis.getCPtr(chassis), ChTrackAssembly.getCPtr(track_left), ChTrackAssembly.getCPtr(track_right));
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public override void Synchronize(double steering, double torque) {
+    vehiclePINVOKE.ChTrackDrivelineBDS_Synchronize(swigCPtr, steering, torque);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

@@ -73,8 +73,9 @@ public class ChTrackAssembly : ChPart {
     return ret;
   }
 
-  public SWIGTYPE_p_std__shared_ptrT_ChTrackBrake_t GetBrake() {
-    SWIGTYPE_p_std__shared_ptrT_ChTrackBrake_t ret = new SWIGTYPE_p_std__shared_ptrT_ChTrackBrake_t(vehiclePINVOKE.ChTrackAssembly_GetBrake(swigCPtr), true);
+  public ChTrackBrake GetBrake() {
+    global::System.IntPtr cPtr = vehiclePINVOKE.ChTrackAssembly_GetBrake(swigCPtr);
+    ChTrackBrake ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChTrackBrake(cPtr, true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

@@ -225,6 +225,12 @@ public class ChTrackedVehicle : ChVehicle {
     return ret;
   }
 
+  public ChVectorD GetSprocketResistiveTorque(VehicleSide side) {
+    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChTrackedVehicle_GetSprocketResistiveTorque(swigCPtr, (int)side), true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public void WriteContacts(string filename) {
     vehiclePINVOKE.ChTrackedVehicle_WriteContacts(swigCPtr, filename);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();

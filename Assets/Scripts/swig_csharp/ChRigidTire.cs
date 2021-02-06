@@ -69,6 +69,13 @@ public class ChRigidTire : ChTire {
     return ret;
   }
 
+  public ChMaterialSurface GetContactMaterial() {
+    global::System.IntPtr cPtr = vehiclePINVOKE.ChRigidTire_GetContactMaterial(swigCPtr);
+    ChMaterialSurface ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChMaterialSurface(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public override void AddVisualizationAssets(VisualizationType vis) {
     vehiclePINVOKE.ChRigidTire_AddVisualizationAssets(swigCPtr, (int)vis);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
@@ -85,6 +92,12 @@ public class ChRigidTire : ChTire {
     return ret;
   }
 
+  public uint GetNumNormals() {
+    uint ret = vehiclePINVOKE.ChRigidTire_GetNumNormals(swigCPtr);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public uint GetNumTriangles() {
     uint ret = vehiclePINVOKE.ChRigidTire_GetNumTriangles(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
@@ -93,6 +106,12 @@ public class ChRigidTire : ChTire {
 
   public vector_ChVectorI GetMeshConnectivity() {
     vector_ChVectorI ret = new vector_ChVectorI(vehiclePINVOKE.ChRigidTire_GetMeshConnectivity(swigCPtr), false);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public vector_ChVectorI GetMeshNormalIndices() {
+    vector_ChVectorI ret = new vector_ChVectorI(vehiclePINVOKE.ChRigidTire_GetMeshNormalIndices(swigCPtr), false);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

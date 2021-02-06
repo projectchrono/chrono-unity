@@ -65,6 +65,12 @@ public class ChPowertrain : ChPart {
     return ret;
   }
 
+  public virtual double GetTorqueConverterOutputSpeed() {
+    double ret = vehiclePINVOKE.ChPowertrain_GetTorqueConverterOutputSpeed(swigCPtr);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public virtual int GetCurrentTransmissionGear() {
     int ret = vehiclePINVOKE.ChPowertrain_GetCurrentTransmissionGear(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();

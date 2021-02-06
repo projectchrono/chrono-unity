@@ -90,6 +90,7 @@ public class UUnityTerrain : ChTerrain
     public UUnityTerrain(Terrain terrain, float mu)
     {
         m_terrain = terrain;
+        Vector3 foo = terrain.terrainData.heightmapScale;
         m_mu = mu;
     }
 

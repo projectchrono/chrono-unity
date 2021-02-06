@@ -35,23 +35,15 @@ public class ChSystemSMC : ChSystem {
     }
   }
 
-  public ChSystemSMC(bool use_material_properties, uint max_objects, double scene_size) : this(ChronoEngine_csharpPINVOKE.new_ChSystemSMC__SWIG_0(use_material_properties, max_objects, scene_size), true) {
+  public ChSystemSMC(bool use_material_properties) : this(ChronoEngine_csharpPINVOKE.new_ChSystemSMC__SWIG_0(use_material_properties), true) {
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChSystemSMC(bool use_material_properties, uint max_objects) : this(ChronoEngine_csharpPINVOKE.new_ChSystemSMC__SWIG_1(use_material_properties, max_objects), true) {
+  public ChSystemSMC() : this(ChronoEngine_csharpPINVOKE.new_ChSystemSMC__SWIG_1(), true) {
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChSystemSMC(bool use_material_properties) : this(ChronoEngine_csharpPINVOKE.new_ChSystemSMC__SWIG_2(use_material_properties), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public ChSystemSMC() : this(ChronoEngine_csharpPINVOKE.new_ChSystemSMC__SWIG_3(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public ChSystemSMC(ChSystemSMC other) : this(ChronoEngine_csharpPINVOKE.new_ChSystemSMC__SWIG_4(ChSystemSMC.getCPtr(other)), true) {
+  public ChSystemSMC(ChSystemSMC other) : this(ChronoEngine_csharpPINVOKE.new_ChSystemSMC__SWIG_2(ChSystemSMC.getCPtr(other)), true) {
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 

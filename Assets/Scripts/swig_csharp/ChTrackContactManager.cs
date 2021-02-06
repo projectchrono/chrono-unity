@@ -75,4 +75,10 @@ public class ChTrackContactManager : ReportContactCallback {
     return ret;
   }
 
+  public ChVectorD GetSprocketResistiveTorque(VehicleSide side) {
+    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChTrackContactManager_GetSprocketResistiveTorque(swigCPtr, (int)side), true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
 }

@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-public class ChTrackAssemblySinglePin : ChTrackAssembly {
+public class ChTrackAssemblySinglePin : ChTrackAssemblySegmented {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 

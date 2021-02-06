@@ -70,13 +70,13 @@ public class ChRigidChassisRear : ChChassisRear {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public override void Initialize(ChChassis chassis, ChVectorD location, int collision_family) {
-    vehiclePINVOKE.ChRigidChassisRear_Initialize__SWIG_0(swigCPtr, ChChassis.getCPtr(chassis), ChVectorD.getCPtr(location), collision_family);
+  public override void Initialize(ChChassis chassis, int collision_family) {
+    vehiclePINVOKE.ChRigidChassisRear_Initialize__SWIG_0(swigCPtr, ChChassis.getCPtr(chassis), collision_family);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public override void Initialize(ChChassis chassis, ChVectorD location) {
-    vehiclePINVOKE.ChRigidChassisRear_Initialize__SWIG_1(swigCPtr, ChChassis.getCPtr(chassis), ChVectorD.getCPtr(location));
+  public override void Initialize(ChChassis chassis) {
+    vehiclePINVOKE.ChRigidChassisRear_Initialize__SWIG_1(swigCPtr, ChChassis.getCPtr(chassis));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

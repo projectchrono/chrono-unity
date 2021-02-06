@@ -47,8 +47,8 @@ public class ChSimpleDriveline : ChDrivelineWV {
     return ret;
   }
 
-  public override void Initialize(ChChassis chassis, SWIGTYPE_p_ChAxleList axles, vector_int driven_axles) {
-    vehiclePINVOKE.ChSimpleDriveline_Initialize(swigCPtr, ChChassis.getCPtr(chassis), SWIGTYPE_p_ChAxleList.getCPtr(axles), vector_int.getCPtr(driven_axles));
+  public override void Initialize(ChChassis chassis, ChAxleList axles, vector_int driven_axles) {
+    vehiclePINVOKE.ChSimpleDriveline_Initialize(swigCPtr, ChChassis.getCPtr(chassis), ChAxleList.getCPtr(axles), vector_int.getCPtr(driven_axles));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

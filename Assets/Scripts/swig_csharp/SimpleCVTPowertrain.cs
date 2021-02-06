@@ -67,8 +67,8 @@ public class SimpleCVTPowertrain : ChSimpleCVTPowertrain {
     return ret;
   }
 
-  public virtual double GetCriticalSpeed() {
-    double ret = vehiclePINVOKE.SimpleCVTPowertrain_GetCriticalSpeed(swigCPtr);
+  public virtual double GetMaxSpeed() {
+    double ret = vehiclePINVOKE.SimpleCVTPowertrain_GetMaxSpeed(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

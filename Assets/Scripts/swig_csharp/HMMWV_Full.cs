@@ -43,7 +43,7 @@ public class HMMWV_Full : HMMWV {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void SetSteeringType(SteeringType val) {
+  public void SetSteeringType(SteeringTypeWV val) {
     vehiclePINVOKE.HMMWV_Full_SetSteeringType(swigCPtr, (int)val);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }

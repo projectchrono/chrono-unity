@@ -75,6 +75,12 @@ public class Gator_SimplePowertrain : ChPowertrain {
     return ret;
   }
 
+  public override double GetTorqueConverterOutputSpeed() {
+    double ret = vehiclePINVOKE.Gator_SimplePowertrain_GetTorqueConverterOutputSpeed(swigCPtr);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public override int GetCurrentTransmissionGear() {
     int ret = vehiclePINVOKE.Gator_SimplePowertrain_GetCurrentTransmissionGear(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();

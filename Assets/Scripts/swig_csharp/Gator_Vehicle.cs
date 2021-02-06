@@ -35,11 +35,11 @@ public class Gator_Vehicle : ChWheeledVehicle {
     }
   }
 
-  public Gator_Vehicle(bool fixed_, DrivelineType driveline_type, BrakeType brake_type, ChContactMethod contact_method, ChassisCollisionType chassis_collision_type) : this(vehiclePINVOKE.new_Gator_Vehicle__SWIG_0(fixed_, (int)driveline_type, (int)brake_type, (int)contact_method, (int)chassis_collision_type), true) {
+  public Gator_Vehicle(bool fixed_, DrivelineTypeWV driveline_type, BrakeType brake_type, ChContactMethod contact_method, CollisionType chassis_collision_type) : this(vehiclePINVOKE.new_Gator_Vehicle__SWIG_0(fixed_, (int)driveline_type, (int)brake_type, (int)contact_method, (int)chassis_collision_type), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public Gator_Vehicle(ChSystem system, bool fixed_, DrivelineType driveline_type, BrakeType brake_type, ChassisCollisionType chassis_collision_type) : this(vehiclePINVOKE.new_Gator_Vehicle__SWIG_1(ChSystem.getCPtr(system), fixed_, (int)driveline_type, (int)brake_type, (int)chassis_collision_type), true) {
+  public Gator_Vehicle(ChSystem system, bool fixed_, DrivelineTypeWV driveline_type, BrakeType brake_type, CollisionType chassis_collision_type) : this(vehiclePINVOKE.new_Gator_Vehicle__SWIG_1(ChSystem.getCPtr(system), fixed_, (int)driveline_type, (int)brake_type, (int)chassis_collision_type), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

@@ -59,6 +59,13 @@ public class ChQuaternionD : global::System.IDisposable {
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public SWIGTYPE_p_double data() {
+    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChQuaternionD_data(swigCPtr);
+    SWIGTYPE_p_double ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_double(cPtr, false);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public void Set(double e0, double e1, double e2, double e3) {
     ChronoEngine_csharpPINVOKE.ChQuaternionD_Set__SWIG_0(swigCPtr, e0, e1, e2, e3);
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
@@ -394,24 +401,6 @@ public class ChQuaternionD : global::System.IDisposable {
       if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
-  }
-
-  public string __str__() {
-    string ret = ChronoEngine_csharpPINVOKE.ChQuaternionD___str__(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public ChQuaternionD __invert__() {
-    ChQuaternionD ret = new ChQuaternionD(ChronoEngine_csharpPINVOKE.ChQuaternionD___invert__(swigCPtr), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public double __xor__(ChQuaternionD other) {
-    double ret = ChronoEngine_csharpPINVOKE.ChQuaternionD___xor__(swigCPtr, ChQuaternionD.getCPtr(other));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
   }
 
 }

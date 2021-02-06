@@ -35,7 +35,7 @@ public class MAN_10t_Chassis : ChRigidChassis {
     }
   }
 
-  public MAN_10t_Chassis(string name, bool fixed_, ChassisCollisionType chassis_collision_type) : this(vehiclePINVOKE.new_MAN_10t_Chassis__SWIG_0(name, fixed_, (int)chassis_collision_type), true) {
+  public MAN_10t_Chassis(string name, bool fixed_, CollisionType chassis_collision_type) : this(vehiclePINVOKE.new_MAN_10t_Chassis__SWIG_0(name, fixed_, (int)chassis_collision_type), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

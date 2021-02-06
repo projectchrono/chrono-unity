@@ -35,19 +35,19 @@ public class ChChassisRear : ChChassis {
     }
   }
 
-  public virtual ChVectorD GetLocalPosConnector() {
-    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChChassisRear_GetLocalPosConnector(swigCPtr), false);
+  public virtual ChVectorD GetLocalPosFrontConnector() {
+    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChChassisRear_GetLocalPosFrontConnector(swigCPtr), false);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public virtual void Initialize(ChChassis chassis, ChVectorD location, int collision_family) {
-    vehiclePINVOKE.ChChassisRear_Initialize__SWIG_0(swigCPtr, ChChassis.getCPtr(chassis), ChVectorD.getCPtr(location), collision_family);
+  public virtual void Initialize(ChChassis chassis, int collision_family) {
+    vehiclePINVOKE.ChChassisRear_Initialize__SWIG_0(swigCPtr, ChChassis.getCPtr(chassis), collision_family);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public virtual void Initialize(ChChassis chassis, ChVectorD location) {
-    vehiclePINVOKE.ChChassisRear_Initialize__SWIG_1(swigCPtr, ChChassis.getCPtr(chassis), ChVectorD.getCPtr(location));
+  public virtual void Initialize(ChChassis chassis) {
+    vehiclePINVOKE.ChChassisRear_Initialize__SWIG_1(swigCPtr, ChChassis.getCPtr(chassis));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

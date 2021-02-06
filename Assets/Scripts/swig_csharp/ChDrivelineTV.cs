@@ -52,8 +52,8 @@ public class ChDrivelineTV : ChDriveline {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public virtual void Initialize(ChChassis chassis, SWIGTYPE_p_std__shared_ptrT_ChTrackAssembly_t track_left, SWIGTYPE_p_std__shared_ptrT_ChTrackAssembly_t track_right) {
-    vehiclePINVOKE.ChDrivelineTV_Initialize(swigCPtr, ChChassis.getCPtr(chassis), SWIGTYPE_p_std__shared_ptrT_ChTrackAssembly_t.getCPtr(track_left), SWIGTYPE_p_std__shared_ptrT_ChTrackAssembly_t.getCPtr(track_right));
+  public virtual void Initialize(ChChassis chassis, ChTrackAssembly track_left, ChTrackAssembly track_right) {
+    vehiclePINVOKE.ChDrivelineTV_Initialize(swigCPtr, ChChassis.getCPtr(chassis), ChTrackAssembly.getCPtr(track_left), ChTrackAssembly.getCPtr(track_right));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

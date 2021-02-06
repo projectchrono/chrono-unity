@@ -35,11 +35,11 @@ public class Generic_Vehicle : ChWheeledVehicle {
     }
   }
 
-  public Generic_Vehicle(bool fixed_, SuspensionType suspType, ChContactMethod contactMethod) : this(vehiclePINVOKE.new_Generic_Vehicle__SWIG_0(fixed_, (int)suspType, (int)contactMethod), true) {
+  public Generic_Vehicle(bool fixed_, SuspensionTypeWV suspType, ChContactMethod contactMethod) : this(vehiclePINVOKE.new_Generic_Vehicle__SWIG_0(fixed_, (int)suspType, (int)contactMethod), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public Generic_Vehicle(bool fixed_, SuspensionType suspType) : this(vehiclePINVOKE.new_Generic_Vehicle__SWIG_1(fixed_, (int)suspType), true) {
+  public Generic_Vehicle(bool fixed_, SuspensionTypeWV suspType) : this(vehiclePINVOKE.new_Generic_Vehicle__SWIG_1(fixed_, (int)suspType), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

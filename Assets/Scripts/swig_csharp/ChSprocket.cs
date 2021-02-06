@@ -107,6 +107,18 @@ public class ChSprocket : ChPart {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public SWIGTYPE_p_std__shared_ptrT_geometry__ChTriangleMeshConnected_t CreateVisualizationMesh(double radius, double width, double delta, ChVectorF color) {
+    SWIGTYPE_p_std__shared_ptrT_geometry__ChTriangleMeshConnected_t ret = new SWIGTYPE_p_std__shared_ptrT_geometry__ChTriangleMeshConnected_t(vehiclePINVOKE.ChSprocket_CreateVisualizationMesh__SWIG_0(swigCPtr, radius, width, delta, ChVectorF.getCPtr(color)), true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public SWIGTYPE_p_std__shared_ptrT_geometry__ChTriangleMeshConnected_t CreateVisualizationMesh(double radius, double width, double delta) {
+    SWIGTYPE_p_std__shared_ptrT_geometry__ChTriangleMeshConnected_t ret = new SWIGTYPE_p_std__shared_ptrT_geometry__ChTriangleMeshConnected_t(vehiclePINVOKE.ChSprocket_CreateVisualizationMesh__SWIG_1(swigCPtr, radius, width, delta), true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public override void AddVisualizationAssets(VisualizationType vis) {
     vehiclePINVOKE.ChSprocket_AddVisualizationAssets(swigCPtr, (int)vis);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();

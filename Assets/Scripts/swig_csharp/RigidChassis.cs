@@ -61,6 +61,12 @@ public class RigidChassis : ChRigidChassis {
     return ret;
   }
 
+  public override ChVectorD GetLocalPosRearConnector() {
+    ChVectorD ret = new ChVectorD(vehiclePINVOKE.RigidChassis_GetLocalPosRearConnector(swigCPtr), true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public override ChCoordsysD GetLocalDriverCoordsys() {
     ChCoordsysD ret = new ChCoordsysD(vehiclePINVOKE.RigidChassis_GetLocalDriverCoordsys(swigCPtr), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();

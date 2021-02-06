@@ -71,6 +71,12 @@ public class ChSimpleMapPowertrain : ChPowertrain {
     return ret;
   }
 
+  public override double GetTorqueConverterOutputSpeed() {
+    double ret = vehiclePINVOKE.ChSimpleMapPowertrain_GetTorqueConverterOutputSpeed(swigCPtr);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public override int GetCurrentTransmissionGear() {
     int ret = vehiclePINVOKE.ChSimpleMapPowertrain_GetCurrentTransmissionGear(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();

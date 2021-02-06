@@ -35,23 +35,15 @@ public class ChSystemNSC : ChSystem {
     }
   }
 
-  public ChSystemNSC(uint max_objects, double scene_size, bool init_sys) : this(ChronoEngine_csharpPINVOKE.new_ChSystemNSC__SWIG_0(max_objects, scene_size, init_sys), true) {
+  public ChSystemNSC(bool init_sys) : this(ChronoEngine_csharpPINVOKE.new_ChSystemNSC__SWIG_0(init_sys), true) {
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChSystemNSC(uint max_objects, double scene_size) : this(ChronoEngine_csharpPINVOKE.new_ChSystemNSC__SWIG_1(max_objects, scene_size), true) {
+  public ChSystemNSC() : this(ChronoEngine_csharpPINVOKE.new_ChSystemNSC__SWIG_1(), true) {
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChSystemNSC(uint max_objects) : this(ChronoEngine_csharpPINVOKE.new_ChSystemNSC__SWIG_2(max_objects), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public ChSystemNSC() : this(ChronoEngine_csharpPINVOKE.new_ChSystemNSC__SWIG_3(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public ChSystemNSC(ChSystemNSC other) : this(ChronoEngine_csharpPINVOKE.new_ChSystemNSC__SWIG_4(ChSystemNSC.getCPtr(other)), true) {
+  public ChSystemNSC(ChSystemNSC other) : this(ChronoEngine_csharpPINVOKE.new_ChSystemNSC__SWIG_2(ChSystemNSC.getCPtr(other)), true) {
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 

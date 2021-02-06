@@ -61,10 +61,4 @@ public class TrackDrivelineBDS : ChTrackDrivelineBDS {
     return ret;
   }
 
-  public virtual double GetDifferentialRatio() {
-    double ret = vehiclePINVOKE.TrackDrivelineBDS_GetDifferentialRatio(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
 }

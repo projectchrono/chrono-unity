@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-public class ChTrackShoeSinglePin : ChTrackShoe {
+public class ChTrackShoeSinglePin : ChTrackShoeSegmented {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
@@ -49,21 +49,6 @@ public class ChTrackShoeSinglePin : ChTrackShoe {
 
   public override void Initialize(ChBodyAuxRef chassis, ChVectorD location, ChQuaternionD rotation) {
     vehiclePINVOKE.ChTrackShoeSinglePin_Initialize(swigCPtr, ChBodyAuxRef.getCPtr(chassis), ChVectorD.getCPtr(location), ChQuaternionD.getCPtr(rotation));
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public override void Connect(ChTrackShoe next, bool ccw) {
-    vehiclePINVOKE.ChTrackShoeSinglePin_Connect(swigCPtr, ChTrackShoe.getCPtr(next), ccw);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public override void AddVisualizationAssets(VisualizationType vis) {
-    vehiclePINVOKE.ChTrackShoeSinglePin_AddVisualizationAssets(swigCPtr, (int)vis);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public override void RemoveVisualizationAssets() {
-    vehiclePINVOKE.ChTrackShoeSinglePin_RemoveVisualizationAssets(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

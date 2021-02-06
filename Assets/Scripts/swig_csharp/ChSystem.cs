@@ -231,6 +231,39 @@ public class ChSystem : ChIntegrableIIorder {
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public virtual void SetNumThreads(int num_threads_chrono, int num_threads_collision, int num_threads_eigen) {
+    ChronoEngine_csharpPINVOKE.ChSystem_SetNumThreads__SWIG_0(swigCPtr, num_threads_chrono, num_threads_collision, num_threads_eigen);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public virtual void SetNumThreads(int num_threads_chrono, int num_threads_collision) {
+    ChronoEngine_csharpPINVOKE.ChSystem_SetNumThreads__SWIG_1(swigCPtr, num_threads_chrono, num_threads_collision);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public virtual void SetNumThreads(int num_threads_chrono) {
+    ChronoEngine_csharpPINVOKE.ChSystem_SetNumThreads__SWIG_2(swigCPtr, num_threads_chrono);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public int GetNumThreadsChrono() {
+    int ret = ChronoEngine_csharpPINVOKE.ChSystem_GetNumThreadsChrono(swigCPtr);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public int GetNumthreadsCollision() {
+    int ret = ChronoEngine_csharpPINVOKE.ChSystem_GetNumthreadsCollision(swigCPtr);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public int GetNumthreadsEigen() {
+    int ret = ChronoEngine_csharpPINVOKE.ChSystem_GetNumthreadsEigen(swigCPtr);
+    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public ChAssembly GetAssembly() {
     ChAssembly ret = new ChAssembly(ChronoEngine_csharpPINVOKE.ChSystem_GetAssembly(swigCPtr), true);
     if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();

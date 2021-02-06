@@ -35,7 +35,7 @@ public class MAN_5t_SimpleCVTPowertrain : ChSimpleCVTPowertrain {
     }
   }
 
-  public MAN_5t_SimpleCVTPowertrain(string name, double maxSpeed) : this(vehiclePINVOKE.new_MAN_5t_SimpleCVTPowertrain(name, maxSpeed), true) {
+  public MAN_5t_SimpleCVTPowertrain(string name) : this(vehiclePINVOKE.new_MAN_5t_SimpleCVTPowertrain(name), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -63,8 +63,8 @@ public class MAN_5t_SimpleCVTPowertrain : ChSimpleCVTPowertrain {
     return ret;
   }
 
-  public virtual double GetCriticalSpeed() {
-    double ret = vehiclePINVOKE.MAN_5t_SimpleCVTPowertrain_GetCriticalSpeed(swigCPtr);
+  public virtual double GetMaxSpeed() {
+    double ret = vehiclePINVOKE.MAN_5t_SimpleCVTPowertrain_GetMaxSpeed(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

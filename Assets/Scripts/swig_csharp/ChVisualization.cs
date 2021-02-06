@@ -105,4 +105,17 @@ public class ChVisualization : ChAsset {
     } 
   }
 
+  public SWIGTYPE_p_std__vectorT_std__shared_ptrT_chrono__ChVisualMaterial_t_t material_list {
+    set {
+      ChronoEngine_csharpPINVOKE.ChVisualization_material_list_set(swigCPtr, SWIGTYPE_p_std__vectorT_std__shared_ptrT_chrono__ChVisualMaterial_t_t.getCPtr(value));
+      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    } 
+    get {
+      global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChVisualization_material_list_get(swigCPtr);
+      SWIGTYPE_p_std__vectorT_std__shared_ptrT_chrono__ChVisualMaterial_t_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_std__shared_ptrT_chrono__ChVisualMaterial_t_t(cPtr, false);
+      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      return ret;
+    } 
+  }
+
 }

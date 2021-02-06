@@ -88,9 +88,4 @@ public class ChTrackShoe : ChPart {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public virtual void Connect(ChTrackShoe next, bool ccw) {
-    vehiclePINVOKE.ChTrackShoe_Connect(swigCPtr, ChTrackShoe.getCPtr(next), ccw);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-  }
-
 }

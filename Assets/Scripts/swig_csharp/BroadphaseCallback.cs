@@ -49,30 +49,4 @@ public class BroadphaseCallback : global::System.IDisposable {
     return ret;
   }
 
-  public BroadphaseCallback() : this(vehiclePINVOKE.new_BroadphaseCallback(), true) {
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    SwigDirectorConnect();
-  }
-
-  private void SwigDirectorConnect() {
-    if (SwigDerivedClassHasMethod("OnBroadphase", swigMethodTypes0))
-      swigDelegate0 = new SwigDelegateBroadphaseCallback_0(SwigDirectorMethodOnBroadphase);
-    vehiclePINVOKE.BroadphaseCallback_director_connect(swigCPtr, swigDelegate0);
-  }
-
-  private bool SwigDerivedClassHasMethod(string methodName, global::System.Type[] methodTypes) {
-    global::System.Reflection.MethodInfo methodInfo = this.GetType().GetMethod(methodName, global::System.Reflection.BindingFlags.Public | global::System.Reflection.BindingFlags.NonPublic | global::System.Reflection.BindingFlags.Instance, null, methodTypes, null);
-    bool hasDerivedMethod = methodInfo.DeclaringType.IsSubclassOf(typeof(BroadphaseCallback));
-    return hasDerivedMethod;
-  }
-
-  private bool SwigDirectorMethodOnBroadphase(global::System.IntPtr modelA, global::System.IntPtr modelB) {
-    return OnBroadphase((modelA == global::System.IntPtr.Zero) ? null : new ChCollisionModel(modelA, true), (modelB == global::System.IntPtr.Zero) ? null : new ChCollisionModel(modelB, true));
-  }
-
-  public delegate bool SwigDelegateBroadphaseCallback_0(global::System.IntPtr modelA, global::System.IntPtr modelB);
-
-  private SwigDelegateBroadphaseCallback_0 swigDelegate0;
-
-  private static global::System.Type[] swigMethodTypes0 = new global::System.Type[] { typeof(ChCollisionModel), typeof(ChCollisionModel) };
 }

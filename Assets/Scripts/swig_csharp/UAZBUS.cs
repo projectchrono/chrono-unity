@@ -61,7 +61,7 @@ public class UAZBUS : global::System.IDisposable {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void SetChassisCollisionType(ChassisCollisionType val) {
+  public void SetChassisCollisionType(CollisionType val) {
     vehiclePINVOKE.UAZBUS_SetChassisCollisionType(swigCPtr, (int)val);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }

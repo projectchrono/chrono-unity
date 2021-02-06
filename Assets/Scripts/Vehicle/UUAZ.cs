@@ -22,7 +22,7 @@ public class UUAZ : UChVehicle
 
     public bool chassisFixed;
     //public PowertrainModelType powertrainModel;
-    //public DrivelineType drivelineModel;
+    //public DrivelineTypeWV drivelineModel;
     public UTireModelType tireModel;
     ////public ChTire.CollisionType tireCollisionType;
 
