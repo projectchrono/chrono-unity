@@ -13,6 +13,7 @@ public class UMAN : UChVehicle
     }
 
     public bool chassisFixed;
+    private PowertrainModelType powertrainType;
     private TireModelType tireModel;
     ////public ChTire.CollisionType tireCollisionType;
 
@@ -34,7 +35,8 @@ public class UMAN : UChVehicle
     public UMAN()
     {
         chassisFixed = false;
-        
+
+        powertrainType = PowertrainModelType.SHAFTS;
         tireModel = TireModelType.TMEASY;
         ////tireCollisionType = ChTire.CollisionType.SINGLE_POINT;
 
@@ -49,7 +51,7 @@ public class UMAN : UChVehicle
         man = new MAN_10t(UChSystem.chrono_system);
 
         man.SetChassisFixed(chassisFixed);
-        man.SetShaftBasedDrivetrain(true);
+        man.SetPowertrainType(powertrainType);
         man.SetTireType(tireModel);
         ////man.SetAerodynamicDrag(0.5, 5.0, 1.2);
         man.SetBrakeType((BrakeType)brakeType);
