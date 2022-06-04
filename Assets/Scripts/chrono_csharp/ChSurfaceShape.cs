@@ -9,11 +9,11 @@
 //------------------------------------------------------------------------------
 
 
-public class ChSurfaceShape : ChVisualization {
+public class ChSurfaceShape : ChVisualShape {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChSurfaceShape(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChSurfaceShape_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChSurfaceShape(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChSurfaceShape_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChSurfaceShape : ChVisualization {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChSurfaceShape(swigCPtr);
+          corePINVOKE.delete_ChSurfaceShape(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,72 +35,72 @@ public class ChSurfaceShape : ChVisualization {
     }
   }
 
-  public ChSurfaceShape() : this(ChronoEngine_csharpPINVOKE.new_ChSurfaceShape__SWIG_0(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChSurfaceShape() : this(corePINVOKE.new_ChSurfaceShape__SWIG_0(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChSurfaceShape(ChSurface msurf) : this(ChronoEngine_csharpPINVOKE.new_ChSurfaceShape__SWIG_1(ChSurface.getCPtr(msurf)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChSurfaceShape(ChSurface msurf) : this(corePINVOKE.new_ChSurfaceShape__SWIG_1(ChSurface.getCPtr(msurf)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public ChSurface GetSurfaceGeometry() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChSurfaceShape_GetSurfaceGeometry(swigCPtr);
+    global::System.IntPtr cPtr = corePINVOKE.ChSurfaceShape_GetSurfaceGeometry(swigCPtr);
     ChSurface ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChSurface(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetSurfaceGeometry(ChSurface ms) {
-    ChronoEngine_csharpPINVOKE.ChSurfaceShape_SetSurfaceGeometry(swigCPtr, ChSurface.getCPtr(ms));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChSurfaceShape_SetSurfaceGeometry(swigCPtr, ChSurface.getCPtr(ms));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public bool IsWireframe() {
-    bool ret = ChronoEngine_csharpPINVOKE.ChSurfaceShape_IsWireframe(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChSurfaceShape_IsWireframe(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetWireframe(bool mw) {
-    ChronoEngine_csharpPINVOKE.ChSurfaceShape_SetWireframe(swigCPtr, mw);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChSurfaceShape_SetWireframe(swigCPtr, mw);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public int GetResolutionU() {
-    int ret = ChronoEngine_csharpPINVOKE.ChSurfaceShape_GetResolutionU(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChSurfaceShape_GetResolutionU(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int GetResolutionV() {
-    int ret = ChronoEngine_csharpPINVOKE.ChSurfaceShape_GetResolutionV(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChSurfaceShape_GetResolutionV(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetResolutionU(int mr) {
-    ChronoEngine_csharpPINVOKE.ChSurfaceShape_SetResolutionU(swigCPtr, mr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChSurfaceShape_SetResolutionU(swigCPtr, mr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetResolutionV(int mr) {
-    ChronoEngine_csharpPINVOKE.ChSurfaceShape_SetResolutionV(swigCPtr, mr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChSurfaceShape_SetResolutionV(swigCPtr, mr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetResolution(int mr) {
-    ChronoEngine_csharpPINVOKE.ChSurfaceShape_SetResolution(swigCPtr, mr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChSurfaceShape_SetResolution(swigCPtr, mr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public override void ArchiveOUT(SWIGTYPE_p_ChArchiveOut marchive) {
-    ChronoEngine_csharpPINVOKE.ChSurfaceShape_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public virtual void ArchiveOUT(SWIGTYPE_p_ChArchiveOut marchive) {
+    corePINVOKE.ChSurfaceShape_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public override void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn marchive) {
-    ChronoEngine_csharpPINVOKE.ChSurfaceShape_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public virtual void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn marchive) {
+    corePINVOKE.ChSurfaceShape_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

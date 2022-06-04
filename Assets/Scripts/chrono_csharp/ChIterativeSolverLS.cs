@@ -13,7 +13,7 @@ public class ChIterativeSolverLS : ChIterativeSolver {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChIterativeSolverLS(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChIterativeSolverLS_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChIterativeSolverLS(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChIterativeSolverLS_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChIterativeSolverLS : ChIterativeSolver {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChIterativeSolverLS(swigCPtr);
+          corePINVOKE.delete_ChIterativeSolverLS(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -36,14 +36,14 @@ public class ChIterativeSolverLS : ChIterativeSolver {
   }
 
   public bool Setup(SWIGTYPE_p_ChSystemDescriptor sysd) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChIterativeSolverLS_Setup(swigCPtr, SWIGTYPE_p_ChSystemDescriptor.getCPtr(sysd));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChIterativeSolverLS_Setup(swigCPtr, SWIGTYPE_p_ChSystemDescriptor.getCPtr(sysd));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public double Solve(SWIGTYPE_p_ChSystemDescriptor sysd) {
-    double ret = ChronoEngine_csharpPINVOKE.ChIterativeSolverLS_Solve(swigCPtr, SWIGTYPE_p_ChSystemDescriptor.getCPtr(sysd));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChIterativeSolverLS_Solve(swigCPtr, SWIGTYPE_p_ChSystemDescriptor.getCPtr(sysd));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

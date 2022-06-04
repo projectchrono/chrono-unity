@@ -13,7 +13,7 @@ public class ChLinkMotorLinearPosition : ChLinkMotorLinear {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChLinkMotorLinearPosition(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChLinkMotorLinearPosition_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChLinkMotorLinearPosition(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChLinkMotorLinearPosition_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChLinkMotorLinearPosition : ChLinkMotorLinear {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChLinkMotorLinearPosition(swigCPtr);
+          corePINVOKE.delete_ChLinkMotorLinearPosition(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,78 +35,71 @@ public class ChLinkMotorLinearPosition : ChLinkMotorLinear {
     }
   }
 
-  public ChLinkMotorLinearPosition() : this(ChronoEngine_csharpPINVOKE.new_ChLinkMotorLinearPosition__SWIG_0(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChLinkMotorLinearPosition() : this(corePINVOKE.new_ChLinkMotorLinearPosition__SWIG_0(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChLinkMotorLinearPosition(ChLinkMotorLinearPosition other) : this(ChronoEngine_csharpPINVOKE.new_ChLinkMotorLinearPosition__SWIG_1(ChLinkMotorLinearPosition.getCPtr(other)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public override ChObj Clone() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChLinkMotorLinearPosition_Clone(swigCPtr);
-    ChLinkMotorLinearPosition ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChLinkMotorLinearPosition(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
+  public ChLinkMotorLinearPosition(ChLinkMotorLinearPosition other) : this(corePINVOKE.new_ChLinkMotorLinearPosition__SWIG_1(ChLinkMotorLinearPosition.getCPtr(other)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetMotionFunction(ChFunction function) {
-    ChronoEngine_csharpPINVOKE.ChLinkMotorLinearPosition_SetMotionFunction(swigCPtr, ChFunction.getCPtr(function));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLinkMotorLinearPosition_SetMotionFunction(swigCPtr, ChFunction.getCPtr(function));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public ChFunction GetMotionFunction() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChLinkMotorLinearPosition_GetMotionFunction(swigCPtr);
+    global::System.IntPtr cPtr = corePINVOKE.ChLinkMotorLinearPosition_GetMotionFunction(swigCPtr);
     ChFunction ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChFunction(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetMotionOffset(double mo) {
-    ChronoEngine_csharpPINVOKE.ChLinkMotorLinearPosition_SetMotionOffset(swigCPtr, mo);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLinkMotorLinearPosition_SetMotionOffset(swigCPtr, mo);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double GetMotionOffset() {
-    double ret = ChronoEngine_csharpPINVOKE.ChLinkMotorLinearPosition_GetMotionOffset(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChLinkMotorLinearPosition_GetMotionOffset(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override double GetMotorForce() {
-    double ret = ChronoEngine_csharpPINVOKE.ChLinkMotorLinearPosition_GetMotorForce(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChLinkMotorLinearPosition_GetMotorForce(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void Update(double mytime, bool update_assets) {
-    ChronoEngine_csharpPINVOKE.ChLinkMotorLinearPosition_Update(swigCPtr, mytime, update_assets);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLinkMotorLinearPosition_Update(swigCPtr, mytime, update_assets);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void IntLoadConstraint_Ct(uint off, ChVectorDynamicD Qc, double c) {
-    ChronoEngine_csharpPINVOKE.ChLinkMotorLinearPosition_IntLoadConstraint_Ct(swigCPtr, off, ChVectorDynamicD.getCPtr(Qc), c);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLinkMotorLinearPosition_IntLoadConstraint_Ct(swigCPtr, off, ChVectorDynamicD.getCPtr(Qc), c);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void ConstraintsBiLoad_Ct(double factor) {
-    ChronoEngine_csharpPINVOKE.ChLinkMotorLinearPosition_ConstraintsBiLoad_Ct__SWIG_0(swigCPtr, factor);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLinkMotorLinearPosition_ConstraintsBiLoad_Ct__SWIG_0(swigCPtr, factor);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void ConstraintsBiLoad_Ct() {
-    ChronoEngine_csharpPINVOKE.ChLinkMotorLinearPosition_ConstraintsBiLoad_Ct__SWIG_1(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLinkMotorLinearPosition_ConstraintsBiLoad_Ct__SWIG_1(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void ArchiveOUT(SWIGTYPE_p_ChArchiveOut marchive) {
-    ChronoEngine_csharpPINVOKE.ChLinkMotorLinearPosition_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLinkMotorLinearPosition_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn marchive) {
-    ChronoEngine_csharpPINVOKE.ChLinkMotorLinearPosition_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLinkMotorLinearPosition_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

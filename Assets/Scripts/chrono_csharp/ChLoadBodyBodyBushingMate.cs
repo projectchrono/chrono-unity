@@ -13,7 +13,7 @@ public class ChLoadBodyBodyBushingMate : ChLoadBodyBodyBushingSpherical {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChLoadBodyBodyBushingMate(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChLoadBodyBodyBushingMate_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChLoadBodyBodyBushingMate(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChLoadBodyBodyBushingMate_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChLoadBodyBodyBushingMate : ChLoadBodyBodyBushingSpherical {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChLoadBodyBodyBushingMate(swigCPtr);
+          corePINVOKE.delete_ChLoadBodyBodyBushingMate(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,29 +35,29 @@ public class ChLoadBodyBodyBushingMate : ChLoadBodyBodyBushingSpherical {
     }
   }
 
-  public ChLoadBodyBodyBushingMate(ChBody mbodyA, ChBody mbodyB, ChFrameD abs_application, ChVectorD mstiffness, ChVectorD mdamping, ChVectorD mrotstiffness, ChVectorD mrotdamping) : this(ChronoEngine_csharpPINVOKE.new_ChLoadBodyBodyBushingMate(ChBody.getCPtr(mbodyA), ChBody.getCPtr(mbodyB), ChFrameD.getCPtr(abs_application), ChVectorD.getCPtr(mstiffness), ChVectorD.getCPtr(mdamping), ChVectorD.getCPtr(mrotstiffness), ChVectorD.getCPtr(mrotdamping)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChLoadBodyBodyBushingMate(ChBody mbodyA, ChBody mbodyB, ChFrameD abs_application, ChVectorD mstiffness, ChVectorD mdamping, ChVectorD mrotstiffness, ChVectorD mrotdamping) : this(corePINVOKE.new_ChLoadBodyBodyBushingMate(ChBody.getCPtr(mbodyA), ChBody.getCPtr(mbodyB), ChFrameD.getCPtr(abs_application), ChVectorD.getCPtr(mstiffness), ChVectorD.getCPtr(mdamping), ChVectorD.getCPtr(mrotstiffness), ChVectorD.getCPtr(mrotdamping)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetRotationalStiffness(ChVectorD mstiffness) {
-    ChronoEngine_csharpPINVOKE.ChLoadBodyBodyBushingMate_SetRotationalStiffness(swigCPtr, ChVectorD.getCPtr(mstiffness));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoadBodyBodyBushingMate_SetRotationalStiffness(swigCPtr, ChVectorD.getCPtr(mstiffness));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public ChVectorD GetRotationalStiffness() {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChLoadBodyBodyBushingMate_GetRotationalStiffness(swigCPtr), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorD ret = new ChVectorD(corePINVOKE.ChLoadBodyBodyBushingMate_GetRotationalStiffness(swigCPtr), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetRotationalDamping(ChVectorD mdamping) {
-    ChronoEngine_csharpPINVOKE.ChLoadBodyBodyBushingMate_SetRotationalDamping(swigCPtr, ChVectorD.getCPtr(mdamping));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoadBodyBodyBushingMate_SetRotationalDamping(swigCPtr, ChVectorD.getCPtr(mdamping));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public ChVectorD GetRotationalDamping() {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChLoadBodyBodyBushingMate_GetRotationalDamping(swigCPtr), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorD ret = new ChVectorD(corePINVOKE.ChLoadBodyBodyBushingMate_GetRotationalDamping(swigCPtr), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

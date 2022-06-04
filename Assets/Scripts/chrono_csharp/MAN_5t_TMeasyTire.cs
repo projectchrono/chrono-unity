@@ -50,14 +50,14 @@ public class MAN_5t_TMeasyTire : ChTMeasyTire {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public override double GetMass() {
-    double ret = vehiclePINVOKE.MAN_5t_TMeasyTire_GetMass(swigCPtr);
+  public virtual double GetTireMass() {
+    double ret = vehiclePINVOKE.MAN_5t_TMeasyTire_GetTireMass(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public override ChVectorD GetInertia() {
-    ChVectorD ret = new ChVectorD(vehiclePINVOKE.MAN_5t_TMeasyTire_GetInertia(swigCPtr), true);
+  public virtual ChVectorD GetTireInertia() {
+    ChVectorD ret = new ChVectorD(vehiclePINVOKE.MAN_5t_TMeasyTire_GetTireInertia(swigCPtr), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

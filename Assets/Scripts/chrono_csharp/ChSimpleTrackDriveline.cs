@@ -46,8 +46,8 @@ public class ChSimpleTrackDriveline : ChDrivelineTV {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public override void Synchronize(double steering, double torque) {
-    vehiclePINVOKE.ChSimpleTrackDriveline_Synchronize(swigCPtr, steering, torque);
+  public override void Synchronize(double time, DriverInputs driver_inputs, double torque) {
+    vehiclePINVOKE.ChSimpleTrackDriveline_Synchronize(swigCPtr, time, DriverInputs.getCPtr(driver_inputs), torque);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

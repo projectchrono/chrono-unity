@@ -36,7 +36,7 @@ public class ODE : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ODE(swigCPtr);
+          corePINVOKE.delete_ODE(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -44,24 +44,24 @@ public class ODE : global::System.IDisposable {
   }
 
   public virtual int GetNumStates() {
-    int ret = ChronoEngine_csharpPINVOKE.ODE_GetNumStates(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ODE_GetNumStates(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void SetInitialConditions(ChVectorDynamicD states, ChLinkTSDA link) {
-    ChronoEngine_csharpPINVOKE.ODE_SetInitialConditions(swigCPtr, ChVectorDynamicD.getCPtr(states), ChLinkTSDA.getCPtr(link));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ODE_SetInitialConditions(swigCPtr, ChVectorDynamicD.getCPtr(states), ChLinkTSDA.getCPtr(link));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void CalculateRHS(double time, ChVectorDynamicD states, ChVectorDynamicD rhs, ChLinkTSDA link) {
-    ChronoEngine_csharpPINVOKE.ODE_CalculateRHS(swigCPtr, time, ChVectorDynamicD.getCPtr(states), ChVectorDynamicD.getCPtr(rhs), ChLinkTSDA.getCPtr(link));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ODE_CalculateRHS(swigCPtr, time, ChVectorDynamicD.getCPtr(states), ChVectorDynamicD.getCPtr(rhs), ChLinkTSDA.getCPtr(link));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual bool CalculateJac(double time, ChVectorDynamicD states, ChVectorDynamicD rhs, ChMatrixDynamicD jac, ChLinkTSDA link) {
-    bool ret = ChronoEngine_csharpPINVOKE.ODE_CalculateJac(swigCPtr, time, ChVectorDynamicD.getCPtr(states), ChVectorDynamicD.getCPtr(rhs), ChMatrixDynamicD.getCPtr(jac), ChLinkTSDA.getCPtr(link));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ODE_CalculateJac(swigCPtr, time, ChVectorDynamicD.getCPtr(states), ChVectorDynamicD.getCPtr(rhs), ChMatrixDynamicD.getCPtr(jac), ChLinkTSDA.getCPtr(link));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

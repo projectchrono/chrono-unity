@@ -95,8 +95,8 @@ public class UMAN : UChVehicle
 
     protected override void OnAdvance(double step)
     {
-        var vehicle_pos = man.GetVehicle().GetVehiclePos();
-        var vehicle_rot = man.GetVehicle().GetVehicleRot();
+        var vehicle_pos = man.GetVehicle().GetPos();
+        var vehicle_rot = man.GetVehicle().GetRot();
 
         var spindleF1L_pos = man.GetVehicle().GetSpindlePos(0, VehicleSide.LEFT);
         var spindleF1L_rot = man.GetVehicle().GetSpindleRot(0, VehicleSide.LEFT);

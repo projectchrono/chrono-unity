@@ -12,7 +12,7 @@
 public class ChStreamIn : ChStream {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
 
-  internal ChStreamIn(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChStreamIn_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal ChStreamIn(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChStreamIn_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
@@ -25,7 +25,7 @@ public class ChStreamIn : ChStream {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChStreamIn(swigCPtr);
+          corePINVOKE.delete_ChStreamIn(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -34,8 +34,8 @@ public class ChStreamIn : ChStream {
   }
 
   public virtual bool End_of_stream() {
-    bool ret = ChronoEngine_csharpPINVOKE.ChStreamIn_End_of_stream(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChStreamIn_End_of_stream(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

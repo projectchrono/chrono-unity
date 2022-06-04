@@ -35,6 +35,11 @@ public class ChTrackAssemblySegmented : ChTrackAssembly {
     }
   }
 
+  public void EnableTrackBendingStiffness(bool val) {
+    vehiclePINVOKE.ChTrackAssemblySegmented_EnableTrackBendingStiffness(swigCPtr, val);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
   public TorqueFunctor GetTorqueFunctor() {
     global::System.IntPtr cPtr = vehiclePINVOKE.ChTrackAssemblySegmented_GetTorqueFunctor(swigCPtr);
     TorqueFunctor ret = (cPtr == global::System.IntPtr.Zero) ? null : new TorqueFunctor(cPtr, true);

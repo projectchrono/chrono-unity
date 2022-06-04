@@ -135,12 +135,6 @@ public class CityBus : global::System.IDisposable {
     return ret;
   }
 
-  public double GetTotalMass() {
-    double ret = vehiclePINVOKE.CityBus_GetTotalMass(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
   public void Initialize() {
     vehiclePINVOKE.CityBus_Initialize(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();

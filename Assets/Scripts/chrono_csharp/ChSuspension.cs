@@ -47,8 +47,8 @@ public class ChSuspension : ChPart {
     return ret;
   }
 
-  public ChVectorD GetLocation() {
-    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChSuspension_GetLocation(swigCPtr), false);
+  public ChVectorD GetRelPosition() {
+    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChSuspension_GetRelPosition(swigCPtr), false);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -114,18 +114,18 @@ public class ChSuspension : ChPart {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public virtual void Initialize(ChChassis chassis, SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t subchassis, SWIGTYPE_p_std__shared_ptrT_chrono__vehicle__ChSteering_t steering, ChVectorD location, double left_ang_vel, double right_ang_vel) {
-    vehiclePINVOKE.ChSuspension_Initialize__SWIG_0(swigCPtr, ChChassis.getCPtr(chassis), SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t.getCPtr(subchassis), SWIGTYPE_p_std__shared_ptrT_chrono__vehicle__ChSteering_t.getCPtr(steering), ChVectorD.getCPtr(location), left_ang_vel, right_ang_vel);
+  public virtual void Initialize(ChChassis chassis, ChSubchassis subchassis, ChSteering steering, ChVectorD location, double left_ang_vel, double right_ang_vel) {
+    vehiclePINVOKE.ChSuspension_Initialize__SWIG_0(swigCPtr, ChChassis.getCPtr(chassis), ChSubchassis.getCPtr(subchassis), ChSteering.getCPtr(steering), ChVectorD.getCPtr(location), left_ang_vel, right_ang_vel);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public virtual void Initialize(ChChassis chassis, SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t subchassis, SWIGTYPE_p_std__shared_ptrT_chrono__vehicle__ChSteering_t steering, ChVectorD location, double left_ang_vel) {
-    vehiclePINVOKE.ChSuspension_Initialize__SWIG_1(swigCPtr, ChChassis.getCPtr(chassis), SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t.getCPtr(subchassis), SWIGTYPE_p_std__shared_ptrT_chrono__vehicle__ChSteering_t.getCPtr(steering), ChVectorD.getCPtr(location), left_ang_vel);
+  public virtual void Initialize(ChChassis chassis, ChSubchassis subchassis, ChSteering steering, ChVectorD location, double left_ang_vel) {
+    vehiclePINVOKE.ChSuspension_Initialize__SWIG_1(swigCPtr, ChChassis.getCPtr(chassis), ChSubchassis.getCPtr(subchassis), ChSteering.getCPtr(steering), ChVectorD.getCPtr(location), left_ang_vel);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public virtual void Initialize(ChChassis chassis, SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t subchassis, SWIGTYPE_p_std__shared_ptrT_chrono__vehicle__ChSteering_t steering, ChVectorD location) {
-    vehiclePINVOKE.ChSuspension_Initialize__SWIG_2(swigCPtr, ChChassis.getCPtr(chassis), SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t.getCPtr(subchassis), SWIGTYPE_p_std__shared_ptrT_chrono__vehicle__ChSteering_t.getCPtr(steering), ChVectorD.getCPtr(location));
+  public virtual void Initialize(ChChassis chassis, ChSubchassis subchassis, ChSteering steering, ChVectorD location) {
+    vehiclePINVOKE.ChSuspension_Initialize__SWIG_2(swigCPtr, ChChassis.getCPtr(chassis), ChSubchassis.getCPtr(subchassis), ChSteering.getCPtr(steering), ChVectorD.getCPtr(location));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -161,18 +161,6 @@ public class ChSuspension : ChPart {
   public virtual ChBody GetBrakeBody(VehicleSide side) {
     global::System.IntPtr cPtr = vehiclePINVOKE.ChSuspension_GetBrakeBody(swigCPtr, (int)side);
     ChBody ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBody(cPtr, true);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public virtual double GetMass() {
-    double ret = vehiclePINVOKE.ChSuspension_GetMass(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public virtual ChVectorD GetCOMPos() {
-    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChSuspension_GetCOMPos(swigCPtr), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

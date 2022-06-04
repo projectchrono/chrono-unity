@@ -12,7 +12,7 @@
 public class ChStreamOutBinaryFile : ChStreamFile {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
 
-  internal ChStreamOutBinaryFile(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChStreamOutBinaryFile_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal ChStreamOutBinaryFile(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChStreamOutBinaryFile_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
@@ -25,7 +25,7 @@ public class ChStreamOutBinaryFile : ChStreamFile {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChStreamOutBinaryFile(swigCPtr);
+          corePINVOKE.delete_ChStreamOutBinaryFile(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -33,12 +33,12 @@ public class ChStreamOutBinaryFile : ChStreamFile {
     }
   }
 
-  public ChStreamOutBinaryFile(string filename, SWIGTYPE_p_std__ios__openmode mmode) : this(ChronoEngine_csharpPINVOKE.new_ChStreamOutBinaryFile__SWIG_0(filename, SWIGTYPE_p_std__ios__openmode.getCPtr(mmode)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChStreamOutBinaryFile(string filename, SWIGTYPE_p_std__ios__openmode mmode) : this(corePINVOKE.new_ChStreamOutBinaryFile__SWIG_0(filename, SWIGTYPE_p_std__ios__openmode.getCPtr(mmode)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChStreamOutBinaryFile(string filename) : this(ChronoEngine_csharpPINVOKE.new_ChStreamOutBinaryFile__SWIG_1(filename), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChStreamOutBinaryFile(string filename) : this(corePINVOKE.new_ChStreamOutBinaryFile__SWIG_1(filename), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

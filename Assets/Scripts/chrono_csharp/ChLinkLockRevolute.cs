@@ -13,7 +13,7 @@ public class ChLinkLockRevolute : ChLinkLock {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChLinkLockRevolute(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChLinkLockRevolute_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChLinkLockRevolute(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChLinkLockRevolute_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChLinkLockRevolute : ChLinkLock {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChLinkLockRevolute(swigCPtr);
+          corePINVOKE.delete_ChLinkLockRevolute(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,20 +35,13 @@ public class ChLinkLockRevolute : ChLinkLock {
     }
   }
 
-  public ChLinkLockRevolute() : this(ChronoEngine_csharpPINVOKE.new_ChLinkLockRevolute(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public override ChObj Clone() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChLinkLockRevolute_Clone(swigCPtr);
-    ChLinkLockRevolute ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChLinkLockRevolute(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
+  public ChLinkLockRevolute() : this(corePINVOKE.new_ChLinkLockRevolute(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Lock(bool lock_) {
-    ChronoEngine_csharpPINVOKE.ChLinkLockRevolute_Lock(swigCPtr, lock_);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLinkLockRevolute_Lock(swigCPtr, lock_);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

@@ -47,8 +47,8 @@ public class ChSingleIdler : ChIdler {
     return ret;
   }
 
-  public override void Initialize(ChBodyAuxRef chassis, ChVectorD location, ChTrackAssembly track) {
-    vehiclePINVOKE.ChSingleIdler_Initialize(swigCPtr, ChBodyAuxRef.getCPtr(chassis), ChVectorD.getCPtr(location), ChTrackAssembly.getCPtr(track));
+  public override void Initialize(ChChassis chassis, ChVectorD location, ChTrackAssembly track) {
+    vehiclePINVOKE.ChSingleIdler_Initialize(swigCPtr, ChChassis.getCPtr(chassis), ChVectorD.getCPtr(location), ChTrackAssembly.getCPtr(track));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

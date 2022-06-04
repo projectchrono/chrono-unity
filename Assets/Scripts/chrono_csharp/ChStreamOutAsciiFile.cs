@@ -12,7 +12,7 @@
 public class ChStreamOutAsciiFile : ChStreamFile {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
 
-  internal ChStreamOutAsciiFile(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChStreamOutAsciiFile_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal ChStreamOutAsciiFile(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChStreamOutAsciiFile_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
@@ -25,7 +25,7 @@ public class ChStreamOutAsciiFile : ChStreamFile {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChStreamOutAsciiFile(swigCPtr);
+          corePINVOKE.delete_ChStreamOutAsciiFile(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -33,12 +33,12 @@ public class ChStreamOutAsciiFile : ChStreamFile {
     }
   }
 
-  public ChStreamOutAsciiFile(string filename, SWIGTYPE_p_std__ios__openmode mmode) : this(ChronoEngine_csharpPINVOKE.new_ChStreamOutAsciiFile__SWIG_0(filename, SWIGTYPE_p_std__ios__openmode.getCPtr(mmode)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChStreamOutAsciiFile(string filename, SWIGTYPE_p_std__ios__openmode mmode) : this(corePINVOKE.new_ChStreamOutAsciiFile__SWIG_0(filename, SWIGTYPE_p_std__ios__openmode.getCPtr(mmode)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChStreamOutAsciiFile(string filename) : this(ChronoEngine_csharpPINVOKE.new_ChStreamOutAsciiFile__SWIG_1(filename), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChStreamOutAsciiFile(string filename) : this(corePINVOKE.new_ChStreamOutAsciiFile__SWIG_1(filename), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

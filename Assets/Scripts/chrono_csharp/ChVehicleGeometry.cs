@@ -188,6 +188,19 @@ public class ChVehicleGeometry : global::System.IDisposable {
     } 
   }
 
+  public SWIGTYPE_p_std__vectorT_chrono__vehicle__ChVehicleGeometry__LineShape_t m_vis_lines {
+    set {
+      vehiclePINVOKE.ChVehicleGeometry_m_vis_lines_set(swigCPtr, SWIGTYPE_p_std__vectorT_chrono__vehicle__ChVehicleGeometry__LineShape_t.getCPtr(value));
+      if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    } 
+    get {
+      global::System.IntPtr cPtr = vehiclePINVOKE.ChVehicleGeometry_m_vis_lines_get(swigCPtr);
+      SWIGTYPE_p_std__vectorT_chrono__vehicle__ChVehicleGeometry__LineShape_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_chrono__vehicle__ChVehicleGeometry__LineShape_t(cPtr, false);
+      if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+      return ret;
+    } 
+  }
+
   public bool m_has_colors {
     set {
       vehiclePINVOKE.ChVehicleGeometry_m_has_colors_set(swigCPtr, value);

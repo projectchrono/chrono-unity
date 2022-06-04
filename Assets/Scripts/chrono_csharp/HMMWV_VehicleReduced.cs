@@ -35,11 +35,11 @@ public class HMMWV_VehicleReduced : HMMWV_Vehicle {
     }
   }
 
-  public HMMWV_VehicleReduced(bool fixed_, DrivelineTypeWV drive_type, BrakeType brake_type, ChContactMethod contact_method, CollisionType chassis_collision_type) : this(vehiclePINVOKE.new_HMMWV_VehicleReduced__SWIG_0(fixed_, (int)drive_type, (int)brake_type, (int)contact_method, (int)chassis_collision_type), true) {
+  public HMMWV_VehicleReduced(bool fixed_, DrivelineTypeWV drive_type, BrakeType brake_type, SteeringTypeWV steering_type, ChContactMethod contact_method, CollisionType chassis_collision_type) : this(vehiclePINVOKE.new_HMMWV_VehicleReduced__SWIG_0(fixed_, (int)drive_type, (int)brake_type, (int)steering_type, (int)contact_method, (int)chassis_collision_type), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public HMMWV_VehicleReduced(ChSystem system, bool fixed_, DrivelineTypeWV drive_type, BrakeType brake_type, CollisionType chassis_collision_type) : this(vehiclePINVOKE.new_HMMWV_VehicleReduced__SWIG_1(ChSystem.getCPtr(system), fixed_, (int)drive_type, (int)brake_type, (int)chassis_collision_type), true) {
+  public HMMWV_VehicleReduced(ChSystem system, bool fixed_, DrivelineTypeWV drive_type, BrakeType brake_type, SteeringTypeWV steering_type, CollisionType chassis_collision_type) : this(vehiclePINVOKE.new_HMMWV_VehicleReduced__SWIG_1(ChSystem.getCPtr(system), fixed_, (int)drive_type, (int)brake_type, (int)steering_type, (int)chassis_collision_type), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

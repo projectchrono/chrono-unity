@@ -13,7 +13,7 @@ public class ChMaterialCompositeNSC : ChMaterialComposite {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChMaterialCompositeNSC(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChMaterialCompositeNSC_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChMaterialCompositeNSC(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChMaterialCompositeNSC_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChMaterialCompositeNSC : ChMaterialComposite {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChMaterialCompositeNSC(swigCPtr);
+          corePINVOKE.delete_ChMaterialCompositeNSC(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -37,142 +37,142 @@ public class ChMaterialCompositeNSC : ChMaterialComposite {
 
   public float static_friction {
     set {
-      ChronoEngine_csharpPINVOKE.ChMaterialCompositeNSC_static_friction_set(swigCPtr, value);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChMaterialCompositeNSC_static_friction_set(swigCPtr, value);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      float ret = ChronoEngine_csharpPINVOKE.ChMaterialCompositeNSC_static_friction_get(swigCPtr);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      float ret = corePINVOKE.ChMaterialCompositeNSC_static_friction_get(swigCPtr);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public float sliding_friction {
     set {
-      ChronoEngine_csharpPINVOKE.ChMaterialCompositeNSC_sliding_friction_set(swigCPtr, value);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChMaterialCompositeNSC_sliding_friction_set(swigCPtr, value);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      float ret = ChronoEngine_csharpPINVOKE.ChMaterialCompositeNSC_sliding_friction_get(swigCPtr);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      float ret = corePINVOKE.ChMaterialCompositeNSC_sliding_friction_get(swigCPtr);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public float rolling_friction {
     set {
-      ChronoEngine_csharpPINVOKE.ChMaterialCompositeNSC_rolling_friction_set(swigCPtr, value);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChMaterialCompositeNSC_rolling_friction_set(swigCPtr, value);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      float ret = ChronoEngine_csharpPINVOKE.ChMaterialCompositeNSC_rolling_friction_get(swigCPtr);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      float ret = corePINVOKE.ChMaterialCompositeNSC_rolling_friction_get(swigCPtr);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public float spinning_friction {
     set {
-      ChronoEngine_csharpPINVOKE.ChMaterialCompositeNSC_spinning_friction_set(swigCPtr, value);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChMaterialCompositeNSC_spinning_friction_set(swigCPtr, value);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      float ret = ChronoEngine_csharpPINVOKE.ChMaterialCompositeNSC_spinning_friction_get(swigCPtr);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      float ret = corePINVOKE.ChMaterialCompositeNSC_spinning_friction_get(swigCPtr);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public float restitution {
     set {
-      ChronoEngine_csharpPINVOKE.ChMaterialCompositeNSC_restitution_set(swigCPtr, value);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChMaterialCompositeNSC_restitution_set(swigCPtr, value);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      float ret = ChronoEngine_csharpPINVOKE.ChMaterialCompositeNSC_restitution_get(swigCPtr);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      float ret = corePINVOKE.ChMaterialCompositeNSC_restitution_get(swigCPtr);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public float cohesion {
     set {
-      ChronoEngine_csharpPINVOKE.ChMaterialCompositeNSC_cohesion_set(swigCPtr, value);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChMaterialCompositeNSC_cohesion_set(swigCPtr, value);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      float ret = ChronoEngine_csharpPINVOKE.ChMaterialCompositeNSC_cohesion_get(swigCPtr);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      float ret = corePINVOKE.ChMaterialCompositeNSC_cohesion_get(swigCPtr);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public float dampingf {
     set {
-      ChronoEngine_csharpPINVOKE.ChMaterialCompositeNSC_dampingf_set(swigCPtr, value);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChMaterialCompositeNSC_dampingf_set(swigCPtr, value);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      float ret = ChronoEngine_csharpPINVOKE.ChMaterialCompositeNSC_dampingf_get(swigCPtr);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      float ret = corePINVOKE.ChMaterialCompositeNSC_dampingf_get(swigCPtr);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public float compliance {
     set {
-      ChronoEngine_csharpPINVOKE.ChMaterialCompositeNSC_compliance_set(swigCPtr, value);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChMaterialCompositeNSC_compliance_set(swigCPtr, value);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      float ret = ChronoEngine_csharpPINVOKE.ChMaterialCompositeNSC_compliance_get(swigCPtr);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      float ret = corePINVOKE.ChMaterialCompositeNSC_compliance_get(swigCPtr);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public float complianceT {
     set {
-      ChronoEngine_csharpPINVOKE.ChMaterialCompositeNSC_complianceT_set(swigCPtr, value);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChMaterialCompositeNSC_complianceT_set(swigCPtr, value);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      float ret = ChronoEngine_csharpPINVOKE.ChMaterialCompositeNSC_complianceT_get(swigCPtr);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      float ret = corePINVOKE.ChMaterialCompositeNSC_complianceT_get(swigCPtr);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public float complianceRoll {
     set {
-      ChronoEngine_csharpPINVOKE.ChMaterialCompositeNSC_complianceRoll_set(swigCPtr, value);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChMaterialCompositeNSC_complianceRoll_set(swigCPtr, value);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      float ret = ChronoEngine_csharpPINVOKE.ChMaterialCompositeNSC_complianceRoll_get(swigCPtr);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      float ret = corePINVOKE.ChMaterialCompositeNSC_complianceRoll_get(swigCPtr);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public float complianceSpin {
     set {
-      ChronoEngine_csharpPINVOKE.ChMaterialCompositeNSC_complianceSpin_set(swigCPtr, value);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChMaterialCompositeNSC_complianceSpin_set(swigCPtr, value);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      float ret = ChronoEngine_csharpPINVOKE.ChMaterialCompositeNSC_complianceSpin_get(swigCPtr);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      float ret = corePINVOKE.ChMaterialCompositeNSC_complianceSpin_get(swigCPtr);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public ChMaterialCompositeNSC() : this(ChronoEngine_csharpPINVOKE.new_ChMaterialCompositeNSC__SWIG_0(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChMaterialCompositeNSC() : this(corePINVOKE.new_ChMaterialCompositeNSC__SWIG_0(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChMaterialCompositeNSC(ChMaterialCompositionStrategy strategy, ChMaterialSurfaceNSC mat1, ChMaterialSurfaceNSC mat2) : this(ChronoEngine_csharpPINVOKE.new_ChMaterialCompositeNSC__SWIG_1(ChMaterialCompositionStrategy.getCPtr(strategy), ChMaterialSurfaceNSC.getCPtr(mat1), ChMaterialSurfaceNSC.getCPtr(mat2)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChMaterialCompositeNSC(ChMaterialCompositionStrategy strategy, ChMaterialSurfaceNSC mat1, ChMaterialSurfaceNSC mat2) : this(corePINVOKE.new_ChMaterialCompositeNSC__SWIG_1(ChMaterialCompositionStrategy.getCPtr(strategy), ChMaterialSurfaceNSC.getCPtr(mat1), ChMaterialSurfaceNSC.getCPtr(mat2)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

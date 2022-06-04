@@ -13,7 +13,7 @@ public class ChLoaderUV : ChLoader {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChLoaderUV(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChLoaderUV_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChLoaderUV(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChLoaderUV_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChLoaderUV : ChLoader {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChLoaderUV(swigCPtr);
+          corePINVOKE.delete_ChLoaderUV(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -37,38 +37,38 @@ public class ChLoaderUV : ChLoader {
 
   public ChLoadableUV loadable {
     set {
-      ChronoEngine_csharpPINVOKE.ChLoaderUV_loadable_set(swigCPtr, ChLoadableUV.getCPtr(value));
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChLoaderUV_loadable_set(swigCPtr, ChLoadableUV.getCPtr(value));
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChLoaderUV_loadable_get(swigCPtr);
+      global::System.IntPtr cPtr = corePINVOKE.ChLoaderUV_loadable_get(swigCPtr);
       ChLoadableUV ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChLoadableUV(cPtr, true);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public virtual void ComputeF(double U, double V, ChVectorDynamicD F, ChVectorDynamicD state_x, ChVectorDynamicD state_w) {
-    ChronoEngine_csharpPINVOKE.ChLoaderUV_ComputeF(swigCPtr, U, V, ChVectorDynamicD.getCPtr(F), ChVectorDynamicD.getCPtr(state_x), ChVectorDynamicD.getCPtr(state_w));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoaderUV_ComputeF(swigCPtr, U, V, ChVectorDynamicD.getCPtr(F), ChVectorDynamicD.getCPtr(state_x), ChVectorDynamicD.getCPtr(state_w));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetLoadable(ChLoadableUV mloadable) {
-    ChronoEngine_csharpPINVOKE.ChLoaderUV_SetLoadable(swigCPtr, ChLoadableUV.getCPtr(mloadable));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoaderUV_SetLoadable(swigCPtr, ChLoadableUV.getCPtr(mloadable));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override ChLoadable GetLoadable() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChLoaderUV_GetLoadable(swigCPtr);
+    global::System.IntPtr cPtr = corePINVOKE.ChLoaderUV_GetLoadable(swigCPtr);
     ChLoadable ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChLoadable(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ChLoadableUV GetLoadableUV() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChLoaderUV_GetLoadableUV(swigCPtr);
+    global::System.IntPtr cPtr = corePINVOKE.ChLoaderUV_GetLoadableUV(swigCPtr);
     ChLoadableUV ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChLoadableUV(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

@@ -36,52 +36,52 @@ public class ChMatrixDynamicD : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChMatrixDynamicD(swigCPtr);
+          corePINVOKE.delete_ChMatrixDynamicD(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public ChMatrixDynamicD() : this(ChronoEngine_csharpPINVOKE.new_ChMatrixDynamicD__SWIG_0(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChMatrixDynamicD() : this(corePINVOKE.new_ChMatrixDynamicD__SWIG_0(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChMatrixDynamicD(int r, int c) : this(ChronoEngine_csharpPINVOKE.new_ChMatrixDynamicD__SWIG_1(r, c), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChMatrixDynamicD(int r, int c) : this(corePINVOKE.new_ChMatrixDynamicD__SWIG_1(r, c), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double getitem(int i, int j) {
-    double ret = ChronoEngine_csharpPINVOKE.ChMatrixDynamicD_getitem(swigCPtr, i, j);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChMatrixDynamicD_getitem(swigCPtr, i, j);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void setitem(int i, int j, double v) {
-    ChronoEngine_csharpPINVOKE.ChMatrixDynamicD_setitem(swigCPtr, i, j, v);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChMatrixDynamicD_setitem(swigCPtr, i, j, v);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public int GetRows() {
-    int ret = ChronoEngine_csharpPINVOKE.ChMatrixDynamicD_GetRows(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChMatrixDynamicD_GetRows(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int GetColumns() {
-    int ret = ChronoEngine_csharpPINVOKE.ChMatrixDynamicD_GetColumns(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChMatrixDynamicD_GetColumns(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void GetMatrixData(SWIGTYPE_p_double p, int len) {
-    ChronoEngine_csharpPINVOKE.ChMatrixDynamicD_GetMatrixData(swigCPtr, SWIGTYPE_p_double.getCPtr(p), len);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChMatrixDynamicD_GetMatrixData(swigCPtr, SWIGTYPE_p_double.getCPtr(p), len);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetMatr(SWIGTYPE_p_double mat, int ros, int col) {
-    ChronoEngine_csharpPINVOKE.ChMatrixDynamicD_SetMatr(swigCPtr, SWIGTYPE_p_double.getCPtr(mat), ros, col);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChMatrixDynamicD_SetMatr(swigCPtr, SWIGTYPE_p_double.getCPtr(mat), ros, col);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

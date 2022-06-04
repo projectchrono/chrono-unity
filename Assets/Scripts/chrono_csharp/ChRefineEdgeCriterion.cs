@@ -36,7 +36,7 @@ public class ChRefineEdgeCriterion : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChRefineEdgeCriterion(swigCPtr);
+          corePINVOKE.delete_ChRefineEdgeCriterion(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -44,8 +44,8 @@ public class ChRefineEdgeCriterion : global::System.IDisposable {
   }
 
   public virtual double ComputeLength(int vert_a, int vert_b, ChTriangleMeshConnected mmesh) {
-    double ret = ChronoEngine_csharpPINVOKE.ChRefineEdgeCriterion_ComputeLength(swigCPtr, vert_a, vert_b, ChTriangleMeshConnected.getCPtr(mmesh));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChRefineEdgeCriterion_ComputeLength(swigCPtr, vert_a, vert_b, ChTriangleMeshConnected.getCPtr(mmesh));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

@@ -36,7 +36,7 @@ public class ChLoader : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnBase) {
           swigCMemOwnBase = false;
-          ChronoEngine_csharpPINVOKE.delete_ChLoader(swigCPtr);
+          corePINVOKE.delete_ChLoader(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -45,32 +45,32 @@ public class ChLoader : global::System.IDisposable {
 
   public ChVectorDynamicD Q {
     set {
-      ChronoEngine_csharpPINVOKE.ChLoader_Q_set(swigCPtr, ChVectorDynamicD.getCPtr(value));
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChLoader_Q_set(swigCPtr, ChVectorDynamicD.getCPtr(value));
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChLoader_Q_get(swigCPtr);
+      global::System.IntPtr cPtr = corePINVOKE.ChLoader_Q_get(swigCPtr);
       ChVectorDynamicD ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChVectorDynamicD(cPtr, false);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public virtual void ComputeQ(ChVectorDynamicD state_x, ChVectorDynamicD state_w) {
-    ChronoEngine_csharpPINVOKE.ChLoader_ComputeQ(swigCPtr, ChVectorDynamicD.getCPtr(state_x), ChVectorDynamicD.getCPtr(state_w));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoader_ComputeQ(swigCPtr, ChVectorDynamicD.getCPtr(state_x), ChVectorDynamicD.getCPtr(state_w));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual ChLoadable GetLoadable() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChLoader_GetLoadable(swigCPtr);
+    global::System.IntPtr cPtr = corePINVOKE.ChLoader_GetLoadable(swigCPtr);
     ChLoadable ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChLoadable(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool IsStiff() {
-    bool ret = ChronoEngine_csharpPINVOKE.ChLoader_IsStiff(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChLoader_IsStiff(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

@@ -12,7 +12,7 @@
 public class ChRealtimeStepTimer : ChTimerD {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
 
-  internal ChRealtimeStepTimer(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChRealtimeStepTimer_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal ChRealtimeStepTimer(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChRealtimeStepTimer_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
@@ -25,7 +25,7 @@ public class ChRealtimeStepTimer : ChTimerD {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChRealtimeStepTimer(swigCPtr);
+          corePINVOKE.delete_ChRealtimeStepTimer(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -33,23 +33,23 @@ public class ChRealtimeStepTimer : ChTimerD {
     }
   }
 
-  public ChRealtimeStepTimer() : this(ChronoEngine_csharpPINVOKE.new_ChRealtimeStepTimer(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChRealtimeStepTimer() : this(corePINVOKE.new_ChRealtimeStepTimer(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Spin(double step) {
-    ChronoEngine_csharpPINVOKE.ChRealtimeStepTimer_Spin(swigCPtr, step);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChRealtimeStepTimer_Spin(swigCPtr, step);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double RTF {
     set {
-      ChronoEngine_csharpPINVOKE.ChRealtimeStepTimer_RTF_set(swigCPtr, value);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChRealtimeStepTimer_RTF_set(swigCPtr, value);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      double ret = ChronoEngine_csharpPINVOKE.ChRealtimeStepTimer_RTF_get(swigCPtr);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      double ret = corePINVOKE.ChRealtimeStepTimer_RTF_get(swigCPtr);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }

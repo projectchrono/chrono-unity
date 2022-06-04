@@ -13,7 +13,7 @@ public class ChBodyEasyBox : ChBody {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChBodyEasyBox(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChBodyEasyBox_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChBodyEasyBox(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChBodyEasyBox_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChBodyEasyBox : ChBody {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChBodyEasyBox(swigCPtr);
+          corePINVOKE.delete_ChBodyEasyBox(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,28 +35,28 @@ public class ChBodyEasyBox : ChBody {
     }
   }
 
-  public ChBodyEasyBox(double Xsize, double Ysize, double Zsize, double density, bool visualize, bool collide, ChMaterialSurface material, ChCollisionModel collision_model) : this(ChronoEngine_csharpPINVOKE.new_ChBodyEasyBox__SWIG_0(Xsize, Ysize, Zsize, density, visualize, collide, ChMaterialSurface.getCPtr(material), ChCollisionModel.getCPtr(collision_model)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChBodyEasyBox(double Xsize, double Ysize, double Zsize, double density, bool visualize, bool collide, ChMaterialSurface material, ChCollisionModel collision_model) : this(corePINVOKE.new_ChBodyEasyBox__SWIG_0(Xsize, Ysize, Zsize, density, visualize, collide, ChMaterialSurface.getCPtr(material), ChCollisionModel.getCPtr(collision_model)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChBodyEasyBox(double Xsize, double Ysize, double Zsize, double density, bool visualize, bool collide, ChMaterialSurface material) : this(ChronoEngine_csharpPINVOKE.new_ChBodyEasyBox__SWIG_1(Xsize, Ysize, Zsize, density, visualize, collide, ChMaterialSurface.getCPtr(material)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChBodyEasyBox(double Xsize, double Ysize, double Zsize, double density, bool visualize, bool collide, ChMaterialSurface material) : this(corePINVOKE.new_ChBodyEasyBox__SWIG_1(Xsize, Ysize, Zsize, density, visualize, collide, ChMaterialSurface.getCPtr(material)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChBodyEasyBox(double Xsize, double Ysize, double Zsize, double density, bool visualize, bool collide) : this(ChronoEngine_csharpPINVOKE.new_ChBodyEasyBox__SWIG_2(Xsize, Ysize, Zsize, density, visualize, collide), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChBodyEasyBox(double Xsize, double Ysize, double Zsize, double density, bool visualize, bool collide) : this(corePINVOKE.new_ChBodyEasyBox__SWIG_2(Xsize, Ysize, Zsize, density, visualize, collide), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChBodyEasyBox(double Xsize, double Ysize, double Zsize, double density, bool visualize) : this(ChronoEngine_csharpPINVOKE.new_ChBodyEasyBox__SWIG_3(Xsize, Ysize, Zsize, density, visualize), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChBodyEasyBox(double Xsize, double Ysize, double Zsize, double density, bool visualize) : this(corePINVOKE.new_ChBodyEasyBox__SWIG_3(Xsize, Ysize, Zsize, density, visualize), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChBodyEasyBox(double Xsize, double Ysize, double Zsize, double density) : this(ChronoEngine_csharpPINVOKE.new_ChBodyEasyBox__SWIG_4(Xsize, Ysize, Zsize, density), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChBodyEasyBox(double Xsize, double Ysize, double Zsize, double density) : this(corePINVOKE.new_ChBodyEasyBox__SWIG_4(Xsize, Ysize, Zsize, density), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChBodyEasyBox(double Xsize, double Ysize, double Zsize, double density, ChMaterialSurface material, ChCollisionSystemType collision_type) : this(ChronoEngine_csharpPINVOKE.new_ChBodyEasyBox__SWIG_5(Xsize, Ysize, Zsize, density, ChMaterialSurface.getCPtr(material), (int)collision_type), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChBodyEasyBox(double Xsize, double Ysize, double Zsize, double density, ChMaterialSurface material, ChCollisionSystemType collision_type) : this(corePINVOKE.new_ChBodyEasyBox__SWIG_5(Xsize, Ysize, Zsize, density, ChMaterialSurface.getCPtr(material), (int)collision_type), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

@@ -12,7 +12,7 @@
 public class ChStreamInAsciiFile : ChStreamFile {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
 
-  internal ChStreamInAsciiFile(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChStreamInAsciiFile_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal ChStreamInAsciiFile(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChStreamInAsciiFile_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
@@ -25,7 +25,7 @@ public class ChStreamInAsciiFile : ChStreamFile {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChStreamInAsciiFile(swigCPtr);
+          corePINVOKE.delete_ChStreamInAsciiFile(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -33,13 +33,13 @@ public class ChStreamInAsciiFile : ChStreamFile {
     }
   }
 
-  public ChStreamInAsciiFile(string filename) : this(ChronoEngine_csharpPINVOKE.new_ChStreamInAsciiFile(filename), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChStreamInAsciiFile(string filename) : this(corePINVOKE.new_ChStreamInAsciiFile(filename), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override bool End_of_stream() {
-    bool ret = ChronoEngine_csharpPINVOKE.ChStreamInAsciiFile_End_of_stream(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChStreamInAsciiFile_End_of_stream(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

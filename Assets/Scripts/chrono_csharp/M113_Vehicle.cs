@@ -35,23 +35,23 @@ public class M113_Vehicle : ChTrackedVehicle {
     }
   }
 
-  public M113_Vehicle(bool fixed_, TrackShoeType shoe_type, DrivelineTypeTV driveline_type, BrakeType brake_type, bool add_track_RSDA, ChContactMethod contact_method, CollisionType chassis_collision_type) : this(vehiclePINVOKE.new_M113_Vehicle__SWIG_0(fixed_, (int)shoe_type, (int)driveline_type, (int)brake_type, add_track_RSDA, (int)contact_method, (int)chassis_collision_type), true) {
+  public M113_Vehicle(bool fixed_, TrackShoeType shoe_type, DoublePinTrackShoeType shoe_topology, DrivelineTypeTV driveline_type, BrakeType brake_type, bool use_track_bushings, bool use_suspension_bushings, bool use_track_RSDA, ChContactMethod contact_method, CollisionType chassis_collision_type) : this(vehiclePINVOKE.new_M113_Vehicle__SWIG_0(fixed_, (int)shoe_type, (int)shoe_topology, (int)driveline_type, (int)brake_type, use_track_bushings, use_suspension_bushings, use_track_RSDA, (int)contact_method, (int)chassis_collision_type), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public M113_Vehicle(bool fixed_, TrackShoeType shoe_type, DrivelineTypeTV driveline_type, BrakeType brake_type, bool add_track_RSDA, ChContactMethod contact_method) : this(vehiclePINVOKE.new_M113_Vehicle__SWIG_1(fixed_, (int)shoe_type, (int)driveline_type, (int)brake_type, add_track_RSDA, (int)contact_method), true) {
+  public M113_Vehicle(bool fixed_, TrackShoeType shoe_type, DoublePinTrackShoeType shoe_topology, DrivelineTypeTV driveline_type, BrakeType brake_type, bool use_track_bushings, bool use_suspension_bushings, bool use_track_RSDA, ChContactMethod contact_method) : this(vehiclePINVOKE.new_M113_Vehicle__SWIG_1(fixed_, (int)shoe_type, (int)shoe_topology, (int)driveline_type, (int)brake_type, use_track_bushings, use_suspension_bushings, use_track_RSDA, (int)contact_method), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public M113_Vehicle(bool fixed_, TrackShoeType shoe_type, DrivelineTypeTV driveline_type, BrakeType brake_type, bool add_track_RSDA) : this(vehiclePINVOKE.new_M113_Vehicle__SWIG_2(fixed_, (int)shoe_type, (int)driveline_type, (int)brake_type, add_track_RSDA), true) {
+  public M113_Vehicle(bool fixed_, TrackShoeType shoe_type, DoublePinTrackShoeType shoe_topology, DrivelineTypeTV driveline_type, BrakeType brake_type, bool use_track_bushings, bool use_suspension_bushings, bool use_track_RSDA) : this(vehiclePINVOKE.new_M113_Vehicle__SWIG_2(fixed_, (int)shoe_type, (int)shoe_topology, (int)driveline_type, (int)brake_type, use_track_bushings, use_suspension_bushings, use_track_RSDA), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public M113_Vehicle(bool fixed_, TrackShoeType shoe_type, DrivelineTypeTV driveline_type, BrakeType brake_type, bool add_track_RSDA, ChSystem system, CollisionType chassis_collision_type) : this(vehiclePINVOKE.new_M113_Vehicle__SWIG_3(fixed_, (int)shoe_type, (int)driveline_type, (int)brake_type, add_track_RSDA, ChSystem.getCPtr(system), (int)chassis_collision_type), true) {
+  public M113_Vehicle(bool fixed_, TrackShoeType shoe_type, DoublePinTrackShoeType shoe_topology, DrivelineTypeTV driveline_type, BrakeType brake_type, bool use_track_bushings, bool use_suspension_bushings, bool use_track_RSDA, ChSystem system, CollisionType chassis_collision_type) : this(vehiclePINVOKE.new_M113_Vehicle__SWIG_3(fixed_, (int)shoe_type, (int)shoe_topology, (int)driveline_type, (int)brake_type, use_track_bushings, use_suspension_bushings, use_track_RSDA, ChSystem.getCPtr(system), (int)chassis_collision_type), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public M113_Vehicle(bool fixed_, TrackShoeType shoe_type, DrivelineTypeTV driveline_type, BrakeType brake_type, bool add_track_RSDA, ChSystem system) : this(vehiclePINVOKE.new_M113_Vehicle__SWIG_4(fixed_, (int)shoe_type, (int)driveline_type, (int)brake_type, add_track_RSDA, ChSystem.getCPtr(system)), true) {
+  public M113_Vehicle(bool fixed_, TrackShoeType shoe_type, DoublePinTrackShoeType shoe_topology, DrivelineTypeTV driveline_type, BrakeType brake_type, bool use_track_bushings, bool use_suspension_bushings, bool use_track_RSDA, ChSystem system) : this(vehiclePINVOKE.new_M113_Vehicle__SWIG_4(fixed_, (int)shoe_type, (int)shoe_topology, (int)driveline_type, (int)brake_type, use_track_bushings, use_suspension_bushings, use_track_RSDA, ChSystem.getCPtr(system)), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

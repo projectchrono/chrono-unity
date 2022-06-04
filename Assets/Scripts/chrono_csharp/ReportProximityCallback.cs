@@ -36,7 +36,7 @@ public class ReportProximityCallback : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ReportProximityCallback(swigCPtr);
+          corePINVOKE.delete_ReportProximityCallback(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -44,8 +44,8 @@ public class ReportProximityCallback : global::System.IDisposable {
   }
 
   public virtual bool OnReportProximity(ChCollisionModel modA, ChCollisionModel modB) {
-    bool ret = ChronoEngine_csharpPINVOKE.ReportProximityCallback_OnReportProximity(swigCPtr, ChCollisionModel.getCPtr(modA), ChCollisionModel.getCPtr(modB));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ReportProximityCallback_OnReportProximity(swigCPtr, ChCollisionModel.getCPtr(modA), ChCollisionModel.getCPtr(modB));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

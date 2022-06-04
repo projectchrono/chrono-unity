@@ -13,7 +13,7 @@ public class ChFunctionRotation_setpoint : ChFunctionRotation {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChFunctionRotation_setpoint(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChFunctionRotation_setpoint_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChFunctionRotation_setpoint(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChFunctionRotation_setpoint_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChFunctionRotation_setpoint : ChFunctionRotation {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChFunctionRotation_setpoint(swigCPtr);
+          corePINVOKE.delete_ChFunctionRotation_setpoint(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,80 +35,168 @@ public class ChFunctionRotation_setpoint : ChFunctionRotation {
     }
   }
 
-  public ChFunctionRotation_setpoint() : this(ChronoEngine_csharpPINVOKE.new_ChFunctionRotation_setpoint__SWIG_0(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChFunctionRotation_setpoint() : this(corePINVOKE.new_ChFunctionRotation_setpoint__SWIG_0(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
+    SwigDirectorConnect();
   }
 
-  public ChFunctionRotation_setpoint(ChFunctionRotation_setpoint other) : this(ChronoEngine_csharpPINVOKE.new_ChFunctionRotation_setpoint__SWIG_1(ChFunctionRotation_setpoint.getCPtr(other)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public override ChFunctionRotation Clone() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChFunctionRotation_setpoint_Clone(swigCPtr);
-    ChFunctionRotation_setpoint ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChFunctionRotation_setpoint(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
+  public ChFunctionRotation_setpoint(ChFunctionRotation_setpoint other) : this(corePINVOKE.new_ChFunctionRotation_setpoint__SWIG_1(ChFunctionRotation_setpoint.getCPtr(other)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
+    SwigDirectorConnect();
   }
 
   public void SetMode(ChFunctionRotation_setpoint.eChSetpointMode mmode) {
-    ChronoEngine_csharpPINVOKE.ChFunctionRotation_setpoint_SetMode(swigCPtr, (int)mmode);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChFunctionRotation_setpoint_SetMode(swigCPtr, (int)mmode);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public ChFunctionRotation_setpoint.eChSetpointMode GetMode() {
-    ChFunctionRotation_setpoint.eChSetpointMode ret = (ChFunctionRotation_setpoint.eChSetpointMode)ChronoEngine_csharpPINVOKE.ChFunctionRotation_setpoint_GetMode(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChFunctionRotation_setpoint.eChSetpointMode ret = (ChFunctionRotation_setpoint.eChSetpointMode)corePINVOKE.ChFunctionRotation_setpoint_GetMode(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Reset(double ms) {
-    ChronoEngine_csharpPINVOKE.ChFunctionRotation_setpoint_Reset__SWIG_0(swigCPtr, ms);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChFunctionRotation_setpoint_Reset__SWIG_0(swigCPtr, ms);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Reset() {
-    ChronoEngine_csharpPINVOKE.ChFunctionRotation_setpoint_Reset__SWIG_1(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChFunctionRotation_setpoint_Reset__SWIG_1(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void SetSetpoint(ChQuaternionD q_setpoint, double s) {
-    ChronoEngine_csharpPINVOKE.ChFunctionRotation_setpoint_SetSetpoint(swigCPtr, ChQuaternionD.getCPtr(q_setpoint), s);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetSetpoint", swigMethodTypes7)) corePINVOKE.ChFunctionRotation_setpoint_SetSetpointSwigExplicitChFunctionRotation_setpoint(swigCPtr, ChQuaternionD.getCPtr(q_setpoint), s); else corePINVOKE.ChFunctionRotation_setpoint_SetSetpoint(swigCPtr, ChQuaternionD.getCPtr(q_setpoint), s);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void SetSetpointAndDerivatives(ChQuaternionD q_setpoint, ChVectorD w_loc_setpoint, ChVectorD a_loc_setpoint) {
-    ChronoEngine_csharpPINVOKE.ChFunctionRotation_setpoint_SetSetpointAndDerivatives(swigCPtr, ChQuaternionD.getCPtr(q_setpoint), ChVectorD.getCPtr(w_loc_setpoint), ChVectorD.getCPtr(a_loc_setpoint));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetSetpointAndDerivatives", swigMethodTypes8)) corePINVOKE.ChFunctionRotation_setpoint_SetSetpointAndDerivativesSwigExplicitChFunctionRotation_setpoint(swigCPtr, ChQuaternionD.getCPtr(q_setpoint), ChVectorD.getCPtr(w_loc_setpoint), ChVectorD.getCPtr(a_loc_setpoint)); else corePINVOKE.ChFunctionRotation_setpoint_SetSetpointAndDerivatives(swigCPtr, ChQuaternionD.getCPtr(q_setpoint), ChVectorD.getCPtr(w_loc_setpoint), ChVectorD.getCPtr(a_loc_setpoint));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override ChQuaternionD Get_q(double s) {
-    ChQuaternionD ret = new ChQuaternionD(ChronoEngine_csharpPINVOKE.ChFunctionRotation_setpoint_Get_q(swigCPtr, s), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChQuaternionD ret = new ChQuaternionD((SwigDerivedClassHasMethod("Get_q", swigMethodTypes0) ? corePINVOKE.ChFunctionRotation_setpoint_Get_qSwigExplicitChFunctionRotation_setpoint(swigCPtr, s) : corePINVOKE.ChFunctionRotation_setpoint_Get_q(swigCPtr, s)), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override ChVectorD Get_w_loc(double s) {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChFunctionRotation_setpoint_Get_w_loc(swigCPtr, s), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorD ret = new ChVectorD((SwigDerivedClassHasMethod("Get_w_loc", swigMethodTypes1) ? corePINVOKE.ChFunctionRotation_setpoint_Get_w_locSwigExplicitChFunctionRotation_setpoint(swigCPtr, s) : corePINVOKE.ChFunctionRotation_setpoint_Get_w_loc(swigCPtr, s)), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override ChVectorD Get_a_loc(double s) {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChFunctionRotation_setpoint_Get_a_loc(swigCPtr, s), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorD ret = new ChVectorD((SwigDerivedClassHasMethod("Get_a_loc", swigMethodTypes2) ? corePINVOKE.ChFunctionRotation_setpoint_Get_a_locSwigExplicitChFunctionRotation_setpoint(swigCPtr, s) : corePINVOKE.ChFunctionRotation_setpoint_Get_a_loc(swigCPtr, s)), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void ArchiveOUT(SWIGTYPE_p_ChArchiveOut marchive) {
-    ChronoEngine_csharpPINVOKE.ChFunctionRotation_setpoint_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("ArchiveOUT", swigMethodTypes5)) corePINVOKE.ChFunctionRotation_setpoint_ArchiveOUTSwigExplicitChFunctionRotation_setpoint(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive)); else corePINVOKE.ChFunctionRotation_setpoint_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn marchive) {
-    ChronoEngine_csharpPINVOKE.ChFunctionRotation_setpoint_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("ArchiveIN", swigMethodTypes6)) corePINVOKE.ChFunctionRotation_setpoint_ArchiveINSwigExplicitChFunctionRotation_setpoint(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive)); else corePINVOKE.ChFunctionRotation_setpoint_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
+  private void SwigDirectorConnect() {
+    if (SwigDerivedClassHasMethod("Get_q", swigMethodTypes0))
+      swigDelegate0 = new SwigDelegateChFunctionRotation_setpoint_0(SwigDirectorMethodGet_q);
+    if (SwigDerivedClassHasMethod("Get_w_loc", swigMethodTypes1))
+      swigDelegate1 = new SwigDelegateChFunctionRotation_setpoint_1(SwigDirectorMethodGet_w_loc);
+    if (SwigDerivedClassHasMethod("Get_a_loc", swigMethodTypes2))
+      swigDelegate2 = new SwigDelegateChFunctionRotation_setpoint_2(SwigDirectorMethodGet_a_loc);
+    if (SwigDerivedClassHasMethod("Estimate_s_domain", swigMethodTypes3))
+      swigDelegate3 = new SwigDelegateChFunctionRotation_setpoint_3(SwigDirectorMethodEstimate_s_domain);
+    if (SwigDerivedClassHasMethod("Update", swigMethodTypes4))
+      swigDelegate4 = new SwigDelegateChFunctionRotation_setpoint_4(SwigDirectorMethodUpdate);
+    if (SwigDerivedClassHasMethod("ArchiveOUT", swigMethodTypes5))
+      swigDelegate5 = new SwigDelegateChFunctionRotation_setpoint_5(SwigDirectorMethodArchiveOUT);
+    if (SwigDerivedClassHasMethod("ArchiveIN", swigMethodTypes6))
+      swigDelegate6 = new SwigDelegateChFunctionRotation_setpoint_6(SwigDirectorMethodArchiveIN);
+    if (SwigDerivedClassHasMethod("SetSetpoint", swigMethodTypes7))
+      swigDelegate7 = new SwigDelegateChFunctionRotation_setpoint_7(SwigDirectorMethodSetSetpoint);
+    if (SwigDerivedClassHasMethod("SetSetpointAndDerivatives", swigMethodTypes8))
+      swigDelegate8 = new SwigDelegateChFunctionRotation_setpoint_8(SwigDirectorMethodSetSetpointAndDerivatives);
+    corePINVOKE.ChFunctionRotation_setpoint_director_connect(swigCPtr, swigDelegate0, swigDelegate1, swigDelegate2, swigDelegate3, swigDelegate4, swigDelegate5, swigDelegate6, swigDelegate7, swigDelegate8);
+  }
+
+  private bool SwigDerivedClassHasMethod(string methodName, global::System.Type[] methodTypes) {
+    global::System.Reflection.MethodInfo methodInfo = this.GetType().GetMethod(methodName, global::System.Reflection.BindingFlags.Public | global::System.Reflection.BindingFlags.NonPublic | global::System.Reflection.BindingFlags.Instance, null, methodTypes, null);
+    bool hasDerivedMethod = methodInfo.DeclaringType.IsSubclassOf(typeof(ChFunctionRotation_setpoint));
+    return hasDerivedMethod;
+  }
+
+  private global::System.IntPtr SwigDirectorMethodGet_q(double s) {
+    return ChQuaternionD.getCPtr(Get_q(s)).Handle;
+  }
+
+  private global::System.IntPtr SwigDirectorMethodGet_w_loc(double s) {
+    return ChVectorD.getCPtr(Get_w_loc(s)).Handle;
+  }
+
+  private global::System.IntPtr SwigDirectorMethodGet_a_loc(double s) {
+    return ChVectorD.getCPtr(Get_a_loc(s)).Handle;
+  }
+
+  private void SwigDirectorMethodEstimate_s_domain(global::System.IntPtr smin, global::System.IntPtr smax) {
+    Estimate_s_domain(new SWIGTYPE_p_double(smin, false), new SWIGTYPE_p_double(smax, false));
+  }
+
+  private void SwigDirectorMethodUpdate(double t) {
+    Update(t);
+  }
+
+  private void SwigDirectorMethodArchiveOUT(global::System.IntPtr marchive) {
+    ArchiveOUT(new SWIGTYPE_p_ChArchiveOut(marchive, false));
+  }
+
+  private void SwigDirectorMethodArchiveIN(global::System.IntPtr marchive) {
+    ArchiveIN(new SWIGTYPE_p_chrono__ChArchiveIn(marchive, false));
+  }
+
+  private void SwigDirectorMethodSetSetpoint(global::System.IntPtr q_setpoint, double s) {
+    SetSetpoint(new ChQuaternionD(q_setpoint, true), s);
+  }
+
+  private void SwigDirectorMethodSetSetpointAndDerivatives(global::System.IntPtr q_setpoint, global::System.IntPtr w_loc_setpoint, global::System.IntPtr a_loc_setpoint) {
+    SetSetpointAndDerivatives(new ChQuaternionD(q_setpoint, true), new ChVectorD(w_loc_setpoint, true), new ChVectorD(a_loc_setpoint, true));
+  }
+
+  public delegate global::System.IntPtr SwigDelegateChFunctionRotation_setpoint_0(double s);
+  public delegate global::System.IntPtr SwigDelegateChFunctionRotation_setpoint_1(double s);
+  public delegate global::System.IntPtr SwigDelegateChFunctionRotation_setpoint_2(double s);
+  public delegate void SwigDelegateChFunctionRotation_setpoint_3(global::System.IntPtr smin, global::System.IntPtr smax);
+  public delegate void SwigDelegateChFunctionRotation_setpoint_4(double t);
+  public delegate void SwigDelegateChFunctionRotation_setpoint_5(global::System.IntPtr marchive);
+  public delegate void SwigDelegateChFunctionRotation_setpoint_6(global::System.IntPtr marchive);
+  public delegate void SwigDelegateChFunctionRotation_setpoint_7(global::System.IntPtr q_setpoint, double s);
+  public delegate void SwigDelegateChFunctionRotation_setpoint_8(global::System.IntPtr q_setpoint, global::System.IntPtr w_loc_setpoint, global::System.IntPtr a_loc_setpoint);
+
+  private SwigDelegateChFunctionRotation_setpoint_0 swigDelegate0;
+  private SwigDelegateChFunctionRotation_setpoint_1 swigDelegate1;
+  private SwigDelegateChFunctionRotation_setpoint_2 swigDelegate2;
+  private SwigDelegateChFunctionRotation_setpoint_3 swigDelegate3;
+  private SwigDelegateChFunctionRotation_setpoint_4 swigDelegate4;
+  private SwigDelegateChFunctionRotation_setpoint_5 swigDelegate5;
+  private SwigDelegateChFunctionRotation_setpoint_6 swigDelegate6;
+  private SwigDelegateChFunctionRotation_setpoint_7 swigDelegate7;
+  private SwigDelegateChFunctionRotation_setpoint_8 swigDelegate8;
+
+  private static global::System.Type[] swigMethodTypes0 = new global::System.Type[] { typeof(double) };
+  private static global::System.Type[] swigMethodTypes1 = new global::System.Type[] { typeof(double) };
+  private static global::System.Type[] swigMethodTypes2 = new global::System.Type[] { typeof(double) };
+  private static global::System.Type[] swigMethodTypes3 = new global::System.Type[] { typeof(SWIGTYPE_p_double), typeof(SWIGTYPE_p_double) };
+  private static global::System.Type[] swigMethodTypes4 = new global::System.Type[] { typeof(double) };
+  private static global::System.Type[] swigMethodTypes5 = new global::System.Type[] { typeof(SWIGTYPE_p_ChArchiveOut) };
+  private static global::System.Type[] swigMethodTypes6 = new global::System.Type[] { typeof(SWIGTYPE_p_chrono__ChArchiveIn) };
+  private static global::System.Type[] swigMethodTypes7 = new global::System.Type[] { typeof(ChQuaternionD), typeof(double) };
+  private static global::System.Type[] swigMethodTypes8 = new global::System.Type[] { typeof(ChQuaternionD), typeof(ChVectorD), typeof(ChVectorD) };
   public enum eChSetpointMode {
     ZOH,
     FOH,

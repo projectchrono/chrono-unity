@@ -43,24 +43,6 @@ public class RigidChassisRear : ChRigidChassisRear {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public override double GetMass() {
-    double ret = vehiclePINVOKE.RigidChassisRear_GetMass(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public override ChMatrix33D GetInertia() {
-    ChMatrix33D ret = new ChMatrix33D(vehiclePINVOKE.RigidChassisRear_GetInertia(swigCPtr), false);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public override ChVectorD GetLocalPosCOM() {
-    ChVectorD ret = new ChVectorD(vehiclePINVOKE.RigidChassisRear_GetLocalPosCOM(swigCPtr), false);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
   public override ChVectorD GetLocalPosFrontConnector() {
     ChVectorD ret = new ChVectorD(vehiclePINVOKE.RigidChassisRear_GetLocalPosFrontConnector(swigCPtr), false);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();

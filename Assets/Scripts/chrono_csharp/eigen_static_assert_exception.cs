@@ -36,15 +36,15 @@ public class eigen_static_assert_exception : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_eigen_static_assert_exception(swigCPtr);
+          corePINVOKE.delete_eigen_static_assert_exception(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public eigen_static_assert_exception() : this(ChronoEngine_csharpPINVOKE.new_eigen_static_assert_exception(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public eigen_static_assert_exception() : this(corePINVOKE.new_eigen_static_assert_exception(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

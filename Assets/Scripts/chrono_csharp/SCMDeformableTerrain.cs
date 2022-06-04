@@ -105,13 +105,13 @@ public class SCMDeformableTerrain : ChTerrain {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void SetTexture(string tex_file, float tex_scale_x, float tex_scale_y) {
-    vehiclePINVOKE.SCMDeformableTerrain_SetTexture__SWIG_0(swigCPtr, tex_file, tex_scale_x, tex_scale_y);
+  public void SetTexture(string tex_file, float scale_x, float scale_y) {
+    vehiclePINVOKE.SCMDeformableTerrain_SetTexture__SWIG_0(swigCPtr, tex_file, scale_x, scale_y);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void SetTexture(string tex_file, float tex_scale_x) {
-    vehiclePINVOKE.SCMDeformableTerrain_SetTexture__SWIG_1(swigCPtr, tex_file, tex_scale_x);
+  public void SetTexture(string tex_file, float scale_x) {
+    vehiclePINVOKE.SCMDeformableTerrain_SetTexture__SWIG_1(swigCPtr, tex_file, scale_x);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -160,6 +160,12 @@ public class SCMDeformableTerrain : ChTerrain {
     return ret;
   }
 
+  public NodeInfo GetNodeInfo(ChVectorD loc) {
+    NodeInfo ret = new NodeInfo(vehiclePINVOKE.SCMDeformableTerrain_GetNodeInfo(swigCPtr, ChVectorD.getCPtr(loc)), true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public ChTriangleMeshShape GetMesh() {
     global::System.IntPtr cPtr = vehiclePINVOKE.SCMDeformableTerrain_GetMesh(swigCPtr);
     ChTriangleMeshShape ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChTriangleMeshShape(cPtr, true);
@@ -184,6 +190,11 @@ public class SCMDeformableTerrain : ChTerrain {
 
   public void Initialize(string heightmap_file, double sizeX, double sizeY, double hMin, double hMax, double delta) {
     vehiclePINVOKE.SCMDeformableTerrain_Initialize__SWIG_1(swigCPtr, heightmap_file, sizeX, sizeY, hMin, hMax, delta);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void Initialize(string mesh_file, double delta) {
+    vehiclePINVOKE.SCMDeformableTerrain_Initialize__SWIG_2(swigCPtr, mesh_file, delta);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -279,6 +290,13 @@ public class SCMDeformableTerrain : ChTerrain {
   public void PrintStepStatistics(SWIGTYPE_p_std__ostream os) {
     vehiclePINVOKE.SCMDeformableTerrain_PrintStepStatistics(swigCPtr, SWIGTYPE_p_std__ostream.getCPtr(os));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public SCMDeformableSoil GetGroundObject() {
+    global::System.IntPtr cPtr = vehiclePINVOKE.SCMDeformableTerrain_GetGroundObject(swigCPtr);
+    SCMDeformableSoil ret = (cPtr == global::System.IntPtr.Zero) ? null : new SCMDeformableSoil(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
   }
 
   public enum DataPlotType {

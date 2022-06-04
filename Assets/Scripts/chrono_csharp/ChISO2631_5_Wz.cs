@@ -36,20 +36,20 @@ public class ChISO2631_5_Wz : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChISO2631_5_Wz(swigCPtr);
+          corePINVOKE.delete_ChISO2631_5_Wz(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public ChISO2631_5_Wz() : this(ChronoEngine_csharpPINVOKE.new_ChISO2631_5_Wz(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChISO2631_5_Wz() : this(corePINVOKE.new_ChISO2631_5_Wz(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Filter(SWIGTYPE_p_std__vectorT_double_t u, SWIGTYPE_p_std__vectorT_double_t y) {
-    ChronoEngine_csharpPINVOKE.ChISO2631_5_Wz_Filter(swigCPtr, SWIGTYPE_p_std__vectorT_double_t.getCPtr(u), SWIGTYPE_p_std__vectorT_double_t.getCPtr(y));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChISO2631_5_Wz_Filter(swigCPtr, SWIGTYPE_p_std__vectorT_double_t.getCPtr(u), SWIGTYPE_p_std__vectorT_double_t.getCPtr(y));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

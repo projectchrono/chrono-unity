@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-public class ChTMeasyTire : ChTire {
+public class ChTMeasyTire : ChForceElementTire {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
@@ -35,29 +35,29 @@ public class ChTMeasyTire : ChTire {
     }
   }
 
-  public override string GetTemplateName() {
+  public virtual string GetTemplateName() {
     string ret = vehiclePINVOKE.ChTMeasyTire_GetTemplateName(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public override void AddVisualizationAssets(VisualizationType vis) {
+  public virtual void AddVisualizationAssets(VisualizationType vis) {
     vehiclePINVOKE.ChTMeasyTire_AddVisualizationAssets(swigCPtr, (int)vis);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public override void RemoveVisualizationAssets() {
+  public virtual void RemoveVisualizationAssets() {
     vehiclePINVOKE.ChTMeasyTire_RemoveVisualizationAssets(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public override double GetRadius() {
+  public virtual double GetRadius() {
     double ret = vehiclePINVOKE.ChTMeasyTire_GetRadius(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public override TerrainForce ReportTireForce(ChTerrain terrain) {
+  public virtual TerrainForce ReportTireForce(ChTerrain terrain) {
     TerrainForce ret = new TerrainForce(vehiclePINVOKE.ChTMeasyTire_ReportTireForce(swigCPtr, ChTerrain.getCPtr(terrain)), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
@@ -68,7 +68,7 @@ public class ChTMeasyTire : ChTire {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public override double GetWidth() {
+  public virtual double GetWidth() {
     double ret = vehiclePINVOKE.ChTMeasyTire_GetWidth(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
@@ -219,8 +219,14 @@ public class ChTMeasyTire : ChTire {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public override double GetDeflection() {
-    double ret = vehiclePINVOKE.ChTMeasyTire_GetDeflection__SWIG_0(swigCPtr);
+  public virtual double GetDeflection() {
+    double ret = vehiclePINVOKE.ChTMeasyTire_GetDeflection(swigCPtr);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public ChVectorD GetDeflection3() {
+    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChTMeasyTire_GetDeflection3(swigCPtr), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

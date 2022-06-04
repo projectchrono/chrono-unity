@@ -153,6 +153,12 @@ public class M113_TrackShoeBandBushing : ChTrackShoeBandBushing {
     return ret;
   }
 
+  public virtual SWIGTYPE_p_std__shared_ptrT_ChVehicleBushingData_t GetBushingData() {
+    SWIGTYPE_p_std__shared_ptrT_ChVehicleBushingData_t ret = new SWIGTYPE_p_std__shared_ptrT_ChVehicleBushingData_t(vehiclePINVOKE.M113_TrackShoeBandBushing_GetBushingData(swigCPtr), true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public virtual string GetTreadVisualizationMeshName() {
     string ret = vehiclePINVOKE.M113_TrackShoeBandBushing_GetTreadVisualizationMeshName(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();

@@ -13,7 +13,7 @@ public class ChBodyFrame : ChFrameMovingD {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChBodyFrame(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChBodyFrame_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChBodyFrame(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChBodyFrame_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChBodyFrame : ChFrameMovingD {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChBodyFrame(swigCPtr);
+          corePINVOKE.delete_ChBodyFrame(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -36,24 +36,24 @@ public class ChBodyFrame : ChFrameMovingD {
   }
 
   public virtual SWIGTYPE_p_ChVariables Variables() {
-    SWIGTYPE_p_ChVariables ret = new SWIGTYPE_p_ChVariables(ChronoEngine_csharpPINVOKE.ChBodyFrame_Variables(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    SWIGTYPE_p_ChVariables ret = new SWIGTYPE_p_ChVariables(corePINVOKE.ChBodyFrame_Variables(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void To_abs_forcetorque(ChVectorD force, ChVectorD appl_point, bool local, ChVectorD resultforce, ChVectorD resulttorque) {
-    ChronoEngine_csharpPINVOKE.ChBodyFrame_To_abs_forcetorque(swigCPtr, ChVectorD.getCPtr(force), ChVectorD.getCPtr(appl_point), local, ChVectorD.getCPtr(resultforce), ChVectorD.getCPtr(resulttorque));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChBodyFrame_To_abs_forcetorque(swigCPtr, ChVectorD.getCPtr(force), ChVectorD.getCPtr(appl_point), local, ChVectorD.getCPtr(resultforce), ChVectorD.getCPtr(resulttorque));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void ArchiveOUT(SWIGTYPE_p_ChArchiveOut marchive) {
-    ChronoEngine_csharpPINVOKE.ChBodyFrame_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChBodyFrame_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn marchive) {
-    ChronoEngine_csharpPINVOKE.ChBodyFrame_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChBodyFrame_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

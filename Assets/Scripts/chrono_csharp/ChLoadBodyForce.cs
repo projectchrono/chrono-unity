@@ -13,7 +13,7 @@ public class ChLoadBodyForce : ChLoadCustom {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChLoadBodyForce(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChLoadBodyForce_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChLoadBodyForce(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChLoadBodyForce_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChLoadBodyForce : ChLoadCustom {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChLoadBodyForce(swigCPtr);
+          corePINVOKE.delete_ChLoadBodyForce(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,51 +35,44 @@ public class ChLoadBodyForce : ChLoadCustom {
     }
   }
 
-  public ChLoadBodyForce(ChBody body, ChVectorD force, bool local_force, ChVectorD point, bool local_point) : this(ChronoEngine_csharpPINVOKE.new_ChLoadBodyForce__SWIG_0(ChBody.getCPtr(body), ChVectorD.getCPtr(force), local_force, ChVectorD.getCPtr(point), local_point), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChLoadBodyForce(ChBody body, ChVectorD force, bool local_force, ChVectorD point, bool local_point) : this(corePINVOKE.new_ChLoadBodyForce__SWIG_0(ChBody.getCPtr(body), ChVectorD.getCPtr(force), local_force, ChVectorD.getCPtr(point), local_point), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChLoadBodyForce(ChBody body, ChVectorD force, bool local_force, ChVectorD point) : this(ChronoEngine_csharpPINVOKE.new_ChLoadBodyForce__SWIG_1(ChBody.getCPtr(body), ChVectorD.getCPtr(force), local_force, ChVectorD.getCPtr(point)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public override ChObj Clone() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChLoadBodyForce_Clone(swigCPtr);
-    ChLoadBodyForce ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChLoadBodyForce(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
+  public ChLoadBodyForce(ChBody body, ChVectorD force, bool local_force, ChVectorD point) : this(corePINVOKE.new_ChLoadBodyForce__SWIG_1(ChBody.getCPtr(body), ChVectorD.getCPtr(force), local_force, ChVectorD.getCPtr(point)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetForce(ChVectorD force, bool is_local) {
-    ChronoEngine_csharpPINVOKE.ChLoadBodyForce_SetForce(swigCPtr, ChVectorD.getCPtr(force), is_local);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoadBodyForce_SetForce(swigCPtr, ChVectorD.getCPtr(force), is_local);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public ChVectorD GetForce() {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChLoadBodyForce_GetForce(swigCPtr), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorD ret = new ChVectorD(corePINVOKE.ChLoadBodyForce_GetForce(swigCPtr), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetApplicationPoint(ChVectorD point, bool is_local) {
-    ChronoEngine_csharpPINVOKE.ChLoadBodyForce_SetApplicationPoint(swigCPtr, ChVectorD.getCPtr(point), is_local);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoadBodyForce_SetApplicationPoint(swigCPtr, ChVectorD.getCPtr(point), is_local);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public ChVectorD GetApplicationPoint() {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChLoadBodyForce_GetApplicationPoint(swigCPtr), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorD ret = new ChVectorD(corePINVOKE.ChLoadBodyForce_GetApplicationPoint(swigCPtr), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetModulationFunction(ChFunction modulation) {
-    ChronoEngine_csharpPINVOKE.ChLoadBodyForce_SetModulationFunction(swigCPtr, ChFunction.getCPtr(modulation));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoadBodyForce_SetModulationFunction(swigCPtr, ChFunction.getCPtr(modulation));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void ComputeQ(ChState state_x, ChStateDelta state_w) {
-    ChronoEngine_csharpPINVOKE.ChLoadBodyForce_ComputeQ(swigCPtr, ChState.getCPtr(state_x), ChStateDelta.getCPtr(state_w));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoadBodyForce_ComputeQ(swigCPtr, ChState.getCPtr(state_x), ChStateDelta.getCPtr(state_w));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

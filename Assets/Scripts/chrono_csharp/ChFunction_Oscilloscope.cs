@@ -13,7 +13,7 @@ public class ChFunction_Oscilloscope : ChFunction {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChFunction_Oscilloscope(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChFunction_Oscilloscope_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChFunction_Oscilloscope(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChFunction_Oscilloscope_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChFunction_Oscilloscope : ChFunction {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChFunction_Oscilloscope(swigCPtr);
+          corePINVOKE.delete_ChFunction_Oscilloscope(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,83 +35,83 @@ public class ChFunction_Oscilloscope : ChFunction {
     }
   }
 
-  public ChFunction_Oscilloscope() : this(ChronoEngine_csharpPINVOKE.new_ChFunction_Oscilloscope__SWIG_0(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChFunction_Oscilloscope() : this(corePINVOKE.new_ChFunction_Oscilloscope__SWIG_0(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChFunction_Oscilloscope(ChFunction_Oscilloscope other) : this(ChronoEngine_csharpPINVOKE.new_ChFunction_Oscilloscope__SWIG_1(ChFunction_Oscilloscope.getCPtr(other)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChFunction_Oscilloscope(ChFunction_Oscilloscope other) : this(corePINVOKE.new_ChFunction_Oscilloscope__SWIG_1(ChFunction_Oscilloscope.getCPtr(other)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override ChFunction.FunctionType Get_Type() {
-    ChFunction.FunctionType ret = (ChFunction.FunctionType)ChronoEngine_csharpPINVOKE.ChFunction_Oscilloscope_Get_Type(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChFunction.FunctionType ret = (ChFunction.FunctionType)corePINVOKE.ChFunction_Oscilloscope_Get_Type(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override double Get_y(double x) {
-    double ret = ChronoEngine_csharpPINVOKE.ChFunction_Oscilloscope_Get_y(swigCPtr, x);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChFunction_Oscilloscope_Get_y(swigCPtr, x);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void AddLastPoint(double mx, double my) {
-    ChronoEngine_csharpPINVOKE.ChFunction_Oscilloscope_AddLastPoint(swigCPtr, mx, my);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChFunction_Oscilloscope_AddLastPoint(swigCPtr, mx, my);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Reset() {
-    ChronoEngine_csharpPINVOKE.ChFunction_Oscilloscope_Reset(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChFunction_Oscilloscope_Reset(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public SWIGTYPE_p_std__listT_double_t GetPointList() {
-    SWIGTYPE_p_std__listT_double_t ret = new SWIGTYPE_p_std__listT_double_t(ChronoEngine_csharpPINVOKE.ChFunction_Oscilloscope_GetPointList(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    SWIGTYPE_p_std__listT_double_t ret = new SWIGTYPE_p_std__listT_double_t(corePINVOKE.ChFunction_Oscilloscope_GetPointList(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public double Get_dx() {
-    double ret = ChronoEngine_csharpPINVOKE.ChFunction_Oscilloscope_Get_dx(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChFunction_Oscilloscope_Get_dx(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Set_dx(double mdx) {
-    ChronoEngine_csharpPINVOKE.ChFunction_Oscilloscope_Set_dx(swigCPtr, mdx);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChFunction_Oscilloscope_Set_dx(swigCPtr, mdx);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public int Get_max_amount() {
-    int ret = ChronoEngine_csharpPINVOKE.ChFunction_Oscilloscope_Get_max_amount(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChFunction_Oscilloscope_Get_max_amount(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Set_max_amount(int mnum) {
-    ChronoEngine_csharpPINVOKE.ChFunction_Oscilloscope_Set_max_amount(swigCPtr, mnum);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChFunction_Oscilloscope_Set_max_amount(swigCPtr, mnum);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double Get_amount() {
-    double ret = ChronoEngine_csharpPINVOKE.ChFunction_Oscilloscope_Get_amount(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChFunction_Oscilloscope_Get_amount(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void Estimate_x_range(SWIGTYPE_p_double xmin, SWIGTYPE_p_double xmax) {
-    ChronoEngine_csharpPINVOKE.ChFunction_Oscilloscope_Estimate_x_range(swigCPtr, SWIGTYPE_p_double.getCPtr(xmin), SWIGTYPE_p_double.getCPtr(xmax));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChFunction_Oscilloscope_Estimate_x_range(swigCPtr, SWIGTYPE_p_double.getCPtr(xmin), SWIGTYPE_p_double.getCPtr(xmax));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void ArchiveOUT(SWIGTYPE_p_ChArchiveOut marchive) {
-    ChronoEngine_csharpPINVOKE.ChFunction_Oscilloscope_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChFunction_Oscilloscope_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn marchive) {
-    ChronoEngine_csharpPINVOKE.ChFunction_Oscilloscope_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChFunction_Oscilloscope_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

@@ -94,7 +94,7 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
     // Get the current vehicle speed (forward component of vehicle velocity expressed in local frame).
     public double GetSpeed()
     {
-        ChVectorD velG_chrono = GetChVehicle().GetVehiclePointVelocity(new ChVectorD(0, 0, 0));
+        ChVectorD velG_chrono = GetChVehicle().GetPointVelocity(new ChVectorD(0, 0, 0));
         ChVectorD velL_chrono = GetChVehicle().GetChassisBody().Dir_World2Body(velG_chrono);
         ////Debug.Log(velL_chrono.x + " " + velL_chrono.y + " " + velL_chrono.z);
 
@@ -119,7 +119,7 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
     // regardless of the world frame orientation.
     public Vector3 GetAccelerationLocal(Vector3 loc)
     {
-        ChVectorD accL_chrono = GetChVehicle().GetVehiclePointAcceleration(Utils.ToChrono(loc));
+        ChVectorD accL_chrono = GetChVehicle().GetPointAcceleration(Utils.ToChrono(loc));
         return Utils.FromChrono(accL_chrono);
     }
 

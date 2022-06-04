@@ -56,21 +56,9 @@ public class ChPitmanArmShafts : ChSteering {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public override void Synchronize(double time, double steering) {
-    vehiclePINVOKE.ChPitmanArmShafts_Synchronize(swigCPtr, time, steering);
+  public override void Synchronize(double time, DriverInputs driver_inputs) {
+    vehiclePINVOKE.ChPitmanArmShafts_Synchronize(swigCPtr, time, DriverInputs.getCPtr(driver_inputs));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public override double GetMass() {
-    double ret = vehiclePINVOKE.ChPitmanArmShafts_GetMass(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public override ChVectorD GetCOMPos() {
-    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChPitmanArmShafts_GetCOMPos(swigCPtr), true);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
   }
 
   public override void LogConstraintViolations() {

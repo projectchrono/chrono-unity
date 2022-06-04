@@ -13,7 +13,7 @@ public class ChLinePath : ChLine {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChLinePath(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChLinePath_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChLinePath(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChLinePath_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChLinePath : ChLine {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChLinePath(swigCPtr);
+          corePINVOKE.delete_ChLinePath(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -37,167 +37,167 @@ public class ChLinePath : ChLine {
 
   public SWIGTYPE_p_std__vectorT_std__shared_ptrT_chrono__geometry__ChLine_t_t lines {
     set {
-      ChronoEngine_csharpPINVOKE.ChLinePath_lines_set(swigCPtr, SWIGTYPE_p_std__vectorT_std__shared_ptrT_chrono__geometry__ChLine_t_t.getCPtr(value));
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChLinePath_lines_set(swigCPtr, SWIGTYPE_p_std__vectorT_std__shared_ptrT_chrono__geometry__ChLine_t_t.getCPtr(value));
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChLinePath_lines_get(swigCPtr);
+      global::System.IntPtr cPtr = corePINVOKE.ChLinePath_lines_get(swigCPtr);
       SWIGTYPE_p_std__vectorT_std__shared_ptrT_chrono__geometry__ChLine_t_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_std__shared_ptrT_chrono__geometry__ChLine_t_t(cPtr, false);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public SWIGTYPE_p_std__vectorT_double_t end_times {
     set {
-      ChronoEngine_csharpPINVOKE.ChLinePath_end_times_set(swigCPtr, SWIGTYPE_p_std__vectorT_double_t.getCPtr(value));
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChLinePath_end_times_set(swigCPtr, SWIGTYPE_p_std__vectorT_double_t.getCPtr(value));
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChLinePath_end_times_get(swigCPtr);
+      global::System.IntPtr cPtr = corePINVOKE.ChLinePath_end_times_get(swigCPtr);
       SWIGTYPE_p_std__vectorT_double_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_double_t(cPtr, false);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public SWIGTYPE_p_std__vectorT_double_t durations {
     set {
-      ChronoEngine_csharpPINVOKE.ChLinePath_durations_set(swigCPtr, SWIGTYPE_p_std__vectorT_double_t.getCPtr(value));
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChLinePath_durations_set(swigCPtr, SWIGTYPE_p_std__vectorT_double_t.getCPtr(value));
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChLinePath_durations_get(swigCPtr);
+      global::System.IntPtr cPtr = corePINVOKE.ChLinePath_durations_get(swigCPtr);
       SWIGTYPE_p_std__vectorT_double_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_double_t(cPtr, false);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public ChLinePath() : this(ChronoEngine_csharpPINVOKE.new_ChLinePath__SWIG_0(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChLinePath() : this(corePINVOKE.new_ChLinePath__SWIG_0(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChLinePath(ChLinePath source) : this(ChronoEngine_csharpPINVOKE.new_ChLinePath__SWIG_1(ChLinePath.getCPtr(source)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChLinePath(ChLinePath source) : this(corePINVOKE.new_ChLinePath__SWIG_1(ChLinePath.getCPtr(source)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override ChGeometry Clone() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChLinePath_Clone(swigCPtr);
+    global::System.IntPtr cPtr = corePINVOKE.ChLinePath_Clone(swigCPtr);
     ChLinePath ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChLinePath(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override ChGeometry.GeometryType GetClassType() {
-    ChGeometry.GeometryType ret = (ChGeometry.GeometryType)ChronoEngine_csharpPINVOKE.ChLinePath_GetClassType(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChGeometry.GeometryType ret = (ChGeometry.GeometryType)corePINVOKE.ChLinePath_GetClassType(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override int Get_complexity() {
-    int ret = ChronoEngine_csharpPINVOKE.ChLinePath_Get_complexity(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChLinePath_Get_complexity(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override double Length(int sampling) {
-    double ret = ChronoEngine_csharpPINVOKE.ChLinePath_Length(swigCPtr, sampling);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChLinePath_Length(swigCPtr, sampling);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void Evaluate(ChVectorD pos, double parU) {
-    ChronoEngine_csharpPINVOKE.ChLinePath_Evaluate(swigCPtr, ChVectorD.getCPtr(pos), parU);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLinePath_Evaluate(swigCPtr, ChVectorD.getCPtr(pos), parU);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override ChVectorD GetEndA() {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChLinePath_GetEndA(swigCPtr), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorD ret = new ChVectorD(corePINVOKE.ChLinePath_GetEndA(swigCPtr), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override ChVectorD GetEndB() {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChLinePath_GetEndB(swigCPtr), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorD ret = new ChVectorD(corePINVOKE.ChLinePath_GetEndB(swigCPtr), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public uint GetSubLinesCount() {
-    uint ret = ChronoEngine_csharpPINVOKE.ChLinePath_GetSubLinesCount(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    uint ret = corePINVOKE.ChLinePath_GetSubLinesCount(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ChLine GetSubLineN(uint n) {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChLinePath_GetSubLineN(swigCPtr, n);
+    global::System.IntPtr cPtr = corePINVOKE.ChLinePath_GetSubLineN(swigCPtr, n);
     ChLine ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChLine(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public double GetSubLineDurationN(uint n) {
-    double ret = ChronoEngine_csharpPINVOKE.ChLinePath_GetSubLineDurationN(swigCPtr, n);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChLinePath_GetSubLineDurationN(swigCPtr, n);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetSubLineDurationN(uint n, double mduration) {
-    ChronoEngine_csharpPINVOKE.ChLinePath_SetSubLineDurationN(swigCPtr, n, mduration);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLinePath_SetSubLineDurationN(swigCPtr, n, mduration);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void AddSubLine(ChLine mline, double duration) {
-    ChronoEngine_csharpPINVOKE.ChLinePath_AddSubLine__SWIG_0(swigCPtr, ChLine.getCPtr(mline), duration);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLinePath_AddSubLine__SWIG_0(swigCPtr, ChLine.getCPtr(mline), duration);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void AddSubLine(ChLine mline) {
-    ChronoEngine_csharpPINVOKE.ChLinePath_AddSubLine__SWIG_1(swigCPtr, ChLine.getCPtr(mline));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLinePath_AddSubLine__SWIG_1(swigCPtr, ChLine.getCPtr(mline));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void InsertSubLine(uint n, ChLine mline, double duration) {
-    ChronoEngine_csharpPINVOKE.ChLinePath_InsertSubLine__SWIG_0(swigCPtr, n, ChLine.getCPtr(mline), duration);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLinePath_InsertSubLine__SWIG_0(swigCPtr, n, ChLine.getCPtr(mline), duration);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void InsertSubLine(uint n, ChLine mline) {
-    ChronoEngine_csharpPINVOKE.ChLinePath_InsertSubLine__SWIG_1(swigCPtr, n, ChLine.getCPtr(mline));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLinePath_InsertSubLine__SWIG_1(swigCPtr, n, ChLine.getCPtr(mline));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void EraseSubLine(uint n) {
-    ChronoEngine_csharpPINVOKE.ChLinePath_EraseSubLine(swigCPtr, n);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLinePath_EraseSubLine(swigCPtr, n);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double GetPathDuration() {
-    double ret = ChronoEngine_csharpPINVOKE.ChLinePath_GetPathDuration(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChLinePath_GetPathDuration(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetPathDuration(double mUduration) {
-    ChronoEngine_csharpPINVOKE.ChLinePath_SetPathDuration(swigCPtr, mUduration);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLinePath_SetPathDuration(swigCPtr, mUduration);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double GetContinuityMaxError() {
-    double ret = ChronoEngine_csharpPINVOKE.ChLinePath_GetContinuityMaxError(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChLinePath_GetContinuityMaxError(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void ArchiveOUT(SWIGTYPE_p_ChArchiveOut marchive) {
-    ChronoEngine_csharpPINVOKE.ChLinePath_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLinePath_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn marchive) {
-    ChronoEngine_csharpPINVOKE.ChLinePath_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLinePath_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

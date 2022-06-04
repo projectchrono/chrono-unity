@@ -27,11 +27,12 @@ public class UChTSDA : MonoBehaviour
     {
         spring = new ChLinkTSDA();
         spring.Initialize(body1.GetChBody(), body2.GetChBody(), 
-                          useRelativePos, Utils.ToChrono(position1), Utils.ToChrono(position2),
-                          autoRestLength, restLength);
+                          useRelativePos, Utils.ToChrono(position1), Utils.ToChrono(position2));
         spring.SetSpringCoefficient(springCoefficient);
         spring.SetDampingCoefficient(dampingCoefficient);
         spring.SetActuatorForce(actuatorForce);
+        if (autoRestLength)
+            spring.SetRestLength(restLength);
 
         UChSystem.chrono_system.AddLink(spring);
 

@@ -36,24 +36,24 @@ public class ChException : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChException(swigCPtr);
+          corePINVOKE.delete_ChException(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public ChException(string swhat) : this(ChronoEngine_csharpPINVOKE.new_ChException__SWIG_0(swhat), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChException(string swhat) : this(corePINVOKE.new_ChException__SWIG_0(swhat), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChException(ChException right) : this(ChronoEngine_csharpPINVOKE.new_ChException__SWIG_1(ChException.getCPtr(right)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChException(ChException right) : this(corePINVOKE.new_ChException__SWIG_1(ChException.getCPtr(right)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual string what() {
-    string ret = ChronoEngine_csharpPINVOKE.ChException_what(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    string ret = corePINVOKE.ChException_what(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

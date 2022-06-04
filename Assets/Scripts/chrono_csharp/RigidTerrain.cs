@@ -139,8 +139,8 @@ public class RigidTerrain : ChTerrain {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public SWIGTYPE_p_std__vectorT_std__shared_ptrT_chrono__vehicle__RigidTerrain__Patch_t_t GetPatches() {
-    SWIGTYPE_p_std__vectorT_std__shared_ptrT_chrono__vehicle__RigidTerrain__Patch_t_t ret = new SWIGTYPE_p_std__vectorT_std__shared_ptrT_chrono__vehicle__RigidTerrain__Patch_t_t(vehiclePINVOKE.RigidTerrain_GetPatches(swigCPtr), false);
+  public ChPatchList GetPatches() {
+    ChPatchList ret = new ChPatchList(vehiclePINVOKE.RigidTerrain_GetPatches(swigCPtr), false);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

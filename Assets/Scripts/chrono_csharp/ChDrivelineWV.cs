@@ -46,8 +46,8 @@ public class ChDrivelineWV : ChDriveline {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public virtual void Synchronize(double torque) {
-    vehiclePINVOKE.ChDrivelineWV_Synchronize(swigCPtr, torque);
+  public virtual void Synchronize(double time, DriverInputs driver_inputs, double torque) {
+    vehiclePINVOKE.ChDrivelineWV_Synchronize(swigCPtr, time, DriverInputs.getCPtr(driver_inputs), torque);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

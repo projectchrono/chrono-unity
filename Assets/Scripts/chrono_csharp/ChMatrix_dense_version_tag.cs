@@ -36,15 +36,15 @@ public class ChMatrix_dense_version_tag : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChMatrix_dense_version_tag(swigCPtr);
+          corePINVOKE.delete_ChMatrix_dense_version_tag(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public ChMatrix_dense_version_tag() : this(ChronoEngine_csharpPINVOKE.new_ChMatrix_dense_version_tag(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChMatrix_dense_version_tag() : this(corePINVOKE.new_ChMatrix_dense_version_tag(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

@@ -53,18 +53,18 @@ public class ChRigidPinnedAxle : ChSuspension {
     return ret;
   }
 
-  public override void Initialize(ChChassis chassis, SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t subchassis, SWIGTYPE_p_std__shared_ptrT_chrono__vehicle__ChSteering_t steering, ChVectorD location, double left_ang_vel, double right_ang_vel) {
-    vehiclePINVOKE.ChRigidPinnedAxle_Initialize__SWIG_0(swigCPtr, ChChassis.getCPtr(chassis), SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t.getCPtr(subchassis), SWIGTYPE_p_std__shared_ptrT_chrono__vehicle__ChSteering_t.getCPtr(steering), ChVectorD.getCPtr(location), left_ang_vel, right_ang_vel);
+  public override void Initialize(ChChassis chassis, ChSubchassis subchassis, ChSteering steering, ChVectorD location, double left_ang_vel, double right_ang_vel) {
+    vehiclePINVOKE.ChRigidPinnedAxle_Initialize__SWIG_0(swigCPtr, ChChassis.getCPtr(chassis), ChSubchassis.getCPtr(subchassis), ChSteering.getCPtr(steering), ChVectorD.getCPtr(location), left_ang_vel, right_ang_vel);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public override void Initialize(ChChassis chassis, SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t subchassis, SWIGTYPE_p_std__shared_ptrT_chrono__vehicle__ChSteering_t steering, ChVectorD location, double left_ang_vel) {
-    vehiclePINVOKE.ChRigidPinnedAxle_Initialize__SWIG_1(swigCPtr, ChChassis.getCPtr(chassis), SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t.getCPtr(subchassis), SWIGTYPE_p_std__shared_ptrT_chrono__vehicle__ChSteering_t.getCPtr(steering), ChVectorD.getCPtr(location), left_ang_vel);
+  public override void Initialize(ChChassis chassis, ChSubchassis subchassis, ChSteering steering, ChVectorD location, double left_ang_vel) {
+    vehiclePINVOKE.ChRigidPinnedAxle_Initialize__SWIG_1(swigCPtr, ChChassis.getCPtr(chassis), ChSubchassis.getCPtr(subchassis), ChSteering.getCPtr(steering), ChVectorD.getCPtr(location), left_ang_vel);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public override void Initialize(ChChassis chassis, SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t subchassis, SWIGTYPE_p_std__shared_ptrT_chrono__vehicle__ChSteering_t steering, ChVectorD location) {
-    vehiclePINVOKE.ChRigidPinnedAxle_Initialize__SWIG_2(swigCPtr, ChChassis.getCPtr(chassis), SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t.getCPtr(subchassis), SWIGTYPE_p_std__shared_ptrT_chrono__vehicle__ChSteering_t.getCPtr(steering), ChVectorD.getCPtr(location));
+  public override void Initialize(ChChassis chassis, ChSubchassis subchassis, ChSteering steering, ChVectorD location) {
+    vehiclePINVOKE.ChRigidPinnedAxle_Initialize__SWIG_2(swigCPtr, ChChassis.getCPtr(chassis), ChSubchassis.getCPtr(subchassis), ChSteering.getCPtr(steering), ChVectorD.getCPtr(location));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -76,18 +76,6 @@ public class ChRigidPinnedAxle : ChSuspension {
   public override void RemoveVisualizationAssets() {
     vehiclePINVOKE.ChRigidPinnedAxle_RemoveVisualizationAssets(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public override double GetMass() {
-    double ret = vehiclePINVOKE.ChRigidPinnedAxle_GetMass(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public override ChVectorD GetCOMPos() {
-    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChRigidPinnedAxle_GetCOMPos(swigCPtr), true);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
   }
 
   public override double GetTrack() {

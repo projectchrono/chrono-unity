@@ -35,8 +35,8 @@ public class ChSteering : ChPart {
     }
   }
 
-  public ChCoordsysD GetPosition() {
-    ChCoordsysD ret = new ChCoordsysD(vehiclePINVOKE.ChSteering_GetPosition(swigCPtr), false);
+  public SWIGTYPE_p_chrono__ChFrameT_double_t GetRelTransform() {
+    SWIGTYPE_p_chrono__ChFrameT_double_t ret = new SWIGTYPE_p_chrono__ChFrameT_double_t(vehiclePINVOKE.ChSteering_GetRelTransform(swigCPtr), false);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -53,21 +53,9 @@ public class ChSteering : ChPart {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public virtual void Synchronize(double time, double steering) {
-    vehiclePINVOKE.ChSteering_Synchronize(swigCPtr, time, steering);
+  public virtual void Synchronize(double time, DriverInputs driver_inputs) {
+    vehiclePINVOKE.ChSteering_Synchronize(swigCPtr, time, DriverInputs.getCPtr(driver_inputs));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public virtual double GetMass() {
-    double ret = vehiclePINVOKE.ChSteering_GetMass(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public virtual ChVectorD GetCOMPos() {
-    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChSteering_GetCOMPos(swigCPtr), true);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
   }
 
   public virtual void LogConstraintViolations() {

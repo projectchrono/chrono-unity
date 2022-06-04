@@ -36,15 +36,15 @@ public class ChImplicitTimestepper : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnBase) {
           swigCMemOwnBase = false;
-          ChronoEngine_csharpPINVOKE.delete_ChImplicitTimestepper(swigCPtr);
+          corePINVOKE.delete_ChImplicitTimestepper(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public ChImplicitTimestepper() : this(ChronoEngine_csharpPINVOKE.new_ChImplicitTimestepper(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChImplicitTimestepper() : this(corePINVOKE.new_ChImplicitTimestepper(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

@@ -35,7 +35,7 @@ public class M113_TrackAssemblyDoublePin : ChTrackAssemblyDoublePin {
     }
   }
 
-  public M113_TrackAssemblyDoublePin(VehicleSide side, BrakeType brake_type, bool add_RSDA) : this(vehiclePINVOKE.new_M113_TrackAssemblyDoublePin((int)side, (int)brake_type, add_RSDA), true) {
+  public M113_TrackAssemblyDoublePin(VehicleSide side, DoublePinTrackShoeType topology, BrakeType brake_type, bool use_track_bushings, bool use_suspension_bushings, bool use_track_RSDA) : this(vehiclePINVOKE.new_M113_TrackAssemblyDoublePin((int)side, (int)topology, (int)brake_type, use_track_bushings, use_suspension_bushings, use_track_RSDA), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

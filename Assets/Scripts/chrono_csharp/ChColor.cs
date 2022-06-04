@@ -36,7 +36,7 @@ public class ChColor : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChColor(swigCPtr);
+          corePINVOKE.delete_ChColor(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -45,88 +45,72 @@ public class ChColor : global::System.IDisposable {
 
   public float R {
     set {
-      ChronoEngine_csharpPINVOKE.ChColor_R_set(swigCPtr, value);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChColor_R_set(swigCPtr, value);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      float ret = ChronoEngine_csharpPINVOKE.ChColor_R_get(swigCPtr);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      float ret = corePINVOKE.ChColor_R_get(swigCPtr);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public float G {
     set {
-      ChronoEngine_csharpPINVOKE.ChColor_G_set(swigCPtr, value);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChColor_G_set(swigCPtr, value);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      float ret = ChronoEngine_csharpPINVOKE.ChColor_G_get(swigCPtr);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      float ret = corePINVOKE.ChColor_G_get(swigCPtr);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public float B {
     set {
-      ChronoEngine_csharpPINVOKE.ChColor_B_set(swigCPtr, value);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChColor_B_set(swigCPtr, value);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      float ret = ChronoEngine_csharpPINVOKE.ChColor_B_get(swigCPtr);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      float ret = corePINVOKE.ChColor_B_get(swigCPtr);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public float A {
-    set {
-      ChronoEngine_csharpPINVOKE.ChColor_A_set(swigCPtr, value);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-    } 
-    get {
-      float ret = ChronoEngine_csharpPINVOKE.ChColor_A_get(swigCPtr);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-      return ret;
-    } 
+  public ChColor() : this(corePINVOKE.new_ChColor__SWIG_0(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChColor() : this(ChronoEngine_csharpPINVOKE.new_ChColor__SWIG_0(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChColor(float red, float green, float blue) : this(corePINVOKE.new_ChColor__SWIG_1(red, green, blue), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChColor(float mR, float mG, float mB, float mA) : this(ChronoEngine_csharpPINVOKE.new_ChColor__SWIG_1(mR, mG, mB, mA), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public ChColor(float mR, float mG, float mB) : this(ChronoEngine_csharpPINVOKE.new_ChColor__SWIG_2(mR, mG, mB), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public ChColor(ChColor other) : this(ChronoEngine_csharpPINVOKE.new_ChColor__SWIG_3(ChColor.getCPtr(other)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChColor(ChColor other) : this(corePINVOKE.new_ChColor__SWIG_2(ChColor.getCPtr(other)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public static ChColor ComputeFalseColor(double v, double vmin, double vmax, bool out_of_range_as_bw) {
-    ChColor ret = new ChColor(ChronoEngine_csharpPINVOKE.ChColor_ComputeFalseColor__SWIG_0(v, vmin, vmax, out_of_range_as_bw), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChColor ret = new ChColor(corePINVOKE.ChColor_ComputeFalseColor__SWIG_0(v, vmin, vmax, out_of_range_as_bw), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static ChColor ComputeFalseColor(double v, double vmin, double vmax) {
-    ChColor ret = new ChColor(ChronoEngine_csharpPINVOKE.ChColor_ComputeFalseColor__SWIG_1(v, vmin, vmax), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChColor ret = new ChColor(corePINVOKE.ChColor_ComputeFalseColor__SWIG_1(v, vmin, vmax), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void ArchiveOUT(SWIGTYPE_p_ChArchiveOut marchive) {
-    ChronoEngine_csharpPINVOKE.ChColor_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChColor_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn marchive) {
-    ChronoEngine_csharpPINVOKE.ChColor_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChColor_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

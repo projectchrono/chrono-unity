@@ -37,7 +37,7 @@ public class vector_ChLink : global::System.IDisposable, global::System.Collecti
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_vector_ChLink(swigCPtr);
+          corePINVOKE.delete_vector_ChLink(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -217,115 +217,115 @@ public class vector_ChLink : global::System.IDisposable, global::System.Collecti
   }
 
   public void Clear() {
-    ChronoEngine_csharpPINVOKE.vector_ChLink_Clear(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.vector_ChLink_Clear(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Add(ChLink x) {
-    ChronoEngine_csharpPINVOKE.vector_ChLink_Add(swigCPtr, ChLink.getCPtr(x));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.vector_ChLink_Add(swigCPtr, ChLink.getCPtr(x));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = ChronoEngine_csharpPINVOKE.vector_ChLink_size(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    uint ret = corePINVOKE.vector_ChLink_size(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private uint capacity() {
-    uint ret = ChronoEngine_csharpPINVOKE.vector_ChLink_capacity(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    uint ret = corePINVOKE.vector_ChLink_capacity(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private void reserve(uint n) {
-    ChronoEngine_csharpPINVOKE.vector_ChLink_reserve(swigCPtr, n);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.vector_ChLink_reserve(swigCPtr, n);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public vector_ChLink() : this(ChronoEngine_csharpPINVOKE.new_vector_ChLink__SWIG_0(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public vector_ChLink() : this(corePINVOKE.new_vector_ChLink__SWIG_0(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public vector_ChLink(vector_ChLink other) : this(ChronoEngine_csharpPINVOKE.new_vector_ChLink__SWIG_1(vector_ChLink.getCPtr(other)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public vector_ChLink(vector_ChLink other) : this(corePINVOKE.new_vector_ChLink__SWIG_1(vector_ChLink.getCPtr(other)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public vector_ChLink(int capacity) : this(ChronoEngine_csharpPINVOKE.new_vector_ChLink__SWIG_2(capacity), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public vector_ChLink(int capacity) : this(corePINVOKE.new_vector_ChLink__SWIG_2(capacity), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   private ChLink getitemcopy(int index) {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.vector_ChLink_getitemcopy(swigCPtr, index);
+    global::System.IntPtr cPtr = corePINVOKE.vector_ChLink_getitemcopy(swigCPtr, index);
     ChLink ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChLink(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private ChLink getitem(int index) {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.vector_ChLink_getitem(swigCPtr, index);
+    global::System.IntPtr cPtr = corePINVOKE.vector_ChLink_getitem(swigCPtr, index);
     ChLink ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChLink(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private void setitem(int index, ChLink val) {
-    ChronoEngine_csharpPINVOKE.vector_ChLink_setitem(swigCPtr, index, ChLink.getCPtr(val));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.vector_ChLink_setitem(swigCPtr, index, ChLink.getCPtr(val));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void AddRange(vector_ChLink values) {
-    ChronoEngine_csharpPINVOKE.vector_ChLink_AddRange(swigCPtr, vector_ChLink.getCPtr(values));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.vector_ChLink_AddRange(swigCPtr, vector_ChLink.getCPtr(values));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public vector_ChLink GetRange(int index, int count) {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.vector_ChLink_GetRange(swigCPtr, index, count);
+    global::System.IntPtr cPtr = corePINVOKE.vector_ChLink_GetRange(swigCPtr, index, count);
     vector_ChLink ret = (cPtr == global::System.IntPtr.Zero) ? null : new vector_ChLink(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Insert(int index, ChLink x) {
-    ChronoEngine_csharpPINVOKE.vector_ChLink_Insert(swigCPtr, index, ChLink.getCPtr(x));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.vector_ChLink_Insert(swigCPtr, index, ChLink.getCPtr(x));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void InsertRange(int index, vector_ChLink values) {
-    ChronoEngine_csharpPINVOKE.vector_ChLink_InsertRange(swigCPtr, index, vector_ChLink.getCPtr(values));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.vector_ChLink_InsertRange(swigCPtr, index, vector_ChLink.getCPtr(values));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void RemoveAt(int index) {
-    ChronoEngine_csharpPINVOKE.vector_ChLink_RemoveAt(swigCPtr, index);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.vector_ChLink_RemoveAt(swigCPtr, index);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void RemoveRange(int index, int count) {
-    ChronoEngine_csharpPINVOKE.vector_ChLink_RemoveRange(swigCPtr, index, count);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.vector_ChLink_RemoveRange(swigCPtr, index, count);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public static vector_ChLink Repeat(ChLink value, int count) {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.vector_ChLink_Repeat(ChLink.getCPtr(value), count);
+    global::System.IntPtr cPtr = corePINVOKE.vector_ChLink_Repeat(ChLink.getCPtr(value), count);
     vector_ChLink ret = (cPtr == global::System.IntPtr.Zero) ? null : new vector_ChLink(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Reverse() {
-    ChronoEngine_csharpPINVOKE.vector_ChLink_Reverse__SWIG_0(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.vector_ChLink_Reverse__SWIG_0(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Reverse(int index, int count) {
-    ChronoEngine_csharpPINVOKE.vector_ChLink_Reverse__SWIG_1(swigCPtr, index, count);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.vector_ChLink_Reverse__SWIG_1(swigCPtr, index, count);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetRange(int index, vector_ChLink values) {
-    ChronoEngine_csharpPINVOKE.vector_ChLink_SetRange(swigCPtr, index, vector_ChLink.getCPtr(values));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.vector_ChLink_SetRange(swigCPtr, index, vector_ChLink.getCPtr(values));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

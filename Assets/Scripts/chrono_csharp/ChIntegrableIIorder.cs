@@ -13,7 +13,7 @@ public class ChIntegrableIIorder : ChIntegrable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChIntegrableIIorder(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChIntegrableIIorder_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChIntegrableIIorder(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChIntegrableIIorder_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChIntegrableIIorder : ChIntegrable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChIntegrableIIorder(swigCPtr);
+          corePINVOKE.delete_ChIntegrableIIorder(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -36,146 +36,146 @@ public class ChIntegrableIIorder : ChIntegrable {
   }
 
   public virtual int GetNcoords_x() {
-    int ret = ChronoEngine_csharpPINVOKE.ChIntegrableIIorder_GetNcoords_x(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChIntegrableIIorder_GetNcoords_x(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int GetNcoords_v() {
-    int ret = ChronoEngine_csharpPINVOKE.ChIntegrableIIorder_GetNcoords_v(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChIntegrableIIorder_GetNcoords_v(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int GetNcoords_a() {
-    int ret = ChronoEngine_csharpPINVOKE.ChIntegrableIIorder_GetNcoords_a(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChIntegrableIIorder_GetNcoords_a(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void StateSetup(ChState x, ChStateDelta v, ChStateDelta a) {
-    ChronoEngine_csharpPINVOKE.ChIntegrableIIorder_StateSetup(swigCPtr, ChState.getCPtr(x), ChStateDelta.getCPtr(v), ChStateDelta.getCPtr(a));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChIntegrableIIorder_StateSetup(swigCPtr, ChState.getCPtr(x), ChStateDelta.getCPtr(v), ChStateDelta.getCPtr(a));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void StateGather(ChState x, ChStateDelta v, SWIGTYPE_p_double T) {
-    ChronoEngine_csharpPINVOKE.ChIntegrableIIorder_StateGather__SWIG_0(swigCPtr, ChState.getCPtr(x), ChStateDelta.getCPtr(v), SWIGTYPE_p_double.getCPtr(T));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChIntegrableIIorder_StateGather__SWIG_0(swigCPtr, ChState.getCPtr(x), ChStateDelta.getCPtr(v), SWIGTYPE_p_double.getCPtr(T));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void StateScatter(ChState x, ChStateDelta v, double T, bool full_update) {
-    ChronoEngine_csharpPINVOKE.ChIntegrableIIorder_StateScatter__SWIG_0(swigCPtr, ChState.getCPtr(x), ChStateDelta.getCPtr(v), T, full_update);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChIntegrableIIorder_StateScatter__SWIG_0(swigCPtr, ChState.getCPtr(x), ChStateDelta.getCPtr(v), T, full_update);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void StateGatherAcceleration(ChStateDelta a) {
-    ChronoEngine_csharpPINVOKE.ChIntegrableIIorder_StateGatherAcceleration(swigCPtr, ChStateDelta.getCPtr(a));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChIntegrableIIorder_StateGatherAcceleration(swigCPtr, ChStateDelta.getCPtr(a));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void StateScatterAcceleration(ChStateDelta a) {
-    ChronoEngine_csharpPINVOKE.ChIntegrableIIorder_StateScatterAcceleration(swigCPtr, ChStateDelta.getCPtr(a));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChIntegrableIIorder_StateScatterAcceleration(swigCPtr, ChStateDelta.getCPtr(a));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual bool StateSolveA(ChStateDelta Dvdt, ChVectorDynamicD L, ChState x, ChStateDelta v, double T, double dt, bool force_state_scatter, bool full_update) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChIntegrableIIorder_StateSolveA(swigCPtr, ChStateDelta.getCPtr(Dvdt), ChVectorDynamicD.getCPtr(L), ChState.getCPtr(x), ChStateDelta.getCPtr(v), T, dt, force_state_scatter, full_update);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChIntegrableIIorder_StateSolveA(swigCPtr, ChStateDelta.getCPtr(Dvdt), ChVectorDynamicD.getCPtr(L), ChState.getCPtr(x), ChStateDelta.getCPtr(v), T, dt, force_state_scatter, full_update);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void StateIncrementX(ChState x_new, ChState x, ChStateDelta Dx) {
-    ChronoEngine_csharpPINVOKE.ChIntegrableIIorder_StateIncrementX(swigCPtr, ChState.getCPtr(x_new), ChState.getCPtr(x), ChStateDelta.getCPtr(Dx));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChIntegrableIIorder_StateIncrementX(swigCPtr, ChState.getCPtr(x_new), ChState.getCPtr(x), ChStateDelta.getCPtr(Dx));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual bool StateSolveCorrection(ChStateDelta Dv, ChVectorDynamicD L, ChVectorDynamicD R, ChVectorDynamicD Qc, double c_a, double c_v, double c_x, ChState x, ChStateDelta v, double T, bool force_state_scatter, bool full_update, bool force_setup) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChIntegrableIIorder_StateSolveCorrection__SWIG_0(swigCPtr, ChStateDelta.getCPtr(Dv), ChVectorDynamicD.getCPtr(L), ChVectorDynamicD.getCPtr(R), ChVectorDynamicD.getCPtr(Qc), c_a, c_v, c_x, ChState.getCPtr(x), ChStateDelta.getCPtr(v), T, force_state_scatter, full_update, force_setup);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChIntegrableIIorder_StateSolveCorrection__SWIG_0(swigCPtr, ChStateDelta.getCPtr(Dv), ChVectorDynamicD.getCPtr(L), ChVectorDynamicD.getCPtr(R), ChVectorDynamicD.getCPtr(Qc), c_a, c_v, c_x, ChState.getCPtr(x), ChStateDelta.getCPtr(v), T, force_state_scatter, full_update, force_setup);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void LoadResidual_F(ChVectorDynamicD R, double c) {
-    ChronoEngine_csharpPINVOKE.ChIntegrableIIorder_LoadResidual_F(swigCPtr, ChVectorDynamicD.getCPtr(R), c);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChIntegrableIIorder_LoadResidual_F(swigCPtr, ChVectorDynamicD.getCPtr(R), c);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void LoadResidual_Mv(ChVectorDynamicD R, ChVectorDynamicD w, double c) {
-    ChronoEngine_csharpPINVOKE.ChIntegrableIIorder_LoadResidual_Mv(swigCPtr, ChVectorDynamicD.getCPtr(R), ChVectorDynamicD.getCPtr(w), c);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChIntegrableIIorder_LoadResidual_Mv(swigCPtr, ChVectorDynamicD.getCPtr(R), ChVectorDynamicD.getCPtr(w), c);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void LoadResidual_CqL(ChVectorDynamicD R, ChVectorDynamicD L, double c) {
-    ChronoEngine_csharpPINVOKE.ChIntegrableIIorder_LoadResidual_CqL(swigCPtr, ChVectorDynamicD.getCPtr(R), ChVectorDynamicD.getCPtr(L), c);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChIntegrableIIorder_LoadResidual_CqL(swigCPtr, ChVectorDynamicD.getCPtr(R), ChVectorDynamicD.getCPtr(L), c);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void LoadConstraint_C(ChVectorDynamicD Qc, double c, bool do_clamp, double mclam) {
-    ChronoEngine_csharpPINVOKE.ChIntegrableIIorder_LoadConstraint_C__SWIG_0(swigCPtr, ChVectorDynamicD.getCPtr(Qc), c, do_clamp, mclam);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChIntegrableIIorder_LoadConstraint_C__SWIG_0(swigCPtr, ChVectorDynamicD.getCPtr(Qc), c, do_clamp, mclam);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void LoadConstraint_C(ChVectorDynamicD Qc, double c, bool do_clamp) {
-    ChronoEngine_csharpPINVOKE.ChIntegrableIIorder_LoadConstraint_C__SWIG_1(swigCPtr, ChVectorDynamicD.getCPtr(Qc), c, do_clamp);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChIntegrableIIorder_LoadConstraint_C__SWIG_1(swigCPtr, ChVectorDynamicD.getCPtr(Qc), c, do_clamp);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void LoadConstraint_C(ChVectorDynamicD Qc, double c) {
-    ChronoEngine_csharpPINVOKE.ChIntegrableIIorder_LoadConstraint_C__SWIG_2(swigCPtr, ChVectorDynamicD.getCPtr(Qc), c);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChIntegrableIIorder_LoadConstraint_C__SWIG_2(swigCPtr, ChVectorDynamicD.getCPtr(Qc), c);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void LoadConstraint_Ct(ChVectorDynamicD Qc, double c) {
-    ChronoEngine_csharpPINVOKE.ChIntegrableIIorder_LoadConstraint_Ct(swigCPtr, ChVectorDynamicD.getCPtr(Qc), c);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChIntegrableIIorder_LoadConstraint_Ct(swigCPtr, ChVectorDynamicD.getCPtr(Qc), c);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override int GetNcoords_y() {
-    int ret = ChronoEngine_csharpPINVOKE.ChIntegrableIIorder_GetNcoords_y(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChIntegrableIIorder_GetNcoords_y(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override int GetNcoords_dy() {
-    int ret = ChronoEngine_csharpPINVOKE.ChIntegrableIIorder_GetNcoords_dy(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChIntegrableIIorder_GetNcoords_dy(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void StateGather(ChState y, SWIGTYPE_p_double T) {
-    ChronoEngine_csharpPINVOKE.ChIntegrableIIorder_StateGather__SWIG_1(swigCPtr, ChState.getCPtr(y), SWIGTYPE_p_double.getCPtr(T));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChIntegrableIIorder_StateGather__SWIG_1(swigCPtr, ChState.getCPtr(y), SWIGTYPE_p_double.getCPtr(T));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void StateScatter(ChState y, double T, bool full_update) {
-    ChronoEngine_csharpPINVOKE.ChIntegrableIIorder_StateScatter__SWIG_1(swigCPtr, ChState.getCPtr(y), T, full_update);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChIntegrableIIorder_StateScatter__SWIG_1(swigCPtr, ChState.getCPtr(y), T, full_update);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void StateGatherDerivative(ChStateDelta Dydt) {
-    ChronoEngine_csharpPINVOKE.ChIntegrableIIorder_StateGatherDerivative(swigCPtr, ChStateDelta.getCPtr(Dydt));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChIntegrableIIorder_StateGatherDerivative(swigCPtr, ChStateDelta.getCPtr(Dydt));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void StateScatterDerivative(ChStateDelta Dydt) {
-    ChronoEngine_csharpPINVOKE.ChIntegrableIIorder_StateScatterDerivative(swigCPtr, ChStateDelta.getCPtr(Dydt));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChIntegrableIIorder_StateScatterDerivative(swigCPtr, ChStateDelta.getCPtr(Dydt));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void StateIncrement(ChState y_new, ChState y, ChStateDelta Dy) {
-    ChronoEngine_csharpPINVOKE.ChIntegrableIIorder_StateIncrement(swigCPtr, ChState.getCPtr(y_new), ChState.getCPtr(y), ChStateDelta.getCPtr(Dy));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChIntegrableIIorder_StateIncrement(swigCPtr, ChState.getCPtr(y_new), ChState.getCPtr(y), ChStateDelta.getCPtr(Dy));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override bool StateSolve(ChStateDelta dydt, ChVectorDynamicD L, ChState y, double T, double dt, bool force_state_scatter, bool full_update) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChIntegrableIIorder_StateSolve(swigCPtr, ChStateDelta.getCPtr(dydt), ChVectorDynamicD.getCPtr(L), ChState.getCPtr(y), T, dt, force_state_scatter, full_update);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChIntegrableIIorder_StateSolve(swigCPtr, ChStateDelta.getCPtr(dydt), ChVectorDynamicD.getCPtr(L), ChState.getCPtr(y), T, dt, force_state_scatter, full_update);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override bool StateSolveCorrection(ChStateDelta Dy, ChVectorDynamicD L, ChVectorDynamicD R, ChVectorDynamicD Qc, double a, double b, ChState y, double T, double dt, bool force_state_scatter, bool full_update, bool force_setup) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChIntegrableIIorder_StateSolveCorrection__SWIG_1(swigCPtr, ChStateDelta.getCPtr(Dy), ChVectorDynamicD.getCPtr(L), ChVectorDynamicD.getCPtr(R), ChVectorDynamicD.getCPtr(Qc), a, b, ChState.getCPtr(y), T, dt, force_state_scatter, full_update, force_setup);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChIntegrableIIorder_StateSolveCorrection__SWIG_1(swigCPtr, ChStateDelta.getCPtr(Dy), ChVectorDynamicD.getCPtr(L), ChVectorDynamicD.getCPtr(R), ChVectorDynamicD.getCPtr(Qc), a, b, ChState.getCPtr(y), T, dt, force_state_scatter, full_update, force_setup);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

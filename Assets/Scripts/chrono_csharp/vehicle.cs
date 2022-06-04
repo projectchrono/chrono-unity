@@ -27,14 +27,62 @@ public class vehicle {
     return ret;
   }
 
-  public static SWIGTYPE_p_std__vectorT_std__string_t splitStr(string s, char delim, SWIGTYPE_p_std__vectorT_std__string_t elems) {
-    SWIGTYPE_p_std__vectorT_std__string_t ret = new SWIGTYPE_p_std__vectorT_std__string_t(vehiclePINVOKE.splitStr__SWIG_0(s, delim, SWIGTYPE_p_std__vectorT_std__string_t.getCPtr(elems)), false);
+  public static SWIGTYPE_p_int new_intp() {
+    global::System.IntPtr cPtr = vehiclePINVOKE.new_intp();
+    SWIGTYPE_p_int ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_int(cPtr, false);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public static SWIGTYPE_p_std__vectorT_std__string_t splitStr(string s, char delim) {
-    SWIGTYPE_p_std__vectorT_std__string_t ret = new SWIGTYPE_p_std__vectorT_std__string_t(vehiclePINVOKE.splitStr__SWIG_1(s, delim), true);
+  public static SWIGTYPE_p_int copy_intp(int value) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.copy_intp(value);
+    SWIGTYPE_p_int ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_int(cPtr, false);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static void delete_intp(SWIGTYPE_p_int obj) {
+    vehiclePINVOKE.delete_intp(SWIGTYPE_p_int.getCPtr(obj));
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void intp_assign(SWIGTYPE_p_int obj, int value) {
+    vehiclePINVOKE.intp_assign(SWIGTYPE_p_int.getCPtr(obj), value);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static int intp_value(SWIGTYPE_p_int obj) {
+    int ret = vehiclePINVOKE.intp_value(SWIGTYPE_p_int.getCPtr(obj));
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static SWIGTYPE_p_double new_doublep() {
+    global::System.IntPtr cPtr = vehiclePINVOKE.new_doublep();
+    SWIGTYPE_p_double ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_double(cPtr, false);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static SWIGTYPE_p_double copy_doublep(double value) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.copy_doublep(value);
+    SWIGTYPE_p_double ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_double(cPtr, false);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static void delete_doublep(SWIGTYPE_p_double obj) {
+    vehiclePINVOKE.delete_doublep(SWIGTYPE_p_double.getCPtr(obj));
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void doublep_assign(SWIGTYPE_p_double obj, double value) {
+    vehiclePINVOKE.doublep_assign(SWIGTYPE_p_double.getCPtr(obj), value);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static double doublep_value(SWIGTYPE_p_double obj) {
+    double ret = vehiclePINVOKE.doublep_value(SWIGTYPE_p_double.getCPtr(obj));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -84,6 +132,172 @@ public class vehicle {
   public static ChBezierCurve DoubleLaneChangePath(ChVectorD start, double ramp, double width, double length, double run) {
     global::System.IntPtr cPtr = vehiclePINVOKE.DoubleLaneChangePath__SWIG_1(ChVectorD.getCPtr(start), ramp, width, length, run);
     ChBezierCurve ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBezierCurve(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static void ReadFileJSON(string filename, SWIGTYPE_p_rapidjson__Document d) {
+    vehiclePINVOKE.ReadFileJSON(filename, SWIGTYPE_p_rapidjson__Document.getCPtr(d));
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static ChVectorD ReadVectorJSON(SWIGTYPE_p_rapidjson__Value a) {
+    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ReadVectorJSON(SWIGTYPE_p_rapidjson__Value.getCPtr(a)), true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChQuaternionD ReadQuaternionJSON(SWIGTYPE_p_rapidjson__Value a) {
+    ChQuaternionD ret = new ChQuaternionD(vehiclePINVOKE.ReadQuaternionJSON(SWIGTYPE_p_rapidjson__Value.getCPtr(a)), true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChColor ReadColorJSON(SWIGTYPE_p_rapidjson__Value a) {
+    ChColor ret = new ChColor(vehiclePINVOKE.ReadColorJSON(SWIGTYPE_p_rapidjson__Value.getCPtr(a)), true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static MaterialInfo ReadMaterialInfoJSON(SWIGTYPE_p_rapidjson__Value mat) {
+    MaterialInfo ret = new MaterialInfo(vehiclePINVOKE.ReadMaterialInfoJSON(SWIGTYPE_p_rapidjson__Value.getCPtr(mat)), true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static SWIGTYPE_p_std__shared_ptrT_ChVehicleBushingData_t ReadBushingDataJSON(SWIGTYPE_p_rapidjson__Value bd) {
+    SWIGTYPE_p_std__shared_ptrT_ChVehicleBushingData_t ret = new SWIGTYPE_p_std__shared_ptrT_ChVehicleBushingData_t(vehiclePINVOKE.ReadBushingDataJSON(SWIGTYPE_p_rapidjson__Value.getCPtr(bd)), true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChChassis ReadChassisJSON(string filename) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.ReadChassisJSON(filename);
+    ChChassis ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChChassis(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChChassisRear ReadChassisRearJSON(string filename) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.ReadChassisRearJSON(filename);
+    ChChassisRear ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChChassisRear(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChChassisConnector ReadChassisConnectorJSON(string filename) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.ReadChassisConnectorJSON(filename);
+    ChChassisConnector ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChChassisConnector(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChPowertrain ReadPowertrainJSON(string filename) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.ReadPowertrainJSON(filename);
+    ChPowertrain ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChPowertrain(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChSuspension ReadSuspensionJSON(string filename) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.ReadSuspensionJSON(filename);
+    ChSuspension ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChSuspension(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChSteering ReadSteeringJSON(string filename) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.ReadSteeringJSON(filename);
+    ChSteering ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChSteering(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChDrivelineWV ReadDrivelineWVJSON(string filename) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.ReadDrivelineWVJSON(filename);
+    ChDrivelineWV ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChDrivelineWV(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static SWIGTYPE_p_std__shared_ptrT_ChAntirollBar_t ReadAntirollbarJSON(string filename) {
+    SWIGTYPE_p_std__shared_ptrT_ChAntirollBar_t ret = new SWIGTYPE_p_std__shared_ptrT_ChAntirollBar_t(vehiclePINVOKE.ReadAntirollbarJSON(filename), true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChWheel ReadWheelJSON(string filename) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.ReadWheelJSON(filename);
+    ChWheel ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChWheel(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChSubchassis ReadSubchassisJSON(string filename) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.ReadSubchassisJSON(filename);
+    ChSubchassis ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChSubchassis(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChBrake ReadBrakeJSON(string filename) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.ReadBrakeJSON(filename);
+    ChBrake ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBrake(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChTire ReadTireJSON(string filename) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.ReadTireJSON(filename);
+    ChTire ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChTire(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChTrackAssembly ReadTrackAssemblyJSON(string filename) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.ReadTrackAssemblyJSON(filename);
+    ChTrackAssembly ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChTrackAssembly(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChDrivelineTV ReadDrivelineTVJSON(string filename) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.ReadDrivelineTVJSON(filename);
+    ChDrivelineTV ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChDrivelineTV(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChTrackBrake ReadTrackBrakeJSON(string filename) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.ReadTrackBrakeJSON(filename);
+    ChTrackBrake ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChTrackBrake(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChIdler ReadIdlerJSON(string filename) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.ReadIdlerJSON(filename);
+    ChIdler ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChIdler(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChRoadWheelAssembly ReadRoadWheelAssemblyJSON(string filename, bool has_shock) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.ReadRoadWheelAssemblyJSON(filename, has_shock);
+    ChRoadWheelAssembly ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChRoadWheelAssembly(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static SWIGTYPE_p_std__shared_ptrT_ChRoller_t ReadRollerJSON(string filename) {
+    SWIGTYPE_p_std__shared_ptrT_ChRoller_t ret = new SWIGTYPE_p_std__shared_ptrT_ChRoller_t(vehiclePINVOKE.ReadRollerJSON(filename), true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChRoadWheel ReadRoadWheelJSON(string filename) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.ReadRoadWheelJSON(filename);
+    ChRoadWheel ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChRoadWheel(cPtr, true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -256,6 +470,13 @@ public class vehicle {
     return ret;
   }
 
+  public static ChBalancer CastToChBalancer(ChSubchassis in_obj) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.CastToChBalancer(ChSubchassis.getCPtr(in_obj));
+    ChBalancer ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBalancer(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public static ChTMeasyTire CastToChTMeasyTire(ChTire in_obj) {
     global::System.IntPtr cPtr = vehiclePINVOKE.CastToChTMeasyTire(ChTire.getCPtr(in_obj));
     ChTMeasyTire ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChTMeasyTire(cPtr, true);
@@ -277,16 +498,16 @@ public class vehicle {
     return ret;
   }
 
-  public static ChPacejkaTire CastToChPacejkaTire(ChTire in_obj) {
-    global::System.IntPtr cPtr = vehiclePINVOKE.CastToChPacejkaTire(ChTire.getCPtr(in_obj));
-    ChPacejkaTire ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChPacejkaTire(cPtr, true);
+  public static ChPac89Tire CastToChPac89Tire(ChTire in_obj) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.CastToChPac89Tire(ChTire.getCPtr(in_obj));
+    ChPac89Tire ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChPac89Tire(cPtr, true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public static ChPac89Tire CastToChPac89Tire(ChTire in_obj) {
-    global::System.IntPtr cPtr = vehiclePINVOKE.CastToChPac89Tire(ChTire.getCPtr(in_obj));
-    ChPac89Tire ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChPac89Tire(cPtr, true);
+  public static ChPac02Tire CastToChPac02Tire(ChTire in_obj) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.CastToChPac02Tire(ChTire.getCPtr(in_obj));
+    ChPac02Tire ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChPac02Tire(cPtr, true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

@@ -35,7 +35,7 @@ public class M113_TrackShoeDoublePin : ChTrackShoeDoublePin {
     }
   }
 
-  public M113_TrackShoeDoublePin(string name) : this(vehiclePINVOKE.new_M113_TrackShoeDoublePin(name), true) {
+  public M113_TrackShoeDoublePin(string name, DoublePinTrackShoeType topology) : this(vehiclePINVOKE.new_M113_TrackShoeDoublePin(name, (int)topology), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

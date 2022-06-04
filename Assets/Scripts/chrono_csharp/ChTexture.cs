@@ -9,12 +9,12 @@
 //------------------------------------------------------------------------------
 
 
-public class ChTexture : ChAsset {
+public class ChTexture : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
-  private bool swigCMemOwnDerived;
+  private bool swigCMemOwnBase;
 
-  internal ChTexture(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChTexture_SWIGSmartPtrUpcast(cPtr), true) {
-    swigCMemOwnDerived = cMemoryOwn;
+  internal ChTexture(global::System.IntPtr cPtr, bool cMemoryOwn) {
+    swigCMemOwnBase = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
@@ -22,63 +22,90 @@ public class ChTexture : ChAsset {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  protected override void Dispose(bool disposing) {
+  ~ChTexture() {
+    Dispose(false);
+  }
+
+  public void Dispose() {
+    Dispose(true);
+    global::System.GC.SuppressFinalize(this);
+  }
+
+  protected virtual void Dispose(bool disposing) {
     lock(this) {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
-        if (swigCMemOwnDerived) {
-          swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChTexture(swigCPtr);
+        if (swigCMemOwnBase) {
+          swigCMemOwnBase = false;
+          corePINVOKE.delete_ChTexture(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
-      base.Dispose(disposing);
     }
   }
 
-  public ChTexture() : this(ChronoEngine_csharpPINVOKE.new_ChTexture__SWIG_0(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChTexture() : this(corePINVOKE.new_ChTexture__SWIG_0(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChTexture(string mfilename) : this(ChronoEngine_csharpPINVOKE.new_ChTexture__SWIG_1(mfilename), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChTexture(string filename) : this(corePINVOKE.new_ChTexture__SWIG_1(filename), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public string GetTextureFilename() {
-    string ret = ChronoEngine_csharpPINVOKE.ChTexture_GetTextureFilename(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChTexture(string filename, float scale_x, float scale_y) : this(corePINVOKE.new_ChTexture__SWIG_2(filename, scale_x, scale_y), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public ChTexture(string filename, float scale_x) : this(corePINVOKE.new_ChTexture__SWIG_3(filename, scale_x), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public string GetFilename() {
+    string ret = corePINVOKE.ChTexture_GetFilename(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public void SetTextureFilename(string mfile) {
-    ChronoEngine_csharpPINVOKE.ChTexture_SetTextureFilename(swigCPtr, mfile);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public void SetFilename(string filename) {
+    corePINVOKE.ChTexture_SetFilename(swigCPtr, filename);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void SetTextureScale(float sx, float sy) {
-    ChronoEngine_csharpPINVOKE.ChTexture_SetTextureScale(swigCPtr, sx, sy);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public void SetScale(float sx, float sy) {
+    corePINVOKE.ChTexture_SetScale__SWIG_0(swigCPtr, sx, sy);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public float GetTextureScaleX() {
-    float ret = ChronoEngine_csharpPINVOKE.ChTexture_GetTextureScaleX(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public void SetScale(SWIGTYPE_p_ChVector2T_float_t scale) {
+    corePINVOKE.ChTexture_SetScale__SWIG_1(swigCPtr, SWIGTYPE_p_ChVector2T_float_t.getCPtr(scale));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public float GetScaleX() {
+    float ret = corePINVOKE.ChTexture_GetScaleX(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public float GetTextureScaleY() {
-    float ret = ChronoEngine_csharpPINVOKE.ChTexture_GetTextureScaleY(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public float GetScaleY() {
+    float ret = corePINVOKE.ChTexture_GetScaleY(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public override void ArchiveOUT(SWIGTYPE_p_ChArchiveOut marchive) {
-    ChronoEngine_csharpPINVOKE.ChTexture_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public SWIGTYPE_p_ChVector2T_float_t GetScale() {
+    SWIGTYPE_p_ChVector2T_float_t ret = new SWIGTYPE_p_ChVector2T_float_t(corePINVOKE.ChTexture_GetScale(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
   }
 
-  public override void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn marchive) {
-    ChronoEngine_csharpPINVOKE.ChTexture_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public void ArchiveOUT(SWIGTYPE_p_ChArchiveOut marchive) {
+    corePINVOKE.ChTexture_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn marchive) {
+    corePINVOKE.ChTexture_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

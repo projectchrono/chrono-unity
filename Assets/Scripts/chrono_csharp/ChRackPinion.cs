@@ -56,21 +56,9 @@ public class ChRackPinion : ChSteering {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public override void Synchronize(double time, double steering) {
-    vehiclePINVOKE.ChRackPinion_Synchronize(swigCPtr, time, steering);
+  public override void Synchronize(double time, DriverInputs driver_inputs) {
+    vehiclePINVOKE.ChRackPinion_Synchronize(swigCPtr, time, DriverInputs.getCPtr(driver_inputs));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public override double GetMass() {
-    double ret = vehiclePINVOKE.ChRackPinion_GetMass(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public override ChVectorD GetCOMPos() {
-    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChRackPinion_GetCOMPos(swigCPtr), true);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
   }
 
   public override void LogConstraintViolations() {

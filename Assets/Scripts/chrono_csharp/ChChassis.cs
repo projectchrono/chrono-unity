@@ -35,24 +35,6 @@ public class ChChassis : ChPart {
     }
   }
 
-  public virtual double GetMass() {
-    double ret = vehiclePINVOKE.ChChassis_GetMass(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public virtual ChMatrix33D GetInertia() {
-    ChMatrix33D ret = new ChMatrix33D(vehiclePINVOKE.ChChassis_GetInertia(swigCPtr), false);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public virtual ChVectorD GetLocalPosCOM() {
-    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChChassis_GetLocalPosCOM(swigCPtr), false);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
   public virtual ChCoordsysD GetLocalDriverCoordsys() {
     ChCoordsysD ret = new ChCoordsysD(vehiclePINVOKE.ChChassis_GetLocalDriverCoordsys(swigCPtr), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
@@ -87,18 +69,6 @@ public class ChChassis : ChPart {
 
   public ChQuaternionD GetRot() {
     ChQuaternionD ret = new ChQuaternionD(vehiclePINVOKE.ChChassis_GetRot(swigCPtr), true);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public ChVectorD GetCOMPos() {
-    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChChassis_GetCOMPos(swigCPtr), false);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public ChQuaternionD GetCOMRot() {
-    ChQuaternionD ret = new ChQuaternionD(vehiclePINVOKE.ChChassis_GetCOMRot(swigCPtr), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -176,8 +146,8 @@ public class ChChassis : ChPart {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public SWIGTYPE_p_std__vectorT_std__shared_ptrT_chrono__ChMarker_t_t GetMarkers() {
-    SWIGTYPE_p_std__vectorT_std__shared_ptrT_chrono__ChMarker_t_t ret = new SWIGTYPE_p_std__vectorT_std__shared_ptrT_chrono__ChMarker_t_t(vehiclePINVOKE.ChChassis_GetMarkers(swigCPtr), false);
+  public ChMarkerList GetMarkers() {
+    ChMarkerList ret = new ChMarkerList(vehiclePINVOKE.ChChassis_GetMarkers(swigCPtr), false);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -204,6 +174,16 @@ public class ChChassis : ChPart {
 
   public void AddExternalForce(SWIGTYPE_p_std__shared_ptrT_chrono__vehicle__ChChassis__ExternalForce_t force) {
     vehiclePINVOKE.ChChassis_AddExternalForce(swigCPtr, SWIGTYPE_p_std__shared_ptrT_chrono__vehicle__ChChassis__ExternalForce_t.getCPtr(force));
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public virtual void InitializeInertiaProperties() {
+    vehiclePINVOKE.ChChassis_InitializeInertiaProperties(swigCPtr);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public virtual void UpdateInertiaProperties() {
+    vehiclePINVOKE.ChChassis_UpdateInertiaProperties(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

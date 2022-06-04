@@ -50,14 +50,14 @@ public class Gator_TMeasyTire_Front : ChTMeasyTire {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public override double GetMass() {
-    double ret = vehiclePINVOKE.Gator_TMeasyTire_Front_GetMass(swigCPtr);
+  public virtual double GetTireMass() {
+    double ret = vehiclePINVOKE.Gator_TMeasyTire_Front_GetTireMass(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public override ChVectorD GetInertia() {
-    ChVectorD ret = new ChVectorD(vehiclePINVOKE.Gator_TMeasyTire_Front_GetInertia(swigCPtr), true);
+  public virtual ChVectorD GetTireInertia() {
+    ChVectorD ret = new ChVectorD(vehiclePINVOKE.Gator_TMeasyTire_Front_GetTireInertia(swigCPtr), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

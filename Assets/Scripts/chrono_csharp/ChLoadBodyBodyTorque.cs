@@ -13,7 +13,7 @@ public class ChLoadBodyBodyTorque : ChLoadBodyBody {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChLoadBodyBodyTorque(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChLoadBodyBodyTorque_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChLoadBodyBodyTorque(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChLoadBodyBodyTorque_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChLoadBodyBodyTorque : ChLoadBodyBody {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChLoadBodyBodyTorque(swigCPtr);
+          corePINVOKE.delete_ChLoadBodyBodyTorque(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,20 +35,13 @@ public class ChLoadBodyBodyTorque : ChLoadBodyBody {
     }
   }
 
-  public ChLoadBodyBodyTorque(ChBody bodyA, ChBody bodyB, ChVectorD torque, bool local_torque) : this(ChronoEngine_csharpPINVOKE.new_ChLoadBodyBodyTorque(ChBody.getCPtr(bodyA), ChBody.getCPtr(bodyB), ChVectorD.getCPtr(torque), local_torque), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public override ChObj Clone() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChLoadBodyBodyTorque_Clone(swigCPtr);
-    ChLoadBodyBodyTorque ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChLoadBodyBodyTorque(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
+  public ChLoadBodyBodyTorque(ChBody bodyA, ChBody bodyB, ChVectorD torque, bool local_torque) : this(corePINVOKE.new_ChLoadBodyBodyTorque(ChBody.getCPtr(bodyA), ChBody.getCPtr(bodyB), ChVectorD.getCPtr(torque), local_torque), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetModulationFunction(ChFunction modulation) {
-    ChronoEngine_csharpPINVOKE.ChLoadBodyBodyTorque_SetModulationFunction(swigCPtr, ChFunction.getCPtr(modulation));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoadBodyBodyTorque_SetModulationFunction(swigCPtr, ChFunction.getCPtr(modulation));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

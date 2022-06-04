@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-public class ChFialaTire : ChTire {
+public class ChFialaTire : ChForceElementTire {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
@@ -89,6 +89,12 @@ public class ChFialaTire : ChTire {
 
   public double GetCamberAngle_internal() {
     double ret = vehiclePINVOKE.ChFialaTire_GetCamberAngle_internal(swigCPtr);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public override double GetDeflection() {
+    double ret = vehiclePINVOKE.ChFialaTire_GetDeflection(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

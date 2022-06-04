@@ -47,24 +47,6 @@ public class RCCar_Chassis : ChRigidChassis {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public override double GetMass() {
-    double ret = vehiclePINVOKE.RCCar_Chassis_GetMass(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public override ChMatrix33D GetInertia() {
-    ChMatrix33D ret = new ChMatrix33D(vehiclePINVOKE.RCCar_Chassis_GetInertia(swigCPtr), false);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public override ChVectorD GetLocalPosCOM() {
-    ChVectorD ret = new ChVectorD(vehiclePINVOKE.RCCar_Chassis_GetLocalPosCOM(swigCPtr), false);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
   public override ChCoordsysD GetLocalDriverCoordsys() {
     ChCoordsysD ret = new ChCoordsysD(vehiclePINVOKE.RCCar_Chassis_GetLocalDriverCoordsys(swigCPtr), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();

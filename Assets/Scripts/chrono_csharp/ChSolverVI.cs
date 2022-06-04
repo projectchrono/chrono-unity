@@ -13,7 +13,7 @@ public class ChSolverVI : ChSolver {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChSolverVI(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChSolverVI_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChSolverVI(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChSolverVI_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChSolverVI : ChSolver {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChSolverVI(swigCPtr);
+          corePINVOKE.delete_ChSolverVI(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }

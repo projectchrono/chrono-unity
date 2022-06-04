@@ -36,7 +36,7 @@ public class AddProximityCallback : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_AddProximityCallback(swigCPtr);
+          corePINVOKE.delete_AddProximityCallback(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -44,8 +44,8 @@ public class AddProximityCallback : global::System.IDisposable {
   }
 
   public virtual void OnAddProximity(ChCollisionModel modA, ChCollisionModel modB) {
-    ChronoEngine_csharpPINVOKE.AddProximityCallback_OnAddProximity(swigCPtr, ChCollisionModel.getCPtr(modA), ChCollisionModel.getCPtr(modB));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.AddProximityCallback_OnAddProximity(swigCPtr, ChCollisionModel.getCPtr(modA), ChCollisionModel.getCPtr(modB));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

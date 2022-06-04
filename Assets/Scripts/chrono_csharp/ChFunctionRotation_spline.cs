@@ -13,7 +13,7 @@ public class ChFunctionRotation_spline : ChFunctionRotation {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChFunctionRotation_spline(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChFunctionRotation_spline_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChFunctionRotation_spline(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChFunctionRotation_spline_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChFunctionRotation_spline : ChFunctionRotation {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChFunctionRotation_spline(swigCPtr);
+          corePINVOKE.delete_ChFunctionRotation_spline(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,106 +35,99 @@ public class ChFunctionRotation_spline : ChFunctionRotation {
     }
   }
 
-  public ChFunctionRotation_spline() : this(ChronoEngine_csharpPINVOKE.new_ChFunctionRotation_spline__SWIG_0(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChFunctionRotation_spline() : this(corePINVOKE.new_ChFunctionRotation_spline__SWIG_0(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChFunctionRotation_spline(int morder, SWIGTYPE_p_std__vectorT_chrono__ChQuaternionT_double_t_t mrotations, ChVectorDynamicD mknots) : this(ChronoEngine_csharpPINVOKE.new_ChFunctionRotation_spline__SWIG_1(morder, SWIGTYPE_p_std__vectorT_chrono__ChQuaternionT_double_t_t.getCPtr(mrotations), ChVectorDynamicD.getCPtr(mknots)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChFunctionRotation_spline(int morder, SWIGTYPE_p_std__vectorT_chrono__ChQuaternionT_double_t_t mrotations, ChVectorDynamicD mknots) : this(corePINVOKE.new_ChFunctionRotation_spline__SWIG_1(morder, SWIGTYPE_p_std__vectorT_chrono__ChQuaternionT_double_t_t.getCPtr(mrotations), ChVectorDynamicD.getCPtr(mknots)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChFunctionRotation_spline(int morder, SWIGTYPE_p_std__vectorT_chrono__ChQuaternionT_double_t_t mrotations) : this(ChronoEngine_csharpPINVOKE.new_ChFunctionRotation_spline__SWIG_2(morder, SWIGTYPE_p_std__vectorT_chrono__ChQuaternionT_double_t_t.getCPtr(mrotations)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChFunctionRotation_spline(int morder, SWIGTYPE_p_std__vectorT_chrono__ChQuaternionT_double_t_t mrotations) : this(corePINVOKE.new_ChFunctionRotation_spline__SWIG_2(morder, SWIGTYPE_p_std__vectorT_chrono__ChQuaternionT_double_t_t.getCPtr(mrotations)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChFunctionRotation_spline(ChFunctionRotation_spline other) : this(ChronoEngine_csharpPINVOKE.new_ChFunctionRotation_spline__SWIG_3(ChFunctionRotation_spline.getCPtr(other)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public override ChFunctionRotation Clone() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChFunctionRotation_spline_Clone(swigCPtr);
-    ChFunctionRotation_spline ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChFunctionRotation_spline(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
+  public ChFunctionRotation_spline(ChFunctionRotation_spline other) : this(corePINVOKE.new_ChFunctionRotation_spline__SWIG_3(ChFunctionRotation_spline.getCPtr(other)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double ComputeUfromKnotU(double u) {
-    double ret = ChronoEngine_csharpPINVOKE.ChFunctionRotation_spline_ComputeUfromKnotU(swigCPtr, u);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChFunctionRotation_spline_ComputeUfromKnotU(swigCPtr, u);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public double ComputeKnotUfromU(double U) {
-    double ret = ChronoEngine_csharpPINVOKE.ChFunctionRotation_spline_ComputeKnotUfromU(swigCPtr, U);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChFunctionRotation_spline_ComputeKnotUfromU(swigCPtr, U);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public SWIGTYPE_p_std__vectorT_chrono__ChQuaternionT_double_t_t Rotations() {
-    SWIGTYPE_p_std__vectorT_chrono__ChQuaternionT_double_t_t ret = new SWIGTYPE_p_std__vectorT_chrono__ChQuaternionT_double_t_t(ChronoEngine_csharpPINVOKE.ChFunctionRotation_spline_Rotations(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    SWIGTYPE_p_std__vectorT_chrono__ChQuaternionT_double_t_t ret = new SWIGTYPE_p_std__vectorT_chrono__ChQuaternionT_double_t_t(corePINVOKE.ChFunctionRotation_spline_Rotations(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ChVectorDynamicD Knots() {
-    ChVectorDynamicD ret = new ChVectorDynamicD(ChronoEngine_csharpPINVOKE.ChFunctionRotation_spline_Knots(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorDynamicD ret = new ChVectorDynamicD(corePINVOKE.ChFunctionRotation_spline_Knots(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int GetOrder() {
-    int ret = ChronoEngine_csharpPINVOKE.ChFunctionRotation_spline_GetOrder(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChFunctionRotation_spline_GetOrder(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void SetupData(int morder, SWIGTYPE_p_std__vectorT_chrono__ChQuaternionT_double_t_t mrotations, ChVectorDynamicD mknots) {
-    ChronoEngine_csharpPINVOKE.ChFunctionRotation_spline_SetupData__SWIG_0(swigCPtr, morder, SWIGTYPE_p_std__vectorT_chrono__ChQuaternionT_double_t_t.getCPtr(mrotations), ChVectorDynamicD.getCPtr(mknots));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChFunctionRotation_spline_SetupData__SWIG_0(swigCPtr, morder, SWIGTYPE_p_std__vectorT_chrono__ChQuaternionT_double_t_t.getCPtr(mrotations), ChVectorDynamicD.getCPtr(mknots));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void SetupData(int morder, SWIGTYPE_p_std__vectorT_chrono__ChQuaternionT_double_t_t mrotations) {
-    ChronoEngine_csharpPINVOKE.ChFunctionRotation_spline_SetupData__SWIG_1(swigCPtr, morder, SWIGTYPE_p_std__vectorT_chrono__ChQuaternionT_double_t_t.getCPtr(mrotations));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChFunctionRotation_spline_SetupData__SWIG_1(swigCPtr, morder, SWIGTYPE_p_std__vectorT_chrono__ChQuaternionT_double_t_t.getCPtr(mrotations));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public ChFunction GetSpaceFunction() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChFunctionRotation_spline_GetSpaceFunction(swigCPtr);
+    global::System.IntPtr cPtr = corePINVOKE.ChFunctionRotation_spline_GetSpaceFunction(swigCPtr);
     ChFunction ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChFunction(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetSpaceFunction(ChFunction m_funct) {
-    ChronoEngine_csharpPINVOKE.ChFunctionRotation_spline_SetSpaceFunction(swigCPtr, ChFunction.getCPtr(m_funct));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChFunctionRotation_spline_SetSpaceFunction(swigCPtr, ChFunction.getCPtr(m_funct));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetClosed(bool mc) {
-    ChronoEngine_csharpPINVOKE.ChFunctionRotation_spline_SetClosed(swigCPtr, mc);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChFunctionRotation_spline_SetClosed(swigCPtr, mc);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public bool GetClosed() {
-    bool ret = ChronoEngine_csharpPINVOKE.ChFunctionRotation_spline_GetClosed(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChFunctionRotation_spline_GetClosed(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override ChQuaternionD Get_q(double s) {
-    ChQuaternionD ret = new ChQuaternionD(ChronoEngine_csharpPINVOKE.ChFunctionRotation_spline_Get_q(swigCPtr, s), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChQuaternionD ret = new ChQuaternionD(corePINVOKE.ChFunctionRotation_spline_Get_q(swigCPtr, s), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void ArchiveOUT(SWIGTYPE_p_ChArchiveOut marchive) {
-    ChronoEngine_csharpPINVOKE.ChFunctionRotation_spline_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChFunctionRotation_spline_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn marchive) {
-    ChronoEngine_csharpPINVOKE.ChFunctionRotation_spline_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChFunctionRotation_spline_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

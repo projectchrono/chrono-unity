@@ -13,7 +13,7 @@ public class ChLoadableU : ChLoadable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChLoadableU(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChLoadableU_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChLoadableU(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChLoadableU_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChLoadableU : ChLoadable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChLoadableU(swigCPtr);
+          corePINVOKE.delete_ChLoadableU(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -36,12 +36,12 @@ public class ChLoadableU : ChLoadable {
   }
 
   public virtual void ComputeNF(double U, ChVectorDynamicD Qi, SWIGTYPE_p_double detJ, ChVectorDynamicD F, ChVectorDynamicD state_x, ChVectorDynamicD state_w) {
-    ChronoEngine_csharpPINVOKE.ChLoadableU_ComputeNF(swigCPtr, U, ChVectorDynamicD.getCPtr(Qi), SWIGTYPE_p_double.getCPtr(detJ), ChVectorDynamicD.getCPtr(F), ChVectorDynamicD.getCPtr(state_x), ChVectorDynamicD.getCPtr(state_w));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoadableU_ComputeNF(swigCPtr, U, ChVectorDynamicD.getCPtr(Qi), SWIGTYPE_p_double.getCPtr(detJ), ChVectorDynamicD.getCPtr(F), ChVectorDynamicD.getCPtr(state_x), ChVectorDynamicD.getCPtr(state_w));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChLoadableU() : this(ChronoEngine_csharpPINVOKE.new_ChLoadableU(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChLoadableU() : this(corePINVOKE.new_ChLoadableU(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     SwigDirectorConnect();
   }
 
@@ -70,7 +70,7 @@ public class ChLoadableU : ChLoadable {
       swigDelegate10 = new SwigDelegateChLoadableU_10(SwigDirectorMethodLoadableGetVariables);
     if (SwigDerivedClassHasMethod("ComputeNF", swigMethodTypes11))
       swigDelegate11 = new SwigDelegateChLoadableU_11(SwigDirectorMethodComputeNF);
-    ChronoEngine_csharpPINVOKE.ChLoadableU_director_connect(swigCPtr, swigDelegate0, swigDelegate1, swigDelegate2, swigDelegate3, swigDelegate4, swigDelegate5, swigDelegate6, swigDelegate7, swigDelegate8, swigDelegate9, swigDelegate10, swigDelegate11);
+    corePINVOKE.ChLoadableU_director_connect(swigCPtr, swigDelegate0, swigDelegate1, swigDelegate2, swigDelegate3, swigDelegate4, swigDelegate5, swigDelegate6, swigDelegate7, swigDelegate8, swigDelegate9, swigDelegate10, swigDelegate11);
   }
 
   private bool SwigDerivedClassHasMethod(string methodName, global::System.Type[] methodTypes) {

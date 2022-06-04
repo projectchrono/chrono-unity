@@ -36,39 +36,39 @@ public class float_ptr : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_float_ptr(swigCPtr);
+          corePINVOKE.delete_float_ptr(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public float_ptr() : this(ChronoEngine_csharpPINVOKE.new_float_ptr(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public float_ptr() : this(corePINVOKE.new_float_ptr(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void assign(float value) {
-    ChronoEngine_csharpPINVOKE.float_ptr_assign(swigCPtr, value);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.float_ptr_assign(swigCPtr, value);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public float value() {
-    float ret = ChronoEngine_csharpPINVOKE.float_ptr_value(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    float ret = corePINVOKE.float_ptr_value(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public SWIGTYPE_p_float cast() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.float_ptr_cast(swigCPtr);
+    global::System.IntPtr cPtr = corePINVOKE.float_ptr_cast(swigCPtr);
     SWIGTYPE_p_float ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_float(cPtr, false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static float_ptr frompointer(SWIGTYPE_p_float t) {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.float_ptr_frompointer(SWIGTYPE_p_float.getCPtr(t));
+    global::System.IntPtr cPtr = corePINVOKE.float_ptr_frompointer(SWIGTYPE_p_float.getCPtr(t));
     float_ptr ret = (cPtr == global::System.IntPtr.Zero) ? null : new float_ptr(cPtr, false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

@@ -41,6 +41,12 @@ public class ChTrackShoeBandBushing : ChTrackShoeBand {
     return ret;
   }
 
+  public override ChVectorD GetTension() {
+    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChTrackShoeBandBushing_GetTension(swigCPtr), true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public override void Initialize(ChBodyAuxRef chassis, ChVectorD location, ChQuaternionD rotation) {
     vehiclePINVOKE.ChTrackShoeBandBushing_Initialize(swigCPtr, ChBodyAuxRef.getCPtr(chassis), ChVectorD.getCPtr(location), ChQuaternionD.getCPtr(rotation));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();

@@ -12,7 +12,7 @@
 public class ChStreamOutBinary : ChStreamOut {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
 
-  internal ChStreamOutBinary(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChStreamOutBinary_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal ChStreamOutBinary(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChStreamOutBinary_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
@@ -25,7 +25,7 @@ public class ChStreamOutBinary : ChStreamOut {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChStreamOutBinary(swigCPtr);
+          corePINVOKE.delete_ChStreamOutBinary(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -34,8 +34,8 @@ public class ChStreamOutBinary : ChStreamOut {
   }
 
   public void VersionWrite(int mver) {
-    ChronoEngine_csharpPINVOKE.ChStreamOutBinary_VersionWrite(swigCPtr, mver);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChStreamOutBinary_VersionWrite(swigCPtr, mver);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

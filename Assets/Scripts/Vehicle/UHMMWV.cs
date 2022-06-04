@@ -114,8 +114,8 @@ public class UHMMWV : UChVehicle
 
     protected override void OnAdvance(double step)
     {
-        var vehicle_pos = hmmwv.GetVehicle().GetVehiclePos();
-        var vehicle_rot = hmmwv.GetVehicle().GetVehicleRot();
+        var vehicle_pos = hmmwv.GetVehicle().GetPos();
+        var vehicle_rot = hmmwv.GetVehicle().GetRot();
 
         var spindleFL_pos = hmmwv.GetVehicle().GetSpindlePos(0, VehicleSide.LEFT);
         var spindleFL_rot = hmmwv.GetVehicle().GetSpindleRot(0, VehicleSide.LEFT);

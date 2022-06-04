@@ -36,92 +36,92 @@ public class ChBezierCurve : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnBase) {
           swigCMemOwnBase = false;
-          ChronoEngine_csharpPINVOKE.delete_ChBezierCurve(swigCPtr);
+          corePINVOKE.delete_ChBezierCurve(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public ChBezierCurve(vector_ChVectorD points, vector_ChVectorD inCV, vector_ChVectorD outCV) : this(ChronoEngine_csharpPINVOKE.new_ChBezierCurve__SWIG_0(vector_ChVectorD.getCPtr(points), vector_ChVectorD.getCPtr(inCV), vector_ChVectorD.getCPtr(outCV)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChBezierCurve(vector_ChVectorD points, vector_ChVectorD inCV, vector_ChVectorD outCV) : this(corePINVOKE.new_ChBezierCurve__SWIG_0(vector_ChVectorD.getCPtr(points), vector_ChVectorD.getCPtr(inCV), vector_ChVectorD.getCPtr(outCV)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChBezierCurve(vector_ChVectorD points) : this(ChronoEngine_csharpPINVOKE.new_ChBezierCurve__SWIG_1(vector_ChVectorD.getCPtr(points)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChBezierCurve(vector_ChVectorD points) : this(corePINVOKE.new_ChBezierCurve__SWIG_1(vector_ChVectorD.getCPtr(points)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChBezierCurve() : this(ChronoEngine_csharpPINVOKE.new_ChBezierCurve__SWIG_2(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChBezierCurve() : this(corePINVOKE.new_ChBezierCurve__SWIG_2(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void setPoints(vector_ChVectorD points, vector_ChVectorD inCV, vector_ChVectorD outCV) {
-    ChronoEngine_csharpPINVOKE.ChBezierCurve_setPoints(swigCPtr, vector_ChVectorD.getCPtr(points), vector_ChVectorD.getCPtr(inCV), vector_ChVectorD.getCPtr(outCV));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChBezierCurve_setPoints(swigCPtr, vector_ChVectorD.getCPtr(points), vector_ChVectorD.getCPtr(inCV), vector_ChVectorD.getCPtr(outCV));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public uint getNumPoints() {
-    uint ret = ChronoEngine_csharpPINVOKE.ChBezierCurve_getNumPoints(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    uint ret = corePINVOKE.ChBezierCurve_getNumPoints(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ChVectorD getPoint(uint i) {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChBezierCurve_getPoint(swigCPtr, i), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorD ret = new ChVectorD(corePINVOKE.ChBezierCurve_getPoint(swigCPtr, i), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ChVectorD eval(double t) {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChBezierCurve_eval__SWIG_0(swigCPtr, t), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorD ret = new ChVectorD(corePINVOKE.ChBezierCurve_eval__SWIG_0(swigCPtr, t), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ChVectorD eval(uint i, double t) {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChBezierCurve_eval__SWIG_1(swigCPtr, i, t), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorD ret = new ChVectorD(corePINVOKE.ChBezierCurve_eval__SWIG_1(swigCPtr, i, t), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ChVectorD evalD(uint i, double t) {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChBezierCurve_evalD(swigCPtr, i, t), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorD ret = new ChVectorD(corePINVOKE.ChBezierCurve_evalD(swigCPtr, i, t), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ChVectorD evalDD(uint i, double t) {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChBezierCurve_evalDD(swigCPtr, i, t), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorD ret = new ChVectorD(corePINVOKE.ChBezierCurve_evalDD(swigCPtr, i, t), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ChVectorD calcClosestPoint(ChVectorD loc, uint i, SWIGTYPE_p_double t) {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChBezierCurve_calcClosestPoint(swigCPtr, ChVectorD.getCPtr(loc), i, SWIGTYPE_p_double.getCPtr(t)), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorD ret = new ChVectorD(corePINVOKE.ChBezierCurve_calcClosestPoint(swigCPtr, ChVectorD.getCPtr(loc), i, SWIGTYPE_p_double.getCPtr(t)), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void write(string filename) {
-    ChronoEngine_csharpPINVOKE.ChBezierCurve_write(swigCPtr, filename);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChBezierCurve_write(swigCPtr, filename);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public static ChBezierCurve read(string filename) {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChBezierCurve_read(filename);
+    global::System.IntPtr cPtr = corePINVOKE.ChBezierCurve_read(filename);
     ChBezierCurve ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBezierCurve(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void ArchiveOUT(SWIGTYPE_p_ChArchiveOut marchive) {
-    ChronoEngine_csharpPINVOKE.ChBezierCurve_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChBezierCurve_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn marchive) {
-    ChronoEngine_csharpPINVOKE.ChBezierCurve_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChBezierCurve_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

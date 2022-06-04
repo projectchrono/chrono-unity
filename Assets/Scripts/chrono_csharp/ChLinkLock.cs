@@ -13,7 +13,7 @@ public class ChLinkLock : ChLinkMarkers {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChLinkLock(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChLinkLock_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChLinkLock(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChLinkLock_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChLinkLock : ChLinkMarkers {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChLinkLock(swigCPtr);
+          corePINVOKE.delete_ChLinkLock(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,255 +35,248 @@ public class ChLinkLock : ChLinkMarkers {
     }
   }
 
-  public ChLinkLock() : this(ChronoEngine_csharpPINVOKE.new_ChLinkLock__SWIG_0(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChLinkLock() : this(corePINVOKE.new_ChLinkLock__SWIG_0(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChLinkLock(ChLinkLock other) : this(ChronoEngine_csharpPINVOKE.new_ChLinkLock__SWIG_1(ChLinkLock.getCPtr(other)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public override ChObj Clone() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChLinkLock_Clone(swigCPtr);
-    ChLinkLock ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChLinkLock(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
+  public ChLinkLock(ChLinkLock other) : this(corePINVOKE.new_ChLinkLock__SWIG_1(ChLinkLock.getCPtr(other)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override int RestoreRedundant() {
-    int ret = ChronoEngine_csharpPINVOKE.ChLinkLock_RestoreRedundant(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChLinkLock_RestoreRedundant(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void SetDisabled(bool mdis) {
-    ChronoEngine_csharpPINVOKE.ChLinkLock_SetDisabled(swigCPtr, mdis);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLinkLock_SetDisabled(swigCPtr, mdis);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void SetBroken(bool mon) {
-    ChronoEngine_csharpPINVOKE.ChLinkLock_SetBroken(swigCPtr, mon);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLinkLock_SetBroken(swigCPtr, mon);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public SWIGTYPE_p_ChLinkMask GetMask() {
-    SWIGTYPE_p_ChLinkMask ret = new SWIGTYPE_p_ChLinkMask(ChronoEngine_csharpPINVOKE.ChLinkLock_GetMask(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    SWIGTYPE_p_ChLinkMask ret = new SWIGTYPE_p_ChLinkMask(corePINVOKE.ChLinkLock_GetMask(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void SetUpMarkers(ChMarker mark1, ChMarker mark2) {
-    ChronoEngine_csharpPINVOKE.ChLinkLock_SetUpMarkers(swigCPtr, ChMarker.getCPtr(mark1), ChMarker.getCPtr(mark2));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLinkLock_SetUpMarkers(swigCPtr, ChMarker.getCPtr(mark1), ChMarker.getCPtr(mark2));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public ChLinkForce GetForce_D() {
-    ChLinkForce ret = new ChLinkForce(ChronoEngine_csharpPINVOKE.ChLinkLock_GetForce_D(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChLinkForce ret = new ChLinkForce(corePINVOKE.ChLinkLock_GetForce_D(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ChLinkForce GetForce_R() {
-    ChLinkForce ret = new ChLinkForce(ChronoEngine_csharpPINVOKE.ChLinkLock_GetForce_R(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChLinkForce ret = new ChLinkForce(corePINVOKE.ChLinkLock_GetForce_R(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ChLinkForce GetForce_X() {
-    ChLinkForce ret = new ChLinkForce(ChronoEngine_csharpPINVOKE.ChLinkLock_GetForce_X(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChLinkForce ret = new ChLinkForce(corePINVOKE.ChLinkLock_GetForce_X(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ChLinkForce GetForce_Y() {
-    ChLinkForce ret = new ChLinkForce(ChronoEngine_csharpPINVOKE.ChLinkLock_GetForce_Y(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChLinkForce ret = new ChLinkForce(corePINVOKE.ChLinkLock_GetForce_Y(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ChLinkForce GetForce_Z() {
-    ChLinkForce ret = new ChLinkForce(ChronoEngine_csharpPINVOKE.ChLinkLock_GetForce_Z(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChLinkForce ret = new ChLinkForce(corePINVOKE.ChLinkLock_GetForce_Z(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ChLinkForce GetForce_Rx() {
-    ChLinkForce ret = new ChLinkForce(ChronoEngine_csharpPINVOKE.ChLinkLock_GetForce_Rx(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChLinkForce ret = new ChLinkForce(corePINVOKE.ChLinkLock_GetForce_Rx(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ChLinkForce GetForce_Ry() {
-    ChLinkForce ret = new ChLinkForce(ChronoEngine_csharpPINVOKE.ChLinkLock_GetForce_Ry(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChLinkForce ret = new ChLinkForce(corePINVOKE.ChLinkLock_GetForce_Ry(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ChLinkForce GetForce_Rz() {
-    ChLinkForce ret = new ChLinkForce(ChronoEngine_csharpPINVOKE.ChLinkLock_GetForce_Rz(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChLinkForce ret = new ChLinkForce(corePINVOKE.ChLinkLock_GetForce_Rz(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ChLinkLimit GetLimit_X() {
-    ChLinkLimit ret = new ChLinkLimit(ChronoEngine_csharpPINVOKE.ChLinkLock_GetLimit_X(swigCPtr), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChLinkLimit ret = new ChLinkLimit(corePINVOKE.ChLinkLock_GetLimit_X(swigCPtr), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ChLinkLimit GetLimit_Y() {
-    ChLinkLimit ret = new ChLinkLimit(ChronoEngine_csharpPINVOKE.ChLinkLock_GetLimit_Y(swigCPtr), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChLinkLimit ret = new ChLinkLimit(corePINVOKE.ChLinkLock_GetLimit_Y(swigCPtr), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ChLinkLimit GetLimit_Z() {
-    ChLinkLimit ret = new ChLinkLimit(ChronoEngine_csharpPINVOKE.ChLinkLock_GetLimit_Z(swigCPtr), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChLinkLimit ret = new ChLinkLimit(corePINVOKE.ChLinkLock_GetLimit_Z(swigCPtr), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ChLinkLimit GetLimit_Rx() {
-    ChLinkLimit ret = new ChLinkLimit(ChronoEngine_csharpPINVOKE.ChLinkLock_GetLimit_Rx(swigCPtr), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChLinkLimit ret = new ChLinkLimit(corePINVOKE.ChLinkLock_GetLimit_Rx(swigCPtr), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ChLinkLimit GetLimit_Ry() {
-    ChLinkLimit ret = new ChLinkLimit(ChronoEngine_csharpPINVOKE.ChLinkLock_GetLimit_Ry(swigCPtr), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChLinkLimit ret = new ChLinkLimit(corePINVOKE.ChLinkLock_GetLimit_Ry(swigCPtr), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ChLinkLimit GetLimit_Rz() {
-    ChLinkLimit ret = new ChLinkLimit(ChronoEngine_csharpPINVOKE.ChLinkLock_GetLimit_Rz(swigCPtr), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChLinkLimit ret = new ChLinkLimit(corePINVOKE.ChLinkLock_GetLimit_Rz(swigCPtr), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ChLinkLimit GetLimit_Rp() {
-    ChLinkLimit ret = new ChLinkLimit(ChronoEngine_csharpPINVOKE.ChLinkLock_GetLimit_Rp(swigCPtr), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChLinkLimit ret = new ChLinkLimit(corePINVOKE.ChLinkLock_GetLimit_Rp(swigCPtr), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ChLinkLimit GetLimit_D() {
-    ChLinkLimit ret = new ChLinkLimit(ChronoEngine_csharpPINVOKE.ChLinkLock_GetLimit_D(swigCPtr), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChLinkLimit ret = new ChLinkLimit(corePINVOKE.ChLinkLock_GetLimit_D(swigCPtr), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override int GetDOC() {
-    int ret = ChronoEngine_csharpPINVOKE.ChLinkLock_GetDOC(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChLinkLock_GetDOC(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override int GetDOC_c() {
-    int ret = ChronoEngine_csharpPINVOKE.ChLinkLock_GetDOC_c(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChLinkLock_GetDOC_c(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override int GetDOC_d() {
-    int ret = ChronoEngine_csharpPINVOKE.ChLinkLock_GetDOC_d(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChLinkLock_GetDOC_d(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override ChVectorDynamicD GetConstraintViolation() {
-    ChVectorDynamicD ret = new ChVectorDynamicD(ChronoEngine_csharpPINVOKE.ChLinkLock_GetConstraintViolation(swigCPtr), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorDynamicD ret = new ChVectorDynamicD(corePINVOKE.ChLinkLock_GetConstraintViolation(swigCPtr), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_1_Eigen__ColMajor_7_1_t GetConstraintViolation_dt() {
-    SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_1_Eigen__ColMajor_7_1_t ret = new SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_1_Eigen__ColMajor_7_1_t(ChronoEngine_csharpPINVOKE.ChLinkLock_GetConstraintViolation_dt(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_1_Eigen__ColMajor_7_1_t ret = new SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_1_Eigen__ColMajor_7_1_t(corePINVOKE.ChLinkLock_GetConstraintViolation_dt(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_1_Eigen__ColMajor_7_1_t GetConstraintViolation_dtdt() {
-    SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_1_Eigen__ColMajor_7_1_t ret = new SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_1_Eigen__ColMajor_7_1_t(ChronoEngine_csharpPINVOKE.ChLinkLock_GetConstraintViolation_dtdt(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_1_Eigen__ColMajor_7_1_t ret = new SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_1_Eigen__ColMajor_7_1_t(corePINVOKE.ChLinkLock_GetConstraintViolation_dtdt(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_7_Eigen__RowMajor_7_7_t GetCq1() {
-    SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_7_Eigen__RowMajor_7_7_t ret = new SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_7_Eigen__RowMajor_7_7_t(ChronoEngine_csharpPINVOKE.ChLinkLock_GetCq1(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_7_Eigen__RowMajor_7_7_t ret = new SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_7_Eigen__RowMajor_7_7_t(corePINVOKE.ChLinkLock_GetCq1(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_7_Eigen__RowMajor_7_7_t GetCq2() {
-    SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_7_Eigen__RowMajor_7_7_t ret = new SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_7_Eigen__RowMajor_7_7_t(ChronoEngine_csharpPINVOKE.ChLinkLock_GetCq2(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_7_Eigen__RowMajor_7_7_t ret = new SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_7_Eigen__RowMajor_7_7_t(corePINVOKE.ChLinkLock_GetCq2(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_6_Eigen__RowMajor_7_6_t GetCqw1() {
-    SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_6_Eigen__RowMajor_7_6_t ret = new SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_6_Eigen__RowMajor_7_6_t(ChronoEngine_csharpPINVOKE.ChLinkLock_GetCqw1(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_6_Eigen__RowMajor_7_6_t ret = new SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_6_Eigen__RowMajor_7_6_t(corePINVOKE.ChLinkLock_GetCqw1(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_6_Eigen__RowMajor_7_6_t GetCqw2() {
-    SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_6_Eigen__RowMajor_7_6_t ret = new SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_6_Eigen__RowMajor_7_6_t(ChronoEngine_csharpPINVOKE.ChLinkLock_GetCqw2(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_6_Eigen__RowMajor_7_6_t ret = new SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_6_Eigen__RowMajor_7_6_t(corePINVOKE.ChLinkLock_GetCqw2(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_1_Eigen__ColMajor_7_1_t GetQc() {
-    SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_1_Eigen__ColMajor_7_1_t ret = new SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_1_Eigen__ColMajor_7_1_t(ChronoEngine_csharpPINVOKE.ChLinkLock_GetQc(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_1_Eigen__ColMajor_7_1_t ret = new SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_1_Eigen__ColMajor_7_1_t(corePINVOKE.ChLinkLock_GetQc(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_1_Eigen__ColMajor_7_1_t GetCt() {
-    SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_1_Eigen__ColMajor_7_1_t ret = new SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_1_Eigen__ColMajor_7_1_t(ChronoEngine_csharpPINVOKE.ChLinkLock_GetCt(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_1_Eigen__ColMajor_7_1_t ret = new SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_1_Eigen__ColMajor_7_1_t(corePINVOKE.ChLinkLock_GetCt(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_1_Eigen__ColMajor_7_1_t GetReact() {
-    SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_1_Eigen__ColMajor_7_1_t ret = new SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_1_Eigen__ColMajor_7_1_t(ChronoEngine_csharpPINVOKE.ChLinkLock_GetReact(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_1_Eigen__ColMajor_7_1_t ret = new SWIGTYPE_p_Eigen__MatrixT_double_Eigen__Dynamic_1_Eigen__ColMajor_7_1_t(corePINVOKE.ChLinkLock_GetReact(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void UpdateState() {
-    ChronoEngine_csharpPINVOKE.ChLinkLock_UpdateState(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLinkLock_UpdateState(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void UpdateForces(double mytime) {
-    ChronoEngine_csharpPINVOKE.ChLinkLock_UpdateForces(swigCPtr, mytime);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLinkLock_UpdateForces(swigCPtr, mytime);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void UpdateCqw() {
-    ChronoEngine_csharpPINVOKE.ChLinkLock_UpdateCqw(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLinkLock_UpdateCqw(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void Update(double mytime, bool update_assets) {
-    ChronoEngine_csharpPINVOKE.ChLinkLock_Update__SWIG_0(swigCPtr, mytime, update_assets);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLinkLock_Update__SWIG_0(swigCPtr, mytime, update_assets);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void Update(double mytime) {
-    ChronoEngine_csharpPINVOKE.ChLinkLock_Update__SWIG_1(swigCPtr, mytime);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLinkLock_Update__SWIG_1(swigCPtr, mytime);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void ArchiveOUT(SWIGTYPE_p_ChArchiveOut marchive) {
-    ChronoEngine_csharpPINVOKE.ChLinkLock_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLinkLock_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn marchive) {
-    ChronoEngine_csharpPINVOKE.ChLinkLock_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLinkLock_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

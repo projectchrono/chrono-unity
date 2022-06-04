@@ -13,7 +13,7 @@ public class ChLineBezier : ChLine {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChLineBezier(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChLineBezier_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChLineBezier(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChLineBezier_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChLineBezier : ChLine {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChLineBezier(swigCPtr);
+          corePINVOKE.delete_ChLineBezier(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,58 +35,58 @@ public class ChLineBezier : ChLine {
     }
   }
 
-  public ChLineBezier() : this(ChronoEngine_csharpPINVOKE.new_ChLineBezier__SWIG_0(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChLineBezier() : this(corePINVOKE.new_ChLineBezier__SWIG_0(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChLineBezier(ChBezierCurve path) : this(ChronoEngine_csharpPINVOKE.new_ChLineBezier__SWIG_1(ChBezierCurve.getCPtr(path)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChLineBezier(ChBezierCurve path) : this(corePINVOKE.new_ChLineBezier__SWIG_1(ChBezierCurve.getCPtr(path)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChLineBezier(string filename) : this(ChronoEngine_csharpPINVOKE.new_ChLineBezier__SWIG_2(filename), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChLineBezier(string filename) : this(corePINVOKE.new_ChLineBezier__SWIG_2(filename), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChLineBezier(ChLineBezier source) : this(ChronoEngine_csharpPINVOKE.new_ChLineBezier__SWIG_3(ChLineBezier.getCPtr(source)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChLineBezier(ChLineBezier source) : this(corePINVOKE.new_ChLineBezier__SWIG_3(ChLineBezier.getCPtr(source)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override ChGeometry Clone() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChLineBezier_Clone(swigCPtr);
+    global::System.IntPtr cPtr = corePINVOKE.ChLineBezier_Clone(swigCPtr);
     ChLineBezier ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChLineBezier(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override ChGeometry.GeometryType GetClassType() {
-    ChGeometry.GeometryType ret = (ChGeometry.GeometryType)ChronoEngine_csharpPINVOKE.ChLineBezier_GetClassType(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChGeometry.GeometryType ret = (ChGeometry.GeometryType)corePINVOKE.ChLineBezier_GetClassType(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void Set_closed(bool mc) {
-    ChronoEngine_csharpPINVOKE.ChLineBezier_Set_closed(swigCPtr, mc);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLineBezier_Set_closed(swigCPtr, mc);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void Set_complexity(int mc) {
-    ChronoEngine_csharpPINVOKE.ChLineBezier_Set_complexity(swigCPtr, mc);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLineBezier_Set_complexity(swigCPtr, mc);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void Evaluate(ChVectorD pos, double parU) {
-    ChronoEngine_csharpPINVOKE.ChLineBezier_Evaluate(swigCPtr, ChVectorD.getCPtr(pos), parU);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLineBezier_Evaluate(swigCPtr, ChVectorD.getCPtr(pos), parU);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void ArchiveOUT(SWIGTYPE_p_ChArchiveOut marchive) {
-    ChronoEngine_csharpPINVOKE.ChLineBezier_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLineBezier_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn marchive) {
-    ChronoEngine_csharpPINVOKE.ChLineBezier_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLineBezier_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

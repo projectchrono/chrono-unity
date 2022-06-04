@@ -13,7 +13,7 @@ public class ChSolverADMM : ChIterativeSolverVI {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChSolverADMM(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChSolverADMM_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChSolverADMM(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChSolverADMM_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChSolverADMM : ChIterativeSolverVI {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChSolverADMM(swigCPtr);
+          corePINVOKE.delete_ChSolverADMM(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,173 +35,173 @@ public class ChSolverADMM : ChIterativeSolverVI {
     }
   }
 
-  public ChSolverADMM() : this(ChronoEngine_csharpPINVOKE.new_ChSolverADMM__SWIG_0(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChSolverADMM() : this(corePINVOKE.new_ChSolverADMM__SWIG_0(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChSolverADMM(ChDirectSolverLS my_LS_engine) : this(ChronoEngine_csharpPINVOKE.new_ChSolverADMM__SWIG_1(ChDirectSolverLS.getCPtr(my_LS_engine)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChSolverADMM(ChDirectSolverLS my_LS_engine) : this(corePINVOKE.new_ChSolverADMM__SWIG_1(ChDirectSolverLS.getCPtr(my_LS_engine)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public ChSolver.Type GetType() {
-    ChSolver.Type ret = (ChSolver.Type)ChronoEngine_csharpPINVOKE.ChSolverADMM_GetType(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChSolver.Type ret = (ChSolver.Type)corePINVOKE.ChSolverADMM_GetType(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public double Solve(SWIGTYPE_p_ChSystemDescriptor sysd) {
-    double ret = ChronoEngine_csharpPINVOKE.ChSolverADMM_Solve(swigCPtr, SWIGTYPE_p_ChSystemDescriptor.getCPtr(sysd));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChSolverADMM_Solve(swigCPtr, SWIGTYPE_p_ChSystemDescriptor.getCPtr(sysd));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetDiagonalPreconditioner(bool mp) {
-    ChronoEngine_csharpPINVOKE.ChSolverADMM_SetDiagonalPreconditioner(swigCPtr, mp);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChSolverADMM_SetDiagonalPreconditioner(swigCPtr, mp);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public bool GetDiagonalPreconditioner() {
-    bool ret = ChronoEngine_csharpPINVOKE.ChSolverADMM_GetDiagonalPreconditioner(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChSolverADMM_GetDiagonalPreconditioner(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetRho(double mr) {
-    ChronoEngine_csharpPINVOKE.ChSolverADMM_SetRho(swigCPtr, mr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChSolverADMM_SetRho(swigCPtr, mr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double GetRho() {
-    double ret = ChronoEngine_csharpPINVOKE.ChSolverADMM_GetRho(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChSolverADMM_GetRho(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetRhoBilaterals(double mr) {
-    ChronoEngine_csharpPINVOKE.ChSolverADMM_SetRhoBilaterals(swigCPtr, mr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChSolverADMM_SetRhoBilaterals(swigCPtr, mr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double GetRhoBilaterals() {
-    double ret = ChronoEngine_csharpPINVOKE.ChSolverADMM_GetRhoBilaterals(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChSolverADMM_GetRhoBilaterals(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetSigma(double mr) {
-    ChronoEngine_csharpPINVOKE.ChSolverADMM_SetSigma(swigCPtr, mr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChSolverADMM_SetSigma(swigCPtr, mr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double GetSigma() {
-    double ret = ChronoEngine_csharpPINVOKE.ChSolverADMM_GetSigma(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChSolverADMM_GetSigma(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetStepAdjustEach(int mr) {
-    ChronoEngine_csharpPINVOKE.ChSolverADMM_SetStepAdjustEach(swigCPtr, mr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChSolverADMM_SetStepAdjustEach(swigCPtr, mr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public int GetStepAdjustEach() {
-    int ret = ChronoEngine_csharpPINVOKE.ChSolverADMM_GetStepAdjustEach(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChSolverADMM_GetStepAdjustEach(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetStepAdjustThreshold(double mr) {
-    ChronoEngine_csharpPINVOKE.ChSolverADMM_SetStepAdjustThreshold(swigCPtr, mr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChSolverADMM_SetStepAdjustThreshold(swigCPtr, mr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double GetStepAdjustThreshold() {
-    double ret = ChronoEngine_csharpPINVOKE.ChSolverADMM_GetStepAdjustThreshold(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChSolverADMM_GetStepAdjustThreshold(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetStepAdjustMaxfactor(double mr) {
-    ChronoEngine_csharpPINVOKE.ChSolverADMM_SetStepAdjustMaxfactor(swigCPtr, mr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChSolverADMM_SetStepAdjustMaxfactor(swigCPtr, mr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double GetStepAdjustMaxfactor() {
-    double ret = ChronoEngine_csharpPINVOKE.ChSolverADMM_GetStepAdjustMaxfactor(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChSolverADMM_GetStepAdjustMaxfactor(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetStepAdjustPolicy(ChSolverADMM.AdmmStepType mr) {
-    ChronoEngine_csharpPINVOKE.ChSolverADMM_SetStepAdjustPolicy(swigCPtr, (int)mr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChSolverADMM_SetStepAdjustPolicy(swigCPtr, (int)mr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public ChSolverADMM.AdmmStepType GetStepAdjustPolicy() {
-    ChSolverADMM.AdmmStepType ret = (ChSolverADMM.AdmmStepType)ChronoEngine_csharpPINVOKE.ChSolverADMM_GetStepAdjustPolicy(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChSolverADMM.AdmmStepType ret = (ChSolverADMM.AdmmStepType)corePINVOKE.ChSolverADMM_GetStepAdjustPolicy(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetAcceleration(ChSolverADMM.AdmmAcceleration mr) {
-    ChronoEngine_csharpPINVOKE.ChSolverADMM_SetAcceleration(swigCPtr, (int)mr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChSolverADMM_SetAcceleration(swigCPtr, (int)mr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public ChSolverADMM.AdmmAcceleration GetAcceleration() {
-    ChSolverADMM.AdmmAcceleration ret = (ChSolverADMM.AdmmAcceleration)ChronoEngine_csharpPINVOKE.ChSolverADMM_GetAcceleration(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChSolverADMM.AdmmAcceleration ret = (ChSolverADMM.AdmmAcceleration)corePINVOKE.ChSolverADMM_GetAcceleration(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetTolerancePrimal(double mr) {
-    ChronoEngine_csharpPINVOKE.ChSolverADMM_SetTolerancePrimal(swigCPtr, mr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChSolverADMM_SetTolerancePrimal(swigCPtr, mr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double GetTolerancePrimal() {
-    double ret = ChronoEngine_csharpPINVOKE.ChSolverADMM_GetTolerancePrimal(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChSolverADMM_GetTolerancePrimal(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetToleranceDual(double mr) {
-    ChronoEngine_csharpPINVOKE.ChSolverADMM_SetToleranceDual(swigCPtr, mr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChSolverADMM_SetToleranceDual(swigCPtr, mr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double GetToleranceDual() {
-    double ret = ChronoEngine_csharpPINVOKE.ChSolverADMM_GetToleranceDual(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChSolverADMM_GetToleranceDual(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public double GetErrorPrimal() {
-    double ret = ChronoEngine_csharpPINVOKE.ChSolverADMM_GetErrorPrimal(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChSolverADMM_GetErrorPrimal(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public double GetErrorDual() {
-    double ret = ChronoEngine_csharpPINVOKE.ChSolverADMM_GetErrorDual(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChSolverADMM_GetErrorDual(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public double GetError() {
-    double ret = ChronoEngine_csharpPINVOKE.ChSolverADMM_GetError(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChSolverADMM_GetError(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void ArchiveOUT(SWIGTYPE_p_ChArchiveOut marchive) {
-    ChronoEngine_csharpPINVOKE.ChSolverADMM_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChSolverADMM_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn marchive) {
-    ChronoEngine_csharpPINVOKE.ChSolverADMM_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChSolverADMM_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public enum AdmmStepType {

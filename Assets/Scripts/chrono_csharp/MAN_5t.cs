@@ -140,12 +140,6 @@ public class MAN_5t : global::System.IDisposable {
     return ret;
   }
 
-  public double GetTotalMass() {
-    double ret = vehiclePINVOKE.MAN_5t_GetTotalMass(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
   public void Initialize() {
     vehiclePINVOKE.MAN_5t_Initialize(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();

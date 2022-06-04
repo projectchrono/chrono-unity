@@ -81,15 +81,15 @@ public class ChRoadWheelAssembly : ChPart {
     return ret;
   }
 
-  public virtual double GetMass() {
-    double ret = vehiclePINVOKE.ChRoadWheelAssembly_GetMass(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
   public virtual void Initialize(ChChassis chassis, ChVectorD location, ChTrackAssembly track) {
     vehiclePINVOKE.ChRoadWheelAssembly_Initialize(swigCPtr, ChChassis.getCPtr(chassis), ChVectorD.getCPtr(location), ChTrackAssembly.getCPtr(track));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public virtual ForceTorque ReportSuspensionForce() {
+    ForceTorque ret = new ForceTorque(vehiclePINVOKE.ChRoadWheelAssembly_ReportSuspensionForce(swigCPtr), true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
   }
 
   public override void SetOutput(bool state) {

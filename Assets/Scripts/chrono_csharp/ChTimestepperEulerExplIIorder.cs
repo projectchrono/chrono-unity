@@ -13,7 +13,7 @@ public class ChTimestepperEulerExplIIorder : ChTimestepperIIorder {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChTimestepperEulerExplIIorder(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChTimestepperEulerExplIIorder_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChTimestepperEulerExplIIorder(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChTimestepperEulerExplIIorder_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChTimestepperEulerExplIIorder : ChTimestepperIIorder {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChTimestepperEulerExplIIorder(swigCPtr);
+          corePINVOKE.delete_ChTimestepperEulerExplIIorder(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,23 +35,23 @@ public class ChTimestepperEulerExplIIorder : ChTimestepperIIorder {
     }
   }
 
-  public ChTimestepperEulerExplIIorder(ChIntegrableIIorder intgr) : this(ChronoEngine_csharpPINVOKE.new_ChTimestepperEulerExplIIorder__SWIG_0(ChIntegrableIIorder.getCPtr(intgr)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChTimestepperEulerExplIIorder(ChIntegrableIIorder intgr) : this(corePINVOKE.new_ChTimestepperEulerExplIIorder__SWIG_0(ChIntegrableIIorder.getCPtr(intgr)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChTimestepperEulerExplIIorder() : this(ChronoEngine_csharpPINVOKE.new_ChTimestepperEulerExplIIorder__SWIG_1(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChTimestepperEulerExplIIorder() : this(corePINVOKE.new_ChTimestepperEulerExplIIorder__SWIG_1(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override ChTimestepper.Type GetType() {
-    ChTimestepper.Type ret = (ChTimestepper.Type)ChronoEngine_csharpPINVOKE.ChTimestepperEulerExplIIorder_GetType(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChTimestepper.Type ret = (ChTimestepper.Type)corePINVOKE.ChTimestepperEulerExplIIorder_GetType(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void Advance(double dt) {
-    ChronoEngine_csharpPINVOKE.ChTimestepperEulerExplIIorder_Advance(swigCPtr, dt);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChTimestepperEulerExplIIorder_Advance(swigCPtr, dt);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

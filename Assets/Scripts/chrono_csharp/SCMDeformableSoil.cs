@@ -49,4 +49,9 @@ public class SCMDeformableSoil : ChLoadContainer {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public void Initialize(string mesh_file, double delta) {
+    vehiclePINVOKE.SCMDeformableSoil_Initialize__SWIG_2(swigCPtr, mesh_file, delta);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
 }

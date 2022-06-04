@@ -13,7 +13,7 @@ public class ChSystemSMC : ChSystem {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChSystemSMC(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChSystemSMC_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChSystemSMC(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChSystemSMC_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChSystemSMC : ChSystem {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChSystemSMC(swigCPtr);
+          corePINVOKE.delete_ChSystemSMC(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,121 +35,121 @@ public class ChSystemSMC : ChSystem {
     }
   }
 
-  public ChSystemSMC(bool use_material_properties) : this(ChronoEngine_csharpPINVOKE.new_ChSystemSMC__SWIG_0(use_material_properties), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChSystemSMC(bool use_material_properties) : this(corePINVOKE.new_ChSystemSMC__SWIG_0(use_material_properties), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChSystemSMC() : this(ChronoEngine_csharpPINVOKE.new_ChSystemSMC__SWIG_1(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChSystemSMC() : this(corePINVOKE.new_ChSystemSMC__SWIG_1(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChSystemSMC(ChSystemSMC other) : this(ChronoEngine_csharpPINVOKE.new_ChSystemSMC__SWIG_2(ChSystemSMC.getCPtr(other)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChSystemSMC(ChSystemSMC other) : this(corePINVOKE.new_ChSystemSMC__SWIG_2(ChSystemSMC.getCPtr(other)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override ChSystem Clone() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChSystemSMC_Clone(swigCPtr);
+    global::System.IntPtr cPtr = corePINVOKE.ChSystemSMC_Clone(swigCPtr);
     ChSystemSMC ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChSystemSMC(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override ChContactMethod GetContactMethod() {
-    ChContactMethod ret = (ChContactMethod)ChronoEngine_csharpPINVOKE.ChSystemSMC_GetContactMethod(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChContactMethod ret = (ChContactMethod)corePINVOKE.ChSystemSMC_GetContactMethod(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void SetContactContainer(ChContactContainer container) {
-    ChronoEngine_csharpPINVOKE.ChSystemSMC_SetContactContainer(swigCPtr, ChContactContainer.getCPtr(container));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChSystemSMC_SetContactContainer(swigCPtr, ChContactContainer.getCPtr(container));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void UseMaterialProperties(bool val) {
-    ChronoEngine_csharpPINVOKE.ChSystemSMC_UseMaterialProperties(swigCPtr, val);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChSystemSMC_UseMaterialProperties(swigCPtr, val);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public bool UsingMaterialProperties() {
-    bool ret = ChronoEngine_csharpPINVOKE.ChSystemSMC_UsingMaterialProperties(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChSystemSMC_UsingMaterialProperties(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetContactForceModel(ChSystemSMC.ContactForceModel model) {
-    ChronoEngine_csharpPINVOKE.ChSystemSMC_SetContactForceModel(swigCPtr, (int)model);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChSystemSMC_SetContactForceModel(swigCPtr, (int)model);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public ChSystemSMC.ContactForceModel GetContactForceModel() {
-    ChSystemSMC.ContactForceModel ret = (ChSystemSMC.ContactForceModel)ChronoEngine_csharpPINVOKE.ChSystemSMC_GetContactForceModel(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChSystemSMC.ContactForceModel ret = (ChSystemSMC.ContactForceModel)corePINVOKE.ChSystemSMC_GetContactForceModel(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetAdhesionForceModel(ChSystemSMC.AdhesionForceModel model) {
-    ChronoEngine_csharpPINVOKE.ChSystemSMC_SetAdhesionForceModel(swigCPtr, (int)model);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChSystemSMC_SetAdhesionForceModel(swigCPtr, (int)model);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public ChSystemSMC.AdhesionForceModel GetAdhesionForceModel() {
-    ChSystemSMC.AdhesionForceModel ret = (ChSystemSMC.AdhesionForceModel)ChronoEngine_csharpPINVOKE.ChSystemSMC_GetAdhesionForceModel(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChSystemSMC.AdhesionForceModel ret = (ChSystemSMC.AdhesionForceModel)corePINVOKE.ChSystemSMC_GetAdhesionForceModel(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetTangentialDisplacementModel(ChSystemSMC.TangentialDisplacementModel model) {
-    ChronoEngine_csharpPINVOKE.ChSystemSMC_SetTangentialDisplacementModel(swigCPtr, (int)model);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChSystemSMC_SetTangentialDisplacementModel(swigCPtr, (int)model);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public ChSystemSMC.TangentialDisplacementModel GetTangentialDisplacementModel() {
-    ChSystemSMC.TangentialDisplacementModel ret = (ChSystemSMC.TangentialDisplacementModel)ChronoEngine_csharpPINVOKE.ChSystemSMC_GetTangentialDisplacementModel(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChSystemSMC.TangentialDisplacementModel ret = (ChSystemSMC.TangentialDisplacementModel)corePINVOKE.ChSystemSMC_GetTangentialDisplacementModel(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetStiffContact(bool val) {
-    ChronoEngine_csharpPINVOKE.ChSystemSMC_SetStiffContact(swigCPtr, val);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChSystemSMC_SetStiffContact(swigCPtr, val);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public bool GetStiffContact() {
-    bool ret = ChronoEngine_csharpPINVOKE.ChSystemSMC_GetStiffContact(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChSystemSMC_GetStiffContact(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetSlipVelocityThreshold(double vel) {
-    ChronoEngine_csharpPINVOKE.ChSystemSMC_SetSlipVelocityThreshold(swigCPtr, vel);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChSystemSMC_SetSlipVelocityThreshold(swigCPtr, vel);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double GetSlipVelocityThreshold() {
-    double ret = ChronoEngine_csharpPINVOKE.ChSystemSMC_GetSlipVelocityThreshold(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChSystemSMC_GetSlipVelocityThreshold(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetCharacteristicImpactVelocity(double vel) {
-    ChronoEngine_csharpPINVOKE.ChSystemSMC_SetCharacteristicImpactVelocity(swigCPtr, vel);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChSystemSMC_SetCharacteristicImpactVelocity(swigCPtr, vel);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double GetCharacteristicImpactVelocity() {
-    double ret = ChronoEngine_csharpPINVOKE.ChSystemSMC_GetCharacteristicImpactVelocity(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChSystemSMC_GetCharacteristicImpactVelocity(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void ArchiveOUT(SWIGTYPE_p_ChArchiveOut marchive) {
-    ChronoEngine_csharpPINVOKE.ChSystemSMC_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChSystemSMC_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn marchive) {
-    ChronoEngine_csharpPINVOKE.ChSystemSMC_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChSystemSMC_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public enum ContactForceModel {

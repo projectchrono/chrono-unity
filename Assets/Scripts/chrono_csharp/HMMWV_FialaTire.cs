@@ -62,14 +62,14 @@ public class HMMWV_FialaTire : ChFialaTire {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public override double GetMass() {
-    double ret = vehiclePINVOKE.HMMWV_FialaTire_GetMass(swigCPtr);
+  public virtual double GetTireMass() {
+    double ret = vehiclePINVOKE.HMMWV_FialaTire_GetTireMass(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public override ChVectorD GetInertia() {
-    ChVectorD ret = new ChVectorD(vehiclePINVOKE.HMMWV_FialaTire_GetInertia(swigCPtr), true);
+  public virtual ChVectorD GetTireInertia() {
+    ChVectorD ret = new ChVectorD(vehiclePINVOKE.HMMWV_FialaTire_GetTireInertia(swigCPtr), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

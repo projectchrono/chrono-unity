@@ -36,7 +36,7 @@ public class AddContactCallback : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnBase) {
           swigCMemOwnBase = false;
-          ChronoEngine_csharpPINVOKE.delete_AddContactCallback(swigCPtr);
+          corePINVOKE.delete_AddContactCallback(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -44,19 +44,19 @@ public class AddContactCallback : global::System.IDisposable {
   }
 
   public virtual void OnAddContact(ChCollisionInfo contactinfo, ChMaterialComposite material) {
-    ChronoEngine_csharpPINVOKE.AddContactCallback_OnAddContact(swigCPtr, ChCollisionInfo.getCPtr(contactinfo), ChMaterialComposite.getCPtr(material));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.AddContactCallback_OnAddContact(swigCPtr, ChCollisionInfo.getCPtr(contactinfo), ChMaterialComposite.getCPtr(material));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public AddContactCallback() : this(ChronoEngine_csharpPINVOKE.new_AddContactCallback(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public AddContactCallback() : this(corePINVOKE.new_AddContactCallback(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     SwigDirectorConnect();
   }
 
   private void SwigDirectorConnect() {
     if (SwigDerivedClassHasMethod("OnAddContact", swigMethodTypes0))
       swigDelegate0 = new SwigDelegateAddContactCallback_0(SwigDirectorMethodOnAddContact);
-    ChronoEngine_csharpPINVOKE.AddContactCallback_director_connect(swigCPtr, swigDelegate0);
+    corePINVOKE.AddContactCallback_director_connect(swigCPtr, swigDelegate0);
   }
 
   private bool SwigDerivedClassHasMethod(string methodName, global::System.Type[] methodTypes) {

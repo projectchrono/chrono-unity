@@ -43,14 +43,14 @@ public class Wheel : ChWheel {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public override double GetMass() {
-    double ret = vehiclePINVOKE.Wheel_GetMass(swigCPtr);
+  public virtual double GetWheelMass() {
+    double ret = vehiclePINVOKE.Wheel_GetWheelMass(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public override ChVectorD GetInertia() {
-    ChVectorD ret = new ChVectorD(vehiclePINVOKE.Wheel_GetInertia(swigCPtr), true);
+  public virtual ChVectorD GetWheelInertia() {
+    ChVectorD ret = new ChVectorD(vehiclePINVOKE.Wheel_GetWheelInertia(swigCPtr), false);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

@@ -81,7 +81,7 @@ public class UUAZ : UChVehicle
 
         uaz.Initialize();
 
-        Debug.Log("UAZBUS total mass: " + uaz.GetTotalMass());
+        Debug.Log("UAZBUS total mass: " + uaz.GetVehicle().GetMass());
 
         // Get the vehicle components 
         foreach (Transform child in transform)
@@ -104,8 +104,8 @@ public class UUAZ : UChVehicle
 
     protected override void OnAdvance(double step)
     {
-        var vehicle_pos = uaz.GetVehicle().GetVehiclePos();
-        var vehicle_rot = uaz.GetVehicle().GetVehicleRot();
+        var vehicle_pos = uaz.GetVehicle().GetPos();
+        var vehicle_rot = uaz.GetVehicle().GetRot();
 
         var spindleFL_pos = uaz.GetVehicle().GetSpindlePos(0, VehicleSide.LEFT);
         var spindleFL_rot = uaz.GetVehicle().GetSpindleRot(0, VehicleSide.LEFT);

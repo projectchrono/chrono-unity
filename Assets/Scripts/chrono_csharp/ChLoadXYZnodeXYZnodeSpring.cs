@@ -13,7 +13,7 @@ public class ChLoadXYZnodeXYZnodeSpring : ChLoadXYZnodeXYZnode {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChLoadXYZnodeXYZnodeSpring(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChLoadXYZnodeXYZnodeSpring_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChLoadXYZnodeXYZnodeSpring(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChLoadXYZnodeXYZnodeSpring_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChLoadXYZnodeXYZnodeSpring : ChLoadXYZnodeXYZnode {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChLoadXYZnodeXYZnodeSpring(swigCPtr);
+          corePINVOKE.delete_ChLoadXYZnodeXYZnodeSpring(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,62 +35,55 @@ public class ChLoadXYZnodeXYZnodeSpring : ChLoadXYZnodeXYZnode {
     }
   }
 
-  public ChLoadXYZnodeXYZnodeSpring(SWIGTYPE_p_std__shared_ptrT_ChNodeXYZ_t mnodeA, SWIGTYPE_p_std__shared_ptrT_ChNodeXYZ_t mnodeB, double mK, double mR, double mD0) : this(ChronoEngine_csharpPINVOKE.new_ChLoadXYZnodeXYZnodeSpring__SWIG_0(SWIGTYPE_p_std__shared_ptrT_ChNodeXYZ_t.getCPtr(mnodeA), SWIGTYPE_p_std__shared_ptrT_ChNodeXYZ_t.getCPtr(mnodeB), mK, mR, mD0), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChLoadXYZnodeXYZnodeSpring(ChNodeXYZ mnodeA, ChNodeXYZ mnodeB, double mK, double mR, double mD0) : this(corePINVOKE.new_ChLoadXYZnodeXYZnodeSpring__SWIG_0(ChNodeXYZ.getCPtr(mnodeA), ChNodeXYZ.getCPtr(mnodeB), mK, mR, mD0), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChLoadXYZnodeXYZnodeSpring(SWIGTYPE_p_std__shared_ptrT_ChNodeXYZ_t mnodeA, SWIGTYPE_p_std__shared_ptrT_ChNodeXYZ_t mnodeB, double mK, double mR) : this(ChronoEngine_csharpPINVOKE.new_ChLoadXYZnodeXYZnodeSpring__SWIG_1(SWIGTYPE_p_std__shared_ptrT_ChNodeXYZ_t.getCPtr(mnodeA), SWIGTYPE_p_std__shared_ptrT_ChNodeXYZ_t.getCPtr(mnodeB), mK, mR), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public override ChObj Clone() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChLoadXYZnodeXYZnodeSpring_Clone(swigCPtr);
-    ChLoadXYZnodeXYZnodeSpring ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChLoadXYZnodeXYZnodeSpring(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
+  public ChLoadXYZnodeXYZnodeSpring(ChNodeXYZ mnodeA, ChNodeXYZ mnodeB, double mK, double mR) : this(corePINVOKE.new_ChLoadXYZnodeXYZnodeSpring__SWIG_1(ChNodeXYZ.getCPtr(mnodeA), ChNodeXYZ.getCPtr(mnodeB), mK, mR), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void ComputeForce(ChVectorD rel_pos, ChVectorD rel_vel, ChVectorD abs_force) {
-    ChronoEngine_csharpPINVOKE.ChLoadXYZnodeXYZnodeSpring_ComputeForce(swigCPtr, ChVectorD.getCPtr(rel_pos), ChVectorD.getCPtr(rel_vel), ChVectorD.getCPtr(abs_force));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoadXYZnodeXYZnodeSpring_ComputeForce(swigCPtr, ChVectorD.getCPtr(rel_pos), ChVectorD.getCPtr(rel_vel), ChVectorD.getCPtr(abs_force));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetStiffness(double mstiffness) {
-    ChronoEngine_csharpPINVOKE.ChLoadXYZnodeXYZnodeSpring_SetStiffness(swigCPtr, mstiffness);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoadXYZnodeXYZnodeSpring_SetStiffness(swigCPtr, mstiffness);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double GetStiffness() {
-    double ret = ChronoEngine_csharpPINVOKE.ChLoadXYZnodeXYZnodeSpring_GetStiffness(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChLoadXYZnodeXYZnodeSpring_GetStiffness(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetDamping(double mdamping) {
-    ChronoEngine_csharpPINVOKE.ChLoadXYZnodeXYZnodeSpring_SetDamping(swigCPtr, mdamping);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoadXYZnodeXYZnodeSpring_SetDamping(swigCPtr, mdamping);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double GetDamping() {
-    double ret = ChronoEngine_csharpPINVOKE.ChLoadXYZnodeXYZnodeSpring_GetDamping(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChLoadXYZnodeXYZnodeSpring_GetDamping(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetRestLength(double mrest) {
-    ChronoEngine_csharpPINVOKE.ChLoadXYZnodeXYZnodeSpring_SetRestLength(swigCPtr, mrest);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoadXYZnodeXYZnodeSpring_SetRestLength(swigCPtr, mrest);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double GetRestLength() {
-    double ret = ChronoEngine_csharpPINVOKE.ChLoadXYZnodeXYZnodeSpring_GetRestLength(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChLoadXYZnodeXYZnodeSpring_GetRestLength(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetStiff(bool ms) {
-    ChronoEngine_csharpPINVOKE.ChLoadXYZnodeXYZnodeSpring_SetStiff(swigCPtr, ms);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoadXYZnodeXYZnodeSpring_SetStiff(swigCPtr, ms);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

@@ -13,7 +13,7 @@ public class ChLoadCustomMultiple : ChLoadBase {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChLoadCustomMultiple(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChLoadCustomMultiple_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChLoadCustomMultiple(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChLoadCustomMultiple_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChLoadCustomMultiple : ChLoadBase {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChLoadCustomMultiple(swigCPtr);
+          corePINVOKE.delete_ChLoadCustomMultiple(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,79 +35,264 @@ public class ChLoadCustomMultiple : ChLoadBase {
     }
   }
 
-  public SWIGTYPE_p_std__vectorT_std__shared_ptrT_chrono__ChLoadable_t_t loadables {
+  public vector_ChLoadable loadables {
     set {
-      ChronoEngine_csharpPINVOKE.ChLoadCustomMultiple_loadables_set(swigCPtr, SWIGTYPE_p_std__vectorT_std__shared_ptrT_chrono__ChLoadable_t_t.getCPtr(value));
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChLoadCustomMultiple_loadables_set(swigCPtr, vector_ChLoadable.getCPtr(value));
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChLoadCustomMultiple_loadables_get(swigCPtr);
-      SWIGTYPE_p_std__vectorT_std__shared_ptrT_chrono__ChLoadable_t_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_std__shared_ptrT_chrono__ChLoadable_t_t(cPtr, false);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      global::System.IntPtr cPtr = corePINVOKE.ChLoadCustomMultiple_loadables_get(swigCPtr);
+      vector_ChLoadable ret = (cPtr == global::System.IntPtr.Zero) ? null : new vector_ChLoadable(cPtr, false);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public ChVectorDynamicD load_Q {
     set {
-      ChronoEngine_csharpPINVOKE.ChLoadCustomMultiple_load_Q_set(swigCPtr, ChVectorDynamicD.getCPtr(value));
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChLoadCustomMultiple_load_Q_set(swigCPtr, ChVectorDynamicD.getCPtr(value));
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChLoadCustomMultiple_load_Q_get(swigCPtr);
+      global::System.IntPtr cPtr = corePINVOKE.ChLoadCustomMultiple_load_Q_get(swigCPtr);
       ChVectorDynamicD ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChVectorDynamicD(cPtr, false);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
+  public ChLoadCustomMultiple(vector_ChLoadable mloadables) : this(corePINVOKE.new_ChLoadCustomMultiple__SWIG_0(vector_ChLoadable.getCPtr(mloadables)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
+    SwigDirectorConnect();
+  }
+
+  public ChLoadCustomMultiple(ChLoadable mloadableA, ChLoadable mloadableB) : this(corePINVOKE.new_ChLoadCustomMultiple__SWIG_1(ChLoadable.getCPtr(mloadableA), ChLoadable.getCPtr(mloadableB)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
+    SwigDirectorConnect();
+  }
+
+  public ChLoadCustomMultiple(ChLoadable mloadableA, ChLoadable mloadableB, ChLoadable mloadableC) : this(corePINVOKE.new_ChLoadCustomMultiple__SWIG_2(ChLoadable.getCPtr(mloadableA), ChLoadable.getCPtr(mloadableB), ChLoadable.getCPtr(mloadableC)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
+    SwigDirectorConnect();
+  }
+
   public override int LoadGet_ndof_x() {
-    int ret = ChronoEngine_csharpPINVOKE.ChLoadCustomMultiple_LoadGet_ndof_x(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = (SwigDerivedClassHasMethod("LoadGet_ndof_x", swigMethodTypes2) ? corePINVOKE.ChLoadCustomMultiple_LoadGet_ndof_xSwigExplicitChLoadCustomMultiple(swigCPtr) : corePINVOKE.ChLoadCustomMultiple_LoadGet_ndof_x(swigCPtr));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override int LoadGet_ndof_w() {
-    int ret = ChronoEngine_csharpPINVOKE.ChLoadCustomMultiple_LoadGet_ndof_w(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = (SwigDerivedClassHasMethod("LoadGet_ndof_w", swigMethodTypes3) ? corePINVOKE.ChLoadCustomMultiple_LoadGet_ndof_wSwigExplicitChLoadCustomMultiple(swigCPtr) : corePINVOKE.ChLoadCustomMultiple_LoadGet_ndof_w(swigCPtr));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void LoadGetStateBlock_x(ChState mD) {
-    ChronoEngine_csharpPINVOKE.ChLoadCustomMultiple_LoadGetStateBlock_x(swigCPtr, ChState.getCPtr(mD));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("LoadGetStateBlock_x", swigMethodTypes4)) corePINVOKE.ChLoadCustomMultiple_LoadGetStateBlock_xSwigExplicitChLoadCustomMultiple(swigCPtr, ChState.getCPtr(mD)); else corePINVOKE.ChLoadCustomMultiple_LoadGetStateBlock_x(swigCPtr, ChState.getCPtr(mD));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void LoadGetStateBlock_w(ChStateDelta mD) {
-    ChronoEngine_csharpPINVOKE.ChLoadCustomMultiple_LoadGetStateBlock_w(swigCPtr, ChStateDelta.getCPtr(mD));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("LoadGetStateBlock_w", swigMethodTypes5)) corePINVOKE.ChLoadCustomMultiple_LoadGetStateBlock_wSwigExplicitChLoadCustomMultiple(swigCPtr, ChStateDelta.getCPtr(mD)); else corePINVOKE.ChLoadCustomMultiple_LoadGetStateBlock_w(swigCPtr, ChStateDelta.getCPtr(mD));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void LoadStateIncrement(ChState x, ChStateDelta dw, ChState x_new) {
-    ChronoEngine_csharpPINVOKE.ChLoadCustomMultiple_LoadStateIncrement(swigCPtr, ChState.getCPtr(x), ChStateDelta.getCPtr(dw), ChState.getCPtr(x_new));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("LoadStateIncrement", swigMethodTypes6)) corePINVOKE.ChLoadCustomMultiple_LoadStateIncrementSwigExplicitChLoadCustomMultiple(swigCPtr, ChState.getCPtr(x), ChStateDelta.getCPtr(dw), ChState.getCPtr(x_new)); else corePINVOKE.ChLoadCustomMultiple_LoadStateIncrement(swigCPtr, ChState.getCPtr(x), ChStateDelta.getCPtr(dw), ChState.getCPtr(x_new));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override int LoadGet_field_ncoords() {
-    int ret = ChronoEngine_csharpPINVOKE.ChLoadCustomMultiple_LoadGet_field_ncoords(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = (SwigDerivedClassHasMethod("LoadGet_field_ncoords", swigMethodTypes7) ? corePINVOKE.ChLoadCustomMultiple_LoadGet_field_ncoordsSwigExplicitChLoadCustomMultiple(swigCPtr) : corePINVOKE.ChLoadCustomMultiple_LoadGet_field_ncoords(swigCPtr));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void LoadIntLoadResidual_F(ChVectorDynamicD R, double c) {
-    ChronoEngine_csharpPINVOKE.ChLoadCustomMultiple_LoadIntLoadResidual_F(swigCPtr, ChVectorDynamicD.getCPtr(R), c);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("LoadIntLoadResidual_F", swigMethodTypes12)) corePINVOKE.ChLoadCustomMultiple_LoadIntLoadResidual_FSwigExplicitChLoadCustomMultiple(swigCPtr, ChVectorDynamicD.getCPtr(R), c); else corePINVOKE.ChLoadCustomMultiple_LoadIntLoadResidual_F(swigCPtr, ChVectorDynamicD.getCPtr(R), c);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public override void LoadIntLoadResidual_Mv(ChVectorDynamicD R, ChVectorDynamicD w, double c) {
+    if (SwigDerivedClassHasMethod("LoadIntLoadResidual_Mv", swigMethodTypes13)) corePINVOKE.ChLoadCustomMultiple_LoadIntLoadResidual_MvSwigExplicitChLoadCustomMultiple(swigCPtr, ChVectorDynamicD.getCPtr(R), ChVectorDynamicD.getCPtr(w), c); else corePINVOKE.ChLoadCustomMultiple_LoadIntLoadResidual_Mv(swigCPtr, ChVectorDynamicD.getCPtr(R), ChVectorDynamicD.getCPtr(w), c);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void CreateJacobianMatrices() {
-    ChronoEngine_csharpPINVOKE.ChLoadCustomMultiple_CreateJacobianMatrices(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("CreateJacobianMatrices", swigMethodTypes9)) corePINVOKE.ChLoadCustomMultiple_CreateJacobianMatricesSwigExplicitChLoadCustomMultiple(swigCPtr); else corePINVOKE.ChLoadCustomMultiple_CreateJacobianMatrices(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual ChVectorDynamicD GetQ() {
-    ChVectorDynamicD ret = new ChVectorDynamicD(ChronoEngine_csharpPINVOKE.ChLoadCustomMultiple_GetQ(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorDynamicD ret = new ChVectorDynamicD((SwigDerivedClassHasMethod("GetQ", swigMethodTypes16) ? corePINVOKE.ChLoadCustomMultiple_GetQSwigExplicitChLoadCustomMultiple(swigCPtr) : corePINVOKE.ChLoadCustomMultiple_GetQ(swigCPtr)), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
+  private void SwigDirectorConnect() {
+    if (SwigDerivedClassHasMethod("ArchiveOUT", swigMethodTypes0))
+      swigDelegate0 = new SwigDelegateChLoadCustomMultiple_0(SwigDirectorMethodArchiveOUT);
+    if (SwigDerivedClassHasMethod("ArchiveIN", swigMethodTypes1))
+      swigDelegate1 = new SwigDelegateChLoadCustomMultiple_1(SwigDirectorMethodArchiveIN);
+    if (SwigDerivedClassHasMethod("LoadGet_ndof_x", swigMethodTypes2))
+      swigDelegate2 = new SwigDelegateChLoadCustomMultiple_2(SwigDirectorMethodLoadGet_ndof_x);
+    if (SwigDerivedClassHasMethod("LoadGet_ndof_w", swigMethodTypes3))
+      swigDelegate3 = new SwigDelegateChLoadCustomMultiple_3(SwigDirectorMethodLoadGet_ndof_w);
+    if (SwigDerivedClassHasMethod("LoadGetStateBlock_x", swigMethodTypes4))
+      swigDelegate4 = new SwigDelegateChLoadCustomMultiple_4(SwigDirectorMethodLoadGetStateBlock_x);
+    if (SwigDerivedClassHasMethod("LoadGetStateBlock_w", swigMethodTypes5))
+      swigDelegate5 = new SwigDelegateChLoadCustomMultiple_5(SwigDirectorMethodLoadGetStateBlock_w);
+    if (SwigDerivedClassHasMethod("LoadStateIncrement", swigMethodTypes6))
+      swigDelegate6 = new SwigDelegateChLoadCustomMultiple_6(SwigDirectorMethodLoadStateIncrement);
+    if (SwigDerivedClassHasMethod("LoadGet_field_ncoords", swigMethodTypes7))
+      swigDelegate7 = new SwigDelegateChLoadCustomMultiple_7(SwigDirectorMethodLoadGet_field_ncoords);
+    if (SwigDerivedClassHasMethod("ComputeQ", swigMethodTypes8))
+      swigDelegate8 = new SwigDelegateChLoadCustomMultiple_8(SwigDirectorMethodComputeQ);
+    if (SwigDerivedClassHasMethod("CreateJacobianMatrices", swigMethodTypes9))
+      swigDelegate9 = new SwigDelegateChLoadCustomMultiple_9(SwigDirectorMethodCreateJacobianMatrices);
+    if (SwigDerivedClassHasMethod("Update", swigMethodTypes10))
+      swigDelegate10 = new SwigDelegateChLoadCustomMultiple_10(SwigDirectorMethodUpdate);
+    if (SwigDerivedClassHasMethod("IsStiff", swigMethodTypes11))
+      swigDelegate11 = new SwigDelegateChLoadCustomMultiple_11(SwigDirectorMethodIsStiff);
+    if (SwigDerivedClassHasMethod("LoadIntLoadResidual_F", swigMethodTypes12))
+      swigDelegate12 = new SwigDelegateChLoadCustomMultiple_12(SwigDirectorMethodLoadIntLoadResidual_F);
+    if (SwigDerivedClassHasMethod("LoadIntLoadResidual_Mv", swigMethodTypes13))
+      swigDelegate13 = new SwigDelegateChLoadCustomMultiple_13(SwigDirectorMethodLoadIntLoadResidual_Mv);
+    if (SwigDerivedClassHasMethod("InjectKRMmatrices", swigMethodTypes14))
+      swigDelegate14 = new SwigDelegateChLoadCustomMultiple_14(SwigDirectorMethodInjectKRMmatrices);
+    if (SwigDerivedClassHasMethod("KRMmatricesLoad", swigMethodTypes15))
+      swigDelegate15 = new SwigDelegateChLoadCustomMultiple_15(SwigDirectorMethodKRMmatricesLoad);
+    if (SwigDerivedClassHasMethod("GetQ", swigMethodTypes16))
+      swigDelegate16 = new SwigDelegateChLoadCustomMultiple_16(SwigDirectorMethodGetQ);
+    corePINVOKE.ChLoadCustomMultiple_director_connect(swigCPtr, swigDelegate0, swigDelegate1, swigDelegate2, swigDelegate3, swigDelegate4, swigDelegate5, swigDelegate6, swigDelegate7, swigDelegate8, swigDelegate9, swigDelegate10, swigDelegate11, swigDelegate12, swigDelegate13, swigDelegate14, swigDelegate15, swigDelegate16);
+  }
+
+  private bool SwigDerivedClassHasMethod(string methodName, global::System.Type[] methodTypes) {
+    global::System.Reflection.MethodInfo methodInfo = this.GetType().GetMethod(methodName, global::System.Reflection.BindingFlags.Public | global::System.Reflection.BindingFlags.NonPublic | global::System.Reflection.BindingFlags.Instance, null, methodTypes, null);
+    bool hasDerivedMethod = methodInfo.DeclaringType.IsSubclassOf(typeof(ChLoadCustomMultiple));
+    return hasDerivedMethod;
+  }
+
+  private void SwigDirectorMethodArchiveOUT(global::System.IntPtr marchive) {
+    ArchiveOUT(new SWIGTYPE_p_ChArchiveOut(marchive, false));
+  }
+
+  private void SwigDirectorMethodArchiveIN(global::System.IntPtr marchive) {
+    ArchiveIN(new SWIGTYPE_p_chrono__ChArchiveIn(marchive, false));
+  }
+
+  private int SwigDirectorMethodLoadGet_ndof_x() {
+    return LoadGet_ndof_x();
+  }
+
+  private int SwigDirectorMethodLoadGet_ndof_w() {
+    return LoadGet_ndof_w();
+  }
+
+  private void SwigDirectorMethodLoadGetStateBlock_x(global::System.IntPtr mD) {
+    LoadGetStateBlock_x(new ChState(mD, false));
+  }
+
+  private void SwigDirectorMethodLoadGetStateBlock_w(global::System.IntPtr mD) {
+    LoadGetStateBlock_w(new ChStateDelta(mD, false));
+  }
+
+  private void SwigDirectorMethodLoadStateIncrement(global::System.IntPtr x, global::System.IntPtr dw, global::System.IntPtr x_new) {
+    LoadStateIncrement(new ChState(x, false), new ChStateDelta(dw, false), new ChState(x_new, false));
+  }
+
+  private int SwigDirectorMethodLoadGet_field_ncoords() {
+    return LoadGet_field_ncoords();
+  }
+
+  private void SwigDirectorMethodComputeQ(global::System.IntPtr state_x, global::System.IntPtr state_w) {
+    ComputeQ((state_x == global::System.IntPtr.Zero) ? null : new ChState(state_x, false), (state_w == global::System.IntPtr.Zero) ? null : new ChStateDelta(state_w, false));
+  }
+
+  private void SwigDirectorMethodCreateJacobianMatrices() {
+    CreateJacobianMatrices();
+  }
+
+  private void SwigDirectorMethodUpdate(double time) {
+    Update(time);
+  }
+
+  private bool SwigDirectorMethodIsStiff() {
+    return IsStiff();
+  }
+
+  private void SwigDirectorMethodLoadIntLoadResidual_F(global::System.IntPtr R, double c) {
+    LoadIntLoadResidual_F(new ChVectorDynamicD(R, false), c);
+  }
+
+  private void SwigDirectorMethodLoadIntLoadResidual_Mv(global::System.IntPtr R, global::System.IntPtr w, double c) {
+    LoadIntLoadResidual_Mv(new ChVectorDynamicD(R, false), new ChVectorDynamicD(w, false), c);
+  }
+
+  private void SwigDirectorMethodInjectKRMmatrices(global::System.IntPtr mdescriptor) {
+    InjectKRMmatrices(new SWIGTYPE_p_ChSystemDescriptor(mdescriptor, false));
+  }
+
+  private void SwigDirectorMethodKRMmatricesLoad(double Kfactor, double Rfactor, double Mfactor) {
+    KRMmatricesLoad(Kfactor, Rfactor, Mfactor);
+  }
+
+  private global::System.IntPtr SwigDirectorMethodGetQ() {
+    return ChVectorDynamicD.getCPtr(GetQ()).Handle;
+  }
+
+  public delegate void SwigDelegateChLoadCustomMultiple_0(global::System.IntPtr marchive);
+  public delegate void SwigDelegateChLoadCustomMultiple_1(global::System.IntPtr marchive);
+  public delegate int SwigDelegateChLoadCustomMultiple_2();
+  public delegate int SwigDelegateChLoadCustomMultiple_3();
+  public delegate void SwigDelegateChLoadCustomMultiple_4(global::System.IntPtr mD);
+  public delegate void SwigDelegateChLoadCustomMultiple_5(global::System.IntPtr mD);
+  public delegate void SwigDelegateChLoadCustomMultiple_6(global::System.IntPtr x, global::System.IntPtr dw, global::System.IntPtr x_new);
+  public delegate int SwigDelegateChLoadCustomMultiple_7();
+  public delegate void SwigDelegateChLoadCustomMultiple_8(global::System.IntPtr state_x, global::System.IntPtr state_w);
+  public delegate void SwigDelegateChLoadCustomMultiple_9();
+  public delegate void SwigDelegateChLoadCustomMultiple_10(double time);
+  public delegate bool SwigDelegateChLoadCustomMultiple_11();
+  public delegate void SwigDelegateChLoadCustomMultiple_12(global::System.IntPtr R, double c);
+  public delegate void SwigDelegateChLoadCustomMultiple_13(global::System.IntPtr R, global::System.IntPtr w, double c);
+  public delegate void SwigDelegateChLoadCustomMultiple_14(global::System.IntPtr mdescriptor);
+  public delegate void SwigDelegateChLoadCustomMultiple_15(double Kfactor, double Rfactor, double Mfactor);
+  public delegate global::System.IntPtr SwigDelegateChLoadCustomMultiple_16();
+
+  private SwigDelegateChLoadCustomMultiple_0 swigDelegate0;
+  private SwigDelegateChLoadCustomMultiple_1 swigDelegate1;
+  private SwigDelegateChLoadCustomMultiple_2 swigDelegate2;
+  private SwigDelegateChLoadCustomMultiple_3 swigDelegate3;
+  private SwigDelegateChLoadCustomMultiple_4 swigDelegate4;
+  private SwigDelegateChLoadCustomMultiple_5 swigDelegate5;
+  private SwigDelegateChLoadCustomMultiple_6 swigDelegate6;
+  private SwigDelegateChLoadCustomMultiple_7 swigDelegate7;
+  private SwigDelegateChLoadCustomMultiple_8 swigDelegate8;
+  private SwigDelegateChLoadCustomMultiple_9 swigDelegate9;
+  private SwigDelegateChLoadCustomMultiple_10 swigDelegate10;
+  private SwigDelegateChLoadCustomMultiple_11 swigDelegate11;
+  private SwigDelegateChLoadCustomMultiple_12 swigDelegate12;
+  private SwigDelegateChLoadCustomMultiple_13 swigDelegate13;
+  private SwigDelegateChLoadCustomMultiple_14 swigDelegate14;
+  private SwigDelegateChLoadCustomMultiple_15 swigDelegate15;
+  private SwigDelegateChLoadCustomMultiple_16 swigDelegate16;
+
+  private static global::System.Type[] swigMethodTypes0 = new global::System.Type[] { typeof(SWIGTYPE_p_ChArchiveOut) };
+  private static global::System.Type[] swigMethodTypes1 = new global::System.Type[] { typeof(SWIGTYPE_p_chrono__ChArchiveIn) };
+  private static global::System.Type[] swigMethodTypes2 = new global::System.Type[] {  };
+  private static global::System.Type[] swigMethodTypes3 = new global::System.Type[] {  };
+  private static global::System.Type[] swigMethodTypes4 = new global::System.Type[] { typeof(ChState) };
+  private static global::System.Type[] swigMethodTypes5 = new global::System.Type[] { typeof(ChStateDelta) };
+  private static global::System.Type[] swigMethodTypes6 = new global::System.Type[] { typeof(ChState), typeof(ChStateDelta), typeof(ChState) };
+  private static global::System.Type[] swigMethodTypes7 = new global::System.Type[] {  };
+  private static global::System.Type[] swigMethodTypes8 = new global::System.Type[] { typeof(ChState), typeof(ChStateDelta) };
+  private static global::System.Type[] swigMethodTypes9 = new global::System.Type[] {  };
+  private static global::System.Type[] swigMethodTypes10 = new global::System.Type[] { typeof(double) };
+  private static global::System.Type[] swigMethodTypes11 = new global::System.Type[] {  };
+  private static global::System.Type[] swigMethodTypes12 = new global::System.Type[] { typeof(ChVectorDynamicD), typeof(double) };
+  private static global::System.Type[] swigMethodTypes13 = new global::System.Type[] { typeof(ChVectorDynamicD), typeof(ChVectorDynamicD), typeof(double) };
+  private static global::System.Type[] swigMethodTypes14 = new global::System.Type[] { typeof(SWIGTYPE_p_ChSystemDescriptor) };
+  private static global::System.Type[] swigMethodTypes15 = new global::System.Type[] { typeof(double), typeof(double), typeof(double) };
+  private static global::System.Type[] swigMethodTypes16 = new global::System.Type[] {  };
 }

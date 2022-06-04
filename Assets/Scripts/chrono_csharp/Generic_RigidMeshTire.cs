@@ -51,14 +51,14 @@ public class Generic_RigidMeshTire : ChRigidTire {
     return ret;
   }
 
-  public override double GetMass() {
-    double ret = vehiclePINVOKE.Generic_RigidMeshTire_GetMass(swigCPtr);
+  public virtual double GetTireMass() {
+    double ret = vehiclePINVOKE.Generic_RigidMeshTire_GetTireMass(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public override ChVectorD GetInertia() {
-    ChVectorD ret = new ChVectorD(vehiclePINVOKE.Generic_RigidMeshTire_GetInertia(swigCPtr), true);
+  public virtual ChVectorD GetTireInertia() {
+    ChVectorD ret = new ChVectorD(vehiclePINVOKE.Generic_RigidMeshTire_GetTireInertia(swigCPtr), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

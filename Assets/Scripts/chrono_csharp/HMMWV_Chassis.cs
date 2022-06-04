@@ -47,24 +47,6 @@ public class HMMWV_Chassis : ChRigidChassis {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public override double GetMass() {
-    double ret = vehiclePINVOKE.HMMWV_Chassis_GetMass(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public override ChMatrix33D GetInertia() {
-    ChMatrix33D ret = new ChMatrix33D(vehiclePINVOKE.HMMWV_Chassis_GetInertia(swigCPtr), false);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public override ChVectorD GetLocalPosCOM() {
-    ChVectorD ret = new ChVectorD(vehiclePINVOKE.HMMWV_Chassis_GetLocalPosCOM(swigCPtr), false);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
   public override ChVectorD GetLocalPosRearConnector() {
     ChVectorD ret = new ChVectorD(vehiclePINVOKE.HMMWV_Chassis_GetLocalPosRearConnector(swigCPtr), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();

@@ -35,15 +35,31 @@ public class WheeledVehicle : ChWheeledVehicle {
     }
   }
 
-  public WheeledVehicle(string filename, ChContactMethod contact_method) : this(vehiclePINVOKE.new_WheeledVehicle__SWIG_0(filename, (int)contact_method), true) {
+  public WheeledVehicle(string filename, ChContactMethod contact_method, bool create_powertrain, bool create_tires) : this(vehiclePINVOKE.new_WheeledVehicle__SWIG_0(filename, (int)contact_method, create_powertrain, create_tires), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public WheeledVehicle(string filename) : this(vehiclePINVOKE.new_WheeledVehicle__SWIG_1(filename), true) {
+  public WheeledVehicle(string filename, ChContactMethod contact_method, bool create_powertrain) : this(vehiclePINVOKE.new_WheeledVehicle__SWIG_1(filename, (int)contact_method, create_powertrain), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public WheeledVehicle(ChSystem system, string filename) : this(vehiclePINVOKE.new_WheeledVehicle__SWIG_2(ChSystem.getCPtr(system), filename), true) {
+  public WheeledVehicle(string filename, ChContactMethod contact_method) : this(vehiclePINVOKE.new_WheeledVehicle__SWIG_2(filename, (int)contact_method), true) {
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public WheeledVehicle(string filename) : this(vehiclePINVOKE.new_WheeledVehicle__SWIG_3(filename), true) {
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public WheeledVehicle(ChSystem system, string filename, bool create_powertrain, bool create_tires) : this(vehiclePINVOKE.new_WheeledVehicle__SWIG_4(ChSystem.getCPtr(system), filename, create_powertrain, create_tires), true) {
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public WheeledVehicle(ChSystem system, string filename, bool create_powertrain) : this(vehiclePINVOKE.new_WheeledVehicle__SWIG_5(ChSystem.getCPtr(system), filename, create_powertrain), true) {
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public WheeledVehicle(ChSystem system, string filename) : this(vehiclePINVOKE.new_WheeledVehicle__SWIG_6(ChSystem.getCPtr(system), filename), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

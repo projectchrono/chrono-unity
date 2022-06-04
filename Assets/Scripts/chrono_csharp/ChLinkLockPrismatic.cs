@@ -13,7 +13,7 @@ public class ChLinkLockPrismatic : ChLinkLock {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChLinkLockPrismatic(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChLinkLockPrismatic_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChLinkLockPrismatic(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChLinkLockPrismatic_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChLinkLockPrismatic : ChLinkLock {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChLinkLockPrismatic(swigCPtr);
+          corePINVOKE.delete_ChLinkLockPrismatic(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,20 +35,13 @@ public class ChLinkLockPrismatic : ChLinkLock {
     }
   }
 
-  public ChLinkLockPrismatic() : this(ChronoEngine_csharpPINVOKE.new_ChLinkLockPrismatic(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public override ChObj Clone() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChLinkLockPrismatic_Clone(swigCPtr);
-    ChLinkLockPrismatic ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChLinkLockPrismatic(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
+  public ChLinkLockPrismatic() : this(corePINVOKE.new_ChLinkLockPrismatic(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Lock(bool lock_) {
-    ChronoEngine_csharpPINVOKE.ChLinkLockPrismatic_Lock(swigCPtr, lock_);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLinkLockPrismatic_Lock(swigCPtr, lock_);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

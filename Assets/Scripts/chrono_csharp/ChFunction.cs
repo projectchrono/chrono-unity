@@ -36,171 +36,171 @@ public class ChFunction : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnBase) {
           swigCMemOwnBase = false;
-          ChronoEngine_csharpPINVOKE.delete_ChFunction(swigCPtr);
+          corePINVOKE.delete_ChFunction(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public ChFunction() : this(ChronoEngine_csharpPINVOKE.new_ChFunction__SWIG_0(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChFunction() : this(corePINVOKE.new_ChFunction__SWIG_0(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     SwigDirectorConnect();
   }
 
-  public ChFunction(ChFunction other) : this(ChronoEngine_csharpPINVOKE.new_ChFunction__SWIG_1(ChFunction.getCPtr(other)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChFunction(ChFunction other) : this(corePINVOKE.new_ChFunction__SWIG_1(ChFunction.getCPtr(other)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     SwigDirectorConnect();
   }
 
   public virtual ChFunction.FunctionType Get_Type() {
-    ChFunction.FunctionType ret = (ChFunction.FunctionType)(SwigDerivedClassHasMethod("Get_Type", swigMethodTypes0) ? ChronoEngine_csharpPINVOKE.ChFunction_Get_TypeSwigExplicitChFunction(swigCPtr) : ChronoEngine_csharpPINVOKE.ChFunction_Get_Type(swigCPtr));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChFunction.FunctionType ret = (ChFunction.FunctionType)(SwigDerivedClassHasMethod("Get_Type", swigMethodTypes0) ? corePINVOKE.ChFunction_Get_TypeSwigExplicitChFunction(swigCPtr) : corePINVOKE.ChFunction_Get_Type(swigCPtr));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual double Get_y(double x) {
-    double ret = ChronoEngine_csharpPINVOKE.ChFunction_Get_y(swigCPtr, x);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChFunction_Get_y(swigCPtr, x);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual double Get_y_dx(double x) {
-    double ret = (SwigDerivedClassHasMethod("Get_y_dx", swigMethodTypes2) ? ChronoEngine_csharpPINVOKE.ChFunction_Get_y_dxSwigExplicitChFunction(swigCPtr, x) : ChronoEngine_csharpPINVOKE.ChFunction_Get_y_dx(swigCPtr, x));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = (SwigDerivedClassHasMethod("Get_y_dx", swigMethodTypes2) ? corePINVOKE.ChFunction_Get_y_dxSwigExplicitChFunction(swigCPtr, x) : corePINVOKE.ChFunction_Get_y_dx(swigCPtr, x));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual double Get_y_dxdx(double x) {
-    double ret = (SwigDerivedClassHasMethod("Get_y_dxdx", swigMethodTypes3) ? ChronoEngine_csharpPINVOKE.ChFunction_Get_y_dxdxSwigExplicitChFunction(swigCPtr, x) : ChronoEngine_csharpPINVOKE.ChFunction_Get_y_dxdx(swigCPtr, x));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = (SwigDerivedClassHasMethod("Get_y_dxdx", swigMethodTypes3) ? corePINVOKE.ChFunction_Get_y_dxdxSwigExplicitChFunction(swigCPtr, x) : corePINVOKE.ChFunction_Get_y_dxdx(swigCPtr, x));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual double Get_weight(double x) {
-    double ret = (SwigDerivedClassHasMethod("Get_weight", swigMethodTypes4) ? ChronoEngine_csharpPINVOKE.ChFunction_Get_weightSwigExplicitChFunction(swigCPtr, x) : ChronoEngine_csharpPINVOKE.ChFunction_Get_weight(swigCPtr, x));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = (SwigDerivedClassHasMethod("Get_weight", swigMethodTypes4) ? corePINVOKE.ChFunction_Get_weightSwigExplicitChFunction(swigCPtr, x) : corePINVOKE.ChFunction_Get_weight(swigCPtr, x));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void Estimate_x_range(SWIGTYPE_p_double xmin, SWIGTYPE_p_double xmax) {
-    if (SwigDerivedClassHasMethod("Estimate_x_range", swigMethodTypes5)) ChronoEngine_csharpPINVOKE.ChFunction_Estimate_x_rangeSwigExplicitChFunction(swigCPtr, SWIGTYPE_p_double.getCPtr(xmin), SWIGTYPE_p_double.getCPtr(xmax)); else ChronoEngine_csharpPINVOKE.ChFunction_Estimate_x_range(swigCPtr, SWIGTYPE_p_double.getCPtr(xmin), SWIGTYPE_p_double.getCPtr(xmax));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("Estimate_x_range", swigMethodTypes5)) corePINVOKE.ChFunction_Estimate_x_rangeSwigExplicitChFunction(swigCPtr, SWIGTYPE_p_double.getCPtr(xmin), SWIGTYPE_p_double.getCPtr(xmax)); else corePINVOKE.ChFunction_Estimate_x_range(swigCPtr, SWIGTYPE_p_double.getCPtr(xmin), SWIGTYPE_p_double.getCPtr(xmax));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void Estimate_y_range(double xmin, double xmax, SWIGTYPE_p_double ymin, SWIGTYPE_p_double ymax, int derivate) {
-    if (SwigDerivedClassHasMethod("Estimate_y_range", swigMethodTypes6)) ChronoEngine_csharpPINVOKE.ChFunction_Estimate_y_rangeSwigExplicitChFunction(swigCPtr, xmin, xmax, SWIGTYPE_p_double.getCPtr(ymin), SWIGTYPE_p_double.getCPtr(ymax), derivate); else ChronoEngine_csharpPINVOKE.ChFunction_Estimate_y_range(swigCPtr, xmin, xmax, SWIGTYPE_p_double.getCPtr(ymin), SWIGTYPE_p_double.getCPtr(ymax), derivate);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("Estimate_y_range", swigMethodTypes6)) corePINVOKE.ChFunction_Estimate_y_rangeSwigExplicitChFunction(swigCPtr, xmin, xmax, SWIGTYPE_p_double.getCPtr(ymin), SWIGTYPE_p_double.getCPtr(ymax), derivate); else corePINVOKE.ChFunction_Estimate_y_range(swigCPtr, xmin, xmax, SWIGTYPE_p_double.getCPtr(ymin), SWIGTYPE_p_double.getCPtr(ymax), derivate);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual double Get_y_dN(double x, int derivate) {
-    double ret = (SwigDerivedClassHasMethod("Get_y_dN", swigMethodTypes7) ? ChronoEngine_csharpPINVOKE.ChFunction_Get_y_dNSwigExplicitChFunction(swigCPtr, x, derivate) : ChronoEngine_csharpPINVOKE.ChFunction_Get_y_dN(swigCPtr, x, derivate));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = (SwigDerivedClassHasMethod("Get_y_dN", swigMethodTypes7) ? corePINVOKE.ChFunction_Get_y_dNSwigExplicitChFunction(swigCPtr, x, derivate) : corePINVOKE.ChFunction_Get_y_dN(swigCPtr, x, derivate));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void Update(double x) {
-    if (SwigDerivedClassHasMethod("Update", swigMethodTypes8)) ChronoEngine_csharpPINVOKE.ChFunction_UpdateSwigExplicitChFunction(swigCPtr, x); else ChronoEngine_csharpPINVOKE.ChFunction_Update(swigCPtr, x);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("Update", swigMethodTypes8)) corePINVOKE.ChFunction_UpdateSwigExplicitChFunction(swigCPtr, x); else corePINVOKE.ChFunction_Update(swigCPtr, x);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual double Compute_max(double xmin, double xmax, double sampling_step, int derivate) {
-    double ret = (SwigDerivedClassHasMethod("Compute_max", swigMethodTypes9) ? ChronoEngine_csharpPINVOKE.ChFunction_Compute_maxSwigExplicitChFunction(swigCPtr, xmin, xmax, sampling_step, derivate) : ChronoEngine_csharpPINVOKE.ChFunction_Compute_max(swigCPtr, xmin, xmax, sampling_step, derivate));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = (SwigDerivedClassHasMethod("Compute_max", swigMethodTypes9) ? corePINVOKE.ChFunction_Compute_maxSwigExplicitChFunction(swigCPtr, xmin, xmax, sampling_step, derivate) : corePINVOKE.ChFunction_Compute_max(swigCPtr, xmin, xmax, sampling_step, derivate));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual double Compute_min(double xmin, double xmax, double sampling_step, int derivate) {
-    double ret = (SwigDerivedClassHasMethod("Compute_min", swigMethodTypes10) ? ChronoEngine_csharpPINVOKE.ChFunction_Compute_minSwigExplicitChFunction(swigCPtr, xmin, xmax, sampling_step, derivate) : ChronoEngine_csharpPINVOKE.ChFunction_Compute_min(swigCPtr, xmin, xmax, sampling_step, derivate));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = (SwigDerivedClassHasMethod("Compute_min", swigMethodTypes10) ? corePINVOKE.ChFunction_Compute_minSwigExplicitChFunction(swigCPtr, xmin, xmax, sampling_step, derivate) : corePINVOKE.ChFunction_Compute_min(swigCPtr, xmin, xmax, sampling_step, derivate));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual double Compute_mean(double xmin, double xmax, double sampling_step, int derivate) {
-    double ret = (SwigDerivedClassHasMethod("Compute_mean", swigMethodTypes11) ? ChronoEngine_csharpPINVOKE.ChFunction_Compute_meanSwigExplicitChFunction(swigCPtr, xmin, xmax, sampling_step, derivate) : ChronoEngine_csharpPINVOKE.ChFunction_Compute_mean(swigCPtr, xmin, xmax, sampling_step, derivate));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = (SwigDerivedClassHasMethod("Compute_mean", swigMethodTypes11) ? corePINVOKE.ChFunction_Compute_meanSwigExplicitChFunction(swigCPtr, xmin, xmax, sampling_step, derivate) : corePINVOKE.ChFunction_Compute_mean(swigCPtr, xmin, xmax, sampling_step, derivate));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual double Compute_sqrmean(double xmin, double xmax, double sampling_step, int derivate) {
-    double ret = (SwigDerivedClassHasMethod("Compute_sqrmean", swigMethodTypes12) ? ChronoEngine_csharpPINVOKE.ChFunction_Compute_sqrmeanSwigExplicitChFunction(swigCPtr, xmin, xmax, sampling_step, derivate) : ChronoEngine_csharpPINVOKE.ChFunction_Compute_sqrmean(swigCPtr, xmin, xmax, sampling_step, derivate));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = (SwigDerivedClassHasMethod("Compute_sqrmean", swigMethodTypes12) ? corePINVOKE.ChFunction_Compute_sqrmeanSwigExplicitChFunction(swigCPtr, xmin, xmax, sampling_step, derivate) : corePINVOKE.ChFunction_Compute_sqrmean(swigCPtr, xmin, xmax, sampling_step, derivate));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual double Compute_int(double xmin, double xmax, double sampling_step, int derivate) {
-    double ret = (SwigDerivedClassHasMethod("Compute_int", swigMethodTypes13) ? ChronoEngine_csharpPINVOKE.ChFunction_Compute_intSwigExplicitChFunction(swigCPtr, xmin, xmax, sampling_step, derivate) : ChronoEngine_csharpPINVOKE.ChFunction_Compute_int(swigCPtr, xmin, xmax, sampling_step, derivate));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = (SwigDerivedClassHasMethod("Compute_int", swigMethodTypes13) ? corePINVOKE.ChFunction_Compute_intSwigExplicitChFunction(swigCPtr, xmin, xmax, sampling_step, derivate) : corePINVOKE.ChFunction_Compute_int(swigCPtr, xmin, xmax, sampling_step, derivate));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual double Get_Ca_pos() {
-    double ret = (SwigDerivedClassHasMethod("Get_Ca_pos", swigMethodTypes14) ? ChronoEngine_csharpPINVOKE.ChFunction_Get_Ca_posSwigExplicitChFunction(swigCPtr) : ChronoEngine_csharpPINVOKE.ChFunction_Get_Ca_pos(swigCPtr));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = (SwigDerivedClassHasMethod("Get_Ca_pos", swigMethodTypes14) ? corePINVOKE.ChFunction_Get_Ca_posSwigExplicitChFunction(swigCPtr) : corePINVOKE.ChFunction_Get_Ca_pos(swigCPtr));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual double Get_Ca_neg() {
-    double ret = (SwigDerivedClassHasMethod("Get_Ca_neg", swigMethodTypes15) ? ChronoEngine_csharpPINVOKE.ChFunction_Get_Ca_negSwigExplicitChFunction(swigCPtr) : ChronoEngine_csharpPINVOKE.ChFunction_Get_Ca_neg(swigCPtr));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = (SwigDerivedClassHasMethod("Get_Ca_neg", swigMethodTypes15) ? corePINVOKE.ChFunction_Get_Ca_negSwigExplicitChFunction(swigCPtr) : corePINVOKE.ChFunction_Get_Ca_neg(swigCPtr));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual double Get_Cv() {
-    double ret = (SwigDerivedClassHasMethod("Get_Cv", swigMethodTypes16) ? ChronoEngine_csharpPINVOKE.ChFunction_Get_CvSwigExplicitChFunction(swigCPtr) : ChronoEngine_csharpPINVOKE.ChFunction_Get_Cv(swigCPtr));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = (SwigDerivedClassHasMethod("Get_Cv", swigMethodTypes16) ? corePINVOKE.ChFunction_Get_CvSwigExplicitChFunction(swigCPtr) : corePINVOKE.ChFunction_Get_Cv(swigCPtr));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int HandleNumber() {
-    int ret = (SwigDerivedClassHasMethod("HandleNumber", swigMethodTypes17) ? ChronoEngine_csharpPINVOKE.ChFunction_HandleNumberSwigExplicitChFunction(swigCPtr) : ChronoEngine_csharpPINVOKE.ChFunction_HandleNumber(swigCPtr));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = (SwigDerivedClassHasMethod("HandleNumber", swigMethodTypes17) ? corePINVOKE.ChFunction_HandleNumberSwigExplicitChFunction(swigCPtr) : corePINVOKE.ChFunction_HandleNumber(swigCPtr));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool HandleAccess(int handle_id, double mx, double my, bool set_mode) {
-    bool ret = (SwigDerivedClassHasMethod("HandleAccess", swigMethodTypes18) ? ChronoEngine_csharpPINVOKE.ChFunction_HandleAccessSwigExplicitChFunction(swigCPtr, handle_id, mx, my, set_mode) : ChronoEngine_csharpPINVOKE.ChFunction_HandleAccess(swigCPtr, handle_id, mx, my, set_mode));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = (SwigDerivedClassHasMethod("HandleAccess", swigMethodTypes18) ? corePINVOKE.ChFunction_HandleAccessSwigExplicitChFunction(swigCPtr, handle_id, mx, my, set_mode) : corePINVOKE.ChFunction_HandleAccess(swigCPtr, handle_id, mx, my, set_mode));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void ArchiveOUT(SWIGTYPE_p_ChArchiveOut marchive) {
-    if (SwigDerivedClassHasMethod("ArchiveOUT", swigMethodTypes19)) ChronoEngine_csharpPINVOKE.ChFunction_ArchiveOUTSwigExplicitChFunction(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive)); else ChronoEngine_csharpPINVOKE.ChFunction_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("ArchiveOUT", swigMethodTypes19)) corePINVOKE.ChFunction_ArchiveOUTSwigExplicitChFunction(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive)); else corePINVOKE.ChFunction_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn marchive) {
-    if (SwigDerivedClassHasMethod("ArchiveIN", swigMethodTypes20)) ChronoEngine_csharpPINVOKE.ChFunction_ArchiveINSwigExplicitChFunction(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive)); else ChronoEngine_csharpPINVOKE.ChFunction_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("ArchiveIN", swigMethodTypes20)) corePINVOKE.ChFunction_ArchiveINSwigExplicitChFunction(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive)); else corePINVOKE.ChFunction_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual int FilePostscriptPlot(SWIGTYPE_p_ChFile_ps m_file, int plotY, int plotDY, int plotDDY) {
-    int ret = (SwigDerivedClassHasMethod("FilePostscriptPlot", swigMethodTypes21) ? ChronoEngine_csharpPINVOKE.ChFunction_FilePostscriptPlotSwigExplicitChFunction(swigCPtr, SWIGTYPE_p_ChFile_ps.getCPtr(m_file), plotY, plotDY, plotDDY) : ChronoEngine_csharpPINVOKE.ChFunction_FilePostscriptPlot(swigCPtr, SWIGTYPE_p_ChFile_ps.getCPtr(m_file), plotY, plotDY, plotDDY));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = (SwigDerivedClassHasMethod("FilePostscriptPlot", swigMethodTypes21) ? corePINVOKE.ChFunction_FilePostscriptPlotSwigExplicitChFunction(swigCPtr, SWIGTYPE_p_ChFile_ps.getCPtr(m_file), plotY, plotDY, plotDDY) : corePINVOKE.ChFunction_FilePostscriptPlot(swigCPtr, SWIGTYPE_p_ChFile_ps.getCPtr(m_file), plotY, plotDY, plotDDY));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int FileAsciiPairsSave(ChStreamOutAscii m_file, double xmin, double xmax, int msamples) {
-    int ret = (SwigDerivedClassHasMethod("FileAsciiPairsSave", swigMethodTypes22) ? ChronoEngine_csharpPINVOKE.ChFunction_FileAsciiPairsSaveSwigExplicitChFunction__SWIG_0(swigCPtr, ChStreamOutAscii.getCPtr(m_file), xmin, xmax, msamples) : ChronoEngine_csharpPINVOKE.ChFunction_FileAsciiPairsSave__SWIG_0(swigCPtr, ChStreamOutAscii.getCPtr(m_file), xmin, xmax, msamples));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = (SwigDerivedClassHasMethod("FileAsciiPairsSave", swigMethodTypes22) ? corePINVOKE.ChFunction_FileAsciiPairsSaveSwigExplicitChFunction__SWIG_0(swigCPtr, ChStreamOutAscii.getCPtr(m_file), xmin, xmax, msamples) : corePINVOKE.ChFunction_FileAsciiPairsSave__SWIG_0(swigCPtr, ChStreamOutAscii.getCPtr(m_file), xmin, xmax, msamples));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int FileAsciiPairsSave(ChStreamOutAscii m_file, double xmin, double xmax) {
-    int ret = (SwigDerivedClassHasMethod("FileAsciiPairsSave", swigMethodTypes23) ? ChronoEngine_csharpPINVOKE.ChFunction_FileAsciiPairsSaveSwigExplicitChFunction__SWIG_1(swigCPtr, ChStreamOutAscii.getCPtr(m_file), xmin, xmax) : ChronoEngine_csharpPINVOKE.ChFunction_FileAsciiPairsSave__SWIG_1(swigCPtr, ChStreamOutAscii.getCPtr(m_file), xmin, xmax));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = (SwigDerivedClassHasMethod("FileAsciiPairsSave", swigMethodTypes23) ? corePINVOKE.ChFunction_FileAsciiPairsSaveSwigExplicitChFunction__SWIG_1(swigCPtr, ChStreamOutAscii.getCPtr(m_file), xmin, xmax) : corePINVOKE.ChFunction_FileAsciiPairsSave__SWIG_1(swigCPtr, ChStreamOutAscii.getCPtr(m_file), xmin, xmax));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int FileAsciiPairsSave(ChStreamOutAscii m_file, double xmin) {
-    int ret = (SwigDerivedClassHasMethod("FileAsciiPairsSave", swigMethodTypes24) ? ChronoEngine_csharpPINVOKE.ChFunction_FileAsciiPairsSaveSwigExplicitChFunction__SWIG_2(swigCPtr, ChStreamOutAscii.getCPtr(m_file), xmin) : ChronoEngine_csharpPINVOKE.ChFunction_FileAsciiPairsSave__SWIG_2(swigCPtr, ChStreamOutAscii.getCPtr(m_file), xmin));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = (SwigDerivedClassHasMethod("FileAsciiPairsSave", swigMethodTypes24) ? corePINVOKE.ChFunction_FileAsciiPairsSaveSwigExplicitChFunction__SWIG_2(swigCPtr, ChStreamOutAscii.getCPtr(m_file), xmin) : corePINVOKE.ChFunction_FileAsciiPairsSave__SWIG_2(swigCPtr, ChStreamOutAscii.getCPtr(m_file), xmin));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int FileAsciiPairsSave(ChStreamOutAscii m_file) {
-    int ret = (SwigDerivedClassHasMethod("FileAsciiPairsSave", swigMethodTypes25) ? ChronoEngine_csharpPINVOKE.ChFunction_FileAsciiPairsSaveSwigExplicitChFunction__SWIG_3(swigCPtr, ChStreamOutAscii.getCPtr(m_file)) : ChronoEngine_csharpPINVOKE.ChFunction_FileAsciiPairsSave__SWIG_3(swigCPtr, ChStreamOutAscii.getCPtr(m_file)));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = (SwigDerivedClassHasMethod("FileAsciiPairsSave", swigMethodTypes25) ? corePINVOKE.ChFunction_FileAsciiPairsSaveSwigExplicitChFunction__SWIG_3(swigCPtr, ChStreamOutAscii.getCPtr(m_file)) : corePINVOKE.ChFunction_FileAsciiPairsSave__SWIG_3(swigCPtr, ChStreamOutAscii.getCPtr(m_file)));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
@@ -257,7 +257,7 @@ public class ChFunction : global::System.IDisposable {
       swigDelegate24 = new SwigDelegateChFunction_24(SwigDirectorMethodFileAsciiPairsSave__SWIG_2);
     if (SwigDerivedClassHasMethod("FileAsciiPairsSave", swigMethodTypes25))
       swigDelegate25 = new SwigDelegateChFunction_25(SwigDirectorMethodFileAsciiPairsSave__SWIG_3);
-    ChronoEngine_csharpPINVOKE.ChFunction_director_connect(swigCPtr, swigDelegate0, swigDelegate1, swigDelegate2, swigDelegate3, swigDelegate4, swigDelegate5, swigDelegate6, swigDelegate7, swigDelegate8, swigDelegate9, swigDelegate10, swigDelegate11, swigDelegate12, swigDelegate13, swigDelegate14, swigDelegate15, swigDelegate16, swigDelegate17, swigDelegate18, swigDelegate19, swigDelegate20, swigDelegate21, swigDelegate22, swigDelegate23, swigDelegate24, swigDelegate25);
+    corePINVOKE.ChFunction_director_connect(swigCPtr, swigDelegate0, swigDelegate1, swigDelegate2, swigDelegate3, swigDelegate4, swigDelegate5, swigDelegate6, swigDelegate7, swigDelegate8, swigDelegate9, swigDelegate10, swigDelegate11, swigDelegate12, swigDelegate13, swigDelegate14, swigDelegate15, swigDelegate16, swigDelegate17, swigDelegate18, swigDelegate19, swigDelegate20, swigDelegate21, swigDelegate22, swigDelegate23, swigDelegate24, swigDelegate25);
   }
 
   private bool SwigDerivedClassHasMethod(string methodName, global::System.Type[] methodTypes) {

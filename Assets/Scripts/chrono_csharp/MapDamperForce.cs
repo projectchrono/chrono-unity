@@ -48,4 +48,10 @@ public class MapDamperForce : ForceFunctor {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public override double evaluate(double time, double rest_length, double length, double vel, ChLinkTSDA link) {
+    double ret = vehiclePINVOKE.MapDamperForce_evaluate(swigCPtr, time, rest_length, length, vel, ChLinkTSDA.getCPtr(link));
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
 }

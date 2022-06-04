@@ -13,7 +13,7 @@ public class ChLinkLockOldham : ChLinkLock {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChLinkLockOldham(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChLinkLockOldham_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChLinkLockOldham(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChLinkLockOldham_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChLinkLockOldham : ChLinkLock {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChLinkLockOldham(swigCPtr);
+          corePINVOKE.delete_ChLinkLockOldham(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,20 +35,13 @@ public class ChLinkLockOldham : ChLinkLock {
     }
   }
 
-  public ChLinkLockOldham() : this(ChronoEngine_csharpPINVOKE.new_ChLinkLockOldham(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public override ChObj Clone() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChLinkLockOldham_Clone(swigCPtr);
-    ChLinkLockOldham ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChLinkLockOldham(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
+  public ChLinkLockOldham() : this(corePINVOKE.new_ChLinkLockOldham(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Lock(bool lock_) {
-    ChronoEngine_csharpPINVOKE.ChLinkLockOldham_Lock(swigCPtr, lock_);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLinkLockOldham_Lock(swigCPtr, lock_);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

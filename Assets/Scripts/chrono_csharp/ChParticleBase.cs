@@ -13,7 +13,7 @@ public class ChParticleBase : ChFrameMovingD {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChParticleBase(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChParticleBase_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChParticleBase(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChParticleBase_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChParticleBase : ChFrameMovingD {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChParticleBase(swigCPtr);
+          corePINVOKE.delete_ChParticleBase(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -36,8 +36,8 @@ public class ChParticleBase : ChFrameMovingD {
   }
 
   public virtual SWIGTYPE_p_ChVariables Variables() {
-    SWIGTYPE_p_ChVariables ret = new SWIGTYPE_p_ChVariables(ChronoEngine_csharpPINVOKE.ChParticleBase_Variables(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    SWIGTYPE_p_ChVariables ret = new SWIGTYPE_p_ChVariables(corePINVOKE.ChParticleBase_Variables(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

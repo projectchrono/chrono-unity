@@ -12,7 +12,7 @@
 public class ChLog : ChStreamOutAscii {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
 
-  internal ChLog(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChLog_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal ChLog(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChLog_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
@@ -25,7 +25,7 @@ public class ChLog : ChStreamOutAscii {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChLog(swigCPtr);
+          corePINVOKE.delete_ChLog(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -34,29 +34,29 @@ public class ChLog : ChStreamOutAscii {
   }
 
   public virtual void Flush() {
-    ChronoEngine_csharpPINVOKE.ChLog_Flush(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLog_Flush(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetDefaultLevel(ChLog.eChLogLevel mlev) {
-    ChronoEngine_csharpPINVOKE.ChLog_SetDefaultLevel(swigCPtr, (int)mlev);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLog_SetDefaultLevel(swigCPtr, (int)mlev);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetCurrentLevel(ChLog.eChLogLevel mlev) {
-    ChronoEngine_csharpPINVOKE.ChLog_SetCurrentLevel(swigCPtr, (int)mlev);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLog_SetCurrentLevel(swigCPtr, (int)mlev);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public ChLog.eChLogLevel GetCurrentLevel() {
-    ChLog.eChLogLevel ret = (ChLog.eChLogLevel)ChronoEngine_csharpPINVOKE.ChLog_GetCurrentLevel(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChLog.eChLogLevel ret = (ChLog.eChLogLevel)corePINVOKE.ChLog_GetCurrentLevel(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void RestoreDefaultLevel() {
-    ChronoEngine_csharpPINVOKE.ChLog_RestoreDefaultLevel(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLog_RestoreDefaultLevel(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public enum eChLogLevel {

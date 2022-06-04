@@ -36,7 +36,7 @@ public class ChLoadJacobians : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChLoadJacobians(swigCPtr);
+          corePINVOKE.delete_ChLoadJacobians(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -45,62 +45,62 @@ public class ChLoadJacobians : global::System.IDisposable {
 
   public SWIGTYPE_p_ChKblockGeneric KRM {
     set {
-      ChronoEngine_csharpPINVOKE.ChLoadJacobians_KRM_set(swigCPtr, SWIGTYPE_p_ChKblockGeneric.getCPtr(value));
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChLoadJacobians_KRM_set(swigCPtr, SWIGTYPE_p_ChKblockGeneric.getCPtr(value));
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      SWIGTYPE_p_ChKblockGeneric ret = new SWIGTYPE_p_ChKblockGeneric(ChronoEngine_csharpPINVOKE.ChLoadJacobians_KRM_get(swigCPtr), true);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      SWIGTYPE_p_ChKblockGeneric ret = new SWIGTYPE_p_ChKblockGeneric(corePINVOKE.ChLoadJacobians_KRM_get(swigCPtr), true);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public ChMatrixDynamicD K {
     set {
-      ChronoEngine_csharpPINVOKE.ChLoadJacobians_K_set(swigCPtr, ChMatrixDynamicD.getCPtr(value));
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChLoadJacobians_K_set(swigCPtr, ChMatrixDynamicD.getCPtr(value));
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChLoadJacobians_K_get(swigCPtr);
+      global::System.IntPtr cPtr = corePINVOKE.ChLoadJacobians_K_get(swigCPtr);
       ChMatrixDynamicD ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChMatrixDynamicD(cPtr, false);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public ChMatrixDynamicD R {
     set {
-      ChronoEngine_csharpPINVOKE.ChLoadJacobians_R_set(swigCPtr, ChMatrixDynamicD.getCPtr(value));
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChLoadJacobians_R_set(swigCPtr, ChMatrixDynamicD.getCPtr(value));
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChLoadJacobians_R_get(swigCPtr);
+      global::System.IntPtr cPtr = corePINVOKE.ChLoadJacobians_R_get(swigCPtr);
       ChMatrixDynamicD ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChMatrixDynamicD(cPtr, false);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public ChMatrixDynamicD M {
     set {
-      ChronoEngine_csharpPINVOKE.ChLoadJacobians_M_set(swigCPtr, ChMatrixDynamicD.getCPtr(value));
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChLoadJacobians_M_set(swigCPtr, ChMatrixDynamicD.getCPtr(value));
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChLoadJacobians_M_get(swigCPtr);
+      global::System.IntPtr cPtr = corePINVOKE.ChLoadJacobians_M_get(swigCPtr);
       ChMatrixDynamicD ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChMatrixDynamicD(cPtr, false);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public void SetVariables(SWIGTYPE_p_std__vectorT_ChVariables_p_t mvariables) {
-    ChronoEngine_csharpPINVOKE.ChLoadJacobians_SetVariables(swigCPtr, SWIGTYPE_p_std__vectorT_ChVariables_p_t.getCPtr(mvariables));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoadJacobians_SetVariables(swigCPtr, SWIGTYPE_p_std__vectorT_ChVariables_p_t.getCPtr(mvariables));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChLoadJacobians() : this(ChronoEngine_csharpPINVOKE.new_ChLoadJacobians(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChLoadJacobians() : this(corePINVOKE.new_ChLoadJacobians(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

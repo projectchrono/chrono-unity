@@ -13,7 +13,7 @@ public class ChLoaderUdistributed : ChLoaderU {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChLoaderUdistributed(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChLoaderUdistributed_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChLoaderUdistributed(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChLoaderUdistributed_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChLoaderUdistributed : ChLoaderU {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChLoaderUdistributed(swigCPtr);
+          corePINVOKE.delete_ChLoaderUdistributed(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -36,14 +36,14 @@ public class ChLoaderUdistributed : ChLoaderU {
   }
 
   public virtual int GetIntegrationPointsU() {
-    int ret = ChronoEngine_csharpPINVOKE.ChLoaderUdistributed_GetIntegrationPointsU(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChLoaderUdistributed_GetIntegrationPointsU(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void ComputeQ(ChVectorDynamicD state_x, ChVectorDynamicD state_w) {
-    ChronoEngine_csharpPINVOKE.ChLoaderUdistributed_ComputeQ(swigCPtr, ChVectorDynamicD.getCPtr(state_x), ChVectorDynamicD.getCPtr(state_w));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoaderUdistributed_ComputeQ(swigCPtr, ChVectorDynamicD.getCPtr(state_x), ChVectorDynamicD.getCPtr(state_w));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

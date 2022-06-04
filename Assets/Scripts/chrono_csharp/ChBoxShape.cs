@@ -9,11 +9,11 @@
 //------------------------------------------------------------------------------
 
 
-public class ChBoxShape : ChVisualization {
+public class ChBoxShape : ChVisualShape {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChBoxShape(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChBoxShape_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChBoxShape(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChBoxShape_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChBoxShape : ChVisualization {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChBoxShape(swigCPtr);
+          corePINVOKE.delete_ChBoxShape(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,28 +35,28 @@ public class ChBoxShape : ChVisualization {
     }
   }
 
-  public ChBoxShape() : this(ChronoEngine_csharpPINVOKE.new_ChBoxShape__SWIG_0(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChBoxShape() : this(corePINVOKE.new_ChBoxShape__SWIG_0(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChBoxShape(ChBox mbox) : this(ChronoEngine_csharpPINVOKE.new_ChBoxShape__SWIG_1(ChBox.getCPtr(mbox)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChBoxShape(ChBox box) : this(corePINVOKE.new_ChBoxShape__SWIG_1(ChBox.getCPtr(box)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public ChBox GetBoxGeometry() {
-    ChBox ret = new ChBox(ChronoEngine_csharpPINVOKE.ChBoxShape_GetBoxGeometry(swigCPtr), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChBox ret = new ChBox(corePINVOKE.ChBoxShape_GetBoxGeometry(swigCPtr), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public override void ArchiveOUT(SWIGTYPE_p_ChArchiveOut marchive) {
-    ChronoEngine_csharpPINVOKE.ChBoxShape_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public virtual void ArchiveOUT(SWIGTYPE_p_ChArchiveOut marchive) {
+    corePINVOKE.ChBoxShape_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public override void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn marchive) {
-    ChronoEngine_csharpPINVOKE.ChBoxShape_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public virtual void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn marchive) {
+    corePINVOKE.ChBoxShape_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

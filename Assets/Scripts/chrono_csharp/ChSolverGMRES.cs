@@ -13,7 +13,7 @@ public class ChSolverGMRES : ChIterativeSolverLS {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChSolverGMRES(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChSolverGMRES_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChSolverGMRES(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChSolverGMRES_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChSolverGMRES : ChIterativeSolverLS {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChSolverGMRES(swigCPtr);
+          corePINVOKE.delete_ChSolverGMRES(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,25 +35,25 @@ public class ChSolverGMRES : ChIterativeSolverLS {
     }
   }
 
-  public ChSolverGMRES() : this(ChronoEngine_csharpPINVOKE.new_ChSolverGMRES(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChSolverGMRES() : this(corePINVOKE.new_ChSolverGMRES(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public ChSolver.Type GetType() {
-    ChSolver.Type ret = (ChSolver.Type)ChronoEngine_csharpPINVOKE.ChSolverGMRES_GetType(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChSolver.Type ret = (ChSolver.Type)corePINVOKE.ChSolverGMRES_GetType(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int GetIterations() {
-    int ret = ChronoEngine_csharpPINVOKE.ChSolverGMRES_GetIterations(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChSolverGMRES_GetIterations(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public double GetError() {
-    double ret = ChronoEngine_csharpPINVOKE.ChSolverGMRES_GetError(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChSolverGMRES_GetError(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

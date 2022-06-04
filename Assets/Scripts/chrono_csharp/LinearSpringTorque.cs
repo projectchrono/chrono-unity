@@ -43,4 +43,10 @@ public class LinearSpringTorque : TorqueFunctor {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public override double evaluate(double time, double angle, double vel, ChLinkRSDA link) {
+    double ret = vehiclePINVOKE.LinearSpringTorque_evaluate(swigCPtr, time, angle, vel, ChLinkRSDA.getCPtr(link));
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
 }

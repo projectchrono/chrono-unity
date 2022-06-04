@@ -36,7 +36,7 @@ public class ChIterativeSolver : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnBase) {
           swigCMemOwnBase = false;
-          ChronoEngine_csharpPINVOKE.delete_ChIterativeSolver(swigCPtr);
+          corePINVOKE.delete_ChIterativeSolver(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -44,46 +44,46 @@ public class ChIterativeSolver : global::System.IDisposable {
   }
 
   public void SetMaxIterations(int max_iterations) {
-    ChronoEngine_csharpPINVOKE.ChIterativeSolver_SetMaxIterations(swigCPtr, max_iterations);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChIterativeSolver_SetMaxIterations(swigCPtr, max_iterations);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetTolerance(double tolerance) {
-    ChronoEngine_csharpPINVOKE.ChIterativeSolver_SetTolerance(swigCPtr, tolerance);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChIterativeSolver_SetTolerance(swigCPtr, tolerance);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void EnableDiagonalPreconditioner(bool val) {
-    ChronoEngine_csharpPINVOKE.ChIterativeSolver_EnableDiagonalPreconditioner(swigCPtr, val);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChIterativeSolver_EnableDiagonalPreconditioner(swigCPtr, val);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void EnableWarmStart(bool val) {
-    ChronoEngine_csharpPINVOKE.ChIterativeSolver_EnableWarmStart(swigCPtr, val);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChIterativeSolver_EnableWarmStart(swigCPtr, val);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public int GetMaxIterations() {
-    int ret = ChronoEngine_csharpPINVOKE.ChIterativeSolver_GetMaxIterations(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChIterativeSolver_GetMaxIterations(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public double GetTolerance() {
-    double ret = ChronoEngine_csharpPINVOKE.ChIterativeSolver_GetTolerance(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChIterativeSolver_GetTolerance(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int GetIterations() {
-    int ret = ChronoEngine_csharpPINVOKE.ChIterativeSolver_GetIterations(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChIterativeSolver_GetIterations(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual double GetError() {
-    double ret = ChronoEngine_csharpPINVOKE.ChIterativeSolver_GetError(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChIterativeSolver_GetError(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

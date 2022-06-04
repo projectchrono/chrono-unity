@@ -13,7 +13,7 @@ public class ChBodyEasyClusterOfSpheres : ChBody {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChBodyEasyClusterOfSpheres(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChBodyEasyClusterOfSpheres_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChBodyEasyClusterOfSpheres(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChBodyEasyClusterOfSpheres_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChBodyEasyClusterOfSpheres : ChBody {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChBodyEasyClusterOfSpheres(swigCPtr);
+          corePINVOKE.delete_ChBodyEasyClusterOfSpheres(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,28 +35,28 @@ public class ChBodyEasyClusterOfSpheres : ChBody {
     }
   }
 
-  public ChBodyEasyClusterOfSpheres(vector_ChVectorD positions, SWIGTYPE_p_std__vectorT_double_t radii, double density, bool visualize, bool collide, ChMaterialSurface material, ChCollisionModel collision_model) : this(ChronoEngine_csharpPINVOKE.new_ChBodyEasyClusterOfSpheres__SWIG_0(vector_ChVectorD.getCPtr(positions), SWIGTYPE_p_std__vectorT_double_t.getCPtr(radii), density, visualize, collide, ChMaterialSurface.getCPtr(material), ChCollisionModel.getCPtr(collision_model)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChBodyEasyClusterOfSpheres(vector_ChVectorD positions, SWIGTYPE_p_std__vectorT_double_t radii, double density, bool visualize, bool collide, ChMaterialSurface material, ChCollisionModel collision_model) : this(corePINVOKE.new_ChBodyEasyClusterOfSpheres__SWIG_0(vector_ChVectorD.getCPtr(positions), SWIGTYPE_p_std__vectorT_double_t.getCPtr(radii), density, visualize, collide, ChMaterialSurface.getCPtr(material), ChCollisionModel.getCPtr(collision_model)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChBodyEasyClusterOfSpheres(vector_ChVectorD positions, SWIGTYPE_p_std__vectorT_double_t radii, double density, bool visualize, bool collide, ChMaterialSurface material) : this(ChronoEngine_csharpPINVOKE.new_ChBodyEasyClusterOfSpheres__SWIG_1(vector_ChVectorD.getCPtr(positions), SWIGTYPE_p_std__vectorT_double_t.getCPtr(radii), density, visualize, collide, ChMaterialSurface.getCPtr(material)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChBodyEasyClusterOfSpheres(vector_ChVectorD positions, SWIGTYPE_p_std__vectorT_double_t radii, double density, bool visualize, bool collide, ChMaterialSurface material) : this(corePINVOKE.new_ChBodyEasyClusterOfSpheres__SWIG_1(vector_ChVectorD.getCPtr(positions), SWIGTYPE_p_std__vectorT_double_t.getCPtr(radii), density, visualize, collide, ChMaterialSurface.getCPtr(material)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChBodyEasyClusterOfSpheres(vector_ChVectorD positions, SWIGTYPE_p_std__vectorT_double_t radii, double density, bool visualize, bool collide) : this(ChronoEngine_csharpPINVOKE.new_ChBodyEasyClusterOfSpheres__SWIG_2(vector_ChVectorD.getCPtr(positions), SWIGTYPE_p_std__vectorT_double_t.getCPtr(radii), density, visualize, collide), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChBodyEasyClusterOfSpheres(vector_ChVectorD positions, SWIGTYPE_p_std__vectorT_double_t radii, double density, bool visualize, bool collide) : this(corePINVOKE.new_ChBodyEasyClusterOfSpheres__SWIG_2(vector_ChVectorD.getCPtr(positions), SWIGTYPE_p_std__vectorT_double_t.getCPtr(radii), density, visualize, collide), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChBodyEasyClusterOfSpheres(vector_ChVectorD positions, SWIGTYPE_p_std__vectorT_double_t radii, double density, bool visualize) : this(ChronoEngine_csharpPINVOKE.new_ChBodyEasyClusterOfSpheres__SWIG_3(vector_ChVectorD.getCPtr(positions), SWIGTYPE_p_std__vectorT_double_t.getCPtr(radii), density, visualize), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChBodyEasyClusterOfSpheres(vector_ChVectorD positions, SWIGTYPE_p_std__vectorT_double_t radii, double density, bool visualize) : this(corePINVOKE.new_ChBodyEasyClusterOfSpheres__SWIG_3(vector_ChVectorD.getCPtr(positions), SWIGTYPE_p_std__vectorT_double_t.getCPtr(radii), density, visualize), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChBodyEasyClusterOfSpheres(vector_ChVectorD positions, SWIGTYPE_p_std__vectorT_double_t radii, double density) : this(ChronoEngine_csharpPINVOKE.new_ChBodyEasyClusterOfSpheres__SWIG_4(vector_ChVectorD.getCPtr(positions), SWIGTYPE_p_std__vectorT_double_t.getCPtr(radii), density), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChBodyEasyClusterOfSpheres(vector_ChVectorD positions, SWIGTYPE_p_std__vectorT_double_t radii, double density) : this(corePINVOKE.new_ChBodyEasyClusterOfSpheres__SWIG_4(vector_ChVectorD.getCPtr(positions), SWIGTYPE_p_std__vectorT_double_t.getCPtr(radii), density), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChBodyEasyClusterOfSpheres(vector_ChVectorD positions, SWIGTYPE_p_std__vectorT_double_t radii, double density, ChMaterialSurface material, ChCollisionSystemType collision_type) : this(ChronoEngine_csharpPINVOKE.new_ChBodyEasyClusterOfSpheres__SWIG_5(vector_ChVectorD.getCPtr(positions), SWIGTYPE_p_std__vectorT_double_t.getCPtr(radii), density, ChMaterialSurface.getCPtr(material), (int)collision_type), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChBodyEasyClusterOfSpheres(vector_ChVectorD positions, SWIGTYPE_p_std__vectorT_double_t radii, double density, ChMaterialSurface material, ChCollisionSystemType collision_type) : this(corePINVOKE.new_ChBodyEasyClusterOfSpheres__SWIG_5(vector_ChVectorD.getCPtr(positions), SWIGTYPE_p_std__vectorT_double_t.getCPtr(radii), density, ChMaterialSurface.getCPtr(material), (int)collision_type), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

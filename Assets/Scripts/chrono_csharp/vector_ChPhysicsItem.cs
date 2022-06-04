@@ -37,7 +37,7 @@ public class vector_ChPhysicsItem : global::System.IDisposable, global::System.C
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_vector_ChPhysicsItem(swigCPtr);
+          corePINVOKE.delete_vector_ChPhysicsItem(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -217,115 +217,115 @@ public class vector_ChPhysicsItem : global::System.IDisposable, global::System.C
   }
 
   public void Clear() {
-    ChronoEngine_csharpPINVOKE.vector_ChPhysicsItem_Clear(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.vector_ChPhysicsItem_Clear(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Add(ChPhysicsItem x) {
-    ChronoEngine_csharpPINVOKE.vector_ChPhysicsItem_Add(swigCPtr, ChPhysicsItem.getCPtr(x));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.vector_ChPhysicsItem_Add(swigCPtr, ChPhysicsItem.getCPtr(x));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = ChronoEngine_csharpPINVOKE.vector_ChPhysicsItem_size(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    uint ret = corePINVOKE.vector_ChPhysicsItem_size(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private uint capacity() {
-    uint ret = ChronoEngine_csharpPINVOKE.vector_ChPhysicsItem_capacity(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    uint ret = corePINVOKE.vector_ChPhysicsItem_capacity(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private void reserve(uint n) {
-    ChronoEngine_csharpPINVOKE.vector_ChPhysicsItem_reserve(swigCPtr, n);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.vector_ChPhysicsItem_reserve(swigCPtr, n);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public vector_ChPhysicsItem() : this(ChronoEngine_csharpPINVOKE.new_vector_ChPhysicsItem__SWIG_0(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public vector_ChPhysicsItem() : this(corePINVOKE.new_vector_ChPhysicsItem__SWIG_0(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public vector_ChPhysicsItem(vector_ChPhysicsItem other) : this(ChronoEngine_csharpPINVOKE.new_vector_ChPhysicsItem__SWIG_1(vector_ChPhysicsItem.getCPtr(other)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public vector_ChPhysicsItem(vector_ChPhysicsItem other) : this(corePINVOKE.new_vector_ChPhysicsItem__SWIG_1(vector_ChPhysicsItem.getCPtr(other)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public vector_ChPhysicsItem(int capacity) : this(ChronoEngine_csharpPINVOKE.new_vector_ChPhysicsItem__SWIG_2(capacity), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public vector_ChPhysicsItem(int capacity) : this(corePINVOKE.new_vector_ChPhysicsItem__SWIG_2(capacity), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   private ChPhysicsItem getitemcopy(int index) {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.vector_ChPhysicsItem_getitemcopy(swigCPtr, index);
+    global::System.IntPtr cPtr = corePINVOKE.vector_ChPhysicsItem_getitemcopy(swigCPtr, index);
     ChPhysicsItem ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChPhysicsItem(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private ChPhysicsItem getitem(int index) {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.vector_ChPhysicsItem_getitem(swigCPtr, index);
+    global::System.IntPtr cPtr = corePINVOKE.vector_ChPhysicsItem_getitem(swigCPtr, index);
     ChPhysicsItem ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChPhysicsItem(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private void setitem(int index, ChPhysicsItem val) {
-    ChronoEngine_csharpPINVOKE.vector_ChPhysicsItem_setitem(swigCPtr, index, ChPhysicsItem.getCPtr(val));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.vector_ChPhysicsItem_setitem(swigCPtr, index, ChPhysicsItem.getCPtr(val));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void AddRange(vector_ChPhysicsItem values) {
-    ChronoEngine_csharpPINVOKE.vector_ChPhysicsItem_AddRange(swigCPtr, vector_ChPhysicsItem.getCPtr(values));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.vector_ChPhysicsItem_AddRange(swigCPtr, vector_ChPhysicsItem.getCPtr(values));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public vector_ChPhysicsItem GetRange(int index, int count) {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.vector_ChPhysicsItem_GetRange(swigCPtr, index, count);
+    global::System.IntPtr cPtr = corePINVOKE.vector_ChPhysicsItem_GetRange(swigCPtr, index, count);
     vector_ChPhysicsItem ret = (cPtr == global::System.IntPtr.Zero) ? null : new vector_ChPhysicsItem(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Insert(int index, ChPhysicsItem x) {
-    ChronoEngine_csharpPINVOKE.vector_ChPhysicsItem_Insert(swigCPtr, index, ChPhysicsItem.getCPtr(x));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.vector_ChPhysicsItem_Insert(swigCPtr, index, ChPhysicsItem.getCPtr(x));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void InsertRange(int index, vector_ChPhysicsItem values) {
-    ChronoEngine_csharpPINVOKE.vector_ChPhysicsItem_InsertRange(swigCPtr, index, vector_ChPhysicsItem.getCPtr(values));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.vector_ChPhysicsItem_InsertRange(swigCPtr, index, vector_ChPhysicsItem.getCPtr(values));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void RemoveAt(int index) {
-    ChronoEngine_csharpPINVOKE.vector_ChPhysicsItem_RemoveAt(swigCPtr, index);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.vector_ChPhysicsItem_RemoveAt(swigCPtr, index);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void RemoveRange(int index, int count) {
-    ChronoEngine_csharpPINVOKE.vector_ChPhysicsItem_RemoveRange(swigCPtr, index, count);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.vector_ChPhysicsItem_RemoveRange(swigCPtr, index, count);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public static vector_ChPhysicsItem Repeat(ChPhysicsItem value, int count) {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.vector_ChPhysicsItem_Repeat(ChPhysicsItem.getCPtr(value), count);
+    global::System.IntPtr cPtr = corePINVOKE.vector_ChPhysicsItem_Repeat(ChPhysicsItem.getCPtr(value), count);
     vector_ChPhysicsItem ret = (cPtr == global::System.IntPtr.Zero) ? null : new vector_ChPhysicsItem(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Reverse() {
-    ChronoEngine_csharpPINVOKE.vector_ChPhysicsItem_Reverse__SWIG_0(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.vector_ChPhysicsItem_Reverse__SWIG_0(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Reverse(int index, int count) {
-    ChronoEngine_csharpPINVOKE.vector_ChPhysicsItem_Reverse__SWIG_1(swigCPtr, index, count);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.vector_ChPhysicsItem_Reverse__SWIG_1(swigCPtr, index, count);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetRange(int index, vector_ChPhysicsItem values) {
-    ChronoEngine_csharpPINVOKE.vector_ChPhysicsItem_SetRange(swigCPtr, index, vector_ChPhysicsItem.getCPtr(values));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.vector_ChPhysicsItem_SetRange(swigCPtr, index, vector_ChPhysicsItem.getCPtr(values));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

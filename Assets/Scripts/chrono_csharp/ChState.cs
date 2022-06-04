@@ -12,7 +12,7 @@
 public class ChState : ChVectorDynamicD {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
 
-  internal ChState(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChState_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal ChState(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChState_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
@@ -25,7 +25,7 @@ public class ChState : ChVectorDynamicD {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChState(swigCPtr);
+          corePINVOKE.delete_ChState(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -33,35 +33,35 @@ public class ChState : ChVectorDynamicD {
     }
   }
 
-  public ChState(ChIntegrable intgr) : this(ChronoEngine_csharpPINVOKE.new_ChState__SWIG_0(ChIntegrable.getCPtr(intgr)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChState(ChIntegrable intgr) : this(corePINVOKE.new_ChState__SWIG_0(ChIntegrable.getCPtr(intgr)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChState() : this(ChronoEngine_csharpPINVOKE.new_ChState__SWIG_1(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChState() : this(corePINVOKE.new_ChState__SWIG_1(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChState(SWIGTYPE_p_Eigen__Index size, ChIntegrable intgr) : this(ChronoEngine_csharpPINVOKE.new_ChState__SWIG_2(SWIGTYPE_p_Eigen__Index.getCPtr(size), ChIntegrable.getCPtr(intgr)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChState(SWIGTYPE_p_Eigen__Index size, ChIntegrable intgr) : this(corePINVOKE.new_ChState__SWIG_2(SWIGTYPE_p_Eigen__Index.getCPtr(size), ChIntegrable.getCPtr(intgr)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChState(SWIGTYPE_p_Eigen__RefT_Eigen__MatrixT_double_Eigen__Dynamic_1_Eigen__ColMajor_t_const_t vec, ChIntegrable intgr) : this(ChronoEngine_csharpPINVOKE.new_ChState__SWIG_3(SWIGTYPE_p_Eigen__RefT_Eigen__MatrixT_double_Eigen__Dynamic_1_Eigen__ColMajor_t_const_t.getCPtr(vec), ChIntegrable.getCPtr(intgr)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChState(SWIGTYPE_p_Eigen__RefT_Eigen__MatrixT_double_Eigen__Dynamic_1_Eigen__ColMajor_t_const_t vec, ChIntegrable intgr) : this(corePINVOKE.new_ChState__SWIG_3(SWIGTYPE_p_Eigen__RefT_Eigen__MatrixT_double_Eigen__Dynamic_1_Eigen__ColMajor_t_const_t.getCPtr(vec), ChIntegrable.getCPtr(intgr)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChState(ChState other) : this(ChronoEngine_csharpPINVOKE.new_ChState__SWIG_4(ChState.getCPtr(other)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChState(ChState other) : this(corePINVOKE.new_ChState__SWIG_4(ChState.getCPtr(other)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void setZero(SWIGTYPE_p_Eigen__Index size, ChIntegrable intgr) {
-    ChronoEngine_csharpPINVOKE.ChState_setZero(swigCPtr, SWIGTYPE_p_Eigen__Index.getCPtr(size), ChIntegrable.getCPtr(intgr));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChState_setZero(swigCPtr, SWIGTYPE_p_Eigen__Index.getCPtr(size), ChIntegrable.getCPtr(intgr));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public ChIntegrable GetIntegrable() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChState_GetIntegrable(swigCPtr);
+    global::System.IntPtr cPtr = corePINVOKE.ChState_GetIntegrable(swigCPtr);
     ChIntegrable ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChIntegrable(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

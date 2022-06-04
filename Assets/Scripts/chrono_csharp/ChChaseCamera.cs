@@ -141,6 +141,21 @@ public class ChChaseCamera : global::System.IDisposable {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public void SetTargetPoint(ChVectorD point) {
+    vehiclePINVOKE.ChChaseCamera_SetTargetPoint(swigCPtr, ChVectorD.getCPtr(point));
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void SetChaseDistance(double dist) {
+    vehiclePINVOKE.ChChaseCamera_SetChaseDistance(swigCPtr, dist);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void SetChaseHeight(double height) {
+    vehiclePINVOKE.ChChaseCamera_SetChaseHeight(swigCPtr, height);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
   public enum State {
     Chase,
     Follow,

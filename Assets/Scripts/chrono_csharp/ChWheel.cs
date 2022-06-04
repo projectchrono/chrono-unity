@@ -41,18 +41,6 @@ public class ChWheel : ChPart {
     return ret;
   }
 
-  public virtual double GetMass() {
-    double ret = vehiclePINVOKE.ChWheel_GetMass(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public virtual ChVectorD GetInertia() {
-    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChWheel_GetInertia(swigCPtr), true);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
   public virtual double GetRadius() {
     double ret = vehiclePINVOKE.ChWheel_GetRadius(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();

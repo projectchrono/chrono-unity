@@ -13,7 +13,7 @@ public class ChShaftsTorsionSpring : ChShaftsTorqueBase {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChShaftsTorsionSpring(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChShaftsTorsionSpring_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChShaftsTorsionSpring(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChShaftsTorsionSpring_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChShaftsTorsionSpring : ChShaftsTorqueBase {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChShaftsTorsionSpring(swigCPtr);
+          corePINVOKE.delete_ChShaftsTorsionSpring(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,57 +35,50 @@ public class ChShaftsTorsionSpring : ChShaftsTorqueBase {
     }
   }
 
-  public ChShaftsTorsionSpring() : this(ChronoEngine_csharpPINVOKE.new_ChShaftsTorsionSpring__SWIG_0(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChShaftsTorsionSpring() : this(corePINVOKE.new_ChShaftsTorsionSpring__SWIG_0(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChShaftsTorsionSpring(ChShaftsTorsionSpring other) : this(ChronoEngine_csharpPINVOKE.new_ChShaftsTorsionSpring__SWIG_1(ChShaftsTorsionSpring.getCPtr(other)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public override ChObj Clone() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChShaftsTorsionSpring_Clone(swigCPtr);
-    ChShaftsTorsionSpring ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChShaftsTorsionSpring(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
+  public ChShaftsTorsionSpring(ChShaftsTorsionSpring other) : this(corePINVOKE.new_ChShaftsTorsionSpring__SWIG_1(ChShaftsTorsionSpring.getCPtr(other)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetTorsionalStiffness(double mt) {
-    ChronoEngine_csharpPINVOKE.ChShaftsTorsionSpring_SetTorsionalStiffness(swigCPtr, mt);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChShaftsTorsionSpring_SetTorsionalStiffness(swigCPtr, mt);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double GetTorsionalStiffness() {
-    double ret = ChronoEngine_csharpPINVOKE.ChShaftsTorsionSpring_GetTorsionalStiffness(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChShaftsTorsionSpring_GetTorsionalStiffness(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetTorsionalDamping(double mt) {
-    ChronoEngine_csharpPINVOKE.ChShaftsTorsionSpring_SetTorsionalDamping(swigCPtr, mt);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChShaftsTorsionSpring_SetTorsionalDamping(swigCPtr, mt);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double GetTorsionalDamping() {
-    double ret = ChronoEngine_csharpPINVOKE.ChShaftsTorsionSpring_GetTorsionalDamping(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChShaftsTorsionSpring_GetTorsionalDamping(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override double ComputeTorque() {
-    double ret = ChronoEngine_csharpPINVOKE.ChShaftsTorsionSpring_ComputeTorque(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChShaftsTorsionSpring_ComputeTorque(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void ArchiveOUT(SWIGTYPE_p_ChArchiveOut marchive) {
-    ChronoEngine_csharpPINVOKE.ChShaftsTorsionSpring_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChShaftsTorsionSpring_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn marchive) {
-    ChronoEngine_csharpPINVOKE.ChShaftsTorsionSpring_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChShaftsTorsionSpring_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

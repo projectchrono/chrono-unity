@@ -13,7 +13,7 @@ public class ChLoadXYZnodeBodyBushing : ChLoadXYZnodeBody {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChLoadXYZnodeBodyBushing(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChLoadXYZnodeBodyBushing_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChLoadXYZnodeBodyBushing(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChLoadXYZnodeBodyBushing_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChLoadXYZnodeBodyBushing : ChLoadXYZnodeBody {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChLoadXYZnodeBodyBushing(swigCPtr);
+          corePINVOKE.delete_ChLoadXYZnodeBodyBushing(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,51 +35,44 @@ public class ChLoadXYZnodeBodyBushing : ChLoadXYZnodeBody {
     }
   }
 
-  public ChLoadXYZnodeBodyBushing(SWIGTYPE_p_std__shared_ptrT_ChNodeXYZ_t mnodeA, ChBody mbodyB) : this(ChronoEngine_csharpPINVOKE.new_ChLoadXYZnodeBodyBushing(SWIGTYPE_p_std__shared_ptrT_ChNodeXYZ_t.getCPtr(mnodeA), ChBody.getCPtr(mbodyB)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public override ChObj Clone() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChLoadXYZnodeBodyBushing_Clone(swigCPtr);
-    ChLoadXYZnodeBodyBushing ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChLoadXYZnodeBodyBushing(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
+  public ChLoadXYZnodeBodyBushing(ChNodeXYZ mnodeA, ChBody mbodyB) : this(corePINVOKE.new_ChLoadXYZnodeBodyBushing(ChNodeXYZ.getCPtr(mnodeA), ChBody.getCPtr(mbodyB)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void ComputeForce(ChFrameMovingD rel_AB, ChVectorD loc_force) {
-    ChronoEngine_csharpPINVOKE.ChLoadXYZnodeBodyBushing_ComputeForce(swigCPtr, ChFrameMovingD.getCPtr(rel_AB), ChVectorD.getCPtr(loc_force));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoadXYZnodeBodyBushing_ComputeForce(swigCPtr, ChFrameMovingD.getCPtr(rel_AB), ChVectorD.getCPtr(loc_force));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetFunctionForceX(ChFunction fx) {
-    ChronoEngine_csharpPINVOKE.ChLoadXYZnodeBodyBushing_SetFunctionForceX(swigCPtr, ChFunction.getCPtr(fx));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoadXYZnodeBodyBushing_SetFunctionForceX(swigCPtr, ChFunction.getCPtr(fx));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetFunctionForceY(ChFunction fy) {
-    ChronoEngine_csharpPINVOKE.ChLoadXYZnodeBodyBushing_SetFunctionForceY(swigCPtr, ChFunction.getCPtr(fy));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoadXYZnodeBodyBushing_SetFunctionForceY(swigCPtr, ChFunction.getCPtr(fy));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetFunctionForceZ(ChFunction fz) {
-    ChronoEngine_csharpPINVOKE.ChLoadXYZnodeBodyBushing_SetFunctionForceZ(swigCPtr, ChFunction.getCPtr(fz));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoadXYZnodeBodyBushing_SetFunctionForceZ(swigCPtr, ChFunction.getCPtr(fz));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetDamping(ChVectorD mdamping) {
-    ChronoEngine_csharpPINVOKE.ChLoadXYZnodeBodyBushing_SetDamping(swigCPtr, ChVectorD.getCPtr(mdamping));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoadXYZnodeBodyBushing_SetDamping(swigCPtr, ChVectorD.getCPtr(mdamping));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public ChVectorD GetDamping() {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChLoadXYZnodeBodyBushing_GetDamping(swigCPtr), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorD ret = new ChVectorD(corePINVOKE.ChLoadXYZnodeBodyBushing_GetDamping(swigCPtr), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetStiff(bool ms) {
-    ChronoEngine_csharpPINVOKE.ChLoadXYZnodeBodyBushing_SetStiff(swigCPtr, ms);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoadXYZnodeBodyBushing_SetStiff(swigCPtr, ms);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

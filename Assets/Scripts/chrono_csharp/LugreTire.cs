@@ -62,26 +62,26 @@ public class LugreTire : ChLugreTire {
     return ret;
   }
 
-  public virtual double GetNormalStiffness() {
-    double ret = vehiclePINVOKE.LugreTire_GetNormalStiffness(swigCPtr);
+  public virtual double GetNormalStiffnessForce(double depth) {
+    double ret = vehiclePINVOKE.LugreTire_GetNormalStiffnessForce(swigCPtr, depth);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public virtual double GetNormalDamping() {
-    double ret = vehiclePINVOKE.LugreTire_GetNormalDamping(swigCPtr);
+  public virtual double GetNormalDampingForce(double depth, double velocity) {
+    double ret = vehiclePINVOKE.LugreTire_GetNormalDampingForce(swigCPtr, depth, velocity);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public override double GetMass() {
-    double ret = vehiclePINVOKE.LugreTire_GetMass(swigCPtr);
+  public virtual double GetTireMass() {
+    double ret = vehiclePINVOKE.LugreTire_GetTireMass(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public override ChVectorD GetInertia() {
-    ChVectorD ret = new ChVectorD(vehiclePINVOKE.LugreTire_GetInertia(swigCPtr), true);
+  public virtual ChVectorD GetTireInertia() {
+    ChVectorD ret = new ChVectorD(vehiclePINVOKE.LugreTire_GetTireInertia(swigCPtr), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

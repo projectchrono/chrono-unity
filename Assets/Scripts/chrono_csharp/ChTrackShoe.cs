@@ -54,6 +54,12 @@ public class ChTrackShoe : ChPart {
     return ret;
   }
 
+  public virtual ChVectorD GetTension() {
+    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChTrackShoe_GetTension(swigCPtr), true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public virtual double GetHeight() {
     double ret = vehiclePINVOKE.ChTrackShoe_GetHeight(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
@@ -62,12 +68,6 @@ public class ChTrackShoe : ChPart {
 
   public virtual double GetPitch() {
     double ret = vehiclePINVOKE.ChTrackShoe_GetPitch(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public virtual double GetMass() {
-    double ret = vehiclePINVOKE.ChTrackShoe_GetMass(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -85,6 +85,16 @@ public class ChTrackShoe : ChPart {
 
   public virtual void Initialize(ChBodyAuxRef chassis, ChVectorD location, ChQuaternionD rotation) {
     vehiclePINVOKE.ChTrackShoe_Initialize(swigCPtr, ChBodyAuxRef.getCPtr(chassis), ChVectorD.getCPtr(location), ChQuaternionD.getCPtr(rotation));
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void SetIndex(uint index) {
+    vehiclePINVOKE.ChTrackShoe_SetIndex(swigCPtr, index);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public virtual void Connect(ChTrackShoe next, ChTrackAssembly assembly, ChChassis chassis, bool ccw) {
+    vehiclePINVOKE.ChTrackShoe_Connect(swigCPtr, ChTrackShoe.getCPtr(next), ChTrackAssembly.getCPtr(assembly), ChChassis.getCPtr(chassis), ccw);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

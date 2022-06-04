@@ -145,12 +145,6 @@ public class Gator : global::System.IDisposable {
     return ret;
   }
 
-  public double GetTotalMass() {
-    double ret = vehiclePINVOKE.Gator_GetTotalMass(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
   public void Initialize() {
     vehiclePINVOKE.Gator_Initialize(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();

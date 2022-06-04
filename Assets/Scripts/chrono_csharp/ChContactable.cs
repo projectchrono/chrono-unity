@@ -36,7 +36,7 @@ public class ChContactable : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnBase) {
           swigCMemOwnBase = false;
-          ChronoEngine_csharpPINVOKE.delete_ChContactable(swigCPtr);
+          corePINVOKE.delete_ChContactable(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -44,99 +44,99 @@ public class ChContactable : global::System.IDisposable {
   }
 
   public virtual bool IsContactActive() {
-    bool ret = ChronoEngine_csharpPINVOKE.ChContactable_IsContactActive(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChContactable_IsContactActive(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int ContactableGet_ndof_x() {
-    int ret = ChronoEngine_csharpPINVOKE.ChContactable_ContactableGet_ndof_x(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChContactable_ContactableGet_ndof_x(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int ContactableGet_ndof_w() {
-    int ret = ChronoEngine_csharpPINVOKE.ChContactable_ContactableGet_ndof_w(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChContactable_ContactableGet_ndof_w(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void ContactableGetStateBlock_x(ChState x) {
-    ChronoEngine_csharpPINVOKE.ChContactable_ContactableGetStateBlock_x(swigCPtr, ChState.getCPtr(x));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChContactable_ContactableGetStateBlock_x(swigCPtr, ChState.getCPtr(x));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void ContactableGetStateBlock_w(ChStateDelta w) {
-    ChronoEngine_csharpPINVOKE.ChContactable_ContactableGetStateBlock_w(swigCPtr, ChStateDelta.getCPtr(w));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChContactable_ContactableGetStateBlock_w(swigCPtr, ChStateDelta.getCPtr(w));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void ContactableIncrementState(ChState x, ChStateDelta dw, ChState x_new) {
-    ChronoEngine_csharpPINVOKE.ChContactable_ContactableIncrementState(swigCPtr, ChState.getCPtr(x), ChStateDelta.getCPtr(dw), ChState.getCPtr(x_new));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChContactable_ContactableIncrementState(swigCPtr, ChState.getCPtr(x), ChStateDelta.getCPtr(dw), ChState.getCPtr(x_new));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual ChVectorD GetContactPoint(ChVectorD loc_point, ChState state_x) {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChContactable_GetContactPoint(swigCPtr, ChVectorD.getCPtr(loc_point), ChState.getCPtr(state_x)), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorD ret = new ChVectorD(corePINVOKE.ChContactable_GetContactPoint(swigCPtr, ChVectorD.getCPtr(loc_point), ChState.getCPtr(state_x)), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual ChVectorD GetContactPointSpeed(ChVectorD loc_point, ChState state_x, ChStateDelta state_w) {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChContactable_GetContactPointSpeed__SWIG_0(swigCPtr, ChVectorD.getCPtr(loc_point), ChState.getCPtr(state_x), ChStateDelta.getCPtr(state_w)), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorD ret = new ChVectorD(corePINVOKE.ChContactable_GetContactPointSpeed__SWIG_0(swigCPtr, ChVectorD.getCPtr(loc_point), ChState.getCPtr(state_x), ChStateDelta.getCPtr(state_w)), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual ChVectorD GetContactPointSpeed(ChVectorD abs_point) {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChContactable_GetContactPointSpeed__SWIG_1(swigCPtr, ChVectorD.getCPtr(abs_point)), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorD ret = new ChVectorD(corePINVOKE.ChContactable_GetContactPointSpeed__SWIG_1(swigCPtr, ChVectorD.getCPtr(abs_point)), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual ChCoordsysD GetCsysForCollisionModel() {
-    ChCoordsysD ret = new ChCoordsysD(ChronoEngine_csharpPINVOKE.ChContactable_GetCsysForCollisionModel(swigCPtr), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChCoordsysD ret = new ChCoordsysD(corePINVOKE.ChContactable_GetCsysForCollisionModel(swigCPtr), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void ContactForceLoadResidual_F(ChVectorD F, ChVectorD abs_point, ChVectorDynamicD R) {
-    ChronoEngine_csharpPINVOKE.ChContactable_ContactForceLoadResidual_F(swigCPtr, ChVectorD.getCPtr(F), ChVectorD.getCPtr(abs_point), ChVectorDynamicD.getCPtr(R));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChContactable_ContactForceLoadResidual_F(swigCPtr, ChVectorD.getCPtr(F), ChVectorD.getCPtr(abs_point), ChVectorDynamicD.getCPtr(R));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void ContactForceLoadQ(ChVectorD F, ChVectorD point, ChState state_x, ChVectorDynamicD Q, int offset) {
-    ChronoEngine_csharpPINVOKE.ChContactable_ContactForceLoadQ(swigCPtr, ChVectorD.getCPtr(F), ChVectorD.getCPtr(point), ChState.getCPtr(state_x), ChVectorDynamicD.getCPtr(Q), offset);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChContactable_ContactForceLoadQ(swigCPtr, ChVectorD.getCPtr(F), ChVectorD.getCPtr(point), ChState.getCPtr(state_x), ChVectorDynamicD.getCPtr(Q), offset);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual double GetContactableMass() {
-    double ret = ChronoEngine_csharpPINVOKE.ChContactable_GetContactableMass(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChContactable_GetContactableMass(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual ChPhysicsItem GetPhysicsItem() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChContactable_GetPhysicsItem(swigCPtr);
+    global::System.IntPtr cPtr = corePINVOKE.ChContactable_GetPhysicsItem(swigCPtr);
     ChPhysicsItem ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChPhysicsItem(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual ChContactable.eChContactableType GetContactableType() {
-    ChContactable.eChContactableType ret = (ChContactable.eChContactableType)ChronoEngine_csharpPINVOKE.ChContactable_GetContactableType(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChContactable.eChContactableType ret = (ChContactable.eChContactableType)corePINVOKE.ChContactable_GetContactableType(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetUserData(SWIGTYPE_p_std__shared_ptrT_void_t data) {
-    ChronoEngine_csharpPINVOKE.ChContactable_SetUserData(swigCPtr, SWIGTYPE_p_std__shared_ptrT_void_t.getCPtr(data));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChContactable_SetUserData(swigCPtr, SWIGTYPE_p_std__shared_ptrT_void_t.getCPtr(data));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public bool HasData() {
-    bool ret = ChronoEngine_csharpPINVOKE.ChContactable_HasData(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChContactable_HasData(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

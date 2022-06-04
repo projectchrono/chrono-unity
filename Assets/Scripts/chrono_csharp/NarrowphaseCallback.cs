@@ -36,7 +36,7 @@ public class NarrowphaseCallback : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnBase) {
           swigCMemOwnBase = false;
-          ChronoEngine_csharpPINVOKE.delete_NarrowphaseCallback(swigCPtr);
+          corePINVOKE.delete_NarrowphaseCallback(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -44,9 +44,35 @@ public class NarrowphaseCallback : global::System.IDisposable {
   }
 
   public virtual bool OnNarrowphase(SWIGTYPE_p_ChCollisionInfo contactinfo) {
-    bool ret = ChronoEngine_csharpPINVOKE.NarrowphaseCallback_OnNarrowphase(swigCPtr, SWIGTYPE_p_ChCollisionInfo.getCPtr(contactinfo));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.NarrowphaseCallback_OnNarrowphase(swigCPtr, SWIGTYPE_p_ChCollisionInfo.getCPtr(contactinfo));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
+  public NarrowphaseCallback() : this(corePINVOKE.new_NarrowphaseCallback(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
+    SwigDirectorConnect();
+  }
+
+  private void SwigDirectorConnect() {
+    if (SwigDerivedClassHasMethod("OnNarrowphase", swigMethodTypes0))
+      swigDelegate0 = new SwigDelegateNarrowphaseCallback_0(SwigDirectorMethodOnNarrowphase);
+    corePINVOKE.NarrowphaseCallback_director_connect(swigCPtr, swigDelegate0);
+  }
+
+  private bool SwigDerivedClassHasMethod(string methodName, global::System.Type[] methodTypes) {
+    global::System.Reflection.MethodInfo methodInfo = this.GetType().GetMethod(methodName, global::System.Reflection.BindingFlags.Public | global::System.Reflection.BindingFlags.NonPublic | global::System.Reflection.BindingFlags.Instance, null, methodTypes, null);
+    bool hasDerivedMethod = methodInfo.DeclaringType.IsSubclassOf(typeof(NarrowphaseCallback));
+    return hasDerivedMethod;
+  }
+
+  private bool SwigDirectorMethodOnNarrowphase(global::System.IntPtr contactinfo) {
+    return OnNarrowphase(new SWIGTYPE_p_ChCollisionInfo(contactinfo, false));
+  }
+
+  public delegate bool SwigDelegateNarrowphaseCallback_0(global::System.IntPtr contactinfo);
+
+  private SwigDelegateNarrowphaseCallback_0 swigDelegate0;
+
+  private static global::System.Type[] swigMethodTypes0 = new global::System.Type[] { typeof(SWIGTYPE_p_ChCollisionInfo) };
 }

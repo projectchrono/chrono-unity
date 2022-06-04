@@ -63,24 +63,6 @@ public class ChTire : ChPart {
     return ret;
   }
 
-  public virtual double GetMass() {
-    double ret = vehiclePINVOKE.ChTire_GetMass(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public virtual double ReportMass() {
-    double ret = vehiclePINVOKE.ChTire_ReportMass(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public virtual ChVectorD GetInertia() {
-    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChTire_GetInertia(swigCPtr), true);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
   public virtual TerrainForce ReportTireForce(ChTerrain terrain) {
     TerrainForce ret = new TerrainForce(vehiclePINVOKE.ChTire_ReportTireForce(swigCPtr, ChTerrain.getCPtr(terrain)), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();

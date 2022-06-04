@@ -79,12 +79,6 @@ public class ChSprocket : ChPart {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public virtual double GetMass() {
-    double ret = vehiclePINVOKE.ChSprocket_GetMass(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
   public ChMaterialSurface GetContactMaterial() {
     global::System.IntPtr cPtr = vehiclePINVOKE.ChSprocket_GetContactMaterial(swigCPtr);
     ChMaterialSurface ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChMaterialSurface(cPtr, true);
@@ -97,8 +91,8 @@ public class ChSprocket : ChPart {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public virtual void Initialize(ChBodyAuxRef chassis, ChVectorD location, ChTrackAssembly track) {
-    vehiclePINVOKE.ChSprocket_Initialize(swigCPtr, ChBodyAuxRef.getCPtr(chassis), ChVectorD.getCPtr(location), ChTrackAssembly.getCPtr(track));
+  public virtual void Initialize(ChChassis chassis, ChVectorD location, ChTrackAssembly track) {
+    vehiclePINVOKE.ChSprocket_Initialize(swigCPtr, ChChassis.getCPtr(chassis), ChVectorD.getCPtr(location), ChTrackAssembly.getCPtr(track));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -107,8 +101,8 @@ public class ChSprocket : ChPart {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public SWIGTYPE_p_std__shared_ptrT_geometry__ChTriangleMeshConnected_t CreateVisualizationMesh(double radius, double width, double delta, ChVectorF color) {
-    SWIGTYPE_p_std__shared_ptrT_geometry__ChTriangleMeshConnected_t ret = new SWIGTYPE_p_std__shared_ptrT_geometry__ChTriangleMeshConnected_t(vehiclePINVOKE.ChSprocket_CreateVisualizationMesh__SWIG_0(swigCPtr, radius, width, delta, ChVectorF.getCPtr(color)), true);
+  public SWIGTYPE_p_std__shared_ptrT_geometry__ChTriangleMeshConnected_t CreateVisualizationMesh(double radius, double width, double delta, ChColor color) {
+    SWIGTYPE_p_std__shared_ptrT_geometry__ChTriangleMeshConnected_t ret = new SWIGTYPE_p_std__shared_ptrT_geometry__ChTriangleMeshConnected_t(vehiclePINVOKE.ChSprocket_CreateVisualizationMesh__SWIG_0(swigCPtr, radius, width, delta, ChColor.getCPtr(color)), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

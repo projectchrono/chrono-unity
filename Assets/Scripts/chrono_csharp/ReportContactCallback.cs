@@ -36,7 +36,7 @@ public class ReportContactCallback : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnBase) {
           swigCMemOwnBase = false;
-          ChronoEngine_csharpPINVOKE.delete_ReportContactCallback(swigCPtr);
+          corePINVOKE.delete_ReportContactCallback(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -44,20 +44,20 @@ public class ReportContactCallback : global::System.IDisposable {
   }
 
   public virtual bool OnReportContact(ChVectorD pA, ChVectorD pB, ChMatrix33D plane_coord, double distance, double eff_radius, ChVectorD react_forces, ChVectorD react_torques, ChContactable contactobjA, ChContactable contactobjB) {
-    bool ret = ChronoEngine_csharpPINVOKE.ReportContactCallback_OnReportContact(swigCPtr, ChVectorD.getCPtr(pA), ChVectorD.getCPtr(pB), ChMatrix33D.getCPtr(plane_coord), distance, eff_radius, ChVectorD.getCPtr(react_forces), ChVectorD.getCPtr(react_torques), ChContactable.getCPtr(contactobjA), ChContactable.getCPtr(contactobjB));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ReportContactCallback_OnReportContact(swigCPtr, ChVectorD.getCPtr(pA), ChVectorD.getCPtr(pB), ChMatrix33D.getCPtr(plane_coord), distance, eff_radius, ChVectorD.getCPtr(react_forces), ChVectorD.getCPtr(react_torques), ChContactable.getCPtr(contactobjA), ChContactable.getCPtr(contactobjB));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public ReportContactCallback() : this(ChronoEngine_csharpPINVOKE.new_ReportContactCallback(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ReportContactCallback() : this(corePINVOKE.new_ReportContactCallback(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     SwigDirectorConnect();
   }
 
   private void SwigDirectorConnect() {
     if (SwigDerivedClassHasMethod("OnReportContact", swigMethodTypes0))
       swigDelegate0 = new SwigDelegateReportContactCallback_0(SwigDirectorMethodOnReportContact);
-    ChronoEngine_csharpPINVOKE.ReportContactCallback_director_connect(swigCPtr, swigDelegate0);
+    corePINVOKE.ReportContactCallback_director_connect(swigCPtr, swigDelegate0);
   }
 
   private bool SwigDerivedClassHasMethod(string methodName, global::System.Type[] methodTypes) {

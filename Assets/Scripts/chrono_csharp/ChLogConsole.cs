@@ -12,7 +12,7 @@
 public class ChLogConsole : ChLog {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
 
-  internal ChLogConsole(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChLogConsole_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal ChLogConsole(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChLogConsole_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
@@ -25,7 +25,7 @@ public class ChLogConsole : ChLog {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChLogConsole(swigCPtr);
+          corePINVOKE.delete_ChLogConsole(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -33,13 +33,13 @@ public class ChLogConsole : ChLog {
     }
   }
 
-  public ChLogConsole() : this(ChronoEngine_csharpPINVOKE.new_ChLogConsole(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChLogConsole() : this(corePINVOKE.new_ChLogConsole(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void Output(string data, uint n) {
-    ChronoEngine_csharpPINVOKE.ChLogConsole_Output(swigCPtr, data, n);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLogConsole_Output(swigCPtr, data, n);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

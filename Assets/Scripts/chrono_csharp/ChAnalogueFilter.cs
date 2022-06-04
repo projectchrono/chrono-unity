@@ -36,7 +36,7 @@ public class ChAnalogueFilter : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChAnalogueFilter(swigCPtr);
+          corePINVOKE.delete_ChAnalogueFilter(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -44,13 +44,13 @@ public class ChAnalogueFilter : global::System.IDisposable {
   }
 
   public virtual void Reset() {
-    ChronoEngine_csharpPINVOKE.ChAnalogueFilter_Reset(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChAnalogueFilter_Reset(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual double Filter(double u) {
-    double ret = ChronoEngine_csharpPINVOKE.ChAnalogueFilter_Filter(swigCPtr, u);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChAnalogueFilter_Filter(swigCPtr, u);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

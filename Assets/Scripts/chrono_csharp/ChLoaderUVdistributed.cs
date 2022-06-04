@@ -13,7 +13,7 @@ public class ChLoaderUVdistributed : ChLoaderUV {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChLoaderUVdistributed(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChLoaderUVdistributed_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChLoaderUVdistributed(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChLoaderUVdistributed_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChLoaderUVdistributed : ChLoaderUV {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChLoaderUVdistributed(swigCPtr);
+          corePINVOKE.delete_ChLoaderUVdistributed(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -36,20 +36,20 @@ public class ChLoaderUVdistributed : ChLoaderUV {
   }
 
   public virtual int GetIntegrationPointsU() {
-    int ret = ChronoEngine_csharpPINVOKE.ChLoaderUVdistributed_GetIntegrationPointsU(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChLoaderUVdistributed_GetIntegrationPointsU(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int GetIntegrationPointsV() {
-    int ret = ChronoEngine_csharpPINVOKE.ChLoaderUVdistributed_GetIntegrationPointsV(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChLoaderUVdistributed_GetIntegrationPointsV(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void ComputeQ(ChVectorDynamicD state_x, ChVectorDynamicD state_w) {
-    ChronoEngine_csharpPINVOKE.ChLoaderUVdistributed_ComputeQ(swigCPtr, ChVectorDynamicD.getCPtr(state_x), ChVectorDynamicD.getCPtr(state_w));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoaderUVdistributed_ComputeQ(swigCPtr, ChVectorDynamicD.getCPtr(state_x), ChVectorDynamicD.getCPtr(state_w));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

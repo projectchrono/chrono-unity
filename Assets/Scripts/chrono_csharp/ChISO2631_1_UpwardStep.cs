@@ -36,34 +36,34 @@ public class ChISO2631_1_UpwardStep : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChISO2631_1_UpwardStep(swigCPtr);
+          corePINVOKE.delete_ChISO2631_1_UpwardStep(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public ChISO2631_1_UpwardStep() : this(ChronoEngine_csharpPINVOKE.new_ChISO2631_1_UpwardStep__SWIG_0(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChISO2631_1_UpwardStep() : this(corePINVOKE.new_ChISO2631_1_UpwardStep__SWIG_0(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChISO2631_1_UpwardStep(double step, double f5, double f6, double Q5, double Q6) : this(ChronoEngine_csharpPINVOKE.new_ChISO2631_1_UpwardStep__SWIG_1(step, f5, f6, Q5, Q6), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChISO2631_1_UpwardStep(double step, double f5, double f6, double Q5, double Q6) : this(corePINVOKE.new_ChISO2631_1_UpwardStep__SWIG_1(step, f5, f6, Q5, Q6), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Config(double step, double f5, double f6, double Q5, double Q6) {
-    ChronoEngine_csharpPINVOKE.ChISO2631_1_UpwardStep_Config(swigCPtr, step, f5, f6, Q5, Q6);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChISO2631_1_UpwardStep_Config(swigCPtr, step, f5, f6, Q5, Q6);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Reset() {
-    ChronoEngine_csharpPINVOKE.ChISO2631_1_UpwardStep_Reset(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChISO2631_1_UpwardStep_Reset(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double Filter(double u) {
-    double ret = ChronoEngine_csharpPINVOKE.ChISO2631_1_UpwardStep_Filter(swigCPtr, u);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChISO2631_1_UpwardStep_Filter(swigCPtr, u);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

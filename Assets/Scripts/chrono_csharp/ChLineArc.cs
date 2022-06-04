@@ -13,7 +13,7 @@ public class ChLineArc : ChLine {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChLineArc(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChLineArc_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChLineArc(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChLineArc_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChLineArc : ChLine {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChLineArc(swigCPtr);
+          corePINVOKE.delete_ChLineArc(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -37,146 +37,146 @@ public class ChLineArc : ChLine {
 
   public ChCoordsysD origin {
     set {
-      ChronoEngine_csharpPINVOKE.ChLineArc_origin_set(swigCPtr, ChCoordsysD.getCPtr(value));
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChLineArc_origin_set(swigCPtr, ChCoordsysD.getCPtr(value));
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChLineArc_origin_get(swigCPtr);
+      global::System.IntPtr cPtr = corePINVOKE.ChLineArc_origin_get(swigCPtr);
       ChCoordsysD ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChCoordsysD(cPtr, false);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public double radius {
     set {
-      ChronoEngine_csharpPINVOKE.ChLineArc_radius_set(swigCPtr, value);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChLineArc_radius_set(swigCPtr, value);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      double ret = ChronoEngine_csharpPINVOKE.ChLineArc_radius_get(swigCPtr);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      double ret = corePINVOKE.ChLineArc_radius_get(swigCPtr);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public double angle1 {
     set {
-      ChronoEngine_csharpPINVOKE.ChLineArc_angle1_set(swigCPtr, value);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChLineArc_angle1_set(swigCPtr, value);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      double ret = ChronoEngine_csharpPINVOKE.ChLineArc_angle1_get(swigCPtr);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      double ret = corePINVOKE.ChLineArc_angle1_get(swigCPtr);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public double angle2 {
     set {
-      ChronoEngine_csharpPINVOKE.ChLineArc_angle2_set(swigCPtr, value);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChLineArc_angle2_set(swigCPtr, value);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      double ret = ChronoEngine_csharpPINVOKE.ChLineArc_angle2_get(swigCPtr);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      double ret = corePINVOKE.ChLineArc_angle2_get(swigCPtr);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public bool counterclockwise {
     set {
-      ChronoEngine_csharpPINVOKE.ChLineArc_counterclockwise_set(swigCPtr, value);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChLineArc_counterclockwise_set(swigCPtr, value);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      bool ret = ChronoEngine_csharpPINVOKE.ChLineArc_counterclockwise_get(swigCPtr);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      bool ret = corePINVOKE.ChLineArc_counterclockwise_get(swigCPtr);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public ChLineArc(ChCoordsysD morigin, double mradius, double mangle1, double mangle2, bool mcounterclockwise) : this(ChronoEngine_csharpPINVOKE.new_ChLineArc__SWIG_0(ChCoordsysD.getCPtr(morigin), mradius, mangle1, mangle2, mcounterclockwise), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChLineArc(ChCoordsysD morigin, double mradius, double mangle1, double mangle2, bool mcounterclockwise) : this(corePINVOKE.new_ChLineArc__SWIG_0(ChCoordsysD.getCPtr(morigin), mradius, mangle1, mangle2, mcounterclockwise), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChLineArc(ChCoordsysD morigin, double mradius, double mangle1, double mangle2) : this(ChronoEngine_csharpPINVOKE.new_ChLineArc__SWIG_1(ChCoordsysD.getCPtr(morigin), mradius, mangle1, mangle2), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChLineArc(ChCoordsysD morigin, double mradius, double mangle1, double mangle2) : this(corePINVOKE.new_ChLineArc__SWIG_1(ChCoordsysD.getCPtr(morigin), mradius, mangle1, mangle2), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChLineArc(ChCoordsysD morigin, double mradius, double mangle1) : this(ChronoEngine_csharpPINVOKE.new_ChLineArc__SWIG_2(ChCoordsysD.getCPtr(morigin), mradius, mangle1), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChLineArc(ChCoordsysD morigin, double mradius, double mangle1) : this(corePINVOKE.new_ChLineArc__SWIG_2(ChCoordsysD.getCPtr(morigin), mradius, mangle1), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChLineArc(ChCoordsysD morigin, double mradius) : this(ChronoEngine_csharpPINVOKE.new_ChLineArc__SWIG_3(ChCoordsysD.getCPtr(morigin), mradius), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChLineArc(ChCoordsysD morigin, double mradius) : this(corePINVOKE.new_ChLineArc__SWIG_3(ChCoordsysD.getCPtr(morigin), mradius), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChLineArc(ChCoordsysD morigin) : this(ChronoEngine_csharpPINVOKE.new_ChLineArc__SWIG_4(ChCoordsysD.getCPtr(morigin)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChLineArc(ChCoordsysD morigin) : this(corePINVOKE.new_ChLineArc__SWIG_4(ChCoordsysD.getCPtr(morigin)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChLineArc() : this(ChronoEngine_csharpPINVOKE.new_ChLineArc__SWIG_5(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChLineArc() : this(corePINVOKE.new_ChLineArc__SWIG_5(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChLineArc(ChLineArc source) : this(ChronoEngine_csharpPINVOKE.new_ChLineArc__SWIG_6(ChLineArc.getCPtr(source)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChLineArc(ChLineArc source) : this(corePINVOKE.new_ChLineArc__SWIG_6(ChLineArc.getCPtr(source)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override ChGeometry Clone() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChLineArc_Clone(swigCPtr);
+    global::System.IntPtr cPtr = corePINVOKE.ChLineArc_Clone(swigCPtr);
     ChLineArc ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChLineArc(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override ChGeometry.GeometryType GetClassType() {
-    ChGeometry.GeometryType ret = (ChGeometry.GeometryType)ChronoEngine_csharpPINVOKE.ChLineArc_GetClassType(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChGeometry.GeometryType ret = (ChGeometry.GeometryType)corePINVOKE.ChLineArc_GetClassType(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override int Get_complexity() {
-    int ret = ChronoEngine_csharpPINVOKE.ChLineArc_Get_complexity(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChLineArc_Get_complexity(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void Evaluate(ChVectorD pos, double parU) {
-    ChronoEngine_csharpPINVOKE.ChLineArc_Evaluate(swigCPtr, ChVectorD.getCPtr(pos), parU);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLineArc_Evaluate(swigCPtr, ChVectorD.getCPtr(pos), parU);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override double Length(int sampling) {
-    double ret = ChronoEngine_csharpPINVOKE.ChLineArc_Length(swigCPtr, sampling);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChLineArc_Length(swigCPtr, sampling);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetCounterclockwise(bool mcc) {
-    ChronoEngine_csharpPINVOKE.ChLineArc_SetCounterclockwise(swigCPtr, mcc);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLineArc_SetCounterclockwise(swigCPtr, mcc);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetAngle1deg(double a1) {
-    ChronoEngine_csharpPINVOKE.ChLineArc_SetAngle1deg(swigCPtr, a1);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLineArc_SetAngle1deg(swigCPtr, a1);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetAngle2deg(double a2) {
-    ChronoEngine_csharpPINVOKE.ChLineArc_SetAngle2deg(swigCPtr, a2);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLineArc_SetAngle2deg(swigCPtr, a2);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void ArchiveOUT(SWIGTYPE_p_ChArchiveOut marchive) {
-    ChronoEngine_csharpPINVOKE.ChLineArc_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLineArc_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn marchive) {
-    ChronoEngine_csharpPINVOKE.ChLineArc_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLineArc_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

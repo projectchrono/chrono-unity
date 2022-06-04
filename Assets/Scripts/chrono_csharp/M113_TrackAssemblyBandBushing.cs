@@ -35,7 +35,7 @@ public class M113_TrackAssemblyBandBushing : ChTrackAssemblyBandBushing {
     }
   }
 
-  public M113_TrackAssemblyBandBushing(VehicleSide side, BrakeType brake_type) : this(vehiclePINVOKE.new_M113_TrackAssemblyBandBushing((int)side, (int)brake_type), true) {
+  public M113_TrackAssemblyBandBushing(VehicleSide side, BrakeType brake_type, bool use_suspension_bushings) : this(vehiclePINVOKE.new_M113_TrackAssemblyBandBushing((int)side, (int)brake_type, use_suspension_bushings), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

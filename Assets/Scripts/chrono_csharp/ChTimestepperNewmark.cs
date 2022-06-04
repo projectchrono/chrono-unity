@@ -13,7 +13,7 @@ public class ChTimestepperNewmark : ChTimestepperIIorder {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChTimestepperNewmark(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChTimestepperNewmark_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChTimestepperNewmark(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChTimestepperNewmark_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChTimestepperNewmark : ChTimestepperIIorder {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChTimestepperNewmark(swigCPtr);
+          corePINVOKE.delete_ChTimestepperNewmark(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,55 +35,55 @@ public class ChTimestepperNewmark : ChTimestepperIIorder {
     }
   }
 
-  public ChTimestepperNewmark(ChIntegrableIIorder intgr) : this(ChronoEngine_csharpPINVOKE.new_ChTimestepperNewmark__SWIG_0(ChIntegrableIIorder.getCPtr(intgr)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChTimestepperNewmark(ChIntegrableIIorder intgr) : this(corePINVOKE.new_ChTimestepperNewmark__SWIG_0(ChIntegrableIIorder.getCPtr(intgr)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChTimestepperNewmark() : this(ChronoEngine_csharpPINVOKE.new_ChTimestepperNewmark__SWIG_1(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChTimestepperNewmark() : this(corePINVOKE.new_ChTimestepperNewmark__SWIG_1(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override ChTimestepper.Type GetType() {
-    ChTimestepper.Type ret = (ChTimestepper.Type)ChronoEngine_csharpPINVOKE.ChTimestepperNewmark_GetType(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChTimestepper.Type ret = (ChTimestepper.Type)corePINVOKE.ChTimestepperNewmark_GetType(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetGammaBeta(double mgamma, double mbeta) {
-    ChronoEngine_csharpPINVOKE.ChTimestepperNewmark_SetGammaBeta(swigCPtr, mgamma, mbeta);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChTimestepperNewmark_SetGammaBeta(swigCPtr, mgamma, mbeta);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double GetGamma() {
-    double ret = ChronoEngine_csharpPINVOKE.ChTimestepperNewmark_GetGamma(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChTimestepperNewmark_GetGamma(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public double GetBeta() {
-    double ret = ChronoEngine_csharpPINVOKE.ChTimestepperNewmark_GetBeta(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChTimestepperNewmark_GetBeta(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetModifiedNewton(bool val) {
-    ChronoEngine_csharpPINVOKE.ChTimestepperNewmark_SetModifiedNewton(swigCPtr, val);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChTimestepperNewmark_SetModifiedNewton(swigCPtr, val);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void Advance(double dt) {
-    ChronoEngine_csharpPINVOKE.ChTimestepperNewmark_Advance(swigCPtr, dt);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChTimestepperNewmark_Advance(swigCPtr, dt);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void ArchiveOUT(SWIGTYPE_p_ChArchiveOut archive) {
-    ChronoEngine_csharpPINVOKE.ChTimestepperNewmark_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(archive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChTimestepperNewmark_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(archive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn archive) {
-    ChronoEngine_csharpPINVOKE.ChTimestepperNewmark_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(archive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChTimestepperNewmark_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(archive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

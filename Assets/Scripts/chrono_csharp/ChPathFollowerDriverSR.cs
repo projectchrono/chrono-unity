@@ -11,8 +11,10 @@
 
 public class ChPathFollowerDriverSR : ChDriver {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
+  private bool swigCMemOwnDerived;
 
-  internal ChPathFollowerDriverSR(global::System.IntPtr cPtr, bool cMemoryOwn) : base(vehiclePINVOKE.ChPathFollowerDriverSR_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal ChPathFollowerDriverSR(global::System.IntPtr cPtr, bool cMemoryOwn) : base(vehiclePINVOKE.ChPathFollowerDriverSR_SWIGSmartPtrUpcast(cPtr), true) {
+    swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
@@ -23,8 +25,8 @@ public class ChPathFollowerDriverSR : ChDriver {
   protected override void Dispose(bool disposing) {
     lock(this) {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
-        if (swigCMemOwn) {
-          swigCMemOwn = false;
+        if (swigCMemOwnDerived) {
+          swigCMemOwnDerived = false;
           vehiclePINVOKE.delete_ChPathFollowerDriverSR(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);

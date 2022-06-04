@@ -13,7 +13,7 @@ public class ChTimestepperTrapezoidal : ChTimestepperIIorder {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChTimestepperTrapezoidal(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChTimestepperTrapezoidal_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChTimestepperTrapezoidal(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChTimestepperTrapezoidal_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChTimestepperTrapezoidal : ChTimestepperIIorder {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChTimestepperTrapezoidal(swigCPtr);
+          corePINVOKE.delete_ChTimestepperTrapezoidal(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,23 +35,23 @@ public class ChTimestepperTrapezoidal : ChTimestepperIIorder {
     }
   }
 
-  public ChTimestepperTrapezoidal(ChIntegrableIIorder intgr) : this(ChronoEngine_csharpPINVOKE.new_ChTimestepperTrapezoidal__SWIG_0(ChIntegrableIIorder.getCPtr(intgr)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChTimestepperTrapezoidal(ChIntegrableIIorder intgr) : this(corePINVOKE.new_ChTimestepperTrapezoidal__SWIG_0(ChIntegrableIIorder.getCPtr(intgr)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChTimestepperTrapezoidal() : this(ChronoEngine_csharpPINVOKE.new_ChTimestepperTrapezoidal__SWIG_1(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChTimestepperTrapezoidal() : this(corePINVOKE.new_ChTimestepperTrapezoidal__SWIG_1(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override ChTimestepper.Type GetType() {
-    ChTimestepper.Type ret = (ChTimestepper.Type)ChronoEngine_csharpPINVOKE.ChTimestepperTrapezoidal_GetType(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChTimestepper.Type ret = (ChTimestepper.Type)corePINVOKE.ChTimestepperTrapezoidal_GetType(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void Advance(double dt) {
-    ChronoEngine_csharpPINVOKE.ChTimestepperTrapezoidal_Advance(swigCPtr, dt);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChTimestepperTrapezoidal_Advance(swigCPtr, dt);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

@@ -13,7 +13,7 @@ public class ChLoaderPressure : ChLoaderUVdistributed {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChLoaderPressure(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChLoaderPressure_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChLoaderPressure(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChLoaderPressure_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChLoaderPressure : ChLoaderUVdistributed {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChLoaderPressure(swigCPtr);
+          corePINVOKE.delete_ChLoaderPressure(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,51 +35,51 @@ public class ChLoaderPressure : ChLoaderUVdistributed {
     }
   }
 
-  public ChLoaderPressure(ChLoadableUV mloadable) : this(ChronoEngine_csharpPINVOKE.new_ChLoaderPressure(ChLoadableUV.getCPtr(mloadable)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChLoaderPressure(ChLoadableUV mloadable) : this(corePINVOKE.new_ChLoaderPressure(ChLoadableUV.getCPtr(mloadable)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void ComputeF(double U, double V, ChVectorDynamicD F, ChVectorDynamicD state_x, ChVectorDynamicD state_w) {
-    ChronoEngine_csharpPINVOKE.ChLoaderPressure_ComputeF(swigCPtr, U, V, ChVectorDynamicD.getCPtr(F), ChVectorDynamicD.getCPtr(state_x), ChVectorDynamicD.getCPtr(state_w));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoaderPressure_ComputeF(swigCPtr, U, V, ChVectorDynamicD.getCPtr(F), ChVectorDynamicD.getCPtr(state_x), ChVectorDynamicD.getCPtr(state_w));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetPressure(double mpressure) {
-    ChronoEngine_csharpPINVOKE.ChLoaderPressure_SetPressure(swigCPtr, mpressure);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoaderPressure_SetPressure(swigCPtr, mpressure);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double GetPressure() {
-    double ret = ChronoEngine_csharpPINVOKE.ChLoaderPressure_GetPressure(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChLoaderPressure_GetPressure(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetIntegrationPoints(int val) {
-    ChronoEngine_csharpPINVOKE.ChLoaderPressure_SetIntegrationPoints(swigCPtr, val);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoaderPressure_SetIntegrationPoints(swigCPtr, val);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override int GetIntegrationPointsU() {
-    int ret = ChronoEngine_csharpPINVOKE.ChLoaderPressure_GetIntegrationPointsU(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChLoaderPressure_GetIntegrationPointsU(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override int GetIntegrationPointsV() {
-    int ret = ChronoEngine_csharpPINVOKE.ChLoaderPressure_GetIntegrationPointsV(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChLoaderPressure_GetIntegrationPointsV(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetStiff(bool val) {
-    ChronoEngine_csharpPINVOKE.ChLoaderPressure_SetStiff(swigCPtr, val);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoaderPressure_SetStiff(swigCPtr, val);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override bool IsStiff() {
-    bool ret = ChronoEngine_csharpPINVOKE.ChLoaderPressure_IsStiff(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChLoaderPressure_IsStiff(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

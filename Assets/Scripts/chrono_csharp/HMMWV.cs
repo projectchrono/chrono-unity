@@ -63,6 +63,11 @@ public class HMMWV : global::System.IDisposable {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public void SetSteeringType(SteeringTypeWV val) {
+    vehiclePINVOKE.HMMWV_SetSteeringType(swigCPtr, (int)val);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
   public void SetDriveType(DrivelineTypeWV val) {
     vehiclePINVOKE.HMMWV_SetDriveType(swigCPtr, (int)val);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
@@ -143,12 +148,6 @@ public class HMMWV : global::System.IDisposable {
   public ChPowertrain GetPowertrain() {
     global::System.IntPtr cPtr = vehiclePINVOKE.HMMWV_GetPowertrain(swigCPtr);
     ChPowertrain ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChPowertrain(cPtr, true);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public double GetTotalMass() {
-    double ret = vehiclePINVOKE.HMMWV_GetTotalMass(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

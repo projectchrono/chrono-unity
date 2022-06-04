@@ -36,44 +36,44 @@ public class CSV_writer : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_CSV_writer(swigCPtr);
+          corePINVOKE.delete_CSV_writer(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public CSV_writer(string delim) : this(ChronoEngine_csharpPINVOKE.new_CSV_writer__SWIG_0(delim), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public CSV_writer(string delim) : this(corePINVOKE.new_CSV_writer__SWIG_0(delim), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public CSV_writer() : this(ChronoEngine_csharpPINVOKE.new_CSV_writer__SWIG_1(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public CSV_writer() : this(corePINVOKE.new_CSV_writer__SWIG_1(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public CSV_writer(CSV_writer source) : this(ChronoEngine_csharpPINVOKE.new_CSV_writer__SWIG_2(CSV_writer.getCPtr(source)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public CSV_writer(CSV_writer source) : this(corePINVOKE.new_CSV_writer__SWIG_2(CSV_writer.getCPtr(source)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void write_to_file(string filename, string header) {
-    ChronoEngine_csharpPINVOKE.CSV_writer_write_to_file__SWIG_0(swigCPtr, filename, header);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.CSV_writer_write_to_file__SWIG_0(swigCPtr, filename, header);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void write_to_file(string filename) {
-    ChronoEngine_csharpPINVOKE.CSV_writer_write_to_file__SWIG_1(swigCPtr, filename);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.CSV_writer_write_to_file__SWIG_1(swigCPtr, filename);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public string delim() {
-    string ret = ChronoEngine_csharpPINVOKE.CSV_writer_delim(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    string ret = corePINVOKE.CSV_writer_delim(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public SWIGTYPE_p_std__ostringstream stream() {
-    SWIGTYPE_p_std__ostringstream ret = new SWIGTYPE_p_std__ostringstream(ChronoEngine_csharpPINVOKE.CSV_writer_stream(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    SWIGTYPE_p_std__ostringstream ret = new SWIGTYPE_p_std__ostringstream(corePINVOKE.CSV_writer_stream(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

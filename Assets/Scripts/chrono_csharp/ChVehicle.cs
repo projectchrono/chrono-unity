@@ -115,56 +115,62 @@ public class ChVehicle : global::System.IDisposable {
     return ret;
   }
 
-  public virtual double GetVehicleMass() {
-    double ret = vehiclePINVOKE.ChVehicle_GetVehicleMass(swigCPtr);
+  public double GetMass() {
+    double ret = vehiclePINVOKE.ChVehicle_GetMass(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public virtual ChVectorD GetVehicleCOMPos() {
-    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChVehicle_GetVehicleCOMPos(swigCPtr), true);
+  public SWIGTYPE_p_chrono__ChFrameT_double_t GetCOMFrame() {
+    SWIGTYPE_p_chrono__ChFrameT_double_t ret = new SWIGTYPE_p_chrono__ChFrameT_double_t(vehiclePINVOKE.ChVehicle_GetCOMFrame(swigCPtr), false);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public ChVectorD GetVehiclePos() {
-    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChVehicle_GetVehiclePos(swigCPtr), false);
+  public ChMatrix33D GetInertia() {
+    ChMatrix33D ret = new ChMatrix33D(vehiclePINVOKE.ChVehicle_GetInertia(swigCPtr), false);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public ChQuaternionD GetVehicleRot() {
-    ChQuaternionD ret = new ChQuaternionD(vehiclePINVOKE.ChVehicle_GetVehicleRot(swigCPtr), true);
+  public SWIGTYPE_p_chrono__ChFrameT_double_t GetTransform() {
+    SWIGTYPE_p_chrono__ChFrameT_double_t ret = new SWIGTYPE_p_chrono__ChFrameT_double_t(vehiclePINVOKE.ChVehicle_GetTransform(swigCPtr), false);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public double GetVehicleSpeed() {
-    double ret = vehiclePINVOKE.ChVehicle_GetVehicleSpeed(swigCPtr);
+  public ChVectorD GetPos() {
+    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChVehicle_GetPos(swigCPtr), false);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public double GetVehicleSpeedCOM() {
-    double ret = vehiclePINVOKE.ChVehicle_GetVehicleSpeedCOM(swigCPtr);
+  public ChQuaternionD GetRot() {
+    ChQuaternionD ret = new ChQuaternionD(vehiclePINVOKE.ChVehicle_GetRot(swigCPtr), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public ChVectorD GetVehiclePointLocation(ChVectorD locpos) {
-    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChVehicle_GetVehiclePointLocation(swigCPtr, ChVectorD.getCPtr(locpos)), true);
+  public double GetSpeed() {
+    double ret = vehiclePINVOKE.ChVehicle_GetSpeed(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public ChVectorD GetVehiclePointVelocity(ChVectorD locpos) {
-    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChVehicle_GetVehiclePointVelocity(swigCPtr, ChVectorD.getCPtr(locpos)), true);
+  public ChVectorD GetPointLocation(ChVectorD locpos) {
+    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChVehicle_GetPointLocation(swigCPtr, ChVectorD.getCPtr(locpos)), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public ChVectorD GetVehiclePointAcceleration(ChVectorD locpos) {
-    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChVehicle_GetVehiclePointAcceleration(swigCPtr, ChVectorD.getCPtr(locpos)), true);
+  public ChVectorD GetPointVelocity(ChVectorD locpos) {
+    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChVehicle_GetPointVelocity(swigCPtr, ChVectorD.getCPtr(locpos)), true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public ChVectorD GetPointAcceleration(ChVectorD locpos) {
+    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChVehicle_GetPointAcceleration(swigCPtr, ChVectorD.getCPtr(locpos)), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -182,9 +188,32 @@ public class ChVehicle : global::System.IDisposable {
     return ret;
   }
 
+  public void EnableRealtime(bool val) {
+    vehiclePINVOKE.ChVehicle_EnableRealtime(swigCPtr, val);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public double GetRTF() {
+    double ret = vehiclePINVOKE.ChVehicle_GetRTF(swigCPtr);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public void SetCollisionSystemType(ChCollisionSystemType collsys_type) {
     vehiclePINVOKE.ChVehicle_SetCollisionSystemType(swigCPtr, (int)collsys_type);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void SetVisualSystem(ChVehicleVisualSystem vsys) {
+    vehiclePINVOKE.ChVehicle_SetVisualSystem(swigCPtr, ChVehicleVisualSystem.getCPtr(vsys));
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public ChVehicleVisualSystem GetVisualSystem() {
+    global::System.IntPtr cPtr = vehiclePINVOKE.ChVehicle_GetVisualSystem(swigCPtr);
+    ChVehicleVisualSystem ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChVehicleVisualSystem(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
   }
 
   public void SetOutput(ChVehicleOutput.Type type, string out_dir, string out_name, double output_step) {
@@ -199,6 +228,11 @@ public class ChVehicle : global::System.IDisposable {
 
   public virtual void Initialize(ChCoordsysD chassisPos) {
     vehiclePINVOKE.ChVehicle_Initialize__SWIG_1(swigCPtr, ChCoordsysD.getCPtr(chassisPos));
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public virtual void InitializeInertiaProperties() {
+    vehiclePINVOKE.ChVehicle_InitializeInertiaProperties(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

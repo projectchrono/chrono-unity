@@ -13,7 +13,7 @@ public class ChContactContainer : ChPhysicsItem {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChContactContainer(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChContactContainer_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChContactContainer(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChContactContainer_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChContactContainer : ChPhysicsItem {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChContactContainer(swigCPtr);
+          corePINVOKE.delete_ChContactContainer(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -36,78 +36,78 @@ public class ChContactContainer : ChPhysicsItem {
   }
 
   public virtual int GetNcontacts() {
-    int ret = ChronoEngine_csharpPINVOKE.ChContactContainer_GetNcontacts(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChContactContainer_GetNcontacts(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void RemoveAllContacts() {
-    ChronoEngine_csharpPINVOKE.ChContactContainer_RemoveAllContacts(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChContactContainer_RemoveAllContacts(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void BeginAddContact() {
-    ChronoEngine_csharpPINVOKE.ChContactContainer_BeginAddContact(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChContactContainer_BeginAddContact(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void AddContact(ChCollisionInfo cinfo, ChMaterialSurface mat1, ChMaterialSurface mat2) {
-    ChronoEngine_csharpPINVOKE.ChContactContainer_AddContact__SWIG_0(swigCPtr, ChCollisionInfo.getCPtr(cinfo), ChMaterialSurface.getCPtr(mat1), ChMaterialSurface.getCPtr(mat2));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChContactContainer_AddContact__SWIG_0(swigCPtr, ChCollisionInfo.getCPtr(cinfo), ChMaterialSurface.getCPtr(mat1), ChMaterialSurface.getCPtr(mat2));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void AddContact(ChCollisionInfo cinfo) {
-    ChronoEngine_csharpPINVOKE.ChContactContainer_AddContact__SWIG_1(swigCPtr, ChCollisionInfo.getCPtr(cinfo));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChContactContainer_AddContact__SWIG_1(swigCPtr, ChCollisionInfo.getCPtr(cinfo));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void EndAddContact() {
-    ChronoEngine_csharpPINVOKE.ChContactContainer_EndAddContact(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChContactContainer_EndAddContact(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void RegisterAddContactCallback(AddContactCallback callback) {
-    ChronoEngine_csharpPINVOKE.ChContactContainer_RegisterAddContactCallback(swigCPtr, AddContactCallback.getCPtr(callback));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChContactContainer_RegisterAddContactCallback(swigCPtr, AddContactCallback.getCPtr(callback));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual AddContactCallback GetAddContactCallback() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChContactContainer_GetAddContactCallback(swigCPtr);
+    global::System.IntPtr cPtr = corePINVOKE.ChContactContainer_GetAddContactCallback(swigCPtr);
     AddContactCallback ret = (cPtr == global::System.IntPtr.Zero) ? null : new AddContactCallback(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void ReportAllContacts(ReportContactCallback callback) {
-    ChronoEngine_csharpPINVOKE.ChContactContainer_ReportAllContacts(swigCPtr, ReportContactCallback.getCPtr(callback));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChContactContainer_ReportAllContacts(swigCPtr, ReportContactCallback.getCPtr(callback));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void ComputeContactForces() {
-    ChronoEngine_csharpPINVOKE.ChContactContainer_ComputeContactForces(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChContactContainer_ComputeContactForces(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual ChVectorD GetContactableForce(ChContactable contactable) {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChContactContainer_GetContactableForce(swigCPtr, ChContactable.getCPtr(contactable)), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorD ret = new ChVectorD(corePINVOKE.ChContactContainer_GetContactableForce(swigCPtr, ChContactable.getCPtr(contactable)), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual ChVectorD GetContactableTorque(ChContactable contactable) {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChContactContainer_GetContactableTorque(swigCPtr, ChContactable.getCPtr(contactable)), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorD ret = new ChVectorD(corePINVOKE.ChContactContainer_GetContactableTorque(swigCPtr, ChContactable.getCPtr(contactable)), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void ArchiveOUT(SWIGTYPE_p_ChArchiveOut marchive) {
-    ChronoEngine_csharpPINVOKE.ChContactContainer_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChContactContainer_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn marchive) {
-    ChronoEngine_csharpPINVOKE.ChContactContainer_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChContactContainer_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

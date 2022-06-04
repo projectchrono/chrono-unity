@@ -13,7 +13,7 @@ public class ChTimestepperRungeKuttaExpl : ChTimestepperIorder {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChTimestepperRungeKuttaExpl(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChTimestepperRungeKuttaExpl_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChTimestepperRungeKuttaExpl(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChTimestepperRungeKuttaExpl_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChTimestepperRungeKuttaExpl : ChTimestepperIorder {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChTimestepperRungeKuttaExpl(swigCPtr);
+          corePINVOKE.delete_ChTimestepperRungeKuttaExpl(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,23 +35,23 @@ public class ChTimestepperRungeKuttaExpl : ChTimestepperIorder {
     }
   }
 
-  public ChTimestepperRungeKuttaExpl(ChIntegrable intgr) : this(ChronoEngine_csharpPINVOKE.new_ChTimestepperRungeKuttaExpl__SWIG_0(ChIntegrable.getCPtr(intgr)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChTimestepperRungeKuttaExpl(ChIntegrable intgr) : this(corePINVOKE.new_ChTimestepperRungeKuttaExpl__SWIG_0(ChIntegrable.getCPtr(intgr)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChTimestepperRungeKuttaExpl() : this(ChronoEngine_csharpPINVOKE.new_ChTimestepperRungeKuttaExpl__SWIG_1(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChTimestepperRungeKuttaExpl() : this(corePINVOKE.new_ChTimestepperRungeKuttaExpl__SWIG_1(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override ChTimestepper.Type GetType() {
-    ChTimestepper.Type ret = (ChTimestepper.Type)ChronoEngine_csharpPINVOKE.ChTimestepperRungeKuttaExpl_GetType(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChTimestepper.Type ret = (ChTimestepper.Type)corePINVOKE.ChTimestepperRungeKuttaExpl_GetType(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void Advance(double dt) {
-    ChronoEngine_csharpPINVOKE.ChTimestepperRungeKuttaExpl_Advance(swigCPtr, dt);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChTimestepperRungeKuttaExpl_Advance(swigCPtr, dt);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

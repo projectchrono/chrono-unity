@@ -36,36 +36,36 @@ public class ChClassFactory : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChClassFactory(swigCPtr);
+          corePINVOKE.delete_ChClassFactory(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public ChClassFactory() : this(ChronoEngine_csharpPINVOKE.new_ChClassFactory(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChClassFactory() : this(corePINVOKE.new_ChClassFactory(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public static void ClassRegister(string keyName, SWIGTYPE_p_chrono__ChClassRegistrationBase mregistration) {
-    ChronoEngine_csharpPINVOKE.ChClassFactory_ClassRegister(keyName, SWIGTYPE_p_chrono__ChClassRegistrationBase.getCPtr(mregistration));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChClassFactory_ClassRegister(keyName, SWIGTYPE_p_chrono__ChClassRegistrationBase.getCPtr(mregistration));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public static void ClassUnregister(string keyName) {
-    ChronoEngine_csharpPINVOKE.ChClassFactory_ClassUnregister(keyName);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChClassFactory_ClassUnregister(keyName);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public static bool IsClassRegistered(string keyName) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChClassFactory_IsClassRegistered(keyName);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChClassFactory_IsClassRegistered(keyName);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static SWIGTYPE_p_std__string GetClassTagName(SWIGTYPE_p_std__type_info mtype) {
-    SWIGTYPE_p_std__string ret = new SWIGTYPE_p_std__string(ChronoEngine_csharpPINVOKE.ChClassFactory_GetClassTagName(SWIGTYPE_p_std__type_info.getCPtr(mtype)), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    SWIGTYPE_p_std__string ret = new SWIGTYPE_p_std__string(corePINVOKE.ChClassFactory_GetClassTagName(SWIGTYPE_p_std__type_info.getCPtr(mtype)), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

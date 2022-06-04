@@ -9,12 +9,12 @@
 //------------------------------------------------------------------------------
 
 
-public class HMMWV_PacejkaTire : ChPacejkaTire {
+public class HMMWV_PacejkaTire : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
-  private bool swigCMemOwnDerived;
+  private bool swigCMemOwnBase;
 
-  internal HMMWV_PacejkaTire(global::System.IntPtr cPtr, bool cMemoryOwn) : base(vehiclePINVOKE.HMMWV_PacejkaTire_SWIGSmartPtrUpcast(cPtr), true) {
-    swigCMemOwnDerived = cMemoryOwn;
+  internal HMMWV_PacejkaTire(global::System.IntPtr cPtr, bool cMemoryOwn) {
+    swigCMemOwnBase = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
@@ -22,16 +22,24 @@ public class HMMWV_PacejkaTire : ChPacejkaTire {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  protected override void Dispose(bool disposing) {
+  ~HMMWV_PacejkaTire() {
+    Dispose(false);
+  }
+
+  public void Dispose() {
+    Dispose(true);
+    global::System.GC.SuppressFinalize(this);
+  }
+
+  protected virtual void Dispose(bool disposing) {
     lock(this) {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
-        if (swigCMemOwnDerived) {
-          swigCMemOwnDerived = false;
+        if (swigCMemOwnBase) {
+          swigCMemOwnBase = false;
           vehiclePINVOKE.delete_HMMWV_PacejkaTire(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
-      base.Dispose(disposing);
     }
   }
 
@@ -39,24 +47,24 @@ public class HMMWV_PacejkaTire : ChPacejkaTire {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public override double GetMass() {
-    double ret = vehiclePINVOKE.HMMWV_PacejkaTire_GetMass(swigCPtr);
+  public virtual double GetTireMass() {
+    double ret = vehiclePINVOKE.HMMWV_PacejkaTire_GetTireMass(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public override ChVectorD GetInertia() {
-    ChVectorD ret = new ChVectorD(vehiclePINVOKE.HMMWV_PacejkaTire_GetInertia(swigCPtr), true);
+  public virtual ChVectorD GetTireInertia() {
+    ChVectorD ret = new ChVectorD(vehiclePINVOKE.HMMWV_PacejkaTire_GetTireInertia(swigCPtr), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public override void AddVisualizationAssets(VisualizationType vis) {
+  public virtual void AddVisualizationAssets(VisualizationType vis) {
     vehiclePINVOKE.HMMWV_PacejkaTire_AddVisualizationAssets(swigCPtr, (int)vis);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public override void RemoveVisualizationAssets() {
+  public virtual void RemoveVisualizationAssets() {
     vehiclePINVOKE.HMMWV_PacejkaTire_RemoveVisualizationAssets(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }

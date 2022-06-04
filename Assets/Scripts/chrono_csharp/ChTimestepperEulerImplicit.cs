@@ -13,7 +13,7 @@ public class ChTimestepperEulerImplicit : ChTimestepperIIorder {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChTimestepperEulerImplicit(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChTimestepperEulerImplicit_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChTimestepperEulerImplicit(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChTimestepperEulerImplicit_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChTimestepperEulerImplicit : ChTimestepperIIorder {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChTimestepperEulerImplicit(swigCPtr);
+          corePINVOKE.delete_ChTimestepperEulerImplicit(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,60 +35,60 @@ public class ChTimestepperEulerImplicit : ChTimestepperIIorder {
     }
   }
 
-  public ChTimestepperEulerImplicit(ChIntegrableIIorder intgr) : this(ChronoEngine_csharpPINVOKE.new_ChTimestepperEulerImplicit__SWIG_0(ChIntegrableIIorder.getCPtr(intgr)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChTimestepperEulerImplicit(ChIntegrableIIorder intgr) : this(corePINVOKE.new_ChTimestepperEulerImplicit__SWIG_0(ChIntegrableIIorder.getCPtr(intgr)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChTimestepperEulerImplicit() : this(ChronoEngine_csharpPINVOKE.new_ChTimestepperEulerImplicit__SWIG_1(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChTimestepperEulerImplicit() : this(corePINVOKE.new_ChTimestepperEulerImplicit__SWIG_1(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override ChTimestepper.Type GetType() {
-    ChTimestepper.Type ret = (ChTimestepper.Type)ChronoEngine_csharpPINVOKE.ChTimestepperEulerImplicit_GetType(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChTimestepper.Type ret = (ChTimestepper.Type)corePINVOKE.ChTimestepperEulerImplicit_GetType(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void Advance(double dt) {
-    ChronoEngine_csharpPINVOKE.ChTimestepperEulerImplicit_Advance(swigCPtr, dt);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChTimestepperEulerImplicit_Advance(swigCPtr, dt);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetMaxiters(int iters) {
-    ChronoEngine_csharpPINVOKE.ChTimestepperEulerImplicit_SetMaxiters(swigCPtr, iters);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChTimestepperEulerImplicit_SetMaxiters(swigCPtr, iters);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetRelTolerance(double rel_tol) {
-    ChronoEngine_csharpPINVOKE.ChTimestepperEulerImplicit_SetRelTolerance(swigCPtr, rel_tol);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChTimestepperEulerImplicit_SetRelTolerance(swigCPtr, rel_tol);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetAbsTolerances(double abs_tolS, double abs_tolL) {
-    ChronoEngine_csharpPINVOKE.ChTimestepperEulerImplicit_SetAbsTolerances__SWIG_0(swigCPtr, abs_tolS, abs_tolL);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChTimestepperEulerImplicit_SetAbsTolerances__SWIG_0(swigCPtr, abs_tolS, abs_tolL);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetAbsTolerances(double abs_tol) {
-    ChronoEngine_csharpPINVOKE.ChTimestepperEulerImplicit_SetAbsTolerances__SWIG_1(swigCPtr, abs_tol);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChTimestepperEulerImplicit_SetAbsTolerances__SWIG_1(swigCPtr, abs_tol);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public int GetNumIterations() {
-    int ret = ChronoEngine_csharpPINVOKE.ChTimestepperEulerImplicit_GetNumIterations(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChTimestepperEulerImplicit_GetNumIterations(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int GetNumSetupCalls() {
-    int ret = ChronoEngine_csharpPINVOKE.ChTimestepperEulerImplicit_GetNumSetupCalls(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChTimestepperEulerImplicit_GetNumSetupCalls(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int GetNumSolveCalls() {
-    int ret = ChronoEngine_csharpPINVOKE.ChTimestepperEulerImplicit_GetNumSolveCalls(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChTimestepperEulerImplicit_GetNumSolveCalls(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

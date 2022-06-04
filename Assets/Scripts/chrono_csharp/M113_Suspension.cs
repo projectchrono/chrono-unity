@@ -35,7 +35,7 @@ public class M113_Suspension : ChLinearDamperRWAssembly {
     }
   }
 
-  public M113_Suspension(string name, VehicleSide side, int index, bool has_shock) : this(vehiclePINVOKE.new_M113_Suspension(name, (int)side, index, has_shock), true) {
+  public M113_Suspension(string name, VehicleSide side, int index, bool use_bushings, bool has_shock) : this(vehiclePINVOKE.new_M113_Suspension(name, (int)side, index, use_bushings, has_shock), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -53,6 +53,12 @@ public class M113_Suspension : ChLinearDamperRWAssembly {
 
   public virtual double GetArmVisRadius() {
     double ret = vehiclePINVOKE.M113_Suspension_GetArmVisRadius(swigCPtr);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public virtual SWIGTYPE_p_std__shared_ptrT_ChVehicleBushingData_t getArmBushingData() {
+    SWIGTYPE_p_std__shared_ptrT_ChVehicleBushingData_t ret = new SWIGTYPE_p_std__shared_ptrT_ChVehicleBushingData_t(vehiclePINVOKE.M113_Suspension_getArmBushingData(swigCPtr), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

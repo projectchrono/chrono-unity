@@ -36,7 +36,7 @@ public class ChLoadable : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnBase) {
           swigCMemOwnBase = false;
-          ChronoEngine_csharpPINVOKE.delete_ChLoadable(swigCPtr);
+          corePINVOKE.delete_ChLoadable(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -44,69 +44,69 @@ public class ChLoadable : global::System.IDisposable {
   }
 
   public virtual int LoadableGet_ndof_x() {
-    int ret = ChronoEngine_csharpPINVOKE.ChLoadable_LoadableGet_ndof_x(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChLoadable_LoadableGet_ndof_x(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int LoadableGet_ndof_w() {
-    int ret = ChronoEngine_csharpPINVOKE.ChLoadable_LoadableGet_ndof_w(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChLoadable_LoadableGet_ndof_w(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void LoadableGetStateBlock_x(int block_offset, ChState mD) {
-    ChronoEngine_csharpPINVOKE.ChLoadable_LoadableGetStateBlock_x(swigCPtr, block_offset, ChState.getCPtr(mD));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoadable_LoadableGetStateBlock_x(swigCPtr, block_offset, ChState.getCPtr(mD));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void LoadableGetStateBlock_w(int block_offset, ChStateDelta mD) {
-    ChronoEngine_csharpPINVOKE.ChLoadable_LoadableGetStateBlock_w(swigCPtr, block_offset, ChStateDelta.getCPtr(mD));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoadable_LoadableGetStateBlock_w(swigCPtr, block_offset, ChStateDelta.getCPtr(mD));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void LoadableStateIncrement(uint off_x, ChState x_new, ChState x, uint off_v, ChStateDelta Dv) {
-    ChronoEngine_csharpPINVOKE.ChLoadable_LoadableStateIncrement(swigCPtr, off_x, ChState.getCPtr(x_new), ChState.getCPtr(x), off_v, ChStateDelta.getCPtr(Dv));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoadable_LoadableStateIncrement(swigCPtr, off_x, ChState.getCPtr(x_new), ChState.getCPtr(x), off_v, ChStateDelta.getCPtr(Dv));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual int Get_field_ncoords() {
-    int ret = ChronoEngine_csharpPINVOKE.ChLoadable_Get_field_ncoords(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChLoadable_Get_field_ncoords(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int GetSubBlocks() {
-    int ret = ChronoEngine_csharpPINVOKE.ChLoadable_GetSubBlocks(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChLoadable_GetSubBlocks(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual uint GetSubBlockOffset(int nblock) {
-    uint ret = ChronoEngine_csharpPINVOKE.ChLoadable_GetSubBlockOffset(swigCPtr, nblock);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    uint ret = corePINVOKE.ChLoadable_GetSubBlockOffset(swigCPtr, nblock);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual uint GetSubBlockSize(int nblock) {
-    uint ret = ChronoEngine_csharpPINVOKE.ChLoadable_GetSubBlockSize(swigCPtr, nblock);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    uint ret = corePINVOKE.ChLoadable_GetSubBlockSize(swigCPtr, nblock);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool IsSubBlockActive(int nblock) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChLoadable_IsSubBlockActive(swigCPtr, nblock);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChLoadable_IsSubBlockActive(swigCPtr, nblock);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void LoadableGetVariables(SWIGTYPE_p_std__vectorT_ChVariables_p_t mvars) {
-    ChronoEngine_csharpPINVOKE.ChLoadable_LoadableGetVariables(swigCPtr, SWIGTYPE_p_std__vectorT_ChVariables_p_t.getCPtr(mvars));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoadable_LoadableGetVariables(swigCPtr, SWIGTYPE_p_std__vectorT_ChVariables_p_t.getCPtr(mvars));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChLoadable() : this(ChronoEngine_csharpPINVOKE.new_ChLoadable(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChLoadable() : this(corePINVOKE.new_ChLoadable(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     SwigDirectorConnect();
   }
 
@@ -133,7 +133,7 @@ public class ChLoadable : global::System.IDisposable {
       swigDelegate9 = new SwigDelegateChLoadable_9(SwigDirectorMethodIsSubBlockActive);
     if (SwigDerivedClassHasMethod("LoadableGetVariables", swigMethodTypes10))
       swigDelegate10 = new SwigDelegateChLoadable_10(SwigDirectorMethodLoadableGetVariables);
-    ChronoEngine_csharpPINVOKE.ChLoadable_director_connect(swigCPtr, swigDelegate0, swigDelegate1, swigDelegate2, swigDelegate3, swigDelegate4, swigDelegate5, swigDelegate6, swigDelegate7, swigDelegate8, swigDelegate9, swigDelegate10);
+    corePINVOKE.ChLoadable_director_connect(swigCPtr, swigDelegate0, swigDelegate1, swigDelegate2, swigDelegate3, swigDelegate4, swigDelegate5, swigDelegate6, swigDelegate7, swigDelegate8, swigDelegate9, swigDelegate10);
   }
 
   private bool SwigDerivedClassHasMethod(string methodName, global::System.Type[] methodTypes) {

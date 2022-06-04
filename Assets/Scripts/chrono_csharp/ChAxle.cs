@@ -52,28 +52,28 @@ public class ChAxle : global::System.IDisposable {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void Initialize(ChChassis chassis, SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t subchassis, ChSteering steering, ChVectorD susp_location, ChVectorD arb_location, double wheel_separation, double left_ang_vel, double right_ang_vel) {
-    vehiclePINVOKE.ChAxle_Initialize__SWIG_0(swigCPtr, ChChassis.getCPtr(chassis), SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t.getCPtr(subchassis), ChSteering.getCPtr(steering), ChVectorD.getCPtr(susp_location), ChVectorD.getCPtr(arb_location), wheel_separation, left_ang_vel, right_ang_vel);
+  public void Initialize(ChChassis chassis, ChSubchassis subchassis, ChSteering steering, ChVectorD susp_location, ChVectorD arb_location, double wheel_separation, double left_ang_vel, double right_ang_vel) {
+    vehiclePINVOKE.ChAxle_Initialize__SWIG_0(swigCPtr, ChChassis.getCPtr(chassis), ChSubchassis.getCPtr(subchassis), ChSteering.getCPtr(steering), ChVectorD.getCPtr(susp_location), ChVectorD.getCPtr(arb_location), wheel_separation, left_ang_vel, right_ang_vel);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void Initialize(ChChassis chassis, SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t subchassis, ChSteering steering, ChVectorD susp_location, ChVectorD arb_location, double wheel_separation, double left_ang_vel) {
-    vehiclePINVOKE.ChAxle_Initialize__SWIG_1(swigCPtr, ChChassis.getCPtr(chassis), SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t.getCPtr(subchassis), ChSteering.getCPtr(steering), ChVectorD.getCPtr(susp_location), ChVectorD.getCPtr(arb_location), wheel_separation, left_ang_vel);
+  public void Initialize(ChChassis chassis, ChSubchassis subchassis, ChSteering steering, ChVectorD susp_location, ChVectorD arb_location, double wheel_separation, double left_ang_vel) {
+    vehiclePINVOKE.ChAxle_Initialize__SWIG_1(swigCPtr, ChChassis.getCPtr(chassis), ChSubchassis.getCPtr(subchassis), ChSteering.getCPtr(steering), ChVectorD.getCPtr(susp_location), ChVectorD.getCPtr(arb_location), wheel_separation, left_ang_vel);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void Initialize(ChChassis chassis, SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t subchassis, ChSteering steering, ChVectorD susp_location, ChVectorD arb_location, double wheel_separation) {
-    vehiclePINVOKE.ChAxle_Initialize__SWIG_2(swigCPtr, ChChassis.getCPtr(chassis), SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t.getCPtr(subchassis), ChSteering.getCPtr(steering), ChVectorD.getCPtr(susp_location), ChVectorD.getCPtr(arb_location), wheel_separation);
+  public void Initialize(ChChassis chassis, ChSubchassis subchassis, ChSteering steering, ChVectorD susp_location, ChVectorD arb_location, double wheel_separation) {
+    vehiclePINVOKE.ChAxle_Initialize__SWIG_2(swigCPtr, ChChassis.getCPtr(chassis), ChSubchassis.getCPtr(subchassis), ChSteering.getCPtr(steering), ChVectorD.getCPtr(susp_location), ChVectorD.getCPtr(arb_location), wheel_separation);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void Initialize(ChChassis chassis, SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t subchassis, ChSteering steering, ChVectorD susp_location, ChVectorD arb_location) {
-    vehiclePINVOKE.ChAxle_Initialize__SWIG_3(swigCPtr, ChChassis.getCPtr(chassis), SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t.getCPtr(subchassis), ChSteering.getCPtr(steering), ChVectorD.getCPtr(susp_location), ChVectorD.getCPtr(arb_location));
+  public void Initialize(ChChassis chassis, ChSubchassis subchassis, ChSteering steering, ChVectorD susp_location, ChVectorD arb_location) {
+    vehiclePINVOKE.ChAxle_Initialize__SWIG_3(swigCPtr, ChChassis.getCPtr(chassis), ChSubchassis.getCPtr(subchassis), ChSteering.getCPtr(steering), ChVectorD.getCPtr(susp_location), ChVectorD.getCPtr(arb_location));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void Synchronize(double braking) {
-    vehiclePINVOKE.ChAxle_Synchronize(swigCPtr, braking);
+  public void Synchronize(double time, DriverInputs driver_inputs) {
+    vehiclePINVOKE.ChAxle_Synchronize(swigCPtr, time, DriverInputs.getCPtr(driver_inputs));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

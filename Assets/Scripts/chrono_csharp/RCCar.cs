@@ -125,12 +125,6 @@ public class RCCar : global::System.IDisposable {
     return ret;
   }
 
-  public double GetTotalMass() {
-    double ret = vehiclePINVOKE.RCCar_GetTotalMass(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
   public void Initialize() {
     vehiclePINVOKE.RCCar_Initialize(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();

@@ -55,6 +55,13 @@ public class ChIdler : ChPart {
     return ret;
   }
 
+  public ChLinkTSDA GetTensioner() {
+    global::System.IntPtr cPtr = vehiclePINVOKE.ChIdler_GetTensioner(swigCPtr);
+    ChLinkTSDA ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChLinkTSDA(cPtr, true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public virtual double GetWheelRadius() {
     double ret = vehiclePINVOKE.ChIdler_GetWheelRadius(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
@@ -66,14 +73,8 @@ public class ChIdler : ChPart {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public virtual double GetMass() {
-    double ret = vehiclePINVOKE.ChIdler_GetMass(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public virtual void Initialize(ChBodyAuxRef chassis, ChVectorD location, ChTrackAssembly track) {
-    vehiclePINVOKE.ChIdler_Initialize(swigCPtr, ChBodyAuxRef.getCPtr(chassis), ChVectorD.getCPtr(location), ChTrackAssembly.getCPtr(track));
+  public virtual void Initialize(ChChassis chassis, ChVectorD location, ChTrackAssembly track) {
+    vehiclePINVOKE.ChIdler_Initialize(swigCPtr, ChChassis.getCPtr(chassis), ChVectorD.getCPtr(location), ChTrackAssembly.getCPtr(track));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

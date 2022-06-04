@@ -13,7 +13,7 @@ public class ChIndexedParticles : ChPhysicsItem {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChIndexedParticles(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChIndexedParticles_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChIndexedParticles(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChIndexedParticles_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChIndexedParticles : ChPhysicsItem {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChIndexedParticles(swigCPtr);
+          corePINVOKE.delete_ChIndexedParticles(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -36,70 +36,70 @@ public class ChIndexedParticles : ChPhysicsItem {
   }
 
   public virtual uint GetNparticles() {
-    uint ret = ChronoEngine_csharpPINVOKE.ChIndexedParticles_GetNparticles(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    uint ret = corePINVOKE.ChIndexedParticles_GetNparticles(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual ChParticleBase GetParticle(uint n) {
-    ChParticleBase ret = new ChParticleBase(ChronoEngine_csharpPINVOKE.ChIndexedParticles_GetParticle(swigCPtr, n), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChParticleBase ret = new ChParticleBase(corePINVOKE.ChIndexedParticles_GetParticle(swigCPtr, n), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void ResizeNparticles(int newsize) {
-    ChronoEngine_csharpPINVOKE.ChIndexedParticles_ResizeNparticles(swigCPtr, newsize);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChIndexedParticles_ResizeNparticles(swigCPtr, newsize);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void AddParticle(ChCoordsysD initial_state) {
-    ChronoEngine_csharpPINVOKE.ChIndexedParticles_AddParticle__SWIG_0(swigCPtr, ChCoordsysD.getCPtr(initial_state));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChIndexedParticles_AddParticle__SWIG_0(swigCPtr, ChCoordsysD.getCPtr(initial_state));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void AddParticle() {
-    ChronoEngine_csharpPINVOKE.ChIndexedParticles_AddParticle__SWIG_1(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChIndexedParticles_AddParticle__SWIG_1(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override int GetDOF() {
-    int ret = ChronoEngine_csharpPINVOKE.ChIndexedParticles_GetDOF(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChIndexedParticles_GetDOF(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override int GetDOF_w() {
-    int ret = ChronoEngine_csharpPINVOKE.ChIndexedParticles_GetDOF_w(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChIndexedParticles_GetDOF_w(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public override ChFrameD GetAssetsFrame(uint nclone) {
-    ChFrameD ret = new ChFrameD(ChronoEngine_csharpPINVOKE.ChIndexedParticles_GetAssetsFrame__SWIG_0(swigCPtr, nclone), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public override ChFrameD GetVisualModelFrame(uint nclone) {
+    ChFrameD ret = new ChFrameD(corePINVOKE.ChIndexedParticles_GetVisualModelFrame__SWIG_0(swigCPtr, nclone), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public override ChFrameD GetAssetsFrame() {
-    ChFrameD ret = new ChFrameD(ChronoEngine_csharpPINVOKE.ChIndexedParticles_GetAssetsFrame__SWIG_1(swigCPtr), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public override ChFrameD GetVisualModelFrame() {
+    ChFrameD ret = new ChFrameD(corePINVOKE.ChIndexedParticles_GetVisualModelFrame__SWIG_1(swigCPtr), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public override uint GetAssetsFrameNclones() {
-    uint ret = ChronoEngine_csharpPINVOKE.ChIndexedParticles_GetAssetsFrameNclones(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public override uint GetNumVisualModelClones() {
+    uint ret = corePINVOKE.ChIndexedParticles_GetNumVisualModelClones(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void ArchiveOUT(SWIGTYPE_p_ChArchiveOut marchive) {
-    ChronoEngine_csharpPINVOKE.ChIndexedParticles_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChIndexedParticles_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn marchive) {
-    ChronoEngine_csharpPINVOKE.ChIndexedParticles_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChIndexedParticles_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

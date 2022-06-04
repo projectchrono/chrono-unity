@@ -36,32 +36,32 @@ public class ChStreamOstreamWrapper : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChStreamOstreamWrapper(swigCPtr);
+          corePINVOKE.delete_ChStreamOstreamWrapper(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public ChStreamOstreamWrapper(SWIGTYPE_p_std__ostream mfile) : this(ChronoEngine_csharpPINVOKE.new_ChStreamOstreamWrapper(SWIGTYPE_p_std__ostream.getCPtr(mfile)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChStreamOstreamWrapper(SWIGTYPE_p_std__ostream mfile) : this(corePINVOKE.new_ChStreamOstreamWrapper(SWIGTYPE_p_std__ostream.getCPtr(mfile)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void Write(string data, uint n) {
-    ChronoEngine_csharpPINVOKE.ChStreamOstreamWrapper_Write(swigCPtr, data, n);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChStreamOstreamWrapper_Write(swigCPtr, data, n);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual bool End_of_stream() {
-    bool ret = ChronoEngine_csharpPINVOKE.ChStreamOstreamWrapper_End_of_stream(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChStreamOstreamWrapper_End_of_stream(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public SWIGTYPE_p_std__ostream GetOstream() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChStreamOstreamWrapper_GetOstream(swigCPtr);
+    global::System.IntPtr cPtr = corePINVOKE.ChStreamOstreamWrapper_GetOstream(swigCPtr);
     SWIGTYPE_p_std__ostream ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__ostream(cPtr, false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

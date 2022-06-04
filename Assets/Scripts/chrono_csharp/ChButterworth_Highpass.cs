@@ -36,34 +36,34 @@ public class ChButterworth_Highpass : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChButterworth_Highpass(swigCPtr);
+          corePINVOKE.delete_ChButterworth_Highpass(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public ChButterworth_Highpass() : this(ChronoEngine_csharpPINVOKE.new_ChButterworth_Highpass__SWIG_0(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChButterworth_Highpass() : this(corePINVOKE.new_ChButterworth_Highpass__SWIG_0(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChButterworth_Highpass(uint nPoles, double step, double fc) : this(ChronoEngine_csharpPINVOKE.new_ChButterworth_Highpass__SWIG_1(nPoles, step, fc), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChButterworth_Highpass(uint nPoles, double step, double fc) : this(corePINVOKE.new_ChButterworth_Highpass__SWIG_1(nPoles, step, fc), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Reset() {
-    ChronoEngine_csharpPINVOKE.ChButterworth_Highpass_Reset(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChButterworth_Highpass_Reset(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Config(uint nPoles, double step, double fc) {
-    ChronoEngine_csharpPINVOKE.ChButterworth_Highpass_Config(swigCPtr, nPoles, step, fc);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChButterworth_Highpass_Config(swigCPtr, nPoles, step, fc);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double Filter(double u) {
-    double ret = ChronoEngine_csharpPINVOKE.ChButterworth_Highpass_Filter(swigCPtr, u);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChButterworth_Highpass_Filter(swigCPtr, u);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

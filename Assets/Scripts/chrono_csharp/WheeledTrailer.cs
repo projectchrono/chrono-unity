@@ -35,7 +35,11 @@ public class WheeledTrailer : ChWheeledTrailer {
     }
   }
 
-  public WheeledTrailer(ChSystem system, string filename) : this(vehiclePINVOKE.new_WheeledTrailer(ChSystem.getCPtr(system), filename), true) {
+  public WheeledTrailer(ChSystem system, string filename, bool create_tires) : this(vehiclePINVOKE.new_WheeledTrailer__SWIG_0(ChSystem.getCPtr(system), filename, create_tires), true) {
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public WheeledTrailer(ChSystem system, string filename) : this(vehiclePINVOKE.new_WheeledTrailer__SWIG_1(ChSystem.getCPtr(system), filename), true) {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

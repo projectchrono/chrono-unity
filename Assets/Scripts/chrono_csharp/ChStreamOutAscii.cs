@@ -12,7 +12,7 @@
 public class ChStreamOutAscii : ChStreamOut {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
 
-  internal ChStreamOutAscii(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChStreamOutAscii_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal ChStreamOutAscii(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChStreamOutAscii_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
@@ -25,7 +25,7 @@ public class ChStreamOutAscii : ChStreamOut {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChStreamOutAscii(swigCPtr);
+          corePINVOKE.delete_ChStreamOutAscii(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -34,44 +34,44 @@ public class ChStreamOutAscii : ChStreamOut {
   }
 
   public virtual void Format(string formatString) {
-    ChronoEngine_csharpPINVOKE.ChStreamOutAscii_Format(swigCPtr, formatString);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChStreamOutAscii_Format(swigCPtr, formatString);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetNumFormat(string mf) {
-    ChronoEngine_csharpPINVOKE.ChStreamOutAscii_SetNumFormat(swigCPtr, mf);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChStreamOutAscii_SetNumFormat(swigCPtr, mf);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public string GetNumFormat() {
-    string ret = ChronoEngine_csharpPINVOKE.ChStreamOutAscii_GetNumFormat(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    string ret = corePINVOKE.ChStreamOutAscii_GetNumFormat(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetCommentTrailer(string mt) {
-    ChronoEngine_csharpPINVOKE.ChStreamOutAscii_SetCommentTrailer(swigCPtr, mt);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChStreamOutAscii_SetCommentTrailer(swigCPtr, mt);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void CR() {
-    ChronoEngine_csharpPINVOKE.ChStreamOutAscii_CR(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChStreamOutAscii_CR(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void TAB() {
-    ChronoEngine_csharpPINVOKE.ChStreamOutAscii_TAB(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChStreamOutAscii_TAB(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Comment(string m_string) {
-    ChronoEngine_csharpPINVOKE.ChStreamOutAscii_Comment(swigCPtr, m_string);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChStreamOutAscii_Comment(swigCPtr, m_string);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Bar() {
-    ChronoEngine_csharpPINVOKE.ChStreamOutAscii_Bar(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChStreamOutAscii_Bar(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

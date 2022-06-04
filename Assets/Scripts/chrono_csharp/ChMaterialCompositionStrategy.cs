@@ -36,7 +36,7 @@ public class ChMaterialCompositionStrategy : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChMaterialCompositionStrategy(swigCPtr);
+          corePINVOKE.delete_ChMaterialCompositionStrategy(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -44,55 +44,55 @@ public class ChMaterialCompositionStrategy : global::System.IDisposable {
   }
 
   public virtual float CombineFriction(float a1, float a2) {
-    float ret = ChronoEngine_csharpPINVOKE.ChMaterialCompositionStrategy_CombineFriction(swigCPtr, a1, a2);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    float ret = corePINVOKE.ChMaterialCompositionStrategy_CombineFriction(swigCPtr, a1, a2);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual float CombineCohesion(float a1, float a2) {
-    float ret = ChronoEngine_csharpPINVOKE.ChMaterialCompositionStrategy_CombineCohesion(swigCPtr, a1, a2);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    float ret = corePINVOKE.ChMaterialCompositionStrategy_CombineCohesion(swigCPtr, a1, a2);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual float CombineRestitution(float a1, float a2) {
-    float ret = ChronoEngine_csharpPINVOKE.ChMaterialCompositionStrategy_CombineRestitution(swigCPtr, a1, a2);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    float ret = corePINVOKE.ChMaterialCompositionStrategy_CombineRestitution(swigCPtr, a1, a2);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual float CombineDamping(float a1, float a2) {
-    float ret = ChronoEngine_csharpPINVOKE.ChMaterialCompositionStrategy_CombineDamping(swigCPtr, a1, a2);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    float ret = corePINVOKE.ChMaterialCompositionStrategy_CombineDamping(swigCPtr, a1, a2);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual float CombineCompliance(float a1, float a2) {
-    float ret = ChronoEngine_csharpPINVOKE.ChMaterialCompositionStrategy_CombineCompliance(swigCPtr, a1, a2);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    float ret = corePINVOKE.ChMaterialCompositionStrategy_CombineCompliance(swigCPtr, a1, a2);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual float CombineAdhesionMultiplier(float a1, float a2) {
-    float ret = ChronoEngine_csharpPINVOKE.ChMaterialCompositionStrategy_CombineAdhesionMultiplier(swigCPtr, a1, a2);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    float ret = corePINVOKE.ChMaterialCompositionStrategy_CombineAdhesionMultiplier(swigCPtr, a1, a2);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual float CombineStiffnessCoefficient(float a1, float a2) {
-    float ret = ChronoEngine_csharpPINVOKE.ChMaterialCompositionStrategy_CombineStiffnessCoefficient(swigCPtr, a1, a2);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    float ret = corePINVOKE.ChMaterialCompositionStrategy_CombineStiffnessCoefficient(swigCPtr, a1, a2);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual float CombineDampingCoefficient(float a1, float a2) {
-    float ret = ChronoEngine_csharpPINVOKE.ChMaterialCompositionStrategy_CombineDampingCoefficient(swigCPtr, a1, a2);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    float ret = corePINVOKE.ChMaterialCompositionStrategy_CombineDampingCoefficient(swigCPtr, a1, a2);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public ChMaterialCompositionStrategy() : this(ChronoEngine_csharpPINVOKE.new_ChMaterialCompositionStrategy(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChMaterialCompositionStrategy() : this(corePINVOKE.new_ChMaterialCompositionStrategy(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

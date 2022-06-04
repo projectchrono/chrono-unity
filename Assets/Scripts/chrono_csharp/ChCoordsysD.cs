@@ -36,7 +36,7 @@ public class ChCoordsysD : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChCoordsysD(swigCPtr);
+          corePINVOKE.delete_ChCoordsysD(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -45,138 +45,138 @@ public class ChCoordsysD : global::System.IDisposable {
 
   public ChVectorD pos {
     set {
-      ChronoEngine_csharpPINVOKE.ChCoordsysD_pos_set(swigCPtr, ChVectorD.getCPtr(value));
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChCoordsysD_pos_set(swigCPtr, ChVectorD.getCPtr(value));
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChCoordsysD_pos_get(swigCPtr);
+      global::System.IntPtr cPtr = corePINVOKE.ChCoordsysD_pos_get(swigCPtr);
       ChVectorD ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChVectorD(cPtr, false);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public ChQuaternionD rot {
     set {
-      ChronoEngine_csharpPINVOKE.ChCoordsysD_rot_set(swigCPtr, ChQuaternionD.getCPtr(value));
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChCoordsysD_rot_set(swigCPtr, ChQuaternionD.getCPtr(value));
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChCoordsysD_rot_get(swigCPtr);
+      global::System.IntPtr cPtr = corePINVOKE.ChCoordsysD_rot_get(swigCPtr);
       ChQuaternionD ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChQuaternionD(cPtr, false);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public ChCoordsysD() : this(ChronoEngine_csharpPINVOKE.new_ChCoordsysD__SWIG_0(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChCoordsysD() : this(corePINVOKE.new_ChCoordsysD__SWIG_0(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChCoordsysD(ChVectorD mv, ChQuaternionD mq) : this(ChronoEngine_csharpPINVOKE.new_ChCoordsysD__SWIG_1(ChVectorD.getCPtr(mv), ChQuaternionD.getCPtr(mq)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChCoordsysD(ChVectorD mv, ChQuaternionD mq) : this(corePINVOKE.new_ChCoordsysD__SWIG_1(ChVectorD.getCPtr(mv), ChQuaternionD.getCPtr(mq)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChCoordsysD(ChVectorD mv) : this(ChronoEngine_csharpPINVOKE.new_ChCoordsysD__SWIG_2(ChVectorD.getCPtr(mv)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChCoordsysD(ChVectorD mv) : this(corePINVOKE.new_ChCoordsysD__SWIG_2(ChVectorD.getCPtr(mv)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChCoordsysD(ChVectorD mv, double alpha, ChVectorD mu) : this(ChronoEngine_csharpPINVOKE.new_ChCoordsysD__SWIG_3(ChVectorD.getCPtr(mv), alpha, ChVectorD.getCPtr(mu)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChCoordsysD(ChVectorD mv, double alpha, ChVectorD mu) : this(corePINVOKE.new_ChCoordsysD__SWIG_3(ChVectorD.getCPtr(mv), alpha, ChVectorD.getCPtr(mu)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChCoordsysD(ChCoordsysD other) : this(ChronoEngine_csharpPINVOKE.new_ChCoordsysD__SWIG_4(ChCoordsysD.getCPtr(other)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChCoordsysD(ChCoordsysD other) : this(corePINVOKE.new_ChCoordsysD__SWIG_4(ChCoordsysD.getCPtr(other)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Force2D() {
-    ChronoEngine_csharpPINVOKE.ChCoordsysD_Force2D(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChCoordsysD_Force2D(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public bool Equals(ChCoordsysD other) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCoordsysD_Equals__SWIG_0(swigCPtr, ChCoordsysD.getCPtr(other));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCoordsysD_Equals__SWIG_0(swigCPtr, ChCoordsysD.getCPtr(other));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool Equals(ChCoordsysD other, double tol) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCoordsysD_Equals__SWIG_1(swigCPtr, ChCoordsysD.getCPtr(other), tol);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCoordsysD_Equals__SWIG_1(swigCPtr, ChCoordsysD.getCPtr(other), tol);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetIdentity() {
-    ChronoEngine_csharpPINVOKE.ChCoordsysD_SetIdentity(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChCoordsysD_SetIdentity(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void ConcatenatePreTransformation(ChCoordsysD T) {
-    ChronoEngine_csharpPINVOKE.ChCoordsysD_ConcatenatePreTransformation(swigCPtr, ChCoordsysD.getCPtr(T));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChCoordsysD_ConcatenatePreTransformation(swigCPtr, ChCoordsysD.getCPtr(T));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void ConcatenatePostTransformation(ChCoordsysD T) {
-    ChronoEngine_csharpPINVOKE.ChCoordsysD_ConcatenatePostTransformation(swigCPtr, ChCoordsysD.getCPtr(T));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChCoordsysD_ConcatenatePostTransformation(swigCPtr, ChCoordsysD.getCPtr(T));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public ChVectorD TransformLocalToParent(ChVectorD local) {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChCoordsysD_TransformLocalToParent__SWIG_0(swigCPtr, ChVectorD.getCPtr(local)), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorD ret = new ChVectorD(corePINVOKE.ChCoordsysD_TransformLocalToParent__SWIG_0(swigCPtr, ChVectorD.getCPtr(local)), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ChVectorD TransformPointLocalToParent(ChVectorD local) {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChCoordsysD_TransformPointLocalToParent(swigCPtr, ChVectorD.getCPtr(local)), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorD ret = new ChVectorD(corePINVOKE.ChCoordsysD_TransformPointLocalToParent(swigCPtr, ChVectorD.getCPtr(local)), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ChVectorD TransformParentToLocal(ChVectorD parent) {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChCoordsysD_TransformParentToLocal__SWIG_0(swigCPtr, ChVectorD.getCPtr(parent)), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorD ret = new ChVectorD(corePINVOKE.ChCoordsysD_TransformParentToLocal__SWIG_0(swigCPtr, ChVectorD.getCPtr(parent)), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ChVectorD TransformPointParentToLocal(ChVectorD parent) {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChCoordsysD_TransformPointParentToLocal(swigCPtr, ChVectorD.getCPtr(parent)), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorD ret = new ChVectorD(corePINVOKE.ChCoordsysD_TransformPointParentToLocal(swigCPtr, ChVectorD.getCPtr(parent)), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ChVectorD TransformDirectionLocalToParent(ChVectorD local) {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChCoordsysD_TransformDirectionLocalToParent(swigCPtr, ChVectorD.getCPtr(local)), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorD ret = new ChVectorD(corePINVOKE.ChCoordsysD_TransformDirectionLocalToParent(swigCPtr, ChVectorD.getCPtr(local)), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ChVectorD TransformDirectionParentToLocal(ChVectorD parent) {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChCoordsysD_TransformDirectionParentToLocal(swigCPtr, ChVectorD.getCPtr(parent)), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorD ret = new ChVectorD(corePINVOKE.ChCoordsysD_TransformDirectionParentToLocal(swigCPtr, ChVectorD.getCPtr(parent)), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ChCoordsysD TransformLocalToParent(ChCoordsysD local) {
-    ChCoordsysD ret = new ChCoordsysD(ChronoEngine_csharpPINVOKE.ChCoordsysD_TransformLocalToParent__SWIG_1(swigCPtr, ChCoordsysD.getCPtr(local)), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChCoordsysD ret = new ChCoordsysD(corePINVOKE.ChCoordsysD_TransformLocalToParent__SWIG_1(swigCPtr, ChCoordsysD.getCPtr(local)), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ChCoordsysD TransformParentToLocal(ChCoordsysD parent) {
-    ChCoordsysD ret = new ChCoordsysD(ChronoEngine_csharpPINVOKE.ChCoordsysD_TransformParentToLocal__SWIG_1(swigCPtr, ChCoordsysD.getCPtr(parent)), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChCoordsysD ret = new ChCoordsysD(corePINVOKE.ChCoordsysD_TransformParentToLocal__SWIG_1(swigCPtr, ChCoordsysD.getCPtr(parent)), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void ArchiveOUT(SWIGTYPE_p_ChArchiveOut marchive) {
-    ChronoEngine_csharpPINVOKE.ChCoordsysD_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChCoordsysD_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn marchive) {
-    ChronoEngine_csharpPINVOKE.ChCoordsysD_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChCoordsysD_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

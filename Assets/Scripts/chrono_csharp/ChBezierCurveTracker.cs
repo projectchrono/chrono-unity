@@ -36,41 +36,41 @@ public class ChBezierCurveTracker : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChBezierCurveTracker(swigCPtr);
+          corePINVOKE.delete_ChBezierCurveTracker(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public ChBezierCurveTracker(ChBezierCurve path, bool isClosedPath) : this(ChronoEngine_csharpPINVOKE.new_ChBezierCurveTracker__SWIG_0(ChBezierCurve.getCPtr(path), isClosedPath), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChBezierCurveTracker(ChBezierCurve path, bool isClosedPath) : this(corePINVOKE.new_ChBezierCurveTracker__SWIG_0(ChBezierCurve.getCPtr(path), isClosedPath), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChBezierCurveTracker(ChBezierCurve path) : this(ChronoEngine_csharpPINVOKE.new_ChBezierCurveTracker__SWIG_1(ChBezierCurve.getCPtr(path)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChBezierCurveTracker(ChBezierCurve path) : this(corePINVOKE.new_ChBezierCurveTracker__SWIG_1(ChBezierCurve.getCPtr(path)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void reset(ChVectorD loc) {
-    ChronoEngine_csharpPINVOKE.ChBezierCurveTracker_reset(swigCPtr, ChVectorD.getCPtr(loc));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChBezierCurveTracker_reset(swigCPtr, ChVectorD.getCPtr(loc));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public int calcClosestPoint(ChVectorD loc, ChVectorD point) {
-    int ret = ChronoEngine_csharpPINVOKE.ChBezierCurveTracker_calcClosestPoint__SWIG_0(swigCPtr, ChVectorD.getCPtr(loc), ChVectorD.getCPtr(point));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChBezierCurveTracker_calcClosestPoint__SWIG_0(swigCPtr, ChVectorD.getCPtr(loc), ChVectorD.getCPtr(point));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int calcClosestPoint(ChVectorD loc, SWIGTYPE_p_ChFrameT_t tnb, SWIGTYPE_p_double curvature) {
-    int ret = ChronoEngine_csharpPINVOKE.ChBezierCurveTracker_calcClosestPoint__SWIG_1(swigCPtr, ChVectorD.getCPtr(loc), SWIGTYPE_p_ChFrameT_t.getCPtr(tnb), SWIGTYPE_p_double.getCPtr(curvature));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChBezierCurveTracker_calcClosestPoint__SWIG_1(swigCPtr, ChVectorD.getCPtr(loc), SWIGTYPE_p_ChFrameT_t.getCPtr(tnb), SWIGTYPE_p_double.getCPtr(curvature));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void setIsClosedPath(bool isClosedPath) {
-    ChronoEngine_csharpPINVOKE.ChBezierCurveTracker_setIsClosedPath(swigCPtr, isClosedPath);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChBezierCurveTracker_setIsClosedPath(swigCPtr, isClosedPath);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

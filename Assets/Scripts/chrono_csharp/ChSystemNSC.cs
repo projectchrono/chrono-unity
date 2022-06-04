@@ -13,7 +13,7 @@ public class ChSystemNSC : ChSystem {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChSystemNSC(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChSystemNSC_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChSystemNSC(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChSystemNSC_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChSystemNSC : ChSystem {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChSystemNSC(swigCPtr);
+          corePINVOKE.delete_ChSystemNSC(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,44 +35,44 @@ public class ChSystemNSC : ChSystem {
     }
   }
 
-  public ChSystemNSC(bool init_sys) : this(ChronoEngine_csharpPINVOKE.new_ChSystemNSC__SWIG_0(init_sys), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChSystemNSC(bool init_sys) : this(corePINVOKE.new_ChSystemNSC__SWIG_0(init_sys), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChSystemNSC() : this(ChronoEngine_csharpPINVOKE.new_ChSystemNSC__SWIG_1(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChSystemNSC() : this(corePINVOKE.new_ChSystemNSC__SWIG_1(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChSystemNSC(ChSystemNSC other) : this(ChronoEngine_csharpPINVOKE.new_ChSystemNSC__SWIG_2(ChSystemNSC.getCPtr(other)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChSystemNSC(ChSystemNSC other) : this(corePINVOKE.new_ChSystemNSC__SWIG_2(ChSystemNSC.getCPtr(other)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override ChSystem Clone() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChSystemNSC_Clone(swigCPtr);
+    global::System.IntPtr cPtr = corePINVOKE.ChSystemNSC_Clone(swigCPtr);
     ChSystemNSC ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChSystemNSC(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override ChContactMethod GetContactMethod() {
-    ChContactMethod ret = (ChContactMethod)ChronoEngine_csharpPINVOKE.ChSystemNSC_GetContactMethod(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChContactMethod ret = (ChContactMethod)corePINVOKE.ChSystemNSC_GetContactMethod(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void SetContactContainer(ChContactContainer container) {
-    ChronoEngine_csharpPINVOKE.ChSystemNSC_SetContactContainer(swigCPtr, ChContactContainer.getCPtr(container));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChSystemNSC_SetContactContainer(swigCPtr, ChContactContainer.getCPtr(container));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void ArchiveOUT(SWIGTYPE_p_ChArchiveOut marchive) {
-    ChronoEngine_csharpPINVOKE.ChSystemNSC_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChSystemNSC_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn marchive) {
-    ChronoEngine_csharpPINVOKE.ChSystemNSC_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChSystemNSC_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

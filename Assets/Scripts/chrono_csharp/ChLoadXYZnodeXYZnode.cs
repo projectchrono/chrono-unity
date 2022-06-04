@@ -13,7 +13,7 @@ public class ChLoadXYZnodeXYZnode : ChLoadCustomMultiple {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChLoadXYZnodeXYZnode(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChLoadXYZnodeXYZnode_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChLoadXYZnodeXYZnode(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChLoadXYZnodeXYZnode_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChLoadXYZnodeXYZnode : ChLoadCustomMultiple {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChLoadXYZnodeXYZnode(swigCPtr);
+          corePINVOKE.delete_ChLoadXYZnodeXYZnode(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -36,18 +36,18 @@ public class ChLoadXYZnodeXYZnode : ChLoadCustomMultiple {
   }
 
   public virtual void ComputeForce(ChVectorD rel_pos, ChVectorD rel_vel, ChVectorD abs_force) {
-    ChronoEngine_csharpPINVOKE.ChLoadXYZnodeXYZnode_ComputeForce(swigCPtr, ChVectorD.getCPtr(rel_pos), ChVectorD.getCPtr(rel_vel), ChVectorD.getCPtr(abs_force));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoadXYZnodeXYZnode_ComputeForce(swigCPtr, ChVectorD.getCPtr(rel_pos), ChVectorD.getCPtr(rel_vel), ChVectorD.getCPtr(abs_force));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void ComputeQ(ChState state_x, ChStateDelta state_w) {
-    ChronoEngine_csharpPINVOKE.ChLoadXYZnodeXYZnode_ComputeQ(swigCPtr, ChState.getCPtr(state_x), ChStateDelta.getCPtr(state_w));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoadXYZnodeXYZnode_ComputeQ(swigCPtr, ChState.getCPtr(state_x), ChStateDelta.getCPtr(state_w));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public ChVectorD GetForce() {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChLoadXYZnodeXYZnode_GetForce(swigCPtr), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorD ret = new ChVectorD(corePINVOKE.ChLoadXYZnodeXYZnode_GetForce(swigCPtr), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-public class ChLugreTire : ChTire {
+public class ChLugreTire : ChForceElementTire {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 

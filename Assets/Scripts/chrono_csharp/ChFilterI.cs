@@ -12,7 +12,7 @@
 public class ChFilterI : ChAnalogueFilter {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
 
-  internal ChFilterI(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChFilterI_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal ChFilterI(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChFilterI_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
@@ -25,7 +25,7 @@ public class ChFilterI : ChAnalogueFilter {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChFilterI(swigCPtr);
+          corePINVOKE.delete_ChFilterI(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -33,36 +33,36 @@ public class ChFilterI : ChAnalogueFilter {
     }
   }
 
-  public ChFilterI() : this(ChronoEngine_csharpPINVOKE.new_ChFilterI__SWIG_0(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChFilterI() : this(corePINVOKE.new_ChFilterI__SWIG_0(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChFilterI(double step, double Ti) : this(ChronoEngine_csharpPINVOKE.new_ChFilterI__SWIG_1(step, Ti), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChFilterI(double step, double Ti) : this(corePINVOKE.new_ChFilterI__SWIG_1(step, Ti), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChFilterI(double step) : this(ChronoEngine_csharpPINVOKE.new_ChFilterI__SWIG_2(step), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChFilterI(double step) : this(corePINVOKE.new_ChFilterI__SWIG_2(step), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void Reset() {
-    ChronoEngine_csharpPINVOKE.ChFilterI_Reset(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChFilterI_Reset(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Config(double step, double Ti) {
-    ChronoEngine_csharpPINVOKE.ChFilterI_Config__SWIG_0(swigCPtr, step, Ti);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChFilterI_Config__SWIG_0(swigCPtr, step, Ti);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Config(double step) {
-    ChronoEngine_csharpPINVOKE.ChFilterI_Config__SWIG_1(swigCPtr, step);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChFilterI_Config__SWIG_1(swigCPtr, step);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override double Filter(double u) {
-    double ret = ChronoEngine_csharpPINVOKE.ChFilterI_Filter(swigCPtr, u);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChFilterI_Filter(swigCPtr, u);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

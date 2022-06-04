@@ -13,7 +13,7 @@ public class ChTriangleMeshSoup : ChTriangleMesh {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChTriangleMeshSoup(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChTriangleMeshSoup_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChTriangleMeshSoup(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChTriangleMeshSoup_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChTriangleMeshSoup : ChTriangleMesh {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChTriangleMeshSoup(swigCPtr);
+          corePINVOKE.delete_ChTriangleMeshSoup(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,79 +35,86 @@ public class ChTriangleMeshSoup : ChTriangleMesh {
     }
   }
 
-  public ChTriangleMeshSoup() : this(ChronoEngine_csharpPINVOKE.new_ChTriangleMeshSoup__SWIG_0(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChTriangleMeshSoup() : this(corePINVOKE.new_ChTriangleMeshSoup__SWIG_0(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChTriangleMeshSoup(ChTriangleMeshSoup source) : this(ChronoEngine_csharpPINVOKE.new_ChTriangleMeshSoup__SWIG_1(ChTriangleMeshSoup.getCPtr(source)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChTriangleMeshSoup(ChTriangleMeshSoup source) : this(corePINVOKE.new_ChTriangleMeshSoup__SWIG_1(ChTriangleMeshSoup.getCPtr(source)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override ChGeometry Clone() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChTriangleMeshSoup_Clone(swigCPtr);
+    global::System.IntPtr cPtr = corePINVOKE.ChTriangleMeshSoup_Clone(swigCPtr);
     ChTriangleMeshSoup ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChTriangleMeshSoup(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static ChTriangleMeshSoup CreateFromWavefrontFile(string filename) {
+    global::System.IntPtr cPtr = corePINVOKE.ChTriangleMeshSoup_CreateFromWavefrontFile(filename);
+    ChTriangleMeshSoup ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChTriangleMeshSoup(cPtr, true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool LoadWavefrontMesh(string filename) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChTriangleMeshSoup_LoadWavefrontMesh(swigCPtr, filename);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChTriangleMeshSoup_LoadWavefrontMesh(swigCPtr, filename);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void addTriangle(ChVectorD vertex0, ChVectorD vertex1, ChVectorD vertex2) {
-    ChronoEngine_csharpPINVOKE.ChTriangleMeshSoup_addTriangle__SWIG_0(swigCPtr, ChVectorD.getCPtr(vertex0), ChVectorD.getCPtr(vertex1), ChVectorD.getCPtr(vertex2));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChTriangleMeshSoup_addTriangle__SWIG_0(swigCPtr, ChVectorD.getCPtr(vertex0), ChVectorD.getCPtr(vertex1), ChVectorD.getCPtr(vertex2));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void addTriangle(ChTriangle atriangle) {
-    ChronoEngine_csharpPINVOKE.ChTriangleMeshSoup_addTriangle__SWIG_1(swigCPtr, ChTriangle.getCPtr(atriangle));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChTriangleMeshSoup_addTriangle__SWIG_1(swigCPtr, ChTriangle.getCPtr(atriangle));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override int getNumTriangles() {
-    int ret = ChronoEngine_csharpPINVOKE.ChTriangleMeshSoup_getNumTriangles(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChTriangleMeshSoup_getNumTriangles(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override ChTriangle getTriangle(int index) {
-    ChTriangle ret = new ChTriangle(ChronoEngine_csharpPINVOKE.ChTriangleMeshSoup_getTriangle(swigCPtr, index), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChTriangle ret = new ChTriangle(corePINVOKE.ChTriangleMeshSoup_getTriangle(swigCPtr, index), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public SWIGTYPE_p_std__vectorT_chrono__geometry__ChTriangle_t getTriangles() {
-    SWIGTYPE_p_std__vectorT_chrono__geometry__ChTriangle_t ret = new SWIGTYPE_p_std__vectorT_chrono__geometry__ChTriangle_t(ChronoEngine_csharpPINVOKE.ChTriangleMeshSoup_getTriangles(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    SWIGTYPE_p_std__vectorT_chrono__geometry__ChTriangle_t ret = new SWIGTYPE_p_std__vectorT_chrono__geometry__ChTriangle_t(corePINVOKE.ChTriangleMeshSoup_getTriangles(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void Clear() {
-    ChronoEngine_csharpPINVOKE.ChTriangleMeshSoup_Clear(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChTriangleMeshSoup_Clear(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void Transform(ChVectorD displ, ChMatrix33D rotscale) {
-    ChronoEngine_csharpPINVOKE.ChTriangleMeshSoup_Transform(swigCPtr, ChVectorD.getCPtr(displ), ChMatrix33D.getCPtr(rotscale));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChTriangleMeshSoup_Transform(swigCPtr, ChVectorD.getCPtr(displ), ChMatrix33D.getCPtr(rotscale));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override ChGeometry.GeometryType GetClassType() {
-    ChGeometry.GeometryType ret = (ChGeometry.GeometryType)ChronoEngine_csharpPINVOKE.ChTriangleMeshSoup_GetClassType(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChGeometry.GeometryType ret = (ChGeometry.GeometryType)corePINVOKE.ChTriangleMeshSoup_GetClassType(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void ArchiveOUT(SWIGTYPE_p_ChArchiveOut marchive) {
-    ChronoEngine_csharpPINVOKE.ChTriangleMeshSoup_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChTriangleMeshSoup_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn marchive) {
-    ChronoEngine_csharpPINVOKE.ChTriangleMeshSoup_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChTriangleMeshSoup_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

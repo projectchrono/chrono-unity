@@ -13,7 +13,7 @@ public class ChIterativeSolverVI : ChIterativeSolver {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChIterativeSolverVI(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChIterativeSolverVI_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChIterativeSolverVI(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChIterativeSolverVI_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChIterativeSolverVI : ChIterativeSolver {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChIterativeSolverVI(swigCPtr);
+          corePINVOKE.delete_ChIterativeSolverVI(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -36,47 +36,47 @@ public class ChIterativeSolverVI : ChIterativeSolver {
   }
 
   public void SetOmega(double mval) {
-    ChronoEngine_csharpPINVOKE.ChIterativeSolverVI_SetOmega(swigCPtr, mval);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChIterativeSolverVI_SetOmega(swigCPtr, mval);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetSharpnessLambda(double mval) {
-    ChronoEngine_csharpPINVOKE.ChIterativeSolverVI_SetSharpnessLambda(swigCPtr, mval);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChIterativeSolverVI_SetSharpnessLambda(swigCPtr, mval);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetRecordViolation(bool mval) {
-    ChronoEngine_csharpPINVOKE.ChIterativeSolverVI_SetRecordViolation(swigCPtr, mval);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChIterativeSolverVI_SetRecordViolation(swigCPtr, mval);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double GetOmega() {
-    double ret = ChronoEngine_csharpPINVOKE.ChIterativeSolverVI_GetOmega(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChIterativeSolverVI_GetOmega(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public double GetSharpnessLambda() {
-    double ret = ChronoEngine_csharpPINVOKE.ChIterativeSolverVI_GetSharpnessLambda(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChIterativeSolverVI_GetSharpnessLambda(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int GetIterations() {
-    int ret = ChronoEngine_csharpPINVOKE.ChIterativeSolverVI_GetIterations(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChIterativeSolverVI_GetIterations(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public SWIGTYPE_p_std__vectorT_double_t GetViolationHistory() {
-    SWIGTYPE_p_std__vectorT_double_t ret = new SWIGTYPE_p_std__vectorT_double_t(ChronoEngine_csharpPINVOKE.ChIterativeSolverVI_GetViolationHistory(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    SWIGTYPE_p_std__vectorT_double_t ret = new SWIGTYPE_p_std__vectorT_double_t(corePINVOKE.ChIterativeSolverVI_GetViolationHistory(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public SWIGTYPE_p_std__vectorT_double_t GetDeltalambdaHistory() {
-    SWIGTYPE_p_std__vectorT_double_t ret = new SWIGTYPE_p_std__vectorT_double_t(ChronoEngine_csharpPINVOKE.ChIterativeSolverVI_GetDeltalambdaHistory(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    SWIGTYPE_p_std__vectorT_double_t ret = new SWIGTYPE_p_std__vectorT_double_t(corePINVOKE.ChIterativeSolverVI_GetDeltalambdaHistory(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

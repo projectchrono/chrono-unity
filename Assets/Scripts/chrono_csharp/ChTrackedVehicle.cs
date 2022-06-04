@@ -35,32 +35,8 @@ public class ChTrackedVehicle : ChVehicle {
     }
   }
 
-  public ChTrackedVehicle(string name, ChContactMethod contact_method) : this(vehiclePINVOKE.new_ChTrackedVehicle__SWIG_0(name, (int)contact_method), true) {
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public ChTrackedVehicle(string name) : this(vehiclePINVOKE.new_ChTrackedVehicle__SWIG_1(name), true) {
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public ChTrackedVehicle(string name, ChSystem system) : this(vehiclePINVOKE.new_ChTrackedVehicle__SWIG_2(name, ChSystem.getCPtr(system)), true) {
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-  }
-
   public override string GetTemplateName() {
     string ret = vehiclePINVOKE.ChTrackedVehicle_GetTemplateName(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public override double GetVehicleMass() {
-    double ret = vehiclePINVOKE.ChTrackedVehicle_GetVehicleMass(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public override ChVectorD GetVehicleCOMPos() {
-    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChTrackedVehicle_GetVehicleCOMPos(swigCPtr), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -247,6 +223,11 @@ public class ChTrackedVehicle : ChVehicle {
 
   public void InitializePowertrain(ChPowertrain powertrain) {
     vehiclePINVOKE.ChTrackedVehicle_InitializePowertrain(swigCPtr, ChPowertrain.getCPtr(powertrain));
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public override void InitializeInertiaProperties() {
+    vehiclePINVOKE.ChTrackedVehicle_InitializeInertiaProperties(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

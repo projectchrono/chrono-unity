@@ -135,12 +135,6 @@ public class Sedan : global::System.IDisposable {
     return ret;
   }
 
-  public double GetTotalMass() {
-    double ret = vehiclePINVOKE.Sedan_GetTotalMass(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
   public void Initialize() {
     vehiclePINVOKE.Sedan_Initialize(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();

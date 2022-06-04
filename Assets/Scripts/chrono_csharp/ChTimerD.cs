@@ -36,65 +36,65 @@ public class ChTimerD : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChTimerD(swigCPtr);
+          corePINVOKE.delete_ChTimerD(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public ChTimerD() : this(ChronoEngine_csharpPINVOKE.new_ChTimerD(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChTimerD() : this(corePINVOKE.new_ChTimerD(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void start() {
-    ChronoEngine_csharpPINVOKE.ChTimerD_start(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChTimerD_start(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void stop() {
-    ChronoEngine_csharpPINVOKE.ChTimerD_stop(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChTimerD_stop(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void reset() {
-    ChronoEngine_csharpPINVOKE.ChTimerD_reset(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChTimerD_reset(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public ulong GetTimeMilliseconds() {
-    ulong ret = ChronoEngine_csharpPINVOKE.ChTimerD_GetTimeMilliseconds(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ulong ret = corePINVOKE.ChTimerD_GetTimeMilliseconds(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ulong GetTimeMillisecondsIntermediate() {
-    ulong ret = ChronoEngine_csharpPINVOKE.ChTimerD_GetTimeMillisecondsIntermediate(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ulong ret = corePINVOKE.ChTimerD_GetTimeMillisecondsIntermediate(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ulong GetTimeMicroseconds() {
-    ulong ret = ChronoEngine_csharpPINVOKE.ChTimerD_GetTimeMicroseconds(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ulong ret = corePINVOKE.ChTimerD_GetTimeMicroseconds(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ulong GetTimeMicrosecondsIntermediate() {
-    ulong ret = ChronoEngine_csharpPINVOKE.ChTimerD_GetTimeMicrosecondsIntermediate(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ulong ret = corePINVOKE.ChTimerD_GetTimeMicrosecondsIntermediate(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public double GetTimeSeconds() {
-    double ret = ChronoEngine_csharpPINVOKE.ChTimerD_GetTimeSeconds(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChTimerD_GetTimeSeconds(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public double GetTimeSecondsIntermediate() {
-    double ret = ChronoEngine_csharpPINVOKE.ChTimerD_GetTimeSecondsIntermediate(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChTimerD_GetTimeSecondsIntermediate(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

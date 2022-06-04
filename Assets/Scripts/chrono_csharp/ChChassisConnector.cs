@@ -35,25 +35,13 @@ public class ChChassisConnector : ChPart {
     }
   }
 
-  public virtual double GetMass() {
-    double ret = vehiclePINVOKE.ChChassisConnector_GetMass(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public virtual ChVectorD GetCOMPos() {
-    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChChassisConnector_GetCOMPos(swigCPtr), true);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
   public virtual void Initialize(ChChassis front, ChChassisRear rear) {
     vehiclePINVOKE.ChChassisConnector_Initialize(swigCPtr, ChChassis.getCPtr(front), ChChassisRear.getCPtr(rear));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public virtual void Synchronize(double time, double steering) {
-    vehiclePINVOKE.ChChassisConnector_Synchronize(swigCPtr, time, steering);
+  public virtual void Synchronize(double time, DriverInputs driver_inputs) {
+    vehiclePINVOKE.ChChassisConnector_Synchronize(swigCPtr, time, DriverInputs.getCPtr(driver_inputs));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

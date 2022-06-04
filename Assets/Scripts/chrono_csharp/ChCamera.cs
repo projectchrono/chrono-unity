@@ -9,12 +9,12 @@
 //------------------------------------------------------------------------------
 
 
-public class ChCamera : ChAsset {
+public class ChCamera : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
-  private bool swigCMemOwnDerived;
+  private bool swigCMemOwnBase;
 
-  internal ChCamera(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChCamera_SWIGSmartPtrUpcast(cPtr), true) {
-    swigCMemOwnDerived = cMemoryOwn;
+  internal ChCamera(global::System.IntPtr cPtr, bool cMemoryOwn) {
+    swigCMemOwnBase = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
@@ -22,108 +22,121 @@ public class ChCamera : ChAsset {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  protected override void Dispose(bool disposing) {
+  ~ChCamera() {
+    Dispose(false);
+  }
+
+  public void Dispose() {
+    Dispose(true);
+    global::System.GC.SuppressFinalize(this);
+  }
+
+  protected virtual void Dispose(bool disposing) {
     lock(this) {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
-        if (swigCMemOwnDerived) {
-          swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChCamera(swigCPtr);
+        if (swigCMemOwnBase) {
+          swigCMemOwnBase = false;
+          corePINVOKE.delete_ChCamera(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
-      base.Dispose(disposing);
     }
   }
 
-  public ChCamera() : this(ChronoEngine_csharpPINVOKE.new_ChCamera(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChCamera() : this(corePINVOKE.new_ChCamera(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void SetPosition(ChVectorD mv) {
-    ChronoEngine_csharpPINVOKE.ChCamera_SetPosition(swigCPtr, ChVectorD.getCPtr(mv));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public void SetPosition(ChVectorD pos) {
+    corePINVOKE.ChCamera_SetPosition(swigCPtr, ChVectorD.getCPtr(pos));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public ChVectorD GetPosition() {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChCamera_GetPosition(swigCPtr), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorD ret = new ChVectorD(corePINVOKE.ChCamera_GetPosition(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public void SetAimPoint(ChVectorD mv) {
-    ChronoEngine_csharpPINVOKE.ChCamera_SetAimPoint(swigCPtr, ChVectorD.getCPtr(mv));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public void SetAimPoint(ChVectorD point) {
+    corePINVOKE.ChCamera_SetAimPoint(swigCPtr, ChVectorD.getCPtr(point));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public ChVectorD GetAimPoint() {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChCamera_GetAimPoint(swigCPtr), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorD ret = new ChVectorD(corePINVOKE.ChCamera_GetAimPoint(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public void SetUpVector(ChVectorD mv) {
-    ChronoEngine_csharpPINVOKE.ChCamera_SetUpVector(swigCPtr, ChVectorD.getCPtr(mv));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public void SetUpVector(ChVectorD up) {
+    corePINVOKE.ChCamera_SetUpVector(swigCPtr, ChVectorD.getCPtr(up));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public ChVectorD GetUpVector() {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChCamera_GetUpVector(swigCPtr), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorD ret = new ChVectorD(corePINVOKE.ChCamera_GetUpVector(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public void SetAngle(double mdeg) {
-    ChronoEngine_csharpPINVOKE.ChCamera_SetAngle(swigCPtr, mdeg);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public void SetAngle(double deg) {
+    corePINVOKE.ChCamera_SetAngle(swigCPtr, deg);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double GetAngle() {
-    double ret = ChronoEngine_csharpPINVOKE.ChCamera_GetAngle(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChCamera_GetAngle(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public void SetFOV(double mf) {
-    ChronoEngine_csharpPINVOKE.ChCamera_SetFOV(swigCPtr, mf);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public void SetFOV(double f) {
+    corePINVOKE.ChCamera_SetFOV(swigCPtr, f);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double GetFOV() {
-    double ret = ChronoEngine_csharpPINVOKE.ChCamera_GetFOV(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChCamera_GetFOV(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetHVratio(double mf) {
-    ChronoEngine_csharpPINVOKE.ChCamera_SetHVratio(swigCPtr, mf);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChCamera_SetHVratio(swigCPtr, mf);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double GetHVratio() {
-    double ret = ChronoEngine_csharpPINVOKE.ChCamera_GetHVratio(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChCamera_GetHVratio(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public void SetOrthographic(bool mb) {
-    ChronoEngine_csharpPINVOKE.ChCamera_SetOrthographic(swigCPtr, mb);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public void SetOrthographic(bool mode) {
+    corePINVOKE.ChCamera_SetOrthographic(swigCPtr, mode);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public bool GetOrthographic() {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCamera_GetOrthographic(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public bool IsOrthographic() {
+    bool ret = corePINVOKE.ChCamera_IsOrthographic(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public override void ArchiveOUT(SWIGTYPE_p_ChArchiveOut marchive) {
-    ChronoEngine_csharpPINVOKE.ChCamera_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public virtual void Update() {
+    corePINVOKE.ChCamera_Update(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public override void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn marchive) {
-    ChronoEngine_csharpPINVOKE.ChCamera_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public virtual void ArchiveOUT(SWIGTYPE_p_ChArchiveOut archive) {
+    corePINVOKE.ChCamera_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(archive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public virtual void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn archive) {
+    corePINVOKE.ChCamera_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(archive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

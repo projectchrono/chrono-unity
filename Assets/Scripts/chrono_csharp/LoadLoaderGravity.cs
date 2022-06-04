@@ -13,7 +13,7 @@ public class LoadLoaderGravity : ChLoadBase {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal LoadLoaderGravity(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.LoadLoaderGravity_SWIGSmartPtrUpcast(cPtr), true) {
+  internal LoadLoaderGravity(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.LoadLoaderGravity_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class LoadLoaderGravity : ChLoadBase {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_LoadLoaderGravity(swigCPtr);
+          corePINVOKE.delete_LoadLoaderGravity(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -37,79 +37,77 @@ public class LoadLoaderGravity : ChLoadBase {
 
   public ChLoaderGravity loader {
     set {
-      ChronoEngine_csharpPINVOKE.LoadLoaderGravity_loader_set(swigCPtr, ChLoaderGravity.getCPtr(value));
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.LoadLoaderGravity_loader_set(swigCPtr, ChLoaderGravity.getCPtr(value));
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      ChLoaderGravity ret = new ChLoaderGravity(ChronoEngine_csharpPINVOKE.LoadLoaderGravity_loader_get(swigCPtr), true);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      ChLoaderGravity ret = new ChLoaderGravity(corePINVOKE.LoadLoaderGravity_loader_get(swigCPtr), true);
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public LoadLoaderGravity(ChLoadableUVW mloadable) : this(ChronoEngine_csharpPINVOKE.new_LoadLoaderGravity(ChLoadableUVW.getCPtr(mloadable)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public override ChObj Clone() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.LoadLoaderGravity_Clone(swigCPtr);
-    LoadLoaderGravity ret = (cPtr == global::System.IntPtr.Zero) ? null : new LoadLoaderGravity(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
+  public LoadLoaderGravity(ChLoadableUVW mloadable) : this(corePINVOKE.new_LoadLoaderGravity(ChLoadableUVW.getCPtr(mloadable)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override int LoadGet_ndof_x() {
-    int ret = ChronoEngine_csharpPINVOKE.LoadLoaderGravity_LoadGet_ndof_x(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.LoadLoaderGravity_LoadGet_ndof_x(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override int LoadGet_ndof_w() {
-    int ret = ChronoEngine_csharpPINVOKE.LoadLoaderGravity_LoadGet_ndof_w(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.LoadLoaderGravity_LoadGet_ndof_w(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void LoadGetStateBlock_x(ChState mD) {
-    ChronoEngine_csharpPINVOKE.LoadLoaderGravity_LoadGetStateBlock_x(swigCPtr, ChState.getCPtr(mD));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.LoadLoaderGravity_LoadGetStateBlock_x(swigCPtr, ChState.getCPtr(mD));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void LoadGetStateBlock_w(ChStateDelta mD) {
-    ChronoEngine_csharpPINVOKE.LoadLoaderGravity_LoadGetStateBlock_w(swigCPtr, ChStateDelta.getCPtr(mD));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.LoadLoaderGravity_LoadGetStateBlock_w(swigCPtr, ChStateDelta.getCPtr(mD));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void LoadStateIncrement(ChState x, ChStateDelta dw, ChState x_new) {
-    ChronoEngine_csharpPINVOKE.LoadLoaderGravity_LoadStateIncrement(swigCPtr, ChState.getCPtr(x), ChStateDelta.getCPtr(dw), ChState.getCPtr(x_new));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.LoadLoaderGravity_LoadStateIncrement(swigCPtr, ChState.getCPtr(x), ChStateDelta.getCPtr(dw), ChState.getCPtr(x_new));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override int LoadGet_field_ncoords() {
-    int ret = ChronoEngine_csharpPINVOKE.LoadLoaderGravity_LoadGet_field_ncoords(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.LoadLoaderGravity_LoadGet_field_ncoords(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void ComputeQ(ChState state_x, ChStateDelta state_w) {
-    ChronoEngine_csharpPINVOKE.LoadLoaderGravity_ComputeQ(swigCPtr, ChState.getCPtr(state_x), ChStateDelta.getCPtr(state_w));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.LoadLoaderGravity_ComputeQ(swigCPtr, ChState.getCPtr(state_x), ChStateDelta.getCPtr(state_w));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void LoadIntLoadResidual_F(ChVectorDynamicD R, double c) {
-    ChronoEngine_csharpPINVOKE.LoadLoaderGravity_LoadIntLoadResidual_F(swigCPtr, ChVectorDynamicD.getCPtr(R), c);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.LoadLoaderGravity_LoadIntLoadResidual_F(swigCPtr, ChVectorDynamicD.getCPtr(R), c);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public override void LoadIntLoadResidual_Mv(ChVectorDynamicD R, ChVectorDynamicD w, double c) {
+    corePINVOKE.LoadLoaderGravity_LoadIntLoadResidual_Mv(swigCPtr, ChVectorDynamicD.getCPtr(R), ChVectorDynamicD.getCPtr(w), c);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override bool IsStiff() {
-    bool ret = ChronoEngine_csharpPINVOKE.LoadLoaderGravity_IsStiff(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.LoadLoaderGravity_IsStiff(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void CreateJacobianMatrices() {
-    ChronoEngine_csharpPINVOKE.LoadLoaderGravity_CreateJacobianMatrices(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.LoadLoaderGravity_CreateJacobianMatrices(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

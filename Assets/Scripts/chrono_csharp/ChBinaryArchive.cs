@@ -36,31 +36,31 @@ public class ChBinaryArchive : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChBinaryArchive(swigCPtr);
+          corePINVOKE.delete_ChBinaryArchive(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public ChBinaryArchive() : this(ChronoEngine_csharpPINVOKE.new_ChBinaryArchive(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChBinaryArchive() : this(corePINVOKE.new_ChBinaryArchive(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public bool IsBigEndianMachine() {
-    bool ret = ChronoEngine_csharpPINVOKE.ChBinaryArchive_IsBigEndianMachine(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChBinaryArchive_IsBigEndianMachine(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Init() {
-    ChronoEngine_csharpPINVOKE.ChBinaryArchive_Init(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChBinaryArchive_Init(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public int PutPointer(SWIGTYPE_p_void object_) {
-    int ret = ChronoEngine_csharpPINVOKE.ChBinaryArchive_PutPointer(swigCPtr, SWIGTYPE_p_void.getCPtr(object_));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChBinaryArchive_PutPointer(swigCPtr, SWIGTYPE_p_void.getCPtr(object_));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

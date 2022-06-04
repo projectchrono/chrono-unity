@@ -36,7 +36,7 @@ public class ChAddProximityCallbackP : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChAddProximityCallbackP(swigCPtr);
+          corePINVOKE.delete_ChAddProximityCallbackP(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -44,19 +44,19 @@ public class ChAddProximityCallbackP : global::System.IDisposable {
   }
 
   public virtual void OnAddProximity(ChCollisionModel modA, ChCollisionModel modB) {
-    if (SwigDerivedClassHasMethod("OnAddProximity", swigMethodTypes0)) ChronoEngine_csharpPINVOKE.ChAddProximityCallbackP_OnAddProximitySwigExplicitChAddProximityCallbackP(swigCPtr, ChCollisionModel.getCPtr(modA), ChCollisionModel.getCPtr(modB)); else ChronoEngine_csharpPINVOKE.ChAddProximityCallbackP_OnAddProximity(swigCPtr, ChCollisionModel.getCPtr(modA), ChCollisionModel.getCPtr(modB));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("OnAddProximity", swigMethodTypes0)) corePINVOKE.ChAddProximityCallbackP_OnAddProximitySwigExplicitChAddProximityCallbackP(swigCPtr, ChCollisionModel.getCPtr(modA), ChCollisionModel.getCPtr(modB)); else corePINVOKE.ChAddProximityCallbackP_OnAddProximity(swigCPtr, ChCollisionModel.getCPtr(modA), ChCollisionModel.getCPtr(modB));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChAddProximityCallbackP() : this(ChronoEngine_csharpPINVOKE.new_ChAddProximityCallbackP(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChAddProximityCallbackP() : this(corePINVOKE.new_ChAddProximityCallbackP(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     SwigDirectorConnect();
   }
 
   private void SwigDirectorConnect() {
     if (SwigDerivedClassHasMethod("OnAddProximity", swigMethodTypes0))
       swigDelegate0 = new SwigDelegateChAddProximityCallbackP_0(SwigDirectorMethodOnAddProximity);
-    ChronoEngine_csharpPINVOKE.ChAddProximityCallbackP_director_connect(swigCPtr, swigDelegate0);
+    corePINVOKE.ChAddProximityCallbackP_director_connect(swigCPtr, swigDelegate0);
   }
 
   private bool SwigDerivedClassHasMethod(string methodName, global::System.Type[] methodTypes) {

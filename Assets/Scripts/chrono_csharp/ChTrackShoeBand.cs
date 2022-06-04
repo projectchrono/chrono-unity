@@ -35,12 +35,6 @@ public class ChTrackShoeBand : ChTrackShoe {
     }
   }
 
-  public override double GetMass() {
-    double ret = vehiclePINVOKE.ChTrackShoeBand_GetMass(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
   public override double GetPitch() {
     double ret = vehiclePINVOKE.ChTrackShoeBand_GetPitch(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();

@@ -35,14 +35,14 @@ public class RCCar_Wheel : ChWheel {
     }
   }
 
-  public override double GetMass() {
-    double ret = vehiclePINVOKE.RCCar_Wheel_GetMass(swigCPtr);
+  public virtual double GetWheelMass() {
+    double ret = vehiclePINVOKE.RCCar_Wheel_GetWheelMass(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public override ChVectorD GetInertia() {
-    ChVectorD ret = new ChVectorD(vehiclePINVOKE.RCCar_Wheel_GetInertia(swigCPtr), true);
+  public virtual ChVectorD GetWheelInertia() {
+    ChVectorD ret = new ChVectorD(vehiclePINVOKE.RCCar_Wheel_GetWheelInertia(swigCPtr), false);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

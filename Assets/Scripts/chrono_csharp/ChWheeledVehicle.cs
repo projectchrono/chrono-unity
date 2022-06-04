@@ -68,6 +68,12 @@ public class ChWheeledVehicle : ChVehicle {
     return ret;
   }
 
+  public SWIGTYPE_p_std__vectorT_std__shared_ptrT_chrono__vehicle__ChSteering_t_t GetSteerings() {
+    SWIGTYPE_p_std__vectorT_std__shared_ptrT_chrono__vehicle__ChSteering_t_t ret = new SWIGTYPE_p_std__vectorT_std__shared_ptrT_chrono__vehicle__ChSteering_t_t(vehiclePINVOKE.ChWheeledVehicle_GetSteerings(swigCPtr), false);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public ChSteering GetSteering(int id) {
     global::System.IntPtr cPtr = vehiclePINVOKE.ChWheeledVehicle_GetSteering(swigCPtr, id);
     ChSteering ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChSteering(cPtr, true);
@@ -117,20 +123,9 @@ public class ChWheeledVehicle : ChVehicle {
     return ret;
   }
 
-  public SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t GetSubchassis(int id) {
-    SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t ret = new SWIGTYPE_p_std__shared_ptrT_ChSubchassis_t(vehiclePINVOKE.ChWheeledVehicle_GetSubchassis(swigCPtr, id), true);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public override double GetVehicleMass() {
-    double ret = vehiclePINVOKE.ChWheeledVehicle_GetVehicleMass(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public override ChVectorD GetVehicleCOMPos() {
-    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChWheeledVehicle_GetVehicleCOMPos(swigCPtr), true);
+  public ChSubchassis GetSubchassis(int id) {
+    global::System.IntPtr cPtr = vehiclePINVOKE.ChWheeledVehicle_GetSubchassis(swigCPtr, id);
+    ChSubchassis ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChSubchassis(cPtr, true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -222,6 +217,11 @@ public class ChWheeledVehicle : ChVehicle {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public void SetTireVisualizationType(VisualizationType vis) {
+    vehiclePINVOKE.ChWheeledVehicle_SetTireVisualizationType(swigCPtr, (int)vis);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
   public override void SetChassisVehicleCollide(bool state) {
     vehiclePINVOKE.ChWheeledVehicle_SetChassisVehicleCollide(swigCPtr, state);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
@@ -237,6 +237,11 @@ public class ChWheeledVehicle : ChVehicle {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public void SetSubchassisOutput(int id, bool state) {
+    vehiclePINVOKE.ChWheeledVehicle_SetSubchassisOutput(swigCPtr, id, state);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
   public void SetAntirollbarOutput(int id, bool state) {
     vehiclePINVOKE.ChWheeledVehicle_SetAntirollbarOutput(swigCPtr, id, state);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
@@ -244,16 +249,6 @@ public class ChWheeledVehicle : ChVehicle {
 
   public void SetDrivelineOutput(bool state) {
     vehiclePINVOKE.ChWheeledVehicle_SetDrivelineOutput(swigCPtr, state);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public override void Initialize(ChCoordsysD chassisPos, double chassisFwdVel) {
-    vehiclePINVOKE.ChWheeledVehicle_Initialize__SWIG_0(swigCPtr, ChCoordsysD.getCPtr(chassisPos), chassisFwdVel);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public override void Initialize(ChCoordsysD chassisPos) {
-    vehiclePINVOKE.ChWheeledVehicle_Initialize__SWIG_1(swigCPtr, ChCoordsysD.getCPtr(chassisPos));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -274,6 +269,11 @@ public class ChWheeledVehicle : ChVehicle {
 
   public void InitializePowertrain(ChPowertrain powertrain) {
     vehiclePINVOKE.ChWheeledVehicle_InitializePowertrain(swigCPtr, ChPowertrain.getCPtr(powertrain));
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public override void InitializeInertiaProperties() {
+    vehiclePINVOKE.ChWheeledVehicle_InitializeInertiaProperties(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

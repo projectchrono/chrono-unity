@@ -36,122 +36,122 @@ public class ChISO2631_Vibration_SeatCushionLogger : global::System.IDisposable 
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChISO2631_Vibration_SeatCushionLogger(swigCPtr);
+          corePINVOKE.delete_ChISO2631_Vibration_SeatCushionLogger(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public ChISO2631_Vibration_SeatCushionLogger() : this(ChronoEngine_csharpPINVOKE.new_ChISO2631_Vibration_SeatCushionLogger__SWIG_0(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChISO2631_Vibration_SeatCushionLogger() : this(corePINVOKE.new_ChISO2631_Vibration_SeatCushionLogger__SWIG_0(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChISO2631_Vibration_SeatCushionLogger(double step) : this(ChronoEngine_csharpPINVOKE.new_ChISO2631_Vibration_SeatCushionLogger__SWIG_1(step), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChISO2631_Vibration_SeatCushionLogger(double step) : this(corePINVOKE.new_ChISO2631_Vibration_SeatCushionLogger__SWIG_1(step), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Config(double step) {
-    ChronoEngine_csharpPINVOKE.ChISO2631_Vibration_SeatCushionLogger_Config(swigCPtr, step);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChISO2631_Vibration_SeatCushionLogger_Config(swigCPtr, step);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void AddData(double speed, double acc_x, double acc_y, double acc_z) {
-    ChronoEngine_csharpPINVOKE.ChISO2631_Vibration_SeatCushionLogger_AddData__SWIG_0(swigCPtr, speed, acc_x, acc_y, acc_z);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChISO2631_Vibration_SeatCushionLogger_AddData__SWIG_0(swigCPtr, speed, acc_x, acc_y, acc_z);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void AddData(double speed, ChVectorD acc_v) {
-    ChronoEngine_csharpPINVOKE.ChISO2631_Vibration_SeatCushionLogger_AddData__SWIG_1(swigCPtr, speed, ChVectorD.getCPtr(acc_v));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChISO2631_Vibration_SeatCushionLogger_AddData__SWIG_1(swigCPtr, speed, ChVectorD.getCPtr(acc_v));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Reset() {
-    ChronoEngine_csharpPINVOKE.ChISO2631_Vibration_SeatCushionLogger_Reset(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChISO2631_Vibration_SeatCushionLogger_Reset(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double GetExposureTime() {
-    double ret = ChronoEngine_csharpPINVOKE.ChISO2631_Vibration_SeatCushionLogger_GetExposureTime(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChISO2631_Vibration_SeatCushionLogger_GetExposureTime(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public double GetInputRMS_X() {
-    double ret = ChronoEngine_csharpPINVOKE.ChISO2631_Vibration_SeatCushionLogger_GetInputRMS_X(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChISO2631_Vibration_SeatCushionLogger_GetInputRMS_X(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public double GetInputRMS_Y() {
-    double ret = ChronoEngine_csharpPINVOKE.ChISO2631_Vibration_SeatCushionLogger_GetInputRMS_Y(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChISO2631_Vibration_SeatCushionLogger_GetInputRMS_Y(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public double GetInputRMS_Z() {
-    double ret = ChronoEngine_csharpPINVOKE.ChISO2631_Vibration_SeatCushionLogger_GetInputRMS_Z(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChISO2631_Vibration_SeatCushionLogger_GetInputRMS_Z(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public double GetAW_X() {
-    double ret = ChronoEngine_csharpPINVOKE.ChISO2631_Vibration_SeatCushionLogger_GetAW_X(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChISO2631_Vibration_SeatCushionLogger_GetAW_X(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public double GetAW_Y() {
-    double ret = ChronoEngine_csharpPINVOKE.ChISO2631_Vibration_SeatCushionLogger_GetAW_Y(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChISO2631_Vibration_SeatCushionLogger_GetAW_Y(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public double GetAW_Z() {
-    double ret = ChronoEngine_csharpPINVOKE.ChISO2631_Vibration_SeatCushionLogger_GetAW_Z(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChISO2631_Vibration_SeatCushionLogger_GetAW_Z(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public double GetAW_V() {
-    double ret = ChronoEngine_csharpPINVOKE.ChISO2631_Vibration_SeatCushionLogger_GetAW_V(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChISO2631_Vibration_SeatCushionLogger_GetAW_V(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public double GetCrestFactor() {
-    double ret = ChronoEngine_csharpPINVOKE.ChISO2631_Vibration_SeatCushionLogger_GetCrestFactor(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChISO2631_Vibration_SeatCushionLogger_GetCrestFactor(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public double GetVDV() {
-    double ret = ChronoEngine_csharpPINVOKE.ChISO2631_Vibration_SeatCushionLogger_GetVDV(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChISO2631_Vibration_SeatCushionLogger_GetVDV(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public double GetAVGSpeed() {
-    double ret = ChronoEngine_csharpPINVOKE.ChISO2631_Vibration_SeatCushionLogger_GetAVGSpeed(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChISO2631_Vibration_SeatCushionLogger_GetAVGSpeed(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public double GetSeverityVDV() {
-    double ret = ChronoEngine_csharpPINVOKE.ChISO2631_Vibration_SeatCushionLogger_GetSeverityVDV(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChISO2631_Vibration_SeatCushionLogger_GetSeverityVDV(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public double GetAbsorbedPowerVertical() {
-    double ret = ChronoEngine_csharpPINVOKE.ChISO2631_Vibration_SeatCushionLogger_GetAbsorbedPowerVertical(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChISO2631_Vibration_SeatCushionLogger_GetAbsorbedPowerVertical(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void GeneratePlotFile(string fName, string testInfo) {
-    ChronoEngine_csharpPINVOKE.ChISO2631_Vibration_SeatCushionLogger_GeneratePlotFile(swigCPtr, fName, testInfo);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChISO2631_Vibration_SeatCushionLogger_GeneratePlotFile(swigCPtr, fName, testInfo);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

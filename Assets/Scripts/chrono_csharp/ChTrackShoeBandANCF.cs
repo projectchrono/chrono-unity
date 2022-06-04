@@ -41,6 +41,12 @@ public class ChTrackShoeBandANCF : ChTrackShoeBand {
     return ret;
   }
 
+  public override ChVectorD GetTension() {
+    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChTrackShoeBandANCF_GetTension(swigCPtr), true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public override void Initialize(ChBodyAuxRef chassis, ChVectorD location, ChQuaternionD rotation) {
     vehiclePINVOKE.ChTrackShoeBandANCF_Initialize(swigCPtr, ChBodyAuxRef.getCPtr(chassis), ChVectorD.getCPtr(location), ChQuaternionD.getCPtr(rotation));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();

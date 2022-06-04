@@ -41,25 +41,20 @@ public class ChTrackShoeDoublePin : ChTrackShoeSegmented {
     return ret;
   }
 
-  public override double GetMass() {
-    double ret = vehiclePINVOKE.ChTrackShoeDoublePin_GetMass(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
   public override double GetPitch() {
     double ret = vehiclePINVOKE.ChTrackShoeDoublePin_GetPitch(swigCPtr);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public override void Initialize(ChBodyAuxRef chassis, ChVectorD location, ChQuaternionD rotation) {
-    vehiclePINVOKE.ChTrackShoeDoublePin_Initialize__SWIG_0(swigCPtr, ChBodyAuxRef.getCPtr(chassis), ChVectorD.getCPtr(location), ChQuaternionD.getCPtr(rotation));
+  public override ChVectorD GetTension() {
+    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChTrackShoeDoublePin_GetTension(swigCPtr), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
   }
 
-  public void Initialize(ChBodyAuxRef chassis, ChVectorD loc_shoe, ChQuaternionD rot_shoe, ChVectorD loc_connector_L, ChVectorD loc_connector_R, ChQuaternionD rot_connector) {
-    vehiclePINVOKE.ChTrackShoeDoublePin_Initialize__SWIG_1(swigCPtr, ChBodyAuxRef.getCPtr(chassis), ChVectorD.getCPtr(loc_shoe), ChQuaternionD.getCPtr(rot_shoe), ChVectorD.getCPtr(loc_connector_L), ChVectorD.getCPtr(loc_connector_R), ChQuaternionD.getCPtr(rot_connector));
+  public override void Initialize(ChBodyAuxRef chassis, ChVectorD location, ChQuaternionD rotation) {
+    vehiclePINVOKE.ChTrackShoeDoublePin_Initialize(swigCPtr, ChBodyAuxRef.getCPtr(chassis), ChVectorD.getCPtr(location), ChQuaternionD.getCPtr(rotation));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

@@ -36,7 +36,7 @@ public class ChCollisionModel : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnBase) {
           swigCMemOwnBase = false;
-          ChronoEngine_csharpPINVOKE.delete_ChCollisionModel(swigCPtr);
+          corePINVOKE.delete_ChCollisionModel(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -44,493 +44,493 @@ public class ChCollisionModel : global::System.IDisposable {
   }
 
   public virtual ChCollisionSystemType GetType() {
-    ChCollisionSystemType ret = (ChCollisionSystemType)ChronoEngine_csharpPINVOKE.ChCollisionModel_GetType(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChCollisionSystemType ret = (ChCollisionSystemType)corePINVOKE.ChCollisionModel_GetType(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int ClearModel() {
-    int ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_ClearModel(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChCollisionModel_ClearModel(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int BuildModel() {
-    int ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_BuildModel(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChCollisionModel_BuildModel(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddSphere(ChMaterialSurface material, double radius, ChVectorD pos) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddSphere__SWIG_0(swigCPtr, ChMaterialSurface.getCPtr(material), radius, ChVectorD.getCPtr(pos));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddSphere__SWIG_0(swigCPtr, ChMaterialSurface.getCPtr(material), radius, ChVectorD.getCPtr(pos));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddSphere(ChMaterialSurface material, double radius) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddSphere__SWIG_1(swigCPtr, ChMaterialSurface.getCPtr(material), radius);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddSphere__SWIG_1(swigCPtr, ChMaterialSurface.getCPtr(material), radius);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddEllipsoid(ChMaterialSurface material, double rx, double ry, double rz, ChVectorD pos, ChMatrix33D rot) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddEllipsoid__SWIG_0(swigCPtr, ChMaterialSurface.getCPtr(material), rx, ry, rz, ChVectorD.getCPtr(pos), ChMatrix33D.getCPtr(rot));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddEllipsoid__SWIG_0(swigCPtr, ChMaterialSurface.getCPtr(material), rx, ry, rz, ChVectorD.getCPtr(pos), ChMatrix33D.getCPtr(rot));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddEllipsoid(ChMaterialSurface material, double rx, double ry, double rz, ChVectorD pos) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddEllipsoid__SWIG_1(swigCPtr, ChMaterialSurface.getCPtr(material), rx, ry, rz, ChVectorD.getCPtr(pos));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddEllipsoid__SWIG_1(swigCPtr, ChMaterialSurface.getCPtr(material), rx, ry, rz, ChVectorD.getCPtr(pos));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddEllipsoid(ChMaterialSurface material, double rx, double ry, double rz) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddEllipsoid__SWIG_2(swigCPtr, ChMaterialSurface.getCPtr(material), rx, ry, rz);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddEllipsoid__SWIG_2(swigCPtr, ChMaterialSurface.getCPtr(material), rx, ry, rz);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddBox(ChMaterialSurface material, double hx, double hy, double hz, ChVectorD pos, ChMatrix33D rot) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddBox__SWIG_0(swigCPtr, ChMaterialSurface.getCPtr(material), hx, hy, hz, ChVectorD.getCPtr(pos), ChMatrix33D.getCPtr(rot));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddBox__SWIG_0(swigCPtr, ChMaterialSurface.getCPtr(material), hx, hy, hz, ChVectorD.getCPtr(pos), ChMatrix33D.getCPtr(rot));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddBox(ChMaterialSurface material, double hx, double hy, double hz, ChVectorD pos) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddBox__SWIG_1(swigCPtr, ChMaterialSurface.getCPtr(material), hx, hy, hz, ChVectorD.getCPtr(pos));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddBox__SWIG_1(swigCPtr, ChMaterialSurface.getCPtr(material), hx, hy, hz, ChVectorD.getCPtr(pos));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddBox(ChMaterialSurface material, double hx, double hy, double hz) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddBox__SWIG_2(swigCPtr, ChMaterialSurface.getCPtr(material), hx, hy, hz);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddBox__SWIG_2(swigCPtr, ChMaterialSurface.getCPtr(material), hx, hy, hz);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddCylinder(ChMaterialSurface material, double rx, double rz, double hy, ChVectorD pos, ChMatrix33D rot) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddCylinder__SWIG_0(swigCPtr, ChMaterialSurface.getCPtr(material), rx, rz, hy, ChVectorD.getCPtr(pos), ChMatrix33D.getCPtr(rot));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddCylinder__SWIG_0(swigCPtr, ChMaterialSurface.getCPtr(material), rx, rz, hy, ChVectorD.getCPtr(pos), ChMatrix33D.getCPtr(rot));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddCylinder(ChMaterialSurface material, double rx, double rz, double hy, ChVectorD pos) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddCylinder__SWIG_1(swigCPtr, ChMaterialSurface.getCPtr(material), rx, rz, hy, ChVectorD.getCPtr(pos));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddCylinder__SWIG_1(swigCPtr, ChMaterialSurface.getCPtr(material), rx, rz, hy, ChVectorD.getCPtr(pos));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddCylinder(ChMaterialSurface material, double rx, double rz, double hy) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddCylinder__SWIG_2(swigCPtr, ChMaterialSurface.getCPtr(material), rx, rz, hy);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddCylinder__SWIG_2(swigCPtr, ChMaterialSurface.getCPtr(material), rx, rz, hy);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddCylindricalShell(ChMaterialSurface material, double radius, double hlen, ChVectorD pos, ChMatrix33D rot) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddCylindricalShell__SWIG_0(swigCPtr, ChMaterialSurface.getCPtr(material), radius, hlen, ChVectorD.getCPtr(pos), ChMatrix33D.getCPtr(rot));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddCylindricalShell__SWIG_0(swigCPtr, ChMaterialSurface.getCPtr(material), radius, hlen, ChVectorD.getCPtr(pos), ChMatrix33D.getCPtr(rot));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddCylindricalShell(ChMaterialSurface material, double radius, double hlen, ChVectorD pos) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddCylindricalShell__SWIG_1(swigCPtr, ChMaterialSurface.getCPtr(material), radius, hlen, ChVectorD.getCPtr(pos));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddCylindricalShell__SWIG_1(swigCPtr, ChMaterialSurface.getCPtr(material), radius, hlen, ChVectorD.getCPtr(pos));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddCylindricalShell(ChMaterialSurface material, double radius, double hlen) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddCylindricalShell__SWIG_2(swigCPtr, ChMaterialSurface.getCPtr(material), radius, hlen);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddCylindricalShell__SWIG_2(swigCPtr, ChMaterialSurface.getCPtr(material), radius, hlen);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddCone(ChMaterialSurface material, double rx, double rz, double hy, ChVectorD pos, ChMatrix33D rot) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddCone__SWIG_0(swigCPtr, ChMaterialSurface.getCPtr(material), rx, rz, hy, ChVectorD.getCPtr(pos), ChMatrix33D.getCPtr(rot));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddCone__SWIG_0(swigCPtr, ChMaterialSurface.getCPtr(material), rx, rz, hy, ChVectorD.getCPtr(pos), ChMatrix33D.getCPtr(rot));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddCone(ChMaterialSurface material, double rx, double rz, double hy, ChVectorD pos) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddCone__SWIG_1(swigCPtr, ChMaterialSurface.getCPtr(material), rx, rz, hy, ChVectorD.getCPtr(pos));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddCone__SWIG_1(swigCPtr, ChMaterialSurface.getCPtr(material), rx, rz, hy, ChVectorD.getCPtr(pos));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddCone(ChMaterialSurface material, double rx, double rz, double hy) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddCone__SWIG_2(swigCPtr, ChMaterialSurface.getCPtr(material), rx, rz, hy);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddCone__SWIG_2(swigCPtr, ChMaterialSurface.getCPtr(material), rx, rz, hy);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddCapsule(ChMaterialSurface material, double radius, double hlen, ChVectorD pos, ChMatrix33D rot) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddCapsule__SWIG_0(swigCPtr, ChMaterialSurface.getCPtr(material), radius, hlen, ChVectorD.getCPtr(pos), ChMatrix33D.getCPtr(rot));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddCapsule__SWIG_0(swigCPtr, ChMaterialSurface.getCPtr(material), radius, hlen, ChVectorD.getCPtr(pos), ChMatrix33D.getCPtr(rot));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddCapsule(ChMaterialSurface material, double radius, double hlen, ChVectorD pos) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddCapsule__SWIG_1(swigCPtr, ChMaterialSurface.getCPtr(material), radius, hlen, ChVectorD.getCPtr(pos));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddCapsule__SWIG_1(swigCPtr, ChMaterialSurface.getCPtr(material), radius, hlen, ChVectorD.getCPtr(pos));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddCapsule(ChMaterialSurface material, double radius, double hlen) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddCapsule__SWIG_2(swigCPtr, ChMaterialSurface.getCPtr(material), radius, hlen);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddCapsule__SWIG_2(swigCPtr, ChMaterialSurface.getCPtr(material), radius, hlen);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddRoundedBox(ChMaterialSurface material, double hx, double hy, double hz, double sphere_r, ChVectorD pos, ChMatrix33D rot) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddRoundedBox__SWIG_0(swigCPtr, ChMaterialSurface.getCPtr(material), hx, hy, hz, sphere_r, ChVectorD.getCPtr(pos), ChMatrix33D.getCPtr(rot));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddRoundedBox__SWIG_0(swigCPtr, ChMaterialSurface.getCPtr(material), hx, hy, hz, sphere_r, ChVectorD.getCPtr(pos), ChMatrix33D.getCPtr(rot));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddRoundedBox(ChMaterialSurface material, double hx, double hy, double hz, double sphere_r, ChVectorD pos) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddRoundedBox__SWIG_1(swigCPtr, ChMaterialSurface.getCPtr(material), hx, hy, hz, sphere_r, ChVectorD.getCPtr(pos));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddRoundedBox__SWIG_1(swigCPtr, ChMaterialSurface.getCPtr(material), hx, hy, hz, sphere_r, ChVectorD.getCPtr(pos));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddRoundedBox(ChMaterialSurface material, double hx, double hy, double hz, double sphere_r) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddRoundedBox__SWIG_2(swigCPtr, ChMaterialSurface.getCPtr(material), hx, hy, hz, sphere_r);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddRoundedBox__SWIG_2(swigCPtr, ChMaterialSurface.getCPtr(material), hx, hy, hz, sphere_r);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddRoundedCylinder(ChMaterialSurface material, double rx, double rz, double hy, double sphere_r, ChVectorD pos, ChMatrix33D rot) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddRoundedCylinder__SWIG_0(swigCPtr, ChMaterialSurface.getCPtr(material), rx, rz, hy, sphere_r, ChVectorD.getCPtr(pos), ChMatrix33D.getCPtr(rot));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddRoundedCylinder__SWIG_0(swigCPtr, ChMaterialSurface.getCPtr(material), rx, rz, hy, sphere_r, ChVectorD.getCPtr(pos), ChMatrix33D.getCPtr(rot));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddRoundedCylinder(ChMaterialSurface material, double rx, double rz, double hy, double sphere_r, ChVectorD pos) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddRoundedCylinder__SWIG_1(swigCPtr, ChMaterialSurface.getCPtr(material), rx, rz, hy, sphere_r, ChVectorD.getCPtr(pos));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddRoundedCylinder__SWIG_1(swigCPtr, ChMaterialSurface.getCPtr(material), rx, rz, hy, sphere_r, ChVectorD.getCPtr(pos));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddRoundedCylinder(ChMaterialSurface material, double rx, double rz, double hy, double sphere_r) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddRoundedCylinder__SWIG_2(swigCPtr, ChMaterialSurface.getCPtr(material), rx, rz, hy, sphere_r);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddRoundedCylinder__SWIG_2(swigCPtr, ChMaterialSurface.getCPtr(material), rx, rz, hy, sphere_r);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddRoundedCone(ChMaterialSurface material, double rx, double rz, double hy, double sphere_r, ChVectorD pos, ChMatrix33D rot) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddRoundedCone__SWIG_0(swigCPtr, ChMaterialSurface.getCPtr(material), rx, rz, hy, sphere_r, ChVectorD.getCPtr(pos), ChMatrix33D.getCPtr(rot));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddRoundedCone__SWIG_0(swigCPtr, ChMaterialSurface.getCPtr(material), rx, rz, hy, sphere_r, ChVectorD.getCPtr(pos), ChMatrix33D.getCPtr(rot));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddRoundedCone(ChMaterialSurface material, double rx, double rz, double hy, double sphere_r, ChVectorD pos) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddRoundedCone__SWIG_1(swigCPtr, ChMaterialSurface.getCPtr(material), rx, rz, hy, sphere_r, ChVectorD.getCPtr(pos));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddRoundedCone__SWIG_1(swigCPtr, ChMaterialSurface.getCPtr(material), rx, rz, hy, sphere_r, ChVectorD.getCPtr(pos));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddRoundedCone(ChMaterialSurface material, double rx, double rz, double hy, double sphere_r) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddRoundedCone__SWIG_2(swigCPtr, ChMaterialSurface.getCPtr(material), rx, rz, hy, sphere_r);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddRoundedCone__SWIG_2(swigCPtr, ChMaterialSurface.getCPtr(material), rx, rz, hy, sphere_r);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddConvexHull(ChMaterialSurface material, vector_ChVectorD pointlist, ChVectorD pos, ChMatrix33D rot) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddConvexHull__SWIG_0(swigCPtr, ChMaterialSurface.getCPtr(material), vector_ChVectorD.getCPtr(pointlist), ChVectorD.getCPtr(pos), ChMatrix33D.getCPtr(rot));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddConvexHull__SWIG_0(swigCPtr, ChMaterialSurface.getCPtr(material), vector_ChVectorD.getCPtr(pointlist), ChVectorD.getCPtr(pos), ChMatrix33D.getCPtr(rot));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddConvexHull(ChMaterialSurface material, vector_ChVectorD pointlist, ChVectorD pos) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddConvexHull__SWIG_1(swigCPtr, ChMaterialSurface.getCPtr(material), vector_ChVectorD.getCPtr(pointlist), ChVectorD.getCPtr(pos));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddConvexHull__SWIG_1(swigCPtr, ChMaterialSurface.getCPtr(material), vector_ChVectorD.getCPtr(pointlist), ChVectorD.getCPtr(pos));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddConvexHull(ChMaterialSurface material, vector_ChVectorD pointlist) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddConvexHull__SWIG_2(swigCPtr, ChMaterialSurface.getCPtr(material), vector_ChVectorD.getCPtr(pointlist));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddConvexHull__SWIG_2(swigCPtr, ChMaterialSurface.getCPtr(material), vector_ChVectorD.getCPtr(pointlist));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddTriangleMesh(ChMaterialSurface material, ChTriangleMesh trimesh, bool is_static, bool is_convex, ChVectorD pos, ChMatrix33D rot, double sphereswept_thickness) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddTriangleMesh__SWIG_0(swigCPtr, ChMaterialSurface.getCPtr(material), ChTriangleMesh.getCPtr(trimesh), is_static, is_convex, ChVectorD.getCPtr(pos), ChMatrix33D.getCPtr(rot), sphereswept_thickness);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddTriangleMesh__SWIG_0(swigCPtr, ChMaterialSurface.getCPtr(material), ChTriangleMesh.getCPtr(trimesh), is_static, is_convex, ChVectorD.getCPtr(pos), ChMatrix33D.getCPtr(rot), sphereswept_thickness);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddTriangleMesh(ChMaterialSurface material, ChTriangleMesh trimesh, bool is_static, bool is_convex, ChVectorD pos, ChMatrix33D rot) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddTriangleMesh__SWIG_1(swigCPtr, ChMaterialSurface.getCPtr(material), ChTriangleMesh.getCPtr(trimesh), is_static, is_convex, ChVectorD.getCPtr(pos), ChMatrix33D.getCPtr(rot));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddTriangleMesh__SWIG_1(swigCPtr, ChMaterialSurface.getCPtr(material), ChTriangleMesh.getCPtr(trimesh), is_static, is_convex, ChVectorD.getCPtr(pos), ChMatrix33D.getCPtr(rot));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddTriangleMesh(ChMaterialSurface material, ChTriangleMesh trimesh, bool is_static, bool is_convex, ChVectorD pos) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddTriangleMesh__SWIG_2(swigCPtr, ChMaterialSurface.getCPtr(material), ChTriangleMesh.getCPtr(trimesh), is_static, is_convex, ChVectorD.getCPtr(pos));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddTriangleMesh__SWIG_2(swigCPtr, ChMaterialSurface.getCPtr(material), ChTriangleMesh.getCPtr(trimesh), is_static, is_convex, ChVectorD.getCPtr(pos));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddTriangleMesh(ChMaterialSurface material, ChTriangleMesh trimesh, bool is_static, bool is_convex) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddTriangleMesh__SWIG_3(swigCPtr, ChMaterialSurface.getCPtr(material), ChTriangleMesh.getCPtr(trimesh), is_static, is_convex);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddTriangleMesh__SWIG_3(swigCPtr, ChMaterialSurface.getCPtr(material), ChTriangleMesh.getCPtr(trimesh), is_static, is_convex);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddBarrel(ChMaterialSurface material, double Y_low, double Y_high, double R_vert, double R_hor, double R_offset, ChVectorD pos, ChMatrix33D rot) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddBarrel__SWIG_0(swigCPtr, ChMaterialSurface.getCPtr(material), Y_low, Y_high, R_vert, R_hor, R_offset, ChVectorD.getCPtr(pos), ChMatrix33D.getCPtr(rot));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddBarrel__SWIG_0(swigCPtr, ChMaterialSurface.getCPtr(material), Y_low, Y_high, R_vert, R_hor, R_offset, ChVectorD.getCPtr(pos), ChMatrix33D.getCPtr(rot));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddBarrel(ChMaterialSurface material, double Y_low, double Y_high, double R_vert, double R_hor, double R_offset, ChVectorD pos) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddBarrel__SWIG_1(swigCPtr, ChMaterialSurface.getCPtr(material), Y_low, Y_high, R_vert, R_hor, R_offset, ChVectorD.getCPtr(pos));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddBarrel__SWIG_1(swigCPtr, ChMaterialSurface.getCPtr(material), Y_low, Y_high, R_vert, R_hor, R_offset, ChVectorD.getCPtr(pos));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddBarrel(ChMaterialSurface material, double Y_low, double Y_high, double R_vert, double R_hor, double R_offset) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddBarrel__SWIG_2(swigCPtr, ChMaterialSurface.getCPtr(material), Y_low, Y_high, R_vert, R_hor, R_offset);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddBarrel__SWIG_2(swigCPtr, ChMaterialSurface.getCPtr(material), Y_low, Y_high, R_vert, R_hor, R_offset);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool Add2Dpath(ChMaterialSurface material, ChLinePath mpath, ChVectorD pos, ChMatrix33D rot, double thickness) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_Add2Dpath__SWIG_0(swigCPtr, ChMaterialSurface.getCPtr(material), ChLinePath.getCPtr(mpath), ChVectorD.getCPtr(pos), ChMatrix33D.getCPtr(rot), thickness);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_Add2Dpath__SWIG_0(swigCPtr, ChMaterialSurface.getCPtr(material), ChLinePath.getCPtr(mpath), ChVectorD.getCPtr(pos), ChMatrix33D.getCPtr(rot), thickness);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool Add2Dpath(ChMaterialSurface material, ChLinePath mpath, ChVectorD pos, ChMatrix33D rot) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_Add2Dpath__SWIG_1(swigCPtr, ChMaterialSurface.getCPtr(material), ChLinePath.getCPtr(mpath), ChVectorD.getCPtr(pos), ChMatrix33D.getCPtr(rot));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_Add2Dpath__SWIG_1(swigCPtr, ChMaterialSurface.getCPtr(material), ChLinePath.getCPtr(mpath), ChVectorD.getCPtr(pos), ChMatrix33D.getCPtr(rot));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool Add2Dpath(ChMaterialSurface material, ChLinePath mpath, ChVectorD pos) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_Add2Dpath__SWIG_2(swigCPtr, ChMaterialSurface.getCPtr(material), ChLinePath.getCPtr(mpath), ChVectorD.getCPtr(pos));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_Add2Dpath__SWIG_2(swigCPtr, ChMaterialSurface.getCPtr(material), ChLinePath.getCPtr(mpath), ChVectorD.getCPtr(pos));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool Add2Dpath(ChMaterialSurface material, ChLinePath mpath) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_Add2Dpath__SWIG_3(swigCPtr, ChMaterialSurface.getCPtr(material), ChLinePath.getCPtr(mpath));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_Add2Dpath__SWIG_3(swigCPtr, ChMaterialSurface.getCPtr(material), ChLinePath.getCPtr(mpath));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddPoint(ChMaterialSurface material, double radius, ChVectorD pos) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddPoint__SWIG_0(swigCPtr, ChMaterialSurface.getCPtr(material), radius, ChVectorD.getCPtr(pos));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddPoint__SWIG_0(swigCPtr, ChMaterialSurface.getCPtr(material), radius, ChVectorD.getCPtr(pos));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddPoint(ChMaterialSurface material, double radius) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddPoint__SWIG_1(swigCPtr, ChMaterialSurface.getCPtr(material), radius);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddPoint__SWIG_1(swigCPtr, ChMaterialSurface.getCPtr(material), radius);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddPoint(ChMaterialSurface material) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddPoint__SWIG_2(swigCPtr, ChMaterialSurface.getCPtr(material));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddPoint__SWIG_2(swigCPtr, ChMaterialSurface.getCPtr(material));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddCopyOfAnotherModel(ChCollisionModel another) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddCopyOfAnotherModel(swigCPtr, ChCollisionModel.getCPtr(another));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddCopyOfAnotherModel(swigCPtr, ChCollisionModel.getCPtr(another));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddConvexHullsFromFile(ChMaterialSurface material, ChStreamInAscii mstream, ChVectorD pos, ChMatrix33D rot) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddConvexHullsFromFile__SWIG_0(swigCPtr, ChMaterialSurface.getCPtr(material), ChStreamInAscii.getCPtr(mstream), ChVectorD.getCPtr(pos), ChMatrix33D.getCPtr(rot));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddConvexHullsFromFile__SWIG_0(swigCPtr, ChMaterialSurface.getCPtr(material), ChStreamInAscii.getCPtr(mstream), ChVectorD.getCPtr(pos), ChMatrix33D.getCPtr(rot));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddConvexHullsFromFile(ChMaterialSurface material, ChStreamInAscii mstream, ChVectorD pos) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddConvexHullsFromFile__SWIG_1(swigCPtr, ChMaterialSurface.getCPtr(material), ChStreamInAscii.getCPtr(mstream), ChVectorD.getCPtr(pos));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddConvexHullsFromFile__SWIG_1(swigCPtr, ChMaterialSurface.getCPtr(material), ChStreamInAscii.getCPtr(mstream), ChVectorD.getCPtr(pos));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool AddConvexHullsFromFile(ChMaterialSurface material, ChStreamInAscii mstream) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_AddConvexHullsFromFile__SWIG_2(swigCPtr, ChMaterialSurface.getCPtr(material), ChStreamInAscii.getCPtr(mstream));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_AddConvexHullsFromFile__SWIG_2(swigCPtr, ChMaterialSurface.getCPtr(material), ChStreamInAscii.getCPtr(mstream));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public SWIGTYPE_p_ChContactable GetContactable() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChCollisionModel_GetContactable(swigCPtr);
+    global::System.IntPtr cPtr = corePINVOKE.ChCollisionModel_GetContactable(swigCPtr);
     SWIGTYPE_p_ChContactable ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_ChContactable(cPtr, false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void SetContactable(SWIGTYPE_p_ChContactable mc) {
-    ChronoEngine_csharpPINVOKE.ChCollisionModel_SetContactable(swigCPtr, SWIGTYPE_p_ChContactable.getCPtr(mc));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChCollisionModel_SetContactable(swigCPtr, SWIGTYPE_p_ChContactable.getCPtr(mc));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual ChPhysicsItem GetPhysicsItem() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChCollisionModel_GetPhysicsItem(swigCPtr);
+    global::System.IntPtr cPtr = corePINVOKE.ChCollisionModel_GetPhysicsItem(swigCPtr);
     ChPhysicsItem ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChPhysicsItem(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void SyncPosition() {
-    ChronoEngine_csharpPINVOKE.ChCollisionModel_SyncPosition(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChCollisionModel_SyncPosition(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void SetFamily(int mfamily) {
-    ChronoEngine_csharpPINVOKE.ChCollisionModel_SetFamily(swigCPtr, mfamily);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChCollisionModel_SetFamily(swigCPtr, mfamily);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual int GetFamily() {
-    int ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_GetFamily(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChCollisionModel_GetFamily(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void SetFamilyMaskNoCollisionWithFamily(int mfamily) {
-    ChronoEngine_csharpPINVOKE.ChCollisionModel_SetFamilyMaskNoCollisionWithFamily(swigCPtr, mfamily);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChCollisionModel_SetFamilyMaskNoCollisionWithFamily(swigCPtr, mfamily);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void SetFamilyMaskDoCollisionWithFamily(int mfamily) {
-    ChronoEngine_csharpPINVOKE.ChCollisionModel_SetFamilyMaskDoCollisionWithFamily(swigCPtr, mfamily);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChCollisionModel_SetFamilyMaskDoCollisionWithFamily(swigCPtr, mfamily);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual bool GetFamilyMaskDoesCollisionWithFamily(int mfamily) {
-    bool ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_GetFamilyMaskDoesCollisionWithFamily(swigCPtr, mfamily);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChCollisionModel_GetFamilyMaskDoesCollisionWithFamily(swigCPtr, mfamily);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual short GetFamilyGroup() {
-    short ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_GetFamilyGroup(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    short ret = corePINVOKE.ChCollisionModel_GetFamilyGroup(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void SetFamilyGroup(short group) {
-    ChronoEngine_csharpPINVOKE.ChCollisionModel_SetFamilyGroup(swigCPtr, group);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChCollisionModel_SetFamilyGroup(swigCPtr, group);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual short GetFamilyMask() {
-    short ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_GetFamilyMask(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    short ret = corePINVOKE.ChCollisionModel_GetFamilyMask(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void SetFamilyMask(short mask) {
-    ChronoEngine_csharpPINVOKE.ChCollisionModel_SetFamilyMask(swigCPtr, mask);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChCollisionModel_SetFamilyMask(swigCPtr, mask);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void SetSafeMargin(double amargin) {
-    ChronoEngine_csharpPINVOKE.ChCollisionModel_SetSafeMargin(swigCPtr, amargin);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChCollisionModel_SetSafeMargin(swigCPtr, amargin);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual float GetSafeMargin() {
-    float ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_GetSafeMargin(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    float ret = corePINVOKE.ChCollisionModel_GetSafeMargin(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void SetEnvelope(double amargin) {
-    ChronoEngine_csharpPINVOKE.ChCollisionModel_SetEnvelope(swigCPtr, amargin);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChCollisionModel_SetEnvelope(swigCPtr, amargin);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual float GetEnvelope() {
-    float ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_GetEnvelope(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    float ret = corePINVOKE.ChCollisionModel_GetEnvelope(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static void SetDefaultSuggestedEnvelope(double menv) {
-    ChronoEngine_csharpPINVOKE.ChCollisionModel_SetDefaultSuggestedEnvelope(menv);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChCollisionModel_SetDefaultSuggestedEnvelope(menv);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public static void SetDefaultSuggestedMargin(double mmargin) {
-    ChronoEngine_csharpPINVOKE.ChCollisionModel_SetDefaultSuggestedMargin(mmargin);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChCollisionModel_SetDefaultSuggestedMargin(mmargin);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public static double GetDefaultSuggestedEnvelope() {
-    double ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_GetDefaultSuggestedEnvelope();
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChCollisionModel_GetDefaultSuggestedEnvelope();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static double GetDefaultSuggestedMargin() {
-    double ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_GetDefaultSuggestedMargin();
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChCollisionModel_GetDefaultSuggestedMargin();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void GetAABB(ChVectorD bbmin, ChVectorD bbmax) {
-    ChronoEngine_csharpPINVOKE.ChCollisionModel_GetAABB(swigCPtr, ChVectorD.getCPtr(bbmin), ChVectorD.getCPtr(bbmax));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChCollisionModel_GetAABB(swigCPtr, ChVectorD.getCPtr(bbmin), ChVectorD.getCPtr(bbmax));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void ArchiveOUT(SWIGTYPE_p_ChArchiveOut marchive) {
-    ChronoEngine_csharpPINVOKE.ChCollisionModel_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChCollisionModel_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn marchive) {
-    ChronoEngine_csharpPINVOKE.ChCollisionModel_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChCollisionModel_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public int GetNumShapes() {
-    int ret = ChronoEngine_csharpPINVOKE.ChCollisionModel_GetNumShapes(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    int ret = corePINVOKE.ChCollisionModel_GetNumShapes(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public SWIGTYPE_p_std__vectorT_std__shared_ptrT_ChCollisionShape_t_t GetShapes() {
-    SWIGTYPE_p_std__vectorT_std__shared_ptrT_ChCollisionShape_t_t ret = new SWIGTYPE_p_std__vectorT_std__shared_ptrT_ChCollisionShape_t_t(ChronoEngine_csharpPINVOKE.ChCollisionModel_GetShapes(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    SWIGTYPE_p_std__vectorT_std__shared_ptrT_ChCollisionShape_t_t ret = new SWIGTYPE_p_std__vectorT_std__shared_ptrT_ChCollisionShape_t_t(corePINVOKE.ChCollisionModel_GetShapes(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public SWIGTYPE_p_std__shared_ptrT_ChCollisionShape_t GetShape(int index) {
-    SWIGTYPE_p_std__shared_ptrT_ChCollisionShape_t ret = new SWIGTYPE_p_std__shared_ptrT_ChCollisionShape_t(ChronoEngine_csharpPINVOKE.ChCollisionModel_GetShape(swigCPtr, index), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    SWIGTYPE_p_std__shared_ptrT_ChCollisionShape_t ret = new SWIGTYPE_p_std__shared_ptrT_ChCollisionShape_t(corePINVOKE.ChCollisionModel_GetShape(swigCPtr, index), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual ChCoordsysD GetShapePos(int index) {
-    ChCoordsysD ret = new ChCoordsysD(ChronoEngine_csharpPINVOKE.ChCollisionModel_GetShapePos(swigCPtr, index), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChCoordsysD ret = new ChCoordsysD(corePINVOKE.ChCollisionModel_GetShapePos(swigCPtr, index), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual SWIGTYPE_p_std__vectorT_double_t GetShapeDimensions(int index) {
-    SWIGTYPE_p_std__vectorT_double_t ret = new SWIGTYPE_p_std__vectorT_double_t(ChronoEngine_csharpPINVOKE.ChCollisionModel_GetShapeDimensions(swigCPtr, index), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    SWIGTYPE_p_std__vectorT_double_t ret = new SWIGTYPE_p_std__vectorT_double_t(corePINVOKE.ChCollisionModel_GetShapeDimensions(swigCPtr, index), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetShapeMaterial(int index, ChMaterialSurface mat) {
-    ChronoEngine_csharpPINVOKE.ChCollisionModel_SetShapeMaterial(swigCPtr, index, ChMaterialSurface.getCPtr(mat));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChCollisionModel_SetShapeMaterial(swigCPtr, index, ChMaterialSurface.getCPtr(mat));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetAllShapesMaterial(ChMaterialSurface mat) {
-    ChronoEngine_csharpPINVOKE.ChCollisionModel_SetAllShapesMaterial(swigCPtr, ChMaterialSurface.getCPtr(mat));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChCollisionModel_SetAllShapesMaterial(swigCPtr, ChMaterialSurface.getCPtr(mat));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

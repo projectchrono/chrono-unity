@@ -36,11 +36,17 @@ public class TorqueFunctor : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnBase) {
           swigCMemOwnBase = false;
-          ChronoEngine_csharpPINVOKE.delete_TorqueFunctor(swigCPtr);
+          corePINVOKE.delete_TorqueFunctor(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
+  }
+
+  public virtual double evaluate(double time, double angle, double vel, ChLinkRSDA link) {
+    double ret = corePINVOKE.TorqueFunctor_evaluate(swigCPtr, time, angle, vel, ChLinkRSDA.getCPtr(link));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
   }
 
 }

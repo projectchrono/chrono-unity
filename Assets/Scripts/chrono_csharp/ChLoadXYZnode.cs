@@ -13,7 +13,7 @@ public class ChLoadXYZnode : LoadLoaderXYZnode {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChLoadXYZnode(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChLoadXYZnode_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChLoadXYZnode(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChLoadXYZnode_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChLoadXYZnode : LoadLoaderXYZnode {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChLoadXYZnode(swigCPtr);
+          corePINVOKE.delete_ChLoadXYZnode(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,8 +35,8 @@ public class ChLoadXYZnode : LoadLoaderXYZnode {
     }
   }
 
-  public ChLoadXYZnode(SWIGTYPE_p_std__shared_ptrT_ChNodeXYZ_t mloadable) : this(ChronoEngine_csharpPINVOKE.new_ChLoadXYZnode(SWIGTYPE_p_std__shared_ptrT_ChNodeXYZ_t.getCPtr(mloadable)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChLoadXYZnode(ChNodeXYZ mloadable) : this(corePINVOKE.new_ChLoadXYZnode(ChNodeXYZ.getCPtr(mloadable)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

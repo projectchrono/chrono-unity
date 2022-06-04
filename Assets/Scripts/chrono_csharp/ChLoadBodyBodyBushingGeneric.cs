@@ -13,7 +13,7 @@ public class ChLoadBodyBodyBushingGeneric : ChLoadBodyBody {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChLoadBodyBodyBushingGeneric(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChLoadBodyBodyBushingGeneric_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChLoadBodyBodyBushingGeneric(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChLoadBodyBodyBushingGeneric_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChLoadBodyBodyBushingGeneric : ChLoadBodyBody {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChLoadBodyBodyBushingGeneric(swigCPtr);
+          corePINVOKE.delete_ChLoadBodyBodyBushingGeneric(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,64 +35,57 @@ public class ChLoadBodyBodyBushingGeneric : ChLoadBodyBody {
     }
   }
 
-  public ChLoadBodyBodyBushingGeneric(ChBody mbodyA, ChBody mbodyB, ChFrameD abs_application, SWIGTYPE_p_Eigen__RefT_Eigen__MatrixT_double_Eigen__Dynamic_Eigen__Dynamic_Eigen__RowMajor_t_const_t mstiffness, SWIGTYPE_p_Eigen__RefT_Eigen__MatrixT_double_Eigen__Dynamic_Eigen__Dynamic_Eigen__RowMajor_t_const_t mdamping) : this(ChronoEngine_csharpPINVOKE.new_ChLoadBodyBodyBushingGeneric(ChBody.getCPtr(mbodyA), ChBody.getCPtr(mbodyB), ChFrameD.getCPtr(abs_application), SWIGTYPE_p_Eigen__RefT_Eigen__MatrixT_double_Eigen__Dynamic_Eigen__Dynamic_Eigen__RowMajor_t_const_t.getCPtr(mstiffness), SWIGTYPE_p_Eigen__RefT_Eigen__MatrixT_double_Eigen__Dynamic_Eigen__Dynamic_Eigen__RowMajor_t_const_t.getCPtr(mdamping)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public override ChObj Clone() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChLoadBodyBodyBushingGeneric_Clone(swigCPtr);
-    ChLoadBodyBodyBushingGeneric ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChLoadBodyBodyBushingGeneric(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
+  public ChLoadBodyBodyBushingGeneric(ChBody mbodyA, ChBody mbodyB, ChFrameD abs_application, SWIGTYPE_p_Eigen__RefT_Eigen__MatrixT_double_Eigen__Dynamic_Eigen__Dynamic_Eigen__RowMajor_t_const_t mstiffness, SWIGTYPE_p_Eigen__RefT_Eigen__MatrixT_double_Eigen__Dynamic_Eigen__Dynamic_Eigen__RowMajor_t_const_t mdamping) : this(corePINVOKE.new_ChLoadBodyBodyBushingGeneric(ChBody.getCPtr(mbodyA), ChBody.getCPtr(mbodyB), ChFrameD.getCPtr(abs_application), SWIGTYPE_p_Eigen__RefT_Eigen__MatrixT_double_Eigen__Dynamic_Eigen__Dynamic_Eigen__RowMajor_t_const_t.getCPtr(mstiffness), SWIGTYPE_p_Eigen__RefT_Eigen__MatrixT_double_Eigen__Dynamic_Eigen__Dynamic_Eigen__RowMajor_t_const_t.getCPtr(mdamping)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetStiffnessMatrix(SWIGTYPE_p_Eigen__RefT_Eigen__MatrixT_double_Eigen__Dynamic_Eigen__Dynamic_Eigen__RowMajor_t_const_t mstiffness) {
-    ChronoEngine_csharpPINVOKE.ChLoadBodyBodyBushingGeneric_SetStiffnessMatrix(swigCPtr, SWIGTYPE_p_Eigen__RefT_Eigen__MatrixT_double_Eigen__Dynamic_Eigen__Dynamic_Eigen__RowMajor_t_const_t.getCPtr(mstiffness));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoadBodyBodyBushingGeneric_SetStiffnessMatrix(swigCPtr, SWIGTYPE_p_Eigen__RefT_Eigen__MatrixT_double_Eigen__Dynamic_Eigen__Dynamic_Eigen__RowMajor_t_const_t.getCPtr(mstiffness));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public SWIGTYPE_p_chrono__ChMatrixNMT_double_6_6_t GetStiffnessMatrix() {
-    SWIGTYPE_p_chrono__ChMatrixNMT_double_6_6_t ret = new SWIGTYPE_p_chrono__ChMatrixNMT_double_6_6_t(ChronoEngine_csharpPINVOKE.ChLoadBodyBodyBushingGeneric_GetStiffnessMatrix(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    SWIGTYPE_p_chrono__ChMatrixNMT_double_6_6_t ret = new SWIGTYPE_p_chrono__ChMatrixNMT_double_6_6_t(corePINVOKE.ChLoadBodyBodyBushingGeneric_GetStiffnessMatrix(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetDampingMatrix(SWIGTYPE_p_Eigen__RefT_Eigen__MatrixT_double_Eigen__Dynamic_Eigen__Dynamic_Eigen__RowMajor_t_const_t mdamping) {
-    ChronoEngine_csharpPINVOKE.ChLoadBodyBodyBushingGeneric_SetDampingMatrix(swigCPtr, SWIGTYPE_p_Eigen__RefT_Eigen__MatrixT_double_Eigen__Dynamic_Eigen__Dynamic_Eigen__RowMajor_t_const_t.getCPtr(mdamping));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoadBodyBodyBushingGeneric_SetDampingMatrix(swigCPtr, SWIGTYPE_p_Eigen__RefT_Eigen__MatrixT_double_Eigen__Dynamic_Eigen__Dynamic_Eigen__RowMajor_t_const_t.getCPtr(mdamping));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public SWIGTYPE_p_chrono__ChMatrixNMT_double_6_6_t GetDampingMatrix() {
-    SWIGTYPE_p_chrono__ChMatrixNMT_double_6_6_t ret = new SWIGTYPE_p_chrono__ChMatrixNMT_double_6_6_t(ChronoEngine_csharpPINVOKE.ChLoadBodyBodyBushingGeneric_GetDampingMatrix(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    SWIGTYPE_p_chrono__ChMatrixNMT_double_6_6_t ret = new SWIGTYPE_p_chrono__ChMatrixNMT_double_6_6_t(corePINVOKE.ChLoadBodyBodyBushingGeneric_GetDampingMatrix(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetNeutralForce(ChVectorD mf) {
-    ChronoEngine_csharpPINVOKE.ChLoadBodyBodyBushingGeneric_SetNeutralForce(swigCPtr, ChVectorD.getCPtr(mf));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoadBodyBodyBushingGeneric_SetNeutralForce(swigCPtr, ChVectorD.getCPtr(mf));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public ChVectorD GetNeutralForce() {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChLoadBodyBodyBushingGeneric_GetNeutralForce(swigCPtr), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorD ret = new ChVectorD(corePINVOKE.ChLoadBodyBodyBushingGeneric_GetNeutralForce(swigCPtr), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetNeutralTorque(ChVectorD mt) {
-    ChronoEngine_csharpPINVOKE.ChLoadBodyBodyBushingGeneric_SetNeutralTorque(swigCPtr, ChVectorD.getCPtr(mt));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChLoadBodyBodyBushingGeneric_SetNeutralTorque(swigCPtr, ChVectorD.getCPtr(mt));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public ChVectorD GetNeutralTorque() {
-    ChVectorD ret = new ChVectorD(ChronoEngine_csharpPINVOKE.ChLoadBodyBodyBushingGeneric_GetNeutralTorque(swigCPtr), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChVectorD ret = new ChVectorD(corePINVOKE.ChLoadBodyBodyBushingGeneric_GetNeutralTorque(swigCPtr), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ChFrameD NeutralDisplacement() {
-    ChFrameD ret = new ChFrameD(ChronoEngine_csharpPINVOKE.ChLoadBodyBodyBushingGeneric_NeutralDisplacement(swigCPtr), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChFrameD ret = new ChFrameD(corePINVOKE.ChLoadBodyBodyBushingGeneric_NeutralDisplacement(swigCPtr), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

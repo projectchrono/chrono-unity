@@ -36,43 +36,43 @@ public class ChStreamVectorWrapper : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChStreamVectorWrapper(swigCPtr);
+          corePINVOKE.delete_ChStreamVectorWrapper(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public ChStreamVectorWrapper(SWIGTYPE_p_std__vectorT_char_t mchars) : this(ChronoEngine_csharpPINVOKE.new_ChStreamVectorWrapper(SWIGTYPE_p_std__vectorT_char_t.getCPtr(mchars)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChStreamVectorWrapper(SWIGTYPE_p_std__vectorT_char_t mchars) : this(corePINVOKE.new_ChStreamVectorWrapper(SWIGTYPE_p_std__vectorT_char_t.getCPtr(mchars)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void Read(string data, uint n) {
-    ChronoEngine_csharpPINVOKE.ChStreamVectorWrapper_Read(swigCPtr, data, n);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChStreamVectorWrapper_Read(swigCPtr, data, n);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual void Write(string data, uint n) {
-    ChronoEngine_csharpPINVOKE.ChStreamVectorWrapper_Write(swigCPtr, data, n);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChStreamVectorWrapper_Write(swigCPtr, data, n);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual bool End_of_stream() {
-    bool ret = ChronoEngine_csharpPINVOKE.ChStreamVectorWrapper_End_of_stream(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChStreamVectorWrapper_End_of_stream(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public SWIGTYPE_p_std__vectorT_char_t GetVector() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChStreamVectorWrapper_GetVector(swigCPtr);
+    global::System.IntPtr cPtr = corePINVOKE.ChStreamVectorWrapper_GetVector(swigCPtr);
     SWIGTYPE_p_std__vectorT_char_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_char_t(cPtr, false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Seek(int position) {
-    ChronoEngine_csharpPINVOKE.ChStreamVectorWrapper_Seek(swigCPtr, position);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChStreamVectorWrapper_Seek(swigCPtr, position);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

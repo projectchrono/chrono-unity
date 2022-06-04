@@ -36,7 +36,7 @@ public class CustomCollisionCallback : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnBase) {
           swigCMemOwnBase = false;
-          ChronoEngine_csharpPINVOKE.delete_CustomCollisionCallback(swigCPtr);
+          corePINVOKE.delete_CustomCollisionCallback(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -44,19 +44,19 @@ public class CustomCollisionCallback : global::System.IDisposable {
   }
 
   public virtual void OnCustomCollision(ChSystem msys) {
-    if (SwigDerivedClassHasMethod("OnCustomCollision", swigMethodTypes0)) ChronoEngine_csharpPINVOKE.CustomCollisionCallback_OnCustomCollisionSwigExplicitCustomCollisionCallback(swigCPtr, ChSystem.getCPtr(msys)); else ChronoEngine_csharpPINVOKE.CustomCollisionCallback_OnCustomCollision(swigCPtr, ChSystem.getCPtr(msys));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("OnCustomCollision", swigMethodTypes0)) corePINVOKE.CustomCollisionCallback_OnCustomCollisionSwigExplicitCustomCollisionCallback(swigCPtr, ChSystem.getCPtr(msys)); else corePINVOKE.CustomCollisionCallback_OnCustomCollision(swigCPtr, ChSystem.getCPtr(msys));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public CustomCollisionCallback() : this(ChronoEngine_csharpPINVOKE.new_CustomCollisionCallback(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public CustomCollisionCallback() : this(corePINVOKE.new_CustomCollisionCallback(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     SwigDirectorConnect();
   }
 
   private void SwigDirectorConnect() {
     if (SwigDerivedClassHasMethod("OnCustomCollision", swigMethodTypes0))
       swigDelegate0 = new SwigDelegateCustomCollisionCallback_0(SwigDirectorMethodOnCustomCollision);
-    ChronoEngine_csharpPINVOKE.CustomCollisionCallback_director_connect(swigCPtr, swigDelegate0);
+    corePINVOKE.CustomCollisionCallback_director_connect(swigCPtr, swigDelegate0);
   }
 
   private bool SwigDerivedClassHasMethod(string methodName, global::System.Type[] methodTypes) {

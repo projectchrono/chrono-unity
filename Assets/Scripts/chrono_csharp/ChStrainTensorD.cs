@@ -12,7 +12,7 @@
 public class ChStrainTensorD : ChVoightTensorD {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
 
-  internal ChStrainTensorD(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChStrainTensorD_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal ChStrainTensorD(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChStrainTensorD_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
@@ -25,7 +25,7 @@ public class ChStrainTensorD : ChVoightTensorD {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChStrainTensorD(swigCPtr);
+          corePINVOKE.delete_ChStrainTensorD(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -33,18 +33,18 @@ public class ChStrainTensorD : ChVoightTensorD {
     }
   }
 
-  public ChStrainTensorD() : this(ChronoEngine_csharpPINVOKE.new_ChStrainTensorD(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChStrainTensorD() : this(corePINVOKE.new_ChStrainTensorD(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void ComputePrincipalStrains(SWIGTYPE_p_double e1, SWIGTYPE_p_double e2, SWIGTYPE_p_double e3) {
-    ChronoEngine_csharpPINVOKE.ChStrainTensorD_ComputePrincipalStrains(swigCPtr, SWIGTYPE_p_double.getCPtr(e1), SWIGTYPE_p_double.getCPtr(e2), SWIGTYPE_p_double.getCPtr(e3));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChStrainTensorD_ComputePrincipalStrains(swigCPtr, SWIGTYPE_p_double.getCPtr(e1), SWIGTYPE_p_double.getCPtr(e2), SWIGTYPE_p_double.getCPtr(e3));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void ComputePrincipalStrainsDirections(SWIGTYPE_p_double e1, SWIGTYPE_p_double e2, SWIGTYPE_p_double e3, ChVectorD dir1, ChVectorD dir2, ChVectorD dir3) {
-    ChronoEngine_csharpPINVOKE.ChStrainTensorD_ComputePrincipalStrainsDirections(swigCPtr, SWIGTYPE_p_double.getCPtr(e1), SWIGTYPE_p_double.getCPtr(e2), SWIGTYPE_p_double.getCPtr(e3), ChVectorD.getCPtr(dir1), ChVectorD.getCPtr(dir2), ChVectorD.getCPtr(dir3));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChStrainTensorD_ComputePrincipalStrainsDirections(swigCPtr, SWIGTYPE_p_double.getCPtr(e1), SWIGTYPE_p_double.getCPtr(e2), SWIGTYPE_p_double.getCPtr(e3), ChVectorD.getCPtr(dir1), ChVectorD.getCPtr(dir2), ChVectorD.getCPtr(dir3));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

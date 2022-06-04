@@ -57,8 +57,8 @@ public class ChDrivelineTV : ChDriveline {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public virtual void Synchronize(double steering, double torque) {
-    vehiclePINVOKE.ChDrivelineTV_Synchronize(swigCPtr, steering, torque);
+  public virtual void Synchronize(double time, DriverInputs driver_inputs, double torque) {
+    vehiclePINVOKE.ChDrivelineTV_Synchronize(swigCPtr, time, DriverInputs.getCPtr(driver_inputs), torque);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

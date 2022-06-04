@@ -76,7 +76,7 @@ public class UGator : UChVehicle
 
         gator.Initialize();
 
-        Debug.Log("Gator total mass: " + gator.GetTotalMass());
+        Debug.Log("Gator total mass: " + gator.GetVehicle().GetMass());
 
         // Get the vehicle components 
         foreach (Transform child in transform)
@@ -96,8 +96,8 @@ public class UGator : UChVehicle
 
     protected override void OnAdvance(double step)
     {
-        var vehicle_pos = gator.GetVehicle().GetVehiclePos();
-        var vehicle_rot = gator.GetVehicle().GetVehicleRot();
+        var vehicle_pos = gator.GetVehicle().GetPos();
+        var vehicle_rot = gator.GetVehicle().GetRot();
 
         var spindleFL_pos = gator.GetVehicle().GetSpindlePos(0, VehicleSide.LEFT);
         var spindleFL_rot = gator.GetVehicle().GetSpindleRot(0, VehicleSide.LEFT);

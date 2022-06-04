@@ -13,7 +13,7 @@ public class ChShaftsTorsionSpringDamper : ChShaftsLoad {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChShaftsTorsionSpringDamper(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChShaftsTorsionSpringDamper_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChShaftsTorsionSpringDamper(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChShaftsTorsionSpringDamper_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChShaftsTorsionSpringDamper : ChShaftsLoad {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChShaftsTorsionSpringDamper(swigCPtr);
+          corePINVOKE.delete_ChShaftsTorsionSpringDamper(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,47 +35,40 @@ public class ChShaftsTorsionSpringDamper : ChShaftsLoad {
     }
   }
 
-  public ChShaftsTorsionSpringDamper(ChShaft mbodyA, ChShaft mbodyB, double mstiffness, double mdamping) : this(ChronoEngine_csharpPINVOKE.new_ChShaftsTorsionSpringDamper(ChShaft.getCPtr(mbodyA), ChShaft.getCPtr(mbodyB), mstiffness, mdamping), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public override ChObj Clone() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChShaftsTorsionSpringDamper_Clone(swigCPtr);
-    ChShaftsTorsionSpringDamper ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChShaftsTorsionSpringDamper(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
+  public ChShaftsTorsionSpringDamper(ChShaft mbodyA, ChShaft mbodyB, double mstiffness, double mdamping) : this(corePINVOKE.new_ChShaftsTorsionSpringDamper(ChShaft.getCPtr(mbodyA), ChShaft.getCPtr(mbodyB), mstiffness, mdamping), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetTorsionalStiffness(double mstiffness) {
-    ChronoEngine_csharpPINVOKE.ChShaftsTorsionSpringDamper_SetTorsionalStiffness(swigCPtr, mstiffness);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChShaftsTorsionSpringDamper_SetTorsionalStiffness(swigCPtr, mstiffness);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double GetTorsionalStiffness() {
-    double ret = ChronoEngine_csharpPINVOKE.ChShaftsTorsionSpringDamper_GetTorsionalStiffness(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChShaftsTorsionSpringDamper_GetTorsionalStiffness(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetTorsionalDamping(double mdamping) {
-    ChronoEngine_csharpPINVOKE.ChShaftsTorsionSpringDamper_SetTorsionalDamping(swigCPtr, mdamping);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChShaftsTorsionSpringDamper_SetTorsionalDamping(swigCPtr, mdamping);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double GetTorsionalDamping() {
-    double ret = ChronoEngine_csharpPINVOKE.ChShaftsTorsionSpringDamper_GetTorsionalDamping(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChShaftsTorsionSpringDamper_GetTorsionalDamping(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetRestPhase(double mphase) {
-    ChronoEngine_csharpPINVOKE.ChShaftsTorsionSpringDamper_SetRestPhase(swigCPtr, mphase);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChShaftsTorsionSpringDamper_SetRestPhase(swigCPtr, mphase);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public double GetRestPhase() {
-    double ret = ChronoEngine_csharpPINVOKE.ChShaftsTorsionSpringDamper_GetRestPhase(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    double ret = corePINVOKE.ChShaftsTorsionSpringDamper_GetRestPhase(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

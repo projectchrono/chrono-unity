@@ -13,7 +13,7 @@ public class ChTimestepperIorder : ChTimestepper {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChTimestepperIorder(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChTimestepperIorder_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChTimestepperIorder(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChTimestepperIorder_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChTimestepperIorder : ChTimestepper {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChTimestepperIorder(swigCPtr);
+          corePINVOKE.delete_ChTimestepperIorder(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -36,20 +36,20 @@ public class ChTimestepperIorder : ChTimestepper {
   }
 
   public virtual ChState get_Y() {
-    ChState ret = new ChState(ChronoEngine_csharpPINVOKE.ChTimestepperIorder_get_Y(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChState ret = new ChState(corePINVOKE.ChTimestepperIorder_get_Y(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual ChStateDelta get_dYdt() {
-    ChStateDelta ret = new ChStateDelta(ChronoEngine_csharpPINVOKE.ChTimestepperIorder_get_dYdt(swigCPtr), false);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChStateDelta ret = new ChStateDelta(corePINVOKE.ChTimestepperIorder_get_dYdt(swigCPtr), false);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void SetIntegrable(ChIntegrable intgr) {
-    ChronoEngine_csharpPINVOKE.ChTimestepperIorder_SetIntegrable(swigCPtr, ChIntegrable.getCPtr(intgr));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChTimestepperIorder_SetIntegrable(swigCPtr, ChIntegrable.getCPtr(intgr));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

@@ -12,7 +12,7 @@
 public class ChStreamOutBinaryVector : ChStreamVectorWrapper {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
 
-  internal ChStreamOutBinaryVector(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChStreamOutBinaryVector_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal ChStreamOutBinaryVector(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChStreamOutBinaryVector_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
@@ -25,7 +25,7 @@ public class ChStreamOutBinaryVector : ChStreamVectorWrapper {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChStreamOutBinaryVector(swigCPtr);
+          corePINVOKE.delete_ChStreamOutBinaryVector(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -33,13 +33,13 @@ public class ChStreamOutBinaryVector : ChStreamVectorWrapper {
     }
   }
 
-  public ChStreamOutBinaryVector(SWIGTYPE_p_std__vectorT_char_t mchars) : this(ChronoEngine_csharpPINVOKE.new_ChStreamOutBinaryVector(SWIGTYPE_p_std__vectorT_char_t.getCPtr(mchars)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChStreamOutBinaryVector(SWIGTYPE_p_std__vectorT_char_t mchars) : this(corePINVOKE.new_ChStreamOutBinaryVector(SWIGTYPE_p_std__vectorT_char_t.getCPtr(mchars)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override bool End_of_stream() {
-    bool ret = ChronoEngine_csharpPINVOKE.ChStreamOutBinaryVector_End_of_stream(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChStreamOutBinaryVector_End_of_stream(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

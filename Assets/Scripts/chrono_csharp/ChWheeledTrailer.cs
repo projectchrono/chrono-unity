@@ -101,6 +101,11 @@ public class ChWheeledTrailer : global::System.IDisposable {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public void SetTireVisualizationType(VisualizationType vis) {
+    vehiclePINVOKE.ChWheeledTrailer_SetTireVisualizationType(swigCPtr, (int)vis);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
   public virtual void Initialize(ChChassis frontChassis) {
     vehiclePINVOKE.ChWheeledTrailer_Initialize(swigCPtr, ChChassis.getCPtr(frontChassis));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
@@ -121,8 +126,8 @@ public class ChWheeledTrailer : global::System.IDisposable {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void Synchronize(double time, double braking, ChTerrain terrain) {
-    vehiclePINVOKE.ChWheeledTrailer_Synchronize(swigCPtr, time, braking, ChTerrain.getCPtr(terrain));
+  public void Synchronize(double time, DriverInputs driver_inputs, ChTerrain terrain) {
+    vehiclePINVOKE.ChWheeledTrailer_Synchronize(swigCPtr, time, DriverInputs.getCPtr(driver_inputs), ChTerrain.getCPtr(terrain));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

@@ -60,6 +60,30 @@ public class ChPart : global::System.IDisposable {
     return ret;
   }
 
+  public double GetMass() {
+    double ret = vehiclePINVOKE.ChPart_GetMass(swigCPtr);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public SWIGTYPE_p_chrono__ChFrameT_double_t GetCOMFrame() {
+    SWIGTYPE_p_chrono__ChFrameT_double_t ret = new SWIGTYPE_p_chrono__ChFrameT_double_t(vehiclePINVOKE.ChPart_GetCOMFrame(swigCPtr), false);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public ChMatrix33D GetInertia() {
+    ChMatrix33D ret = new ChMatrix33D(vehiclePINVOKE.ChPart_GetInertia(swigCPtr), false);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public SWIGTYPE_p_chrono__ChFrameT_double_t GetTransform() {
+    SWIGTYPE_p_chrono__ChFrameT_double_t ret = new SWIGTYPE_p_chrono__ChFrameT_double_t(vehiclePINVOKE.ChPart_GetTransform(swigCPtr), false);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public void SetVisualizationType(VisualizationType vis) {
     vehiclePINVOKE.ChPart_SetVisualizationType(swigCPtr, (int)vis);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();

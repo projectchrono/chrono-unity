@@ -12,7 +12,7 @@
 public class ChStreamInBinaryStream : ChStreamIstreamWrapper {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
 
-  internal ChStreamInBinaryStream(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChStreamInBinaryStream_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal ChStreamInBinaryStream(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChStreamInBinaryStream_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
@@ -25,7 +25,7 @@ public class ChStreamInBinaryStream : ChStreamIstreamWrapper {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChStreamInBinaryStream(swigCPtr);
+          corePINVOKE.delete_ChStreamInBinaryStream(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -33,13 +33,13 @@ public class ChStreamInBinaryStream : ChStreamIstreamWrapper {
     }
   }
 
-  public ChStreamInBinaryStream(SWIGTYPE_p_std__istream mfile) : this(ChronoEngine_csharpPINVOKE.new_ChStreamInBinaryStream(SWIGTYPE_p_std__istream.getCPtr(mfile)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChStreamInBinaryStream(SWIGTYPE_p_std__istream mfile) : this(corePINVOKE.new_ChStreamInBinaryStream(SWIGTYPE_p_std__istream.getCPtr(mfile)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override bool End_of_stream() {
-    bool ret = ChronoEngine_csharpPINVOKE.ChStreamInBinaryStream_End_of_stream(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = corePINVOKE.ChStreamInBinaryStream_End_of_stream(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

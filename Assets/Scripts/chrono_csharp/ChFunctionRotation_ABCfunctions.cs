@@ -13,7 +13,7 @@ public class ChFunctionRotation_ABCfunctions : ChFunctionRotation {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChFunctionRotation_ABCfunctions(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChFunctionRotation_ABCfunctions_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChFunctionRotation_ABCfunctions(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChFunctionRotation_ABCfunctions_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChFunctionRotation_ABCfunctions : ChFunctionRotation {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChFunctionRotation_ABCfunctions(swigCPtr);
+          corePINVOKE.delete_ChFunctionRotation_ABCfunctions(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,82 +35,75 @@ public class ChFunctionRotation_ABCfunctions : ChFunctionRotation {
     }
   }
 
-  public ChFunctionRotation_ABCfunctions() : this(ChronoEngine_csharpPINVOKE.new_ChFunctionRotation_ABCfunctions__SWIG_0(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+  public ChFunctionRotation_ABCfunctions() : this(corePINVOKE.new_ChFunctionRotation_ABCfunctions__SWIG_0(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public ChFunctionRotation_ABCfunctions(ChFunctionRotation_ABCfunctions other) : this(ChronoEngine_csharpPINVOKE.new_ChFunctionRotation_ABCfunctions__SWIG_1(ChFunctionRotation_ABCfunctions.getCPtr(other)), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public override ChFunctionRotation Clone() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChFunctionRotation_ABCfunctions_Clone(swigCPtr);
-    ChFunctionRotation_ABCfunctions ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChFunctionRotation_ABCfunctions(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
+  public ChFunctionRotation_ABCfunctions(ChFunctionRotation_ABCfunctions other) : this(corePINVOKE.new_ChFunctionRotation_ABCfunctions__SWIG_1(ChFunctionRotation_ABCfunctions.getCPtr(other)), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetFunctionAngleA(ChFunction mx) {
-    ChronoEngine_csharpPINVOKE.ChFunctionRotation_ABCfunctions_SetFunctionAngleA(swigCPtr, ChFunction.getCPtr(mx));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChFunctionRotation_ABCfunctions_SetFunctionAngleA(swigCPtr, ChFunction.getCPtr(mx));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public ChFunction GetFunctionAngleA() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChFunctionRotation_ABCfunctions_GetFunctionAngleA(swigCPtr);
+    global::System.IntPtr cPtr = corePINVOKE.ChFunctionRotation_ABCfunctions_GetFunctionAngleA(swigCPtr);
     ChFunction ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChFunction(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetFunctionAngleB(ChFunction mx) {
-    ChronoEngine_csharpPINVOKE.ChFunctionRotation_ABCfunctions_SetFunctionAngleB(swigCPtr, ChFunction.getCPtr(mx));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChFunctionRotation_ABCfunctions_SetFunctionAngleB(swigCPtr, ChFunction.getCPtr(mx));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public ChFunction GetFunctionAngleB() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChFunctionRotation_ABCfunctions_GetFunctionAngleB(swigCPtr);
+    global::System.IntPtr cPtr = corePINVOKE.ChFunctionRotation_ABCfunctions_GetFunctionAngleB(swigCPtr);
     ChFunction ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChFunction(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetFunctionAngleC(ChFunction mx) {
-    ChronoEngine_csharpPINVOKE.ChFunctionRotation_ABCfunctions_SetFunctionAngleC(swigCPtr, ChFunction.getCPtr(mx));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChFunctionRotation_ABCfunctions_SetFunctionAngleC(swigCPtr, ChFunction.getCPtr(mx));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public ChFunction GetFunctionAngleC() {
-    global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChFunctionRotation_ABCfunctions_GetFunctionAngleC(swigCPtr);
+    global::System.IntPtr cPtr = corePINVOKE.ChFunctionRotation_ABCfunctions_GetFunctionAngleC(swigCPtr);
     ChFunction ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChFunction(cPtr, true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void SetAngleset(AngleSet mset) {
-    ChronoEngine_csharpPINVOKE.ChFunctionRotation_ABCfunctions_SetAngleset(swigCPtr, (int)mset);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChFunctionRotation_ABCfunctions_SetAngleset(swigCPtr, (int)mset);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public AngleSet GetAngleset() {
-    AngleSet ret = (AngleSet)ChronoEngine_csharpPINVOKE.ChFunctionRotation_ABCfunctions_GetAngleset(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    AngleSet ret = (AngleSet)corePINVOKE.ChFunctionRotation_ABCfunctions_GetAngleset(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override ChQuaternionD Get_q(double s) {
-    ChQuaternionD ret = new ChQuaternionD(ChronoEngine_csharpPINVOKE.ChFunctionRotation_ABCfunctions_Get_q(swigCPtr, s), true);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    ChQuaternionD ret = new ChQuaternionD(corePINVOKE.ChFunctionRotation_ABCfunctions_Get_q(swigCPtr, s), true);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void ArchiveOUT(SWIGTYPE_p_ChArchiveOut marchive) {
-    ChronoEngine_csharpPINVOKE.ChFunctionRotation_ABCfunctions_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChFunctionRotation_ABCfunctions_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public override void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn marchive) {
-    ChronoEngine_csharpPINVOKE.ChFunctionRotation_ABCfunctions_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+    corePINVOKE.ChFunctionRotation_ABCfunctions_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

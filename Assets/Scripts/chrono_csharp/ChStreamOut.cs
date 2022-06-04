@@ -12,7 +12,7 @@
 public class ChStreamOut : ChStream {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
 
-  internal ChStreamOut(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChStreamOut_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal ChStreamOut(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChStreamOut_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
@@ -25,7 +25,7 @@ public class ChStreamOut : ChStream {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ChronoEngine_csharpPINVOKE.delete_ChStreamOut(swigCPtr);
+          corePINVOKE.delete_ChStreamOut(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }

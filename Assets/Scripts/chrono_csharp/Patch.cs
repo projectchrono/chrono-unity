@@ -48,18 +48,18 @@ public class Patch : global::System.IDisposable {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void SetTexture(string tex_file, float tex_scale_x, float tex_scale_y) {
-    vehiclePINVOKE.Patch_SetTexture__SWIG_0(swigCPtr, tex_file, tex_scale_x, tex_scale_y);
+  public void SetTexture(string filename, float scale_x, float scale_y) {
+    vehiclePINVOKE.Patch_SetTexture__SWIG_0(swigCPtr, filename, scale_x, scale_y);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void SetTexture(string tex_file, float tex_scale_x) {
-    vehiclePINVOKE.Patch_SetTexture__SWIG_1(swigCPtr, tex_file, tex_scale_x);
+  public void SetTexture(string filename, float scale_x) {
+    vehiclePINVOKE.Patch_SetTexture__SWIG_1(swigCPtr, filename, scale_x);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void SetTexture(string tex_file) {
-    vehiclePINVOKE.Patch_SetTexture__SWIG_2(swigCPtr, tex_file);
+  public void SetTexture(string filename) {
+    vehiclePINVOKE.Patch_SetTexture__SWIG_2(swigCPtr, filename);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -68,6 +68,11 @@ public class Patch : global::System.IDisposable {
     ChBody ret = (cPtr == global::System.IntPtr.Zero) ? null : new ChBody(cPtr, true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
+  }
+
+  public virtual void Initialize() {
+    vehiclePINVOKE.Patch_Initialize(swigCPtr);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

@@ -137,6 +137,12 @@ public class ChTrackAssembly : ChPart {
     return ret;
   }
 
+  public ChVectorD GetTrackShoeTension(uint id) {
+    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChTrackAssembly_GetTrackShoeTension(swigCPtr, id), true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public BodyState GetTrackShoeState(uint id) {
     BodyState ret = new BodyState(vehiclePINVOKE.ChTrackAssembly_GetTrackShoeState(swigCPtr, id), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
@@ -146,12 +152,6 @@ public class ChTrackAssembly : ChPart {
   public void GetTrackShoeStates(SWIGTYPE_p_std__vectorT_chrono__vehicle__BodyState_t states) {
     vehiclePINVOKE.ChTrackAssembly_GetTrackShoeStates(swigCPtr, SWIGTYPE_p_std__vectorT_chrono__vehicle__BodyState_t.getCPtr(states));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public double GetMass() {
-    double ret = vehiclePINVOKE.ChTrackAssembly_GetMass(swigCPtr);
-    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
   }
 
   public virtual ChVectorD GetSprocketLocation() {
@@ -186,6 +186,18 @@ public class ChTrackAssembly : ChPart {
   public void Initialize(ChChassis chassis, ChVectorD location) {
     vehiclePINVOKE.ChTrackAssembly_Initialize__SWIG_1(swigCPtr, ChChassis.getCPtr(chassis), ChVectorD.getCPtr(location));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public double ReportTrackLength() {
+    double ret = vehiclePINVOKE.ChTrackAssembly_ReportTrackLength(swigCPtr);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public ForceTorque ReportSuspensionForce(uint id) {
+    ForceTorque ret = new ForceTorque(vehiclePINVOKE.ChTrackAssembly_ReportSuspensionForce(swigCPtr, id), true);
+    if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
   }
 
   public void SetSprocketVisualizationType(VisualizationType vis) {

@@ -41,8 +41,8 @@ public class ChTrackShoeSinglePin : ChTrackShoeSegmented {
     return ret;
   }
 
-  public override double GetMass() {
-    double ret = vehiclePINVOKE.ChTrackShoeSinglePin_GetMass(swigCPtr);
+  public override ChVectorD GetTension() {
+    ChVectorD ret = new ChVectorD(vehiclePINVOKE.ChTrackShoeSinglePin_GetTension(swigCPtr), true);
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

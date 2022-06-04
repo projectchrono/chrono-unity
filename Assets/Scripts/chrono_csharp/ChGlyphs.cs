@@ -9,11 +9,11 @@
 //------------------------------------------------------------------------------
 
 
-public class ChGlyphs : ChVisualization {
+public class ChGlyphs : ChVisualShape {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ChGlyphs(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ChronoEngine_csharpPINVOKE.ChGlyphs_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ChGlyphs(global::System.IntPtr cPtr, bool cMemoryOwn) : base(corePINVOKE.ChGlyphs_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +27,7 @@ public class ChGlyphs : ChVisualization {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          ChronoEngine_csharpPINVOKE.delete_ChGlyphs(swigCPtr);
+          corePINVOKE.delete_ChGlyphs(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,139 +35,139 @@ public class ChGlyphs : ChVisualization {
     }
   }
 
+  public ChGlyphs() : this(corePINVOKE.new_ChGlyphs(), true) {
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public ChGlyphs.eCh_GlyphType GetDrawMode() {
+    ChGlyphs.eCh_GlyphType ret = (ChGlyphs.eCh_GlyphType)corePINVOKE.ChGlyphs_GetDrawMode(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public void SetDrawMode(ChGlyphs.eCh_GlyphType mmode) {
+    corePINVOKE.ChGlyphs_SetDrawMode(swigCPtr, (int)mmode);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void Reserve(uint n_glyphs) {
+    corePINVOKE.ChGlyphs_Reserve(swigCPtr, n_glyphs);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public uint GetNumberOfGlyphs() {
+    uint ret = corePINVOKE.ChGlyphs_GetNumberOfGlyphs(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public double GetGlyphsSize() {
+    double ret = corePINVOKE.ChGlyphs_GetGlyphsSize(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public void SetGlyphsSize(double msize) {
+    corePINVOKE.ChGlyphs_SetGlyphsSize(swigCPtr, msize);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void SetZbufferHide(bool mhide) {
+    corePINVOKE.ChGlyphs_SetZbufferHide(swigCPtr, mhide);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public bool GetZbufferHide() {
+    bool ret = corePINVOKE.ChGlyphs_GetZbufferHide(swigCPtr);
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public void SetGlyphPoint(uint id, ChVectorD mpoint, ChColor mcolor) {
+    corePINVOKE.ChGlyphs_SetGlyphPoint__SWIG_0(swigCPtr, id, ChVectorD.getCPtr(mpoint), ChColor.getCPtr(mcolor));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void SetGlyphPoint(uint id, ChVectorD mpoint) {
+    corePINVOKE.ChGlyphs_SetGlyphPoint__SWIG_1(swigCPtr, id, ChVectorD.getCPtr(mpoint));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void SetGlyphVector(uint id, ChVectorD mpoint, ChVectorD mvector, ChColor mcolor) {
+    corePINVOKE.ChGlyphs_SetGlyphVector__SWIG_0(swigCPtr, id, ChVectorD.getCPtr(mpoint), ChVectorD.getCPtr(mvector), ChColor.getCPtr(mcolor));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void SetGlyphVector(uint id, ChVectorD mpoint, ChVectorD mvector) {
+    corePINVOKE.ChGlyphs_SetGlyphVector__SWIG_1(swigCPtr, id, ChVectorD.getCPtr(mpoint), ChVectorD.getCPtr(mvector));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void SetGlyphCoordsys(uint id, ChCoordsysD mcoord) {
+    corePINVOKE.ChGlyphs_SetGlyphCoordsys(swigCPtr, id, ChCoordsysD.getCPtr(mcoord));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public virtual void ArchiveOUT(SWIGTYPE_p_ChArchiveOut marchive) {
+    corePINVOKE.ChGlyphs_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public virtual void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn marchive) {
+    corePINVOKE.ChGlyphs_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
+  }
+
   public vector_ChVectorD points {
     set {
-      ChronoEngine_csharpPINVOKE.ChGlyphs_points_set(swigCPtr, vector_ChVectorD.getCPtr(value));
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChGlyphs_points_set(swigCPtr, vector_ChVectorD.getCPtr(value));
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChGlyphs_points_get(swigCPtr);
+      global::System.IntPtr cPtr = corePINVOKE.ChGlyphs_points_get(swigCPtr);
       vector_ChVectorD ret = (cPtr == global::System.IntPtr.Zero) ? null : new vector_ChVectorD(cPtr, false);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public SWIGTYPE_p_std__vectorT_chrono__ChColor_t colors {
     set {
-      ChronoEngine_csharpPINVOKE.ChGlyphs_colors_set(swigCPtr, SWIGTYPE_p_std__vectorT_chrono__ChColor_t.getCPtr(value));
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChGlyphs_colors_set(swigCPtr, SWIGTYPE_p_std__vectorT_chrono__ChColor_t.getCPtr(value));
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChGlyphs_colors_get(swigCPtr);
+      global::System.IntPtr cPtr = corePINVOKE.ChGlyphs_colors_get(swigCPtr);
       SWIGTYPE_p_std__vectorT_chrono__ChColor_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_chrono__ChColor_t(cPtr, false);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public vector_ChVectorD vectors {
     set {
-      ChronoEngine_csharpPINVOKE.ChGlyphs_vectors_set(swigCPtr, vector_ChVectorD.getCPtr(value));
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChGlyphs_vectors_set(swigCPtr, vector_ChVectorD.getCPtr(value));
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChGlyphs_vectors_get(swigCPtr);
+      global::System.IntPtr cPtr = corePINVOKE.ChGlyphs_vectors_get(swigCPtr);
       vector_ChVectorD ret = (cPtr == global::System.IntPtr.Zero) ? null : new vector_ChVectorD(cPtr, false);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public SWIGTYPE_p_std__vectorT_chrono__ChQuaternionT_double_t_t rotations {
     set {
-      ChronoEngine_csharpPINVOKE.ChGlyphs_rotations_set(swigCPtr, SWIGTYPE_p_std__vectorT_chrono__ChQuaternionT_double_t_t.getCPtr(value));
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      corePINVOKE.ChGlyphs_rotations_set(swigCPtr, SWIGTYPE_p_std__vectorT_chrono__ChQuaternionT_double_t_t.getCPtr(value));
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = ChronoEngine_csharpPINVOKE.ChGlyphs_rotations_get(swigCPtr);
+      global::System.IntPtr cPtr = corePINVOKE.ChGlyphs_rotations_get(swigCPtr);
       SWIGTYPE_p_std__vectorT_chrono__ChQuaternionT_double_t_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_chrono__ChQuaternionT_double_t_t(cPtr, false);
-      if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
+      if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
-  }
-
-  public ChGlyphs() : this(ChronoEngine_csharpPINVOKE.new_ChGlyphs(), true) {
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public ChGlyphs.eCh_GlyphType GetDrawMode() {
-    ChGlyphs.eCh_GlyphType ret = (ChGlyphs.eCh_GlyphType)ChronoEngine_csharpPINVOKE.ChGlyphs_GetDrawMode(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public void SetDrawMode(ChGlyphs.eCh_GlyphType mmode) {
-    ChronoEngine_csharpPINVOKE.ChGlyphs_SetDrawMode(swigCPtr, (int)mmode);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public void Reserve(uint n_glyphs) {
-    ChronoEngine_csharpPINVOKE.ChGlyphs_Reserve(swigCPtr, n_glyphs);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public uint GetNumberOfGlyphs() {
-    uint ret = ChronoEngine_csharpPINVOKE.ChGlyphs_GetNumberOfGlyphs(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public double GetGlyphsSize() {
-    double ret = ChronoEngine_csharpPINVOKE.ChGlyphs_GetGlyphsSize(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public void SetGlyphsSize(double msize) {
-    ChronoEngine_csharpPINVOKE.ChGlyphs_SetGlyphsSize(swigCPtr, msize);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public void SetZbufferHide(bool mhide) {
-    ChronoEngine_csharpPINVOKE.ChGlyphs_SetZbufferHide(swigCPtr, mhide);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public bool GetZbufferHide() {
-    bool ret = ChronoEngine_csharpPINVOKE.ChGlyphs_GetZbufferHide(swigCPtr);
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public void SetGlyphPoint(uint id, ChVectorD mpoint, ChColor mcolor) {
-    ChronoEngine_csharpPINVOKE.ChGlyphs_SetGlyphPoint__SWIG_0(swigCPtr, id, ChVectorD.getCPtr(mpoint), ChColor.getCPtr(mcolor));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public void SetGlyphPoint(uint id, ChVectorD mpoint) {
-    ChronoEngine_csharpPINVOKE.ChGlyphs_SetGlyphPoint__SWIG_1(swigCPtr, id, ChVectorD.getCPtr(mpoint));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public void SetGlyphVector(uint id, ChVectorD mpoint, ChVectorD mvector, ChColor mcolor) {
-    ChronoEngine_csharpPINVOKE.ChGlyphs_SetGlyphVector__SWIG_0(swigCPtr, id, ChVectorD.getCPtr(mpoint), ChVectorD.getCPtr(mvector), ChColor.getCPtr(mcolor));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public void SetGlyphVector(uint id, ChVectorD mpoint, ChVectorD mvector) {
-    ChronoEngine_csharpPINVOKE.ChGlyphs_SetGlyphVector__SWIG_1(swigCPtr, id, ChVectorD.getCPtr(mpoint), ChVectorD.getCPtr(mvector));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public void SetGlyphCoordsys(uint id, ChCoordsysD mcoord) {
-    ChronoEngine_csharpPINVOKE.ChGlyphs_SetGlyphCoordsys(swigCPtr, id, ChCoordsysD.getCPtr(mcoord));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public override void ArchiveOUT(SWIGTYPE_p_ChArchiveOut marchive) {
-    ChronoEngine_csharpPINVOKE.ChGlyphs_ArchiveOUT(swigCPtr, SWIGTYPE_p_ChArchiveOut.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public override void ArchiveIN(SWIGTYPE_p_chrono__ChArchiveIn marchive) {
-    ChronoEngine_csharpPINVOKE.ChGlyphs_ArchiveIN(swigCPtr, SWIGTYPE_p_chrono__ChArchiveIn.getCPtr(marchive));
-    if (ChronoEngine_csharpPINVOKE.SWIGPendingException.Pending) throw ChronoEngine_csharpPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public enum eCh_GlyphType {

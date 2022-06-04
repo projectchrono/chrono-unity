@@ -46,8 +46,8 @@ public class ChChassisConnectorArticulated : ChChassisConnector {
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public override void Synchronize(double time, double steering) {
-    vehiclePINVOKE.ChChassisConnectorArticulated_Synchronize(swigCPtr, time, steering);
+  public override void Synchronize(double time, DriverInputs driver_inputs) {
+    vehiclePINVOKE.ChChassisConnectorArticulated_Synchronize(swigCPtr, time, DriverInputs.getCPtr(driver_inputs));
     if (vehiclePINVOKE.SWIGPendingException.Pending) throw vehiclePINVOKE.SWIGPendingException.Retrieve();
   }
 

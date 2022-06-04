@@ -36,11 +36,17 @@ public class ForceFunctor : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnBase) {
           swigCMemOwnBase = false;
-          ChronoEngine_csharpPINVOKE.delete_ForceFunctor(swigCPtr);
+          corePINVOKE.delete_ForceFunctor(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
+  }
+
+  public virtual double evaluate(double time, double rest_length, double length, double vel, ChLinkTSDA link) {
+    double ret = corePINVOKE.ForceFunctor_evaluate(swigCPtr, time, rest_length, length, vel, ChLinkTSDA.getCPtr(link));
+    if (corePINVOKE.SWIGPendingException.Pending) throw corePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
   }
 
 }
