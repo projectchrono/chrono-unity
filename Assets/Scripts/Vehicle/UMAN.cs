@@ -13,7 +13,7 @@ public class UMAN : UChVehicle
     }
 
     public bool chassisFixed;
-    private PowertrainModelType powertrainType;
+    // private PowertrainModelType powertrainType; eliminated 5/5/23
     private TireModelType tireModel;
     ////public ChTire.CollisionType tireCollisionType;
 
@@ -36,7 +36,7 @@ public class UMAN : UChVehicle
     {
         chassisFixed = false;
 
-        powertrainType = PowertrainModelType.SHAFTS;
+        //powertrainType = PowertrainModelType.SHAFTS; obsolete
         tireModel = TireModelType.TMEASY;
         ////tireCollisionType = ChTire.CollisionType.SINGLE_POINT;
 
@@ -51,7 +51,7 @@ public class UMAN : UChVehicle
         man = new MAN_10t(UChSystem.chrono_system);
 
         man.SetChassisFixed(chassisFixed);
-        man.SetPowertrainType(powertrainType);
+        //man.SetPowertrainType(powertrainType);
         man.SetTireType(tireModel);
         ////man.SetAerodynamicDrag(0.5, 5.0, 1.2);
         man.SetBrakeType((BrakeType)brakeType);
@@ -170,9 +170,20 @@ public class UMAN : UChVehicle
     {
         return man.GetVehicle();
     }
-
-    public override ChPowertrain GetChPowertrain()
+    /*
+    public override ChPowertrainAssembly GetPowertrainAssembly()
     {
-        return man.GetPowertrain();
+        return man.GetPowertrainAssembly();
     }
+
+    public override ChEngine GetEngine()
+    {
+        return man.GetEngine();
+    }
+
+    public override ChTransmission GetTransmission()
+    {
+        return new ChAutomaticTransmission();
+    }
+    */
 }

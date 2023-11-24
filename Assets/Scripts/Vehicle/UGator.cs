@@ -47,6 +47,10 @@ public class UGator : UChVehicle
 
         initForwardVel = 0;
         initWheelAngSpeed = 0;
+
+        // Initialise engine and transmission
+       // engine = new Gator_EngineSimple("GatorEngine");
+       // transmission = new Gator_AutomaticTransmissionSimple("GatorTransmission");
     }
 
     protected override void OnStart()
@@ -170,11 +174,6 @@ public class UGator : UChVehicle
         return gator.GetVehicle();
     }
 
-    public override ChPowertrain GetChPowertrain()
-    {
-        return gator.GetPowertrain();
-    }
-
     protected override Vector3 GetIMULocation()
     {
         return new Vector3(-0.267f, -0.016f, 1.539f);
@@ -184,4 +183,5 @@ public class UGator : UChVehicle
     {
         return new Vector3(-0.216f, 0.0f, 1.780f);
     }
+s
 }

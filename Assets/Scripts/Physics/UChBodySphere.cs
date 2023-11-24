@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.AccessControl;
 
 public class UChBodySphere : UChBody
 {
@@ -30,9 +31,10 @@ public class UChBodySphere : UChBody
 
         // Create the underlying Chrono body and its collision shape
         body = new ChBodyAuxRef();
-        body.GetCollisionModel().ClearModel();
-        body.GetCollisionModel().AddSphere(mat, radius);
-        body.GetCollisionModel().BuildModel();
+        body.GetCollisionModel().Clear();
+        // Create a sphere collision shape with the new approach ChCollisionShape
+        body.GetCollisionModel().AddShape(new ChCollisionShapeSphere(mat, radius));
+        body.GetCollisionModel().Build();
     }
 
     public override void AddToSystem()

@@ -146,7 +146,11 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
 
     public abstract double GetMaxSpeed();
     public abstract ChVehicle GetChVehicle();
-    public abstract ChPowertrain GetChPowertrain();
+    // Updated powertrain classes that need exposure, set as virtual to provide template implementation, vehicles may optionall override
+    public virtual ChPowertrainAssembly GetPowertrainAssembly() { return GetChVehicle().GetPowertrainAssembly(); }
+    public virtual ChTransmission GetTransmission() { return GetChVehicle().GetTransmission(); }
+    public virtual ChEngine GetEngine() { return GetChVehicle().GetEngine(); }
+
 
     protected abstract void OnStart();
     protected abstract void OnAdvance(double step);

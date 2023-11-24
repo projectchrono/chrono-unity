@@ -28,9 +28,10 @@ public class UChBodyBox : UChBody
         // Create the underlying Chrono body and its collision shape
         var size = transform.localScale;
         body = new ChBodyAuxRef();
-        body.GetCollisionModel().ClearModel();
-        body.GetCollisionModel().AddBox(mat, size.x * 0.5, size.y * 0.5, size.z * 0.5);
-        body.GetCollisionModel().BuildModel();
+        body.GetCollisionModel().Clear();
+        // Create and add a box collision shape using ChCollisionShapeBox
+        body.GetCollisionModel().AddShape(new ChCollisionShapeBox(mat, size.x * 0.5, size.y * 0.5, size.z * 0.5));
+        body.GetCollisionModel().Build();
     }
 
     public override void AddToSystem()

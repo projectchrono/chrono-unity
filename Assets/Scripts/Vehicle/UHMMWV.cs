@@ -23,7 +23,7 @@ public class UHMMWV : UChVehicle
     }
 
     public bool chassisFixed;
-    public PowertrainModelType powertrainModel;
+    //public PowertrainModelType powertrainModel;
     public DrivelineTypeWV drivelineModel;
     public UTireModelType tireModel;
     public ChTire.CollisionType tireCollisionType;
@@ -46,7 +46,7 @@ public class UHMMWV : UChVehicle
     {
         chassisFixed = false;
         
-        powertrainModel = PowertrainModelType.SHAFTS;
+        // powertrainModel = PowertrainModelType.SHAFTS;
         drivelineModel = DrivelineTypeWV.AWD;
 
         tireModel = UTireModelType.TMEASY;
@@ -64,7 +64,7 @@ public class UHMMWV : UChVehicle
         hmmwv = new HMMWV_Full(UChSystem.chrono_system);
 
         hmmwv.SetChassisFixed(chassisFixed);
-        hmmwv.SetPowertrainType(powertrainModel);
+        // hmmwv.SetPowertrainType(powertrainModel);
         hmmwv.SetDriveType(drivelineModel);
         hmmwv.SetTireType((TireModelType)tireModel);
         hmmwv.SetTireCollisionType(tireCollisionType);
@@ -187,9 +187,19 @@ public class UHMMWV : UChVehicle
     {
         return hmmwv.GetVehicle();
     }
-
-    public override ChPowertrain GetChPowertrain()
+    /*
+    public override ChPowertrainAssembly GetPowertrainAssembly()
     {
-        return hmmwv.GetPowertrain();
+        return hmmwv.GetPowertrainAssembly(); // This is causing a number of issues. changed from hmmv.
     }
+
+    public override ChEngine GetEngine()
+    {
+        return hmmwv.GetEngine();
+    }
+
+    public override ChTransmission GetTransmission()
+    {
+        return hmmwv.GetTransmission();
+    }*/
 }

@@ -157,9 +157,19 @@ public class UUAZ : UChVehicle
     {
         return uaz.GetVehicle();
     }
-
-    public override ChPowertrain GetChPowertrain()
+    /*
+    public override ChPowertrainAssembly GetPowertrainAssembly()
     {
-        return uaz.GetPowertrain();
+        return uaz.GetChPowertrainAssembly();
     }
+
+    public override ChEngine GetEngine()
+    {
+        return uaz.GetEngine();
+    }
+
+    public override ChTransmission GetTransmission()
+    {
+        return uaz.GetTransmission();
+    }*/
 }

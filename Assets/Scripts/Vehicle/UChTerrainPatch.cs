@@ -44,9 +44,9 @@ public class UChTerrainPatch : MonoBehaviour
             body.SetCollide(true);
             body.SetPos(Utils.ToChronoFlip(pos));
             body.SetRot(Utils.ToChronoFlip(rot));
-            body.GetCollisionModel().ClearModel();
-            body.GetCollisionModel().AddBox(mat, size.x * 0.5, size.y * 0.5, size.z * 0.5);
-            body.GetCollisionModel().BuildModel();
+            body.GetCollisionModel().Clear();
+            body.GetCollisionModel().AddShape(new ChCollisionShapeBox(mat, size.x * 0.5, size.y * 0.5, size.z * 0.5));
+            body.GetCollisionModel().Build();
         }
 
         var rend = GetComponent<Renderer>();

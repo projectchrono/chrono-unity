@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using UnityEngine;
 
 public class Driver : MonoBehaviour, IAdvance
@@ -124,12 +125,12 @@ public class Driver : MonoBehaviour, IAdvance
 
         // Forward/reverse
         if (Input.GetButton("Fire1"))
-        {
-            vehicle.GetChPowertrain().SetDriveMode(ChPowertrain.DriveMode.FORWARD);
+        {// Implement updated method
+           (vehicle.GetPowertrainAssembly().GetTransmission() as ChAutomaticTransmission)?.SetDriveMode(ChAutomaticTransmission.DriveMode.FORWARD);
         }
         if (Input.GetButton("Fire2"))
         {
-            vehicle.GetChPowertrain().SetDriveMode(ChPowertrain.DriveMode.REVERSE);
+            (vehicle.GetPowertrainAssembly().GetTransmission() as ChAutomaticTransmission)?.SetDriveMode(ChAutomaticTransmission.DriveMode.REVERSE);
         }
 
         // Set current steering, depending on selected lateral control mode
@@ -152,7 +153,7 @@ public class Driver : MonoBehaviour, IAdvance
                     if (!steeringControllerInitialized)
                     {
                         steeringController = new ChPathSteeringController(path.GetChVehiclePath());
-                        steeringController.SetLookAheadDistance(lookAhead);
+                        steeringController.SetLookAheadDistance(lookAhead); 
                         steeringController.SetGains(steeringKp, steeringKi, steeringKd);
                         steeringController.Reset(vehicle.GetChVehicle());
                         steeringControllerInitialized = true;

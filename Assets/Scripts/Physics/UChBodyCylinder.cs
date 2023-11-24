@@ -31,9 +31,10 @@ public class UChBodyCylinder : UChBody
         // Create the underlying Chrono body and its collision shape
         var height = 2 * transform.localScale.y;
         body = new ChBodyAuxRef();
-        body.GetCollisionModel().ClearModel();
-        body.GetCollisionModel().AddCylinder(mat, radius, radius, height * 0.5);
-        body.GetCollisionModel().BuildModel();
+        body.GetCollisionModel().Clear();
+        // Create and add a cylinder collision shape using ChCollisionShapeCylinder
+        body.GetCollisionModel().AddShape(new ChCollisionShapeCylinder(mat, radius, height * 0.5));
+        body.GetCollisionModel().Build();
     }
 
     public override void AddToSystem()

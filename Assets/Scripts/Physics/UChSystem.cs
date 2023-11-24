@@ -69,6 +69,13 @@ public class UChSystem : MonoBehaviour
     public bool solverLockSparsityPattern;
     public double solverSparsityEstimate;
 
+    // Global Collision settings
+    public float contactBreakingThreshold;
+    public double maxPenetrationRecoverySpeed;
+    public double minBounceSpeed;
+    public float contactEnvelope;
+    public float contactMargin;
+
     // -----------------------------
     // Integrator
 
@@ -123,6 +130,16 @@ public class UChSystem : MonoBehaviour
         hhtScaling = true;
         hhtAlpha = -0.2;
 
+        // Collision controls. See https://api.projectchrono.org/collision_shapes.html
+        // These don't require setting, but can be tweaked if desired
+        // Placed here for global control. Some can be altered mid-simulation
+        // contactEnvelope = 0.001f;
+        // contactBreakingThreshold = 0.001f;
+        // contactMargin = 0.001f;
+        // minBounceSpeed = 0.15;
+        // maxPenetrationRecoverySpeed = 0.25;
+
+
         integratorType = IntegratorType.EULER_IMPLICIT_LINEARIZED;
     }
 
@@ -146,7 +163,7 @@ public class UChSystem : MonoBehaviour
 
         ////Debug.Log("SOLVER: " + solverType);
         ////Debug.Log("INTEGRATOR: " + integratorType);
-        
+
         // Set solver
         switch (solverType)
         {
@@ -245,14 +262,12 @@ public class UChSystem : MonoBehaviour
                     break;
                 }
             case IntegratorType.HHT:
-                {
+                { // Modifications to the HHT integrator implemented here to bring up to date. no Mode, no scaling.
                     var integrator = new ChTimestepperHHT(chrono_system);
-                    integrator.SetMode(ChTimestepperHHT.HHT_Mode.ACCELERATION);
                     integrator.SetMaxiters(integratorMaxIters);
                     integrator.SetRelTolerance(integratorRelTol);
                     integrator.SetAbsTolerances(integratorAbsTolS, integratorAbsTolL);
                     integrator.SetAlpha(hhtAlpha);
-                    integrator.SetScaling(hhtScaling);
                     chrono_system.SetTimestepper(integrator);
                     break;
                 }
@@ -305,4 +320,34 @@ public class UChSystem : MonoBehaviour
     {
         transform.hideFlags = HideFlags.NotEditable | HideFlags.HideInInspector;
     }
+
+    // Cleanup everything here
+    // TODO: double check this isn't duplicated elsewhere
+    void OnDisable()
+    {
+        // If the simulation world exists
+        if (chrono_system != null)
+        {
+            // Retrieve and iterate over all bodies in the world
+            List<ChBody> allBodies = new List<ChBody>();
+            chrono_system.Get_bodylist();
+
+            foreach (ChBody body in allBodies)
+            {
+                // If you're done with the body, here you can dispose of any resources it's using
+                // If the body has any other specific cleanup or destruction methods you want, call it here
+                // Remove the body from the world
+                chrono_system.Remove(body);
+            }
+
+            // Clean up any other resources, constraints, etc., that were part of the world
+
+            // Finally, if there's a way to shut down the system, call it here
+            // This might involve setting the mySystem to null, or calling a Dispose method if one exists
+            // mySystem.Dispose(); // Call this if the system has a Dispose method
+            chrono_system = null;
+        }
+    }
+
+
 }

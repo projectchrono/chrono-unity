@@ -164,19 +164,26 @@ public class ChaseCamera : MonoBehaviour, IAdvance
         double steering = Math.Round(vehicle.GetSteeringInput() * 100) / 100;
         GUI.Label(new Rect(10, 210, 200, 40), "Steering: " + steering.ToString(), guiStyle);
 
-        switch (vehicle.GetChPowertrain().GetDriveMode())
+
+        // Updates to the new powertrain base
+        var transmission = vehicle.GetPowertrainAssembly().GetTransmission() as ChAutomaticTransmission;
+
+        if (transmission != null)
         {
-            case ChPowertrain.DriveMode.FORWARD:
-                GUI.Label(new Rect(10, 240, 200, 40), "Gear: Forward", guiStyle);
-                break;
-            case ChPowertrain.DriveMode.REVERSE:
-                GUI.Label(new Rect(10, 240, 200, 40), "Gear: Reverse", guiStyle);
-                break;
+            switch (transmission.GetDriveMode())
+            {
+                case ChAutomaticTransmission.DriveMode.FORWARD:
+                    GUI.Label(new Rect(10, 240, 200, 40), "Gear: Forward", guiStyle);
+                    break;
+                case ChAutomaticTransmission.DriveMode.REVERSE:
+                    GUI.Label(new Rect(10, 240, 200, 40), "Gear: Reverse", guiStyle);
+                    break;
+            }
         }
 
-        double motorTorque = Math.Round(vehicle.GetChPowertrain().GetMotorTorque());
+        double motorTorque = Math.Round(vehicle.GetPowertrainAssembly().GetEngine().GetOutputMotorshaftTorque());
         GUI.Label(new Rect(10, 280, 200, 40), "Motor Torque (Nm): " + motorTorque.ToString(), guiStyle);
-        double motorSpeed = Math.Round(vehicle.GetChPowertrain().GetMotorSpeed() * 60 / (2 * Math.PI));
+        double motorSpeed = Math.Round(vehicle.GetPowertrainAssembly().GetEngine().GetMotorSpeed() * 60 / (2 * Math.PI));
         GUI.Label(new Rect(10, 320, 200, 40), "Motor Speed (RPM): " + motorSpeed.ToString(), guiStyle);
     }
 }
