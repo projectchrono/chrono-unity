@@ -9,9 +9,9 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
 
     public UChVehicle()
     {
-        // Set Chrono::Vehicle world frame to y-up (still a RHF)
+        // Set Chrono::Vehicle world frame to y-up (still a RHF)       
         ChWorldFrame.SetYUP();
-
+        
         inputs = new DriverInputs();
         inputs.m_steering = 0;
         inputs.m_braking = 0;
@@ -20,7 +20,7 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
 
     void Awake()
     {
-        vehicle.SetDataPath(Application.dataPath + "/Data/");
+        chrono_vehicle.SetDataPath(Application.dataPath + "/Data/");
         ////Debug.Log("vehicle path" + vehicle.GetDataPath());
     }
 
@@ -69,7 +69,7 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
             imu.GetComponent<IMU>().sensorLocation = GetIMULocation();
         }
 
-        OnStart();
+        OnStart(); // Call the vehicle's onstart.
     }
 
     public void Advance(double step)
@@ -150,6 +150,9 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
     public virtual ChPowertrainAssembly GetPowertrainAssembly() { return GetChVehicle().GetPowertrainAssembly(); }
     public virtual ChTransmission GetTransmission() { return GetChVehicle().GetTransmission(); }
     public virtual ChEngine GetEngine() { return GetChVehicle().GetEngine(); }
+
+    // base vehicle initalisation (was this commented in the original? looks like initialisation is local to the vehicle class
+    //public abstract void Initialize(ChCoordsysD initialPosition, double initialForwardSpeed);
 
 
     protected abstract void OnStart();

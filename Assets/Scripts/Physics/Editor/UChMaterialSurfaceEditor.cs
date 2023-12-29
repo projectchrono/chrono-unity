@@ -11,7 +11,7 @@ public class UChMaterialSurfaceEditor : Editor
 
         mat.contact_method = (ChContactMethod)EditorGUILayout.Popup("Contact Method", (int)mat.contact_method, options, EditorStyles.popup);
 
-        mat.mat_info.mu = EditorGUILayout.FloatField("Friction", mat.mat_info.mu);
+        mat.mat_info.mu = EditorGUILayout.FloatField("Friction", mat.mat_info.mu);  
         mat.mat_info.mu_r = EditorGUILayout.FloatField("Rolling Friction", mat.mat_info.mu_r);
         mat.mat_info.mu_s = EditorGUILayout.FloatField("Spinning Friction", mat.mat_info.mu_s);
         mat.mat_info.cr = EditorGUILayout.FloatField("Restitution", mat.mat_info.cr);

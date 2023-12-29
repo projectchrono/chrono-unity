@@ -31,10 +31,8 @@ public class UChBodySphere : UChBody
 
         // Create the underlying Chrono body and its collision shape
         body = new ChBodyAuxRef();
-        body.GetCollisionModel().Clear();
-        // Create a sphere collision shape with the new approach ChCollisionShape
-        body.GetCollisionModel().AddShape(new ChCollisionShapeSphere(mat, radius));
-        body.GetCollisionModel().Build();
+        // Create a sphere collision shape with the new approach ChCollisionShape, assuming ChFrame does not need specifying
+        body.AddCollisionShape(new ChCollisionShapeSphere(mat, radius), new ChFrameD());
     }
 
     public override void AddToSystem()

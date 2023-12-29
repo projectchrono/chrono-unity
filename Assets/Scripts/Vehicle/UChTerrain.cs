@@ -130,6 +130,7 @@ public class UChTerrain : MonoBehaviour
 
     public double height;
     public Terrain unityTerrain;
+    public RigidTerrain rigidTerrain;
     public float coefficientFriction;
 
     public List<UChTerrainPatch> patches;
@@ -148,17 +149,33 @@ public class UChTerrain : MonoBehaviour
                 chrono_terrain = new UFlatTerrain(height, coefficientFriction);
                 break;
             case Type.Patch:
-                chrono_terrain = new UPatchTerrain(patches);
+                rigidTerrain = new RigidTerrain(UChSystem.chrono_system); // Create the rigid terrain for the main system
+
+                //chrono_terrain = new UPatchTerrain(patches); // find and add the patches (will not auto-search, these are assigned using the editor - not currently implemented, as they are locally adding themselves)
+
                 break;
             case Type.Unity:
                 chrono_terrain = new UUnityTerrain(unityTerrain, coefficientFriction);
                 break;
         }
     }
-
     // When attaching to a Game Object, hide the transform
     void OnValidate()
     {
         transform.hideFlags = HideFlags.NotEditable | HideFlags.HideInInspector;
+    }
+
+    public RigidTerrain ReturnRigidTerrain()
+    {
+         return rigidTerrain;
+
+    }
+
+    void Start()
+    {
+     //   ChPatchList blah = new ChPatchList(rigidTerrain.GetPatches());
+        //Debug.Log("Patch list " + blah.Count);
+        rigidTerrain.Initialize();
+
     }
 }

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Physics items will cause Unity to crash if trying to add bodies to the system before any of those
+// have intialised first. Therefore, force the execution to be after these (default execution order is '0')
+[DefaultExecutionOrder(100)]
 public class UChJointSpherical : MonoBehaviour
 {
     public UChBody body1;

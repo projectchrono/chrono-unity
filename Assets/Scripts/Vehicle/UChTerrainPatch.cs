@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,11 +19,48 @@ public class UChTerrainPatch : MonoBehaviour
         coefficientFriction = 0.9f;
         hasContactShape = false;
     }
-
+    /*
     void Awake()
     {
         ////Debug.Log(name + "  Create contact shape? " + createContactShape);
+        
+        var pos = transform.position;
+        var rot = transform.rotation;
+        var size = transform.localScale;
+        /*
+        float thickness = size.y;
+        normal = transform.up;
+        center = transform.position + (0.5f * thickness) * normal;
+        ////Debug.Log("Center: " + center.ToString("F4"));
+        ////Debug.Log("Normal: " + normal.ToString("F4"));
+        
+        if (hasContactShape)
+        {
+            var mat_component = this.GetComponent<UChMaterialSurface>();
+            mat = mat_component.mat_info.CreateMaterial(mat_component.contact_method);
 
+            body = new ChBody();
+            body.SetBodyFixed(true);
+            body.SetCollide(true);
+            body.SetPos(Utils.ToChronoFlip(pos));
+            body.SetRot(Utils.ToChronoFlip(rot));
+            // body.GetCollisionModel().Clear();  // obsolete? but need patches to be added so this needs updating.
+            body.GetCollisionModel().AddShape(new ChCollisionShapeBox(mat, size.x * 0.5, size.y * 0.5, size.z * 0.5));
+            // body.GetCollisionModel().Build();// Changelog seems to imply this is no longer necessary, but set up alternatively
+        }
+
+        var rend = GetComponent<Renderer>();
+        radius = rend.bounds.extents.magnitude;
+        
+
+
+    }
+    */
+    private void Start()
+    {
+        // Moved all of this our of Awake() to the Start, so that these are registered with the system, *after* the system (which is created with its Awake()
+
+        // determine position, rotation and size
         var pos = transform.position;
         var rot = transform.rotation;
         var size = transform.localScale;
@@ -36,28 +73,38 @@ public class UChTerrainPatch : MonoBehaviour
 
         if (hasContactShape)
         {
+            
             var mat_component = this.GetComponent<UChMaterialSurface>();
             mat = mat_component.mat_info.CreateMaterial(mat_component.contact_method);
+            // set position and rotation
+            ChCoordsysD objectPos = new ChCoordsysD(Utils.ToChrono(pos), Utils.ToChrono(rot)); // to chrono flip? or just to chrono.
 
-            body = new ChBody();
-            body.SetBodyFixed(true);
-            body.SetCollide(true);
-            body.SetPos(Utils.ToChronoFlip(pos));
-            body.SetRot(Utils.ToChronoFlip(rot));
-            body.GetCollisionModel().Clear();
-            body.GetCollisionModel().AddShape(new ChCollisionShapeBox(mat, size.x * 0.5, size.y * 0.5, size.z * 0.5));
-            body.GetCollisionModel().Build();
+            
+
+             body = new ChBody();
+             body.SetBodyFixed(true);
+             body.SetCollide(true);
+             body.SetPos(Utils.ToChronoFlip(pos));
+             body.SetRot(Utils.ToChronoFlip(rot));
+             body.GetCollisionModel().AddShape(new ChCollisionShapeBox(mat, size.x * 0.5, size.y * 0.5, size.z * 0.5));
+
+             // body.GetCollisionModel().Build(); Changelog seems to imply this is no longer necessary, but set up alternatively
+             
+            
+            // Rigid Terrain patch usage (rather than body addition to the system)
+            //RigidTerrain parentTerrain = GetComponentInParent<UChTerrain>().ReturnRigidTerrain();     // determine the parent terrain (created in uchterrain.cs)
+
+            //var usethis = GetComponent<UChTerrain>().ReturnRigidTerrain();
+            //usethis.AddPatch(mat, objectPos, size.x, size.y, size.z); // TODO: need to determine rotation of this patch.
+            //Debug.Log("print terrain " + usethis.GetPatches().ToString());
         }
-
+        
         var rend = GetComponent<Renderer>();
         radius = rend.bounds.extents.magnitude;
-    }
-
-    private void Start()
-    {
         // If present, add the rigid body to the Chrono system
-        if (hasContactShape)
-            UChSystem.chrono_system.AddBody(body);
+        //if (hasContactShape)
+        //    UChSystem.chrono_system.AddBody(body);
+
     }
 
     public ChVectorD GetNormal() { return Utils.ToChronoFlip(normal); }

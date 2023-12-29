@@ -2,6 +2,7 @@
 using UnityEngine;
 using System;
 
+
 // ==========================================================================================================
 
 /// <summary>
@@ -24,6 +25,7 @@ public interface IAdvance
 /// Since Unity does not enforce an order of calls to Awake, this global variable can be safely used by other
 /// components only in their Start function.
 /// </summary>
+[DefaultExecutionOrder(-1000)] // This ensures that System runs before most other scripts (so there's a system to put bodies in)
 public class UChSystem : MonoBehaviour
 {
     public static ChSystem chrono_system;
@@ -138,7 +140,6 @@ public class UChSystem : MonoBehaviour
         // contactMargin = 0.001f;
         // minBounceSpeed = 0.15;
         // maxPenetrationRecoverySpeed = 0.25;
-
 
         integratorType = IntegratorType.EULER_IMPLICIT_LINEARIZED;
     }
@@ -272,7 +273,7 @@ public class UChSystem : MonoBehaviour
                     break;
                 }
         }
-        
+        chrono_system.SetCollisionSystemType(ChCollisionSystem.Type.BULLET);
         chrono_system.Set_G_acc(new ChVectorD(gravity.x, gravity.y, gravity.z));
         chrono_system.SetStep(step);
     }

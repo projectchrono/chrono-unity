@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[DefaultExecutionOrder(50)] // After ChBody, prior to motors, links, etc.
 public class ColumnGenerator : MonoBehaviour
 {
     public Material columnMaterial;
@@ -39,31 +39,22 @@ public class ColumnGenerator : MonoBehaviour
             body.points.Add(new Vector3(x, y, z));
         }
 
+        // Check number of points
+        // Debug.Log("Number of points added to the new body " + body.points.Count);
+
+
+
         // Set the material for the underlying MeshRenderer
         if (columnMaterial != null)
         {
             clone.GetComponent<MeshRenderer>().material = columnMaterial;
         }
-
+        
         // Set the position of the new clone.
         clone.transform.position = pos;
 
-        // Recreate the body...
-        // Note: the creation of the clone (Instantiate above) invoked UChBody.Awake which
-        // created a ChBody with default parameters. So we must delete the ChBody and invoke
-        // UChBody.Awake again to create a body with the new settings.
-        body.Destroy();
-        body.Awake();
-
-        /*
-        body.Create();
-        body.GetChBody().SetBodyFixed(body.isFixed);
-        body.GetChBody().SetCollide(body.collide);
-        body.GetChBody().SetPos(Utils.ToChrono(clone.transform.position));
-        body.GetChBody().SetRot(Utils.ToChrono(clone.transform.rotation));
-        body.GetChBody().SetPos_dt(Utils.ToChrono(body.linearVelocity));
-        body.GetChBody().SetWvel_loc(Utils.ToChrono(body.angularVelocity));
-        */
+        // adjustment for a gentler method than forcing Unity's Awake method
+        body.InstanceCreation(); // New method in UChBodyConvexHull
     }
 
     void Start()

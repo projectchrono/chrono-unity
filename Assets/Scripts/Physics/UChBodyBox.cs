@@ -27,11 +27,11 @@ public class UChBodyBox : UChBody
 
         // Create the underlying Chrono body and its collision shape
         var size = transform.localScale;
-        body = new ChBodyAuxRef();
-        body.GetCollisionModel().Clear();
-        // Create and add a box collision shape using ChCollisionShapeBox
-        body.GetCollisionModel().AddShape(new ChCollisionShapeBox(mat, size.x * 0.5, size.y * 0.5, size.z * 0.5));
-        body.GetCollisionModel().Build();
+        body = new ChBodyAuxRef();   // Rigid bodies have no collision model by default, can be populated by calling add collision shape
+        // TODO: ChFrame should be set.
+        body.AddCollisionShape(new ChCollisionShapeBox(mat, size.x, size.y, size.z), new ChFrameD());
+        // Note that the function `BuildModel` was obsoleted as there is no need anymore to indicate the end of specification of a collision model; indeed, processing of the generic collision models now occurs at a later time, during initialization of the collision detection system (see below)
+        //https://github.com/projectchrono/chrono/blob/e377b8645b4bee95bee0623bb7402c68a76a229f/CHANGELOG.md?plain=1#L131
     }
 
     public override void AddToSystem()

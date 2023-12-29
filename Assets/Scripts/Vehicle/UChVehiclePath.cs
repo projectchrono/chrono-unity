@@ -63,11 +63,11 @@ public class UChVehiclePath : MonoBehaviour
         {
             case Type.StraightLine:
             default:
-                return vehicle.StraightLinePath(Utils.ToChrono(lineStart), Utils.ToChrono(lineEnd), lineNumPoints);
+                return chrono_vehicle.StraightLinePath(Utils.ToChrono(lineStart), Utils.ToChrono(lineEnd), lineNumPoints);
             case Type.Circle:
-                return vehicle.CirclePath(Utils.ToChrono(circleStart), circleRadius, circleRun, circleLeftTurn, circleNumTurns);
+                return chrono_vehicle.CirclePath(Utils.ToChrono(circleStart), circleRadius, circleRun, circleLeftTurn, circleNumTurns);
             case Type.DoubleLaneChange:
-                return vehicle.DoubleLaneChangePath(Utils.ToChrono(dlcStart), dlcRamp, dlcWidth, dlcLength, dlcRun, dlcLeftTurn);
+                return chrono_vehicle.DoubleLaneChangePath(Utils.ToChrono(dlcStart), dlcRamp, dlcWidth, dlcLength, dlcRun, dlcLeftTurn);
             case Type.Custom:
                 {
                     List<Vector3> points_in = new List<Vector3>();

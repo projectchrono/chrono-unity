@@ -78,8 +78,8 @@ public class UGator : UChVehicle
         omega.Add(initWheelAngSpeed);
         gator.SetInitWheelAngVel(omega);
 
-        gator.Initialize();
-
+        gator.Initialize(); // Initialise the vehicle
+        Debug.Log("Gator is initialized: " + (gator != null).ToString());
         Debug.Log("Gator total mass: " + gator.GetVehicle().GetMass());
 
         // Get the vehicle components 
@@ -183,5 +183,24 @@ public class UGator : UChVehicle
     {
         return new Vector3(-0.216f, 0.0f, 1.780f);
     }
-s
+    /*
+    public override ChPowertrainAssembly GetPowertrainAssembly()
+    {
+        // Return the specific powertrain assembly for Gator
+        // This should be a C# representation of the Gator's powertrain assembly
+    }*/
+/*
+    // Override the GetTransmission method
+    public override ChTransmission GetTransmission()
+    {
+        // Return the transmission specified above in UGator
+        return new Gator_AutomaticTransmissionSimple("GatorTransmission");
+    }
+
+    // Override the GetEngine method
+    public override ChEngine GetEngine()
+    {
+        // Return the engine set up in UGator
+        return new Gator_EngineSimple("GatorEngine"); ;
+    }*/
 }

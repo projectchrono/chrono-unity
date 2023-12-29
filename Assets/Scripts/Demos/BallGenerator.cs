@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[DefaultExecutionOrder(50)] // After ChBody, prior to links, motors, etc.
 public class BallGenerator : MonoBehaviour
 {
     public Material ballMaterial;
@@ -31,12 +31,7 @@ public class BallGenerator : MonoBehaviour
         clone.transform.position = pos;
         clone.transform.localScale = new Vector3(2 * radius, 2 * radius, 2 * radius);
 
-        // Recreate the body...
-        // Note: the creation of the clone (Instantiate above) invoked UChBody.Awake which
-        // created a ChBody with default parameters. So we must delete the ChBody and invoke
-        // UChBody.Awake again to create a body with the new settings.
-        body.Destroy();
-        body.Awake();
+        body.InstanceCreation();
     }
 
     void Start()
@@ -48,7 +43,8 @@ public class BallGenerator : MonoBehaviour
 
         for (int i = 0; i < 250; i++)
         {
-            Vector3 pos = new Vector3(-5 + Random.Range(0, 10), 4 + i * 0.05f, -5 + Random.Range(0, 10));
+            // Set random range with diameter as a minimum so as not to generate with pre-existing penetrations (slows the start of the sim down)
+            Vector3 pos = new Vector3(-5 + Random.Range(2 * radius, 10), 4 + i * 0.05f, -5 + Random.Range(2 * radius, 10));
             CreateBall(prefab, pos, radius, density);
         }
     }

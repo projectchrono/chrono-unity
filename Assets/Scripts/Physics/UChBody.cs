@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
-
+[DefaultExecutionOrder(-10)]
 public class UChBody : MonoBehaviour
 {
     // ATTENTION: The underlying ChBody must be created in UChBody.Awake.
     // Other components (e.g. links, motors, etc) access their ChBody references in their Start function and
     // Unity does not enforce an order of calls to Start.
+
+    // This is mitigated by adjusting the script execution order to -10 (currently set to 100 in motors and links scripts)
+
 
     public bool isFixed;
     public bool collide;
@@ -23,6 +26,9 @@ public class UChBody : MonoBehaviour
 
     protected ChBodyAuxRef body;
 
+    protected bool isBodyInitialised = false;  // Flag used for checking if exists prior to accessing by other components
+
+
     public UChBody()
     {
         isFixed = false;
@@ -30,7 +36,7 @@ public class UChBody : MonoBehaviour
         showFrameGizmo = false;
         comRadiusGizmo = 0.1f;
         automaticMass = false;
-        density = 1000;
+        // density = 1000; // obsolete? double check
         mass = 1;
         inertiaMoments = Vector3.one;
         inertiaProducts = Vector3.zero;
@@ -53,7 +59,16 @@ public class UChBody : MonoBehaviour
 
     public virtual void AddToSystem()
     {
-        UChSystem.chrono_system.AddBody(body);
+        // Avoid crash if adding object that's not been instantised
+        if (body == null)
+        {
+            Debug.Log("No body to add to system (" + gameObject.name + ")");
+        }
+        else
+        {
+            UChSystem.chrono_system.AddBody(body);
+        }
+        DebugInfo();
     }
 
     public virtual void CalculateMassProperties() { }
@@ -69,19 +84,17 @@ public class UChBody : MonoBehaviour
                   "inertiaXY: " + Utils.FromChrono(body.GetInertiaXY()));
     }
 
-    // ---  UNITY METHODS ---
-
-    public void Awake()
+    public virtual void InstanceCreation() // Changed from Awake, added virtual
     {
-        ////Debug.Log("Body Awake()");
-
+        ///Debug.Log("Body Awake()");
+        
         Create();
 
-        if (body == null)
+        if (body == null)   
             return;
 
         CalculateMassProperties();
-        body.SetDensity(density);
+        // body.SetDensity(density); // - redundant if Mass COG in new collision method? Need to do more research on it.
         body.SetMass(mass);
         //// TODO: we should really set an entire frame here...
         body.SetFrame_COG_to_REF(new ChFrameD(Utils.ToChrono(COM)));
@@ -96,12 +109,26 @@ public class UChBody : MonoBehaviour
         body.SetPos_dt(Utils.ToChrono(linearVelocity));
         body.SetWvel_loc(Utils.ToChrono(angularVelocity));
 
+
         ////DebugInfo();
+        if (UChSystem.chrono_system != null)
+        { AddToSystem(); }
     }
 
-    void Start()
+    // ---  UNITY METHODS ---
+    void Awake()
     {
-        AddToSystem();
+        InstanceCreation(); // Create once and add to the system if exists
+        //isBodyInitialised = true;
+    }
+
+
+    public void Start()
+    {
+        // run once on wake, Unity crashes if the bodies aren't created first. Refer note at top of script
+        //InitialiseOrUpdate();
+        //isBodyInitialised = true;
+
     }
 
     void Update()

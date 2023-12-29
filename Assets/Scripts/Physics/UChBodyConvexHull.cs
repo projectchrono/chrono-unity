@@ -2,8 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[DefaultExecutionOrder(100)]
 public class UChBodyConvexHull : UChBody
 {
+    // Selection from Editor as to the point source for the convex hull, to give an easy point creation
+    // through the mesh filter (if so desired), rather than manual entry.
+    // Alternatively one could make use of the mesh script. But this is an easy access to various
+    // colliders drawn from mesh shapes (i.e. easy application of a sphere collider to a box for example)
+
+    // Enum to select the point source
+    public enum PointSource { ManualPoints, MeshFilter }
+    // Public field to select point source in the editor
+    public PointSource pointSource = PointSource.ManualPoints;
+
+
     public List<Vector3> points;
     public float pointGizmoRadius;
     public bool showCollisionShape;
@@ -17,12 +29,13 @@ public class UChBodyConvexHull : UChBody
         showCollisionShape = true;
     }
 
+
     public override void Create()
     {
         if (points.Count == 0)
         {
-            Debug.Log("No points in convex hull (" + gameObject.name + ")");
-            return;
+            ////Debug.Log("No points in convex hull (" + gameObject.name + ")");
+            return; // TODO: insert error catch here so a body is not attempted to be added to system that's null
         }
 
         // Get a handle to the associated material component and create the Chrono material
@@ -30,12 +43,37 @@ public class UChBodyConvexHull : UChBody
         ////mat_component.DebugInfo();
         mat = mat_component.mat_info.CreateMaterial(mat_component.contact_method);
 
-        // Create the underlying Chrono body
-        vector_ChVectorD p = new vector_ChVectorD();
-        for (int i = 0; i < points.Count; i++) {
-            p.Add(Utils.ToChrono(points[i]));
-        }
 
+        // Create the underlying Chrono body from the points specified in the Editor
+        vector_ChVectorD p = new vector_ChVectorD();
+        // Insert point source
+        if (pointSource == PointSource.MeshFilter)
+        {
+            // Attempt to parse points from MeshFilter
+            MeshFilter meshFilter = GetComponent<MeshFilter>();
+            if (meshFilter != null && meshFilter.sharedMesh != null)
+            {
+                Vector3[] vertices = meshFilter.sharedMesh.vertices;
+                foreach (Vector3 vertex in vertices)
+                {
+                    // convert to Chrono Vector and system
+                    p.Add(Utils.ToChrono(vertex));
+                }
+            }
+            else
+            {
+                Debug.LogWarning("MeshFilter not found or no mesh assigned. Reverting to manual points.");
+                points.AddRange(points);
+            }
+        }
+        else
+        {
+            // Parse the vertices specified in the Editor
+            for (int i = 0; i < points.Count; i++)
+            {
+                p.Add(Utils.ToChrono(points[i]));
+            }
+        }
         // Note: the mass properties are automatically set on body construction
         var bodyCH = new ChBodyEasyConvexHullAuxRef(p, density, false, true, mat);
         body = bodyCH;
@@ -46,6 +84,7 @@ public class UChBodyConvexHull : UChBody
         inertiaMoments = Utils.FromChrono(bodyCH.GetInertiaXX());
         inertiaProducts = Utils.FromChrono(bodyCH.GetInertiaXY());
 
+        // TODO: Adjust this to work with 'meshfilter' sourced vertices - don't make it null?
         if (showCollisionShape)
         {
             // Clear any existing mesh in the associated MeshFilter
@@ -112,7 +151,7 @@ public class UChBodyConvexHull : UChBody
         {
             Debug.Log("No points in convex hull (" + gameObject.name + ")");
         }
-
+        
         base.AddToSystem();
 
         if (mat.GetContactMethod() != UChSystem.chrono_system.GetContactMethod())
@@ -127,4 +166,11 @@ public class UChBodyConvexHull : UChBody
             Gizmos.DrawSphere(points[i], pointGizmoRadius);
         }
     }
+
+    // for deleting points
+    public void ClearPoints()
+    {
+        points?.Clear(); // null check then clear
+    }
+
 }

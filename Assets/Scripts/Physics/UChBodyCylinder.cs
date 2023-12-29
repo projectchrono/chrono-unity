@@ -31,10 +31,10 @@ public class UChBodyCylinder : UChBody
         // Create the underlying Chrono body and its collision shape
         var height = 2 * transform.localScale.y;
         body = new ChBodyAuxRef();
-        body.GetCollisionModel().Clear();
         // Create and add a cylinder collision shape using ChCollisionShapeCylinder
-        body.GetCollisionModel().AddShape(new ChCollisionShapeCylinder(mat, radius, height * 0.5));
-        body.GetCollisionModel().Build();
+        // ChQuarternion y-to-z: the standard Chrono cylinder shape is defined with its axis along the Z-axis of the shape frame.
+        // Whereas in a Y-up world, the axis is along the Y of the shape frame. 
+        body.AddCollisionShape(new ChCollisionShapeCylinder(mat, radius, height), new ChFrameD(new ChVectorD(), new ChQuaternionD(chrono.Q_ROTATE_Y_TO_Z)));
     }
 
     public override void AddToSystem()
