@@ -152,6 +152,8 @@ public class UChSystem : MonoBehaviour
         Application.targetFrameRate = 60;
 
 
+
+
         switch (contact_method)
         {
             case ChContactMethod.NSC:
@@ -161,6 +163,7 @@ public class UChSystem : MonoBehaviour
                 chrono_system = new ChSystemSMC(useMatProps);
                 break;
         }
+
 
         ////Debug.Log("SOLVER: " + solverType);
         ////Debug.Log("INTEGRATOR: " + integratorType);
@@ -276,6 +279,7 @@ public class UChSystem : MonoBehaviour
         chrono_system.SetCollisionSystemType(ChCollisionSystem.Type.BULLET);
         chrono_system.Set_G_acc(new ChVectorD(gravity.x, gravity.y, gravity.z));
         chrono_system.SetStep(step);
+
     }
 
     // -----------------------------

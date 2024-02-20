@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 
 public static class SceneSelectData
 {
@@ -20,11 +21,15 @@ public class SceneSelect : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown("escape"))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (SceneManager.GetActiveScene().name == SceneSelectData.mainScene)
             {
                 Application.Quit();
+                #if UNITY_EDITOR
+                    // If using the editor, use a fake quit
+                    UnityEditor.EditorApplication.isPlaying = false;
+                #endif
             }
 
             if (SceneSelectData.launchedFromManager)
@@ -32,6 +37,9 @@ public class SceneSelect : MonoBehaviour
                 SceneSelectData.launchedFromManager = false;
                 SceneManager.LoadScene(SceneSelectData.mainScene);
             }
+
+
+
         }
     }
 

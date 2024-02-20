@@ -157,7 +157,7 @@ public class UMAN : UChVehicle
         wheelR2R.transform.position = Utils.FromChronoFlip(spindleR2R_pos);
         wheelR2R.transform.rotation = Utils.FromChronoFlip(spindleR2R_rot);
 
-        man.Synchronize(UChSystem.chrono_system.GetChTime(), inputs, UChTerrain.chrono_terrain);
+        man.Synchronize(UChSystem.chrono_system.GetChTime(), inputs, chTerrain);
         man.Advance(step);
     }
 

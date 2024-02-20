@@ -110,7 +110,7 @@ public class Driver : MonoBehaviour, IAdvance
         steeringControllerInitialized = false;
 
         // Speed cruise controller mode
-        targetSpeed = 0;
+        // targetSpeed = 0; // uncomment to override auto-start
         m_err = 0;
         m_errd = 0;
         m_erri = 0;
@@ -155,11 +155,11 @@ public class Driver : MonoBehaviour, IAdvance
                         steeringController = new ChPathSteeringController(path.GetChVehiclePath());
                         steeringController.SetLookAheadDistance(lookAhead); 
                         steeringController.SetGains(steeringKp, steeringKi, steeringKd);
-                        steeringController.Reset(vehicle.GetChVehicle());
+                        steeringController.Reset(vehicle.GetChVehicle().GetRefFrame());
                         steeringControllerInitialized = true;
                     }
 
-                    var output = steeringController.Advance(vehicle.GetChVehicle(), step);
+                    var output = steeringController.Advance(vehicle.GetChVehicle().GetRefFrame(), vehicle.GetChVehicle().GetRTF(), step);
                     m_steering = Utils.Clamp(output, -1.0, +1.0);
                 }
 
@@ -257,7 +257,7 @@ public class Driver : MonoBehaviour, IAdvance
 
     private void OnDrawGizmos()
     {
-        if (steeringControllerInitialized)
+        if (steeringControllerInitialized && vehicle != null)
         {
             Gizmos.color = Color.red;
             Gizmos.DrawSphere(Utils.FromChronoFlip(steeringController.GetSentinelLocation()), gizmoRadius);

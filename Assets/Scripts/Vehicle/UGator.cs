@@ -10,7 +10,7 @@ public class UGator : UChVehicle
     {
         TMEASY = TireModelType.TMEASY,
         RIGID = TireModelType.RIGID,
-        RIGID_MESH = TireModelType.RIGID_MESH
+        RIGID_MESH = TireModelType.RIGID_MESH,
     }
 
     public enum UBrakeType
@@ -21,7 +21,7 @@ public class UGator : UChVehicle
 
     public bool chassisFixed;
     public UTireModelType tireModel;
-    ////public ChTire.CollisionType tireCollisionType;
+    public ChTire.CollisionType tireCollisionType;
 
     public UBrakeType brakeType;
     public bool brakeLocking;
@@ -37,10 +37,11 @@ public class UGator : UChVehicle
 
     public UGator()
     {
+        // Set default values
         chassisFixed = false;
 
         tireModel = UTireModelType.TMEASY;
-        ////tireCollisionType = ChTire.CollisionType.SINGLE_POINT;
+        tireCollisionType = ChTire.CollisionType.SINGLE_POINT;
 
         brakeType = UBrakeType.SHAFTS;
         brakeLocking = false;
@@ -59,11 +60,11 @@ public class UGator : UChVehicle
 
         gator.SetChassisFixed(chassisFixed);
         gator.SetTireType((TireModelType)tireModel);
-        ////gator.SetTireCollisionType(tireCollisionType);
+        gator.SetTireCollisionType(tireCollisionType);
         gator.SetAerodynamicDrag(0.5, 5.0, 1.2);
         gator.SetBrakeType((BrakeType)brakeType);
         gator.EnableBrakeLocking(brakeLocking);
-
+        ///gator.SetChassisCollisionType(CollisionType.MESH); // test - check. crashing
         ////Vector3 pos = transform.position;
         ////Quaternion quat = transform.rotation;
         ////Debug.Log("quat = " + quat.w + " " + quat.x + " " + quat.y + " " + quat.z);
@@ -96,6 +97,7 @@ public class UGator : UChVehicle
             else if (child.name == "WheelRearRight")
                 wheelRR = child.gameObject;
         }
+
     }
 
     protected override void OnAdvance(double step)
@@ -120,7 +122,7 @@ public class UGator : UChVehicle
         var veh_pos = Utils.FromChronoFlip(vehicle_pos);
         var veh_rot = Utils.FromChronoFlip(vehicle_rot);
 
-        ////Debug.Log("vehicle pos:  " + veh_pos.ToString("F5"));
+        /// Debug.Log("vehicle pos:  " + veh_pos.ToString("F5"));
 
         transform.position = veh_pos;
         transform.rotation = veh_rot;
@@ -148,7 +150,7 @@ public class UGator : UChVehicle
         ////Debug.Log("0. inputs: " + inputs.m_steering + " " + inputs.m_throttle + " " + inputs.m_braking);
         ////Debug.Log("0. powertrain speed and torque: " + gator.GetPowertrain().GetMotorSpeed() + "    " + gator.GetPowertrain().GetMotorTorque());
 
-        gator.Synchronize(UChSystem.chrono_system.GetChTime(), inputs, UChTerrain.chrono_terrain);
+        gator.Synchronize(UChSystem.chrono_system.GetChTime(), inputs, chTerrain);
 
         ////Debug.Log("1. powertrain speed and torque: " + gator.GetPowertrain().GetMotorSpeed() + "    " + gator.GetPowertrain().GetMotorTorque());
         ////Debug.Log("1. spindle torque (left / right): " 
@@ -183,24 +185,25 @@ public class UGator : UChVehicle
     {
         return new Vector3(-0.216f, 0.0f, 1.780f);
     }
+    /*  
+      public override ChPowertrainAssembly GetPowertrainAssembly()
+      {
+          // Return the specific powertrain assembly for Gator
+      }*/
     /*
-    public override ChPowertrainAssembly GetPowertrainAssembly()
-    {
-        // Return the specific powertrain assembly for Gator
-        // This should be a C# representation of the Gator's powertrain assembly
-    }*/
-/*
-    // Override the GetTransmission method
-    public override ChTransmission GetTransmission()
-    {
-        // Return the transmission specified above in UGator
-        return new Gator_AutomaticTransmissionSimple("GatorTransmission");
-    }
+        // Override the GetTransmission method
+        public override ChTransmission GetTransmission()
+        {
+            // Return the transmission specified above in UGator
+            return new Gator_AutomaticTransmissionSimple("GatorTransmission");
+        }
 
-    // Override the GetEngine method
-    public override ChEngine GetEngine()
-    {
-        // Return the engine set up in UGator
-        return new Gator_EngineSimple("GatorEngine"); ;
-    }*/
+        // Override the GetEngine method
+        public override ChEngine GetEngine()
+        {
+            // Return the engine set up in UGator
+            return new Gator_EngineSimple("GatorEngine"); ;
+        }*/
+
+
 }

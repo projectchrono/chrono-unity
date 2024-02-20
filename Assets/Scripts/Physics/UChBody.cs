@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
-[DefaultExecutionOrder(-10)]
+// Ensure this base script executes just after the Chsystem, but before everything else.
+[DefaultExecutionOrder(-999)]
 public class UChBody : MonoBehaviour
 {
     // ATTENTION: The underlying ChBody must be created in UChBody.Awake.
     // Other components (e.g. links, motors, etc) access their ChBody references in their Start function and
     // Unity does not enforce an order of calls to Start.
 
-    // This is mitigated by adjusting the script execution order to -10 (currently set to 100 in motors and links scripts)
+    // This is mitigated by adjusting the script execution order to -999 (currently set to +100 in motors and links scripts)
 
 
     public bool isFixed;
@@ -118,17 +119,14 @@ public class UChBody : MonoBehaviour
     // ---  UNITY METHODS ---
     void Awake()
     {
-        InstanceCreation(); // Create once and add to the system if exists
-        //isBodyInitialised = true;
+        InstanceCreation();
+        //isBodyInitialised = true; // Flag for creation of body
     }
 
 
     public void Start()
     {
-        // run once on wake, Unity crashes if the bodies aren't created first. Refer note at top of script
-        //InitialiseOrUpdate();
-        //isBodyInitialised = true;
-
+        // Do nothing.
     }
 
     void Update()

@@ -2,10 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Android;
 
+// Execute after Chrono system (-999) and Terrain (-950)
+[DefaultExecutionOrder(-900)]
 public abstract class UChVehicle : MonoBehaviour, IAdvance
 {
     protected DriverInputs inputs;
+    public ChTerrain chTerrain;
 
     public UChVehicle()
     {
@@ -22,6 +26,14 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
     {
         chrono_vehicle.SetDataPath(Application.dataPath + "/Data/");
         ////Debug.Log("vehicle path" + vehicle.GetDataPath());
+        ///
+
+        ///var rot = ChWorldFrame.Rotation();
+        ///Debug.Log($"World Frame \n {rot.getitem(0, 0)}, {rot.getitem(0, 1)}, {rot.getitem(0, 2)}] \n {rot.getitem(1, 0)}, {rot.getitem(1, 1)}, {rot.getitem(1, 2)} \n [{rot.getitem(2, 0)}, {rot.getitem(2, 1)}, {rot.getitem(2, 2)}]");
+
+        ///Debug.Log($"Vertical direction: {ChWorldFrame.Vertical().x}, {ChWorldFrame.Vertical().y}, {ChWorldFrame.Vertical().z}");
+        ///Debug.Log($"Forward direction: {ChWorldFrame.Forward().x}, {ChWorldFrame.Forward().y}, {ChWorldFrame.Forward().z}");
+
     }
 
     void Start()
@@ -30,48 +42,13 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
         UChSystem system = (UChSystem)FindObjectOfType(typeof(UChSystem));
         system.Register(gameObject.name, this);
 
-        // HACK!!!!
-        // If this vehicle has the tag "Player", it is assumed that it was created from a spwan message
-        // and that it will be controlled through ROS commands.
-        // - Disable the existing Driver component and attach a CommandDriver
-        // - Instantiate an IMU sensor and attach to this vehicle
-        if (gameObject.tag == "Player")
-        {
-            // Convention is that 0 yaw corresponds to the vehicle facing +Z. 
-            // Since the vehicle is constructed in an ISO frame, this requires a 90 rotation about the vertical.
-            transform.rotation = transform.rotation * Quaternion.AngleAxis(-90, Vector3.up);
-
-            // Disable the current vehicle driver component and create a commandable driver
-            Debug.Log("Set up vehicle " + gameObject.name + " for ROS commands");
-            gameObject.GetComponent<Driver>().enabled = false;
-            CommandDriver drv = gameObject.AddComponent<CommandDriver>();
-            drv.speedKp = 0.8;
-            drv.speedKi = 0.2;
-            drv.speedKd = 0.1;
-
-            // Create an IMU sensor and associate it with the vehicle
-            UnityEngine.Object IMU_prefab = Resources.Load("IMU", typeof(GameObject));
-            GameObject imu = Instantiate(IMU_prefab, transform) as GameObject;
-            imu.GetComponent<IMU>().vehicle = this;
-            imu.name = "imu";
-
-            // Create a WheelEncoder sensor and associate it with the vehicle
-            UnityEngine.Object WE_prefab = Resources.Load("WheelEncoder", typeof(GameObject));
-            GameObject we = Instantiate(WE_prefab, transform) as GameObject;
-            we.GetComponent<WheelEncoder>().vehicle = this;
-            we.name = "wheel_encoders";
-
-            //// TODO: Interogate the concrete vehicle to set parameters such as:
-            //// - location of sensors
-            //// - sensor-specific paramters
-            //// - drive speed controller gains
-            //// - etc.
-            imu.GetComponent<IMU>().sensorLocation = GetIMULocation();
-        }
 
         OnStart(); // Call the vehicle's onstart.
-    }
 
+        // Find terrain in system and set to chTerrain
+        chTerrain = UChRigidTerrainManager.chronoRigidTerrain;
+    }
+        
     public void Advance(double step)
     {
 
@@ -81,6 +58,13 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
         ////Debug.Log(inputs.m_steering + "     " + omg.x + "  " + omg.y + "  " + omg.z);
 
         OnAdvance(step);
+
+        // TODO: If terrain exists, then synchronise and advance
+        if (chTerrain != null)
+        {
+            chTerrain.Synchronize(UChSystem.chrono_system.GetChTime());
+            chTerrain.Advance(step);
+        }
     }
 
     // Set the current values of the driver inputs for this vehicle (invoked by driver subsystems).
@@ -123,15 +107,21 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
         return Utils.FromChrono(accL_chrono);
     }
 
-    /*
+
     // Return the vehicle angular velocity, expressed in the global frame.
     // This needs some massaging related to what frame things are expressed in.
     public Vector3 GetWvelGlobal()
     {
         ChVectorD wvelG_chrono = GetChVehicle().GetChassisBody().GetWvel_par();
-        return new Vector3((float)wvelG_chrono.x, (float)wvelG_chrono.z, (float)wvelG_chrono.y);
+        //return new Vector3((float)wvelG_chrono.x, (float)wvelG_chrono.z, (float)wvelG_chrono.y);
+        if (ChWorldFrame.Vertical().Equals(new ChVectorD(0, 1, 0)))
+        { 
+            return new Vector3((float)wvelG_chrono.x, (float)wvelG_chrono.y, -(float)wvelG_chrono.z);
+        } else
+        {
+            return new Vector3(0,0,0);
+        }
     }
-    */
 
     // Return the vehicle angular velocity, expressed in a local ISO frame (x fwd, y left, z up).
     public Vector3 GetWvelLocal()
@@ -151,8 +141,14 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
     public virtual ChTransmission GetTransmission() { return GetChVehicle().GetTransmission(); }
     public virtual ChEngine GetEngine() { return GetChVehicle().GetEngine(); }
 
-    // base vehicle initalisation (was this commented in the original? looks like initialisation is local to the vehicle class
-    //public abstract void Initialize(ChCoordsysD initialPosition, double initialForwardSpeed);
+    // Base vehicle initialisation; subclasses have the option to override.
+    // If not overridden, the default implementation is used.
+    public virtual void Initialize(ChCoordsysD initialPosition, double initialForwardSpeed)
+    {
+        // Default implementation
+        initialPosition = new ChCoordsysD();
+        initialForwardSpeed = 0.0;
+    }
 
 
     protected abstract void OnStart();

@@ -1,5 +1,7 @@
 ﻿using System;
+using UnityEngine;
 
+[DefaultExecutionOrder(50)]
 public class UChBodyBox : UChBody
 {
     private ChMaterialSurface mat;

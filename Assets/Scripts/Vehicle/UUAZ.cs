@@ -9,7 +9,6 @@ public class UUAZ : UChVehicle
     public enum UTireModelType
     {
         TMEASY = TireModelType.TMEASY,
-        PAC02 = TireModelType.PAC02,
         RIGID = TireModelType.RIGID,
         RIGID_MESH = TireModelType.RIGID_MESH
     }
@@ -24,7 +23,7 @@ public class UUAZ : UChVehicle
     //public PowertrainModelType powertrainModel;
     //public DrivelineTypeWV drivelineModel;
     public UTireModelType tireModel;
-    ////public ChTire.CollisionType tireCollisionType;
+    public ChTire.CollisionType tireCollisionType;
 
     public UBrakeType brakeType;
     public bool brakeLocking;
@@ -60,7 +59,6 @@ public class UUAZ : UChVehicle
 
         uaz.SetChassisFixed(chassisFixed);
         uaz.SetTireType((TireModelType)tireModel);
-        ////uaz.SetTireCollisionType(tireCollisionType);
         uaz.SetAerodynamicDrag(0.5, 5.0, 1.2);
         uaz.SetBrakeType((BrakeType)brakeType);
         uaz.EnableBrakeLocking(brakeLocking);
@@ -144,7 +142,7 @@ public class UUAZ : UChVehicle
         wheelRR.transform.position = Utils.FromChronoFlip(spindleRR_pos);
         wheelRR.transform.rotation = Utils.FromChronoFlip(spindleRR_rot);
 
-        uaz.Synchronize(UChSystem.chrono_system.GetChTime(), inputs, UChTerrain.chrono_terrain);
+        uaz.Synchronize(UChSystem.chrono_system.GetChTime(), inputs, chTerrain);
         uaz.Advance(step);
     }
 

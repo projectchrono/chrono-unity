@@ -15,7 +15,7 @@ public class ChaseCamera : MonoBehaviour, IAdvance
     [Range (0.0f, 1.0f)]
     public float smoothSpeed = 0.1f;
 
-    [Range (-2.0f, 10.0f)]
+    [Range (-2.0f, 20.0f)]
     public float cameraDistance = 4;
 
     [Range(0.0f, 10.0f)]

@@ -64,7 +64,7 @@ public class UHMMWV : UChVehicle
         hmmwv = new HMMWV_Full(UChSystem.chrono_system);
 
         hmmwv.SetChassisFixed(chassisFixed);
-        // hmmwv.SetPowertrainType(powertrainModel);
+        //hmmwv.SetChassisCollisionType(CollisionType.PRIMITIVES); // Do not enable, causes Unity to crash. TODO: investigate chassis collision wrapping.
         hmmwv.SetDriveType(drivelineModel);
         hmmwv.SetTireType((TireModelType)tireModel);
         hmmwv.SetTireCollisionType(tireCollisionType);
@@ -174,7 +174,7 @@ public class UHMMWV : UChVehicle
         ////Debug.Log("wheelRL pos: " + Utils.FromChrono(spindleRL_pos));
         ////Debug.Log("wheelRR pos: " + Utils.FromChrono(spindleRR_pos));
 
-        hmmwv.Synchronize(UChSystem.chrono_system.GetChTime(), inputs, UChTerrain.chrono_terrain);
+        hmmwv.Synchronize(UChSystem.chrono_system.GetChTime(), inputs, chTerrain);
         hmmwv.Advance(step);
     }
 
