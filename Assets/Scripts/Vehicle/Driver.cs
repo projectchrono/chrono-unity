@@ -159,7 +159,7 @@ public class Driver : MonoBehaviour, IAdvance
                         steeringControllerInitialized = true;
                     }
 
-                    var output = steeringController.Advance(vehicle.GetChVehicle().GetRefFrame(), vehicle.GetChVehicle().GetRTF(), step);
+                    var output = steeringController.Advance(vehicle.GetChVehicle().GetRefFrame(), UChSystem.chrono_system.GetChTime(), step);
                     m_steering = Utils.Clamp(output, -1.0, +1.0);
                 }
 
