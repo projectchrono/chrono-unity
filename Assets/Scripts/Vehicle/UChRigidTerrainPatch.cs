@@ -31,9 +31,7 @@ public class UChRigidTerrainPatch : MonoBehaviour
     public double refineGreaterThanAngle = 15.0; // sets the max angle for neighbouring grid blocks to be considered similar enough to simplify
     public double coarseMeshGridSize = 2.0; // in meters, size of the coarse mesh
 
-    // Rotate the terrain object for Unity's Y-Up world
-    ChQuaterniond rotateQ = new ChQuaterniond(chrono.QuatFromAngleX(-90 * chrono.CH_C_DEG_TO_RAD));
-    ChQuaterniond qRotationToChrono = new ChQuaterniond();
+
 
     // Create a Box patch Terrain
     public void AddBoxPatchTerrain(RigidTerrain chronoRigidTerrain)
@@ -45,6 +43,9 @@ public class UChRigidTerrainPatch : MonoBehaviour
         var pos = Utils.ToChrono(centralTerrainPoint);
         var rot = Utils.ToChrono(transform.rotation);
         // Rotation to Unity's YUP world
+        // Rotate the terrain object for Unity's Y-Up world
+        ChQuaterniond rotateQ = new ChQuaterniond(chrono.QuatFromAngleX(-90 * chrono.CH_C_DEG_TO_RAD));
+        ChQuaterniond qRotationToChrono = new ChQuaterniond();
         qRotationToChrono.Cross(rot, rotateQ); // order is paramount
 
         // Unity scale to Chrono size
@@ -83,8 +84,6 @@ public class UChRigidTerrainPatch : MonoBehaviour
         centralTerrainPoint.z *= -1;
 
         var rot = Utils.ToChrono(transform.rotation);
-        // Rotation to Unity's YUP world
-        qRotationToChrono.Cross(rot, rotateQ); // order is paramount
         var pos = Utils.ToChrono(centralTerrainPoint);
 
         var mat_component = GetComponent<UChMaterialSurface>();
@@ -99,7 +98,7 @@ public class UChRigidTerrainPatch : MonoBehaviour
         // Add the patch to Chrono's RigidTerrain using the extracted height vectors
         var patch = chronoRigidTerrain.AddPatch(
             mat,
-            new ChCoordsysd(pos, qRotationToChrono),
+            new ChCoordsysd(pos, rot),
             pointCloud,
             terrain.terrainData.size.x,  // Length of the terrain patch
             terrain.terrainData.size.z,  // Width of the terrain patch

@@ -335,7 +335,7 @@ public class UChSystem : MonoBehaviour
         {
             // Retrieve and iterate over all bodies in the world
             List<ChBody> allBodies = new List<ChBody>();
-            chrono_system.Get_bodylist();
+            chrono_system.GetBodies();
 
             foreach (ChBody body in allBodies)
             {

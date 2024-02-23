@@ -107,8 +107,8 @@ public class UChBody : MonoBehaviour
 
         body.SetFrame_REF_to_abs(new ChFramed(Utils.ToChrono(transform.position), Utils.ToChrono(transform.rotation)));
 
-        body.SetPos_dt(Utils.ToChrono(linearVelocity));
-        body.SetWvel_loc(Utils.ToChrono(angularVelocity));
+        body.SetPosDer(Utils.ToChrono(linearVelocity));
+        body.SetAngVelLocal(Utils.ToChrono(angularVelocity));
 
 
         ////DebugInfo();
@@ -137,8 +137,8 @@ public class UChBody : MonoBehaviour
         var frame = body.GetFrame_REF_to_abs();
         transform.position = Utils.FromChrono(frame.GetPos());
         transform.rotation = Utils.FromChrono(frame.GetRot());
-        linearVelocity = Utils.FromChrono(frame.GetPos_dt());
-        angularVelocity = Utils.FromChrono(frame.GetWvel_loc());
+        linearVelocity = Utils.FromChrono(frame.GetPosDer());
+        angularVelocity = Utils.FromChrono(frame.GetAngVelLocal());
     }
 
     void OnDrawGizmos()

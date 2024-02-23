@@ -56,7 +56,7 @@ public class UChFunction : MonoBehaviour
                 fun = funRamp;
                 break;
             case Type.Sigma:
-                var funSigma = new ChFunctionSigma(sigma_amp, sigma_start, sigma_end);
+                var funSigma = new ChFunctionPoly23(sigma_amp, sigma_start, sigma_end);
                 fun = funSigma;
                 break;
             case Type.Sine:
@@ -71,28 +71,28 @@ public class UChFunction : MonoBehaviour
         switch (type)
         {
             case Type.Constant:
-                ((ChFunctionConst)fun).Set_yconst(constant_val);
+                ((ChFunctionConst)fun).SetConstant(constant_val);
                 break;
             case Type.Ramp:
-                ((ChFunctionRamp)fun).Set_y0(ramp_y0);
-                ((ChFunctionRamp)fun).Set_ang(ramp_ang);
+                ((ChFunctionRamp)fun).SetStartVal(ramp_y0);
+                ((ChFunctionRamp)fun).SetAngularCoeff(ramp_ang);
                 break;
             case Type.Sigma:
-                ((ChFunctionSigma)fun).Set_start(sigma_start);
-                ((ChFunctionSigma)fun).Set_end(sigma_end);
-                ((ChFunctionSigma)fun).Set_amp(sigma_amp);
+                ((ChFunctionPoly23)fun).SetStart(sigma_start);
+                ((ChFunctionPoly23)fun).SetEnd(sigma_end);
+                ((ChFunctionPoly23)fun).SetAmplitude(sigma_amp);
                 break;
             case Type.Sine:
-                ((ChFunctionSine)fun).Set_amp(sine_amp);
-                ((ChFunctionSine)fun).Set_freq(sine_freq);
-                ((ChFunctionSine)fun).Set_phase(sine_phase);
+                ((ChFunctionSine)fun).SetAmplitude(sine_amp);
+                ((ChFunctionSine)fun).SetFrequency(sine_freq);
+                ((ChFunctionSine)fun).SetPhase(sine_phase);
                 break;
         }
     }
 
     void Update()
     {
-        value = fun.Get_y(UChSystem.chrono_system.GetChTime());
+        value = fun.GetVal(UChSystem.chrono_system.GetChTime());
         ////Debug.Log("  t = " + UChSystem.chrono_system.GetChTime() + " val = " + value);
     }
 }

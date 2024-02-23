@@ -112,7 +112,7 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
     // This needs some massaging related to what frame things are expressed in.
     public Vector3 GetWvelGlobal()
     {
-        ChVector3d wvelG_chrono = GetChVehicle().GetChassisBody().GetWvel_par();
+        ChVector3d wvelG_chrono = GetChVehicle().GetChassisBody().GetAngVelParent();
         //return new Vector3((float)wvelG_chrono.x, (float)wvelG_chrono.z, (float)wvelG_chrono.y);
         if (ChWorldFrame.Vertical().Equals(new ChVector3d(0, 1, 0)))
         { 
@@ -126,7 +126,7 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
     // Return the vehicle angular velocity, expressed in a local ISO frame (x fwd, y left, z up).
     public Vector3 GetWvelLocal()
     {
-        ChVector3d wvelL_chrono = GetChVehicle().GetChassisBody().GetWvel_loc();
+        ChVector3d wvelL_chrono = GetChVehicle().GetChassisBody().GetAngVelLocal();
         return Utils.FromChrono(wvelL_chrono);
     }
 
