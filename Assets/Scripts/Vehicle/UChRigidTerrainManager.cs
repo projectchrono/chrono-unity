@@ -43,7 +43,7 @@ public class UChRigidTerrainManager : MonoBehaviour
             minfo.cr = 0.1f;
             minfo.Y = 2e7f;
             var defaultMat = minfo.CreateMaterial(ChContactMethod.NSC);
-            var defaultFlatTerrain = chronoRigidTerrain.AddPatch(defaultMat, new ChCoordsysD(), 100.0, 100.0, 0.5, false, 1, false);
+            var defaultFlatTerrain = chronoRigidTerrain.AddPatch(defaultMat, new ChCoordsysd(), 100.0, 100.0, 0.5, false, 1, false);
 
         }
         */

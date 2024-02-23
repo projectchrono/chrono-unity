@@ -66,7 +66,7 @@ public class UUAZ : UChVehicle
         ////Vector3 pos = transform.position;
         ////Quaternion quat = transform.rotation;
         ////Debug.Log("quat = " + quat.w + " " + quat.x + " " + quat.y + " " + quat.z);
-        var csys = new ChCoordsysD(Utils.ToChronoFlip(transform.position), Utils.ToChronoFlip(transform.rotation));
+        var csys = new ChCoordsysd(Utils.ToChronoFlip(transform.position), Utils.ToChronoFlip(transform.rotation));
         uaz.SetInitPosition(csys);
 
         uaz.SetInitFwdVel(initForwardVel);

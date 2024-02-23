@@ -789,6 +789,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8476904419749664192, guid: a3fbde8c8e9b5a845a69c6f3b9adaab3,
+        type: 3}
+      propertyPath: path
+      value: 
+      objectReference: {fileID: 979412472}
+    - target: {fileID: 8476904419749664192, guid: a3fbde8c8e9b5a845a69c6f3b9adaab3,
+        type: 3}
+      propertyPath: targetSpeed
+      value: 5.555555555555555
+      objectReference: {fileID: 0}
+    - target: {fileID: 8476904419749664192, guid: a3fbde8c8e9b5a845a69c6f3b9adaab3,
+        type: 3}
+      propertyPath: steeringMode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

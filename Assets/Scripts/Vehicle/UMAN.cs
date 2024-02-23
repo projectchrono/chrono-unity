@@ -57,7 +57,7 @@ public class UMAN : UChVehicle
         man.SetBrakeType((BrakeType)brakeType);
         man.EnableBrakeLocking(brakeLocking);
 
-        var csys = new ChCoordsysD(Utils.ToChronoFlip(transform.position), Utils.ToChronoFlip(transform.rotation));
+        var csys = new ChCoordsysd(Utils.ToChronoFlip(transform.position), Utils.ToChronoFlip(transform.rotation));
         man.SetInitPosition(csys);
 
         man.SetInitFwdVel(initForwardVel);

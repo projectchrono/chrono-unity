@@ -19,7 +19,7 @@ public class DriverEditor : Editor
 
         // Steering control mode
         string[] steering_options = new string[] { "Wheel Control", "Path Follower" };
-        driver.steeringMode = (Driver.SteeringMode)EditorGUILayout.Popup("Sterring Control Mode", (int)driver.steeringMode, steering_options, EditorStyles.popup);
+        driver.steeringMode = (Driver.SteeringMode)EditorGUILayout.Popup("Steering Control Mode", (int)driver.steeringMode, steering_options, EditorStyles.popup);
 
         if (driver.steeringMode == Driver.SteeringMode.PathFollower)
         {

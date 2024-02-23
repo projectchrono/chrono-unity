@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class UChBodyMesh : UChBody
 {
-    private ChMaterialSurface mat;
+    private ChContactMaterial mat;
 
     public bool collisionMesh;
     public string collisionMeshOBJFile;
@@ -59,7 +59,7 @@ public class UChBodyMesh : UChBody
             }
             for (int i = 0; i < mesh.triangles.Length; i += 3)
             {
-                chrono_mesh.m_face_v_indices.Add(new ChVectorI(mesh.triangles[i], mesh.triangles[i + 1], mesh.triangles[i + 2]));
+                chrono_mesh.m_face_v_indices.Add(new ChVector3i(mesh.triangles[i], mesh.triangles[i + 1], mesh.triangles[i + 2]));
             }
         }
 

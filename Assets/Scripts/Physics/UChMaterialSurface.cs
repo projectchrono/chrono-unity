@@ -17,11 +17,11 @@ public class UChMaterialInfo
 
     public UChMaterialInfo() {}
 
-    public ChMaterialSurface CreateMaterial(ChContactMethod method)
+    public ChContactMaterial CreateMaterial(ChContactMethod method)
     {
         if (method == ChContactMethod.NSC)
         {
-            var matNSC = new ChMaterialSurfaceNSC();
+            var matNSC = new ChContactMaterialNSC();
             matNSC.SetFriction(mu);
             matNSC.SetRollingFriction(mu_r);
             matNSC.SetSpinningFriction(mu_s);
@@ -31,7 +31,7 @@ public class UChMaterialInfo
 
         }
 
-        var matSMC = new ChMaterialSurfaceSMC();
+        var matSMC = new ChContactMaterialSMC();
         matSMC.SetFriction(mu);
         matSMC.SetRollingFriction(mu_r);
         matSMC.SetSpinningFriction(mu_s);

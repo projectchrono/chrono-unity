@@ -11,7 +11,7 @@ public class TerrainWireframe : MonoBehaviour
 
     public float gridSize = 25f; // The size of the grid (25m x 25m)
     public float interval = 0.5f; // The interval between points (0.5m)
-    public ChVectorD vectorLoc;
+    public ChVector3d vectorLoc;
 
     void Start()
     {
@@ -57,7 +57,7 @@ public class TerrainWireframe : MonoBehaviour
                 int zi = (int)((z + halfGridSize) / interval);
 
                 // Query the terrain height at this point from the RigidTerrain object
-                ChVectorD vectorLoc = new ChVectorD(x + gridCentre.x, 100, -(z + gridCentre.z)); // Note the -ve z to mirror to the RHF/LHF
+                ChVector3d vectorLoc = new ChVector3d(x + gridCentre.x, 100, -(z + gridCentre.z)); // Note the -ve z to mirror to the RHF/LHF
                 heights[xi, zi] = (float)chronoRigidTerrain.GetHeight(vectorLoc);
             }
         }

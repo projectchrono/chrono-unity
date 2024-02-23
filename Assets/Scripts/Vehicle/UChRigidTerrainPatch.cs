@@ -20,7 +20,7 @@ public class UChRigidTerrainPatch : MonoBehaviour
     public PatchType patchType; // Field to set the type of patch in the Unity Editor
     
     public Patch patch;
-    private ChMaterialSurface mat;
+    private ChContactMaterial mat;
     public bool tiled = false; // Tile terrain if it is large
     public int numberOfTiles = 1;
 
@@ -31,6 +31,10 @@ public class UChRigidTerrainPatch : MonoBehaviour
     public double refineGreaterThanAngle = 15.0; // sets the max angle for neighbouring grid blocks to be considered similar enough to simplify
     public double coarseMeshGridSize = 2.0; // in meters, size of the coarse mesh
 
+    // Rotate the terrain object for Unity's Y-Up world
+    ChQuaterniond rotateQ = new ChQuaterniond(chrono.QuatFromAngleX(-90 * chrono.CH_C_DEG_TO_RAD));
+    ChQuaterniond qRotationToChrono = new ChQuaterniond();
+
     // Create a Box patch Terrain
     public void AddBoxPatchTerrain(RigidTerrain chronoRigidTerrain)
     {
@@ -40,6 +44,8 @@ public class UChRigidTerrainPatch : MonoBehaviour
         //var rot = Utils.ToChrono(transform.rotation);
         var pos = Utils.ToChrono(centralTerrainPoint);
         var rot = Utils.ToChrono(transform.rotation);
+        // Rotation to Unity's YUP world
+        qRotationToChrono.Cross(rot, rotateQ); // order is paramount
 
         // Unity scale to Chrono size
         var size = transform.localScale;
@@ -49,13 +55,13 @@ public class UChRigidTerrainPatch : MonoBehaviour
         mat = mat_component.mat_info.CreateMaterial(mat_component.contact_method);
 
         // Add the patch to Chrono's RigidTerrain
-        patch = chronoRigidTerrain.AddPatch(mat, new ChCoordsysD(pos, rot), size.x, size.z, size.y, tiled, (tiled ? numberOfTiles : 1), false /* pass false visualisation so chrono doesn't create unnecessary visual objects */);
+        patch = chronoRigidTerrain.AddPatch(mat, new ChCoordsysd(pos, qRotationToChrono), size.x, size.z, size.y, tiled, (tiled ? numberOfTiles : 1), false /* pass false visualisation so chrono doesn't create unnecessary visual objects */);
         
         // Debugging information
         var patchPosition = patch.GetGroundBody().GetPos();
-        var patchRotation = patch.GetGroundBody().GetRot();
-        Debug.Log($"Patch added with Position: {patchPosition.x}, {patchPosition.y}, {patchPosition.z},  Rotation: {patchRotation.Q_to_Euler123().x * chrono.CH_C_RAD_TO_DEG}, {patchRotation.Q_to_Euler123().y * chrono.CH_C_RAD_TO_DEG}, {patchRotation.Q_to_Euler123().z * chrono.CH_C_RAD_TO_DEG}");
-        Debug.Log($"Unity values send to Chrono. Position: {pos.x}, {pos.y}, {pos.z},  Rotation: {rot.Q_to_Euler123().x * chrono.CH_C_RAD_TO_DEG}, {rot.Q_to_Euler123().y * chrono.CH_C_RAD_TO_DEG}, {rot.Q_to_Euler123().z * chrono.CH_C_RAD_TO_DEG}");
+        var patchRotation = patch.GetGroundBody().GetRot();                                
+        Debug.Log($"Patch added with Position: {patchPosition.x}, {patchPosition.y}, {patchPosition.z},  Rotation: {patchRotation.GetAxisX().x * chrono.CH_C_RAD_TO_DEG}, {patchRotation.GetCardanAnglesXYZ().y * chrono.CH_C_RAD_TO_DEG}, {patchRotation.GetCardanAnglesXYZ().z * chrono.CH_C_RAD_TO_DEG}");
+        Debug.Log($"Unity values send to Chrono. Position: {pos.x}, {pos.y}, {pos.z},  Rotation: {rot.GetCardanAnglesXYZ().x * chrono.CH_C_RAD_TO_DEG}, {rot.GetCardanAnglesXYZ().y * chrono.CH_C_RAD_TO_DEG}, {rot.GetCardanAnglesXYZ().z * chrono.CH_C_RAD_TO_DEG}");
     }
 
     public void AddHeightMapPatchTerrain(RigidTerrain chronoRigidTerrain)
@@ -77,6 +83,8 @@ public class UChRigidTerrainPatch : MonoBehaviour
         centralTerrainPoint.z *= -1;
 
         var rot = Utils.ToChrono(transform.rotation);
+        // Rotation to Unity's YUP world
+        qRotationToChrono.Cross(rot, rotateQ); // order is paramount
         var pos = Utils.ToChrono(centralTerrainPoint);
 
         var mat_component = GetComponent<UChMaterialSurface>();
@@ -91,7 +99,7 @@ public class UChRigidTerrainPatch : MonoBehaviour
         // Add the patch to Chrono's RigidTerrain using the extracted height vectors
         var patch = chronoRigidTerrain.AddPatch(
             mat,
-            new ChCoordsysD(pos, rot),
+            new ChCoordsysd(pos, qRotationToChrono),
             pointCloud,
             terrain.terrainData.size.x,  // Length of the terrain patch
             terrain.terrainData.size.z,  // Width of the terrain patch
@@ -116,9 +124,9 @@ public class UChRigidTerrainPatch : MonoBehaviour
 
 
     /// This method uses the direct height map and alternating (in between) access of the interpolated data used by unity
-    private vector_ChVectorD TerrainToPointCloud(Terrain terrain)
+    private vector_ChVector3d TerrainToPointCloud(Terrain terrain)
     {
-        vector_ChVectorD pointCloud = new vector_ChVectorD();
+        vector_ChVector3d pointCloud = new vector_ChVector3d();
         TerrainData unityHeightmap = terrain.terrainData;
         ///
         /// Direct Heightmap values sent to the point cloud
@@ -138,7 +146,7 @@ public class UChRigidTerrainPatch : MonoBehaviour
                 double worldY = unityHeightmap.GetHeight(x, z);
 
                 // Create the Chrono point
-                ChVectorD chronoPoint = new ChVectorD(worldX, worldZ, worldY);
+                ChVector3d chronoPoint = new ChVector3d(worldX, worldZ, worldY);
                 pointCloud.Add(chronoPoint);
             }
         }
@@ -169,7 +177,7 @@ public class UChRigidTerrainPatch : MonoBehaviour
                             double interpWorldY = unityHeightmap.GetInterpolatedHeight((float)interpX, (float)interpZ);
 
                             // Create the interpolated Chrono point
-                            ChVectorD interpChronoPoint = new ChVectorD(interpWorldX, interpWorldZ, interpWorldY);
+                            ChVector3d interpChronoPoint = new ChVector3d(interpWorldX, interpWorldZ, interpWorldY);
                             pointCloud.Add(interpChronoPoint);
                         }
                     }

@@ -74,9 +74,9 @@ public class UChVehiclePath : MonoBehaviour
                     List<Vector3> points_out = new List<Vector3>();
                     ConstructControlPoints(points, points_in, points_out);
 
-                    vector_ChVectorD p = new vector_ChVectorD();
-                    vector_ChVectorD p_in = new vector_ChVectorD();
-                    vector_ChVectorD p_out = new vector_ChVectorD();
+                    vector_ChVector3d p = new vector_ChVector3d();
+                    vector_ChVector3d p_in = new vector_ChVector3d();
+                    vector_ChVector3d p_out = new vector_ChVector3d();
                     for (int i = 0; i < points.Count; i++)
                     {
                         p.Add(Utils.ToChronoFlip(points[i]));
@@ -91,9 +91,9 @@ public class UChVehiclePath : MonoBehaviour
                     List<Vector3> pU_in = new List<Vector3>();
                     List<Vector3> pU_out = new List<Vector3>();
 
-                    vector_ChVectorD p = new vector_ChVectorD();
-                    vector_ChVectorD p_in = new vector_ChVectorD();
-                    vector_ChVectorD p_out = new vector_ChVectorD();
+                    vector_ChVector3d p = new vector_ChVector3d();
+                    vector_ChVector3d p_in = new vector_ChVector3d();
+                    vector_ChVector3d p_out = new vector_ChVector3d();
 
                     string bezierCurveFile_full = Application.dataPath + "/" + bezierCurveFile;
                     if (File.Exists(bezierCurveFile_full))

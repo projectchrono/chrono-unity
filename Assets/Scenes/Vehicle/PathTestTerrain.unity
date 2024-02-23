@@ -381,7 +381,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e59fce0d8991874438610f3ff08b2f66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  terrainMaterial: {fileID: 0}
 --- !u!1 &124094383
 GameObject:
   m_ObjectHideFlags: 0
@@ -2578,6 +2577,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8476904419749664192, guid: a3fbde8c8e9b5a845a69c6f3b9adaab3,
+        type: 3}
+      propertyPath: path
+      value: 
+      objectReference: {fileID: 176268495}
+    - target: {fileID: 8476904419749664192, guid: a3fbde8c8e9b5a845a69c6f3b9adaab3,
+        type: 3}
+      propertyPath: targetSpeed
+      value: 5.555555555555555
+      objectReference: {fileID: 0}
+    - target: {fileID: 8476904419749664192, guid: a3fbde8c8e9b5a845a69c6f3b9adaab3,
+        type: 3}
+      propertyPath: steeringMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

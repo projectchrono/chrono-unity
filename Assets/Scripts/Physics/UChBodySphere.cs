@@ -5,7 +5,7 @@ public class UChBodySphere : UChBody
 {
     public double radius;
 
-    private ChMaterialSurface mat;
+    private ChContactMaterial mat;
 
     public UChBodySphere()
     {
@@ -32,7 +32,7 @@ public class UChBodySphere : UChBody
         // Create the underlying Chrono body and its collision shape
         body = new ChBodyAuxRef();
         // Create a sphere collision shape with the new approach ChCollisionShape, assuming ChFrame does not need specifying
-        body.AddCollisionShape(new ChCollisionShapeSphere(mat, radius), new ChFrameD());
+        body.AddCollisionShape(new ChCollisionShapeSphere(mat, radius), new ChFramed());
     }
 
     public override void AddToSystem()

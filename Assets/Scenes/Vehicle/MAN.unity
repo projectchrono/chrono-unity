@@ -567,7 +567,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: MAN10t
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2698670446862779505, guid: c91b4a995d1e75544ab4b8735b19ab6c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

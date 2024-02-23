@@ -98,14 +98,14 @@ public class UChBody : MonoBehaviour
         // body.SetDensity(density); // - redundant if Mass COG in new collision method? Need to do more research on it.
         body.SetMass(mass);
         //// TODO: we should really set an entire frame here...
-        body.SetFrame_COG_to_REF(new ChFrameD(Utils.ToChrono(COM)));
+        body.SetFrame_COG_to_REF(new ChFramed(Utils.ToChrono(COM)));
         body.SetInertiaXX(Utils.ToChrono(inertiaMoments));
         body.SetInertiaXY(Utils.ToChrono(inertiaProducts));
 
         body.SetBodyFixed(isFixed);
         body.SetCollide(collide);
 
-        body.SetFrame_REF_to_abs(new ChFrameD(Utils.ToChrono(transform.position), Utils.ToChrono(transform.rotation)));
+        body.SetFrame_REF_to_abs(new ChFramed(Utils.ToChrono(transform.position), Utils.ToChrono(transform.rotation)));
 
         body.SetPos_dt(Utils.ToChrono(linearVelocity));
         body.SetWvel_loc(Utils.ToChrono(angularVelocity));

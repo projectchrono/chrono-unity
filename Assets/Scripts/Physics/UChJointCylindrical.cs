@@ -12,7 +12,7 @@ public class UChJointCylindrical : MonoBehaviour
     void Start()
     {
         joint = new ChLinkLockCylindrical();
-        ChCoordsysD csys = new ChCoordsysD(Utils.ToChrono(transform.position), Utils.ToChrono(transform.rotation));
+        ChCoordsysd csys = new ChCoordsysd(Utils.ToChrono(transform.position), Utils.ToChrono(transform.rotation));
         joint.Initialize(body1.GetChBody(), body2.GetChBody(), csys);
 
         UChSystem.chrono_system.AddLink(joint);

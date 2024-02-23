@@ -78,8 +78,8 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
     // Get the current vehicle speed (forward component of vehicle velocity expressed in local frame).
     public double GetSpeed()
     {
-        ChVectorD velG_chrono = GetChVehicle().GetPointVelocity(new ChVectorD(0, 0, 0));
-        ChVectorD velL_chrono = GetChVehicle().GetChassisBody().Dir_World2Body(velG_chrono);
+        ChVector3d velG_chrono = GetChVehicle().GetPointVelocity(new ChVector3d(0, 0, 0));
+        ChVector3d velL_chrono = GetChVehicle().GetChassisBody().Dir_World2Body(velG_chrono);
         ////Debug.Log(velL_chrono.x + " " + velL_chrono.y + " " + velL_chrono.z);
 
         return velL_chrono.x;
@@ -91,8 +91,8 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
     // This needs some massaging related to what frame things are expressed in.
     public Vector3 GetAccelerationGlobal(Vector3 loc)
     {
-        ChVectorD accL_chrono = GetChVehicle().GetVehiclePointAcceleration(Utils.ToChrono(loc));
-        ChVectorD accG_chrono = GetChVehicle().GetChassisBody().Dir_Body2World(accL_chrono);
+        ChVector3d accL_chrono = GetChVehicle().GetVehiclePointAcceleration(Utils.ToChrono(loc));
+        ChVector3d accG_chrono = GetChVehicle().GetChassisBody().Dir_Body2World(accL_chrono);
         return new Vector3((float)accG_chrono.x, (float)accG_chrono.z, (float)accG_chrono.y);
     }
     */
@@ -103,7 +103,7 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
     // regardless of the world frame orientation.
     public Vector3 GetAccelerationLocal(Vector3 loc)
     {
-        ChVectorD accL_chrono = GetChVehicle().GetPointAcceleration(Utils.ToChrono(loc));
+        ChVector3d accL_chrono = GetChVehicle().GetPointAcceleration(Utils.ToChrono(loc));
         return Utils.FromChrono(accL_chrono);
     }
 
@@ -112,9 +112,9 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
     // This needs some massaging related to what frame things are expressed in.
     public Vector3 GetWvelGlobal()
     {
-        ChVectorD wvelG_chrono = GetChVehicle().GetChassisBody().GetWvel_par();
+        ChVector3d wvelG_chrono = GetChVehicle().GetChassisBody().GetWvel_par();
         //return new Vector3((float)wvelG_chrono.x, (float)wvelG_chrono.z, (float)wvelG_chrono.y);
-        if (ChWorldFrame.Vertical().Equals(new ChVectorD(0, 1, 0)))
+        if (ChWorldFrame.Vertical().Equals(new ChVector3d(0, 1, 0)))
         { 
             return new Vector3((float)wvelG_chrono.x, (float)wvelG_chrono.y, -(float)wvelG_chrono.z);
         } else
@@ -126,7 +126,7 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
     // Return the vehicle angular velocity, expressed in a local ISO frame (x fwd, y left, z up).
     public Vector3 GetWvelLocal()
     {
-        ChVectorD wvelL_chrono = GetChVehicle().GetChassisBody().GetWvel_loc();
+        ChVector3d wvelL_chrono = GetChVehicle().GetChassisBody().GetWvel_loc();
         return Utils.FromChrono(wvelL_chrono);
     }
 
@@ -143,10 +143,10 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
 
     // Base vehicle initialisation; subclasses have the option to override.
     // If not overridden, the default implementation is used.
-    public virtual void Initialize(ChCoordsysD initialPosition, double initialForwardSpeed)
+    public virtual void Initialize(ChCoordsysd initialPosition, double initialForwardSpeed)
     {
         // Default implementation
-        initialPosition = new ChCoordsysD();
+        initialPosition = new ChCoordsysd();
         initialForwardSpeed = 0.0;
     }
 

@@ -20,7 +20,7 @@ public class UChBodyConvexHull : UChBody
     public float pointGizmoRadius;
     public bool showCollisionShape;
 
-    private ChMaterialSurface mat;
+    private ChContactMaterial mat;
 
     public UChBodyConvexHull()
     {
@@ -45,7 +45,7 @@ public class UChBodyConvexHull : UChBody
 
 
         // Create the underlying Chrono body from the points specified in the Editor
-        vector_ChVectorD p = new vector_ChVectorD();
+        vector_ChVector3d p = new vector_ChVector3d();
         // Insert point source
         if (pointSource == PointSource.MeshFilter)
         {

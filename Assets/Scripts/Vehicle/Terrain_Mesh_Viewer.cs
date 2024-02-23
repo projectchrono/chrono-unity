@@ -241,7 +241,7 @@ public void UpdateMeshHeights()
         Vector3 worldVertex = transform.TransformPoint(vertices[i]);
 
         // Getting the height at the world space position
-        ChVectorD vectorLoc = new ChVectorD(worldVertex.x, 100, -worldVertex.z);  // Negating Z-coordinate for chronoRigidTerrain compatibility
+        ChVector3d vectorLoc = new ChVector3d(worldVertex.x, 100, -worldVertex.z);  // Negating Z-coordinate for chronoRigidTerrain compatibility
 
         float height = (float)chronoRigidTerrain.GetHeight(vectorLoc);
 
@@ -277,7 +277,7 @@ public void UpdateMeshHeights()
                     Vector3 worldVertex = child.TransformPoint(vertices[i]);
 
                     // Getting the height at the world space position
-                    ChVectorD vectorLoc = new ChVectorD(worldVertex.x, 100, -worldVertex.z);
+                    ChVector3d vectorLoc = new ChVector3d(worldVertex.x, 100, -worldVertex.z);
 
                     float height = (float)chronoRigidTerrain.GetHeight(vectorLoc);
                     vertices[i].y = height;

@@ -48,19 +48,19 @@ public class UChFunction : MonoBehaviour
         {
             case Type.Constant:
             default:
-                var funConstant = new ChFunction_Const(constant_val);
+                var funConstant = new ChFunctionConst(constant_val);
                 fun = funConstant;
                 break;
             case Type.Ramp:
-                var funRamp = new ChFunction_Ramp(ramp_y0, ramp_ang);
+                var funRamp = new ChFunctionRamp(ramp_y0, ramp_ang);
                 fun = funRamp;
                 break;
             case Type.Sigma:
-                var funSigma = new ChFunction_Sigma(sigma_amp, sigma_start, sigma_end);
+                var funSigma = new ChFunctionSigma(sigma_amp, sigma_start, sigma_end);
                 fun = funSigma;
                 break;
             case Type.Sine:
-                var funSine = new ChFunction_Sine(sine_phase, sine_freq, sine_amp);
+                var funSine = new ChFunctionSine(sine_phase, sine_freq, sine_amp);
                 fun = funSine;
                 break;
         }
@@ -71,21 +71,21 @@ public class UChFunction : MonoBehaviour
         switch (type)
         {
             case Type.Constant:
-                ((ChFunction_Const)fun).Set_yconst(constant_val);
+                ((ChFunctionConst)fun).Set_yconst(constant_val);
                 break;
             case Type.Ramp:
-                ((ChFunction_Ramp)fun).Set_y0(ramp_y0);
-                ((ChFunction_Ramp)fun).Set_ang(ramp_ang);
+                ((ChFunctionRamp)fun).Set_y0(ramp_y0);
+                ((ChFunctionRamp)fun).Set_ang(ramp_ang);
                 break;
             case Type.Sigma:
-                ((ChFunction_Sigma)fun).Set_start(sigma_start);
-                ((ChFunction_Sigma)fun).Set_end(sigma_end);
-                ((ChFunction_Sigma)fun).Set_amp(sigma_amp);
+                ((ChFunctionSigma)fun).Set_start(sigma_start);
+                ((ChFunctionSigma)fun).Set_end(sigma_end);
+                ((ChFunctionSigma)fun).Set_amp(sigma_amp);
                 break;
             case Type.Sine:
-                ((ChFunction_Sine)fun).Set_amp(sine_amp);
-                ((ChFunction_Sine)fun).Set_freq(sine_freq);
-                ((ChFunction_Sine)fun).Set_phase(sine_phase);
+                ((ChFunctionSine)fun).Set_amp(sine_amp);
+                ((ChFunctionSine)fun).Set_freq(sine_freq);
+                ((ChFunctionSine)fun).Set_phase(sine_phase);
                 break;
         }
     }

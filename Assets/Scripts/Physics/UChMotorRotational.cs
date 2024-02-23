@@ -26,7 +26,7 @@ public class UChMotorRotational : UChMotor
     void Start()
     {
         motor = Create(type);
-        ChFrameD frame = new ChFrameD(Utils.ToChrono(transform.position), Utils.ToChrono(transform.rotation));
+        ChFramed frame = new ChFramed(Utils.ToChrono(transform.position), Utils.ToChrono(transform.rotation));
         motor.Initialize(body1.GetChBody(), body2.GetChBody(), frame);
 
         // Get a handle to the associated function component and set the motor's function
