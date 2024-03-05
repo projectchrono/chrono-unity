@@ -79,7 +79,9 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
     public double GetSpeed()
     {
         ChVector3d velG_chrono = GetChVehicle().GetPointVelocity(new ChVector3d(0, 0, 0));
-        ChVector3d velL_chrono = GetChVehicle().GetChassisBody().Dir_World2Body(velG_chrono);
+        // ChVector3d velL_chrono = GetChVehicle().GetChassisBody().Dir_World2Body(velG_chrono); // OVERHAUL CHANGE
+        ChVector3d velL_chrono = GetChVehicle().GetTransform().TransformDirectionParentToLocal(velG_chrono);
+
         ////Debug.Log(velL_chrono.x + " " + velL_chrono.y + " " + velL_chrono.z);
 
         return velL_chrono.x;

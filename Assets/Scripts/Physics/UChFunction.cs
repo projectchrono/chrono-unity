@@ -78,8 +78,8 @@ public class UChFunction : MonoBehaviour
                 ((ChFunctionRamp)fun).SetAngularCoeff(ramp_ang);
                 break;
             case Type.Sigma:
-                ((ChFunctionPoly23)fun).SetStart(sigma_start);
-                ((ChFunctionPoly23)fun).SetEnd(sigma_end);
+                ((ChFunctionPoly23)fun).SetStartArg(sigma_start);
+                ((ChFunctionPoly23)fun).SetEndArg(sigma_end);
                 ((ChFunctionPoly23)fun).SetAmplitude(sigma_amp);
                 break;
             case Type.Sine:

@@ -26,7 +26,7 @@ public class UChJointGear : MonoBehaviour
     public bool enforcePhase = true;
     public bool epicyclic = false;
 
-    private ChLinkGear gear;
+    private ChLinkLockGear gear;
 
     public UChJointGear()
     {
@@ -36,8 +36,8 @@ public class UChJointGear : MonoBehaviour
 
     void Start()
     {
-        gear = new ChLinkGear();
-        ChCoordsysd csys = new ChCoordsysd(Utils.ToChrono(transform.position), Utils.ToChrono(transform.rotation));
+        gear = new ChLinkLockGear();
+        ChFramed csys = new ChFramed(Utils.ToChrono(transform.position), Utils.ToChrono(transform.rotation));
         gear.Initialize(body1.GetChBody(), body2.GetChBody(), csys);
 
         //// TODO: Check that this is correct.
@@ -55,7 +55,7 @@ public class UChJointGear : MonoBehaviour
 
     void Update()
     {
-        ChVector3d pos = gear.GetMarker2().GetAbsCoord().pos;
+        ChVector3d pos = gear.GetMarker2().GetAbsCsys().pos;
         transform.position = Utils.FromChrono(pos);
     }
 }

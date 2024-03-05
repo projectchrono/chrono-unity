@@ -471,9 +471,11 @@ MonoBehaviour:
   patchType: 1
   tiled: 0
   numberOfTiles: 1
-  smoothingFactor: 0.1
+  smoothingFactor: 0.05
   refineGreaterThanAngle: 10
-  coarseMeshGridSize: 3
+  coarseMeshGridSize: 2
+  numberOfRefinements: 5
+  maxTriangleEdgeLength: 0.5
 --- !u!1 &542616148
 GameObject:
   m_ObjectHideFlags: 0

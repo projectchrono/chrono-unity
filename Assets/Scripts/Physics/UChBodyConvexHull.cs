@@ -96,8 +96,8 @@ public class UChBodyConvexHull : UChBody
             // Create visualization mesh from the Chrono-generated mesh.
             // For proper rendering, we must create unique vertices for each face (the Chrono connected mesh will not do).
             var chrono_mesh = bodyCH.GetMesh();
-            int chrono_nv = chrono_mesh.getCoordsVertices().Count;
-            int chrono_nt = chrono_mesh.getNumTriangles();
+            int chrono_nv = chrono_mesh.GetCoordsVertices().Count;
+            int chrono_nt = chrono_mesh.GetNumTriangles();
 
             // The Unity visualization mesh will have 3 distinct vertices per face.
             // For each face, assign the face normal to adjacent vertices.
@@ -109,13 +109,13 @@ public class UChBodyConvexHull : UChBody
 
             for (int i = 0; i < chrono_nt; i++)
             {
-                int v1 = chrono_mesh.getIndicesVertexes()[i].x;
-                int v2 = chrono_mesh.getIndicesVertexes()[i].y;
-                int v3 = chrono_mesh.getIndicesVertexes()[i].z;
+                int v1 = chrono_mesh.GetIndicesVertexes()[i].x;
+                int v2 = chrono_mesh.GetIndicesVertexes()[i].y;
+                int v3 = chrono_mesh.GetIndicesVertexes()[i].z;
 
-                vertices[3 * i + 0] = Utils.FromChrono(chrono_mesh.getCoordsVertices()[v1]);
-                vertices[3 * i + 1] = Utils.FromChrono(chrono_mesh.getCoordsVertices()[v2]);
-                vertices[3 * i + 2] = Utils.FromChrono(chrono_mesh.getCoordsVertices()[v3]);
+                vertices[3 * i + 0] = Utils.FromChrono(chrono_mesh.GetCoordsVertices()[v1]);
+                vertices[3 * i + 1] = Utils.FromChrono(chrono_mesh.GetCoordsVertices()[v2]);
+                vertices[3 * i + 2] = Utils.FromChrono(chrono_mesh.GetCoordsVertices()[v3]);
 
                 Vector3 nrm = Vector3.Cross(vertices[3 * i + 1] - vertices[3 * i + 0], vertices[3 * i + 2] - vertices[3 * i + 1]);
                 normals[3 * i + 0] = nrm;

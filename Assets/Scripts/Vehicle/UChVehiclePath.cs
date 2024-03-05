@@ -158,7 +158,7 @@ public class UChVehiclePath : MonoBehaviour
         double delta = 1.0 / numRenderPoints;
         var points = new Vector3[numRenderPoints];
         for (int i = 0; i < numRenderPoints; i++)
-            points[i] = Utils.FromChronoFlip(c.eval(delta * i));
+            points[i] = Utils.FromChronoFlip(c.Eval(delta * i));
 
         lineRenderer.positionCount = numRenderPoints;
         lineRenderer.SetPositions(points);

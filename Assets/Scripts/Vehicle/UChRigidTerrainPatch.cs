@@ -31,7 +31,8 @@ public class UChRigidTerrainPatch : MonoBehaviour
     public double refineGreaterThanAngle = 15.0; // sets the max angle for neighbouring grid blocks to be considered similar enough to simplify
     public double coarseMeshGridSize = 2.0; // in meters, size of the coarse mesh
 
-
+    public int numberOfRefinements = 10; // number of iterative passes over mesh to split triangles greater than the normal angle
+    public double maxTriangleEdgeLength = 1.0; // point at which to stop refining once reached
 
     // Create a Box patch Terrain
     public void AddBoxPatchTerrain(RigidTerrain chronoRigidTerrain)
@@ -85,6 +86,10 @@ public class UChRigidTerrainPatch : MonoBehaviour
 
         var rot = Utils.ToChrono(transform.rotation);
         var pos = Utils.ToChrono(centralTerrainPoint);
+        ChQuaterniond rotateQ = new ChQuaterniond(chrono.QuatFromAngleX(-90 * chrono.CH_C_DEG_TO_RAD));
+        ChQuaterniond qRotationToChrono = new ChQuaterniond();
+        qRotationToChrono.Cross(rot, rotateQ); // order is paramount
+
 
         var mat_component = GetComponent<UChMaterialSurface>();
         var mat = mat_component.mat_info.CreateMaterial(mat_component.contact_method);
@@ -95,22 +100,25 @@ public class UChRigidTerrainPatch : MonoBehaviour
         // set the starting alternating triangle mesh resolution. balance speed and accuracy here
         int coarseMeshResolution = (int)(terrain.terrainData.size.x / coarseMeshGridSize); // if coarseMeshGridSize = 2, then 2m basic grid size starting mesh by divinding the width by 2.0m to get the number of grid squares
 
+        Debug.Log("coarse mesh resolution = " + coarseMeshResolution);
+
         // Add the patch to Chrono's RigidTerrain using the extracted height vectors
         var patch = chronoRigidTerrain.AddPatch(
             mat,
-            new ChCoordsysd(pos, rot),
+            new ChCoordsysd(pos, rotateQ),
             pointCloud,
             terrain.terrainData.size.x,  // Length of the terrain patch
             terrain.terrainData.size.z,  // Width of the terrain patch
             coarseMeshResolution, // Starting mesh.
-            (int)terrain.terrainData.heightmapResolution, // Grid Subdivision, convert to int from float
-            3, // number of iterations
+            (int)terrain.terrainData.heightmapResolution - 1, // Grid Subdivision, ensure int
+            numberOfRefinements, // number of iterations
             refineGreaterThanAngle,
             smoothingFactor,
-            1.0, // max LEPP edge length in refinement
+            maxTriangleEdgeLength, // max LEPP edge length in refinement
             sweepSphereRadius,
             false
         );
+
         
         // Debugging information
         ////var patchPosition = patch.GetGroundBody().GetPos();

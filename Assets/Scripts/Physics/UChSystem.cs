@@ -277,7 +277,7 @@ public class UChSystem : MonoBehaviour
                 }
         }
         chrono_system.SetCollisionSystemType(ChCollisionSystem.Type.BULLET);
-        chrono_system.Set_G_acc(new ChVector3d(gravity.x, gravity.y, gravity.z));
+        chrono_system.SetGravitationalAcceleration(new ChVector3d(gravity.x, gravity.y, gravity.z));
         chrono_system.SetStep(step);
 
     }

@@ -27,7 +27,7 @@ public class UChJointUniversal : MonoBehaviour
         ChVector3d y = frame2.GetRotMat().GetAxisY();
         ChVector3d z = x.Cross(y);
 
-        ChMatrix33D R = new ChMatrix33D();
+        ChMatrix33d R = new ChMatrix33d();
         R.SetFromDirectionAxes(x, y, z);
 
         transform.position = Utils.FromChrono(frame1.GetPos());

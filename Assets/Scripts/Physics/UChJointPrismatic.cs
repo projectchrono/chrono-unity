@@ -21,7 +21,7 @@ public class UChJointPrismatic : MonoBehaviour
     void Start()
     {
         joint = new ChLinkLockPrismatic();
-        ChCoordsysd csys = new ChCoordsysd(Utils.ToChrono(transform.position), Utils.ToChrono(transform.rotation));
+        ChFramed csys = new ChFramed(Utils.ToChrono(transform.position), Utils.ToChrono(transform.rotation));
         joint.Initialize(body1.GetChBody(), body2.GetChBody(), csys);
 
         if (enableLimits)
@@ -36,11 +36,11 @@ public class UChJointPrismatic : MonoBehaviour
 
     void Update()
     {
-        var csys = joint.GetMarker1().GetAbsCoord();
+        var csys = joint.GetMarker1().GetAbsCsys();
         transform.position = Utils.FromChrono(csys.pos);
         transform.rotation = Utils.FromChrono(csys.rot);
 
-        displacement = joint.GetMarker1().GetAbsCoord().pos.z - joint.GetMarker2().GetAbsCoord().pos.z;
+        displacement = joint.GetMarker1().GetAbsCsys().pos.z - joint.GetMarker2().GetAbsCsys().pos.z;
         displacement = (int)(displacement * 1000.0f) / 1000.0f;
     }
 }
