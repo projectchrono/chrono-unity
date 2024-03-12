@@ -42,8 +42,8 @@ public class UChMotorLinear : UChMotor
 
     void Update()
     {
-        var csys = motor.GetLinkAbsoluteCoords();
-        transform.position = Utils.FromChrono(csys.pos);
-        transform.rotation = Utils.FromChrono(csys.rot);
+        var csys = motor.GetFrameAbs();
+        transform.position = Utils.FromChrono(csys.GetPos()); // overhaul changes from pos and rot
+        transform.rotation = Utils.FromChrono(csys.GetRot());
     }
 }

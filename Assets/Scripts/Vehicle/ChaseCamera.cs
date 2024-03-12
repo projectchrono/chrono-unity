@@ -15,10 +15,10 @@ public class ChaseCamera : MonoBehaviour, IAdvance
     [Range (0.0f, 1.0f)]
     public float smoothSpeed = 0.1f;
 
-    [Range (-2.0f, 20.0f)]
+    [Range (-2.0f, 50.0f)]
     public float cameraDistance = 4;
 
-    [Range(0.0f, 10.0f)]
+    [Range(0.0f, 25.0f)]
     public float cameraHeight = 3;
 
     //public Color textColor;
@@ -157,33 +157,37 @@ public class ChaseCamera : MonoBehaviour, IAdvance
 
         double speedKPH = Math.Round(3.6 * vehicle.GetSpeed());
         GUI.Label(new Rect(10, 120, 200, 40), "Speed (km/h): " + speedKPH.ToString(), guiStyle);
+        int currentGear = vehicle.GetTransmission().GetCurrentGear();
+        GUI.Label(new Rect(10, 150, 200, 40), "Current Gear: " + currentGear.ToString(), guiStyle);
         double throttle = Math.Round(vehicle.GetThrottleInput() * 100) / 100;
-        GUI.Label(new Rect(10, 150, 200, 40), "Throttle: " + throttle.ToString(), guiStyle);
+        GUI.Label(new Rect(10, 180, 200, 40), "Throttle: " + throttle.ToString(), guiStyle);
         double braking = Math.Round(vehicle.GetBrakingInput() * 100) / 100;
-        GUI.Label(new Rect(10, 180, 200, 40), "Braking: " + braking.ToString(), guiStyle);
+        GUI.Label(new Rect(10, 210, 200, 40), "Braking: " + braking.ToString(), guiStyle);
         double steering = Math.Round(vehicle.GetSteeringInput() * 100) / 100;
-        GUI.Label(new Rect(10, 210, 200, 40), "Steering: " + steering.ToString(), guiStyle);
+        GUI.Label(new Rect(10, 240, 200, 40), "Steering: " + steering.ToString(), guiStyle);
+
+
 
 
         // Updates to the new powertrain base
-        var transmission = vehicle.GetPowertrainAssembly().GetTransmission() as ChAutomaticTransmission;
+        var transmission = vehicle.GetTransmission() as ChAutomaticTransmission;
 
         if (transmission != null)
         {
             switch (transmission.GetDriveMode())
             {
                 case ChAutomaticTransmission.DriveMode.FORWARD:
-                    GUI.Label(new Rect(10, 240, 200, 40), "Gear: Forward", guiStyle);
+                    GUI.Label(new Rect(10, 280, 200, 40), "Gear: Forward", guiStyle);
                     break;
                 case ChAutomaticTransmission.DriveMode.REVERSE:
-                    GUI.Label(new Rect(10, 240, 200, 40), "Gear: Reverse", guiStyle);
+                    GUI.Label(new Rect(10, 280, 200, 40), "Gear: Reverse", guiStyle);
                     break;
             }
         }
 
         double motorTorque = Math.Round(vehicle.GetPowertrainAssembly().GetEngine().GetOutputMotorshaftTorque());
-        GUI.Label(new Rect(10, 280, 200, 40), "Motor Torque (Nm): " + motorTorque.ToString(), guiStyle);
+        GUI.Label(new Rect(10, 320, 200, 40), "Motor Torque (Nm): " + motorTorque.ToString(), guiStyle);
         double motorSpeed = Math.Round(vehicle.GetPowertrainAssembly().GetEngine().GetMotorSpeed() * 60 / (2 * Math.PI));
-        GUI.Label(new Rect(10, 320, 200, 40), "Motor Speed (RPM): " + motorSpeed.ToString(), guiStyle);
+        GUI.Label(new Rect(10, 360, 200, 40), "Motor Speed (RPM): " + motorSpeed.ToString(), guiStyle);
     }
 }

@@ -36,11 +36,11 @@ public class UChJointPrismatic : MonoBehaviour
 
     void Update()
     {
-        var csys = joint.GetMarker1().GetAbsCsys();
+        var csys = joint.GetMarker1().GetAbsCoordsys();
         transform.position = Utils.FromChrono(csys.pos);
         transform.rotation = Utils.FromChrono(csys.rot);
 
-        displacement = joint.GetMarker1().GetAbsCsys().pos.z - joint.GetMarker2().GetAbsCsys().pos.z;
+        displacement = joint.GetMarker1().GetAbsCoordsys().pos.z - joint.GetMarker2().GetAbsCoordsys().pos.z;
         displacement = (int)(displacement * 1000.0f) / 1000.0f;
     }
 }

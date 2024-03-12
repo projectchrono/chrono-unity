@@ -161,4 +161,6 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
 
     // Return Lidar sensor location, relative to the vehicle reference frame (ISO frame)
     protected virtual Vector3 GetLidarLocation() { return Vector3.zero; }
+
+
 }

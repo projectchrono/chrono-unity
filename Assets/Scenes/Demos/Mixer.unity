@@ -1117,8 +1117,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7194074963564705906, guid: 434044898e2439248a0db16bad6f0518,
         type: 3}
+      propertyPath: contact_method
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7194074963564705906, guid: 434044898e2439248a0db16bad6f0518,
+        type: 3}
       propertyPath: integratorType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7194074963564705906, guid: 434044898e2439248a0db16bad6f0518,
         type: 3}
@@ -1133,7 +1138,7 @@ PrefabInstance:
     - target: {fileID: 7194074963564705906, guid: 434044898e2439248a0db16bad6f0518,
         type: 3}
       propertyPath: solverEnableWarmStart
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7194074963564705907, guid: 434044898e2439248a0db16bad6f0518,
         type: 3}
