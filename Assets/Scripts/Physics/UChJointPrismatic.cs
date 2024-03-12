@@ -26,9 +26,9 @@ public class UChJointPrismatic : MonoBehaviour
 
         if (enableLimits)
         {
-            joint.GetLimit_Z().SetActive(true);
-            joint.GetLimit_Z().SetMin(minDisplacement);
-            joint.GetLimit_Z().SetMax(maxDisplacement);
+            joint.LimitZ().SetActive(true);
+            joint.LimitZ().SetMin(minDisplacement);
+            joint.LimitZ().SetMax(maxDisplacement);
         }
 
         UChSystem.chrono_system.AddLink(joint);

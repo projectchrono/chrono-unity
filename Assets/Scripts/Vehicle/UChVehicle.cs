@@ -57,9 +57,10 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
         ////Vector3 omg = GetWvelLocal();
         ////Debug.Log(inputs.m_steering + "     " + omg.x + "  " + omg.y + "  " + omg.z);
 
+        
         OnAdvance(step);
-
-        // TODO: If terrain exists, then synchronise and advance
+ 
+        // If terrain exists, then synchronise and advance
         if (chTerrain != null)
         {
             chTerrain.Synchronize(UChSystem.chrono_system.GetChTime());
@@ -138,6 +139,8 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
 
     public abstract double GetMaxSpeed();
     public abstract ChVehicle GetChVehicle();
+
+
     // Updated powertrain classes that need exposure, set as virtual to provide template implementation, vehicles may optionall override
     public virtual ChPowertrainAssembly GetPowertrainAssembly() { return GetChVehicle().GetPowertrainAssembly(); }
     public virtual ChTransmission GetTransmission() { return GetChVehicle().GetTransmission(); }
@@ -155,12 +158,5 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
 
     protected abstract void OnStart();
     protected abstract void OnAdvance(double step);
-
-    // Return the IMU sensor location, relative to the vehicle reference frame (ISO frame)
-    protected virtual Vector3 GetIMULocation() { return Vector3.zero; }
-
-    // Return Lidar sensor location, relative to the vehicle reference frame (ISO frame)
-    protected virtual Vector3 GetLidarLocation() { return Vector3.zero; }
-
 
 }

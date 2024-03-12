@@ -34,9 +34,9 @@ public class UChJointRevolute : MonoBehaviour
         
         if (enableLimits)
         {
-            joint.GetLimit_Rz().SetActive(true);
-            joint.GetLimit_Rz().SetMin(minAngle * Mathf.PI / 180);
-            joint.GetLimit_Rz().SetMax(maxAngle * Mathf.PI / 180);
+            joint.LimitRz().SetActive(true);
+            joint.LimitRz().SetMin(minAngle * Mathf.PI / 180);
+            joint.LimitRz().SetMax(maxAngle * Mathf.PI / 180);
         }
         
         if (joint != null) {
