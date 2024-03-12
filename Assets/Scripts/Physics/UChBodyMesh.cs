@@ -70,7 +70,7 @@ public class UChBodyMesh : UChBody
         if (automaticMass)
         {
             mass = body.GetMass();
-            COM = Utils.FromChrono(body.GetFrame_COG_to_REF().GetPos());
+            COM = Utils.FromChrono(body.GetFrameCOMToRef().GetPos());
             inertiaMoments = Utils.FromChrono(body.GetInertiaXX());
             inertiaProducts = Utils.FromChrono(body.GetInertiaXY());
         }

@@ -80,7 +80,7 @@ public class UChBody : MonoBehaviour
     {
         Debug.Log("Name:      " + gameObject.name + "\n" +
                   "Mass:      " + body.GetMass() + "\n" +
-                  "COM:       " + Utils.FromChrono(body.GetFrame_COG_to_REF().GetPos()) + "\n" +
+                  "COM:       " + Utils.FromChrono(body.GetFrameCOMToRef().GetPos()) + "\n" +
                   "inertiaXX: " + Utils.FromChrono(body.GetInertiaXX()) + "\n" +
                   "inertiaXY: " + Utils.FromChrono(body.GetInertiaXY()));
     }
@@ -98,14 +98,14 @@ public class UChBody : MonoBehaviour
         // body.SetDensity(density); // - redundant if Mass COG in new collision method? Need to do more research on it.
         body.SetMass(mass);
         //// TODO: we should really set an entire frame here...
-        body.SetFrame_COG_to_REF(new ChFramed(Utils.ToChrono(COM)));
+        body.SetFrameCOMToRef(new ChFramed(Utils.ToChrono(COM)));
         body.SetInertiaXX(Utils.ToChrono(inertiaMoments));
         body.SetInertiaXY(Utils.ToChrono(inertiaProducts));
 
-        body.SetBodyFixed(isFixed);
-        body.SetCollide(collide);
+        body.SetFixed(isFixed);
+        body.EnableCollision(collide);
 
-        body.SetFrame_REF_to_abs(new ChFramed(Utils.ToChrono(transform.position), Utils.ToChrono(transform.rotation)));
+        body.SetFrameRefToAbs(new ChFramed(Utils.ToChrono(transform.position), Utils.ToChrono(transform.rotation)));
 
         body.SetPosDer(Utils.ToChrono(linearVelocity));
         body.SetAngVelLocal(Utils.ToChrono(angularVelocity));
@@ -134,7 +134,7 @@ public class UChBody : MonoBehaviour
         ////Debug.Log("body Time = " + body.GetChTime());
 
         // Update body state
-        var frame = body.GetFrame_REF_to_abs();
+        var frame = body.GetFrameRefToAbs();
         transform.position = Utils.FromChrono(frame.GetPos());
         transform.rotation = Utils.FromChrono(frame.GetRot());
         linearVelocity = Utils.FromChrono(frame.GetPosDer());
