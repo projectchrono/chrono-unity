@@ -61,10 +61,6 @@ public class Driver : MonoBehaviour, IAdvance
 
     public UChVehicle vehicle;  // associated vehicle
 
-    private int maintainGear;   // gear to maintain for a set duration
-    private float gearMaintainTime = 0.0f; // Timer to maintain the downshifted gear
-    private float minGearMaintainDuration = 1.5f; // Minimum duration to maintain a gear after shifting in cruise control
-
 
     public Driver()
     {
@@ -106,7 +102,7 @@ public class Driver : MonoBehaviour, IAdvance
         steeringDesired = 0;
         throttleDesired = 0;
         brakingDesired = 0;
-        steeringDelta = step / 24;
+        steeringDelta = step / 1;
         throttleDelta = step / 8;
         brakingDelta = step / 4;
 
@@ -118,7 +114,6 @@ public class Driver : MonoBehaviour, IAdvance
         m_err = 0;
         m_errd = 0;
         m_erri = 0;
-        maintainGear = vehicle.GetTransmission().GetCurrentGear(); // initialise the holding gear
     }
 
     public void Advance(double step)
@@ -222,8 +217,6 @@ public class Driver : MonoBehaviour, IAdvance
                 m_err = err;                                     // Cache new error
                 double output = speedKp * m_err + speedKi * m_erri + speedKd * m_errd; // PID output
                 output = Utils.Clamp(output, -1.0, +1.0);
-                double slowThreshold = 5.0 / 3.6;                // Shift gears if going too slowly
-
                 if (output > 0)
                 {
                     // Vehicle moving too slow
@@ -251,30 +244,6 @@ public class Driver : MonoBehaviour, IAdvance
                 ////          "   crt: " + Math.Round(3.6 * crt_speed * 100) / 100  +
                 ////          "   Speed PID out: " + output + "   Kp = " + speed_Kp);
 
-
-                // Timer to maintain the gears in cruise mode
-                if (gearMaintainTime < minGearMaintainDuration)
-                {
-                    gearMaintainTime += (float)step; // counter
-                    vehicle.GetTransmission().SetGear(maintainGear);
-                }
-                else if (gearMaintainTime > minGearMaintainDuration)
-                {
-                    // Get the new gear from chrono when min duration exceeded
-                    maintainGear = vehicle.GetTransmission().GetCurrentGear();
-                    gearMaintainTime = 0.0f; // Reset timer to hold gear
-                }
-                // Avoid stalling on a gradient
-                // Check if throttle is greater than 0, and speed is below threshold
-                if (vehicle.GetTransmission().GetCurrentGear() > 1 && vehicle.GetThrottleInput() > 0 && crt_speed < slowThreshold)
-                {
-                    // Shift down
-                    vehicle.GetTransmission().SetGear(1);
-                    maintainGear = vehicle.GetTransmission().GetCurrentGear();
-                    gearMaintainTime = 0.0f; // Reset timer after downshifting
-                    //Debug.Log("Slow threshold reached. Setting to first gear.");
-                }
-
                 break;
         }
 
@@ -284,7 +253,6 @@ public class Driver : MonoBehaviour, IAdvance
         ////Debug.Log(t + "        " + b + "   " + s);
 
         vehicle.SetDriverInputs(m_steering, m_throttle, m_braking);
-
     }
 
     private void OnDrawGizmos()

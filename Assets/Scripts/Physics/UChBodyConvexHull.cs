@@ -97,12 +97,12 @@ public class UChBodyConvexHull : UChBody
             // For proper rendering, we must create unique vertices for each face (the Chrono connected mesh will not do).
             var chrono_mesh = bodyCH.GetMesh();
             int chrono_nv = chrono_mesh.GetCoordsVertices().Count;
-            uint chrono_nt = chrono_mesh.GetNumTriangles(); // overhaul changes from int
+            int chrono_nt = chrono_mesh.GetNumTriangles();
 
             // The Unity visualization mesh will have 3 distinct vertices per face.
             // For each face, assign the face normal to adjacent vertices.
-            int unity_nv = 3 * (int)chrono_nt;
-            int unity_nt = 3 * (int)chrono_nt;
+            int unity_nv = 3 * chrono_nt;
+            int unity_nt = 3 * chrono_nt;
             Vector3[] vertices = new Vector3[unity_nv];
             Vector3[] normals = new Vector3[unity_nv];
             int[] triangles = new int[unity_nt];

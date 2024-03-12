@@ -38,8 +38,8 @@ public class UChMotorRotational : UChMotor
 
     void Update()
     {
-        var csys = motor.GetFrameAbs();
-        transform.position = Utils.FromChrono(csys.GetPos()); // changed from pos (overhaul)
-        transform.rotation = Utils.FromChrono(csys.GetRot()); // overhaul change from rot
+        var csys = motor.GetLinkAbsoluteCoords();
+        transform.position = Utils.FromChrono(csys.pos);
+        transform.rotation = Utils.FromChrono(csys.rot);
     }
 }

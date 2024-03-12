@@ -377,7 +377,7 @@ TerrainCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: ddabebde60d320547bf103cdbace4159, type: 2}
   m_EnableTreeColliders: 1
@@ -472,10 +472,10 @@ MonoBehaviour:
   tiled: 0
   numberOfTiles: 1
   smoothingFactor: 0.05
-  refineGreaterThanAngle: 15
+  refineGreaterThanAngle: 10
   coarseMeshGridSize: 2
-  numberOfRefinements: 3
-  maxTriangleEdgeLength: 1
+  numberOfRefinements: 5
+  maxTriangleEdgeLength: 0.5
 --- !u!1 &542616148
 GameObject:
   m_ObjectHideFlags: 0

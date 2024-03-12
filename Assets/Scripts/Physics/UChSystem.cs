@@ -160,15 +160,7 @@ public class UChSystem : MonoBehaviour
                 chrono_system = new ChSystemNSC();
                 break;
             case ChContactMethod.SMC:
-                chrono_system = new ChSystemSMC();
-                if (chrono_system is ChSystemSMC chronoSystemSMC)
-                {
-                    chronoSystemSMC.UseMaterialProperties(useMatProps);
-                    Debug.Log("useMatProps set for ChSystemSMC");
-                }
-                // (useMatProps) is defaulted as true in ChSystemSMC setup now (overhaul). So explicitly
-                // exposing to the ChSystem and setting it seems a bit redundant unless its necessary for the user.
-                // It could be set with changing the way chrono_system is setup (i.e. as a ChSystemSMC at the outset).
+                chrono_system = new ChSystemSMC(useMatProps);
                 break;
         }
 
@@ -186,7 +178,7 @@ public class UChSystem : MonoBehaviour
                     solver.SetTolerance(solverTolerance);
                     solver.EnableDiagonalPreconditioner(solverEnablePrecond);
                     solver.EnableWarmStart(solverEnableWarmStart);
-                    chrono_system.SetSolver(solver);                    
+                    chrono_system.SetSolver(solver);
                     break;
                 }
             case SolverType.BARZILAIBORWEIN:
@@ -286,7 +278,7 @@ public class UChSystem : MonoBehaviour
         }
         chrono_system.SetCollisionSystemType(ChCollisionSystem.Type.BULLET);
         chrono_system.SetGravitationalAcceleration(new ChVector3d(gravity.x, gravity.y, gravity.z));
-        // chrono_system.SetStep(step); // overhaul removed this: the desired step size value is always explicitly passed as an argument to the ChSystem function that initiates that analysis (e.g., DoStepDynamics). The current value of the step size (which may be adjusted internally in certain situations) is cached and can still be queried with ChSystem::GetStep
+        chrono_system.SetStep(step);
 
     }
 

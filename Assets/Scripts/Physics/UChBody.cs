@@ -102,8 +102,8 @@ public class UChBody : MonoBehaviour
         body.SetInertiaXX(Utils.ToChrono(inertiaMoments));
         body.SetInertiaXY(Utils.ToChrono(inertiaProducts));
 
-        body.SetFixed(isFixed);
-        body.EnableCollision(collide);
+        body.SetBodyFixed(isFixed);
+        body.SetCollide(collide);
 
         body.SetFrame_REF_to_abs(new ChFramed(Utils.ToChrono(transform.position), Utils.ToChrono(transform.rotation)));
 

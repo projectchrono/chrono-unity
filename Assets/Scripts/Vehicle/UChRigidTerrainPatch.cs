@@ -10,8 +10,7 @@ using UnityEngine.Timeline;
 [DefaultExecutionOrder(0)]
 public class UChRigidTerrainPatch : MonoBehaviour
 {
-    public Patch patch;
-    private ChContactMaterial mat;
+
     public enum PatchType
     {
         boxPatch,
@@ -20,28 +19,25 @@ public class UChRigidTerrainPatch : MonoBehaviour
     [SerializeField]
     public PatchType patchType; // Field to set the type of patch in the Unity Editor
     
-    // Variables for the box patch
+    public Patch patch;
+    private ChContactMaterial mat;
     public bool tiled = false; // Tile terrain if it is large
-    [Tooltip("Partition a large patch into a number of tiles")]
     public int numberOfTiles = 1;
 
-    //Variables for the Mesh Patch
+        // Variables for the Mesh Patch
+    public double smoothingFactor = 0.1; // Taubin smoothing use
     private bool useInterpolatedPoints = false; // include every intermediate interpolated point into the cloud. Default off. Mostly useful for error/accuracy checking.
-    [Tooltip("Amount of Taubin smoothing to apply to each vertex (0-1.0)")]
-    public double smoothingFactor = 0.1; // Taubin smoothing use. Sensitive factor
-    [Tooltip("Algorithm will mark for refinement any triangles whose normals differ by greater than this angle")]
-    public double refineGreaterThanAngle = 15.0; // sets the max angle for neighbouring grid blocks to be considered similar enough to simplify
-    [Tooltip("Starting grid size in meters")]
-    public double coarseMeshGridSize = 2.0; // in meters, size of the coarse mesh
-    [Tooltip("Number of iterations to perform")]
-    public int numberOfRefinements = 3; // number of iterative passes over mesh to split triangles greater than the normal angle
-    [Tooltip("Maximum length of refined triangles in meters")]
-    public double maxTriangleEdgeLength = 1.0; // point at which to stop refining once reached
 
+    public double refineGreaterThanAngle = 15.0; // sets the max angle for neighbouring grid blocks to be considered similar enough to simplify
+    public double coarseMeshGridSize = 2.0; // in meters, size of the coarse mesh
+
+    public int numberOfRefinements = 10; // number of iterative passes over mesh to split triangles greater than the normal angle
+    public double maxTriangleEdgeLength = 1.0; // point at which to stop refining once reached
 
     // Create a Box patch Terrain
     public void AddBoxPatchTerrain(RigidTerrain chronoRigidTerrain)
     {
+
         Vector3 centralTerrainPoint = this.transform.position;
         centralTerrainPoint.z *= -1; // ensure the LHF is converted to RHF position!
         //var rot = Utils.ToChrono(transform.rotation);
@@ -70,7 +66,6 @@ public class UChRigidTerrainPatch : MonoBehaviour
         Debug.Log($"Unity values send to Chrono. Position: {pos.x}, {pos.y}, {pos.z},  Rotation: {rot.GetCardanAnglesXYZ().x * chrono.CH_C_RAD_TO_DEG}, {rot.GetCardanAnglesXYZ().y * chrono.CH_C_RAD_TO_DEG}, {rot.GetCardanAnglesXYZ().z * chrono.CH_C_RAD_TO_DEG}");
     }
 
-    // Create a point cloud based terrain from a Unity terrain object
     public void AddHeightMapPatchTerrain(RigidTerrain chronoRigidTerrain)
     {
         Terrain terrain = GetComponent<Terrain>();
@@ -84,18 +79,18 @@ public class UChRigidTerrainPatch : MonoBehaviour
 
         // Determine the 'Chrono' origin of the terrain path. that is the central 0,0 (as opposed to Unity terrain's bottom right point.
         Vector3 centralTerrainPoint = this.transform.position;
+
         centralTerrainPoint.x += terrain.terrainData.size.x / 2;
         centralTerrainPoint.z += terrain.terrainData.size.z / 2;
-        centralTerrainPoint.z *= -1; // Ensure RHF - LHF is correct
+        centralTerrainPoint.z *= -1;
 
-        // Position and rotate the terrain to suit a Y-Up world
         var rot = Utils.ToChrono(transform.rotation);
         var pos = Utils.ToChrono(centralTerrainPoint);
         ChQuaterniond rotateQ = new ChQuaterniond(chrono.QuatFromAngleX(-90 * chrono.CH_C_DEG_TO_RAD));
         ChQuaterniond qRotationToChrono = new ChQuaterniond();
         qRotationToChrono.Cross(rot, rotateQ); // order is paramount
 
-        // Apply materials
+
         var mat_component = GetComponent<UChMaterialSurface>();
         var mat = mat_component.mat_info.CreateMaterial(mat_component.contact_method);
 
@@ -112,16 +107,16 @@ public class UChRigidTerrainPatch : MonoBehaviour
             mat,
             new ChCoordsysd(pos, rotateQ),
             pointCloud,
-            terrain.terrainData.size.x,                         // Length of the terrain patch
-            terrain.terrainData.size.z,                         // Width of the terrain patch
-            coarseMeshResolution,                               // Starting mesh.
-            (int)terrain.terrainData.heightmapResolution - 1,   // Point cloud grid resolution, ensure int
-            numberOfRefinements,                                // number of iterations
-            refineGreaterThanAngle,                             // angle limit
-            smoothingFactor,                                    // Taubin smoothing factor
-            maxTriangleEdgeLength,                              // max LEPP edge length in refinement
-            sweepSphereRadius,                                  // 'thickness' of terrain object
-            false                                               // no visual asset necessary
+            terrain.terrainData.size.x,  // Length of the terrain patch
+            terrain.terrainData.size.z,  // Width of the terrain patch
+            coarseMeshResolution, // Starting mesh.
+            (int)terrain.terrainData.heightmapResolution - 1, // Grid Subdivision, ensure int
+            numberOfRefinements, // number of iterations
+            refineGreaterThanAngle,
+            smoothingFactor,
+            maxTriangleEdgeLength, // max LEPP edge length in refinement
+            sweepSphereRadius,
+            false
         );
 
         
@@ -134,7 +129,8 @@ public class UChRigidTerrainPatch : MonoBehaviour
     }
 
 
-    /// This method uses the direct height map and alternating (in between) access of the interpolated data used by unity (if true)
+
+    /// This method uses the direct height map and alternating (in between) access of the interpolated data used by unity
     private vector_ChVector3d TerrainToPointCloud(Terrain terrain)
     {
         vector_ChVector3d pointCloud = new vector_ChVector3d();

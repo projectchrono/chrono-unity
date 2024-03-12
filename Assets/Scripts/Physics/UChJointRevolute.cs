@@ -48,7 +48,7 @@ public class UChJointRevolute : MonoBehaviour
     void Update()
     {
         
-        var csys = joint.GetMarker1().GetAbsCoordsys();
+        var csys = joint.GetMarker1().GetAbsCsys();
         transform.position = Utils.FromChrono(csys.pos);
         transform.rotation = Utils.FromChrono(csys.rot);
 
