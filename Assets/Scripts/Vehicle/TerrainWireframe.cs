@@ -1,8 +1,23 @@
+// =============================================================================
+// PROJECT CHRONO - http://projectchrono.org
+//
+// Copyright (c) 2024 projectchrono.org
+// All rights reserved.
+//
+// Use of this source code is governed by a BSD-style license that can be found
+// in the LICENSE file at the top level of the distribution and at
+// http://projectchrono.org/license-chrono.txt.
+//
+// =============================================================================
+// Authors: Josh Diyn
+// =============================================================================
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// TODO:: Script to add this to any terrainmanager parent object automatically
+// This is a duplication of the terrain mesh viewer, however this script enables
+// live local terrain visualisation during runtime with scene view
 
 [DefaultExecutionOrder(900)]
 public class TerrainWireframe : MonoBehaviour

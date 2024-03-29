@@ -1,15 +1,22 @@
-﻿using UnityEngine;
+﻿// =============================================================================
+// PROJECT CHRONO - http://projectchrono.org
+//
+// Copyright (c) 2024 projectchrono.org
+// All rights reserved.
+//
+// Use of this source code is governed by a BSD-style license that can be found
+// in the LICENSE file at the top level of the distribution and at
+// http://projectchrono.org/license-chrono.txt.
+//
+// =============================================================================
+// Authors: Radu Serban
+// =============================================================================
+
+using UnityEngine;
 // Ensure this base script executes just after the Chsystem, but before everything else.
 [DefaultExecutionOrder(-999)]
 public class UChBody : MonoBehaviour
 {
-    // ATTENTION: The underlying ChBody must be created in UChBody.Awake.
-    // Other components (e.g. links, motors, etc) access their ChBody references in their Start function and
-    // Unity does not enforce an order of calls to Start.
-
-    // This is mitigated by adjusting the script execution order to -999 (currently set to +100 in motors and links scripts)
-
-
     public bool isFixed;
     public bool collide;
     public bool showFrameGizmo;
@@ -107,7 +114,7 @@ public class UChBody : MonoBehaviour
 
         body.SetFrameRefToAbs(new ChFramed(Utils.ToChrono(transform.position), Utils.ToChrono(transform.rotation)));
 
-        body.SetPosDer(Utils.ToChrono(linearVelocity));
+        body.SetPosDt(Utils.ToChrono(linearVelocity));
         body.SetAngVelLocal(Utils.ToChrono(angularVelocity));
 
 
@@ -137,7 +144,7 @@ public class UChBody : MonoBehaviour
         var frame = body.GetFrameRefToAbs();
         transform.position = Utils.FromChrono(frame.GetPos());
         transform.rotation = Utils.FromChrono(frame.GetRot());
-        linearVelocity = Utils.FromChrono(frame.GetPosDer());
+        linearVelocity = Utils.FromChrono(frame.GetPosDt());
         angularVelocity = Utils.FromChrono(frame.GetAngVelLocal());
     }
 

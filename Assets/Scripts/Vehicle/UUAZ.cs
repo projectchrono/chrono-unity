@@ -1,4 +1,18 @@
-﻿using System.Collections;
+﻿// =============================================================================
+// PROJECT CHRONO - http://projectchrono.org
+//
+// Copyright (c) 2024 projectchrono.org
+// All rights reserved.
+//
+// Use of this source code is governed by a BSD-style license that can be found
+// in the LICENSE file at the top level of the distribution and at
+// http://projectchrono.org/license-chrono.txt.
+//
+// =============================================================================
+// Authors: Radu Serban, Josh Diyn
+// =============================================================================
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -155,19 +169,19 @@ public class UUAZ : UChVehicle
     {
         return uaz.GetVehicle();
     }
-    /*
+    
     public override ChPowertrainAssembly GetPowertrainAssembly()
     {
-        return uaz.GetChPowertrainAssembly();
+        return uaz.GetVehicle().GetPowertrainAssembly();
     }
 
     public override ChEngine GetEngine()
     {
-        return uaz.GetEngine();
+        return uaz.GetVehicle().GetEngine();
     }
 
     public override ChTransmission GetTransmission()
     {
-        return uaz.GetTransmission();
-    }*/
+        return uaz.GetVehicle().GetTransmission();
+    }
 }

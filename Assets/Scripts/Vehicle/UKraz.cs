@@ -1,3 +1,17 @@
+// =============================================================================
+// PROJECT CHRONO - http://projectchrono.org
+//
+// Copyright (c) 2024 projectchrono.org
+// All rights reserved.
+//
+// Use of this source code is governed by a BSD-style license that can be found
+// in the LICENSE file at the top level of the distribution and at
+// http://projectchrono.org/license-chrono.txt.
+//
+// =============================================================================
+// Authors: Josh Diyn
+// =============================================================================
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -41,10 +55,10 @@ public class UKraz : UChVehicle
     private GameObject wheel_RL1o;    // Tractor Rear Left Outer Wheel on First Axle: "Wheel_RL1o"
     private GameObject wheel_RR1o;    // Tractor Rear Right Outer Wheel on First Axle: "Wheel_RR1o"
 
-    private GameObject wheel_RL2i;    // Tractor Rear Left Inner Wheel on Second Axle (if present)
-    private GameObject wheel_RR2i;    // Tractor Rear Right Inner Wheel on Second Axle (if present)
-    private GameObject wheel_RL2o;    // Tractor Rear Left Outer Wheel on Second Axle (if present)
-    private GameObject wheel_RR2o;    // Tractor Rear Right Outer Wheel on Second Axle (if present)
+    private GameObject wheel_RL2i;    // Tractor Rear Left Inner Wheel on Second Axle
+    private GameObject wheel_RR2i;    // Tractor Rear Right Inner Wheel on Second Axle
+    private GameObject wheel_RL2o;    // Tractor Rear Left Outer Wheel on Second Axle
+    private GameObject wheel_RR2o;    // Tractor Rear Right Outer Wheel on Second Axle
 
     // Trailer wheels
     private GameObject wheelTrailerFL;  // Trailer Front Left Wheel: "Wheel_FL"
@@ -214,7 +228,6 @@ public class UKraz : UChVehicle
         kraz.Advance(step);
     }
 
-
     public override double GetMaxSpeed()
     {
         return 25.0; // 90 km/h
@@ -224,6 +237,5 @@ public class UKraz : UChVehicle
     {
         return kraz.GetTractor();
     }
-    
 
 }

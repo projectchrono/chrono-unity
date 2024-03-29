@@ -1,3 +1,17 @@
+// =============================================================================
+// PROJECT CHRONO - http://projectchrono.org
+//
+// Copyright (c) 2024 projectchrono.org
+// All rights reserved.
+//
+// Use of this source code is governed by a BSD-style license that can be found
+// in the LICENSE file at the top level of the distribution and at
+// http://projectchrono.org/license-chrono.txt.
+//
+// =============================================================================
+// Authors: Josh Diyn
+// =============================================================================
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -49,7 +63,7 @@ public class UChRigidTerrainPatch : MonoBehaviour
         var rot = Utils.ToChrono(transform.rotation);
         // Rotation to Unity's YUP world
         // Rotate the terrain object for Unity's Y-Up world
-        ChQuaterniond rotateQ = new ChQuaterniond(chrono.QuatFromAngleX(-90 * chrono.CH_C_DEG_TO_RAD));
+        ChQuaterniond rotateQ = new ChQuaterniond(chrono.QuatFromAngleX(-90 * chrono.CH_DEG_TO_RAD));
         ChQuaterniond qRotationToChrono = new ChQuaterniond();
         qRotationToChrono.Cross(rot, rotateQ); // order is paramount
 
@@ -66,8 +80,8 @@ public class UChRigidTerrainPatch : MonoBehaviour
         // Debugging information
         var patchPosition = patch.GetGroundBody().GetPos();
         var patchRotation = patch.GetGroundBody().GetRot();                                
-        Debug.Log($"Patch added with Position: {patchPosition.x}, {patchPosition.y}, {patchPosition.z},  Rotation: {patchRotation.GetAxisX().x * chrono.CH_C_RAD_TO_DEG}, {patchRotation.GetCardanAnglesXYZ().y * chrono.CH_C_RAD_TO_DEG}, {patchRotation.GetCardanAnglesXYZ().z * chrono.CH_C_RAD_TO_DEG}");
-        Debug.Log($"Unity values send to Chrono. Position: {pos.x}, {pos.y}, {pos.z},  Rotation: {rot.GetCardanAnglesXYZ().x * chrono.CH_C_RAD_TO_DEG}, {rot.GetCardanAnglesXYZ().y * chrono.CH_C_RAD_TO_DEG}, {rot.GetCardanAnglesXYZ().z * chrono.CH_C_RAD_TO_DEG}");
+        Debug.Log($"Patch added with Position: {patchPosition.x}, {patchPosition.y}, {patchPosition.z},  Rotation: {patchRotation.GetAxisX().x * chrono.CH_DEG_TO_RAD}, {patchRotation.GetCardanAnglesXYZ().y * chrono.CH_DEG_TO_RAD}, {patchRotation.GetCardanAnglesXYZ().z * chrono.CH_DEG_TO_RAD}");
+        Debug.Log($"Unity values send to Chrono. Position: {pos.x}, {pos.y}, {pos.z},  Rotation: {rot.GetCardanAnglesXYZ().x * chrono.CH_DEG_TO_RAD}, {rot.GetCardanAnglesXYZ().y * chrono.CH_DEG_TO_RAD}, {rot.GetCardanAnglesXYZ().z * chrono.CH_DEG_TO_RAD}");
     }
 
     // Create a point cloud based terrain from a Unity terrain object
@@ -91,7 +105,7 @@ public class UChRigidTerrainPatch : MonoBehaviour
         // Position and rotate the terrain to suit a Y-Up world
         var rot = Utils.ToChrono(transform.rotation);
         var pos = Utils.ToChrono(centralTerrainPoint);
-        ChQuaterniond rotateQ = new ChQuaterniond(chrono.QuatFromAngleX(-90 * chrono.CH_C_DEG_TO_RAD));
+        ChQuaterniond rotateQ = new ChQuaterniond(chrono.QuatFromAngleX(-90 * chrono.CH_DEG_TO_RAD));
         ChQuaterniond qRotationToChrono = new ChQuaterniond();
         qRotationToChrono.Cross(rot, rotateQ); // order is paramount
 
@@ -134,7 +148,7 @@ public class UChRigidTerrainPatch : MonoBehaviour
     }
 
 
-    /// This method uses the direct height map and alternating (in between) access of the interpolated data used by unity (if true)
+    /// This method uses the direct height map and alternating (in between) access of the interpolated data used by unity (if set to true)
     private vector_ChVector3d TerrainToPointCloud(Terrain terrain)
     {
         vector_ChVector3d pointCloud = new vector_ChVector3d();

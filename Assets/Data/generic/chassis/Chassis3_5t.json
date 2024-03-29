@@ -1,0 +1,25 @@
+{
+  "Name":     "Generic suv chassis 3500kg",
+  "Type":     "Chassis",
+  "Template": "RigidChassis",
+
+  "Components":
+  [
+   {
+     "Centroidal Frame":    {
+                              "Location":    [0.056, 0, 0.35],
+                              "Orientation": [1, 0, 0, 0]
+                            },
+     "Mass":                3500,
+     "Moments of Inertia": [ 1809.15, 4957.93, 5988.78 ],
+     "Products of Inertia": [0, 0, 0],
+     "Void":                false
+   }
+  ],
+
+  "Driver Position":
+  {
+    "Location":     [0, 0.5, 1.2],
+    "Orientation":  [1, 0, 0, 0]
+  }
+}

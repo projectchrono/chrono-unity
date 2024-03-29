@@ -1,5 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿// =============================================================================
+// PROJECT CHRONO - http://projectchrono.org
+//
+// Copyright (c) 2024 projectchrono.org
+// All rights reserved.
+//
+// Use of this source code is governed by a BSD-style license that can be found
+// in the LICENSE file at the top level of the distribution and at
+// http://projectchrono.org/license-chrono.txt.
+//
+// =============================================================================
+// Authors: Radu Serban, Josh Diyn
+// =============================================================================
+
 using UnityEngine;
 
 public class UGator : UChVehicle
@@ -64,7 +76,7 @@ public class UGator : UChVehicle
         gator.SetAerodynamicDrag(0.5, 5.0, 1.2);
         gator.SetBrakeType((BrakeType)brakeType);
         gator.EnableBrakeLocking(brakeLocking);
-        ///gator.SetChassisCollisionType(CollisionType.MESH); // test - check. crashing
+        ///vehicle.SetChassisCollisionType(CollisionType.MESH); // test - check. crashing - suspect the mesh object isn't intialised or read
         ////Vector3 pos = transform.position;
         ////Quaternion quat = transform.rotation;
         ////Debug.Log("quat = " + quat.w + " " + quat.x + " " + quat.y + " " + quat.z);
@@ -148,22 +160,23 @@ public class UGator : UChVehicle
         ////Debug.Log("wheelRR pos: " + Utils.FromChrono(spindleRR_pos));
 
         ////Debug.Log("0. inputs: " + inputs.m_steering + " " + inputs.m_throttle + " " + inputs.m_braking);
-        ////Debug.Log("0. powertrain speed and torque: " + gator.GetPowertrain().GetMotorSpeed() + "    " + gator.GetPowertrain().GetMotorTorque());
+        ////Debug.Log("0. powertrain speed and torque: " + vehicle.GetPowertrain().GetMotorSpeed() + "    " + vehicle.GetPowertrain().GetMotorTorque());
 
         gator.Synchronize(UChSystem.chrono_system.GetChTime(), inputs, chTerrain);
 
-        ////Debug.Log("1. powertrain speed and torque: " + gator.GetPowertrain().GetMotorSpeed() + "    " + gator.GetPowertrain().GetMotorTorque());
+        ////Debug.Log("1. powertrain speed and torque: " + vehicle.GetPowertrain().GetMotorSpeed() + "    " + vehicle.GetPowertrain().GetMotorTorque());
         ////Debug.Log("1. spindle torque (left / right): " 
-        ////    + gator.GetVehicle().GetDriveline().GetSpindleTorque(1, VehicleSide.LEFT) + "   " 
-        ////    + gator.GetVehicle().GetDriveline().GetSpindleTorque(1, VehicleSide.RIGHT));
-        ////Debug.Log("1. driveshaft speed: " + gator.GetVehicle().GetDriveline().GetDriveshaftSpeed());
+        ////    + vehicle.GetVehicle().GetDriveline().GetSpindleTorque(1, VehicleSide.LEFT) + "   " 
+        ////    + vehicle.GetVehicle().GetDriveline().GetSpindleTorque(1, VehicleSide.RIGHT));
+        ////Debug.Log("1. driveshaft speed: " + vehicle.GetVehicle().GetDriveline().GetDriveshaftSpeed());
 
         gator.Advance(step);
 
-        ////var tFL_force = gator.GetVehicle().GetTire(0, VehicleSide.LEFT).ReportTireForce(UChTerrain.chrono_terrain);
-        ////var tRL_force = gator.GetVehicle().GetTire(1, VehicleSide.LEFT).ReportTireForce(UChTerrain.chrono_terrain);
+        ////var tFL_force = vehicle.GetVehicle().GetTire(0, VehicleSide.LEFT).ReportTireForce(chTerrain);
+        ////var tRL_force = vehicle.GetVehicle().GetTire(1, VehicleSide.LEFT).ReportTireForce(chTerrain);
         ////Debug.Log("2. tire FL: " + Utils.FromChrono(tFL_force.force));
         ////Debug.Log("2. tire RL: " + Utils.FromChrono(tRL_force.force));
+        ////Debug.Log("2. tire FL (x): " + tFL_force.force.x);
     }
 
     public override double GetMaxSpeed()
@@ -176,34 +189,29 @@ public class UGator : UChVehicle
         return gator.GetVehicle();
     }
 
-    protected override Vector3 GetIMULocation()
+
+     
+    public override ChPowertrainAssembly GetPowertrainAssembly()
     {
-        return new Vector3(-0.267f, -0.016f, 1.539f);
+        // Return the specific powertrain assembly for Gator
+        return gator.GetVehicle().GetPowertrainAssembly();
     }
+    
+    /// TODO: This possible needs altering in SWIG interface for inheritance/casting
+    ///
+    /// 
+    //// Override the GetTransmission method
+    //public override ChTransmission GetTransmission()
+    //{
+    //    // Return the transmission specified above in UGator
+    //    return new Gator_AutomaticTransmissionSimple("GatorTransmission");
+    //}
 
-    protected override Vector3 GetLidarLocation()
-    {
-        return new Vector3(-0.216f, 0.0f, 1.780f);
-    }
-    /*  
-      public override ChPowertrainAssembly GetPowertrainAssembly()
-      {
-          // Return the specific powertrain assembly for Gator
-      }*/
-    /*
-        // Override the GetTransmission method
-        public override ChTransmission GetTransmission()
-        {
-            // Return the transmission specified above in UGator
-            return new Gator_AutomaticTransmissionSimple("GatorTransmission");
-        }
-
-        // Override the GetEngine method
-        public override ChEngine GetEngine()
-        {
-            // Return the engine set up in UGator
-            return new Gator_EngineSimple("GatorEngine"); ;
-        }*/
-
+    //// Override the GetEngine method
+    //public override ChEngine GetEngine()
+    //{
+    //    // Return the engine set up in UGator
+    //    return new Gator_EngineSimple("GatorEngine");
+    //}
 
 }

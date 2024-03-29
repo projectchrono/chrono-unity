@@ -1,3 +1,17 @@
+// =============================================================================
+// PROJECT CHRONO - http://projectchrono.org
+//
+// Copyright (c) 2024 projectchrono.org
+// All rights reserved.
+//
+// Use of this source code is governed by a BSD-style license that can be found
+// in the LICENSE file at the top level of the distribution and at
+// http://projectchrono.org/license-chrono.txt.
+//
+// =============================================================================
+// Authors: Josh Diyn
+// =============================================================================
+
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
@@ -63,9 +77,9 @@ public class UChRigidTerrainManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Note:: Synchronize and Advance moved to UChVehicle //
-        //        chronoRigidTerrain.Synchronize(UChSystem.chrono_system.GetChTime());
-        //         chronoRigidTerrain.Advance(UChSystem.chrono_system.GetStep());
+        // Note:: TODO: Ensure Step size sync to unity update or alter this method type/linkage to the chrono system
+        chronoRigidTerrain.Synchronize(UChSystem.chrono_system.GetChTime());
+        chronoRigidTerrain.Advance(UChSystem.chrono_system.GetStep());
     }
 
 }

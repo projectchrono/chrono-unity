@@ -703,6 +703,11 @@ PrefabInstance:
       propertyPath: chassisMaterial
       value: 
       objectReference: {fileID: 2100000, guid: 442324137fd93db4e80125d57d248a01, type: 2}
+    - target: {fileID: 6725509915233093248, guid: 19e318937e9294a49b7c04b026b297ca,
+        type: 3}
+      propertyPath: speedMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -784,6 +789,11 @@ PrefabInstance:
     - target: {fileID: 7188946638413734918, guid: a3fbde8c8e9b5a845a69c6f3b9adaab3,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8476904419749664192, guid: a3fbde8c8e9b5a845a69c6f3b9adaab3,
+        type: 3}
+      propertyPath: speedMode
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

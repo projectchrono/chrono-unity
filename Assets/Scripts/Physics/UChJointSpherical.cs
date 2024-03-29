@@ -1,10 +1,21 @@
-﻿using System.Collections;
+﻿// =============================================================================
+// PROJECT CHRONO - http://projectchrono.org
+//
+// Copyright (c) 2024 projectchrono.org
+// All rights reserved.
+//
+// Use of this source code is governed by a BSD-style license that can be found
+// in the LICENSE file at the top level of the distribution and at
+// http://projectchrono.org/license-chrono.txt.
+//
+// =============================================================================
+// Authors: Radu Serban
+// =============================================================================
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Physics items will cause Unity to crash if trying to add bodies to the system before any of those
-// have intialised first. Therefore, force the execution to be after these (default execution order is '0')
-[DefaultExecutionOrder(100)]
 public class UChJointSpherical : MonoBehaviour
 {
     public UChBody body1;

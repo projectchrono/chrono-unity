@@ -1,4 +1,20 @@
-﻿using System;
+﻿// =============================================================================
+// PROJECT CHRONO - http://projectchrono.org
+//
+// Copyright (c) 2024 projectchrono.org
+// All rights reserved.
+//
+// Use of this source code is governed by a BSD-style license that can be found
+// in the LICENSE file at the top level of the distribution and at
+// http://projectchrono.org/license-chrono.txt.
+//
+// =============================================================================
+// Authors: Radu Serban
+// =============================================================================
+
+// TODO - ensure there's a uchmaterial surface also attached when this exists on an object!
+
+using System;
 using System.Security.AccessControl;
 
 public class UChBodySphere : UChBody

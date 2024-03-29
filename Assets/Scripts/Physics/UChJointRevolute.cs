@@ -1,12 +1,22 @@
-﻿using UnityEngine;
+﻿// =============================================================================
+// PROJECT CHRONO - http://projectchrono.org
+//
+// Copyright (c) 2024 projectchrono.org
+// All rights reserved.
+//
+// Use of this source code is governed by a BSD-style license that can be found
+// in the LICENSE file at the top level of the distribution and at
+// http://projectchrono.org/license-chrono.txt.
+//
+// =============================================================================
+// Authors: Radu Serban
+// =============================================================================
+
+using UnityEngine;
 
 //// TODO:  Double-check check proper implementation of joint limits.
 ////        Must take into account body order, orientation, etc.
 
-
-// Physics items will cause Unity to crash if trying to add bodies to the system before any of those
-// have intialised first. Therefore, force the execution to be after these (default execution order is '0')
-[DefaultExecutionOrder(100)]
 public class UChJointRevolute : MonoBehaviour
 {
     public UChBody body1;

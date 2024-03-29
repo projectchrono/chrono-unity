@@ -1,8 +1,22 @@
+// =============================================================================
+// PROJECT CHRONO - http://projectchrono.org
+//
+// Copyright (c) 2024 projectchrono.org
+// All rights reserved.
+//
+// Use of this source code is governed by a BSD-style license that can be found
+// in the LICENSE file at the top level of the distribution and at
+// http://projectchrono.org/license-chrono.txt.
+//
+// =============================================================================
+// Authors: Josh Diyn
+// =============================================================================
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+// Delay this until most other scripts have executed
 [DefaultExecutionOrder(800)]
 public class Terrain_Mesh_Viewer : MonoBehaviour
 {
@@ -13,6 +27,7 @@ public class Terrain_Mesh_Viewer : MonoBehaviour
     private Mesh mesh;
     private Vector3[] vertices;
     private bool meshCreated = false; // Flag to check if mesh is already created
+    private int chunkSize = 5; // Size of each chunk
 
     void Start()
     {
@@ -28,92 +43,7 @@ public class Terrain_Mesh_Viewer : MonoBehaviour
         {
             Debug.LogError("UChRigidTerrainManager component not found in parent GameObjects.");
         }
-
-
     }
-    /*
-    public void GenerateMesh()
-    {
-        if (chronoRigidTerrain == null)
-        {
-            Debug.LogError("ChronoRigidTerrain reference is not set.");
-            return;
-        }
-
-        // Resetting existing mesh data
-        if (meshCreated && mesh != null)
-        {
-            mesh.Clear();
-        }
-        else
-        {
-            mesh = new Mesh();
-            meshCreated = true;
-        }
-
-        Vector3 gridCentre = this.gameObject.transform.position;
-        double halfGridSize = gridSize / 2.0;
-        int numPointsX = Mathf.CeilToInt(gridSize / interval) + 1;
-        int numPointsZ = Mathf.CeilToInt(gridSize / interval) + 1;
-
-        vertices = new Vector3[numPointsX * numPointsZ];
-        List<int> triangles = new List<int>();
-
-        // Create vertices as a simple grid
-        for (int x = 0; x < numPointsX; x++)
-        {
-            for (int z = 0; z < numPointsZ; z++)
-            {
-                double localX = x * interval - halfGridSize;
-                double localZ = z * interval - halfGridSize;
-                int index = z * numPointsX + x;
-                vertices[index] = new Vector3((float)localX, 0, (float)localZ) + gridCentre;
-            }
-        }
-
-        // Create triangles
-        for (int x = 0; x < numPointsX - 1; x++)
-        {
-            for (int z = 0; z < numPointsZ - 1; z++)
-            {
-                int topLeft = z * numPointsX + x;
-                int topRight = topLeft + 1;
-                int bottomLeft = topLeft + numPointsX;
-                int bottomRight = bottomLeft + 1;
-
-                // First triangle of quad
-                triangles.Add(topLeft);
-                triangles.Add(bottomLeft);
-                triangles.Add(topRight);
-
-                // Second triangle of quad
-                triangles.Add(topRight);
-                triangles.Add(bottomLeft);
-                triangles.Add(bottomRight);
-            }
-        }
-
-        // Assign the new mesh data
-        mesh.vertices = vertices;
-        mesh.triangles = triangles.ToArray();
-        mesh.RecalculateNormals();
-        mesh.RecalculateBounds();
-
-        // MeshFilter and MeshRenderer setup...
-        MeshFilter meshFilter = GetComponent<MeshFilter>();
-        meshFilter.mesh = mesh;
-
-        MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
-        if (meshRenderer == null)
-        {
-            meshRenderer = gameObject.AddComponent<MeshRenderer>();
-            meshRenderer.sharedMaterial = new Material(Shader.Find("Standard"));
-        }
-    }
-    */
-
-
-    private int chunkSize = 5; // Size of each chunk
 
     // Chunk mesh creation
     public void GenerateMesh()
@@ -194,8 +124,6 @@ public class Terrain_Mesh_Viewer : MonoBehaviour
             }
         }
 
-
-
         // Create and set up the mesh for this chunk
         Mesh chunkMesh = new Mesh();
         chunkMesh.vertices = chunkVertices;
@@ -224,36 +152,6 @@ public class Terrain_Mesh_Viewer : MonoBehaviour
         }
     }
 
-    /*
-public void UpdateMeshHeights()
-{
-    if (chronoRigidTerrain == null || mesh == null)
-    {
-        Debug.LogError("Required components for updating mesh height are not set.");
-        return;
-    }
-
-    Vector3[] vertices = mesh.vertices;
-
-    for (int i = 0; i < vertices.Length; i++)
-    {
-        // Transforming the local vertex position to world space
-        Vector3 worldVertex = transform.TransformPoint(vertices[i]);
-
-        // Getting the height at the world space position
-        ChVector3d vectorLoc = new ChVector3d(worldVertex.x, 100, -worldVertex.z);  // Negating Z-coordinate for chronoRigidTerrain compatibility
-
-        float height = (float)chronoRigidTerrain.GetHeight(vectorLoc);
-
-        // Updating only the y-value (height) of the vertex
-        vertices[i].y = height;
-    }
-
-    mesh.vertices = vertices;
-    mesh.RecalculateNormals();
-    mesh.RecalculateBounds();
-}
-*/
     public void UpdateMeshHeights()
     {
         if (chronoRigidTerrain == null)
@@ -289,7 +187,4 @@ public void UpdateMeshHeights()
             }
         }
     }
-
-
-
 }

@@ -1,4 +1,18 @@
-﻿using System;
+﻿// =============================================================================
+// PROJECT CHRONO - http://projectchrono.org
+//
+// Copyright (c) 2024 projectchrono.org
+// All rights reserved.
+//
+// Use of this source code is governed by a BSD-style license that can be found
+// in the LICENSE file at the top level of the distribution and at
+// http://projectchrono.org/license-chrono.txt.
+//
+// =============================================================================
+// Authors: Radu Serban, Josh Diyn
+// =============================================================================
+
+using System;
 using System.ComponentModel;
 using UnityEngine;
 
@@ -129,7 +143,7 @@ public class Driver : MonoBehaviour, IAdvance
         float vert = Input.GetAxis("Vertical");
 
         // Forward/reverse
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButtonDown("Fire1"))
         {// Implement updated method
            (vehicle.GetPowertrainAssembly().GetTransmission() as ChAutomaticTransmission)?.SetDriveMode(ChAutomaticTransmission.DriveMode.FORWARD);
         }

@@ -1,7 +1,21 @@
-﻿using System.Collections;
+﻿// =============================================================================
+// PROJECT CHRONO - http://projectchrono.org
+//
+// Copyright (c) 2024 projectchrono.org
+// All rights reserved.
+//
+// Use of this source code is governed by a BSD-style license that can be found
+// in the LICENSE file at the top level of the distribution and at
+// http://projectchrono.org/license-chrono.txt.
+//
+// =============================================================================
+// Authors: Radu Serban
+// =============================================================================
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[DefaultExecutionOrder(50)] // After ChBody, prior to links, motors, etc.
+
 public class BallGenerator : MonoBehaviour
 {
     public Material ballMaterial;
@@ -43,7 +57,7 @@ public class BallGenerator : MonoBehaviour
 
         for (int i = 0; i < 250; i++)
         {
-            // Set random range with diameter as a minimum so as not to generate with pre-existing penetrations (slows the start of the sim down)
+            // Set random range with diameter
             Vector3 pos = new Vector3(-5 + Random.Range(2 * radius, 10), 4 + i * 0.05f, -5 + Random.Range(2 * radius, 10));
             CreateBall(prefab, pos, radius, density);
         }

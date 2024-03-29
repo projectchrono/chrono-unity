@@ -1,4 +1,18 @@
-﻿using System.Collections.Generic;
+﻿// =============================================================================
+// PROJECT CHRONO - http://projectchrono.org
+//
+// Copyright (c) 2024 projectchrono.org
+// All rights reserved.
+//
+// Use of this source code is governed by a BSD-style license that can be found
+// in the LICENSE file at the top level of the distribution and at
+// http://projectchrono.org/license-chrono.txt.
+//
+// =============================================================================
+// Authors: Radu Serban
+// =============================================================================
+
+using System.Collections.Generic;
 using UnityEngine;
 using System;
 
@@ -267,7 +281,7 @@ public class UChSystem : MonoBehaviour
             case IntegratorType.EULER_IMPLICIT:
                 {
                     var integrator = new ChTimestepperEulerImplicit(chrono_system);
-                    integrator.SetMaxiters(integratorMaxIters);
+                    integrator.SetMaxIters(integratorMaxIters);
                     integrator.SetRelTolerance(integratorRelTol);
                     integrator.SetAbsTolerances(integratorAbsTolS, integratorAbsTolL);
                     chrono_system.SetTimestepper(integrator);
@@ -276,7 +290,7 @@ public class UChSystem : MonoBehaviour
             case IntegratorType.HHT:
                 { // Modifications to the HHT integrator implemented here to bring up to date. no Mode, no scaling.
                     var integrator = new ChTimestepperHHT(chrono_system);
-                    integrator.SetMaxiters(integratorMaxIters);
+                    integrator.SetMaxIters(integratorMaxIters);
                     integrator.SetRelTolerance(integratorRelTol);
                     integrator.SetAbsTolerances(integratorAbsTolS, integratorAbsTolL);
                     integrator.SetAlpha(hhtAlpha);

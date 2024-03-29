@@ -1,4 +1,18 @@
-﻿using System;
+﻿// =============================================================================
+// PROJECT CHRONO - http://projectchrono.org
+//
+// Copyright (c) 2024 projectchrono.org
+// All rights reserved.
+//
+// Use of this source code is governed by a BSD-style license that can be found
+// in the LICENSE file at the top level of the distribution and at
+// http://projectchrono.org/license-chrono.txt.
+//
+// =============================================================================
+// Authors: Radu Serban, Josh Diyn
+// =============================================================================
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -56,16 +70,16 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
         ////Debug.Log(inputs.m_steering + "     " + accel.x + "  " + accel.y + "  " + accel.z);
         ////Vector3 omg = GetWvelLocal();
         ////Debug.Log(inputs.m_steering + "     " + omg.x + "  " + omg.y + "  " + omg.z);
-
         
         OnAdvance(step);
  
-        // If terrain exists, then synchronise and advance
-        if (chTerrain != null)
-        {
-            chTerrain.Synchronize(UChSystem.chrono_system.GetChTime());
-            chTerrain.Advance(step);
-        }
+        // Handled in Terrain Manager.
+        //// If terrain exists, then synchronise and advance
+        //if (chTerrain != null)
+        //{
+        //    chTerrain.Synchronize(UChSystem.chrono_system.GetChTime());
+        //    chTerrain.Advance(step);
+        //}
     }
 
     // Set the current values of the driver inputs for this vehicle (invoked by driver subsystems).
@@ -80,7 +94,6 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
     public double GetSpeed()
     {
         ChVector3d velG_chrono = GetChVehicle().GetPointVelocity(new ChVector3d(0, 0, 0));
-        // ChVector3d velL_chrono = GetChVehicle().GetChassisBody().Dir_World2Body(velG_chrono); // OVERHAUL CHANGE
         ChVector3d velL_chrono = GetChVehicle().GetTransform().TransformDirectionParentToLocal(velG_chrono);
 
         ////Debug.Log(velL_chrono.x + " " + velL_chrono.y + " " + velL_chrono.z);
@@ -154,7 +167,6 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
         initialPosition = new ChCoordsysd();
         initialForwardSpeed = 0.0;
     }
-
 
     protected abstract void OnStart();
     protected abstract void OnAdvance(double step);
