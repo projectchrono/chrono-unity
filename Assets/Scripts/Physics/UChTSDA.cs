@@ -80,11 +80,21 @@ public class UChTSDA : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        Gizmos.color = Color.yellow;
+        Gizmos.color = Color.magenta;
 
         if (useRelativePos)
         {
-            Gizmos.DrawLine(body1.transform.TransformPoint(position1), body2.transform.TransformPoint(position2));
+            // To ensure the 'relative' units entered aren't incorrectly visualised by unity (as comapared to chrono), we need to scale them a bit (can be checked with Abs spring visualisation at runtime)
+            // 1. convert local points to "scale-neutral" local points
+            Vector3 adjustedPosition1 = new Vector3(position1.x / body1.transform.lossyScale.x, position1.y / body1.transform.lossyScale.y, position1.z / body1.transform.lossyScale.z);
+            Vector3 adjustedPosition2 = new Vector3(position2.x / body2.transform.lossyScale.x, position2.y / body2.transform.lossyScale.y, position2.z / body2.transform.lossyScale.z);
+
+            // 2. transform these adjusted points into world space for correct visualisation
+            Vector3 worldPosition1 = body1.transform.TransformPoint(adjustedPosition1);
+            Vector3 worldPosition2 = body2.transform.TransformPoint(adjustedPosition2);
+
+            // Draw the Gizmo line between these points
+            Gizmos.DrawLine(worldPosition1, worldPosition2);
         }
         else
         {
