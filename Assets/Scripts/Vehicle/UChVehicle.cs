@@ -39,15 +39,12 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
     void Awake()
     {
         chrono_vehicle.SetDataPath(Application.dataPath + "/Data/");
+        // Debug feedback
         ////Debug.Log("vehicle path" + vehicle.GetDataPath());
-        ///
-
         ///var rot = ChWorldFrame.Rotation();
         ///Debug.Log($"World Frame \n {rot.getitem(0, 0)}, {rot.getitem(0, 1)}, {rot.getitem(0, 2)}] \n {rot.getitem(1, 0)}, {rot.getitem(1, 1)}, {rot.getitem(1, 2)} \n [{rot.getitem(2, 0)}, {rot.getitem(2, 1)}, {rot.getitem(2, 2)}]");
-
         ///Debug.Log($"Vertical direction: {ChWorldFrame.Vertical().x}, {ChWorldFrame.Vertical().y}, {ChWorldFrame.Vertical().z}");
         ///Debug.Log($"Forward direction: {ChWorldFrame.Forward().x}, {ChWorldFrame.Forward().y}, {ChWorldFrame.Forward().z}");
-
     }
 
     void Start()
@@ -55,7 +52,6 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
         // Register with the Chrono system (for Advance).
         UChSystem system = (UChSystem)FindObjectOfType(typeof(UChSystem));
         system.Register(gameObject.name, this);
-
 
         OnStart(); // Call the vehicle's onstart.
 
@@ -65,21 +61,12 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
         
     public void Advance(double step)
     {
-
         ////Vector3 accel = GetAccelerationLocal(Vector3.zero);
         ////Debug.Log(inputs.m_steering + "     " + accel.x + "  " + accel.y + "  " + accel.z);
         ////Vector3 omg = GetWvelLocal();
         ////Debug.Log(inputs.m_steering + "     " + omg.x + "  " + omg.y + "  " + omg.z);
         
         OnAdvance(step);
- 
-        // Handled in Terrain Manager.
-        //// If terrain exists, then synchronise and advance
-        //if (chTerrain != null)
-        //{
-        //    chTerrain.Synchronize(UChSystem.chrono_system.GetChTime());
-        //    chTerrain.Advance(step);
-        //}
     }
 
     // Set the current values of the driver inputs for this vehicle (invoked by driver subsystems).
@@ -123,7 +110,6 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
         return Utils.FromChrono(accL_chrono);
     }
 
-
     // Return the vehicle angular velocity, expressed in the global frame.
     // This needs some massaging related to what frame things are expressed in.
     public Vector3 GetWvelGlobal()
@@ -153,8 +139,7 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
     public abstract double GetMaxSpeed();
     public abstract ChVehicle GetChVehicle();
 
-
-    // Updated powertrain classes that need exposure, set as virtual to provide template implementation, vehicles may optionall override
+    // Powertrain methods are virtual to provide template implementation, subclasses may optionally override
     public virtual ChPowertrainAssembly GetPowertrainAssembly() { return GetChVehicle().GetPowertrainAssembly(); }
     public virtual ChTransmission GetTransmission() { return GetChVehicle().GetTransmission(); }
     public virtual ChEngine GetEngine() { return GetChVehicle().GetEngine(); }

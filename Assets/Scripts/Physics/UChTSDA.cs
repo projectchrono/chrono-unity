@@ -43,6 +43,14 @@ public class UChTSDA : MonoBehaviour
 
     void Start()
     {
+        if (body1 == null || body2 == null ||
+            !body1.gameObject.activeInHierarchy || !body2.gameObject.activeInHierarchy ||
+            !body1.enabled || !body2.enabled)
+        {
+            Debug.LogError("UChTSDA requires two UChBody objects assigned.");
+            return;
+        }
+
         spring = new ChLinkTSDA();
         spring.Initialize(body1.GetChBody(), body2.GetChBody(), 
                           useRelativePos, Utils.ToChrono(position1), Utils.ToChrono(position2));

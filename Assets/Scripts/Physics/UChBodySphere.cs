@@ -12,8 +12,6 @@
 // Authors: Radu Serban
 // =============================================================================
 
-// TODO - ensure there's a uchmaterial surface also attached when this exists on an object!
-
 using System;
 using System.Security.AccessControl;
 

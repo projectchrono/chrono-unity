@@ -116,7 +116,7 @@ public class Driver : MonoBehaviour, IAdvance
         // Set associated vehicle
         vehicle = GetComponent<UChVehicle>();
 
-        // Direct user control mode
+        // Direct user control mode - adjust sensitivities as desired
         steeringDesired = 0;
         throttleDesired = 0;
         brakingDesired = 0;
@@ -142,12 +142,13 @@ public class Driver : MonoBehaviour, IAdvance
         float horiz = Input.GetAxis("Horizontal");
         float vert = Input.GetAxis("Vertical");
 
+        //// TODO:- get forward and reverse implementations working
         // Forward/reverse
-        if (Input.GetButtonDown("Fire1"))
-        {// Implement updated method
+        if (Input.GetButtonDown("Fire1") || Input.GetKeyDown("x"))
+        {
            (vehicle.GetPowertrainAssembly().GetTransmission() as ChAutomaticTransmission)?.SetDriveMode(ChAutomaticTransmission.DriveMode.FORWARD);
         }
-        if (Input.GetButton("Fire2"))
+        if (Input.GetButton("Fire2") || Input.GetKeyDown("z"))
         {
             (vehicle.GetPowertrainAssembly().GetTransmission() as ChAutomaticTransmission)?.SetDriveMode(ChAutomaticTransmission.DriveMode.REVERSE);
         }
@@ -168,7 +169,7 @@ public class Driver : MonoBehaviour, IAdvance
 
                 if (path)
                 {
-                    // HACK to ensure that the ChVehicle was created (in some vehicle assembly's Start())!!
+                    // check to ensure that the ChVehicle was initialised with steering controller
                     if (!steeringControllerInitialized)
                     {
                         steeringController = new ChPathSteeringController(path.GetChVehiclePath());
@@ -184,7 +185,6 @@ public class Driver : MonoBehaviour, IAdvance
 
                 break;
         }
-
 
         // Set current throttle and braking, depending on selected longitudinal control mode
         switch (speedMode)
@@ -265,8 +265,7 @@ public class Driver : MonoBehaviour, IAdvance
                 ////          "   crt: " + Math.Round(3.6 * crt_speed * 100) / 100  +
                 ////          "   Speed PID out: " + output + "   Kp = " + speed_Kp);
 
-
-                // Timer to maintain the gears in cruise mode
+                // Timer to maintain the gears in cruise mode without sudden jumping
                 if (gearMaintainTime < minGearMaintainDuration)
                 {
                     gearMaintainTime += (float)step; // counter

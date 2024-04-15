@@ -13,16 +13,16 @@
 // =============================================================================
 
 using System;
+using UnityEngine;
 
 public class UChBodyCylinder : UChBody
 {
-    public double radius;
+    [SerializeField] private double radius; // remove this from being a public editable, but instead, get the value from the mesh filter (assumed cylinder) or the transform.
 
     private ChContactMaterial mat;
 
     public UChBodyCylinder()
     {
-        radius = 0.5;
         automaticMass = true;
     }
 
@@ -35,6 +35,23 @@ public class UChBodyCylinder : UChBody
         inertiaMoments.z = (float)((1.0 / 12.0) * mass * (3 * Math.Pow(radius, 2) + Math.Pow(height, 2)));
     }
 
+    private void CalculateRadiusFromMesh()
+    {
+        MeshFilter meshFilter = GetComponent<MeshFilter>();
+        if (meshFilter != null)
+        {
+            // Assuming the mesh is perfectly centered and uniform
+            float meshDiameter = meshFilter.mesh.bounds.size.x * transform.localScale.x;
+            radius = meshDiameter / 2.0;
+        }
+        else
+        {
+            Debug.LogError("MeshFilter not found on the ChBodyCylinder, using X transform");
+            radius = transform.localScale.x / 2.0;
+
+        }
+    }
+
     public override void Create()
     {
         // Get a handle to the associated material component and create the Chrono material
@@ -44,6 +61,7 @@ public class UChBodyCylinder : UChBody
 
         // Create the underlying Chrono body and its collision shape
         var height = 2 * transform.localScale.y;
+        CalculateRadiusFromMesh();
         body = new ChBodyAuxRef();
         // Create and add a cylinder collision shape using ChCollisionShapeCylinder
         // ChQuarternion y-to-z: the standard Chrono cylinder shape is defined with its axis along the Z-axis of the shape frame.

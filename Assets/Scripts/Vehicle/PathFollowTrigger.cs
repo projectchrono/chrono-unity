@@ -23,7 +23,6 @@ public enum PathFollowingOption
     Restore
 }
 
-
 public class PathFollowTrigger : MonoBehaviour
 {
     public bool enablePathFollowing = true; // Set true to enable path following, false to revert to normal driving
@@ -31,7 +30,7 @@ public class PathFollowTrigger : MonoBehaviour
 
     public UChVehiclePath pathFollowerObject; // Drag the path follower object here in the Inspector
     public bool restore = false; // restore the previous state when switching
-    public double pathTargetSpeed = 10.0;     // Set the desired speed
+    public double pathTargetSpeed = 15.0;     // Set the desired speed
     public double lookAhead;   // look ahead distance
 
     // Control gains
@@ -59,7 +58,7 @@ public class PathFollowTrigger : MonoBehaviour
                     // Save previous state
                     prevSteeringMode = driver.steeringMode;
                     prevSpeedMode = driver.speedMode;
-                    // Shouldn't need to save the gains, unless the user explicitly desires past gains to remain
+                    // Shouldn't need to save the gain values, unless the user explicitly desires past gains to remain
 
                     // Set path-following mode and control gains
                     SetPathFollowingMode(driver);
@@ -69,7 +68,7 @@ public class PathFollowTrigger : MonoBehaviour
                     // Revert to saved state
                     driver.steeringMode = prevSteeringMode;
                     driver.speedMode = prevSpeedMode;
-                    driver.targetSpeed = 0 / 3.6; // exit the trigger point and hand back control, with 0km/h
+                    driver.targetSpeed = 0 / 3.6; // exit the trigger point and hand back control to X km/h
                 }
             }
         }
@@ -91,6 +90,4 @@ public class PathFollowTrigger : MonoBehaviour
         driver.path = pathFollowerObject.GetComponent<UChVehiclePath>();
         Debug.Log("Path following mode enabled. Target speed set to: " + pathTargetSpeed);
     }
-
-
 }

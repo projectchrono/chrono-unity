@@ -23,7 +23,7 @@ public class UChJointPrismatic : MonoBehaviour
     public double minDisplacement = 0;
     public double maxDisplacement = 0;
 
-    public double displacement = 0;  // current joint displacement
+    public double displacement = 0;  // current bushing displacement
 
     private ChLinkLockPrismatic joint;
 

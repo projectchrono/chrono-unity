@@ -14,19 +14,19 @@
 
 using UnityEngine;
 
-//// TODO:  Double-check check proper implementation of joint limits.
+//// TODO:  Double-check check proper implementation of bushing limits.
 ////        Must take into account body order, orientation, etc.
 
 public class UChJointRevolute : MonoBehaviour
 {
-    public UChBody body1;
+    public UChBody body1; // Primary
     public UChBody body2;
 
     public bool enableLimits = false;
     public double minAngle = 0;
     public double maxAngle = 0;
 
-    public double angle;  // current joint relative angle
+    public double angle;  // current bushing relative angle
 
     private ChLinkLockRevolute joint;
 
@@ -50,7 +50,7 @@ public class UChJointRevolute : MonoBehaviour
         }
         
         if (joint != null) {
-            ////Debug.Log("Joint is functional " + joint.GetName());
+            ////Debug.Log("Joint is functional " + bushing.GetName());
             UChSystem.chrono_system.AddLink(joint);
         }
     }

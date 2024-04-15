@@ -24,7 +24,6 @@ public class UChBodyCylinderEditor : UChBodyEditor
 
         base.OnInspectorGUI();
         EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);
-        body.radius = EditorGUILayout.DoubleField("Radius", body.radius);
 
         if (GUI.changed)
         {

@@ -61,6 +61,7 @@ public class UGator : UChVehicle
         initForwardVel = 0;
         initWheelAngSpeed = 0;
 
+        // TODO: fix implmentation of the powertrain
         // Initialise engine and transmission
        // engine = new Gator_EngineSimple("GatorEngine");
        // transmission = new Gator_AutomaticTransmissionSimple("GatorTransmission");
@@ -188,8 +189,6 @@ public class UGator : UChVehicle
     {
         return gator.GetVehicle();
     }
-
-
      
     public override ChPowertrainAssembly GetPowertrainAssembly()
     {
@@ -197,7 +196,7 @@ public class UGator : UChVehicle
         return gator.GetVehicle().GetPowertrainAssembly();
     }
     
-    /// TODO: This possible needs altering in SWIG interface for inheritance/casting
+    /// TODO: This possible needs altering in SWIG interface for inheritance/casting??
     ///
     /// 
     //// Override the GetTransmission method

@@ -9,7 +9,7 @@
 // http://projectchrono.org/license-chrono.txt.
 //
 // =============================================================================
-// Authors: Radu Serban
+// Authors: Radu Serban, Josh Diyn
 // =============================================================================
 
 using UnityEngine;
@@ -34,9 +34,6 @@ public class UChBody : MonoBehaviour
 
     protected ChBodyAuxRef body;
 
-    protected bool isBodyInitialised = false;  // Flag used for checking if exists prior to accessing by other components
-
-
     public UChBody()
     {
         isFixed = false;
@@ -44,8 +41,8 @@ public class UChBody : MonoBehaviour
         showFrameGizmo = false;
         comRadiusGizmo = 0.1f;
         automaticMass = false;
-        // density = 1000; // obsolete? double check
-        mass = 1;
+        density = 1000;
+        mass = 100; // this is used as a backup only, to avoid crashes with zero-mass objects.
         inertiaMoments = Vector3.one;
         inertiaProducts = Vector3.zero;
     }
@@ -62,6 +59,9 @@ public class UChBody : MonoBehaviour
 
     public void Destroy()
     {
+        // cleanly remove the body from the system
+        // note: this intentionally will not destroy the Unity gameobject. That must be handled elsewhere
+        UChSystem.chrono_system.RemoveBody(body);
         body = null;
     }
 
@@ -92,17 +92,12 @@ public class UChBody : MonoBehaviour
                   "inertiaXY: " + Utils.FromChrono(body.GetInertiaXY()));
     }
 
-    public virtual void InstanceCreation() // Changed from Awake, added virtual
+    public virtual void InstanceCreation()
     {
         ///Debug.Log("Body Awake()");
-        
-        Create();
-
-        if (body == null)   
-            return;
+        Create(); // if this is called by a generator script using an existing body.
 
         CalculateMassProperties();
-        // body.SetDensity(density); // - redundant if Mass COG in new collision method? Need to do more research on it.
         body.SetMass(mass);
         //// TODO: we should really set an entire frame here...
         body.SetFrameCOMToRef(new ChFramed(Utils.ToChrono(COM)));
@@ -117,7 +112,6 @@ public class UChBody : MonoBehaviour
         body.SetPosDt(Utils.ToChrono(linearVelocity));
         body.SetAngVelLocal(Utils.ToChrono(angularVelocity));
 
-
         ////DebugInfo();
         if (UChSystem.chrono_system != null)
         { AddToSystem(); }
@@ -127,7 +121,6 @@ public class UChBody : MonoBehaviour
     void Awake()
     {
         InstanceCreation();
-        //isBodyInitialised = true; // Flag for creation of body
     }
 
 
