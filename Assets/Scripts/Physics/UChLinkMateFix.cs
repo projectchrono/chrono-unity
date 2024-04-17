@@ -63,7 +63,7 @@ public class UCHLinkMateFix : MonoBehaviour
         // Initialise the link
         link = new ChLinkMateFix();
         // custom UpcastToChBodyFrame() call to workaround the swig polymorphism inhertiance issues
-        link.Initialize(chrono.UpcastToChBodyFrame(body1.GetChBody()), chrono.UpcastToChBodyFrame(body2.GetChBody()), useRelativePositions, frame1, frame2);
+        link.Initialize(chrono.CastToChBodyFrame(body1.GetChBody()), chrono.CastToChBodyFrame(body2.GetChBody()), useRelativePositions, frame1, frame2);
 
         // Add the link to the Chrono system
         UChSystem.chrono_system.AddLink(link);
