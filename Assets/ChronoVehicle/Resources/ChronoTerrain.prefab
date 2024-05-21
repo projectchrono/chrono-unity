@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3007024973333525927}
   - component: {fileID: 6177109069174091123}
-  - component: {fileID: 2803114224515124522}
+  - component: {fileID: 3732544861412987450}
   m_Layer: 0
   m_Name: ChronoTerrain
   m_TagString: Untagged
@@ -45,8 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e59fce0d8991874438610f3ff08b2f66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  terrainMaterial: {fileID: 0}
---- !u!114 &2803114224515124522
+--- !u!114 &3732544861412987450
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,8 +54,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 4163279182442935772}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cd2ccc4ec6ca9d4fb92b232d820c362, type: 3}
+  m_Script: {fileID: 11500000, guid: 871411bf767cf4b43af53a03e31be5f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridSize: 25
-  interval: 0.5

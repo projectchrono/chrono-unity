@@ -37,7 +37,7 @@ public class ChaseCamera : MonoBehaviour, IAdvance
 
     //public Color textColor;
     private GUIStyle guiStyle = new GUIStyle();
-    public Color textColor = Color.yellow;
+    public Color textColor = Color.black;
 
     private Vector3 homePos;
     private Quaternion homeRot;
@@ -57,9 +57,9 @@ public class ChaseCamera : MonoBehaviour, IAdvance
     public void Awake()
     {
         guiStyle.fontStyle = FontStyle.Bold;
-        guiStyle.fontSize = 24;
+        guiStyle.fontSize = 20;
         guiStyle.normal.textColor = textColor;
-
+        
         homePos = transform.position;
         homeRot = transform.rotation;
     }
@@ -160,7 +160,6 @@ public class ChaseCamera : MonoBehaviour, IAdvance
         float FPS = 1 / deltaTime;
         GUI.Label(new Rect(10, 40, 200, 40), "FPS: " + Mathf.Round(FPS * 100) / 100, guiStyle);
 
-        ////double time = vehicle.GetChVehicle().GetChTime();
         double time = UChSystem.chrono_system.GetChTime();
         GUI.Label(new Rect(Screen.width- 210, 10, 200, 40), "Time: " + Math.Round(time * 100) / 100, guiStyle);
 
@@ -180,7 +179,7 @@ public class ChaseCamera : MonoBehaviour, IAdvance
         double steering = Math.Round(vehicle.GetSteeringInput() * 100) / 100;
         GUI.Label(new Rect(10, 240, 200, 40), "Steering: " + steering.ToString(), guiStyle);
 
-        var transmission = vehicle.GetTransmission() as ChAutomaticTransmission;
+        var transmission = chrono_vehicle.CastToChAutomaticTransmission(vehicle.GetTransmission());
 
         if (transmission != null)
         {
@@ -195,9 +194,22 @@ public class ChaseCamera : MonoBehaviour, IAdvance
             }
         }
 
-        double motorTorque = Math.Round(vehicle.GetPowertrainAssembly().GetEngine().GetOutputMotorshaftTorque());
-        GUI.Label(new Rect(10, 320, 200, 40), "Motor Torque (Nm): " + motorTorque.ToString(), guiStyle);
-        double motorSpeed = Math.Round(vehicle.GetPowertrainAssembly().GetEngine().GetMotorSpeed() * 60 / (2 * Math.PI));
-        GUI.Label(new Rect(10, 360, 200, 40), "Motor Speed (RPM): " + motorSpeed.ToString(), guiStyle);
+        switch(transmission.GetShiftMode())
+        {
+            case ChAutomaticTransmission.ShiftMode.MANUAL:
+                GUI.Label(new Rect(10, 320, 200, 40), "Manual", guiStyle);
+                break;
+            case ChAutomaticTransmission.ShiftMode.AUTOMATIC:
+                GUI.Label(new Rect(10, 320, 200, 40), "Automatic", guiStyle);
+                break;
+        }
+
+        if (vehicle.GetPowertrainAssembly() != null)
+        {
+            double motorTorque = Math.Round(vehicle.GetPowertrainAssembly().GetEngine().GetOutputMotorshaftTorque());
+            GUI.Label(new Rect(10, 360, 200, 40), "Motor Torque (Nm): " + motorTorque.ToString(), guiStyle);
+            double motorSpeed = Math.Round(vehicle.GetPowertrainAssembly().GetEngine().GetMotorSpeed() * 60 / (2 * Math.PI));
+            GUI.Label(new Rect(10, 400, 200, 40), "Motor Speed (RPM): " + motorSpeed.ToString(), guiStyle);
+        }
     }
 }

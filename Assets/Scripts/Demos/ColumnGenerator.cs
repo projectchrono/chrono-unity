@@ -28,13 +28,19 @@ public class ColumnGenerator : MonoBehaviour
                               float height,
                               float density)
     {
+
         // Create a new clone of the BodyConvexHull prefab
+        // Likely to generate an error as no points are passed to it prior to the body Awake()
         GameObject clone = Instantiate(prefab, Vector3.zero, Quaternion.identity) as GameObject;
 
-        // Get the UChBodyConvexHull component...
+        // Get the UChBodyConvexHull component
         var body = clone.GetComponent<UChBodyConvexHull>();
+        if (body.GetChBody() != null)
+            body.Destroy(); // remove existing body from chrono system, and avoid body duplication
+                            
         body.density = density;
-
+        body.pointSource = UChBodyConvexHull.PointSource.ManualPoints;
+        
         // Set the convex hull points...
         for (int i = 0; i < num_edges; ++i)
         {
@@ -62,11 +68,11 @@ public class ColumnGenerator : MonoBehaviour
             clone.GetComponent<MeshRenderer>().material = columnMaterial;
         }
         
-        // Set the position of the new clone.
+        // Set the position of the new clone
         clone.transform.position = pos;
 
-        // adjustment for a gentler method than forcing Unity's Awake method
-        body.InstanceCreation(); // New method in UChBodyConvexHull
+        // generate the body
+        body.InstanceCreation();
     }
 
     void Start()

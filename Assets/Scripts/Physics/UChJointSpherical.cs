@@ -34,7 +34,7 @@ public class UChJointSpherical : MonoBehaviour
 
     void Update()
     {
-        var csys = joint.GetMarker1().GetAbsCoordsys(); // > overhaul rename - GetAbsCsys();
+        var csys = joint.GetMarker1().GetAbsCoordsys();
         transform.position = Utils.FromChrono(csys.pos);
         transform.rotation = Utils.FromChrono(csys.rot);
     }

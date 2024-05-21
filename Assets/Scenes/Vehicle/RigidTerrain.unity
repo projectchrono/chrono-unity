@@ -585,6 +585,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1076823469600217516, guid: df30f5855d7e79c418b7e3dd9f916165,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1175400708777044634, guid: df30f5855d7e79c418b7e3dd9f916165,
         type: 3}
       propertyPath: tiled
@@ -594,6 +599,11 @@ PrefabInstance:
         type: 3}
       propertyPath: numberOfTiles
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1226789630501817547, guid: df30f5855d7e79c418b7e3dd9f916165,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1747257884750831427, guid: df30f5855d7e79c418b7e3dd9f916165,
         type: 3}
@@ -715,17 +725,17 @@ PrefabInstance:
     - target: {fileID: 3512339656688598983, guid: 19e318937e9294a49b7c04b026b297ca,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -35
+      value: -31.01
       objectReference: {fileID: 0}
     - target: {fileID: 3512339656688598983, guid: 19e318937e9294a49b7c04b026b297ca,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 3512339656688598983, guid: 19e318937e9294a49b7c04b026b297ca,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.063
       objectReference: {fileID: 0}
     - target: {fileID: 3512339656688598983, guid: 19e318937e9294a49b7c04b026b297ca,
         type: 3}
@@ -765,13 +775,23 @@ PrefabInstance:
     - target: {fileID: 5446894316087693956, guid: 19e318937e9294a49b7c04b026b297ca,
         type: 3}
       propertyPath: tireModel
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5446894316087693956, guid: 19e318937e9294a49b7c04b026b297ca,
         type: 3}
       propertyPath: chassisMaterial
       value: 
       objectReference: {fileID: 2100000, guid: 442324137fd93db4e80125d57d248a01, type: 2}
+    - target: {fileID: 5446894316087693956, guid: 19e318937e9294a49b7c04b026b297ca,
+        type: 3}
+      propertyPath: drawCollisionShape
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725509915233093248, guid: 19e318937e9294a49b7c04b026b297ca,
+        type: 3}
+      propertyPath: speedMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

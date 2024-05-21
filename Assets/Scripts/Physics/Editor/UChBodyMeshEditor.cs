@@ -24,6 +24,14 @@ public class UChBodyMeshEditor : UChBodyEditor
     {
         UChBodyMesh body = (UChBodyMesh)target;
 
+        // Check if UChMaterialSurface component is attached to the object, assign one if not
+        UChMaterialSurface matSurface = body.GetComponent<UChMaterialSurface>();
+        if (matSurface == null)
+        {
+            // If not, add the UChMaterialSurface component to the object
+            matSurface = body.gameObject.AddComponent<UChMaterialSurface>();
+        }
+
         base.OnInspectorGUI();
         EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);
 

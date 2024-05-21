@@ -75,9 +75,16 @@ public class Driver : MonoBehaviour, IAdvance
 
     public UChVehicle vehicle;  // associated vehicle
 
-    private int maintainGear;   // gear to maintain for a set duration
-    private float gearMaintainTime = 0.0f; // Timer to maintain the downshifted gear
+    private int currentGear;   // gear to maintain for a set duration
+    ChTimer timerGearChange = new ChTimer(); // Create an instance of the ChTimer for setting gear change intervals
     private float minGearMaintainDuration = 1.5f; // Minimum duration to maintain a gear after shifting in cruise control
+
+    private ChTransmission vehicleTransmission;
+    private bool shiftModeManual = false; // marker to keep track of shift mode. TODO - read this from the vehicle.
+    
+    private bool isSpaceDown = false; // track button press for switching between manual and auto
+    private bool isShiftDownPressed = false; // track button press for shifting down gears
+    private bool isShiftUpPressed = false; // track button press for hifting up gears
 
 
     public Driver()
@@ -115,6 +122,8 @@ public class Driver : MonoBehaviour, IAdvance
 
         // Set associated vehicle
         vehicle = GetComponent<UChVehicle>();
+        vehicleTransmission = vehicle.GetTransmission();
+        Debug.Log("transmission type is + " + vehicleTransmission.GetType());
 
         // Direct user control mode - adjust sensitivities as desired
         steeringDesired = 0;
@@ -132,26 +141,17 @@ public class Driver : MonoBehaviour, IAdvance
         m_err = 0;
         m_errd = 0;
         m_erri = 0;
-        maintainGear = vehicle.GetTransmission().GetCurrentGear(); // initialise the holding gear
+        currentGear = vehicle.GetTransmission().GetCurrentGear(); // initialise the holding gear
+
+        // start the user input timer - this is for control of the gear shifting
+        timerGearChange.start();
     }
 
     public void Advance(double step)
     {
         ////Debug.Log("advance Driver. step = " + step);
-
         float horiz = Input.GetAxis("Horizontal");
         float vert = Input.GetAxis("Vertical");
-
-        //// TODO:- get forward and reverse implementations working
-        // Forward/reverse
-        if (Input.GetButtonDown("Fire1") || Input.GetKeyDown("x"))
-        {
-           (vehicle.GetPowertrainAssembly().GetTransmission() as ChAutomaticTransmission)?.SetDriveMode(ChAutomaticTransmission.DriveMode.FORWARD);
-        }
-        if (Input.GetButton("Fire2") || Input.GetKeyDown("z"))
-        {
-            (vehicle.GetPowertrainAssembly().GetTransmission() as ChAutomaticTransmission)?.SetDriveMode(ChAutomaticTransmission.DriveMode.REVERSE);
-        }
 
         // Set current steering, depending on selected lateral control mode
         switch (steeringMode)
@@ -190,6 +190,7 @@ public class Driver : MonoBehaviour, IAdvance
         switch (speedMode)
         {
             case SpeedMode.Default:
+                TransmissionUserInput(); // Check for user input to shift up/down or forward/reverse
 
                 if (vert > 0)
                 {
@@ -215,7 +216,6 @@ public class Driver : MonoBehaviour, IAdvance
                 break;
 
             case SpeedMode.CruiseControl:
-
                 if (vert > 0) { targetSpeed += 0.002; }
                 else if (vert < 0) { targetSpeed -= 0.01; }
                 if (targetSpeed < 0) { targetSpeed = 0; }
@@ -266,16 +266,17 @@ public class Driver : MonoBehaviour, IAdvance
                 ////          "   Speed PID out: " + output + "   Kp = " + speed_Kp);
 
                 // Timer to maintain the gears in cruise mode without sudden jumping
-                if (gearMaintainTime < minGearMaintainDuration)
+                if (timerGearChange.GetTimeSeconds() < minGearMaintainDuration)
                 {
-                    gearMaintainTime += (float)step; // counter
-                    vehicle.GetTransmission().SetGear(maintainGear);
+                    vehicle.GetTransmission().SetGear(currentGear); // force hold the gear
                 }
-                else if (gearMaintainTime > minGearMaintainDuration)
+                else if (timerGearChange.GetTimeSeconds() > minGearMaintainDuration)
                 {
                     // Get the new gear from chrono when min duration exceeded
-                    maintainGear = vehicle.GetTransmission().GetCurrentGear();
-                    gearMaintainTime = 0.0f; // Reset timer to hold gear
+                    currentGear = vehicle.GetTransmission().GetCurrentGear();
+                    // Reset timer to allow gear change
+                    timerGearChange.reset();
+                    timerGearChange.start();
                 }
                 // Avoid stalling on a gradient
                 // Check if throttle is greater than 0, and speed is below threshold
@@ -283,8 +284,10 @@ public class Driver : MonoBehaviour, IAdvance
                 {
                     // Shift down
                     vehicle.GetTransmission().SetGear(1);
-                    maintainGear = vehicle.GetTransmission().GetCurrentGear();
-                    gearMaintainTime = 0.0f; // Reset timer after downshifting
+                    currentGear = vehicle.GetTransmission().GetCurrentGear();
+                    // Reset timer after downshifting
+                    timerGearChange.reset();
+                    timerGearChange.start();
                     //Debug.Log("Slow threshold reached. Setting to first gear.");
                 }
 
@@ -298,6 +301,65 @@ public class Driver : MonoBehaviour, IAdvance
 
         vehicle.SetDriverInputs(m_steering, m_throttle, m_braking);
 
+    }
+
+    private void TransmissionUserInput()
+    {
+        // Forward/reverse
+        if (Input.GetButtonDown("Fire1") || Input.GetKeyDown("x"))
+
+        {
+            (chrono_vehicle.CastToChAutomaticTransmission(vehicleTransmission))?.SetDriveMode(ChAutomaticTransmission.DriveMode.FORWARD);
+        }
+        if (Input.GetButton("Fire2") || Input.GetKeyDown("z"))
+        {
+            // If switching to reverse at high speed, this can cause some vehicle models to become unstable (e.g. Gator)
+            (chrono_vehicle.CastToChAutomaticTransmission(vehicleTransmission))?.SetDriveMode(ChAutomaticTransmission.DriveMode.REVERSE);
+        }
+
+        // Switch to manual
+        if (Input.GetKeyDown(KeyCode.Space) && !isSpaceDown)
+        {
+            isSpaceDown = true;
+            if (!shiftModeManual)
+            {
+                (chrono_vehicle.CastToChAutomaticTransmission(vehicleTransmission))?.SetShiftMode(ChAutomaticTransmission.ShiftMode.MANUAL);
+                shiftModeManual = true;
+                //Debug.Log("Manual engaged");
+            }
+            else
+            {
+                (chrono_vehicle.CastToChAutomaticTransmission(vehicleTransmission))?.SetShiftMode(ChAutomaticTransmission.ShiftMode.AUTOMATIC);
+                shiftModeManual = false;
+                //Debug.Log("Automatic engaged");
+            }
+        }
+        // track the space bar
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            isSpaceDown = false;
+        }
+
+        if (shiftModeManual)
+        {
+            if (Input.GetKeyDown(KeyCode.LeftBracket) && vehicleTransmission.GetCurrentGear() > -1 && !isShiftDownPressed)
+            {
+                vehicleTransmission.ShiftDown();
+                isShiftDownPressed = true;
+                //Debug.Log("Shift Down");
+            }
+            if (Input.GetKeyDown(KeyCode.RightBracket) && vehicleTransmission.GetCurrentGear() < vehicleTransmission.GetMaxGear() && !isShiftUpPressed)
+            {
+                vehicleTransmission.ShiftUp();
+                isShiftUpPressed = true;
+                //Debug.Log("Shift Up");
+            }
+        }
+        // reset the keys for next press
+        if (Input.GetKeyUp(KeyCode.LeftBracket))
+            isShiftDownPressed = false;
+        if (Input.GetKeyUp(KeyCode.RightBracket))
+            isShiftUpPressed = false;
     }
 
     private void OnDrawGizmos()

@@ -688,6 +688,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ballMaterial: {fileID: 2100000, guid: 810d8db50a02af1428b3254f39b5eb51, type: 2}
   drawBallFrames: 1
+  numberofBalls: 250
 --- !u!4 &975198867
 Transform:
   m_ObjectHideFlags: 0
@@ -1123,7 +1124,7 @@ PrefabInstance:
     - target: {fileID: 7194074963564705906, guid: 434044898e2439248a0db16bad6f0518,
         type: 3}
       propertyPath: integratorType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7194074963564705906, guid: 434044898e2439248a0db16bad6f0518,
         type: 3}
@@ -1138,7 +1139,7 @@ PrefabInstance:
     - target: {fileID: 7194074963564705906, guid: 434044898e2439248a0db16bad6f0518,
         type: 3}
       propertyPath: solverMaxIterations
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7194074963564705906, guid: 434044898e2439248a0db16bad6f0518,
         type: 3}

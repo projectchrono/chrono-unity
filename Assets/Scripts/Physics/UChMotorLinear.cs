@@ -53,7 +53,7 @@ public class UChMotorLinear : UChMotor
 
     void Update()
     {
-        var csys = motor.GetFrame1Abs(); // Altered from GetFrameAbs() for the motor. (new overhaul)
+        var csys = motor.GetFrame1Abs();
         transform.position = Utils.FromChrono(csys.GetPos());
         transform.rotation = Utils.FromChrono(csys.GetRot());
     }

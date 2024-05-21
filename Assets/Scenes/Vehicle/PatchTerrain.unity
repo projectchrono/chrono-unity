@@ -158,6 +158,11 @@ PrefabInstance:
       propertyPath: tireCollisionType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4721149938721439471, guid: a3fbde8c8e9b5a845a69c6f3b9adaab3,
+        type: 3}
+      propertyPath: drawCollisionShape
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5042784572642090740, guid: a3fbde8c8e9b5a845a69c6f3b9adaab3,
         type: 3}
       propertyPath: path
@@ -253,6 +258,11 @@ PrefabInstance:
       propertyPath: steeringMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8880413609664392370, guid: a3fbde8c8e9b5a845a69c6f3b9adaab3,
+        type: 3}
+      propertyPath: transformShader
+      value: 
+      objectReference: {fileID: 7200000, guid: 4a284a85f76b7174c9fa13c49c8cfe4e, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2605,6 +2615,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1076823469600217516, guid: df30f5855d7e79c418b7e3dd9f916165,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2333245739005994835, guid: df30f5855d7e79c418b7e3dd9f916165,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

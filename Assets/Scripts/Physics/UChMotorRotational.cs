@@ -52,8 +52,8 @@ public class UChMotorRotational : UChMotor
 
     void Update()
     {
-        var csys = motor.GetFrame1Abs(); // Update from overhaul, changed GetFrameAbs to GetFrame1Abs
-        transform.position = Utils.FromChrono(csys.GetPos()); // changed from pos (overhaul)
-        transform.rotation = Utils.FromChrono(csys.GetRot()); // overhaul change from rot
+        var csys = motor.GetFrame1Abs();
+        transform.position = Utils.FromChrono(csys.GetPos());
+        transform.rotation = Utils.FromChrono(csys.GetRot()); 
     }
 }

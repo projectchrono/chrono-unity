@@ -1,0 +1,44 @@
+// =============================================================================
+// PROJECT CHRONO - http://projectchrono.org
+//
+// Copyright (c) 2024 projectchrono.org
+// All rights reserved.
+//
+// Use of this source code is governed by a BSD-style license that can be found
+// in the LICENSE file at the top level of the distribution and at
+// http://projectchrono.org/license-chrono.txt.
+//
+// =============================================================================
+// Authors: Josh Diyn
+// =============================================================================
+//
+// Compute shader for the purpose of transforming vertices passed to it about a
+// transformation matrix. Used for Chrono vehicle collision shape processing
+//
+// =============================================================================
+#pragma kernel CSMain
+
+struct VertexData
+{
+    float3 position;
+};
+
+StructuredBuffer<VertexData> vertices; // Input buffer of vertices
+RWStructuredBuffer<float3> transformedVertices; // Output buffer for transformed vertices
+
+cbuffer MatrixBuffer : register(b0)
+{
+    float4x4 transformationMatrix;
+};
+
+[numthreads(256, 1, 1)]
+void CSMain(uint3 id : SV_DispatchThreadID)
+{
+    int index = id.x;
+    if (index < vertices.Length)
+    {
+        VertexData vertex = vertices[index];
+        float3 transformedPosition = mul(transformationMatrix, float4(vertex.position, 1.0)).xyz;
+        transformedVertices[index] = transformedPosition;
+    }
+}

@@ -27,7 +27,6 @@ public class UMAN : UChVehicle
     }
 
     public bool chassisFixed;
-    // private PowertrainModelType powertrainType; eliminated 5/5/23
     private TireModelType tireModel;
     ////public ChTire.CollisionType tireCollisionType;
 
@@ -50,7 +49,6 @@ public class UMAN : UChVehicle
     {
         chassisFixed = false;
 
-        //powertrainType = PowertrainModelType.SHAFTS; obsolete
         tireModel = TireModelType.TMEASY;
         ////tireCollisionType = ChTire.CollisionType.SINGLE_POINT;
 
@@ -63,9 +61,8 @@ public class UMAN : UChVehicle
     protected override void OnStart()
     {
         man = new MAN_10t(UChSystem.chrono_system);
-
+        man.SetChassisCollisionType(CollisionType.HULLS); // Man does not have a mesh based type.
         man.SetChassisFixed(chassisFixed);
-        //man.SetPowertrainType(powertrainType);
         man.SetTireType(tireModel);
         ////man.SetAerodynamicDrag(0.5, 5.0, 1.2);
         man.SetBrakeType((BrakeType)brakeType);
@@ -101,7 +98,6 @@ public class UMAN : UChVehicle
                 wheelR2R = child.gameObject;
         }
 
-        //// HACK to deal with stuttering due to slow physics.
         //// Note that the MAN vehicle model requires smaller timestep (1 ms).
         //Debug.Log("MAX step: " + Time.maximumDeltaTime);
         Time.maximumDeltaTime = 0.02f;

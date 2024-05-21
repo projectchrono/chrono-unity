@@ -21,7 +21,13 @@ public class UChBodyEditor : Editor
     override public void OnInspectorGUI()
     {
         UChBody body = (UChBody)target;
-
+        // Check if UChMaterialSurface component is attached to the object, assign one if not
+        UChMaterialSurface matSurface = body.GetComponent<UChMaterialSurface>();
+        if (matSurface == null)
+        {
+            // If not, add the UChMaterialSurface component to the object
+            matSurface = body.gameObject.AddComponent<UChMaterialSurface>();
+        }
         body.isFixed = EditorGUILayout.Toggle("Fixed", body.isFixed);
         body.collide = EditorGUILayout.Toggle("Collide", body.collide);
         body.showFrameGizmo = EditorGUILayout.Toggle("Show Frame Gizmo", body.showFrameGizmo);

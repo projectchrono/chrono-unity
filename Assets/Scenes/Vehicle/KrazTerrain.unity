@@ -348,11 +348,11 @@ MonoBehaviour:
   patchType: 1
   tiled: 0
   numberOfTiles: 1
-  smoothingFactor: 0.05
+  smoothingFactor: 0
   refineGreaterThanAngle: 5
   coarseMeshGridSize: 1.5
-  numberOfRefinements: 3
-  maxTriangleEdgeLength: 1
+  numberOfRefinements: 2
+  maxTriangleEdgeLength: 1.5
 --- !u!1001 &336726062
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -384,17 +384,17 @@ PrefabInstance:
     - target: {fileID: 4675249412613692360, guid: ee3e6db3bf57734439662c1ecc464407,
         type: 3}
       propertyPath: textColor.b
-      value: 0.3529412
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4675249412613692360, guid: ee3e6db3bf57734439662c1ecc464407,
         type: 3}
       propertyPath: textColor.g
-      value: 0.3529412
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4675249412613692360, guid: ee3e6db3bf57734439662c1ecc464407,
         type: 3}
       propertyPath: textColor.r
-      value: 0.3529412
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4675249412613692360, guid: ee3e6db3bf57734439662c1ecc464407,
         type: 3}
@@ -606,7 +606,7 @@ GameObject:
   m_Component:
   - component: {fileID: 542616150}
   - component: {fileID: 542616152}
-  - component: {fileID: 542616151}
+  - component: {fileID: 542616153}
   m_Layer: 0
   m_Name: ChronoTerrain
   m_TagString: Untagged
@@ -630,20 +630,6 @@ Transform:
   - {fileID: 86963109}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &542616151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 542616148}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cd2ccc4ec6ca9d4fb92b232d820c362, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gridSize: 20
-  interval: 0.25
 --- !u!114 &542616152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -654,6 +640,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e59fce0d8991874438610f3ff08b2f66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &542616153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542616148}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 871411bf767cf4b43af53a03e31be5f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &645707973
@@ -2261,74 +2259,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d32984ce35978984bbd548e6ec820810, type: 3}
---- !u!1001 &3534976420588713315
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5901268009590312399, guid: 25d34e91d44db6a4c909144a07999075,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 5901268009590312399, guid: 25d34e91d44db6a4c909144a07999075,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5901268009590312399, guid: 25d34e91d44db6a4c909144a07999075,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 8.37
-      objectReference: {fileID: 0}
-    - target: {fileID: 5901268009590312399, guid: 25d34e91d44db6a4c909144a07999075,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5901268009590312399, guid: 25d34e91d44db6a4c909144a07999075,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5901268009590312399, guid: 25d34e91d44db6a4c909144a07999075,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5901268009590312399, guid: 25d34e91d44db6a4c909144a07999075,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5901268009590312399, guid: 25d34e91d44db6a4c909144a07999075,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5901268009590312399, guid: 25d34e91d44db6a4c909144a07999075,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5901268009590312399, guid: 25d34e91d44db6a4c909144a07999075,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8943697401294542627, guid: 25d34e91d44db6a4c909144a07999075,
-        type: 3}
-      propertyPath: m_Name
-      value: 'EDITOR: Chrono Rigid Terrain Checker'
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 25d34e91d44db6a4c909144a07999075, type: 3}
 --- !u!120 &3864092835508222355
 LineRenderer:
   serializedVersion: 2
@@ -2600,7 +2530,6 @@ SceneRoots:
   - {fileID: 336726062}
   - {fileID: 654950254}
   - {fileID: 542616150}
-  - {fileID: 3534976420588713315}
   - {fileID: 1888182091}
   - {fileID: 1813052262240281750}
   - {fileID: 948678925}

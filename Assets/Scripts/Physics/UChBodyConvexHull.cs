@@ -45,10 +45,12 @@ public class UChBodyConvexHull : UChBody
 
     public override void Create()
     {
+
         if (points.Count == 0)
         {
-            ////Debug.Log("No points in convex hull (" + gameObject.name + ")");
-            return; // TODO: insert error catch here so a body is not attempted to be added to system that's null
+            Debug.Log("No points in convex hull (" + gameObject.name + ")");
+
+            // return; // commented out the return to allow the creation of convex hull using script, for e.g. earthquake demo.
         }
 
         // Get a handle to the associated material component and create the Chrono material
@@ -97,7 +99,7 @@ public class UChBodyConvexHull : UChBody
         inertiaMoments = Utils.FromChrono(bodyCH.GetInertiaXX());
         inertiaProducts = Utils.FromChrono(bodyCH.GetInertiaXY());
 
-        // TODO: Adjust this to work with 'meshfilter' sourced vertices - don't make it null?
+        // TODO: Exapnd this to work with 'meshfilter' sourced vertices which could be passed through
         if (showCollisionShape)
         {
             // Clear any existing mesh in the associated MeshFilter

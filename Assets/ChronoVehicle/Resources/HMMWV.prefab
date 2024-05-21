@@ -54,6 +54,7 @@ MonoBehaviour:
   drivelineModel: 2
   tireModel: 7
   tireCollisionType: 0
+  tireStepSize: 0.001
   brakeType: 0
   brakeLocking: 0
   initForwardVel: 0

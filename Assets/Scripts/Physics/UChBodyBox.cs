@@ -44,7 +44,7 @@ public class UChBodyBox : UChBody
         // Create the underlying Chrono body and its collision shape
         var size = transform.localScale;
         body = new ChBodyAuxRef();   // Rigid bodies have no collision model by default, can be populated by calling add collision shape
-        // TODO: Should ChFrame be set?
+        // ChFramed created in place
         body.AddCollisionShape(new ChCollisionShapeBox(mat, size.x, size.y, size.z), new ChFramed());
     }
 

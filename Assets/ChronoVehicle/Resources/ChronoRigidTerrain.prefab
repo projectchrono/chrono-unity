@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4587956380416658010}
   - component: {fileID: 4519391906234351951}
-  - component: {fileID: 1226789630501817547}
+  - component: {fileID: 1076823469600217516}
   m_Layer: 0
   m_Name: ChronoRigidTerrain
   m_TagString: Untagged
@@ -46,21 +46,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e59fce0d8991874438610f3ff08b2f66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  terrainMaterial: {fileID: 2100000, guid: d242118aeed0f3b489420e15de2dd989, type: 2}
---- !u!114 &1226789630501817547
+--- !u!114 &1076823469600217516
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2832868228892091904}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cd2ccc4ec6ca9d4fb92b232d820c362, type: 3}
+  m_Script: {fileID: 11500000, guid: 871411bf767cf4b43af53a03e31be5f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridSize: 50
-  interval: 0.5
 --- !u!1001 &4634701792190595330
 PrefabInstance:
   m_ObjectHideFlags: 0

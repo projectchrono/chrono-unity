@@ -44,8 +44,8 @@ public class UKraz : UChVehicle
 
     public Material chassisMaterial;
 
-    private GameObject chassis;       // This will refer to the main body of the tractor
-    private GameObject trailer;       // This will refer to the main body of the trailer
+    private GameObject chassis;       // main body of the tractor
+    private GameObject trailer;       // main body of the trailer
 
 
     private GameObject wheel_FL;      // Tractor Front Left Wheel: "Wheel_FL"
@@ -68,7 +68,7 @@ public class UKraz : UChVehicle
     private GameObject wheelTrailerRL;  // Trailer Rear Left Wheel: "Wheel_RL"
     private GameObject wheelTrailerRR;  // Trailer Rear Right Wheel: "Wheel_RR"
 
-    private Quaternion wheelTrailerFLInitial;
+    private Quaternion wheelTrailerFLInitial; // store initial rotation
 
 
     public UKraz()

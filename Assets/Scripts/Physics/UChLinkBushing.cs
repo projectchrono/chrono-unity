@@ -13,7 +13,8 @@
 // =============================================================================
 // Note: Typically needs a high step to avoid simulation errors. For e.g 0.005
 // if experiencing out of bounds or NaN issues where high load on the link
-// or high stiffness is causing the bodies to experience excessive forces
+// or high stiffness is causing the bodies to experience excessive forces.
+// This bushing type does not typically support high stiffness. See Chrono doc
 // =============================================================================
 
 using UnityEngine;
@@ -106,12 +107,11 @@ public class UChLinkBushing : MonoBehaviour
         // error checking to see if step size is not enough and bushing stiffness causes break in simulation
         if (float.IsNaN(force.x) || float.IsNaN(force.y) || float.IsNaN(force.z))
         {
-            Debug.Log("Bushing broken. Check simulation settings. Perhaps try increasing step resolution.");
+            Debug.LogError("Bushing broken. Check simulation settings. Perhaps try increasing step resolution.");
             bushing.SetBroken(true);
         }
 
         // ensure in step with the rest of the physics system
-        bushing.SyncCollisionModels();
         bushing.Update(UChSystem.chrono_system.GetChTime(), true);
     }
 }

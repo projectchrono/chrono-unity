@@ -12,14 +12,8 @@
 // Authors: Josh Diyn
 // =============================================================================
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System;
-using System.IO;
-using UnityEngine.Animations;
-using UnityEngine.XR;
-using UnityEngine.Timeline;
 
 [DefaultExecutionOrder(0)]
 public class UChRigidTerrainPatch : MonoBehaviour
@@ -39,7 +33,7 @@ public class UChRigidTerrainPatch : MonoBehaviour
     [Tooltip("Partition a large patch into a number of tiles")]
     public int numberOfTiles = 1;
 
-    //Variables for the Mesh Patch
+    // Variables for the Mesh Patch
     private bool useInterpolatedPoints = false; // include every intermediate interpolated point into the cloud. Default off. Mostly useful for error/accuracy checking.
     [Tooltip("Amount of Taubin smoothing to apply to each vertex (0-1.0)")]
     public double smoothingFactor = 0.1; // Taubin smoothing use. Sensitive factor
@@ -80,8 +74,8 @@ public class UChRigidTerrainPatch : MonoBehaviour
         // Debugging information
         var patchPosition = patch.GetGroundBody().GetPos();
         var patchRotation = patch.GetGroundBody().GetRot();                                
-        Debug.Log($"Patch added with Position: {patchPosition.x}, {patchPosition.y}, {patchPosition.z},  Rotation: {patchRotation.GetAxisX().x * chrono.CH_DEG_TO_RAD}, {patchRotation.GetCardanAnglesXYZ().y * chrono.CH_DEG_TO_RAD}, {patchRotation.GetCardanAnglesXYZ().z * chrono.CH_DEG_TO_RAD}");
-        Debug.Log($"Unity values send to Chrono. Position: {pos.x}, {pos.y}, {pos.z},  Rotation: {rot.GetCardanAnglesXYZ().x * chrono.CH_DEG_TO_RAD}, {rot.GetCardanAnglesXYZ().y * chrono.CH_DEG_TO_RAD}, {rot.GetCardanAnglesXYZ().z * chrono.CH_DEG_TO_RAD}");
+        ///Debug.Log($"Patch added with Position: {patchPosition.x}, {patchPosition.y}, {patchPosition.z},  Rotation: {patchRotation.GetAxisX().x * chrono.CH_DEG_TO_RAD}, {patchRotation.GetCardanAnglesXYZ().y * chrono.CH_DEG_TO_RAD}, {patchRotation.GetCardanAnglesXYZ().z * chrono.CH_DEG_TO_RAD}");
+        ///Debug.Log($"Unity values send to Chrono. Position: {pos.x}, {pos.y}, {pos.z},  Rotation: {rot.GetCardanAnglesXYZ().x * chrono.CH_DEG_TO_RAD}, {rot.GetCardanAnglesXYZ().y * chrono.CH_DEG_TO_RAD}, {rot.GetCardanAnglesXYZ().z * chrono.CH_DEG_TO_RAD}");
     }
 
     // Create a point cloud based terrain from a Unity terrain object

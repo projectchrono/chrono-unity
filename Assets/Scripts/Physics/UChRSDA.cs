@@ -26,7 +26,7 @@ public class UChRSDA : MonoBehaviour
     public double actuatorTorque = 0;
     public bool autoRestAngle = false;
     public double restAngle = 0;
-
+    [Tooltip("Turn on/off visualisation of the spring at runtime")]
     public bool runtimeVisualisation = true;
 
     private ChLinkRSDA rotationalSpringDamper;
@@ -45,7 +45,7 @@ public class UChRSDA : MonoBehaviour
         ChQuaterniond rotation2 = Utils.ToChrono(body2.transform.rotation);
         ChFramed frame2 = new ChFramed(position2, rotation2);
 
-        // create and initialise the rsda
+        // create and initialise the RSDA
         rotationalSpringDamper = new ChLinkRSDA();
         rotationalSpringDamper.Initialize(body1.GetChBody(), body2.GetChBody(), true, frame1, frame2);
 
@@ -61,7 +61,7 @@ public class UChRSDA : MonoBehaviour
         //zAxisParallelLock.Initialize(body1.GetChBody(), body2.GetChBody(), true, frame1, frame2);
         //UChSystem.chrono_system.AddLink(zAxisParallelLock);
 
-        // Add the rsda to the Chrono system
+        // Add the RSDA to the Chrono system
         UChSystem.chrono_system.AddLink(rotationalSpringDamper);
 
         if (runtimeVisualisation)
@@ -80,15 +80,13 @@ public class UChRSDA : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Draw the visualisation for the rsda
+        // Draw the visualisation for the RSDA
         if (runtimeVisualisation)
             DrawRotationalArrow(body1.transform.position, body2.transform.position);
 
         // Get the angle from the RSDA
         float angleDegrees = (float)(rotationalSpringDamper.GetAngle() * Mathf.Rad2Deg);
         Debug.Log("RSDA Angle: " + angleDegrees);
-
-        // Other updates are handled by chrono bodies to which this rsda is attached.
     }
 
     void DrawRotationalArrow(Vector3 start, Vector3 end, float arrowHeadLength = 0.2f, float springRadius = 0.5f, float arrowHeadAngle = 135.0f)

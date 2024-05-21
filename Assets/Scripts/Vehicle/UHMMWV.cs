@@ -12,6 +12,7 @@
 // Authors: Radu Serban, Josh Diyn
 // =============================================================================
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -41,6 +42,7 @@ public class UHMMWV : UChVehicle
     public DrivelineTypeWV drivelineModel;
     public UTireModelType tireModel;
     public ChTire.CollisionType tireCollisionType;
+    public double tireStepSize = 1e-3;
 
     public UBrakeType brakeType;
     public bool brakeLocking;
@@ -56,11 +58,12 @@ public class UHMMWV : UChVehicle
     private GameObject wheelRL;
     private GameObject wheelRR;
 
+
+
     public UHMMWV()
     {
         chassisFixed = false;
-        
-        // powertrainModel = PowertrainModelType.SHAFTS;
+
         drivelineModel = DrivelineTypeWV.AWD;
 
         tireModel = UTireModelType.TMEASY;
@@ -78,13 +81,18 @@ public class UHMMWV : UChVehicle
         hmmwv = new HMMWV_Full(UChSystem.chrono_system);
 
         hmmwv.SetChassisFixed(chassisFixed);
-        //hmmwv.SetChassisCollisionType(CollisionType.PRIMITIVES); // Do not enable, causes Unity to crash. TODO: investigate chassis collision wrapping.
+        hmmwv.SetChassisCollisionType(CollisionType.MESH);
+
         hmmwv.SetDriveType(drivelineModel);
         hmmwv.SetTireType((TireModelType)tireModel);
         hmmwv.SetTireCollisionType(tireCollisionType);
+        hmmwv.SetTireStepSize(tireStepSize);
         hmmwv.SetAerodynamicDrag(0.5, 5.0, 1.2);
         hmmwv.SetBrakeType((BrakeType)brakeType);
         hmmwv.EnableBrakeLocking(brakeLocking);
+
+        hmmwv.SetEngineType(EngineModelType.SHAFTS);
+        hmmwv.SetTransmissionType(TransmissionModelType.AUTOMATIC_SHAFTS);        
 
         ////Vector3 pos = transform.position;
         ////Quaternion quat = transform.rotation;
@@ -201,7 +209,7 @@ public class UHMMWV : UChVehicle
     {
         return hmmwv.GetVehicle();
     }
-    
+
     public override ChPowertrainAssembly GetPowertrainAssembly()
     {
         return hmmwv.GetVehicle().GetPowertrainAssembly();
@@ -216,4 +224,6 @@ public class UHMMWV : UChVehicle
     {
         return hmmwv.GetVehicle().GetTransmission();
     }
+
 }
+

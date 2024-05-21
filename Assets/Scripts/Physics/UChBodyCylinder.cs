@@ -17,7 +17,7 @@ using UnityEngine;
 
 public class UChBodyCylinder : UChBody
 {
-    [SerializeField] private double radius; // remove this from being a public editable, but instead, get the value from the mesh filter (assumed cylinder) or the transform.
+    [SerializeField] private double radius; // remove this from being a public editable, instead, get the value from the mesh filter (assumed cylinder) or the transform.
 
     private ChContactMaterial mat;
 

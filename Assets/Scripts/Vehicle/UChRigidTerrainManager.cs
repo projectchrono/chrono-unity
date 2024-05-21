@@ -28,7 +28,6 @@ public class UChRigidTerrainManager : MonoBehaviour
     void Start()
     {
         // Set the Terrain to the main system (which the vehicle/s are also a part of)
-        //ChVehicle theVehicle = FindObjectOfType<UChVehicle>().GetChVehicle();
         chronoRigidTerrain = new RigidTerrain(UChSystem.chrono_system);
 
         // Find all TerrainPatch components and add them as patches
@@ -44,9 +43,6 @@ public class UChRigidTerrainManager : MonoBehaviour
             {
                 patch.AddHeightMapPatchTerrain(chronoRigidTerrain);
             }
-
-            // TODO add the flat terrain here as an option
-
         }
         /*
         // default if no terrain patches present, create a flat terrain
@@ -77,7 +73,6 @@ public class UChRigidTerrainManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Note:: TODO: Ensure Step size sync to unity update or alter this method type/linkage to the chrono system
         chronoRigidTerrain.Synchronize(UChSystem.chrono_system.GetChTime());
         chronoRigidTerrain.Advance(UChSystem.chrono_system.GetStep());
     }

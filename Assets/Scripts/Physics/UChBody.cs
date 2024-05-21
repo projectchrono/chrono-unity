@@ -95,11 +95,11 @@ public class UChBody : MonoBehaviour
     public virtual void InstanceCreation()
     {
         ///Debug.Log("Body Awake()");
-        Create(); // if this is called by a generator script using an existing body.
+        if (body == null)
+            Create(); // if this is called by a generator script, ensure we create a body.
 
         CalculateMassProperties();
         body.SetMass(mass);
-        //// TODO: we should really set an entire frame here...
         body.SetFrameCOMToRef(new ChFramed(Utils.ToChrono(COM)));
         body.SetInertiaXX(Utils.ToChrono(inertiaMoments));
         body.SetInertiaXY(Utils.ToChrono(inertiaProducts));
@@ -122,7 +122,6 @@ public class UChBody : MonoBehaviour
     {
         InstanceCreation();
     }
-
 
     public void Start()
     {

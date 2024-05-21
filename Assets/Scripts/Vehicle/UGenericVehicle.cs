@@ -12,11 +12,9 @@
 // Authors: Josh Diyn
 // =============================================================================
 
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using static ChronoGlobals;
+using System.IO;
 
 public class UGenericVehicle : UChVehicle
 {
@@ -24,7 +22,7 @@ public class UGenericVehicle : UChVehicle
     // This field holds the full path to the selected configuration, including the file name and extension.
     [SerializeField]
     [HideInInspector]
-    private string selectedConfigurationFullPath;
+    private string selectedConfiguration;
     public bool chassisFixed;
     public ChTire.CollisionType tireCollisionType;
     public bool brakeLocking;
@@ -43,8 +41,8 @@ public class UGenericVehicle : UChVehicle
         initForwardVel = 0;
         initWheelAngSpeed = 0;
         //Hack
-        // Initialize the list with the expected number of axles,
-        // and for each axle, initialize the list for wheel positions.
+        // Initialise the list with the expected number of axles,
+        // and for each axle, initialise the list for wheel positions.
         for (int i = 0; i < 2; i++) // Assuming 2 axles for this example
         {
             wheelArray.Add(new List<GameObject>(new GameObject[2])); // Assuming 2 positions (left, right) per axle
@@ -53,10 +51,12 @@ public class UGenericVehicle : UChVehicle
 
     protected override void OnStart()
     {
-        // Set the path to the Chrono data files so that all generic .json references are contextualised
-        chrono.SetChronoDataPath(Application.dataPath + "/Data/");
+        // Ensure the correct path is set to load the vehicle parameters
+        string vehicleOfChoice = (chrono_vehicle.GetDataFile("generic/vehicle/" + Path.GetFileName(selectedConfiguration)));
+        Debug.Log("file location at: " + vehicleOfChoice);
+
         // Make use of the json drop down selection
-        vehicle = new WheeledVehicle(UChSystem.chrono_system, (selectedConfigurationFullPath));
+        vehicle = new WheeledVehicle(UChSystem.chrono_system, vehicleOfChoice);
 
         // adjust for the vehicle's wheel height
         //var movement = transform.position;

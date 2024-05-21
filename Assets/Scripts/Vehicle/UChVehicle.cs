@@ -24,7 +24,7 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
 {
     protected DriverInputs inputs;
     public ChTerrain chTerrain;
-
+    
     public UChVehicle()
     {
         // Set Chrono::Vehicle world frame to y-up (still a RHF)       
@@ -38,9 +38,6 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
 
     void Awake()
     {
-        chrono_vehicle.SetDataPath(Application.dataPath + "/Data/");
-        // Debug feedback
-        ////Debug.Log("vehicle path" + vehicle.GetDataPath());
         ///var rot = ChWorldFrame.Rotation();
         ///Debug.Log($"World Frame \n {rot.getitem(0, 0)}, {rot.getitem(0, 1)}, {rot.getitem(0, 2)}] \n {rot.getitem(1, 0)}, {rot.getitem(1, 1)}, {rot.getitem(1, 2)} \n [{rot.getitem(2, 0)}, {rot.getitem(2, 1)}, {rot.getitem(2, 2)}]");
         ///Debug.Log($"Vertical direction: {ChWorldFrame.Vertical().x}, {ChWorldFrame.Vertical().y}, {ChWorldFrame.Vertical().z}");
@@ -54,7 +51,7 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
         system.Register(gameObject.name, this);
 
         OnStart(); // Call the vehicle's onstart.
-
+        
         // Find terrain in system and set to chTerrain
         chTerrain = UChRigidTerrainManager.chronoRigidTerrain;
     }
@@ -155,5 +152,7 @@ public abstract class UChVehicle : MonoBehaviour, IAdvance
 
     protected abstract void OnStart();
     protected abstract void OnAdvance(double step);
+
+
 
 }

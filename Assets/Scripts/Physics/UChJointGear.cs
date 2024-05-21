@@ -54,7 +54,7 @@ public class UChJointGear : MonoBehaviour
         ChFramed csys = new ChFramed(Utils.ToChrono(transform.position), Utils.ToChrono(transform.rotation));
         gear.Initialize(body1.GetChBody(), body2.GetChBody(), csys);
 
-        //// TODO: Check that this is correct.
+        //// TODO: This needs validating to ensure correct results are given
         var rot1 = Quaternion.LookRotation(shaft1Direction.normalized);
         gear.SetFrameShaft1(new ChFramed(Utils.ToChrono(shaft1Origin), Utils.ToChrono(rot1)));
         var rot2 = Quaternion.LookRotation(shaft2Direction.normalized);

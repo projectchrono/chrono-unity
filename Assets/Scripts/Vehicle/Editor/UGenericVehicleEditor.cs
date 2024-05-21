@@ -27,13 +27,13 @@ public class UGenericVehicleEditor : Editor
         DrawDefaultInspector();
 
         UGenericVehicle vehicleScript = (UGenericVehicle)target;
-        SerializedProperty selectedConfigurationFullPathProp = serializedObject.FindProperty("selectedConfigurationFullPath");
+        SerializedProperty selectedConfigurationProp = serializedObject.FindProperty("selectedConfiguration");
 
         // Ensure any changes are drawn and updated in the custom inspector
         serializedObject.Update();
 
-        // Assuming configurations are in Assets/Data/generic/vehicle
-        string configurationsPath = Path.Combine(Application.dataPath, "Data/generic/vehicle");
+        // Manually set the locations for the files to the data dir
+        string configurationsPath = (Application.streamingAssetsPath + UChSystem.vehicleDataLocation + "generic/vehicle/");
         DirectoryInfo dirInfo = new DirectoryInfo(configurationsPath);
         FileInfo[] fileInfo = dirInfo.Exists ? dirInfo.GetFiles("*.json") : new FileInfo[0];
         string[] configurations = fileInfo.Select(file => file.Name).ToArray();
@@ -46,7 +46,7 @@ public class UGenericVehicleEditor : Editor
         }
 
         // Get current selected index based on the full path stored
-        int selectedIndex = Array.IndexOf(configurations, Path.GetFileName(selectedConfigurationFullPathProp.stringValue));
+        int selectedIndex = Array.IndexOf(configurations, Path.GetFileName(selectedConfigurationProp.stringValue));
         selectedIndex = Mathf.Max(0, selectedIndex); // Ensure non-negative index
 
         // Create and handle configuration dropdown
@@ -56,11 +56,12 @@ public class UGenericVehicleEditor : Editor
         if (newIndex != selectedIndex && newIndex >= 0)
         {
             string newPath = Path.Combine(configurationsPath, configurations[newIndex]);
-            selectedConfigurationFullPathProp.stringValue = newPath;
+            selectedConfigurationProp.stringValue = newPath;
             serializedObject.ApplyModifiedProperties(); // Apply and save changes
 
+
             // Debug log for verification
-            Debug.Log("Selected Configuration Full Path: " + selectedConfigurationFullPathProp.stringValue);
+            Debug.Log("Selected Configuration Full Path: " + selectedConfigurationProp.stringValue);
         }
     }
 }

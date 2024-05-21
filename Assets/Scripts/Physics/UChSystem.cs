@@ -43,6 +43,9 @@ public interface IAdvance
 public class UChSystem : MonoBehaviour
 {
     public static ChSystem chrono_system;
+    public static string vehicleDataLocation = "/ChronoData/vehicle/"; //used for the vehicle data
+    public static string physicsDataLocation = "/ChronoData/"; //used for the chrono data
+
 
     public Vector3 gravity;
     public double step;
@@ -115,6 +118,7 @@ public class UChSystem : MonoBehaviour
     public double hhtAlpha;
     public bool hhtScaling;
 
+
     // -----------------------------
     // Subsystems that require FixedUpdate
     private Dictionary<string, IAdvance> subsystems = new Dictionary<string, IAdvance>();
@@ -161,12 +165,12 @@ public class UChSystem : MonoBehaviour
     // -----------------------------
     void Awake()
     {
-        ////  TODO -- EXPERIMENTAL
         QualitySettings.vSyncCount = 0;  // VSync must be disabled
         Application.targetFrameRate = 60;
 
-
-
+        // Set the path to the Chrono data files so that all data is contextualised to the ChronoUnity data directory.
+        chrono.SetChronoDataPath(Application.streamingAssetsPath + physicsDataLocation);
+        chrono_vehicle.SetDataPath(Application.streamingAssetsPath + vehicleDataLocation);
 
         switch (contact_method)
         {
@@ -180,12 +184,11 @@ public class UChSystem : MonoBehaviour
                     chronoSystemSMC.UseMaterialProperties(useMatProps);
                     Debug.Log("useMatProps set for ChSystemSMC");
                 }
-                // (useMatProps) is defaulted as true in ChSystemSMC setup now (overhaul). So explicitly
+                // (useMatProps) is defaulted as true in ChSystemSMC setup now. So explicitly
                 // exposing to the ChSystem and setting it seems a bit redundant unless its necessary for the user.
                 // It could be set with changing the way chrono_system is setup (i.e. as a ChSystemSMC at the outset).
                 break;
         }
-
 
         ////Debug.Log("SOLVER: " + solverType);
         ////Debug.Log("INTEGRATOR: " + integratorType);
@@ -288,7 +291,7 @@ public class UChSystem : MonoBehaviour
                     break;
                 }
             case IntegratorType.HHT:
-                { // Modifications to the HHT integrator implemented here to bring up to date. no Mode, no scaling.
+                {
                     var integrator = new ChTimestepperHHT(chrono_system);
                     integrator.SetMaxIters(integratorMaxIters);
                     integrator.SetRelTolerance(integratorRelTol);
@@ -300,8 +303,6 @@ public class UChSystem : MonoBehaviour
         }
         chrono_system.SetCollisionSystemType(ChCollisionSystem.Type.BULLET);
         chrono_system.SetGravitationalAcceleration(new ChVector3d(gravity.x, gravity.y, gravity.z));
-        // chrono_system.SetStep(step); // overhaul removed this: the desired step size value is always explicitly passed as an argument to the ChSystem function that initiates that analysis (e.g., DoStepDynamics). The current value of the step size (which may be adjusted internally in certain situations) is cached and can still be queried with ChSystem::GetStep
-
     }
 
     // -----------------------------
@@ -348,33 +349,22 @@ public class UChSystem : MonoBehaviour
         transform.hideFlags = HideFlags.NotEditable | HideFlags.HideInInspector;
     }
 
-    // Cleanup everything here
-    // TODO: double check this isn't duplicated elsewhere
+    // Global Cleanup
     void OnDisable()
     {
         // If the simulation world exists
         if (chrono_system != null)
         {
-            // Retrieve and iterate over all bodies in the world
-            List<ChBody> allBodies = new List<ChBody>();
-            chrono_system.GetBodies();
-
-            foreach (ChBody body in allBodies)
-            {
-                // If you're done with the body, here you can dispose of any resources it's using
-                // If the body has any other specific cleanup or destruction methods you want, call it here
-                // Remove the body from the world
-                chrono_system.Remove(body);
-            }
-
             // Clean up any other resources, constraints, etc., that were part of the world
-
-            // Finally, if there's a way to shut down the system, call it here
-            // This might involve setting the mySystem to null, or calling a Dispose method if one exists
-            // mySystem.Dispose(); // Call this if the system has a Dispose method
+            chrono_system.RemoveAllLinks();
+            chrono_system.RemoveAllMeshes();
+            chrono_system.RemoveAllShafts();
+            chrono_system.RemoveAllOtherPhysicsItems();
+            chrono_system.RemoveAllBodies();
             chrono_system = null;
         }
     }
 
+    // TODO: - handle unloading of the dll/crashes more gracefully
 
 }

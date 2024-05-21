@@ -330,8 +330,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 117724237}
-  - component: {fileID: 117724235}
   - component: {fileID: 117724238}
+  - component: {fileID: 117724239}
   m_Layer: 0
   m_Name: Terrainmanager
   m_TagString: Untagged
@@ -339,20 +339,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &117724235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 117724234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cd2ccc4ec6ca9d4fb92b232d820c362, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gridSize: 10
-  interval: 0.2
 --- !u!4 &117724237
 Transform:
   m_ObjectHideFlags: 0
@@ -379,6 +365,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e59fce0d8991874438610f3ff08b2f66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &117724239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117724234}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 871411bf767cf4b43af53a03e31be5f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &124094383
@@ -2593,6 +2591,16 @@ PrefabInstance:
       propertyPath: steeringMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8880413609664392370, guid: a3fbde8c8e9b5a845a69c6f3b9adaab3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8880413609664392370, guid: a3fbde8c8e9b5a845a69c6f3b9adaab3,
+        type: 3}
+      propertyPath: transformShader
+      value: 
+      objectReference: {fileID: 7200000, guid: 4a284a85f76b7174c9fa13c49c8cfe4e, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2833,9 +2841,9 @@ MonoBehaviour:
   patchType: 1
   tiled: 0
   numberOfTiles: 1
-  smoothingFactor: 0.1
-  refineGreaterThanAngle: 30
-  coarseMeshGridSize: 3
+  smoothingFactor: 0.05
+  refineGreaterThanAngle: 10
+  coarseMeshGridSize: 5
   numberOfRefinements: 3
   maxTriangleEdgeLength: 1
 --- !u!1660057539 &9223372036854775807

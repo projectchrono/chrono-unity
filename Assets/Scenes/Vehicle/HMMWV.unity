@@ -141,7 +141,7 @@ PrefabInstance:
     - target: {fileID: 7194074963564705906, guid: 434044898e2439248a0db16bad6f0518,
         type: 3}
       propertyPath: step
-      value: 0.002
+      value: 0.003
       objectReference: {fileID: 0}
     - target: {fileID: 7194074963564705906, guid: 434044898e2439248a0db16bad6f0518,
         type: 3}
@@ -567,6 +567,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5446894316087693956, guid: 19e318937e9294a49b7c04b026b297ca,
+        type: 3}
+      propertyPath: tireStepSize
+      value: 0.003
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321160094793625755, guid: 19e318937e9294a49b7c04b026b297ca,
+        type: 3}
+      propertyPath: transformShader
+      value: 
+      objectReference: {fileID: 7200000, guid: 4a284a85f76b7174c9fa13c49c8cfe4e, type: 3}
     - target: {fileID: 6725509915233093248, guid: 19e318937e9294a49b7c04b026b297ca,
         type: 3}
       propertyPath: speedMode

@@ -21,7 +21,13 @@ public class UChBodySphereEditor : UChBodyEditor
     public override void OnInspectorGUI()
     {
         UChBodySphere body = (UChBodySphere)target;
-
+        // Check if UChMaterialSurface component is attached to the object, assign one if not
+        UChMaterialSurface matSurface = body.GetComponent<UChMaterialSurface>();
+        if (matSurface == null)
+        {
+            // If not, add the UChMaterialSurface component to the object
+            matSurface = body.gameObject.AddComponent<UChMaterialSurface>();
+        }
         base.OnInspectorGUI();
         EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);
         body.radius = EditorGUILayout.DoubleField("Radius", body.radius);

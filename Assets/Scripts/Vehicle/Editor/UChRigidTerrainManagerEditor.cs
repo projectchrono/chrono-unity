@@ -26,10 +26,6 @@ public class UChRigidTerrainManagerEditor : Editor
         DrawDefaultInspector();
 
         UChRigidTerrainManager manager = (UChRigidTerrainManager)target;
-
-        // Dynamic terrain grid scanner that centers about the vehicle and reports into Gizmos drawing the terrain heights
-        if (!manager.gameObject.GetComponent<TerrainWireframe>())
-            manager.gameObject.AddComponent<TerrainWireframe>();
     }
 
     // Navigate all descendants of a GameObject to apply the material

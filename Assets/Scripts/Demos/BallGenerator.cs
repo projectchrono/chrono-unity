@@ -20,6 +20,7 @@ public class BallGenerator : MonoBehaviour
 {
     public Material ballMaterial;
     public bool drawBallFrames = false;
+    public int numberofBalls = 250;
 
     void CreateBall(Object prefab,
                     Vector3 pos,
@@ -32,7 +33,8 @@ public class BallGenerator : MonoBehaviour
         
         // Get the UChBodyConvexHull component and set its properties...
         var body = clone.GetComponent<UChBodySphere>();
-        body.Destroy(); // remove existing body from chrono system, and avoid body duplication
+        if (body.GetChBody()  != null )
+            body.Destroy(); // remove existing body from chrono system, and avoid body duplication
         body.radius = radius;
         body.density = density;
         body.showFrameGizmo = drawBallFrames;
@@ -49,16 +51,16 @@ public class BallGenerator : MonoBehaviour
     {
         Object prefab = Resources.Load("BodySphere", typeof(GameObject));
 
-        // Randomly generate balls, but use a list with a check to ensure no overlaps
+        // Randomly generate balls; use a list with a check to ensure no overlaps
         List<Vector3> existingPositions = new List<Vector3>();
         float radius = 0.8f;
         float density = 1000.0f;
         float generatorSize = 12f;
         float spacing = 0.01f;
         float effectiveDiameter = 2 * radius + spacing;
-        int maximumHeightBalls = (int)(generatorSize / effectiveDiameter) + 5; // Maximum number of balls that can be stacked vertically (add 5m buffer)
+        int maximumHeightBalls = (int)(generatorSize / effectiveDiameter) + 20; // Maximum height balls can be stacked vertically (add 20m buffer)
 
-        for (int i = 0; i < 250; i++)
+        for (int i = 0; i < numberofBalls; i++)
         {
             Vector3 pos;
             bool validPosition;
@@ -66,7 +68,7 @@ public class BallGenerator : MonoBehaviour
             {
                 pos = new Vector3(
                     Random.Range(-generatorSize / 2 + radius, generatorSize / 2 - radius),
-                    2 + Random.Range(0, maximumHeightBalls * effectiveDiameter), // 2 is the starting height
+                    2 + Random.Range(0, maximumHeightBalls) * effectiveDiameter, // 2 is the starting height
                     Random.Range(-generatorSize / 2 + radius, generatorSize / 2 - radius)
                 );
                 validPosition = true;
