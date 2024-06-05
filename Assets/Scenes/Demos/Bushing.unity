@@ -446,14 +446,9 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 207388616}
-  m_Text: '500kg mass on drop produces
+  m_Text: 'High stiffness requires small step size
 
-    excessive forces on bushing.
-
-    Note:-
-    step size is 0.0005 to
-
-    accomodate'
+    to accomodate'
   m_OffsetZ: 0
   m_CharacterSize: 0.5
   m_LineSpacing: 1
