@@ -80,7 +80,7 @@ public class UHMMWV : UChVehicle
         hmmwv = new HMMWV_Full(UChSystem.chrono_system);
 
         hmmwv.SetChassisFixed(chassisFixed);
-        hmmwv.SetChassisCollisionType(CollisionType.MESH);
+        hmmwv.SetChassisCollisionType(CollisionType.HULLS);
 
         hmmwv.SetDriveType(drivelineModel);
         hmmwv.SetTireType((TireModelType)tireModel);

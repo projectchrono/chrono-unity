@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4514025, g: 0.5008952, b: 0.5723183, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +96,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 9fe802b1759a7dd458ae60d0afd0d28f,
+  m_LightingDataAsset: {fileID: 112000000, guid: b3c5c1ca640898a498c452eca9352685,
     type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 8cf8c8056e51a844f845123e4d1ba77b,
     type: 2}
@@ -715,12 +714,12 @@ PrefabInstance:
     - target: {fileID: 4675249412613692360, guid: ee3e6db3bf57734439662c1ecc464407,
         type: 3}
       propertyPath: cameraHeight
-      value: 4.17
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4675249412613692360, guid: ee3e6db3bf57734439662c1ecc464407,
         type: 3}
       propertyPath: cameraDistance
-      value: 4.6
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4675249412613692363, guid: ee3e6db3bf57734439662c1ecc464407,
         type: 3}
