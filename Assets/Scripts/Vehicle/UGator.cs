@@ -84,7 +84,7 @@ public class UGator : UChVehicle
         gator.EnableBrakeLocking(brakeLocking);
 
         // Enable this if user wants to make use of collisions
-        gator.SetChassisCollisionType(CollisionType.HULLS); 
+        gator.SetChassisCollisionType(CollisionType.PRIMITIVES); 
 
         ////Vector3 pos = transform.position;
         ////Quaternion quat = transform.rotation;

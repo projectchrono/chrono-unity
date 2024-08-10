@@ -131,7 +131,10 @@ public class ChaseCamera : MonoBehaviour, IAdvance
         if (worldUp)  // Camera vertical == World vertical
         {
             Vector3 target_point = target_xform.TransformPoint(new Vector3(0.5f, 0, 0));
-            transform.LookAt(target_point);
+            if (!float.IsNaN(target_point.x) && !float.IsNaN(target_point.y) && !float.IsNaN(target_point.z))
+            {
+                    transform.LookAt(target_point);
+            }
 
             Vector3 desiredPosition = target_xform.position + target_xform.right * (-cameraDistance) + target_xform.up * cameraHeight;
             Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);

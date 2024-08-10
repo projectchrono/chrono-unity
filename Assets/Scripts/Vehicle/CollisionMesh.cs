@@ -152,6 +152,9 @@ public class CollisionMesh : MonoBehaviour
         transformShader.SetBuffer(kernelHandle, "vertices", vertexBuffer);
         transformShader.SetBuffer(kernelHandle, "transformedVertices", transformedVertexBuffer);
         transformShader.SetBuffer(kernelHandle, "localTransforms", localTransformsBuffer);
+        // Set the length of the vertex buffer
+        transformShader.SetInt("vertexCount", vertexBuffer.count);  // Since generate mesh is called prior
+
     }
 
     void Update()
