@@ -1,44 +1,44 @@
 fileFormatVersion: 2
 guid: 893239439065d1c4e8c26fd72351d5df
 ModelImporter:
-  serializedVersion: 19300
+  serializedVersion: 22200
   internalIDToNameTable: []
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Gator_BodySG4
-    second: {fileID: 2100000, guid: 46891f3e26059b44d9e065e36f08764d, type: 2}
+    second: {fileID: 2100000, guid: c6dc71d1d81ed2940be8d79319704c5d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Gator_BodySG5
-    second: {fileID: 2100000, guid: 310d33e3fcc8ed843b62307feedce45c, type: 2}
+    second: {fileID: 2100000, guid: 071058fe3ff82914f8a911fc42dee387, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Gator_BodySG6
-    second: {fileID: 2100000, guid: 8e12ac3b226958a48b2bd7add0140956, type: 2}
+    second: {fileID: 2100000, guid: 3c84e30a5bba91744bd4c0e43c14e495, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Gator_BodySG7
-    second: {fileID: 2100000, guid: 739dfd9394d3d7641b3ff9cbe9b17574, type: 2}
+    second: {fileID: 2100000, guid: cb6c69f73d6c2cb4296fa57b251d325a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Gator_BodySG8
-    second: {fileID: 2100000, guid: 4841f52024bdc27409d6f75eb1825ba8, type: 2}
+    second: {fileID: 2100000, guid: 5b6514d17243bcb478d96ae67ff12f23, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Gator_BodySG9
-    second: {fileID: 2100000, guid: 6e66e13a4d88f334ebcf0310d1b79071, type: 2}
+    second: {fileID: 2100000, guid: 22e1a1ccb6971ac4ba33cbe08f4f3cc7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: S_WheelSG
-    second: {fileID: 2100000, guid: 0b7a6294b7ed7c44caf73834f7c5e8be, type: 2}
+    second: {fileID: 2100000, guid: 3c5136cb3a3789643b07e84a5d6f5313, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -49,6 +49,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -74,26 +75,35 @@ ModelImporter:
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
+    importPhysicalCameras: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
     skinWeightsMode: 0
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
+    optimizeBones: 1
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -125,6 +135,9 @@ ModelImporter:
   animationType: 2
   humanoidOversampling: 1
   avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  importBlendShapeDeformPercent: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

@@ -30,6 +30,7 @@ public class SceneSelect : MonoBehaviour
         SceneSelectData.mainScene = SceneManager.GetActiveScene().name;
         SceneSelectData.launchedFromManager = true;
         SceneManager.LoadScene(sceneName);
+        DynamicGI.UpdateEnvironment(); // try to force a lighting update
     }
 
     public void Update()
