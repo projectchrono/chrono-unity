@@ -30,7 +30,7 @@ Launch Unity, wait for compilation, and open the physics or vehicle demo scenes.
 
 ### Prerequisites
 
-- ChronoUnity has been developed and tested in Unity 2022.3.43.f1.
+- ChronoUnity has been developed and tested in Unity 2022.3.41.f1.
 - Chrono Release 9.0.1 (Dll build and C# scripts provided for Windows x64 under releases)
 
 ## Installation using a custom Chrono library build
