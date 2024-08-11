@@ -7,6 +7,9 @@ ChronoUnity is a CSharp wrapping to integrate the powerful Project Chrono C++ ph
 
 ChronoUnity brings together the high-performance physics capabilities of Project Chrono with the versatile and intuitive Unity game engine. This combination enables users to create complex physical simulations, using Chrono's vehicle dynamics, rigid body system, collision detection, and more, with the visual and interactive strengths of Unity.
 
+<img src="https://github.com/user-attachments/assets/049b9d70-5131-43a0-b71b-396a477c0f92" width="800">
+
+
 ## Key Features
   The included demos highlight a number of the following key features:
 - **Chrono Core Module:** Utilise Project Chrono's capabilities for NSC and SMC contact systems. Multiple solvers and approaches supported for accurate physics simulation within the Unity environment.
@@ -22,11 +25,11 @@ Not all C++ functions from Project Chrono are available in ChronoUnity. The curr
 
 ## Installation using the supplied pre-built Chrono library and .cs files
 
-Download the current release into your selected directory.
-Download the Windows Chrono Relase 9.0.1 library zip file (Unix to come)
-Unzip the chrono package to the Chrono Unity Assets/Plugin folder
+Clone the current release from github (NOTE: This repo uses LFS - simply downloading a zip clone will not work).
+Download the Windows Chrono Relase 9.0.1 library zip file (Unix to come).
+Unzip the chrono package to the Chrono Unity Assets/Plugin folder.
 Launch UnityHub and add a project from disk and navigate to the location of your ChronoUnity directory.
-Launch Unity, wait for compilation, and open the physics or vehicle demo scenes. Run in Editor.
+Launch the correct Unity version, wait for compilation, and open the physics or vehicle demo scenes.
 
 ### Prerequisites
 
@@ -40,19 +43,22 @@ If you wish to build the module yourself, you will require Swig 4.x along with t
 ### Self-build steps
 
 1. **Clone and Build Project Chrono:**
-   Clone the Chrono repository, and follow the instructions provided in the Project Chrono documentation to build the Chrono engine from source.
+   Clone the Chrono repository - Release 9.0.1 and follow the instructions provided in the Project Chrono documentation to build the Chrono engine from source.
    Ensure you select the Shared libs, CSharp and Vehicle modules. (OpenMP module can optionally be included)
+   The minimum build required for ChronoUnity should look like this: (note: be sure to provide your Eigen include path)
+   
+   <img src="https://github.com/user-attachments/assets/5ca00563-4c31-4e22-842b-42a34e18dbb4" width="500">
 
 3. **Generate Chrono Dlls and SWIG Wrappers:**
-   Build the Chrono library with Swig C# wrappers.
-   The Csharp scripts can be found in your Chrono build/chrono_csharp/ directory. They will be 'core' and 'vehicle'.
+   Open the solution and build the Chrono library with Swig C# wrappers.
+   The C# scripts can be found in your Chrono build/chrono_csharp/ directory. They will be 'core' and 'vehicle'.
    Navigate to your Chrono build/bin/release/ directory. These are your build dll's.
 
 5. **Set Up Unity Project:**
    Navigate to your clone of the Chrono Unity project directory.
    Copy the built Chrono libraries (`.dll` files), along with the csharp scripts 'core' and 'vehicle' into the `Assets/Plugins` directory of your Unity project.
 
-   NOTE: The SWIG wrapping process generates duplicates of some types. Combine all the .cs scripts from the 'core' and 'vehicle' directories into a single directory, overwrite the duplicate .cs files.
+   **IMPORTANT**: The SWIG wrapping process generates duplicates of some types. Unity will raise errors on acount of duplicates causing ambiguity. Combine all the .cs scripts from the 'core' and 'vehicle' directories into a single directory, overwrite the duplicate .cs files.
     
    Open Unity Hub and add a new project from disk. Navigate to your Chrono Unity directory. Allow Unity to compile scripts and open a demo scene to test.
 
