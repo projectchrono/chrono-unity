@@ -18,19 +18,20 @@ ChronoUnity brings together the high-performance physics capabilities of Project
 
 ### Limited C++ Functionality
 
-Not all C++ functions from Project Chrono are available in ChronoUnity. The current SWIG wrapping primarily supports core and essential vehicle functions, with more advanced or less commonly used features potentially unavailable. Users should refer to the Unity demos and generated C# classes to see which methods and properties are accessible.
+Not all C++ functions from Project Chrono are available in ChronoUnity. The current SWIG wrapping primarily supports core and essential vehicle functions, with more advanced or less commonly used features potentially unavailable. Users should refer to the Unity demos and generated C# classes to see which methods and properties are accessible. Not all vehicle models are available. Track vehicle and robot models currently not available.
 
 ## Installation using the supplied pre-built Chrono library and .cs files
 
 Download the current release into your selected directory.
-Download the Windows dll and Csharp chrono library zip file (Unix to come)
-Unzip the chrono library package to the Chrono Unity Assets/Plugin folder
+Download the Windows Chrono Relase 9.0.1 library zip file (Unix to come)
+Unzip the chrono package to the Chrono Unity Assets/Plugin folder
 Launch UnityHub and add a project from disk and navigate to the location of your ChronoUnity directory.
 Launch Unity, wait for compilation, and open the physics or vehicle demo scenes. Run in Editor.
 
 ### Prerequisites
 
-- ChronoUnity has been developed and tested in Unity 2022.3.13f1. Other versions work.
+- ChronoUnity has been developed and tested in Unity 2022.3.43.f1.
+- Chrono Release 9.0.1 (Dll build and C# scripts provided for Windows x64 under releases)
 
 ## Installation using a custom Chrono library build
 
