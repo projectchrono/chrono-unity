@@ -1,7 +1,7 @@
 # ChronoUnity
 [![BSD License](http://www.projectchrono.org/assets/logos/chrono-bsd.svg)](https://projectchrono.org/license-chrono.txt)
 
-ChronoUnity is a CSharp wrapping to integrate the powerful Project Chrono C++ physics engine within Unity, allowing for advanced physics simulations and visualisation within the Unity environment. This integration leverages SWIG (Simplified Wrapper and Interface Generator) to wrap Chrono's C++ functionalities into C# scripts, for the purpose of making them accessible within Unity projects.
+ChronoUnity is a C# wrapping to integrate the Chrono C++ physics engine within Unity, allowing for advanced physics simulations and visualisation within the Unity environment. This integration leverages SWIG (Simplified Wrapper and Interface Generator) to wrap Chrono's C++ functionality into C# scripts, for the purpose of making them accessible within Unity projects.
 
 ## Overview
 
@@ -13,8 +13,8 @@ ChronoUnity brings together the high-performance physics capabilities of Project
 ## Key Features
   The included demos highlight a number of the following key features:
 - **Chrono Core Module:** Utilise Project Chrono's capabilities for NSC and SMC contact systems. Multiple solvers and approaches supported for accurate physics simulation within the Unity environment.
-- **Chrono Vehicle Module:** Currently supported vehicles are the HMMWV, Gator, Kraz, UAZBus, MAN and Generic Vehicle determined by JSON files. Unity Terrain interaction is supported through Chrono's RigidTerrain.
-- **Unity and Chrono Physics System Interactions:** ChronoUnity allows for one-way interactions between Unity and Chrono physics by adding Unity colliders onto Chrono objects. While Chrono can easily influence Unity's physics world, the reverse has not been developed.
+- **Chrono Vehicle Module:** Currently supported vehicles are the HMMWV, Gator, Kraz, UAZBus, MAN and Generic Vehicle specified through JSON files. Unity Terrain interaction is supported through Chrono's RigidTerrain.
+- **Unity and Chrono Physics System Interactions:** ChronoUnity allows for one-way interactions between Unity and Chrono physics by adding Unity colliders to Chrono objects. While Chrono can easily influence Unity's physics world, the reverse has not been developed.
 - **Joints, Links and ChBody Support:** A number of ChLink, ChLinkMates and ChBodies are supported and demonstrated in the provided physics scenes.
 
 ## Limitations
@@ -26,7 +26,7 @@ Not all C++ functions from Project Chrono are available in ChronoUnity. The curr
 ## Installation using the supplied pre-built Chrono library and .cs files
 
 Clone the current release from github (NOTE: This repo uses LFS - simply downloading a zip clone will not work).
-Download the Windows Chrono Relase 9.0.1 library zip file (Unix to come).
+Download the Windows Chrono Release 9.0.1 library zip file (Unix to come).
 Unzip the chrono package to the Chrono Unity Assets/Plugin folder.
 Launch UnityHub and add a project from disk and navigate to the location of your ChronoUnity directory.
 Launch the correct Unity version, wait for compilation, and open the physics or vehicle demo scenes.
@@ -34,11 +34,11 @@ Launch the correct Unity version, wait for compilation, and open the physics or 
 ### Prerequisites
 
 - ChronoUnity has been developed and tested in Unity 2022.3.41.f1.
-- Chrono Release 9.0.1 (Dll build and C# scripts provided for Windows x64 under releases)
+- Chrono Release 9.0.1 (prebuilt DLLs and C# scripts provided for Windows x64 under releases)
 
 ## Installation using a custom Chrono library build
 
-If you wish to build the module yourself, you will require Swig 4.x along with the other pre-requisites for the Chrono library. See the official Project Chrono documentation for more detail.
+If you wish to build the module yourself, you will require Swig 4.x along with the other pre-requisites for the releavnt Chrono libraries. See the official Project Chrono [documentation](https://api.projectchrono.org/) for more detail.
 
 ### Self-build steps
 
@@ -64,7 +64,7 @@ If you wish to build the module yourself, you will require Swig 4.x along with t
 
 ## Documentation
 
-For detailed information on how to use ChronoUnity, please refer to the following resources:
+For additional information on how to use ChronoUnity, please refer to the following resources:
 
 - **Project Chrono Documentation:** [Project Chrono](https://projectchrono.org/)
 - **SWIG Documentation:** [SWIG](http://www.swig.org/)
@@ -72,4 +72,5 @@ For detailed information on how to use ChronoUnity, please refer to the followin
 
 ## License
 
-See the main Chrono license for details [Chrono BSD Clause](https://github.com/projectchrono/chrono?tab=BSD-3-Clause-1-ov-file)
+ChronoUnity is release open-source under a [BSD-3]() license.
+See the main Chrono license for details [Chrono BSD Clause](https://github.com/projectchrono/chrono-unity/blob/main/LICENSE)
