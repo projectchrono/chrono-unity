@@ -21,7 +21,7 @@ ChronoUnity brings together the high-performance physics capabilities of Project
 
 ### Limited C++ Functionality
 
-Not all C++ functions from Project Chrono are available in ChronoUnity. The current SWIG wrapping primarily supports core and essential vehicle functions, with more advanced or less commonly used features potentially unavailable. Users should refer to the Unity demos and generated C# classes to see which methods and properties are accessible. Not all vehicle models are available. Track vehicle and robot models are currently not available.
+Not all C++ functions from Project Chrono are available in ChronoUnity. The current SWIG wrapping primarily supports core and essential vehicle functions, with more advanced or less commonly used features potentially unavailable. Users should refer to the Unity demos and generated C# classes to see which methods and properties are accessible. Not all vehicle models are available. Track vehicle and robot models currently not available.
 
 ## Installation using the supplied pre-built Chrono library and .cs files
 
