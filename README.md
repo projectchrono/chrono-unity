@@ -1,7 +1,7 @@
 # ChronoUnity
 [![BSD License](http://www.projectchrono.org/assets/logos/chrono-bsd.svg)](https://projectchrono.org/license-chrono.txt)
 
-ChronoUnity is a C# wrapping to integrate the Chrono C++ physics engine within Unity, allowing for advanced physics simulations and visualisation within the Unity environment. This integration leverages SWIG (Simplified Wrapper and Interface Generator) to wrap Chrono's C++ functionality into C# scripts, for the purpose of making them accessible within Unity projects.
+ChronoUnity is a C# wrapping to integrate the [Chrono](https://projectchrono.org/) C++ physics engine within Unity, allowing for advanced physics simulations and visualisation within the Unity environment. This integration leverages SWIG (Simplified Wrapper and Interface Generator) to wrap Chrono's C++ functionality into C# scripts, for the purpose of making them accessible within Unity projects.
 
 ## Overview
 
@@ -35,30 +35,33 @@ Not all C++ Chrono functionality is available in ChronoUnity. The current SWIG w
   - Chrono::Vehicle module
   - Chrono C# wrapper libraries for the core and vehicle modules
 
-While the development ChronoUnity code in the `main` branch will be periodically updated to work with the Chrono development branch (`main` branch of the [Chrono](https://github.com/projectchrono/chrono) repository), we **strongly** recommend using the latest ChronoUnity release (currently 1.0.0). Matching ChronoUnity and Chrono releases, as well as the corresponding recommended Unity version, are as follows:
+While the development ChronoUnity code in the `main` branch will be periodically updated to work with the Chrono development branch (`main` branch of the [Chrono](https://github.com/projectchrono/chrono) repository), we **strongly** recommend using the latest ChronoUnity release (currently 1.0.0).
 
-| ChronoUnity version  | Chrono release | Recommended Unity version |
-| :------------------- | :------------- | :------------------------ |
-| 1.0.0                | 9.0.1          | 2022.3.41.f1              |
+Matching ChronoUnity and Chrono releases, as well as the corresponding recommended Unity version, are as follows:
 
-## Installation using pre-built Chrono assets
+| ChronoUnity release (branch \| tag) | Chrono release (branch \| tag) | Recommended Unity version |
+| :----                               | :----                          | :----                     |
+| `release/1.0` \| 1.0.0              | `release/9.0` \| 9.0.1         | 2022.3.41.f1              |
 
-1. Clone the desired ChronoUnity release branch from GitHub.
-  **Note:** This repo uses LFS - simply downloading the zip for the repository will not work.
-2. Download the pre-built Chrono assets (from the ChronoUnity Releases GitHub page):
+## Installation
+
+Start by cloning the ChronoUnity repository and check out one of the **release** branches (See above).
+**IMPORTANT**: The `chrono-unity` repo uses LFS - simply downloading the zip for the repository will not work.
+
+### Installation using pre-built Chrono assets
+
+1. Download the pre-built Chrono assets (from the [ChronoUnity Releases](https://github.com/projectchrono/chrono-unity/releases) GitHub page):
    - download the zip file with the Chrono C# scripts; e.g., `Chrono.9.0.1.CSharp.zip`
    - download the zip file with Chrono shared libraries for your OS (Windows or Linux); e.g., `Chrono.9.0.1.Windows.x64.zip`
-3. Extract the two archives in the ChronoUnity `Assets/Plugin` directory (create one, if not present).
-4. Launch UnityHub, add a project from disk, and navigate to the location of your ChronoUnity directory.
-5. Launch the appropriate Unity version, wait for compilation, and open the physics or vehicle demo scenes.
+2. Extract the two archives in the ChronoUnity `Assets/Plugins` directory (create the `Plugins` directory if not present).
 
 
-## Installation using a custom Chrono library build
+### Installation using a custom Chrono library build
 
 To build the necessary Chrono modules yourself, you need CMake, Swig 4.x, and any other pre-requisites for the relevant Chrono modules. See the Project Chrono [documentation](https://api.projectchrono.org/) for more details.
 
 1. **Clone the Chrono repository**
-   - Clone the Chrono [repository](https://github.com/projectchrono/chrono) and check out the desired Chrono version (e.g., the `release\9.0` branch, or tag `9.0.1`).
+   - Clone the Chrono [repository](https://github.com/projectchrono/chrono) and check out the desired Chrono release version (e.g., the `release\9.0` branch, or tag `9.0.1`).
 
 2. **Configure Chrono**
    - Follow the instructions provided in the Project Chrono documentation to configure and build Chrono from source.
@@ -80,15 +83,16 @@ To build the necessary Chrono modules yourself, you need CMake, Swig 4.x, and an
    - Copy the shared Chrono libraries (`.dll` or `.so` files, depending on your OS), along with the C# script directories `core/` and `vehicle/` into the `Assets/Plugins` directory of the ChronoUnity project.
 
    **IMPORTANT**: The SWIG wrapping process generates duplicates of some types. Unity will raise errors on acount of duplicates causing ambiguity. One easy way to eliminate these duplicates is to copy all C# scripts from `core/` and `vehicle/` into a single directory. However, make sure to overwrite the `vehicle` scripts with the `core` scripts -- in other words, **give priority** to the `core` scripts.
-    
-6. **Use ChronoUnity**    
-   - Launch UnityHub, add a project from disk, and navigate to the location of your ChronoUnity directory.
-   - Launch the appropriate Unity version, wait for compilation, and open the physics or vehicle demo scenes.
+
+
+## Using ChronoUnity
+1. Launch UnityHub, select "Add a project from disk" and navigate to the location of the ChronoUnity directory (`chrono-unity`).
+2. Launch the project `chrono-unity` from within UnityHub, wait for compilation, then open one of the physics or vehicle demo scenes.
 
 ## Documentation
 
 For additional information on how to use ChronoUnity, please refer to the following resources:
 
-- **Chrono** [documentation](https://projectchrono.org/)
+- **Chrono** [documentation](https://api.projectchrono.org/9.0.0/)
 - **SWIG** [documentation](http://www.swig.org/)
 - **Unity** [documentation](https://docs.unity3d.com/)
