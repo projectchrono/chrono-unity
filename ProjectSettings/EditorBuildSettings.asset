@@ -1,3 +1,107 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:10dfff1b4858befd55c95c7d7fe12b0bb028f094abac3d01b8c48a9d5f1ed3e3
-size 3639
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/VehicleDemos.unity
+    guid: 1908d8f12b4a3ac4694d4e215f5fd97f
+  - enabled: 1
+    path: Assets/Scenes/Vehicle/GenericVehicle.unity
+    guid: f47582a9bfe04cc4191ee5b24d92f21b
+  - enabled: 1
+    path: Assets/Scenes/Vehicle/Gator.unity
+    guid: 5f550dc848ef07c41993b009bb997e0b
+  - enabled: 1
+    path: Assets/Scenes/Vehicle/HMMWV.unity
+    guid: f8c3992692d5d554d940915785440ecd
+  - enabled: 1
+    path: Assets/Scenes/Vehicle/UAZ.unity
+    guid: 7adea87bb382c534691464bba0ba00c5
+  - enabled: 1
+    path: Assets/Scenes/Vehicle/PatchTest.unity
+    guid: b7f72bec430be134f9517edf4ed5910d
+  - enabled: 1
+    path: Assets/Scenes/Vehicle/PathTestTerrain.unity
+    guid: 28155f8e9fdd3f14090220d5612cb61e
+  - enabled: 1
+    path: Assets/Scenes/Vehicle/PatchTerrain.unity
+    guid: 361cf03a2783bd143a0a3f89f62eee61
+  - enabled: 1
+    path: Assets/Scenes/Vehicle/RigidTerrain.unity
+    guid: 3fb7f194a7203424f836db1e7d91a50d
+  - enabled: 1
+    path: Assets/Scenes/Vehicle/UnityTerrain.unity
+    guid: ac3d3d144e683a84bb5a35c2c95b5b0f
+  - enabled: 1
+    path: Assets/Scenes/Vehicle/PathTestFlat.unity
+    guid: 5541f5956ae2045468f4e6382d077770
+  - enabled: 1
+    path: Assets/Scenes/Vehicle/MAN.unity
+    guid: 9e7e4cf87962cc64f93f7f0900a177a0
+  - enabled: 1
+    path: Assets/Scenes/Vehicle/KrazTerrain.unity
+    guid: 0fd2d5f86ab8a134fbb0b7b163717cb5
+  - enabled: 1
+    path: Assets/Scenes/PhysicsDemos.unity
+    guid: a5a9b99be3089564a84c8c841d56b993
+  - enabled: 1
+    path: Assets/Scenes/Demos/BallDropNSC.unity
+    guid: eae968f28b0913d4d8e71e43c35fcc85
+  - enabled: 1
+    path: Assets/Scenes/Demos/BallDropSMC.unity
+    guid: 41e8bc1b925b4ef4582df6281f0ffc63
+  - enabled: 1
+    path: Assets/Scenes/Demos/ConvexHullDrop.unity
+    guid: b29a67094adcdfd42abf63f7b97eb231
+  - enabled: 1
+    path: Assets/Scenes/Demos/CylinderDrop.unity
+    guid: 5fed607c94b182f4f9e5532c4aa4cc55
+  - enabled: 1
+    path: Assets/Scenes/Demos/DoublePendulum.unity
+    guid: ca4d996796098834896bb9017b5b8aae
+  - enabled: 1
+    path: Assets/Scenes/Demos/Earthquake.unity
+    guid: 53eb58d3ebb6b75489e29e4fe27c2d28
+  - enabled: 1
+    path: Assets/Scenes/Demos/Gears.unity
+    guid: 028f0538f745059498f1887c72132c6c
+  - enabled: 1
+    path: Assets/Scenes/Demos/JointLimits.unity
+    guid: f0ef46dfeeb480946a88a0892688542a
+  - enabled: 1
+    path: Assets/Scenes/Demos/MeshDrop.unity
+    guid: 28dbd49ee456a814190150cf81156370
+  - enabled: 1
+    path: Assets/Scenes/Demos/Mixer.unity
+    guid: 8ef5f1060048afd449344aa5aea215f1
+  - enabled: 1
+    path: Assets/Scenes/Demos/Motors.unity
+    guid: ffce0f4327eca5c43a0952519d9185ae
+  - enabled: 1
+    path: Assets/Scenes/Demos/RollingFriction.unity
+    guid: e767a4d11c2b23a41a2bca105aa6c072
+  - enabled: 1
+    path: Assets/Scenes/Demos/RotatingBox.unity
+    guid: 0dee2a828f0f56e42a2cfa585ce4de6d
+  - enabled: 1
+    path: Assets/Scenes/Demos/Sandbox.unity
+    guid: d2f1712eb57cd5e4b834831de2d001cc
+  - enabled: 1
+    path: Assets/Scenes/Demos/SlidingFriction.unity
+    guid: dfcb2593212b71d49b0a7ba83e5296b4
+  - enabled: 1
+    path: Assets/Scenes/Demos/UjointDemo.unity
+    guid: 6aae2fc6e75ede245bacc3cdb4fb6a7c
+  - enabled: 1
+    path: Assets/Scenes/Demos/Pointplane.unity
+    guid: b5b5ea495cdf42943b1eb06ebf403a93
+  - enabled: 1
+    path: Assets/Scenes/Demos/RotationalSpring.unity
+    guid: f504695877111684da9edc57dc53d685
+  - enabled: 1
+    path: Assets/Scenes/Demos/Bushing.unity
+    guid: 65b449f6cb42a3e48af1a0fbaf67a85c
+  m_configObjects: {}
