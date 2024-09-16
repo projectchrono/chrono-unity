@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45135581, g: 0.500935, b: 0.5727936, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -399,6 +398,7 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 331
+  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -472,10 +472,10 @@ MonoBehaviour:
   tiled: 0
   numberOfTiles: 1
   smoothingFactor: 0.05
-  refineGreaterThanAngle: 12.5
-  coarseMeshGridSize: 2
+  refineGreaterThanAngle: 10
+  coarseMeshGridSize: 2.5
   numberOfRefinements: 2
-  maxTriangleEdgeLength: 0.75
+  maxTriangleEdgeLength: 1
 --- !u!1 &542616148
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,6 +628,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 71.139, y: -96.174, z: -72.663}
+--- !u!1 &1221148240 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1020630170656191179, guid: 19e318937e9294a49b7c04b026b297ca,
+    type: 3}
+  m_PrefabInstance: {fileID: 1455962137}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1221148241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221148240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e51ef961a70a014ba630d6144c3fdc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transformShader: {fileID: 7200000, guid: 4a284a85f76b7174c9fa13c49c8cfe4e, type: 3}
 --- !u!1001 &1455962137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -703,6 +722,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5446894316087693956, guid: 19e318937e9294a49b7c04b026b297ca,
         type: 3}
+      propertyPath: tireModel
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446894316087693956, guid: 19e318937e9294a49b7c04b026b297ca,
+        type: 3}
       propertyPath: tireStepSize
       value: 0.003
       objectReference: {fileID: 0}
@@ -734,7 +758,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1020630170656191179, guid: 19e318937e9294a49b7c04b026b297ca,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1221148241}
   m_SourcePrefab: {fileID: 100100000, guid: 19e318937e9294a49b7c04b026b297ca, type: 3}
 --- !u!1001 &1568280164
 PrefabInstance:
