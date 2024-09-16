@@ -5,8 +5,7 @@
 // All rights reserved.
 //
 // Use of this source code is governed by a BSD-style license that can be found
-// in the LICENSE file at the top level of the distribution and at
-// http://projectchrono.org/license-chrono.txt.
+// in the LICENSE file at the top level of the distribution.
 //
 // =============================================================================
 // Authors: Radu Serban, Josh Diyn
@@ -81,7 +80,7 @@ public class UHMMWV : UChVehicle
         hmmwv = new HMMWV_Full(UChSystem.chrono_system);
 
         hmmwv.SetChassisFixed(chassisFixed);
-        hmmwv.SetChassisCollisionType(CollisionType.MESH);
+        hmmwv.SetChassisCollisionType(CollisionType.HULLS);
 
         hmmwv.SetDriveType(drivelineModel);
         hmmwv.SetTireType((TireModelType)tireModel);

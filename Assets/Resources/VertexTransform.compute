@@ -5,8 +5,7 @@
 // All rights reserved.
 //
 // Use of this source code is governed by a BSD-style license that can be found
-// in the LICENSE file at the top level of the distribution and at
-// http://projectchrono.org/license-chrono.txt.
+// in the LICENSE file at the top level of the distribution.
 //
 // =============================================================================
 // Authors: Josh Diyn
@@ -29,13 +28,14 @@ RWStructuredBuffer<float3> transformedVertices; // Output buffer for transformed
 cbuffer MatrixBuffer : register(b0)
 {
     float4x4 transformationMatrix;
+    uint vertexCount; // Number of vertices
 };
 
 [numthreads(256, 1, 1)]
 void CSMain(uint3 id : SV_DispatchThreadID)
 {
-    int index = id.x;
-    if (index < vertices.Length)
+    uint index = id.x;
+    if (index < vertexCount) // use the variable from the compute script
     {
         VertexData vertex = vertices[index];
         float3 transformedPosition = mul(transformationMatrix, float4(vertex.position, 1.0)).xyz;

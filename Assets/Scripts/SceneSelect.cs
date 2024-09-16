@@ -5,8 +5,7 @@
 // All rights reserved.
 //
 // Use of this source code is governed by a BSD-style license that can be found
-// in the LICENSE file at the top level of the distribution and at
-// http://projectchrono.org/license-chrono.txt.
+// in the LICENSE file at the top level of the distribution.
 //
 // =============================================================================
 // Authors: Radu Serban
@@ -31,6 +30,7 @@ public class SceneSelect : MonoBehaviour
         SceneSelectData.mainScene = SceneManager.GetActiveScene().name;
         SceneSelectData.launchedFromManager = true;
         SceneManager.LoadScene(sceneName);
+        DynamicGI.UpdateEnvironment(); // try to force a lighting update
     }
 
     public void Update()

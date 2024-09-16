@@ -5,8 +5,7 @@
 // All rights reserved.
 //
 // Use of this source code is governed by a BSD-style license that can be found
-// in the LICENSE file at the top level of the distribution and at
-// http://projectchrono.org/license-chrono.txt.
+// in the LICENSE file at the top level of the distribution.
 //
 // =============================================================================
 // Authors: Radu Serban, Josh Diyn
@@ -85,7 +84,7 @@ public class UGator : UChVehicle
         gator.EnableBrakeLocking(brakeLocking);
 
         // Enable this if user wants to make use of collisions
-        gator.SetChassisCollisionType(CollisionType.HULLS); 
+        gator.SetChassisCollisionType(CollisionType.PRIMITIVES); 
 
         ////Vector3 pos = transform.position;
         ////Quaternion quat = transform.rotation;
