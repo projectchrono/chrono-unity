@@ -7,7 +7,7 @@ ChronoUnity is a C# wrapping to integrate the [Chrono](https://projectchrono.org
 
 ChronoUnity brings together the Chrono high-fidelity and high-performance physics capabilities with the versatile and intuitive Unity game engine. This combination enables users to create complex physical simulations, using Chrono's vehicle dynamics, rigid body system, collision detection, and more, with the visual and interactive strengths of Unity.
 
-<img src="https://github.com/user-attachments/assets/049b9d70-5131-43a0-b71b-396a477c0f92" width="800">
+[ChronoUnity](Images/ChronoUnity_snapshot.png)
 
 
 ## Key Features
@@ -70,7 +70,7 @@ To build the necessary Chrono modules yourself, you need CMake, Swig 4.x, and an
 
    - During Chrono CMake configuration, ensure you enable building shared libraries (`BUILD_SHARED` set to `ON`) and that the `Chrono::CSharp` and `Chrono::Vehicle` modules are enabled. A minimum Chrono build required for ChronoUnity is as follows:
    
-   <img src="https://github.com/user-attachments/assets/5ca00563-4c31-4e22-842b-42a34e18dbb4" width="500">
+   [CMakeGui](Images/CMakeGui_snapshot.png)
 
 3. **Generate Chrono libraries and SWIG C# wrappers**
    - Build the Chrono project as appropriate for your OS and build tools. We recommend a *Release* build.
