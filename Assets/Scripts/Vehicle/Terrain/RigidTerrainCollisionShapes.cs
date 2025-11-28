@@ -33,7 +33,7 @@ public class RigidTerrainCollisionShapes : MonoBehaviour
         lineMaterial = new Material(shader);
 
         // Fetching the RigidTerrain component
-        chronoRigidTerrain = UChRigidTerrainManager.chronoRigidTerrain;
+        chronoRigidTerrain = chrono_vehicle.CastToRigidTerrain(UChRigidTerrainManager.chronoTerrain);
         if (chronoRigidTerrain == null)
         {
             Debug.LogError("ChronoRigidTerrain reference is not set.");
