@@ -68,7 +68,7 @@ public class UChBodyConvexHullEditor : UChBodyEditor
             }
             else
             {
-                EditorGUILayout.HelpBox("No MeshFilter with a mesh found on the GameObject.", MessageType.Warning);
+                EditorGUILayout.HelpBox("No MeshFilter with a mesh found on the GameObject.", UnityEditor.MessageType.Warning);
             }
         }
 

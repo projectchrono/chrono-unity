@@ -118,7 +118,7 @@ namespace VehicleBuilder.Editor
             }
             else if (string.IsNullOrEmpty(currentTirePath))
             {
-                EditorGUILayout.HelpBox("Select a tire JSON file from the dropdown above.", MessageType.Info);
+                EditorGUILayout.HelpBox("Select a tire JSON file from the dropdown above.", UnityEditor.MessageType.Info);
             }
         }
         
@@ -145,7 +145,7 @@ namespace VehicleBuilder.Editor
             
             if (axleCount == 0)
             {
-                EditorGUILayout.HelpBox("No axles detected. Please load a vehicle JSON first.", MessageType.Info);
+                EditorGUILayout.HelpBox("No axles detected. Please load a vehicle JSON first.", UnityEditor.MessageType.Info);
                 return;
             }
             
@@ -189,7 +189,7 @@ namespace VehicleBuilder.Editor
             
             if (numAxles == 0)
             {
-                EditorGUILayout.HelpBox("No axles detected. Please load a vehicle JSON first.", MessageType.Info);
+                EditorGUILayout.HelpBox("No axles detected. Please load a vehicle JSON first.", UnityEditor.MessageType.Info);
                 return;
             }
             

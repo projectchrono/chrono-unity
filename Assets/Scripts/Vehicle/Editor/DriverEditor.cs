@@ -22,7 +22,7 @@ public class DriverEditor : Editor
     {
         //// TODO: expose more parameters?
 
-        ////EditorGUILayout.HelpBox("Test help", MessageType.Info);
+        ////EditorGUILayout.HelpBox("Test help", UnityEditor.MessageType.Info);
 
         ////GUIStyle myStyle = GUI.skin.GetStyle("HelpBox");
         ////myStyle.richText = true;

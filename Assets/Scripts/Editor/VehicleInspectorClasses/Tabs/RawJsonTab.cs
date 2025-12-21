@@ -331,13 +331,13 @@ namespace VehicleBuilder.Editor
             }
             else
             {
-                EditorGUILayout.HelpBox($"No {currentTarget} JSON loaded. Select a file in the Overview tab.", MessageType.Info);
+                EditorGUILayout.HelpBox($"No {currentTarget} JSON loaded. Select a file in the Overview tab.", UnityEditor.MessageType.Info);
             }
         }
         
         private void LoadVehicleAsync()
         {
-            EditorGUILayout.HelpBox("Loading vehicle JSON...", MessageType.Info);
+            EditorGUILayout.HelpBox("Loading vehicle JSON...", UnityEditor.MessageType.Info);
             EditorApplication.delayCall += () => {
                 if (Context.Vehicle != null)
                 {
@@ -360,7 +360,7 @@ namespace VehicleBuilder.Editor
         
         private void LoadEngineAsync()
         {
-            EditorGUILayout.HelpBox("Loading engine JSON...", MessageType.Info);
+            EditorGUILayout.HelpBox("Loading engine JSON...", UnityEditor.MessageType.Info);
             EditorApplication.delayCall += () => {
                 if (Context.Vehicle != null)
                 {
@@ -383,7 +383,7 @@ namespace VehicleBuilder.Editor
         
         private void LoadTransmissionAsync()
         {
-            EditorGUILayout.HelpBox("Loading transmission JSON...", MessageType.Info);
+            EditorGUILayout.HelpBox("Loading transmission JSON...", UnityEditor.MessageType.Info);
             EditorApplication.delayCall += () => {
                 if (Context.Vehicle != null)
                 {
@@ -406,7 +406,7 @@ namespace VehicleBuilder.Editor
         
         private void LoadTireAsync()
         {
-            EditorGUILayout.HelpBox("Loading tire JSON...", MessageType.Info);
+            EditorGUILayout.HelpBox("Loading tire JSON...", UnityEditor.MessageType.Info);
             EditorApplication.delayCall += () => {
                 if (Context.Vehicle != null)
                 {

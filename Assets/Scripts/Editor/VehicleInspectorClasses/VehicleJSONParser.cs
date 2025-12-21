@@ -213,7 +213,7 @@ namespace ChronoVehicleBuilder
             // CRITICAL: Guard against null root during JSON transitions
             if (root == null)
             {
-                EditorGUILayout.HelpBox("JSON data not loaded.", MessageType.Info);
+                EditorGUILayout.HelpBox("JSON data not loaded.", UnityEditor.MessageType.Info);
                 return;
             }
 
@@ -222,7 +222,7 @@ namespace ChronoVehicleBuilder
             
             if (maps == null || maps.Count == 0)
             {
-                EditorGUILayout.HelpBox("No maps/curves detected in this JSON.", MessageType.Info);
+                EditorGUILayout.HelpBox("No maps/curves detected in this JSON.", UnityEditor.MessageType.Info);
                 return;
             }
 
@@ -255,7 +255,7 @@ namespace ChronoVehicleBuilder
         {
             if (root == null)
             {
-                EditorGUILayout.HelpBox("JSON data not loaded.", MessageType.Info);
+                EditorGUILayout.HelpBox("JSON data not loaded.", UnityEditor.MessageType.Info);
                 return;
             }
 
@@ -356,7 +356,7 @@ namespace ChronoVehicleBuilder
                 JToken sample = array.FirstOrDefault(t => t != null && t.Type != JTokenType.Null);
                 if (sample == null)
                 {
-                    EditorGUILayout.HelpBox("Array is empty. Choose a value type to add.", MessageType.Info);
+                    EditorGUILayout.HelpBox("Array is empty. Choose a value type to add.", UnityEditor.MessageType.Info);
                     EditorGUILayout.BeginHorizontal();
                     if (GUILayout.Button("Add Number", GUILayout.Width(110f)))
                     {
@@ -624,7 +624,7 @@ namespace ChronoVehicleBuilder
         {
             if (root == null)
             {
-                EditorGUILayout.HelpBox("No JSON root provided.", MessageType.Warning);
+                EditorGUILayout.HelpBox("No JSON root provided.", UnityEditor.MessageType.Warning);
                 return;
             }
 
@@ -674,7 +674,7 @@ namespace ChronoVehicleBuilder
             // Guard against null mapArray during JSON transitions
             if (mapArray == null)
             {
-                EditorGUILayout.HelpBox("Map data is null.", MessageType.Warning);
+                EditorGUILayout.HelpBox("Map data is null.", UnityEditor.MessageType.Warning);
                 return;
             }
             
@@ -719,7 +719,7 @@ namespace ChronoVehicleBuilder
             catch (System.Exception)
             {
                 // JArray might have been invalidated during JSON transition
-                EditorGUILayout.HelpBox("Array data invalidated.", MessageType.Warning);
+                EditorGUILayout.HelpBox("Array data invalidated.", UnityEditor.MessageType.Warning);
             }
         }
 

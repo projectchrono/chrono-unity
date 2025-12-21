@@ -83,7 +83,7 @@ namespace VehicleBuilder.Editor
             }
             else
             {
-                EditorGUILayout.HelpBox("No vehicle prefabs found. Prefabs can be manually assigned below.", MessageType.Warning);
+                EditorGUILayout.HelpBox("No vehicle prefabs found. Prefabs can be manually assigned below.", UnityEditor.MessageType.Warning);
             }
         }
         
@@ -183,7 +183,7 @@ namespace VehicleBuilder.Editor
             
             if (numAxles == 0)
             {
-                EditorGUILayout.HelpBox("Load a vehicle JSON first to configure wheels.", MessageType.Info);
+                EditorGUILayout.HelpBox("Load a vehicle JSON first to configure wheels.", UnityEditor.MessageType.Info);
                 return;
             }
             

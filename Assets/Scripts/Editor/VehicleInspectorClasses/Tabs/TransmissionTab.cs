@@ -112,11 +112,11 @@ namespace VehicleBuilder.Editor
             }
             else if (string.IsNullOrEmpty(Context.Vehicle.transJSON))
             {
-                EditorGUILayout.HelpBox("Select a transmission JSON file from the dropdown above.", MessageType.Info);
+                EditorGUILayout.HelpBox("Select a transmission JSON file from the dropdown above.", UnityEditor.MessageType.Info);
             }
             else
             {
-                EditorGUILayout.HelpBox("Failed to load transmission JSON. Check the file path.", MessageType.Warning);
+                EditorGUILayout.HelpBox("Failed to load transmission JSON. Check the file path.", UnityEditor.MessageType.Warning);
             }
         }
         

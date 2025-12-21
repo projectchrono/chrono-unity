@@ -185,7 +185,7 @@ public class UWheeledVehicleInspector : Editor
         // Safety check - if context isn't initialized, show error and return
         if (inspectorContext == null)
         {
-            EditorGUILayout.HelpBox("Inspector context not initialized. This may happen during script compilation. Try selecting the object again.", MessageType.Error);
+            EditorGUILayout.HelpBox("Inspector context not initialized. This may happen during script compilation. Try selecting the object again.", UnityEditor.MessageType.Error);
             if (GUILayout.Button("Reinitialize"))
             {
                 OnEnable();
@@ -240,7 +240,7 @@ public class UWheeledVehicleInspector : Editor
         }
         catch (System.Exception ex)
         {
-            EditorGUILayout.HelpBox($"Error rendering tab: {ex.Message}", MessageType.Error);
+            EditorGUILayout.HelpBox($"Error rendering tab: {ex.Message}", UnityEditor.MessageType.Error);
             Debug.LogException(ex);
         }
         finally

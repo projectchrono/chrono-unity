@@ -116,7 +116,7 @@ namespace VehicleBuilder.Editor
             }
             else
             {
-                EditorGUILayout.HelpBox("Load a vehicle JSON to configure axles.", MessageType.Info);
+                EditorGUILayout.HelpBox("Load a vehicle JSON to configure axles.", UnityEditor.MessageType.Info);
             }
         }
         
@@ -229,7 +229,7 @@ namespace VehicleBuilder.Editor
             int axleCount = Context.Vehicle.axleData?.Count ?? 0;
             if (axleCount == 0)
             {
-                EditorGUILayout.HelpBox("No axles detected. Load a vehicle JSON to configure per-axle tires.", MessageType.Info);
+                EditorGUILayout.HelpBox("No axles detected. Load a vehicle JSON to configure per-axle tires.", UnityEditor.MessageType.Info);
                 return;
             }
 

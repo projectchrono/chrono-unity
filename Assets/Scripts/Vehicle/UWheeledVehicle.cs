@@ -200,6 +200,12 @@ public class UWheeledVehicle : UChVehicle
 
             // initialise
             var csys = new ChCoordsysd(Utils.ToChronoFlip(initPos), Utils.ToChronoFlip(transform.rotation));
+            Debug.Log("Initial position set to: " +
+                System.Math.Round(csys.pos.x * 1000) / 1000 + "  " +
+                System.Math.Round(csys.pos.y * 1000) / 1000 + "  " +
+                System.Math.Round(csys.pos.z * 1000) / 1000
+            );
+
             UChJSONVehicle.Initialize(csys, initForwardVel);
 
             // set chassis fixed / brake locking
