@@ -111,6 +111,6 @@ public class UChLinkBushing : MonoBehaviour
         }
 
         // ensure in step with the rest of the physics system
-        bushing.Update(UChSystem.chrono_system.GetChTime(), true);
+        bushing.Update(UChSystem.chrono_system.GetChTime(), UpdateFlags.UPDATE_ALL);
     }
 }

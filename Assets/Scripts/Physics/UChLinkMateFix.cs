@@ -73,7 +73,7 @@ public class UCHLinkMateFix : MonoBehaviour
     {
         // ensure in step with the rest of the physics system
         link.SyncCollisionModels();
-        link.Update(UChSystem.chrono_system.GetChTime(), true);
+        link.Update(UChSystem.chrono_system.GetChTime(), UpdateFlags.UPDATE_ALL);
 
         //Debug.Log("link 1 position: x:" + link.GetFrame1Abs().GetPos().x + " y: " + link.GetFrame1Abs().GetPos().y + " z: " + link.GetFrame1Abs().GetPos().z);
         //Debug.Log("link 2 position: x:" + link.GetFrame2Abs().GetPos().x + " y: " + link.GetFrame2Abs().GetPos().y + " z: " + link.GetFrame2Abs().GetPos().z);

@@ -69,7 +69,7 @@ public class UChJointDistance : MonoBehaviour
     {
         // ensure in step with the rest of the physics system
         joint.SyncCollisionModels();
-        joint.Update(UChSystem.chrono_system.GetChTime(), true);
+        joint.Update(UChSystem.chrono_system.GetChTime(), UpdateFlags.UPDATE_ALL);
 
     }
 
