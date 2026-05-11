@@ -31,7 +31,7 @@ Not all C++ Chrono functionality is available in ChronoUnity. The current SWIG w
 ## Prerequisites
 
 - [Unity Engine](https://unity.com/products/unity-engine)
-  The current version of ChronoUnity was developed and tested in Unity 2022.3.41.f1. 
+  The current version of ChronoUnity was developed and tested in Unity 6000.0.74f1 
   Other Unity versions may also work, but were not tested.
 - Chrono C# wrapper scripts
   These are SWIG-generated C# scripts that wrap Chrono C++ classes and functions. 
@@ -40,13 +40,14 @@ Not all C++ Chrono functionality is available in ChronoUnity. The current SWIG w
   - Chrono::Vehicle module
   - Chrono C# wrapper libraries for the core and vehicle modules
 
-While the development ChronoUnity code in the `main` branch will be periodically updated to work with the Chrono development branch (`main` branch of the [Chrono](https://github.com/projectchrono/chrono) repository), we **strongly** recommend using the latest ChronoUnity release (currently 1.0.0).
+While the development ChronoUnity code in the `main` branch will be periodically updated to work with the Chrono development branch (`main` branch of the [Chrono](https://github.com/projectchrono/chrono) repository), we **strongly** recommend using the latest ChronoUnity release (currently 2.0.0).
 
 Matching ChronoUnity and Chrono releases, as well as the corresponding recommended Unity version, are as follows:
 
 | ChronoUnity release (branch \| tag) | Chrono release (branch \| tag) | Recommended Unity version |
 | :----                               | :----                          | :----                     |
 | `release/1.0` \| 1.0.0              | `release/9.0` \| 9.0.1         | 2022.3.41.f1              |
+| `release/2.0` \| 2.0.0              | `release/10.0` \| 10.0.0       | 6000.0.74f1               |
 
 ## Installation
 
@@ -57,8 +58,8 @@ Start by obtaining the ChronoUnity sources:
 ### [<span style="color:green">Recommended</span>] Installation using pre-built Chrono assets
 
 1. Download the pre-built Chrono assets from the ChronoUnity [Releases](https://github.com/projectchrono/chrono-unity/releases) page:
-   - download the zip file with the Chrono C# scripts; e.g., `Chrono.9.0.1.CSharp.zip`
-   - download the zip file with Chrono shared libraries for your OS (Windows or Linux); e.g., `Chrono.9.0.1.Windows.x64.zip`
+   - download the zip file with the Chrono C# scripts; e.g., `Chrono.10.0.0.CSharp.zip`
+   - download the zip file with Chrono shared libraries for your OS (Windows or Linux); e.g., `Chrono.10.0.0.Windows.x64.zip`
 
 2. Extract the two archives in the ChronoUnity `Assets/Plugins` directory.
 
@@ -68,10 +69,10 @@ Start by obtaining the ChronoUnity sources:
 To build the necessary Chrono modules yourself, you need CMake, Swig 4.x, and any other pre-requisites for the relevant Chrono modules. 
 
 1. **Clone the Chrono repository**
-   - Clone the Chrono [repository](https://github.com/projectchrono/chrono) and switch to the desired Chrono release version (e.g., the `release\9.0` branch or the `9.0.1` tag).
+   - Clone the Chrono [repository](https://github.com/projectchrono/chrono) and switch to the desired Chrono release version (e.g., the `release\10.0` branch or the `10.0.0` tag).
 
 2. **Configure Chrono**
-   - Follow the instructions provided in the Project Chrono [installation guides](https://api.projectchrono.org/9.0.0/install_guides.html) to configure and build Chrono from source.
+   - Follow the instructions provided in the Project Chrono [installation guides](https://api.projectchrono.org/10.0.0/install_guides.html) to configure and build Chrono from source.
 
    - During Chrono CMake configuration, ensure you enable building shared libraries (`BUILD_SHARED` set to `ON`) and that the `Chrono::CSharp` and `Chrono::Vehicle` modules are enabled. A minimum Chrono build required for ChronoUnity is as follows:
    
@@ -89,7 +90,6 @@ To build the necessary Chrono modules yourself, you need CMake, Swig 4.x, and an
 
    **IMPORTANT**: The SWIG wrapping process generates duplicates of some types. Unity will raise errors on acount of duplicates causing ambiguity. One easy way to eliminate these duplicates is to copy all C# scripts from `core/` and `vehicle/` into a single directory (e.g., in `Assets/Plugins/chrono_csharp/`) allowing duplicates to be overwritten. However, make sure to overwrite the `vehicle` scripts with the `core` scripts -- in other words, **give priority** to the `core` scripts.
 
-
 ## Using ChronoUnity
 1. Launch UnityHub, select "Add a project from disk" and select the ChronoUnity directory (`chrono-unity`).
 2. Launch the project **chrono-unity** from within UnityHub, wait for compilation, then open one of the physics or vehicle demo scenes.
@@ -99,6 +99,6 @@ To build the necessary Chrono modules yourself, you need CMake, Swig 4.x, and an
 
 For additional information on how to use ChronoUnity, please refer to the following resources:
 
-- **Chrono** [documentation](https://api.projectchrono.org/9.0.0/)
+- **Chrono** [documentation](https://api.projectchrono.org/10.0.0/)
 - **SWIG** [documentation](http://www.swig.org/)
 - **Unity** [documentation](https://docs.unity3d.com/)
