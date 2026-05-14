@@ -157,7 +157,7 @@ namespace VehicleBuilder.Editor
         {
             if (!string.IsNullOrEmpty(editorCore.ParseError))
             {
-                EditorGUILayout.HelpBox($"JSON Parse Error: {editorCore.ParseError}", MessageType.Error);
+                EditorGUILayout.HelpBox($"JSON Parse Error: {editorCore.ParseError}", UnityEditor.MessageType.Error);
             }
         }
         

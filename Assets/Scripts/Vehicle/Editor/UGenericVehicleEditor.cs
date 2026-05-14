@@ -40,7 +40,7 @@ public class UGenericVehicleEditor : Editor
         // Handling no configurations found
         if (!configurations.Any())
         {
-            EditorGUILayout.HelpBox("No configurations found in the specified path.", MessageType.Warning);
+            EditorGUILayout.HelpBox("No configurations found in the specified path.", UnityEditor.MessageType.Warning);
             return;
         }
 

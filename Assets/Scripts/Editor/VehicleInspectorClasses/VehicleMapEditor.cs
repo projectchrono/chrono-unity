@@ -45,7 +45,7 @@ namespace ChronoVehicleBuilder
             
             if (mapArray == null || mapArray.Count == 0)
             {
-                EditorGUILayout.HelpBox("No data in map.", MessageType.Info);
+                EditorGUILayout.HelpBox("No data in map.", UnityEditor.MessageType.Info);
                 return;
             }
             
@@ -86,7 +86,7 @@ namespace ChronoVehicleBuilder
             }
             catch (System.Exception)
             {
-                EditorGUILayout.HelpBox("Map data invalidated.", MessageType.Warning);
+                EditorGUILayout.HelpBox("Map data invalidated.", UnityEditor.MessageType.Warning);
             }
         }
         
@@ -97,7 +97,7 @@ namespace ChronoVehicleBuilder
         {
             if (mapArray == null)
             {
-                EditorGUILayout.HelpBox("Map array is null.", MessageType.Warning);
+                EditorGUILayout.HelpBox("Map array is null.", UnityEditor.MessageType.Warning);
                 return;
             }
             
@@ -123,7 +123,7 @@ namespace ChronoVehicleBuilder
         {
             if (mapArray == null)
             {
-                EditorGUILayout.HelpBox("Map array is null.", MessageType.Warning);
+                EditorGUILayout.HelpBox("Map array is null.", UnityEditor.MessageType.Warning);
                 return;
             }
             

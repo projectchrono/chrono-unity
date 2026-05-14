@@ -95,11 +95,11 @@ namespace VehicleBuilder.Editor
             }
             else if (string.IsNullOrEmpty(Context.Vehicle.engineJSON))
             {
-                EditorGUILayout.HelpBox("No engine JSON file assigned. Select a file above.", MessageType.Info);
+                EditorGUILayout.HelpBox("No engine JSON file assigned. Select a file above.", UnityEditor.MessageType.Info);
             }
             else
             {
-                EditorGUILayout.HelpBox("Engine JSON could not be loaded. Check console for errors.", MessageType.Warning);
+                EditorGUILayout.HelpBox("Engine JSON could not be loaded. Check console for errors.", UnityEditor.MessageType.Warning);
             }
         }
         

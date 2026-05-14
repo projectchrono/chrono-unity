@@ -51,7 +51,7 @@ namespace VehicleBuilder.Editor
         {
             if (Context.JsonState.VehicleData == null)
             {
-                EditorGUILayout.HelpBox("No vehicle JSON loaded.", MessageType.Info);
+                EditorGUILayout.HelpBox("No vehicle JSON loaded.", UnityEditor.MessageType.Info);
                 return;
             }
 
@@ -72,7 +72,7 @@ namespace VehicleBuilder.Editor
 
             if (Context.JsonState.VehicleData == null)
             {
-                EditorGUILayout.HelpBox("No vehicle JSON loaded.", MessageType.Info);
+                EditorGUILayout.HelpBox("No vehicle JSON loaded.", UnityEditor.MessageType.Info);
                 return;
             }
 
@@ -81,7 +81,7 @@ namespace VehicleBuilder.Editor
 
             if (axles == null || axles.Count == 0)
             {
-                EditorGUILayout.HelpBox("No axles defined in vehicle JSON.", MessageType.Info);
+                EditorGUILayout.HelpBox("No axles defined in vehicle JSON.", UnityEditor.MessageType.Info);
                 return;
             }
 

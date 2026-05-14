@@ -20,10 +20,8 @@ using UnityEngine.UIElements;
 
 // Add Terrain prior to the UChVehicle (which is at -900)
 [DefaultExecutionOrder(-950)]
-public class UChRigidTerrainManager : MonoBehaviour
+public class UChRigidTerrainManager : UChTerrainManager
 {
-    public static RigidTerrain chronoRigidTerrain;
-
     void Start()
     {
         // Verify the Chrono system exists
@@ -34,7 +32,7 @@ public class UChRigidTerrainManager : MonoBehaviour
         }
         
         // Set the Terrain to the main system (which the vehicle/s are also a part of)
-        chronoRigidTerrain = new RigidTerrain(UChSystem.chrono_system);
+        RigidTerrain chronoRigidTerrain = new RigidTerrain(UChSystem.chrono_system);
 
         // Find all TerrainPatch components and add them as patches
         var patches = UnityEngine.Object.FindObjectsByType<UChRigidTerrainPatch>(FindObjectsSortMode.None);
@@ -76,6 +74,7 @@ public class UChRigidTerrainManager : MonoBehaviour
         }
         // Initialize the terrain
         chronoRigidTerrain.Initialize();
+        UChTerrainManager.chronoTerrain = chronoRigidTerrain;
 
 
         ///int count = 0;
@@ -88,17 +87,17 @@ public class UChRigidTerrainManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (chronoRigidTerrain == null) return;
+        if (chronoTerrain == null) return;
         
-        chronoRigidTerrain.Synchronize(UChSystem.chrono_system.GetChTime());
-        chronoRigidTerrain.Advance(UChSystem.chrono_system.GetStep());
+        chronoTerrain.Synchronize(UChSystem.chrono_system.GetChTime());
+        chronoTerrain.Advance(UChSystem.chrono_system.GetStep());
     }
 
     void OnDisable()
     {
         // Reset the static reference when disabled (e.g., exiting play mode or scene change)
         // so we dont get 'stuck' with a stale ref
-        chronoRigidTerrain = null;
+        chronoTerrain = null;
     }
 
 }
